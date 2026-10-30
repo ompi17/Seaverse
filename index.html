@@ -27,7 +27,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 <script src="d3.v7.9.0.min.js"></script>
 <script>
 (() => {
-  const CSV = new Set(["courses", "docs", "learners", "mand_people", "mand_ranks", "mand_status", "mand_titles", "offboard", "ranks", "sea_daily", "sea_monthly", "sea_staff", "sea_weekly", "trend", "vessels", "vtypes"]);
+  const CSV = new Set(["courses", "docs", "fb_comp", "fb_subs", "learners", "mand_people", "mand_ranks", "mand_status", "mand_titles", "offboard", "ranks", "sea_daily", "sea_monthly", "sea_staff", "sea_weekly", "trend", "vessels", "vtypes"]);
   const P = { doc: null, vessel: null, pop: 'Registered' };
   const D = {}, L = [];
   let t = null;
@@ -184,6 +184,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <button class="tab" role="tab" data-tab="trainee" id="tab-trainee">Trainees</button>
       <button class="tab" role="tab" data-tab="office" id="tab-office">Office staff</button>
       <button class="tab" role="tab" data-tab="offb" id="tab-offb">Off-board crew</button>
+      <button class="tab" role="tab" data-tab="fb" id="tab-fb">Feedback</button>
       <button class="tab" role="tab" data-tab="analysis" id="tab-analysis">Ranks &amp; courses</button>
       <button class="tab" role="tab" data-tab="method" id="tab-method">How it's measured</button>
     </div>
@@ -368,6 +369,52 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <div class="pcard lx-opcard" hidden></div>
     </div>
   </section>
+  <section id="fb" data-page="fb" hidden>
+    <p class="note-inline lx-fbintro" style="margin-bottom:var(--cds-gap-sm)">Learner feedback submitted after completing a course. Everything on this page follows the filters below.</p>
+    <div class="fbar lx-fbbar">
+      <label class="fl">Category <span class="fw"><select class="lx-fcat"></select><button class="fx" data-ffx="0" title="Reset category and the filters after it" aria-label="Reset category">×</button></span></label>
+      <label class="fl">DoC <span class="fw"><select class="lx-fdoc"></select><button class="fx" data-ffx="1" title="Reset DoC and the filters after it" aria-label="Reset DoC">×</button></span></label>
+      <label class="fl">Rank <span class="fw"><select class="lx-frank"></select><button class="fx" data-ffx="2" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
+      <label class="fl">Course <span class="fw"><select class="lx-fcourse"></select><button class="fx" data-ffx="3" title="Reset course and the filters after it" aria-label="Reset course">×</button></span></label>
+      <label class="fl">Period <span class="fw"><select class="lx-fper"><option value="all">All feedback</option><option value="30">Last 30 days</option><option value="7">Last 7 days</option></select><button class="fx" data-ffx="4" title="Reset period" aria-label="Reset period">×</button></span></label>
+      <label class="fl">Search <span class="fw fs"><input type="search" class="lx-fq" placeholder="Course, name or text"><button class="fx" data-ffx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
+      <div class="fbtns"><button class="dl lx-fclr">Clear filters</button></div>
+    </div>
+    <p class="note-inline lx-ffilt" style="margin:0"></p>
+    <div class="kpis lx-fkpis" data-source="fb_subs fb_comp fb_meta"></div>
+    <div class="grid">
+      <div class="card"><h2>Overall rating</h2><p class="note">“How would you rate the overall quality of this course?” — share of answers by stars.</p><div class="chart lx-fdist"></div></div>
+      <div class="card"><h2>Feedback received per week</h2><p class="note lx-fweeknote">Submissions each week; hover a bar for the average rating that week.</p><div class="chart lx-fweek"></div></div>
+    </div>
+    <div class="card">
+      <h2>What learners write about</h2>
+      <p class="note">Written suggestions grouped into themes by keywords (one comment can sit in more than one theme). Filler answers such as “nil”, “good” or “.” are left out. Click a theme to list those comments below.</p>
+      <div class="chart lx-fthemes"></div>
+    </div>
+    <div class="card">
+      <div class="bar"><h2 style="margin:0">Courses</h2>
+        <div class="dlbar lx-fcdl" hidden><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button><button class="dl" data-dl="html">HTML / PDF</button></div></div>
+      <p class="note lx-fcnote">Every course with feedback in the filters. Feedback rate = completions that got a feedback form back ÷ completions since feedback was switched on for the course. Click a course to focus the whole page on it.</p>
+      <div class="tablebox" style="max-height:32rem"><table class="hier lx-fctbl"></table></div>
+    </div>
+    <div class="card">
+      <div class="bar"><h2 style="margin:0">Who is rating</h2>
+        <label class="note-inline">Break down by <select class="lx-fby"><option value="category">Category</option><option value="doc">DoC</option><option value="rank" selected>Rank</option><option value="vessel_type">Vessel type</option></select></label></div>
+      <p class="note">Ratings and feedback rate by group, for the filters above.</p>
+      <div class="tablebox" style="max-height:28rem"><table class="hier lx-fbtbl"></table></div>
+    </div>
+    <div class="card">
+      <div class="bar"><h2 style="margin:0">Written feedback</h2>
+        <div class="dlbar lx-fkdl" hidden><span class="note-inline">Download these comments:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button><button class="dl" data-dl="html">HTML / PDF</button></div></div>
+      <div class="fbar" style="margin-top:var(--cds-gap-sm)">
+        <label class="fl">Theme <span class="fw"><select class="lx-ftheme"></select><button class="fx" data-fkx="0" title="Reset theme" aria-label="Reset theme">×</button></span></label>
+        <label class="fl">Rating <span class="fw"><select class="lx-frate"><option value="">All ratings</option><option value="low">1–2 stars</option><option value="mid">3 stars</option><option value="high">4–5 stars</option></select><button class="fx" data-fkx="1" title="Reset rating" aria-label="Reset rating">×</button></span></label>
+      </div>
+      <p class="note-inline lx-fknote" style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="tablebox" style="max-height:36rem"><table class="hier lx-fktbl"></table></div>
+    </div>
+    <p class="note-inline lx-fmc"></p>
+  </section>
 
   <template id="learner-tpl">
     <div class="card lx-ld">
@@ -452,6 +499,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <p>The Engagement filter in each table and the All onboard / Registered / Engaged / Active toggle are linked: changing one changes the other. The filter also offers single stages (not registered only, registered with no course yet, engaged with nothing in 90 days); picking one sets the toggle to the view that contains it.</p>
     <h2>Off-board crew</h2>
     <p>Sea staff whose status is not onboard: <b>assigned</b> to join a ship, <b>on leave</b> (onshore), or with no status set. Same stages as onboard crew. <b>Assigned</b> crew are scored exactly like onboard crew (2 courses a month, final = higher of frequency and lifetime) so they arrive compliance-ready; <b>on leave</b> crew have no target and are monitored on registration, activity in the last 90 days, lifetime completion (completed ÷ assigned) and courses left open more than 90 days. Last vessel and DoC come from the vessel still tagged on the profile; people with none are shown as "Not tagged". These people are not included in any onboard figure.</p>
+    <h2>Feedback</h2>
+    <p>Feedback forms submitted by learners after a course. The overall star rating (1–5) is averaged per course and group; “satisfied” means 4–5 stars. Feedback rate = course completions that got a feedback form back ÷ completions since feedback was switched on for that course. Written answers are cleaned of filler (“nil”, “good”, “.”) and tagged into themes by keywords, so a comment can sit in more than one theme; “issues flagged” are comments about quiz grading or connectivity. Multiple-choice answers will be added once the export includes the selected options.</p>
     <h2>Dashboard tab</h2>
     <p>The Dashboard tab uses the same per-person scores as the Fleet summary. Gauges, bands and the DoC chart follow the counting toggle and the DoC selector. Lifetime progress (completed ÷ assigned, pooled) is shown separately against an 80% target. The lower half of the Dashboard tab shows courses completed per person per week (target 0.46, i.e. 2 a month) and per month (target 2.0), the 13-week compliance trend, and daily completions for the last 90 days, all for today's onboard crew. Login volume isn't shown, because the export has no login data.</p>
     <h2>Vessels</h2>
@@ -504,7 +553,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     tab = t;
     tabs.forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === t));
     document.querySelectorAll('.sv [data-page]').forEach((s) => s.hidden = s.dataset.page !== t);
-    document.querySelector('.lx-globalctl').hidden = t === 'method';
+    document.querySelector('.lx-globalctl').hidden = t === 'method' || t === 'fb';
     document.querySelector('.lx-doc').hidden = !['dash', 'sea', 'analysis'].includes(t);
     document.querySelector('.lx-docw').hidden = !['dash', 'sea', 'analysis'].includes(t);
     if (window.SV.A && window.SV.A.key && window.SV.A.key !== t) window.SV.drill(window.SV.A.key, false);
@@ -515,7 +564,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   };
   tabs.forEach((b) => b.addEventListener('click', () => show(b.dataset.tab, true)));
   const h = location.hash.slice(1);
-  window.SV.tab = ['dash', 'sea', 'analysis', 'trainee', 'office', 'offb', 'method'].includes(h) ? h : 'dash';
+  window.SV.tab = ['dash', 'sea', 'analysis', 'trainee', 'office', 'offb', 'fb', 'method'].includes(h) ? h : 'dash';
   window.SV.show = show;
 
   const sel = document.querySelector('.lx-doc');
@@ -1992,6 +2041,224 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
   drawOffb();
 })();
 </script>
+<script>
+// Feedback tab: Category › DoC › Rank › Course › Period › Search; KPIs, rating mix, weekly volume, themes, courses, breakdown, comments
+(() => {
+  const { num, F } = window.SV;
+  const sec = document.getElementById('fb');
+  const qs = (s) => sec.querySelector(s);
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const fcat = qs('.lx-fcat'), fdoc = qs('.lx-fdoc'), frank = qs('.lx-frank'), fcourse = qs('.lx-fcourse'), fper = qs('.lx-fper'), fq = qs('.lx-fq'),
+    ftheme = qs('.lx-ftheme'), frate = qs('.lx-frate'), fby = qs('.lx-fby');
+  const S = { cat: '', doc: '', rank: '', ci: '', per: 'all', q: '', theme: '', rate: '', sortC: ['n', -1], sortB: ['n', -1], view: null };
+  const draw = () => window.SV.drawFb();
+  const stars = (v) => v == null ? '—' : d3.format('.2f')(v) + ' ★';
+  const pct = (a, b) => b ? a / b * 100 : null;
+  const NODOC = 'No DoC (trainees / office / not tagged)';
+  // ---- events (each filter resets the ones after it) ----
+  fcat.addEventListener('change', () => { S.cat = fcat.value; draw(); });
+  fdoc.addEventListener('change', () => { S.doc = fdoc.value; draw(); });
+  frank.addEventListener('change', () => { S.rank = frank.value; draw(); });
+  fcourse.addEventListener('change', () => { S.ci = fcourse.value; draw(); });
+  fper.addEventListener('change', () => { S.per = fper.value; draw(); });
+  let tq = null;
+  fq.addEventListener('input', () => { clearTimeout(tq); tq = setTimeout(() => { S.q = fq.value.trim().toLowerCase(); draw(); }, 250); });
+  ftheme.addEventListener('change', () => { S.theme = ftheme.value; draw(); });
+  frate.addEventListener('change', () => { S.rate = frate.value; draw(); });
+  fby.addEventListener('change', () => { S.sortB = ['n', -1]; draw(); });
+  sec.querySelectorAll('.fx[data-ffx]').forEach((b) => b.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return;
+    const i = +b.dataset.ffx;
+    if (i === 5) { S.q = ''; fq.value = ''; return draw(); }
+    if (i === 4) { S.per = 'all'; return draw(); }
+    if (i <= 0) S.cat = ''; if (i <= 1) S.doc = ''; if (i <= 2) S.rank = ''; if (i <= 3) S.ci = '';
+    S.per = 'all'; S.q = ''; fq.value = ''; draw();
+  }));
+  sec.querySelectorAll('.fx[data-fkx]').forEach((b) => b.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return;
+    if (+b.dataset.fkx === 0) S.theme = ''; else S.rate = ''; draw();
+  }));
+  qs('.lx-fclr').addEventListener('click', () => { Object.assign(S, { cat: '', doc: '', rank: '', ci: '', per: 'all', q: '', theme: '', rate: '' }); fq.value = ''; draw(); });
+  qs('.lx-fcdl').querySelectorAll('[data-dl]').forEach((b) => b.addEventListener('click', () => exportT('courses', b)));
+  qs('.lx-fkdl').querySelectorAll('[data-dl]').forEach((b) => b.addEventListener('click', () => exportT('comments', b)));
+  // ---- data ----
+  function agg(list) {
+    const r = list.map((x) => num(x.rating)).filter((x) => x != null);
+    const ppl = new Set(list.map((x) => x.employee_id)).size;
+    const pairs = new Set(list.map((x) => x.employee_id + '|' + x.ci)).size;
+    return { n: list.length, ppl, pairs, rated: r.length, avg: r.length ? d3.mean(r) : null,
+      hi: r.filter((x) => x >= 3.5).length, lo: r.filter((x) => x < 2.5).length, mid: r.filter((x) => x >= 2.5 && x < 3.5).length,
+      written: list.filter((x) => x.useful === '1').length,
+      issues: list.filter((x) => /Quiz|Connectivity/.test(x.themes || '')).length,
+      last: list.reduce((m, x) => (x.d > m ? x.d : m), '') };
+  }
+  function view() {
+    const A = dash.data('fb_subs'), C = dash.data('fb_comp'), M = dash.data('fb_meta');
+    if (A.status !== 'ok' || C.status !== 'ok' || M.status !== 'ok') return { loading: A.status !== 'error' };
+    const meta = Object.fromEntries(M.data.map((r) => [r.k, r.v]));
+    const all = A.data;
+    const cats = [...new Set(all.map((r) => r.category))].sort();
+    if (S.cat && !cats.includes(S.cat)) S.cat = '';
+    const s1 = all.filter((r) => !S.cat || r.category === S.cat);
+    const docs = [...new Set(s1.map((r) => r.doc))].sort((a, b) => (a === NODOC) - (b === NODOC) || a.localeCompare(b));
+    if (S.doc && !docs.includes(S.doc)) S.doc = '';
+    const s2 = s1.filter((r) => !S.doc || r.doc === S.doc);
+    const ranks = [...new Set(s2.map((r) => r.rank).filter(Boolean))].sort();
+    if (S.rank && !ranks.includes(S.rank)) S.rank = '';
+    const s3 = s2.filter((r) => !S.rank || r.rank === S.rank);
+    const courses = [...d3.rollup(s3, (v) => v[0].course, (r) => r.ci)].map(([ci, t]) => ({ ci, t })).sort((a, b) => a.t.localeCompare(b.t));
+    if (S.ci && !courses.some((c) => c.ci === S.ci)) S.ci = '';
+    let s4 = s3.filter((r) => !S.ci || r.ci === S.ci);
+    const last = meta.last || d3.max(all, (r) => r.d);
+    let from = '';
+    if (S.per !== 'all') { const d = new Date(last + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() - (+S.per - 1)); from = d.toISOString().slice(0, 10); s4 = s4.filter((r) => r.d >= from); }
+    if (S.q) s4 = s4.filter((r) => [r.course, r.name, r.employee_id, r.text, r.vessel].join(' ').toLowerCase().includes(S.q));
+    // completions since feedback was enabled (all-time only)
+    const compOk = (r) => (!S.cat || r.category === S.cat) && (!S.doc || r.doc === S.doc) && (!S.rank || r.rank === S.rank) && (!S.ci || r.ci === S.ci);
+    const comp = S.per === 'all' && !S.q ? C.data.filter(compOk) : null;
+    return { meta, all, rows: s4, cats, docs, ranks, courses, comp, last, from };
+  }
+  // ---- small charts ----
+  function tip(box) { let t = box.querySelector('.tip'); if (!t) { t = el('div', 'tip'); box.style.position = 'relative'; box.appendChild(t); }
+    return { show(e, a, b) { t.replaceChildren(el('div', null, a), el('div', 't', b)); t.style.display = 'block'; const r = box.getBoundingClientRect(); t.style.left = Math.min(e.clientX - r.left + 12, r.width - 180) + 'px'; t.style.top = (e.clientY - r.top + 12) + 'px'; }, hide() { t.style.display = 'none'; } }; }
+  function hbar(box, rows, opt = {}) {
+    box.querySelector('svg')?.remove(); box.querySelector('.empty')?.remove();
+    if (!rows.length) { box.appendChild(el('p', 'note-inline empty', 'No data for these filters.')); return; }
+    const W = box.clientWidth || 600, bh = 26, H = rows.length * bh + 6;
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const lw = Math.min(opt.lw || 200, W * 0.42), rw = opt.rw || 110;
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => r.v) || 1], [lw, W - rw]);
+    const t = tip(box);
+    const g = svg.selectAll('g').data(rows).join('g').attr('transform', (r, i) => `translate(0,${i * bh + 3})`).style('cursor', opt.click ? 'pointer' : null)
+      .on('click', (e, r) => opt.click && opt.click(r)).on('mousemove', (e, r) => t.show(e, r.label, r.tip || r.right)).on('mouseleave', () => t.hide());
+    g.append('text').text((r) => r.label).attr('x', lw - 8).attr('y', bh / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', (r) => r.on ? 'var(--color-fg)' : 'var(--color-fg-muted)')
+      .style('font-size', 'var(--cds-font-size-caption)').style('font-weight', (r) => r.on ? 600 : null);
+    g.append('rect').attr('x', lw).attr('y', 4).attr('height', bh - 8).attr('rx', 3).attr('width', (r) => Math.max(1, x(r.v) - lw)).attr('fill', (r) => r.color || dash.colors[0]).attr('opacity', (r) => opt.anyOn && !r.on ? 0.45 : 1);
+    g.append('text').text((r) => r.right).attr('x', (r) => x(r.v) + 6).attr('y', bh / 2).attr('dy', '0.32em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+  }
+  function weekly(box, rows) {
+    box.querySelector('svg')?.remove(); box.querySelector('.empty')?.remove();
+    if (!rows.length) { box.appendChild(el('p', 'note-inline empty', 'No data for these filters.')); return; }
+    const wk = (d) => { const x = new Date(d + 'T00:00:00Z'); const k = (x.getUTCDay() + 6) % 7; x.setUTCDate(x.getUTCDate() - k); return x.toISOString().slice(0, 10); };
+    const g = d3.rollups(rows, (v) => ({ n: v.length, avg: d3.mean(v.map((r) => num(r.rating)).filter((x) => x != null)) }), (r) => wk(r.d)).sort((a, b) => a[0].localeCompare(b[0]));
+    const W = box.clientWidth || 600, H = 220, m = { l: 40, r: 10, t: 10, b: 28 };
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleBand(g.map((d) => d[0]), [m.l, W - m.r]).padding(0.25), y = d3.scaleLinear().domain([0, d3.max(g, (d) => d[1].n) || 1]).nice().range([H - m.b, m.t]);
+    const fmt = d3.utcFormat('%-d %b');
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickFormat((d) => fmt(new Date(d + 'T00:00:00Z'))).tickValues(x.domain().filter((d, i, a) => a.length < 10 || i % Math.ceil(a.length / 8) === 0))).call(window.SV.axisClean);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format('~s'))).call(window.SV.axisClean).call((a) => a.select('.domain').remove());
+    const t = tip(box);
+    svg.append('g').selectAll('rect').data(g).join('rect').attr('x', (d) => x(d[0])).attr('width', x.bandwidth()).attr('y', (d) => y(d[1].n)).attr('height', (d) => y(0) - y(d[1].n)).attr('rx', 3).attr('fill', dash.colors[0])
+      .on('mousemove', (e, d) => t.show(e, 'Week of ' + fmt(new Date(d[0] + 'T00:00:00Z')), `${F.int(d[1].n)} submissions · average ${stars(d[1].avg)}`)).on('mouseleave', () => t.hide());
+  }
+  // ---- tables ----
+  function sortable(tbl, cols, st, rows, first, onRow, total) {
+    const thead = el('thead'), hr = el('tr'), tb = el('tbody');
+    cols.forEach(([l, k, f, n]) => { const th = el('th', n ? 'num' : ''); const b = el('button', null, l); th.appendChild(b);
+      b.addEventListener('click', () => { S[st] = S[st][0] === k ? [k, -S[st][1]] : [k, n ? -1 : 1]; draw(); });
+      const on = S[st][0] === k; th.setAttribute('aria-sort', on ? (S[st][1] > 0 ? 'ascending' : 'descending') : 'none'); if (on) b.textContent = l + (S[st][1] > 0 ? ' ▴' : ' ▾'); hr.appendChild(th); });
+    thead.appendChild(hr);
+    const [k, d] = S[st];
+    rows = rows.slice().sort((a, b) => { const x = a[k], y = b[k]; if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (typeof x === 'string' ? x.localeCompare(y) : x - y) * d; });
+    const line = (r, cls) => { const tr = el('tr', cls); cols.forEach(([, k, f, n]) => { const td = el('td', n ? 'num' : ''); td.textContent = f ? f(r[k]) : (r[k] ?? ''); if (k === 'avg' && r.avg != null) td.style.color = r.avg >= 4.5 ? 'var(--color-ok)' : r.avg >= 4 ? 'var(--color-fg)' : r.avg >= 3 ? 'var(--color-warn)' : 'var(--color-bad)'; tr.appendChild(td); });
+      if (onRow && cls !== 'h0') { tr.classList.add('click'); tr.addEventListener('click', () => onRow(r)); } return tr; };
+    if (total) tb.appendChild(line(total, 'h0'));
+    rows.forEach((r) => tb.appendChild(line(r)));
+    tbl.replaceChildren(thead, tb);
+    return rows;
+  }
+  const rateOf = (V, key, val) => { if (!V.comp) return null; const n = d3.sum(V.comp.filter((r) => key == null || r[key] === val), (r) => num(r.n)); return n || null; };
+  const CCOLS = [['Course', 'name'], ['Responses', 'n', F.int, 1], ['Feedback rate', 'rate', F.pct0, 1], ['Average', 'avg', stars, 1], ['4–5 ★', 'hiP', F.pct0, 1], ['1–2 ★', 'lo', F.int, 1],
+    ['Written', 'written', F.int, 1], ['Issues flagged', 'issues', F.int, 1], ['Last feedback', 'last', F.date]];
+  const BCOLS = (lab) => [[lab, 'name'], ['Responses', 'n', F.int, 1], ['People', 'ppl', F.int, 1], ['Feedback rate', 'rate', F.pct0, 1], ['Average', 'avg', stars, 1], ['4–5 ★', 'hiP', F.pct0, 1], ['1–2 ★', 'lo', F.int, 1], ['Written', 'written', F.int, 1]];
+  const KCOLS = [['Date', 'd', F.date], ['Course', 'course'], ['Rating', 'rating', (v) => v === '' || v == null ? '—' : '★'.repeat(Math.round(num(v)))], ['Feedback', 'text'], ['Themes', 'themes', (v) => (v || '').split('|').join(', ')],
+    ['Rank', 'rank'], ['Category', 'category'], ['Vessel', 'vessel'], ['DoC', 'doc'], ['Name', 'name'], ['Employee ID', 'employee_id']];
+  function drawFb() {
+    if (window.SV.tab !== 'fb') return;
+    const V = view();
+    if (!V.rows) { qs('.lx-fkpis').replaceChildren(el('p', 'note-inline', V.loading ? 'Loading feedback…' : 'Feedback data is not available.')); return; }
+    // filters
+    const set = (sel, list, allLab, v, lab) => { const key = list.map((x) => x.v ?? x).join('|'); if (sel.dataset.k !== key) { sel.replaceChildren(new Option(allLab, ''), ...list.map((x) => new Option(lab ? lab(x) : x, x.v ?? x))); sel.dataset.k = key; } sel.value = v; };
+    set(fcat, V.cats, 'All categories', S.cat); set(fdoc, V.docs, 'All DoCs', S.doc); set(frank, V.ranks, 'All ranks', S.rank);
+    set(fcourse, V.courses.map((c) => ({ v: c.ci, t: c.t })), 'All courses', S.ci, (c) => c.t); fper.value = S.per;
+    const off = [!S.cat, !S.doc, !S.rank, !S.ci, S.per === 'all', !S.q && !fq.value];
+    sec.querySelectorAll('.fx[data-ffx]').forEach((x) => x.toggleAttribute('data-off', off[+x.dataset.ffx]));
+    const fl = [S.cat, S.doc, S.rank, S.ci && (V.courses.find((c) => c.ci === S.ci) || {}).t, S.per !== 'all' && fper.selectedOptions[0].text, S.q && `“${S.q}”`].filter(Boolean);
+    qs('.lx-ffilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
+    const R = V.rows, a = agg(R), compN = rateOf(V, null);
+    qs('.lx-fbintro').textContent = `Learner feedback submitted after completing a course, ${F.date(V.meta.first)} to ${F.date(V.last)}. Everything on this page follows the filters below.`;
+    // KPIs
+    const k = (lab, val, sub, col) => { const d = el('div', 'kpi'); d.append(el('div', 'lab', lab)); const v = el('div', 'val', val); if (col) v.style.color = col; d.append(v, el('div', 'sub', sub)); return d; };
+    const avgCol = a.avg == null ? null : a.avg >= 4.5 ? 'var(--color-ok)' : a.avg >= 4 ? null : 'var(--color-warn)';
+    qs('.lx-fkpis').replaceChildren(
+      k('Feedback received', F.int(a.n), `from ${F.int(a.ppl)} people`),
+      k('Average rating', a.avg == null ? '—' : d3.format('.2f')(a.avg) + ' / 5', `${F.int(a.rated)} star ratings`, avgCol),
+      k('Satisfied (4–5 ★)', F.pct0(pct(a.hi, a.rated)), `${F.int(a.lo)} rated 1–2 ★ · ${F.int(a.mid)} rated 3 ★`),
+      k('Feedback rate', compN ? F.pct0(pct(a.pairs, compN)) : '—', compN ? `${F.int(a.pairs)} of ${F.int(compN)} course completions answered the form` : 'Shown for “All feedback” with no search'),
+      k('Written suggestions', F.int(a.written), `${F.pct0(pct(a.written, a.n))} of submissions; filler answers left out`),
+      k('Issues flagged', F.int(a.issues), 'Quiz/grading or connectivity problems mentioned in comments', a.issues ? 'var(--color-warn)' : null));
+    // rating mix
+    const dist = [5, 4, 3, 2, 1].map((s) => { const n = R.filter((r) => Math.round(num(r.rating)) === s).length; return { label: '★'.repeat(s), v: n, right: `${F.int(n)} · ${F.pct0(pct(n, a.rated))}`, color: s >= 4 ? 'var(--color-ok)' : s === 3 ? 'var(--color-warn)' : 'var(--color-bad)' }; });
+    hbar(qs('.lx-fdist'), a.rated ? dist : [], { lw: 70, rw: 110 });
+    weekly(qs('.lx-fweek'), R);
+    // themes (written comments)
+    const W = R.filter((r) => r.useful === '1');
+    const TH = ['Quiz / assessment issue', 'Connectivity / technical', 'Language / translation', 'Audio / video / presentation', 'Length / pace', 'More practical / examples', 'Topic requests', 'Positive / no change', 'Other comment'];
+    const thRows = TH.map((t) => { const n = W.filter((r) => (r.themes || '').split('|').includes(t)).length; return { label: t, v: n, right: `${F.int(n)} · ${F.pct0(pct(n, W.length))}`, on: S.theme === t,
+      color: /Quiz|Connectivity/.test(t) ? 'var(--color-bad)' : t === 'Positive / no change' ? 'var(--color-ok)' : t === 'Other comment' ? 'var(--cds-chart-muted)' : dash.colors[0], tip: `${F.int(n)} comments · click to list them` }; }).filter((r) => r.v);
+    hbar(qs('.lx-fthemes'), thRows, { lw: 220, rw: 90, anyOn: !!S.theme, click: (r) => { S.theme = S.theme === r.label ? '' : r.label; draw(); qs('.lx-fktbl').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } });
+    // courses
+    const exp = window.SV.exporter && window.SV.exporter.has();
+    qs('.lx-fcdl').hidden = qs('.lx-fkdl').hidden = !exp;
+    const byC = d3.groups(R, (r) => r.ci).map(([ci, l]) => { const g = agg(l); const n = rateOf(V, 'ci', ci); return { ci, name: l[0].course, ...g, hiP: pct(g.hi, g.rated), rate: n ? pct(g.pairs, n) : null }; });
+    const tot = { name: `All courses (${byC.length})`, ...a, hiP: pct(a.hi, a.rated), rate: compN ? pct(a.pairs, compN) : null };
+    S.cRows = sortable(qs('.lx-fctbl'), CCOLS, 'sortC', byC, null, (r) => { S.ci = S.ci === r.ci ? '' : r.ci; draw(); window.scrollTo({ top: sec.offsetTop, behavior: 'smooth' }); }, tot);
+    S.cTot = tot;
+    // breakdown
+    const by = fby.value, lab = fby.selectedOptions[0].text;
+    const byG = d3.groups(R, (r) => r[by] || '—').map(([g, l]) => { const s = agg(l); const n = rateOf(V, by, g); return { name: g, ...s, hiP: pct(s.hi, s.rated), rate: n ? pct(s.pairs, n) : null }; });
+    sortable(qs('.lx-fbtbl'), BCOLS(lab), 'sortB', byG, null, null, { name: `All (${byG.length})`, ...a, hiP: pct(a.hi, a.rated), rate: compN ? pct(a.pairs, compN) : null });
+    // comments
+    const themesHere = TH.filter((t) => W.some((r) => (r.themes || '').split('|').includes(t)));
+    set(ftheme, themesHere, 'All themes', S.theme && themesHere.includes(S.theme) ? S.theme : (S.theme = '', ''));
+    frate.value = S.rate;
+    sec.querySelectorAll('.fx[data-fkx]').forEach((x) => x.toggleAttribute('data-off', +x.dataset.fkx === 0 ? !S.theme : !S.rate));
+    let K = W.filter((r) => !S.theme || (r.themes || '').split('|').includes(S.theme));
+    const rv = (r) => num(r.rating);
+    if (S.rate) K = K.filter((r) => { const v = rv(r); return v != null && (S.rate === 'low' ? v < 2.5 : S.rate === 'mid' ? v >= 2.5 && v < 3.5 : v >= 3.5); });
+    K = K.slice().sort((x, y) => (y.d.localeCompare(x.d)) || ((rv(x) ?? 9) - (rv(y) ?? 9)));
+    S.kRows = K;
+    const SHOW = 300;
+    qs('.lx-fknote').textContent = `${F.int(K.length)} written comments${S.theme ? ' about “' + S.theme + '”' : ''}${K.length > SHOW ? ` · showing the latest ${SHOW}; download for all` : ''}. Newest first.`;
+    const thead = el('thead'), hr = el('tr'); KCOLS.forEach(([l]) => hr.appendChild(el('th', null, l))); thead.appendChild(hr);
+    const tb = el('tbody');
+    K.slice(0, SHOW).forEach((r) => { const tr = el('tr'); KCOLS.forEach(([, key, f]) => { const td = el('td', key === 'text' ? 'wrapc' : ''); if (key === 'themes') (r.themes || '').split('|').filter(Boolean).forEach((t) => { const c = el('span', 'chip', t); c.dataset.b = /Quiz|Connectivity/.test(t) ? 'No activity' : t === 'Positive / no change' ? 'On target' : 'Near target'; c.style.marginRight = '4px'; td.appendChild(c); });
+      else if (key === 'rating') { td.textContent = f(r.rating); const v = rv(r); if (v != null) td.style.color = v >= 3.5 ? 'var(--color-ok)' : v >= 2.5 ? 'var(--color-warn)' : 'var(--color-bad)'; }
+      else td.textContent = f ? f(r[key]) : (r[key] ?? ''); if (key === 'text') td.style.minWidth = '22rem'; tr.appendChild(td); }); tb.appendChild(tr); });
+    qs('.lx-fktbl').replaceChildren(thead, tb);
+    // data note
+    const mc = num(V.meta.mc_answers);
+    qs('.lx-fmc').textContent = `Not shown yet: each feedback form also has multiple-choice questions (course duration, structure, clarity, usefulness and the language used), with ${F.int(mc)} answers so far, but the export does not include which option was picked. Adding the answer options (option id/text per answer) to the daily export would let this page show those results too. ${F.int(num(V.meta.excluded_other))} submissions from accounts outside the dashboard's groups (test or internal users) are left out.`;
+    S.view = V;
+  }
+  function exportT(which, btn) {
+    const X = window.SV.exporter; if (!X || !X.has() || !S.view) return;
+    let rows, title;
+    if (which === 'courses') { const line = (r) => CCOLS.map(([, k]) => k === 'name' ? r.name : k === 'avg' ? (r.avg == null ? '' : +r.avg.toFixed(2)) : (X.r1(r[k]) ?? '')); rows = [CCOLS.map((c) => c[0]), line({ ...S.cTot, name: 'All courses' }), ...(S.cRows || []).map(line)]; title = 'Course feedback · by course'; }
+    else { rows = [KCOLS.map((c) => c[0]), ...(S.kRows || []).map((r) => KCOLS.map(([, k]) => k === 'themes' ? (r.themes || '').split('|').join(', ') : (r[k] ?? '')))]; title = 'Course feedback · written comments'; }
+    const ctx = `Course feedback · filters: ${qs('.lx-ffilt').textContent.replace(/^Filtered: /, '') || 'none'}${which === 'comments' && (S.theme || S.rate) ? ' · ' + [S.theme, frate.selectedOptions[0].text].filter(Boolean).join(' · ') : ''} · data to ${F.date(S.view.last)}`;
+    const base = ('seaverse_' + title.replace(/ · /g, '_')).replace(/[^A-Za-z0-9 _-]+/g, '').trim().replace(/\s+/g, '_').slice(0, 80) + '_' + X.REPORT.iso;
+    const kind = btn.dataset.dl;
+    if (kind === 'xlsx') { const meta = [[title], [ctx], []]; X.saveFile(base + '.xlsx', X.xlsx(title, [...meta, ...rows], meta.length), btn); }
+    else if (kind === 'csv') X.saveFile(base + '.csv', X.csvOf(rows), btn);
+    else X.saveFile(base + '.html', X.htmlGeneric(title, rows, ctx, which === 'courses'), btn);
+  }
+  window.SV.drawFb = drawFb;
+  const prev = window.SV.redraw; window.SV.redraw = () => { prev && prev(); drawFb(); };
+  drawFb();
+})();
+</script>
+
 
 
 
