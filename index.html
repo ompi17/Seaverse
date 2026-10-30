@@ -34,7 +34,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   const fire = () => { clearTimeout(t); t = setTimeout(() => L.forEach((f) => { try { f(); } catch (e) { console.error(e); } }), 0); };
   function load(id) {
     D[id] = { status: 'loading' };
-    const file = 'data/' + id + (CSV.has(id) ? '.csv' : '.json') + '?v=28Oct2026';
+    const file = 'data/' + id + (CSV.has(id) ? '.csv' : '.json') + '?v=29Oct2026';
     fetch(file, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
       .then((txt) => { D[id] = { status: 'ok', data: CSV.has(id) ? d3.csvParse(txt) : JSON.parse(txt) }; fire(); })
       .catch((e) => { console.error(id, e); D[id] = { status: 'error' }; fire(); });
@@ -204,7 +204,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   <!-- DASHBOARD (v108 layout) -->
   <section id="dash" data-page="dash">
     <div class="tdef" id="target">
-      <b>Target definition:</b> every onboard sea staff member should complete <span class="pill p1">2 courses a month</span>, measured over the rolling 90 days (<span class="lx-win">31 Jul – 28 Oct 2026</span>) and pro-rated from their first course start, or <span class="pill p2">lifetime completed ÷ assigned</span> if higher. Scores are actual %, not capped; vessel, DoC and fleet figures average the individual scores. <b>Lifetime progress</b> is also shown on its own against an <span class="pill p1">80%</span> target.
+      <b>Target definition:</b> every onboard sea staff member should complete <span class="pill p1">2 courses a month</span>, measured over the rolling 90 days (<span class="lx-win">1 Aug – 29 Oct 2026</span>) and pro-rated from their first course start, or <span class="pill p2">lifetime completed ÷ assigned</span> if higher. Scores are actual %, not capped; vessel, DoC and fleet figures average the individual scores. <b>Lifetime progress</b> is also shown on its own against an <span class="pill p1">80%</span> target.
     </div>
     <div class="gauges g3">
       <div class="kpi gauge" id="g-fleet"><div class="lab lx-glab">Fleet compliance</div><div class="gw lx-g" data-g="mean"></div><div class="val lx-k lx-gv" data-source="docs" data-field="mean_pct" data-fmt="pct">—</div>
@@ -239,7 +239,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <div class="grid" style="margin-top:var(--cds-gap-md)">
       <div class="card" id="weekly-c-card">
         <h2>Weekly avg completions per person vs 0.46 target</h2>
-        <p class="note">Courses completed each week ÷ people counted (today's onboard crew). Last 13 weeks to 28 Oct; dashed line = 0.46 a week, the weekly equivalent of 2 a month.</p>
+        <p class="note">Courses completed each week ÷ people counted (today's onboard crew). Last 13 weeks to 29 Oct; dashed line = 0.46 a week, the weekly equivalent of 2 a month.</p>
         <div class="chart lx-wk dash-skeleton" data-source="sea_weekly"></div>
       </div>
       <div class="card" id="monthly-c-card">
@@ -303,7 +303,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <div class="card" id="rank-card"><h2>Compliance by rank</h2><p class="note">Average individual compliance for the 25 ranks with the most onboard crew. Right: average · assessable · registration coverage.</p><div class="chart lx-rank dash-skeleton" data-source="ranks"></div></div>
       <div class="card" id="vt-card"><h2>Compliance by vessel type</h2><p class="note">Average individual compliance. Right: average · assessable · registration coverage.</p><div class="chart lx-vt dash-skeleton" data-source="vtypes"></div></div>
     </div>
-    <div class="card" id="course-card" style="margin-top:var(--cds-gap-md)"><h2>Most completed courses · 90 days</h2><p class="note">Completions by onboard sea staff, 31 Jul – 28 Oct 2026.</p><div class="chart lx-courses dash-skeleton" data-source="courses"></div></div>
+    <div class="card" id="course-card" style="margin-top:var(--cds-gap-md)"><h2>Most completed courses · 90 days</h2><p class="note">Completions by onboard sea staff, 1 Aug – 29 Oct 2026.</p><div class="chart lx-courses dash-skeleton" data-source="courses"></div></div>
     <div class="card lx-cs" id="cstat-card" style="margin-top:var(--cds-gap-md)">
       <h2>Course status by personnel</h2>
       <div class="bar">
@@ -436,7 +436,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <h2>Individual score (same model as v24)</h2>
     <ul>
       <li><b>First course start (E)</b>: the earliest course start. Records brought over from the previous provider without a start date count as starting on 1 Nov 2025 (the Seaverse roll-out).</li>
-      <li><b>Eligible days</b>: from the later of the 90-day window start and E, up to the reporting date (28 Oct 2026), both days included. <b>Expected</b> = eligible days ÷ 15.22 (2 courses a month = 2 per 30.44 days).</li>
+      <li><b>Eligible days</b>: from the later of the 90-day window start and E, up to the reporting date (29 Oct 2026), both days included. <b>Expected</b> = eligible days ÷ 15.22 (2 courses a month = 2 per 30.44 days).</li>
       <li><b>A · Frequency</b>: courses completed in those eligible days ÷ expected × 100%. Not capped. Completions an admin marked complete (because of an app glitch) count like any other.</li>
       <li><b>B · Lifetime</b>: completed ÷ assigned × 100%.</li>
       <li><b>Final</b> = the higher of A and B. Compliant at 100% or more.</li>
@@ -457,7 +457,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <h2>Vessels</h2>
     <p>Every active vessel is listed, including those with no crew registered or onboard on Seaverse. DoC is the company the vessel is registered to.</p>
     <h2>Data</h2>
-    <p>Seaverse database export of 22 Oct 2026 plus the daily incremental updates to 29 Oct 2026 (the later run of each day, which includes the earlier one); reporting date 28 Oct 2026 (the last full day), with the 13-week trend at weekly reporting dates before it. Completions migrated from the previous provider count by their completion date but don't set the engagement date.</p>
+    <p>Seaverse database export of 22 Oct 2026 plus the daily incremental updates to 30 Oct 2026 (the later run of each day, which includes the earlier one); reporting date 29 Oct 2026 (the last full day), with the 13-week trend at weekly reporting dates before it. Completions migrated from the previous provider count by their completion date but don't set the engagement date.</p>
   </section>
 </div>
 
@@ -875,7 +875,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (R.status === 'error') { [bA, bT].forEach((b) => { b.classList.remove('dash-skeleton'); fail(b); }); return; }
     if (R.status !== 'ok') return; [bA, bT].forEach((b) => b.classList.remove('dash-skeleton'));
     const rows = R.data.filter((r) => r.doc === doc && r.population === pop).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), v: num(r.per_person) || 0, c: num(r.completions) || 0, n: num(r.people) }));
-    document.querySelector('.lx-dailynote').textContent = `Last 90 days to 28 Oct · ${doc === ALL ? 'all DoCs' : doc} · ${pop.toLowerCase()} (${F.int(rows[0] ? rows[0].n : 0)} people). Uses the DoC selector above.`;
+    document.querySelector('.lx-dailynote').textContent = `Last 90 days to 29 Oct · ${doc === ALL ? 'all DoCs' : doc} · ${pop.toLowerCase()} (${F.int(rows[0] ? rows[0].n : 0)} people). Uses the DoC selector above.`;
     const line = (box, key, target, fmtY, label) => {
       box.querySelector('svg')?.remove(); if (!rows.length) return;
       const W = box.clientWidth || 400, H = 220, m = { t: 12, r: 12, b: 24, l: 48 };
@@ -904,7 +904,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 
   // ---- personnel record view (v29 style), shared by Fleet summary, Trainees and Office staff ----
   (() => {
-    const D0 = Date.UTC(2020, 0, 1), WS = Date.UTC(2026, 6, 31), WE = Date.UTC(2026, 9, 28);
+    const D0 = Date.UTC(2020, 0, 1), WS = Date.UTC(2026, 7, 1), WE = Date.UTC(2026, 9, 29);
     const day = (h) => h ? D0 + parseInt(h, 16) * 864e5 : null;
     const fd = (t) => t == null ? '—' : d3.utcFormat('%-d %b %y')(new Date(t));
     const ST = { 1: 'Completed', 2: 'In progress', 3: 'Completed (admin-marked)' };
@@ -937,8 +937,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       const item = (label, val, sub, col) => { const d = el('div', 'pc-item'); d.append(el('span', 'pc-l', label)); const v = el('b', null, val); if (col) v.style.color = col; d.append(v); if (sub) d.append(el('span', 'pc-s', sub)); kv.appendChild(d); };
       item('Registration', p.registered === 'Yes' ? 'Registered' : 'Not registered', `Stage: ${p.stage}`);
       item('First course start', p.engaged_on ? fd(Date.parse(p.engaged_on + 'T00:00:00Z')) : 'Not started');
-      if (p.no_target) item('Final compliance (28 Oct)', 'Not measured', `On leave: monitored without a target${f != null ? ` (would score ${F.pct(f)})` : ''}`);
-      else item('Final compliance (28 Oct)', f == null ? 'N/A' : `${F.pct(f)} · ${f >= 100 ? 'Compliant' : 'Below target'}`, f == null ? 'Not assessable: no course started yet' : null, f == null ? null : window.SV.bcol(f));
+      if (p.no_target) item('Final compliance (29 Oct)', 'Not measured', `On leave: monitored without a target${f != null ? ` (would score ${F.pct(f)})` : ''}`);
+      else item('Final compliance (29 Oct)', f == null ? 'N/A' : `${F.pct(f)} · ${f >= 100 ? 'Compliant' : 'Below target'}`, f == null ? 'Not assessable: no course started yet' : null, f == null ? null : window.SV.bcol(f));
       item('A · Frequency', F.pct(fq), num(p.eligible_days) ? `${F.int(num(p.completed_in_window))} completions ÷ ${d3.format('.2f')(num(p.expected))} expected (${F.int(num(p.eligible_days))} eligible days; target 2 a month)` : null);
       item('B · Lifetime', F.pct(lf), `${F.int(num(p.completed))} completed ÷ ${F.int(num(p.assigned))} assigned`);
       const pend = (num(p.not_started) || 0) + (num(p.in_progress) || 0);
@@ -961,7 +961,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   })();
 
   // ---- downloads + fleet hierarchy (drill-down: DoCs → vessels → personnel) ----
-  const REPORT = { date: '28 Oct 2026', window: '31 Jul – 28 Oct 2026', iso: '2026-10-28' };
+  const REPORT = { date: '29 Oct 2026', window: '1 Aug – 29 Oct 2026', iso: '2026-10-29' };
   let downloads = null;
   try { window.claude && window.claude.use && window.claude.use('downloads').then((d) => { downloads = d; window.SV.redraw && window.SV.redraw(); }).catch(() => {}); } catch (e) { /* no downloads here */ }
   const H = { sort: ['comp', -1], vt: '', rank: '', eng: '', q: '', person: null, personVessel: null };
@@ -1996,5 +1996,5 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
 
 
 </div>
-<p class="sa-foot">Seaverse training compliance · reporting date 28 Oct 2026 · internal use only.</p>
+<p class="sa-foot">Seaverse training compliance · reporting date 29 Oct 2026 · internal use only.</p>
 </body></html>
