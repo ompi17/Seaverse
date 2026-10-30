@@ -1,0 +1,2000 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Seaverse Training Compliance</title>
+<style>
+:root{--font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif;
+--color-bg:#ffffff;--color-panel:#ffffff;--color-fg:#1f1e1d;--color-fg-muted:#6b6a66;--color-border:#d9d7d0;--color-border-line:#e6e4dd;
+--color-ok:#2f8a4c;--color-warn:#c27c0e;--color-bad:#c2412d;--page:#f6f5f1;
+--cds-border:#d9d7d0;--cds-chart-axis:#c9c7c0;--cds-chart-grid:#ecebe6;--cds-chart-muted:#b5b3ac;--cds-chart-reference:#8a8984;--cds-chart-status-critical:#c2412d;
+--cds-surface-popover:#ffffff;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.12);--cds-text-secondary:#6b6a66;
+--cds-font-size-caption:12px;--cds-font-size-body:14px;--cds-font-size-heading:16px;--cds-font-size-title:26px;--cds-font-weight-medium:500;
+--cds-gap-xs:4px;--cds-gap-sm:8px;--cds-gap-md:12px;--cds-gap-lg:20px;--cds-pad-xs:3px;--cds-pad-sm:6px;--cds-pad-md:10px;--cds-pad-lg:16px;--cds-radius:8px;--cds-dur-slow:.4s}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--color-bg:#1f1e1d;--color-panel:#262624;--color-fg:#ecebe6;--color-fg-muted:#a3a19b;--color-border:#3d3c39;--color-border-line:#363532;
+--color-ok:#5cb87a;--color-warn:#e0a240;--color-bad:#e36b55;--page:#191918;--cds-border:#3d3c39;--cds-chart-axis:#4a4945;--cds-chart-grid:#2f2e2b;--cds-chart-muted:#5e5d58;--cds-chart-reference:#9b9a94;
+--cds-surface-popover:#2c2b29;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.5);--cds-text-secondary:#a3a19b}}
+html,body{margin:0;background:var(--page);color:var(--color-fg)}
+#dash-root{max-width:1280px;margin:0 auto;padding:16px}
+.dash-skeleton{min-height:2em;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--color-fg) 6%,transparent),transparent);background-size:200% 100%;animation:sk 1.4s infinite}
+@keyframes sk{from{background-position:200% 0}to{background-position:-200% 0}}
+.sa-load{position:fixed;inset:auto 16px 16px auto;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:8px;padding:8px 12px;font:13px system-ui;color:var(--color-fg-muted);box-shadow:var(--cds-shadow-popover);z-index:9}
+.sa-dl{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);max-width:min(92vw,560px);background:var(--color-panel);border:1px solid var(--color-border);border-radius:8px;padding:10px 36px 10px 14px;font:13px system-ui;color:var(--color-fg);box-shadow:var(--cds-shadow-popover);z-index:10}
+.sa-dl a{color:#3a6ea5;font-weight:600;word-break:break-all}.sa-dl button{position:absolute;top:6px;right:8px;border:0;background:none;font-size:18px;cursor:pointer;color:var(--color-fg-muted)}
+.sa-dl-n{margin-top:4px;font-size:12px;color:var(--color-fg-muted)}
+.sa-frame{background:#fff4d6;color:#5a4300;font:13px system-ui;padding:8px 16px;text-align:center}
+.sa-foot{max-width:1280px;margin:0 auto;padding:0 16px 24px;font:12px system-ui;color:var(--color-fg-muted)}
+</style>
+<script src="d3.v7.9.0.min.js"></script>
+<script>
+(() => {
+  const CSV = new Set(["courses", "docs", "learners", "mand_people", "mand_ranks", "mand_status", "mand_titles", "offboard", "ranks", "sea_daily", "sea_monthly", "sea_staff", "sea_weekly", "trend", "vessels", "vtypes"]);
+  const P = { doc: null, vessel: null, pop: 'Registered' };
+  const D = {}, L = [];
+  let t = null;
+  const fire = () => { clearTimeout(t); t = setTimeout(() => L.forEach((f) => { try { f(); } catch (e) { console.error(e); } }), 0); };
+  function load(id) {
+    D[id] = { status: 'loading' };
+    const file = 'data/' + id + (CSV.has(id) ? '.csv' : '.json') + '?v=28Oct2026';
+    fetch(file, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then((txt) => { D[id] = { status: 'ok', data: CSV.has(id) ? d3.csvParse(txt) : JSON.parse(txt) }; fire(); })
+      .catch((e) => { console.error(id, e); D[id] = { status: 'error' }; fire(); });
+  }
+  window.dash = {
+    params: () => ({ ...P }),
+    setParams: (o) => { Object.assign(P, o); fire(); },
+    onData: (f) => { L.push(f); },
+    colors: ['#3a6ea5', '#c27c0e', '#6b8e23', '#8a8984', '#a05195', '#2a9d8f'],
+    setLink: (t) => { try { history.replaceState(null, '', '#' + t); } catch (e) {} },
+    data(id) { if (!D[id]) load(id); return D[id]; },
+  };
+  ['docs', 'vessels', 'trend', 'sea_daily', 'sea_weekly', 'sea_monthly'].forEach((id) => window.dash.data(id));
+  // Excel / CSV / HTML downloads
+  const MIME = { xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', csv: 'text/csv;charset=utf-8', html: 'text/html;charset=utf-8' };
+  window.claude = { use: async (n) => n === 'downloads' ? { save: async ({ filename, data }) => {
+    const ext = (filename.split('.').pop() || '').toLowerCase();
+    const blob = new Blob([data], { type: MIME[ext] || 'application/octet-stream' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = filename; a.style.display = 'none'; document.body.appendChild(a); a.click();
+    setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 60000);
+    return { status: 'saved' };
+  } } : null };
+})();
+</script>
+</head><body>
+<div id="dash-root">
+<style>
+.sv{font-family:var(--font-anthropic-sans);color:var(--color-fg);display:flex;flex-direction:column;gap:var(--cds-gap-lg)}
+.sv h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.sv .take{color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 0;font-size:var(--cds-font-size-body)}
+.sv .bar{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm);align-items:center;justify-content:space-between}
+.sv .tabs{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs);border-bottom:1px solid var(--color-border-line)}
+.sv .tab{background:none;border:0;border-bottom:2px solid transparent;padding:var(--cds-pad-sm) var(--cds-pad-md);color:var(--color-fg-muted);font:inherit;cursor:pointer}
+.sv .tab[aria-selected=true]{color:var(--color-fg);border-bottom-color:var(--color-fg)}
+.sv select,.sv input[type=search]{font:inherit;font-size:var(--cds-font-size-caption);padding:var(--cds-pad-xs) var(--cds-pad-sm);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-bg);color:var(--color-fg);max-width:100%}
+.sv .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:var(--cds-gap-md)}
+.sv .kpi,.sv .card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg)}
+.sv .kpi .lab{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .kpi .val{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);font-variant-numeric:tabular-nums;margin:var(--cds-gap-xs) 0;min-height:1.2em}
+.sv .kpi .sub{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:var(--cds-gap-md)}
+.sv .card h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.sv .card .note{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 var(--cds-gap-md)}
+.sv .chart{position:relative;min-height:220px}
+.sv .tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);white-space:nowrap;display:none;z-index:2}
+.sv .tip .t{color:var(--cds-text-secondary)}
+.sv .seg{display:inline-flex;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);overflow:hidden}
+.sv .seg button{font:inherit;font-size:var(--cds-font-size-caption);background:var(--color-bg);color:var(--color-fg-muted);border:0;padding:var(--cds-pad-xs) var(--cds-pad-md);cursor:pointer}
+.sv .seg button+button{border-left:1px solid var(--color-border-line)}
+.sv .seg button[aria-checked=true]{background:var(--color-panel);color:var(--color-fg);font-weight:var(--cds-font-weight-medium)}
+.sv .note-inline{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .tdef{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);background:var(--color-panel);border:1px solid var(--color-border-line);border-left:3px solid var(--color-fg);border-radius:var(--cds-radius);padding:var(--cds-pad-sm) var(--cds-pad-md);line-height:1.7;margin-bottom:var(--cds-gap-md)}
+.sv .tdef b{color:var(--color-fg)}
+.sv .pill{display:inline-block;border-radius:999px;padding:0 var(--cds-pad-sm);color:var(--color-fg);border:1px solid var(--color-border-line);background:var(--color-bg);white-space:nowrap}
+.sv .gauges{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:var(--cds-gap-md)}
+.sv .lx-globalctl{margin-bottom:var(--cds-gap-sm)}
+.sv .gauge{text-align:center}
+.sv .gauge .gw{max-width:220px;margin:var(--cds-gap-sm) auto 0;min-height:90px}
+.sv .gauge .val{margin-top:calc(-1 * var(--cds-gap-sm))}
+.sv .bands{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,8rem),1fr));gap:var(--cds-gap-sm)}
+.sv .band{border-radius:var(--cds-radius);padding:var(--cds-pad-sm);text-align:center;border:1px solid var(--color-border-line)}
+.sv .band b{display:block;font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);line-height:1.2;font-variant-numeric:tabular-nums}
+.sv .band span{display:block;font-size:var(--cds-font-size-caption);font-weight:var(--cds-font-weight-medium)}
+.sv .band small{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .b-on{background:color-mix(in srgb,var(--b-on) 14%,transparent)}.sv .b-on b,.sv .b-on span{color:var(--b-on)}
+.sv .b-near{background:color-mix(in srgb,var(--b-near) 14%,transparent)}.sv .b-near b,.sv .b-near span{color:var(--b-near)}
+.sv .b-below{background:color-mix(in srgb,var(--b-below) 14%,transparent)}.sv .b-below b,.sv .b-below span{color:var(--b-below)}
+.sv .b-low{background:color-mix(in srgb,var(--b-low) 14%,transparent)}.sv .b-low b,.sv .b-low span{color:var(--b-low)}
+.sv .b-no{background:color-mix(in srgb,var(--b-no) 14%,transparent)}.sv .b-no b,.sv .b-no span{color:var(--b-no)}
+.sv .chip{display:inline-block;border-radius:999px;padding:1px var(--cds-pad-sm);font-size:var(--cds-font-size-caption);white-space:nowrap;--c:var(--cds-chart-muted);color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent)}
+.sv .chip[data-b="On target"]{--c:var(--b-on)}.sv .chip[data-b="Near target"]{--c:var(--b-near)}.sv .chip[data-b="Below target"]{--c:var(--b-below)}.sv .chip[data-b="Low activity"]{--c:var(--b-low)}.sv .chip[data-b="No activity"]{--c:var(--b-no)}
+.sv .chip[data-b="Not assessable"],.sv .chip[data-b="No assessable crew"]{--c:var(--color-fg-muted)}
+.sv .sub-h{font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium);margin:var(--cds-gap-md) 0 var(--cds-gap-xs)}
+.sv .chip[data-b="Completed"]{--c:var(--color-ok)}.sv .chip[data-b="In progress"]{--c:var(--color-warn)}.sv .chip[data-b="Not started"]{--c:var(--color-bad)}.sv .chip[data-b="Not assigned"]{--c:var(--color-fg-muted)}
+.sv .dl{font:inherit;font-size:var(--cds-font-size-caption);padding:var(--cds-pad-xs) var(--cds-pad-md);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-panel);color:var(--color-fg);cursor:pointer}
+.sv .dl:hover{background:var(--color-bg)}
+.sv .dl[disabled]{opacity:.5;cursor:default}
+.sv .fbar{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm) var(--cds-gap-md);align-items:flex-end;margin:0 0 var(--cds-gap-sm)}
+.sv .fbar label{display:flex;flex-direction:column;gap:2px;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);min-width:0}
+.sv .fbar select,.sv .fbar input{max-width:200px}
+.sv .fw{position:relative;display:inline-block}
+.sv .fw[hidden]{display:none}
+.sv .fw select{padding-right:14px}
+.sv .fw input[type=search]::-webkit-search-cancel-button{display:none}
+.sv .fx{position:absolute;right:-6px;bottom:-6px;width:16px;height:16px;padding:0;border-radius:50%;border:1px solid var(--color-border, #8884);background:var(--color-bg, #fff);color:var(--color-fg-muted);font-size:11px;line-height:14px;text-align:center;cursor:pointer;z-index:1}
+.sv .fx:hover{color:var(--color-fg);border-color:var(--color-fg-muted)}
+.sv .fx[data-off]{opacity:.35;cursor:default}
+.sv .fw.fs input{padding-right:22px}
+.sv .fw.fs .fx{top:50%;bottom:auto;right:4px;transform:translateY(-50%);border:none;background:transparent;font-size:15px;line-height:16px}
+.sv .fw.fs .fx[data-off]{display:none}
+.sv .fbtns{display:flex;gap:var(--cds-gap-xs);flex-wrap:wrap}
+.sv .dlbar{display:flex;gap:var(--cds-gap-xs);align-items:center;flex-wrap:wrap}
+.sv table.hier td,.sv table.hier th{white-space:nowrap}
+.sv table.hier tr.h0 td{font-weight:var(--cds-font-weight-medium);background:var(--color-bg)}
+.sv table.hier tr.click td{cursor:pointer}.sv table.hier tr.click:hover td{background:var(--color-bg)}.sv table.hier tr.dim td{color:var(--color-fg-muted)}.sv table.hier td.sm2{color:var(--color-fg-muted)}
+.sv table.hier tr.h2 td{cursor:pointer}.sv table.hier tr.h2 td:first-child{padding-left:22px}
+.sv table.hier tr.h3 td{color:var(--color-fg-muted)}.sv table.hier tr.h3 td:first-child{padding-left:44px;color:var(--color-fg)}
+.sv table.hier tr.h3.out td{opacity:.55}
+.sv table.hier tr.h1:hover td,.sv table.hier tr.h2:hover td{background:var(--color-bg)}
+.sv table.hier .car{display:inline-block;width:14px;color:var(--color-fg-muted)}
+.sv table.hier .sm{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.sv .mini{font:inherit;font-size:var(--cds-font-size-caption);padding:0 var(--cds-pad-xs);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-panel);color:var(--color-fg);cursor:pointer}
+.sv .pc-head{margin-bottom:var(--cds-gap-sm)}.sv .pc-name{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.sv .pc-kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:var(--cds-gap-sm) var(--cds-gap-md);margin:var(--cds-gap-sm) 0 var(--cds-gap-md)}
+.sv .pc-item{display:flex;flex-direction:column;gap:2px;font-size:var(--cds-font-size-caption)}.sv .pc-l{color:var(--color-fg-muted)}.sv .pc-item b{font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium)}.sv .pc-s{color:var(--color-fg-muted)}
+.sv .pc-hist{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-bottom:var(--cds-gap-sm)}
+.sv .pc-ns{margin-top:var(--cds-gap-sm);font-size:var(--cds-font-size-caption)}.sv .pc-ns summary{cursor:pointer;color:var(--color-fg-muted)}.sv .pc-ns .pill{margin:2px}
+.sv table.hier td.wrapc{white-space:normal;min-width:16rem}
+.sv .chip[data-b="Completed"]{--c:var(--color-ok)}.sv .chip[data-b="In progress"]{--c:var(--color-warn)}
+.sv .crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:var(--cds-gap-xs);font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium)}
+.sv .crumbs button{all:unset;cursor:pointer;color:var(--color-fg-muted);text-decoration:underline;text-underline-offset:3px}
+.sv .crumbs .sep{color:var(--color-fg-muted)}
+.sv .tablebox{max-height:32rem;overflow:auto}
+.sv table{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption);font-variant-numeric:tabular-nums}
+.sv th{position:sticky;top:0;background:var(--color-panel);text-align:left;font-weight:var(--cds-font-weight-medium);border-bottom:1px solid var(--color-border-line);padding:0;z-index:1}
+.sv th button{all:unset;cursor:pointer;display:block;padding:var(--cds-pad-xs) var(--cds-pad-sm);white-space:nowrap}
+.sv th.num button,.sv td.num{text-align:right}
+.sv td{padding:var(--cds-pad-xs) var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.sv tbody tr.click{cursor:pointer}
+.sv tbody tr.click:hover{background:var(--color-bg)}
+.sv tbody tr.dim td{color:var(--color-fg-muted)}
+.sv .cellbar{display:flex;align-items:center;gap:var(--cds-gap-xs);justify-content:flex-end}
+.sv .cellbar i{display:block;height:6px;border-radius:3px;background:var(--cds-chart-muted)}
+.sv .cellbar i.ok{background:var(--color-ok)}
+.sv .good{color:var(--color-ok)}
+.sv .badtxt{color:var(--color-bad)}
+.sv .method p,.sv .method li{font-size:var(--cds-font-size-body);line-height:1.5;max-width:52rem}
+.sv .method h2{margin-top:var(--cds-gap-md)}
+.sv [data-dash-source-state=empty]{color:transparent}
+.sv [data-dash-source-state=refreshing]{opacity:.5;transition:opacity var(--cds-dur-slow)}
+.sv .failed{display:flex;align-items:center;justify-content:center;gap:var(--cds-gap-xs);color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);min-height:inherit}
+.sv .failed::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
+@media (max-width:640px){.sv .hide-narrow{display:none}}
+</style>
+
+<div class="sv">
+  <header>
+    <h1 id="top">Seaverse training compliance</h1>
+    <p class="take lx-take dash-skeleton" data-source="docs">—</p>
+  </header>
+
+  <div class="bar">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-tab="dash" id="tab-dash">Dashboard</button>
+      <button class="tab" role="tab" data-tab="sea" id="tab-sea">Fleet summary</button>
+      <button class="tab" role="tab" data-tab="trainee" id="tab-trainee">Trainees</button>
+      <button class="tab" role="tab" data-tab="office" id="tab-office">Office staff</button>
+      <button class="tab" role="tab" data-tab="offb" id="tab-offb">Off-board crew</button>
+      <button class="tab" role="tab" data-tab="analysis" id="tab-analysis">Ranks &amp; courses</button>
+      <button class="tab" role="tab" data-tab="method" id="tab-method">How it's measured</button>
+    </div>
+  </div>
+  <div class="bar lx-globalctl" style="margin-top:calc(-1 * var(--cds-gap-sm))">
+    <div style="display:flex;gap:var(--cds-gap-sm);align-items:center;flex-wrap:wrap">
+      <div class="seg lx-pop" role="radiogroup" aria-label="Who to count">
+        <button role="radio" data-pop="All onboard">All onboard</button>
+        <button role="radio" data-pop="Registered">Registered</button>
+        <button role="radio" data-pop="Engaged">Engaged</button>
+        <button role="radio" data-pop="Active">Active</button>
+      </div>
+      <span class="note-inline lx-popnote"></span>
+    </div>
+    <span class="fw lx-docw"><select class="lx-doc" aria-label="DoC" data-source="docs"></select><button class="fx lx-docx" data-off title="Reset to all DoCs" aria-label="Reset DoC">×</button></span>
+  </div>
+
+  <!-- DASHBOARD (v108 layout) -->
+  <section id="dash" data-page="dash">
+    <div class="tdef" id="target">
+      <b>Target definition:</b> every onboard sea staff member should complete <span class="pill p1">2 courses a month</span>, measured over the rolling 90 days (<span class="lx-win">31 Jul – 28 Oct 2026</span>) and pro-rated from their first course start, or <span class="pill p2">lifetime completed ÷ assigned</span> if higher. Scores are actual %, not capped; vessel, DoC and fleet figures average the individual scores. <b>Lifetime progress</b> is also shown on its own against an <span class="pill p1">80%</span> target.
+    </div>
+    <div class="gauges g3">
+      <div class="kpi gauge" id="g-fleet"><div class="lab lx-glab">Fleet compliance</div><div class="gw lx-g" data-g="mean"></div><div class="val lx-k lx-gv" data-source="docs" data-field="mean_pct" data-fmt="pct">—</div>
+        <div class="sub"><span class="lx-k" data-source="docs" data-field="per_month" data-fmt="dec">—</span> courses per person per month vs 2.00 target · <span class="lx-delta"></span></div></div>
+      <div class="kpi gauge" id="g-docs"><div class="lab">DoCs on target</div><div class="gw lx-g" data-g="docs"></div><div class="val lx-gv"><span class="lx-k" data-source="docs" data-field="docs_on_target" data-fmt="int">—</span> / <span class="lx-k" data-source="docs" data-field="docs_assessable" data-fmt="int">—</span></div><div class="sub">DoCs averaging 100% or more</div></div>
+      <div class="kpi gauge" id="g-ves"><div class="lab">Vessels on target</div><div class="gw lx-g" data-g="ves"></div><div class="val lx-gv"><span class="lx-k" data-source="docs" data-field="v_on_target" data-fmt="int">—</span> / <span class="lx-k" data-source="docs" data-field="v_assessable" data-fmt="int">—</span></div><div class="sub">Vessels with assessable crew averaging 100%+</div></div>
+    </div>
+    <div class="bands" id="bands" style="margin-top:var(--cds-gap-md)">
+      <div class="band b-on"><b class="lx-k" data-source="docs" data-field="b_on" data-fmt="int">—</b><span>On target</span><small>≥ 100%</small></div>
+      <div class="band b-near"><b class="lx-k" data-source="docs" data-field="b_near" data-fmt="int">—</b><span>Near target</span><small>75–99%</small></div>
+      <div class="band b-below"><b class="lx-k" data-source="docs" data-field="b_below" data-fmt="int">—</b><span>Below target</span><small>50–74%</small></div>
+      <div class="band b-low"><b class="lx-k" data-source="docs" data-field="b_low" data-fmt="int">—</b><span>Low activity</span><small>1–49%</small></div>
+      <div class="band b-no"><b class="lx-k" data-source="docs" data-field="b_no" data-fmt="int">—</b><span>No activity</span><small>0%</small></div>
+    </div>
+    <p class="note-inline" style="margin-top:var(--cds-gap-xs)">Vessels by compliance band · vessels with at least one assessable crew member</p>
+    <div class="grid" style="margin-top:var(--cds-gap-md)">
+      <div class="card" id="doc-chart-card">
+        <h2>Compliance by DoC</h2>
+        <p class="note">Average of individual scores; dashed line = 100% target. Right: average · courses per person per month. Click a bar to open that DoC in Fleet summary.</p>
+        <div class="chart lx-docchart dash-skeleton" data-source="docs"></div>
+      </div>
+      <div class="card" id="funnel-card">
+        <h2>Activation funnel</h2>
+        <p class="note">Crew journey and vessel engagement, each on its own scale. Engaged also counts crew not yet registered who have previous-provider history. The biggest drop is highlighted.</p>
+        <div class="chart lx-funnel dash-skeleton" data-source="docs" style="min-height:420px"></div>
+        <h2 style="margin-top:var(--cds-gap-lg)" id="lifetime-h">Lifetime progress vs 80% target</h2>
+        <p class="note lx-lifenote">All-time completed ÷ assigned courses, by DoC.</p>
+        <div class="chart lx-life dash-skeleton" data-source="docs"></div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:var(--cds-gap-md)">
+      <div class="card" id="weekly-c-card">
+        <h2>Weekly avg completions per person vs 0.46 target</h2>
+        <p class="note">Courses completed each week ÷ people counted (today's onboard crew). Last 13 weeks to 28 Oct; dashed line = 0.46 a week, the weekly equivalent of 2 a month.</p>
+        <div class="chart lx-wk dash-skeleton" data-source="sea_weekly"></div>
+      </div>
+      <div class="card" id="monthly-c-card">
+        <h2>Monthly avg completions per person vs 2.0 target</h2>
+        <p class="note">Courses completed each month ÷ people counted. Since Nov 2025; October runs to the 28th. Dashed line = 2 a month.</p>
+        <div class="chart lx-mo dash-skeleton" data-source="sea_monthly"></div>
+      </div>
+    </div>
+    <div class="card" id="trend-card" style="margin-top:var(--cds-gap-md)">
+      <h2>Compliance trend · 13 weeks</h2>
+      <p class="note">Average of individual scores at each weekly reporting date, today's onboard crew. Dashed line: 100% target.</p>
+      <div class="chart lx-trend dash-skeleton" data-source="trend"></div>
+    </div>
+    <div class="card" id="daily-card" style="margin-top:var(--cds-gap-md)">
+      <h2>Daily completions · per person and total</h2>
+      <p class="note lx-dailynote">Last 90 days. Uses the DoC selector above.</p>
+      <h3 class="sub-h">Avg completions per person per day</h3>
+      <p class="note">Dashed line = 0.066, the daily equivalent of 2 courses a month.</p>
+      <div class="chart lx-dayavg dash-skeleton" data-source="sea_daily"></div>
+      <h3 class="sub-h">Total completions per day</h3>
+      <div class="chart lx-daytot dash-skeleton" data-source="sea_daily"></div>
+    </div>
+    </section>
+
+  <!-- FLEET SUMMARY -->
+  <section id="sea" data-page="sea" hidden>
+    <div class="card" id="drill">
+      <div class="bar">
+        <div class="crumbs lx-hcrumbs"></div>
+        <div class="dlbar lx-dlbar" hidden>
+          <span class="note-inline">Download this table:</span>
+          <button class="dl" data-dl="xlsx">Excel</button>
+          <button class="dl" data-dl="csv">CSV</button>
+          <button class="dl" data-dl="html">HTML / PDF</button>
+        </div>
+      </div>
+      <p class="note lx-hintro"></p>
+      <div class="fbar">
+        <label class="fl">DoC <span class="fw"><select class="lx-hdoc"></select><button class="fx" data-fx="0" title="Reset DoC and the filters after it" aria-label="Reset DoC">×</button></span></label>
+        <label class="fl">Vessel type <span class="fw"><select class="lx-hvt"></select><button class="fx" data-fx="1" title="Reset vessel type and the filters after it" aria-label="Reset vessel type">×</button></span></label>
+        <label class="fl">Vessel <span class="fw"><select class="lx-hves"></select><button class="fx" data-fx="2" title="Reset vessel and the filters after it" aria-label="Reset vessel">×</button></span></label>
+        <label class="fl">Rank <span class="fw"><select class="lx-hrank"></select><button class="fx" data-fx="3" title="Reset rank and the filter after it" aria-label="Reset rank">×</button></span></label>
+        <label class="fl">Engagement <span class="fw"><select class="lx-heng">
+          <option value="pop:All onboard">All onboard</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
+          <option value="st:Not registered">Not registered only</option><option value="st:Registered">Registered, no course yet</option><option value="st:Engaged">Engaged, nothing in 90 days</option>
+        </select><button class="fx" data-fx="4" title="Reset engagement" aria-label="Reset engagement">×</button></span></label>
+        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-hq" placeholder="Search"><button class="fx" data-fx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
+        <div class="fbtns"><button class="dl lx-hclr">Clear filters</button></div>
+      </div>
+      <p class="note-inline lx-hfilt" style="margin:0 0 var(--cds-gap-sm)"></p>
+      <p class="note-inline lx-hvtotal" hidden style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="tablebox lx-hbox" data-source="sea_staff vessels" style="max-height:44rem"><table class="hier lx-htable"></table></div>
+      <div class="pcard lx-hpcard" hidden></div>
+    </div>
+  </section>
+
+  <!-- RANKS & COURSES -->
+  <section id="analysis" data-page="analysis" hidden>
+    <p class="note-inline" style="margin-bottom:var(--cds-gap-md)">Uses the DoC filter and the <span class="lx-popname">All onboard</span> counting toggle above.</p>
+    <div class="grid">
+      <div class="card" id="rank-card"><h2>Compliance by rank</h2><p class="note">Average individual compliance for the 25 ranks with the most onboard crew. Right: average · assessable · registration coverage.</p><div class="chart lx-rank dash-skeleton" data-source="ranks"></div></div>
+      <div class="card" id="vt-card"><h2>Compliance by vessel type</h2><p class="note">Average individual compliance. Right: average · assessable · registration coverage.</p><div class="chart lx-vt dash-skeleton" data-source="vtypes"></div></div>
+    </div>
+    <div class="card" id="course-card" style="margin-top:var(--cds-gap-md)"><h2>Most completed courses · 90 days</h2><p class="note">Completions by onboard sea staff, 31 Jul – 28 Oct 2026.</p><div class="chart lx-courses dash-skeleton" data-source="courses"></div></div>
+    <div class="card lx-cs" id="cstat-card" style="margin-top:var(--cds-gap-md)">
+      <h2>Course status by personnel</h2>
+      <div class="bar">
+        <div class="crumbs lx-ccrumbs"></div>
+        <div class="dlbar lx-cdl" hidden>
+          <span class="note-inline">Download this table:</span>
+          <button class="dl" data-dl="xlsx">Excel</button>
+          <button class="dl" data-dl="csv">CSV</button>
+          <button class="dl" data-dl="html">HTML / PDF</button>
+        </div>
+      </div>
+      <p class="note lx-cintro"></p>
+      <div class="fbar">
+        <label class="fl">Category <span class="fw"><select class="lx-ccat"><option value="">All categories</option><option value="Sea staff">Sea staff</option><option value="Trainee">Trainees</option><option value="Office staff">Office staff</option><option value="Off-board">Off-board sea staff</option></select><button class="fx" data-cfx="0" title="Reset category and the filters after it" aria-label="Reset category">×</button></span></label>
+        <label class="fl">Rank <span class="fw"><select class="lx-crank"></select><button class="fx" data-cfx="1" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
+        <label class="fl">Course <span class="fw"><select class="lx-ccourse"></select><button class="fx" data-cfx="2" title="Reset course and the filters after it" aria-label="Reset course">×</button></span></label>
+        <label class="fl">Engagement <span class="fw"><select class="lx-ceng">
+          <option value="pop:All onboard">All onboard</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
+          <option value="st:Not registered">Not registered only</option><option value="st:Registered">Registered, no course yet</option><option value="st:Engaged">Engaged, nothing in 90 days</option>
+        </select><button class="fx" data-cfx="3" title="Reset engagement and clear search" aria-label="Reset engagement">×</button></span></label>
+        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-cq" placeholder="Search"><button class="fx" data-cfx="4" title="Clear search" aria-label="Clear search">×</button></span></label>
+        <div class="fbtns"><button class="dl lx-cclr">Clear filters</button></div>
+      </div>
+      <p class="note-inline lx-cfilt" style="margin:0 0 var(--cds-gap-sm)"></p>
+      <p class="note-inline lx-cvtotal" hidden style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="tablebox lx-cbox" data-source="course_agg course_idx sea_staff learners offboard" style="max-height:44rem"><table class="hier lx-ctbl"></table></div>
+      <div class="pcard lx-cpcard" hidden></div>
+    </div>
+  </section>
+
+  <section id="trainee" data-page="trainee" hidden></section>
+  <section id="office" data-page="office" hidden></section>
+  <section id="offb" data-page="offb" hidden>
+    <p class="note-inline" style="margin-bottom:var(--cds-gap-md)">Sea staff who are not onboard today: <b>assigned</b> to join a ship (measured against the same 2-courses-a-month target as onboard crew) and <b>on leave</b> (monitored, no target). Everything on this page follows the filters below.</p>
+    <div class="kpis lx-okpis" style="margin-bottom:var(--cds-gap-md)"></div>
+    <div class="card lx-od">
+      <div class="bar">
+        <div class="crumbs lx-ocrumbs"></div>
+        <div class="dlbar lx-odl" hidden>
+          <span class="note-inline">Download this table:</span>
+          <button class="dl" data-dl="xlsx">Excel</button>
+          <button class="dl" data-dl="csv">CSV</button>
+          <button class="dl" data-dl="html">HTML / PDF</button>
+        </div>
+      </div>
+      <p class="note lx-ointro"></p>
+      <div class="fbar">
+        <label class="fl">Status <span class="fw"><select class="lx-ostat"><option value="">All off-board</option><option value="Assigned">Assigned to join</option><option value="On leave">On leave</option><option value="Status not set">Status not set</option></select><button class="fx" data-ofx="0" title="Reset status and the filters after it" aria-label="Reset status">×</button></span></label>
+        <label class="fl">DoC <span class="fw"><select class="lx-odoc"></select><button class="fx" data-ofx="1" title="Reset DoC and the filters after it" aria-label="Reset DoC">×</button></span></label>
+        <label class="fl">Last vessel <span class="fw"><select class="lx-oves"></select><button class="fx" data-ofx="2" title="Reset vessel and the filters after it" aria-label="Reset vessel">×</button></span></label>
+        <label class="fl">Rank <span class="fw"><select class="lx-orank"></select><button class="fx" data-ofx="3" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
+        <label class="fl">Engagement <span class="fw"><select class="lx-oeng">
+          <option value="pop:All onboard">All</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
+          <option value="st:Not registered">Not registered only</option><option value="st:Registered">Registered, no course yet</option><option value="st:Engaged">Engaged, nothing in 90 days</option>
+        </select><button class="fx" data-ofx="4" title="Reset engagement and clear search" aria-label="Reset engagement">×</button></span></label>
+        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-oq" placeholder="Search"><button class="fx" data-ofx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
+        <div class="fbtns"><button class="dl lx-oclr">Clear filters</button></div>
+      </div>
+      <p class="note-inline lx-ofilt" style="margin:0 0 var(--cds-gap-sm)"></p>
+      <p class="note-inline lx-ovtotal" hidden style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="tablebox lx-obox" data-source="offboard" style="max-height:44rem"><table class="hier lx-otbl"></table></div>
+      <div class="pcard lx-opcard" hidden></div>
+    </div>
+  </section>
+
+  <template id="learner-tpl">
+    <div class="card lx-ld">
+      <div class="bar">
+        <div class="crumbs lx-lcrumbs"></div>
+        <div class="dlbar lx-ldl" hidden>
+          <span class="note-inline">Download this table:</span>
+          <button class="dl" data-dl="xlsx">Excel</button>
+          <button class="dl" data-dl="csv">CSV</button>
+          <button class="dl" data-dl="html">HTML / PDF</button>
+        </div>
+      </div>
+      <p class="note lx-lintro"></p>
+      <div class="fbar">
+        <label class="fl">Rank <span class="fw"><select class="lx-lrank"></select><button class="fx" data-lfx="0" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
+        <label class="fl">Engagement <span class="fw"><select class="lx-leng">
+          <option value="pop:All onboard">All onboard</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
+          <option value="st:Not registered">Not registered only</option><option value="st:Registered">Registered, no course yet</option><option value="st:Engaged">Engaged, nothing in 90 days</option>
+        </select><button class="fx" data-lfx="1" title="Reset engagement and clear search" aria-label="Reset engagement">×</button></span></label>
+        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-lq" placeholder="Search"><button class="fx" data-lfx="2" title="Clear search" aria-label="Clear search">×</button></span></label>
+        <div class="fbtns"><button class="dl lx-lclr">Clear filters</button></div>
+      </div>
+      <p class="note-inline lx-lfilt" style="margin:0 0 var(--cds-gap-sm)"></p>
+      <p class="note-inline lx-lvtotal" hidden style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="tablebox lx-lbox" data-source="learners mand_ranks" style="max-height:44rem"><table class="hier lx-ltbl"></table></div>
+      <div class="pcard lx-lpcard" hidden></div>
+    </div>
+    <div class="card lx-mand" style="margin-top:var(--cds-gap-md)">
+      <div class="bar"><div class="crumbs lx-mcrumbs"></div><span class="fw fs"><input type="search" class="lx-msearch" placeholder="Search" aria-label="Search mandatory courses"><button class="fx lx-mfx" data-off title="Clear search" aria-label="Clear search">×</button></span></div>
+      <p class="note lx-mnote"></p>
+      <div class="kpis lx-mkpis" style="margin-bottom:var(--cds-gap-md)">
+        <div class="kpi"><div class="lab">Mandatory completion</div><div class="val lx-m" data-source="mand_ranks" data-field="mandatory_pct" data-fmt="pct">—</div><div class="sub"><span class="lx-m" data-source="mand_ranks" data-field="completed" data-fmt="int">—</span> of <span class="lx-m" data-source="mand_ranks" data-field="items" data-fmt="int">—</span> required courses done</div></div>
+        <div class="kpi"><div class="lab">Fully complete</div><div class="val lx-m" data-source="mand_ranks" data-field="fully_complete" data-fmt="int">—</div><div class="sub">People with every mandatory course done</div></div>
+        <div class="kpi"><div class="lab lx-mtlab">Ranks with a list</div><div class="val lx-m" data-source="mand_ranks" data-field="mandatory_titles" data-fmt="int">—</div><div class="sub lx-mtsub">Ranks that have mandatory courses set</div></div>
+      </div>
+      <div class="tablebox lx-mb-ranks"><table class="lx-mranks" data-source="mand_ranks" data-row-key="category,rank"></table></div>
+      <div class="lx-mb-rank" hidden>
+        <h3 class="sub-h">Mandatory titles</h3>
+        <div class="tablebox" style="max-height:20rem"><table class="lx-mtitles" data-source="mand_titles" data-row-key="rank,course_title"></table></div>
+        <h3 class="sub-h">People</h3>
+        <div class="tablebox"><table class="lx-mpeople" data-source="mand_people" data-row-key="employee_id"></table></div>
+      </div>
+      <div class="tablebox lx-mb-person" hidden><table class="lx-mstatus" data-source="mand_status" data-row-key="employee_id,course_title"></table></div>
+    </div>
+  </template>
+
+  <section id="method" data-page="method" class="method card" hidden>
+    <h2>Target: 2 courses a month</h2>
+    <p>Everyone measured (sea staff, trainees and office staff) has the same target: <b>2 courses a month</b>, about one every 15.2 days.</p>
+    <p class="note-inline">Basis: PF 05B Computer Based Training (Seaverse) Matrix, compulsory (C) courses only for the rank, COMMON plus the vessel-type matrix. Monthly need = 3-year courses ÷ 36 + 5-year courses ÷ 60; one-time courses and recommended (R) courses are left out. This works out at about 1.2 a month (catering) to 2.0 (junior deck officers); for example, a junior deck officer on a bulk carrier: 40 ÷ 36 + 56 ÷ 60 = 2.04. It is an average across the validity cycle, used here as a planning pace rather than course-by-course due dates.</p>
+    <p>Only sea staff whose Seaverse status is <b>onboard</b> on an active fleet vessel are analysed; people ashore or assigned are covered on the Off-board crew tab. Every onboard person is at one of these stages:</p>
+    <ul>
+      <li><b>Not registered</b>: invited, but hasn't completed registration yet.</li>
+      <li><b>Registered</b>: accepted the invitation and signed in, but hasn't started a course yet. Not assessable.</li>
+      <li><b>Engaged</b>: has started a first course on Seaverse, or has course history from the previous service provider. These are the <b>assessable</b> crew.</li>
+      <li><b>Active</b>: engaged and has completed at least one course in the last 90 days (the rolling window).</li>
+    </ul>
+    <p>The toggle picks who is counted, from widest to narrowest. The page opens on <b>Registered</b>. Drilling a table down to its list of people switches to <b>All onboard</b>, and going back up returns to the earlier view, unless you pick a different one yourself.</p>
+    <ul>
+      <li><b>All onboard</b>: every invitee. Crew not yet assessable count as <b>0%</b>, so this shows the whole fleet's position, registration gaps included.</li>
+      <li><b>Registered</b>: crew who have completed registration (with or without a course started). Registered crew who haven't started yet count as <b>0%</b>.</li>
+      <li><b>Engaged</b>: only the assessable crew, with nothing filled in as 0%.</li>
+      <li><b>Active</b>: engaged crew with at least one course completed in the last 90 days.</li>
+    </ul>
+    <p>So the figures rise from All onboard to Active. Headcounts, coverage and the funnel always cover everyone onboard.</p>
+    <h2>Individual score (same model as v24)</h2>
+    <ul>
+      <li><b>First course start (E)</b>: the earliest course start. Records brought over from the previous provider without a start date count as starting on 1 Nov 2025 (the Seaverse roll-out).</li>
+      <li><b>Eligible days</b>: from the later of the 90-day window start and E, up to the reporting date (28 Oct 2026), both days included. <b>Expected</b> = eligible days ÷ 15.22 (2 courses a month = 2 per 30.44 days).</li>
+      <li><b>A · Frequency</b>: courses completed in those eligible days ÷ expected × 100%. Not capped. Completions an admin marked complete (because of an app glitch) count like any other.</li>
+      <li><b>B · Lifetime</b>: completed ÷ assigned × 100%.</li>
+      <li><b>Final</b> = the higher of A and B. Compliant at 100% or more.</li>
+      <li><b>Not assessable</b>: invitees who haven't registered and registered crew who haven't started a course. They have no score of their own; in the All onboard and Registered views they count as 0%, and the Engaged and Active views leave them out.</li>
+    </ul>
+    <p>Vessel, DoC and fleet <b>compliance</b> is the average of the final scores of the people counted. A few very active people can lift the average, so also check the share at target. Bands: on target 100%+, near 75–99%, below 50–74%, low 1–49%, none 0%.</p>
+    <p><b>Example:</b> someone who first started a course 40 days ago and completed 4 since then, with 9 of 20 assigned courses done: expected = 40 ÷ 15.22 = 2.63, so A = 4 ÷ 2.63 = 152%, B = 45%, final = 152% (on target).</p>
+    <h2>Who is in which group</h2>
+    <p>By the vessel each person is assigned to in Seaverse. <b>Office staff</b> are on the "Office Staff" record. <b>Trainees</b> are on the training ship record ("Trainee Vessel"). Everyone else is <b>sea staff</b>. Test accounts and the Sea Learning team's own accounts are left out.</p>
+    <h2>Trainees and office staff</h2>
+    <p>Scored exactly like sea staff (same stages, same 2-courses-a-month target, same counting toggle), but everyone in the group is counted, not just people onboard. Each page has a drill-down table: all ranks, then the people in a rank, with the same columns as Fleet summary. They will also be measured against a <b>set of mandatory courses per rank</b> once that list is supplied: mandatory completion = mandatory courses completed ÷ required, with each person's mandatory courses shown as completed, in progress, not started or not assigned.</p>
+    <h2>Engagement filter</h2>
+    <p>The Engagement filter in each table and the All onboard / Registered / Engaged / Active toggle are linked: changing one changes the other. The filter also offers single stages (not registered only, registered with no course yet, engaged with nothing in 90 days); picking one sets the toggle to the view that contains it.</p>
+    <h2>Off-board crew</h2>
+    <p>Sea staff whose status is not onboard: <b>assigned</b> to join a ship, <b>on leave</b> (onshore), or with no status set. Same stages as onboard crew. <b>Assigned</b> crew are scored exactly like onboard crew (2 courses a month, final = higher of frequency and lifetime) so they arrive compliance-ready; <b>on leave</b> crew have no target and are monitored on registration, activity in the last 90 days, lifetime completion (completed ÷ assigned) and courses left open more than 90 days. Last vessel and DoC come from the vessel still tagged on the profile; people with none are shown as "Not tagged". These people are not included in any onboard figure.</p>
+    <h2>Dashboard tab</h2>
+    <p>The Dashboard tab uses the same per-person scores as the Fleet summary. Gauges, bands and the DoC chart follow the counting toggle and the DoC selector. Lifetime progress (completed ÷ assigned, pooled) is shown separately against an 80% target. The lower half of the Dashboard tab shows courses completed per person per week (target 0.46, i.e. 2 a month) and per month (target 2.0), the 13-week compliance trend, and daily completions for the last 90 days, all for today's onboard crew. Login volume isn't shown, because the export has no login data.</p>
+    <h2>Vessels</h2>
+    <p>Every active vessel is listed, including those with no crew registered or onboard on Seaverse. DoC is the company the vessel is registered to.</p>
+    <h2>Data</h2>
+    <p>Seaverse database export of 22 Oct 2026 plus the daily incremental updates to 29 Oct 2026 (the later run of each day, which includes the earlier one); reporting date 28 Oct 2026 (the last full day), with the 13-week trend at weekly reporting dates before it. Completions migrated from the previous provider count by their completion date but don't set the engagement date.</p>
+  </section>
+</div>
+
+<script>
+(() => {
+  const ALL = 'All DoCs';
+  const num = (x) => (x === '' || x == null || isNaN(+x)) ? null : +x;
+  const F = {
+    int: (v) => v == null ? '—' : d3.format(',')(v),
+    pct: (v) => v == null ? '—' : d3.format(',.1f')(v) + '%',
+    pct0: (v) => v == null ? '—' : d3.format(',.0f')(v) + '%',
+    dec: (v) => v == null ? '—' : d3.format('.2f')(v),
+    date: (v) => v ? d3.utcFormat('%b %-d, %Y')(new Date(v + 'T00:00:00Z')) : '—',
+  };
+  const enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D');
+  const key2 = (a, b) => [a, b].map((s) => enc(s).replace(/,/g, '%2C')).join(',');
+  window.SV = { ALL, num, F, enc, key2 };
+  window.SV.DEFPOP = 'Registered';   // page-level default when the dashboard opens
+  window.SV.TBLPOP = 'All onboard';  // default once a table is drilled down to personnel level
+  // Drill-down rule: entering a personnel-level list switches counting to All onboard; going back up restores the
+  // previous view, unless the user re-selected the counting view meanwhile (then their choice stays).
+  const A = window.SV.A = { key: null, seen: null, prev: null, user: false };
+  window.SV.markUser = () => { if (A.key) A.user = true; };
+  window.SV.drill = (key, isPL) => {
+    const pop = window.SV.pop();
+    if (isPL) {
+      if (A.key === key) { if (A.user) A.key = null; return; }
+      if (A.seen === key) return;
+      A.key = key; A.seen = key; A.prev = pop; A.user = false;
+      if (pop !== window.SV.TBLPOP) dash.setParams({ pop: window.SV.TBLPOP });
+    } else {
+      if (A.seen === key) A.seen = null;
+      if (A.key === key) { const prev = A.prev; A.key = null; if (prev && prev !== pop) { window.SV.clearStage && window.SV.clearStage(); dash.setParams({ pop: prev }); } }
+    }
+  };
+  // resets: stay at personnel level -> All onboard; back at the top -> the page default (Registered)
+  window.SV.resetPop = (stillPL) => { if (stillPL) return window.SV.TBLPOP; A.key = A.seen = null; return window.SV.DEFPOP; };
+  window.SV.levelPop = (isPL) => isPL ? window.SV.TBLPOP : window.SV.DEFPOP;
+  window.SV.pop = () => (['All onboard', 'Registered', 'Engaged', 'Active'].includes(dash.params().pop) ? dash.params().pop : window.SV.DEFPOP);
+
+  let tab = 'sea';
+  const tabs = document.querySelectorAll('.sv .tab');
+  const show = (t, link) => {
+    tab = t;
+    tabs.forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === t));
+    document.querySelectorAll('.sv [data-page]').forEach((s) => s.hidden = s.dataset.page !== t);
+    document.querySelector('.lx-globalctl').hidden = t === 'method';
+    document.querySelector('.lx-doc').hidden = !['dash', 'sea', 'analysis'].includes(t);
+    document.querySelector('.lx-docw').hidden = !['dash', 'sea', 'analysis'].includes(t);
+    if (window.SV.A && window.SV.A.key && window.SV.A.key !== t) window.SV.drill(window.SV.A.key, false);
+    if (window.SV.A && window.SV.A.seen && window.SV.A.seen !== t) window.SV.A.seen = null;
+    if (link) dash.setLink(t);
+    window.SV.tab = t;
+    window.SV.redraw && window.SV.redraw();
+  };
+  tabs.forEach((b) => b.addEventListener('click', () => show(b.dataset.tab, true)));
+  const h = location.hash.slice(1);
+  window.SV.tab = ['dash', 'sea', 'analysis', 'trainee', 'office', 'offb', 'method'].includes(h) ? h : 'dash';
+  window.SV.show = show;
+
+  const sel = document.querySelector('.lx-doc');
+  sel.addEventListener('change', () => dash.setParams({ doc: sel.value || null, vessel: null }));
+  document.querySelector('.lx-docx').addEventListener('click', (e) => { e.preventDefault(); if (e.currentTarget.hasAttribute('data-off')) return; dash.setParams({ doc: null, vessel: null }); });
+  window.SV.doc = () => dash.params().doc || ALL;
+
+  window.SV.table = (table, state, cols, rows, opts = {}) => {
+    if (!table.querySelector('thead')) {
+      const thead = table.createTHead().insertRow();
+      cols.forEach((c) => {
+        const th = document.createElement('th');
+        th.dataset.field = c.key;
+        if (c.num) th.className = 'num';
+        if (c.narrow) th.classList.add('hide-narrow');
+        const b = document.createElement('button');
+        b.textContent = c.label;
+        if (!opts.nosort) b.addEventListener('click', () => { state.dir = state.key === c.key ? -state.dir : 1; state.key = c.key; opts.redraw(); });
+        th.appendChild(b);
+        thead.appendChild(th);
+      });
+      table.createTBody();
+    }
+    table.querySelectorAll('th').forEach((th) => th.setAttribute('aria-sort', th.dataset.field === state.key ? (state.dir > 0 ? 'ascending' : 'descending') : 'none'));
+    const col = cols.find((c) => c.key === state.key) || cols[0];
+    const sorted = opts.nosort ? rows : rows.slice().sort((a, b) => {
+      if (opts.first) { const fa = opts.first(a), fb = opts.first(b); if (fa !== fb) return fa ? -1 : 1; }
+      let x = a[col.key], y = b[col.key];
+      if (col.num) { x = num(x); y = num(y); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * state.dir; }
+      return String(x ?? '').localeCompare(String(y ?? '')) * state.dir;
+    });
+    table.tBodies[0].replaceChildren(...sorted.map((r) => {
+      const tr = document.createElement('tr');
+      if (opts.click) { tr.className = 'click'; tr.addEventListener('click', () => opts.click(r)); }
+      if (opts.dim && opts.dim(r)) tr.classList.add('dim');
+      if (opts.key) tr.dataset.key = opts.key(r);
+      cols.forEach((c) => {
+        const td = tr.insertCell();
+        if (c.num) td.className = 'num';
+        if (c.narrow) td.classList.add('hide-narrow');
+        const v = c.num ? num(r[c.key]) : r[c.key];
+        const txt = c.fmt ? c.fmt(v) : (v ?? '');
+        if (c.chip) {
+          const t = c.chip(r);
+          if (t) { const sp = document.createElement('span'); sp.className = 'chip'; sp.dataset.b = t; sp.textContent = t; td.appendChild(sp); }
+        } else if (c.bar && v != null) {
+          const w = document.createElement('div'); w.className = 'cellbar';
+          const i = document.createElement('i'); i.style.width = Math.min(60, Math.max(1, v / c.bar * 60)) + 'px';
+          if (v >= 100) i.className = 'ok';
+          const s = document.createElement('span'); s.textContent = txt;
+          w.append(i, s); td.appendChild(w);
+        } else { td.textContent = txt; if (c.color && v != null && window.SV.bcol) td.style.color = window.SV.bcol(v); }
+      });
+      return tr;
+    }));
+  };
+
+  window.SV.tip = (box) => {
+    let t = box.querySelector('.tip');
+    if (!t) { t = document.createElement('div'); t.className = 'tip'; box.appendChild(t); }
+    return {
+      show(ev, title, line) {
+        t.replaceChildren();
+        const a = document.createElement('div'); a.className = 't'; a.textContent = title;
+        const b = document.createElement('div'); b.textContent = line;
+        t.append(a, b); t.style.display = 'block';
+        const r = box.getBoundingClientRect();
+        let x = ev.clientX - r.left + 12; const y = ev.clientY - r.top + 12;
+        if (x + t.offsetWidth > r.width) x = Math.max(0, ev.clientX - r.left - t.offsetWidth - 12);
+        t.style.left = x + 'px'; t.style.top = y + 'px';
+      },
+      hide() { t.style.display = 'none'; },
+    };
+  };
+  window.SV.fail = (el) => { el.replaceChildren(); const d = document.createElement('div'); d.className = 'failed'; d.textContent = 'Failed to load'; el.appendChild(d); };
+  window.SV.axisClean = (g) => { g.attr('font-size', null).attr('font-family', null); g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'); g.selectAll('line,path').attr('stroke', 'var(--cds-chart-axis)'); };
+})();
+</script>
+
+<script>
+// Sea staff tab
+(() => {
+  const { ALL, num, F, enc, key2, table, tip, fail, axisClean } = window.SV;
+  const root = document.querySelector('.sv');
+  const BC = { 'On target': 'var(--color-ok)', 'Near target': dash.colors[0], 'Below target': 'var(--color-warn)', 'Low activity': 'color-mix(in srgb, var(--color-warn) 45%, var(--color-bad))', 'No activity': 'var(--color-bad)' };
+  root.style.setProperty('--b-on', BC['On target']); root.style.setProperty('--b-near', BC['Near target']); root.style.setProperty('--b-below', BC['Below target']);
+  root.style.setProperty('--b-low', BC['Low activity']); root.style.setProperty('--b-no', BC['No activity']);
+  const bandOf = (x) => x == null ? null : x >= 100 ? 'On target' : x >= 75 ? 'Near target' : x >= 50 ? 'Below target' : x > 0 ? 'Low activity' : 'No activity';
+  const bcol = (x) => x == null ? 'var(--cds-chart-muted)' : BC[bandOf(x)];
+  window.SV.bcol = bcol;
+  const sel = document.querySelector('.lx-doc');
+  const take = document.querySelector('.lx-take');
+  const popBtns = document.querySelectorAll('.lx-pop button');
+  popBtns.forEach((b) => b.addEventListener('click', () => { window.SV.markUser(); window.SV.clearStage && window.SV.clearStage(); dash.setParams({ pop: b.dataset.pop }); }));
+  const STAGE_POP = { 'Not registered': 'All onboard', 'Registered': 'Registered', 'Engaged': 'Engaged' };
+  window.SV.STAGE_POP = STAGE_POP;
+  const POPNOTE = {
+    'All onboard': 'Every onboard invitee. Anyone not yet assessable (not registered, or no course started) counts as 0%.',
+    'Registered': 'Crew who have completed registration. Those who haven’t started a course yet count as 0%.',
+    'Engaged': 'Started a first course on Seaverse or has previous-provider history: the assessable crew only.',
+    'Active': 'Engaged and completed at least one course in the last 90 days.',
+  };
+  const STAGES = { 'All onboard': null, 'Registered': 'reg', 'Engaged': ['Engaged', 'Active'], 'Active': ['Active'] };
+  const where = (doc, pop) => 'doc=' + enc(doc) + '&population=' + enc(pop);
+
+  function draw() {
+    const doc = window.SV.doc();
+    const pop = window.SV.pop();
+    const vessel = dash.params().vessel || null;
+    popBtns.forEach((b) => b.setAttribute('aria-checked', b.dataset.pop === pop));
+    document.querySelector('.lx-popnote').textContent = POPNOTE[pop];
+    document.querySelectorAll('.lx-popname').forEach((e) => e.textContent = pop);
+    const D = dash.data('docs');
+    const docs = D.status === 'ok' ? D.data : [];
+    const list = [...new Set(docs.filter((r) => r.doc !== ALL).map((r) => r.doc))].sort();
+    if (sel.options.length !== list.length + 1) sel.replaceChildren(new Option('All DoCs', ''), ...list.map((d) => new Option(d, d)));
+    sel.value = doc === ALL ? '' : doc;
+    document.querySelector('.lx-docx').toggleAttribute('data-off', doc === ALL);
+
+    const row = docs.find((r) => r.doc === doc && r.population === pop);
+    take.classList.toggle('dash-skeleton', D.status === 'loading');
+    if (D.status === 'error') take.textContent = 'Failed to load';
+    else if (row) {
+      take.dataset.where = where(doc, pop);
+      const onb = num(row.onboard);
+      take.textContent = onb
+        ? `${doc === ALL ? 'Fleet-wide' : doc}: ${F.int(num(row.registered))} of ${F.int(onb)} onboard sea staff are registered (${F.pct(num(row.coverage_pct))}). Of the ${F.int(num(row.assessable))} assessable, ${F.pct(num(row.ok_pct))} meet 2 courses a month; average ${F.pct(num(row.mean_pct))}.`
+        : `${doc}: none of its ${F.int(num(row.vessels))} active vessels has sea staff onboard on Seaverse yet.`;
+    }
+    document.querySelectorAll('#dash .lx-k').forEach((el) => {
+      el.dataset.where = where(doc, pop);
+      el.textContent = row ? F[el.dataset.fmt](num(row[el.dataset.field])) : '—';
+    });
+    document.querySelector('.lx-glab').textContent = doc === ALL ? 'Fleet compliance' : 'DoC compliance';
+    const delta = document.querySelector('.lx-delta');
+    const m = row ? num(row.mean_pct) : null, m4 = row ? num(row.mean_4w_ago) : null;
+    delta.replaceChildren();
+    if (m != null && m4 != null) { const s = document.createElement('span'); s.style.color = m >= m4 ? 'var(--color-ok)' : 'var(--color-bad)'; s.textContent = `${m >= m4 ? '▲' : '▼'} ${Math.abs(m - m4).toFixed(0)} pts in 4 wks`; delta.appendChild(s); }
+    document.querySelector('#g-fleet .lx-gv').style.color = bcol(m);
+    const tab = window.SV.tab;
+    if (tab === 'dash') { drawGauges(row); drawDocChart(docs, doc, pop, D.status); drawFunnel(row, D.status); drawLifetime(docs, doc, pop, D.status); drawWeeklyC(doc, pop); drawMonthlyC(doc, pop); drawTrend(doc, pop); drawDaily(doc, pop); }
+    else if (tab === 'sea') drawHier();
+  }
+  window.SV.drawSea = draw;
+
+  function drawGauges(row) {
+    const val = (k) => row ? num(row[k]) : null;
+    const frac = {
+      mean: [val('mean_pct') == null ? 0 : val('mean_pct') / 100, val('mean_pct')],
+      docs: [val('docs_assessable') ? val('docs_on_target') / val('docs_assessable') : 0, val('docs_assessable') ? val('docs_on_target') / val('docs_assessable') * 100 : null],
+      ves: [val('v_assessable') ? val('v_on_target') / val('v_assessable') : 0, val('v_assessable') ? val('v_on_target') / val('v_assessable') * 100 : null],
+      crew: [val('ok_pct') == null ? 0 : val('ok_pct') / 100, val('ok_pct')],
+    };
+    document.querySelectorAll('.lx-g').forEach((box) => {
+      const [f, pct] = frac[box.dataset.g];
+      box.querySelector('svg')?.remove();
+      const W = Math.min(box.clientWidth || 200, 220), H = W / 2 + 4, r = W / 2 - 2;
+      const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).style('max-width', W + 'px');
+      const g = svg.append('g').attr('transform', `translate(${W / 2},${H - 2})`);
+      const arc = d3.arc().innerRadius(r * 0.74).outerRadius(r).cornerRadius(3);
+      g.append('path').attr('d', arc({ startAngle: -Math.PI / 2, endAngle: Math.PI / 2 })).attr('fill', 'var(--cds-chart-grid)');
+      const ff = Math.max(0, Math.min(1, f));
+      if (ff > 0) g.append('path').attr('d', arc({ startAngle: -Math.PI / 2, endAngle: -Math.PI / 2 + Math.PI * ff })).attr('fill', bcol(pct));
+      if (box.dataset.g !== 'mean') box.parentElement.querySelector('.lx-gv').style.color = bcol(pct);
+    });
+  }
+
+  function drawDocChart(docs, doc, pop, status) {
+    const box = document.querySelector('.lx-docchart');
+    if (status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (status !== 'ok') return;
+    box.classList.remove('dash-skeleton');
+    const rows = docs.filter((r) => r.doc !== ALL && r.population === pop && num(r.assessable) > 0)
+      .map((r) => ({ doc: r.doc, v: num(r.mean_pct), md: num(r.median_pct), w: num(r.per_month), n: num(r.assessable) })).sort((a, b) => b.v - a.v);
+    const W = box.clientWidth || 400, bh = 22, H = rows.length * bh + 28;
+    box.querySelector('svg')?.remove();
+    if (!rows.length) return;
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const meas = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+    const rlab = (r) => `${F.pct0(r.v)} · ${d3.format('.2f')(r.w)}/mo`;
+    let rw = 0; rows.forEach((r) => { const t = meas.append('text').text(rlab(r)); rw = Math.max(rw, t.node().getComputedTextLength()); t.remove(); });
+    rw += 8;
+    const short = (s) => s.length > 30 ? s.slice(0, 29) + '…' : s;
+    let lw = 0; rows.forEach((r) => { const t = meas.append('text').text(short(r.doc)); lw = Math.max(lw, t.node().getComputedTextLength()); t.remove(); });
+    lw = Math.min(lw + 8, W * 0.38);
+    const fit = (s) => { const t = meas.append('text').text(s); let out = s; while (out.length > 4 && t.node().getComputedTextLength() > lw - 10) { out = out.slice(0, -2) + '…'; t.text(out); } t.remove(); return out; };
+    const labels = new Map(rows.map((r) => [r.doc, fit(short(r.doc))]));
+    const showR = W - lw - rw > 80;
+    const max = Math.max(100, d3.max(rows, (r) => r.v) || 0);
+    const x = d3.scaleLinear([0, max], [lw, W - (showR ? rw : 8)]);
+    const y = d3.scaleBand(rows.map((r) => r.doc), [4, H - 24]).padding(0.25);
+    svg.append('g').attr('transform', `translate(0,${H - 24})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((x.range()[1] - lw) / 60))).tickFormat((d) => d + '%')).call(axisClean);
+    const t = tip(box);
+    svg.append('g').selectAll('rect').data(rows).join('rect')
+      .attr('x', x(0)).attr('y', (r) => y(r.doc)).attr('height', y.bandwidth()).attr('rx', 4)
+      .attr('width', (r) => Math.max(1, x(r.v) - x(0)))
+      .attr('fill', (r) => bcol(r.v)).attr('opacity', (r) => doc === ALL || r.doc === doc ? 1 : 0.35)
+      .style('cursor', 'pointer')
+      .on('click', (e, r) => { dash.setParams({ doc: r.doc, vessel: null }); window.SV.show('sea', true); })
+      .on('mousemove', (e, r) => t.show(e, r.doc, `Average ${F.pct(r.v)} · ${F.int(r.n)} assessable`))
+      .on('mouseleave', () => t.hide());
+    svg.append('g').selectAll('text').data(rows).join('text').text((r) => labels.get(r.doc))
+      .attr('x', lw - 8).attr('y', (r) => y(r.doc) + y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end')
+      .attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    if (showR) svg.append('g').selectAll('text').data(rows).join('text').text(rlab)
+      .attr('x', W).attr('text-anchor', 'end').attr('y', (r) => y(r.doc) + y.bandwidth() / 2).attr('dy', '0.35em')
+      .attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    svg.append('line').attr('x1', x(100)).attr('x2', x(100)).attr('y1', 0).attr('y2', H - 24).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+    box.style.minHeight = H + 'px';
+  }
+
+  function drawFunnel(row, status) {
+    const box = document.querySelector('.lx-funnel');
+    if (status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (status !== 'ok') return;
+    box.classList.remove('dash-skeleton');
+    box.querySelector('svg')?.remove();
+    if (!row) return;
+    const v = (k) => num(row[k]) || 0;
+    const groups = [
+      ['Crew', [['Onboard (invited)', v('onboard')], ['Registered', v('registered')], ['Engaged (assessable)', v('engaged')], ['Active (course in 90 days)', v('active90')], ['At or above target', v('crew_on_target')]]],
+      ['Vessels', [['Active vessels', v('vessels')], ['With crew onboard', v('v_onboard')], ['With registered crew', v('v_registered')], ['With engaged crew', v('v_engaged')], ['With active crew', v('v_active')], ['On target (100%+)', v('v_on_target')]]],
+    ];
+    const W = box.clientWidth || 400, bh = 22, gap = 8, head = 26;
+    const H = groups.reduce((s, [, st]) => s + head + st.length * (bh + gap), 0);
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const meas = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0; groups.forEach(([, st]) => st.forEach(([l]) => { meas.text(l); lw = Math.max(lw, meas.node().getComputedTextLength()); }));
+    meas.text('00,000 · 100%'); const vw = meas.node().getComputedTextLength() + 10; meas.remove();
+    const narrow = W < 420; lw = narrow ? 0 : lw + 12;
+    let y0 = 0;
+    groups.forEach(([title, st]) => {
+      svg.append('text').text(title).attr('x', 0).attr('y', y0 + 16).attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').style('font-weight', 'var(--cds-font-weight-medium)');
+      y0 += head;
+      const top = st[0][1] || 1;
+      const lost = st.map((s, i) => i ? st[i - 1][1] - s[1] : 0);
+      const worst = d3.maxIndex(lost);
+      const x = d3.scaleLinear([0, top], [lw, W - vw]);
+      st.forEach(([l, n], i) => {
+        const g = svg.append('g').attr('transform', `translate(0,${y0})`);
+        if (!narrow) g.append('text').text(l).attr('x', lw - 12).attr('text-anchor', 'end').attr('y', bh / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+        g.append('rect').attr('x', lw).attr('height', bh).attr('rx', 4).attr('width', Math.max(2, x(n) - lw)).attr('fill', i === worst && lost[i] > 0 ? 'var(--cds-chart-status-critical)' : dash.colors[0]).attr('opacity', i === worst && lost[i] > 0 ? 1 : 1 - i * 0.12);
+        if (narrow) g.append('text').text(l).attr('x', lw + 6).attr('y', bh / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').style('paint-order', 'stroke').attr('stroke', 'var(--color-panel)').attr('stroke-width', 3);
+        g.append('text').text(`${F.int(n)} · ${d3.format('.0%')(n / top)}`).attr('x', W).attr('text-anchor', 'end').attr('y', bh / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)');
+        y0 += bh + gap;
+      });
+    });
+    box.style.minHeight = H + 'px';
+  }
+
+  function drawTrend(doc, pop) {
+    const box = document.querySelector('.lx-trend');
+    const R = dash.data('trend');
+    if (R.status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (R.status !== 'ok') return;
+    box.classList.remove('dash-skeleton');
+    const rows = R.data.filter((r) => r.doc === doc && r.population === pop && num(r.mean_pct) != null).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), mean: num(r.mean_pct), med: num(r.median_pct), ok: num(r.ok_pct), n: num(r.assessable) }));
+    box.querySelector('svg')?.remove();
+    if (!rows.length) return;
+    const W = box.clientWidth || 400, H = 240, m = { t: 12, r: 70, b: 24, l: 44 };
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleUtc(d3.extent(rows, (r) => r.d), [m.l, W - m.r]);
+    const y = d3.scaleLinear([0, Math.max(110, d3.max(rows, (r) => r.mean))], [H - m.b, m.t]).nice();
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l - m.r) / 80))).tickFormat(d3.utcFormat('%b %-d'))).call(axisClean);
+    const ya = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat((d) => d + '%').tickSize(-(W - m.l - m.r))).call(axisClean);
+    ya.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'); ya.select('.domain').remove();
+    svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(100)).attr('y2', y(100)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+    const series = [['Average', 'mean', dash.colors[0]]];
+    const ends = [];
+    series.forEach(([name, k, col]) => {
+      svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', col).attr('stroke-width', 2).attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round').attr('d', d3.line((r) => x(r.d), (r) => y(r[k])));
+      const last = rows[rows.length - 1]; ends.push({ y: y(last[k]), txt: `${name} ${F.pct0(last[k])}`, col });
+    });
+    if (ends.length > 1 && Math.abs(ends[0].y - ends[1].y) < 14) { const mid = (ends[0].y + ends[1].y) / 2; const up = ends[0].y <= ends[1].y ? 0 : 1; ends[up].y = mid - 7; ends[1 - up].y = mid + 7; }
+    ends.forEach((e) => svg.append('text').text(e.txt).attr('x', W - m.r + 6).attr('y', e.y).attr('dy', '0.35em').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)'));
+    const t = tip(box);
+    const rule = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--cds-chart-axis)').style('display', 'none');
+    svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('mousemove', (e) => {
+        const [px] = d3.pointer(e); const r = rows[d3.leastIndex(rows, (r) => Math.abs(x(r.d) - px))];
+        rule.style('display', null).attr('x1', x(r.d)).attr('x2', x(r.d));
+        t.show(e, d3.utcFormat('%b %-d, %Y')(r.d), `Average ${F.pct(r.mean)} · ${F.pct(r.ok)} at target · ${F.int(r.n)} assessable`);
+      })
+      .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
+  }
+
+  // ---- lifetime progress vs 80% (by DoC) ----
+  function drawLifetime(docs, doc, pop, status) {
+    const box = document.querySelector('.lx-life');
+    if (status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (status !== 'ok') return;
+    box.classList.remove('dash-skeleton');
+    const rows = docs.filter((r) => r.doc !== ALL && r.population === pop && num(r.lifetime_pool_pct) != null && num(r.people) > 0)
+      .map((r) => ({ doc: r.doc, v: num(r.lifetime_pool_pct) })).sort((a, b) => b.v - a.v);
+    const fleet = docs.find((r) => r.doc === ALL && r.population === pop);
+    const best = rows[0];
+    document.querySelector('.lx-lifenote').textContent = `All-time completed ÷ assigned courses, by DoC (${pop.toLowerCase()}). Fleet ${F.pct(fleet ? num(fleet.lifetime_pool_pct) : null)}${best ? ` · best DoC: ${best.doc} ${F.pct(best.v)}` : ''}. Dashed line = 80% target.`;
+    box.querySelector('svg')?.remove();
+    if (!rows.length) return;
+    const W = box.clientWidth || 400, H = 220, m = { t: 10, r: 8, b: 70, l: 40 };
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleBand(rows.map((r) => r.doc), [m.l, W - m.r]).padding(0.2);
+    const y = d3.scaleLinear([0, 100], [H - m.b, m.t]);
+    const ya = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat((d) => d + '%').tickSize(-(W - m.l - m.r))).call(axisClean);
+    ya.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'); ya.select('.domain').remove();
+    const short = (s) => s.replace(/^Synergy /, '').replace(/ (Private|Pvt\.?|Pte\.?|Limited|Ltd\.?|Inc\.?|Co\.?|LLC|GmbH|A\/S|AS|DMCC|Shipmanagement|Ship Management|Marine)\b.*$/, '').slice(0, 14);
+    const xa = svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickFormat(short)).call(axisClean);
+    xa.selectAll('text').attr('transform', 'rotate(-45)').attr('text-anchor', 'end').attr('dx', '-0.4em').attr('dy', '0.4em');
+    const t = tip(box);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.doc)).attr('width', x.bandwidth()).attr('rx', 3)
+      .attr('y', (r) => y(Math.min(r.v, 100))).attr('height', (r) => Math.max(0, y(0) - y(Math.min(r.v, 100))))
+      .attr('fill', (r) => r.v >= 80 ? 'var(--color-ok)' : dash.colors[0]).attr('opacity', (r) => doc === ALL || r.doc === doc ? 1 : 0.35)
+      .on('mousemove', (e, r) => t.show(e, r.doc, `${F.pct(r.v)} of assigned courses completed`)).on('mouseleave', () => t.hide());
+    svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(80)).attr('y2', y(80)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+  }
+
+  // ---- generic bar chart with a target line (weekly / monthly per person) ----
+  function barsWithTarget(box, rows, opt) {
+    box.querySelector('svg')?.remove();
+    if (!rows.length) return;
+    const W = box.clientWidth || 400, H = 240, m = { t: 14, r: 10, b: 30, l: 44 };
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleBand(rows.map((r) => r.k), [m.l, W - m.r]).padding(0.22);
+    const y = d3.scaleLinear([0, Math.max(opt.target * 1.15, d3.max(rows, (r) => r.v) || 0)], [H - m.b, m.t]).nice();
+    const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - m.l) / 52)));
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues(rows.map((r) => r.k).filter((_, i) => i % every === 0)).tickFormat((k) => rows.find((r) => r.k === k).lab)).call(axisClean);
+    const ya = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format('.1f')).tickSize(-(W - m.l - m.r))).call(axisClean);
+    ya.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'); ya.select('.domain').remove();
+    const t = tip(box);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.k)).attr('width', x.bandwidth()).attr('rx', 4)
+      .attr('y', (r) => y(r.v)).attr('height', (r) => Math.max(0, y(0) - y(r.v))).attr('fill', (r) => r.v >= opt.target ? 'var(--color-ok)' : dash.colors[0])
+      .on('mousemove', (e, r) => t.show(e, r.title, `${d3.format('.2f')(r.v)} per person · ${F.int(r.c)} courses · ${F.int(r.n)} people`)).on('mouseleave', () => t.hide());
+    svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(opt.target)).attr('y2', y(opt.target)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+  }
+  function drawWeeklyC(doc, pop) {
+    const box = document.querySelector('.lx-wk'), R = dash.data('sea_weekly');
+    if (R.status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (R.status !== 'ok') return; box.classList.remove('dash-skeleton');
+    const f = d3.utcFormat('%b %-d');
+    barsWithTarget(box, R.data.filter((r) => r.doc === doc && r.population === pop).map((r) => {
+      const a = new Date(r.week_start + 'T00:00:00Z'), b = new Date(r.week_end + 'T00:00:00Z');
+      return { k: r.week_start, lab: f(a), title: `${f(a)} – ${f(b)}`, v: num(r.per_person) || 0, c: num(r.completions), n: num(r.people) };
+    }), { target: 2 * 7 / 30.4375 });
+  }
+  function drawMonthlyC(doc, pop) {
+    const box = document.querySelector('.lx-mo'), R = dash.data('sea_monthly');
+    if (R.status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (R.status !== 'ok') return; box.classList.remove('dash-skeleton');
+    barsWithTarget(box, R.data.filter((r) => r.doc === doc && r.population === pop).map((r) => {
+      const d = new Date(r.month + '-01T00:00:00Z');
+      return { k: r.month, lab: d3.utcFormat('%b %y')(d), title: d3.utcFormat('%B %Y')(d) + (num(r.days) < 30 && r.month === '2026-10' ? ' (to 28th)' : ''), v: num(r.per_person) || 0, c: num(r.completions), n: num(r.people) };
+    }), { target: 2 });
+  }
+  function drawDaily(doc, pop) {
+    const R = dash.data('sea_daily');
+    const bA = document.querySelector('.lx-dayavg'), bT = document.querySelector('.lx-daytot');
+    if (R.status === 'error') { [bA, bT].forEach((b) => { b.classList.remove('dash-skeleton'); fail(b); }); return; }
+    if (R.status !== 'ok') return; [bA, bT].forEach((b) => b.classList.remove('dash-skeleton'));
+    const rows = R.data.filter((r) => r.doc === doc && r.population === pop).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), v: num(r.per_person) || 0, c: num(r.completions) || 0, n: num(r.people) }));
+    document.querySelector('.lx-dailynote').textContent = `Last 90 days to 28 Oct · ${doc === ALL ? 'all DoCs' : doc} · ${pop.toLowerCase()} (${F.int(rows[0] ? rows[0].n : 0)} people). Uses the DoC selector above.`;
+    const line = (box, key, target, fmtY, label) => {
+      box.querySelector('svg')?.remove(); if (!rows.length) return;
+      const W = box.clientWidth || 400, H = 220, m = { t: 12, r: 12, b: 24, l: 48 };
+      const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+      const x = d3.scaleUtc(d3.extent(rows, (r) => r.d), [m.l, W - m.r]);
+      const y = d3.scaleLinear([0, Math.max(target ? target * 1.2 : 0, d3.max(rows, (r) => r[key]) || 1)], [H - m.b, m.t]).nice();
+      svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(W / 90))).tickFormat(d3.utcFormat('%b %-d'))).call(axisClean);
+      const ya = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(fmtY).tickSize(-(W - m.l - m.r))).call(axisClean);
+      ya.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'); ya.select('.domain').remove();
+      if (key === 'c') {
+        const bw = Math.max(1, (W - m.l - m.r) / rows.length - 1);
+        svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.d) - bw / 2).attr('width', bw).attr('y', (r) => y(r.c)).attr('height', (r) => y(0) - y(r.c)).attr('fill', dash.colors[1]).attr('rx', 1);
+      } else {
+        svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', dash.colors[0]).attr('stroke-width', 2).attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round').attr('d', d3.line((r) => x(r.d), (r) => y(r[key])));
+      }
+      if (target) svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(target)).attr('y2', y(target)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+      const t = tip(box);
+      const rule = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--cds-chart-axis)').style('display', 'none');
+      svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+        .on('mousemove', (e) => { const [px] = d3.pointer(e); const r = rows[d3.leastIndex(rows, (r) => Math.abs(x(r.d) - px))]; rule.style('display', null).attr('x1', x(r.d)).attr('x2', x(r.d)); t.show(e, d3.utcFormat('%a %b %-d')(r.d), `${d3.format('.3f')(r.v)} per person · ${F.int(r.c)} courses`); })
+        .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
+    };
+    line(bA, 'v', 2 / 30.4375, d3.format('.3f'));
+    line(bT, 'c', null, d3.format(','));
+  }
+
+  // ---- personnel record view (v29 style), shared by Fleet summary, Trainees and Office staff ----
+  (() => {
+    const D0 = Date.UTC(2020, 0, 1), WS = Date.UTC(2026, 6, 31), WE = Date.UTC(2026, 9, 28);
+    const day = (h) => h ? D0 + parseInt(h, 16) * 864e5 : null;
+    const fd = (t) => t == null ? '—' : d3.utcFormat('%-d %b %y')(new Date(t));
+    const ST = { 1: 'Completed', 2: 'In progress', 3: 'Completed (admin-marked)' };
+    const cache = {};
+    function rec(p) {
+      const R = dash.data(p.rec_shard), C = dash.data('course_idx'), RD = dash.data('rdates');
+      if (R.status !== 'ok' || C.status !== 'ok' || RD.status !== 'ok') return { status: [R, C, RD].some((x) => x.status === 'error') ? 'error' : 'loading' };
+      if (!cache[p.rec_shard]) cache[p.rec_shard] = new Map(R.data.map((r) => [String(r.employee_id), r]));
+      const row = cache[p.rec_shard].get(String(p.employee_id)) || { h: '', r: '', n: '', aged: 0 };
+      const titles = new Map(C.data.map((c) => [String(c.ci), c.title]));
+      const recs = (row.r || '').split(';').filter(Boolean).map((s) => { const [ci, st, a, b, c] = s.split('.'); const cd = day(c); return { course: titles.get(String(parseInt(ci, 16))) || '?', status: ST[st] || st, a: day(a), s: day(b), c: cd, win: !!cd && +st !== 2 && cd >= WS && cd <= WE }; })
+        .sort((x, y) => (x.c ?? 9e15) - (y.c ?? 9e15));
+      const ns = (row.n || '').split('.').filter(Boolean).map((h) => titles.get(String(parseInt(h, 16))) || '?').sort();
+      const hist = (row.h || '').split(',');
+      return { status: 'ok', recs, ns, hist, dates: RD.data.map((r) => r.date), aged: num(row.aged) || 0 };
+    }
+    function rows(p) {
+      const X = rec(p); if (X.status !== 'ok') return null;
+      return [['Course', 'Status', 'Assigned', 'Started', 'Completed', 'In 90-day window'],
+        ...X.recs.map((r) => [r.course, r.status, fd(r.a), fd(r.s), fd(r.c), r.win ? 'Yes' : '']), ...X.ns.map((t) => [t, 'Not started', '', '', '', ''])];
+    }
+    function render(box, p, where) {
+      const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+      box.dataset.source = `${p.rec_shard} course_idx rdates`;
+      const X = rec(p);
+      const f = num(p.final_pct), fq = num(p.frequency_pct), lf = num(p.lifetime_pct);
+      const head = el('div', 'pc-head');
+      head.append(el('h3', 'pc-name', p.name || p.employee_id), el('div', 'note-inline', [p.rank, where, p.employee_id].filter(Boolean).join(' · ')));
+      const kv = el('div', 'pc-kv');
+      const item = (label, val, sub, col) => { const d = el('div', 'pc-item'); d.append(el('span', 'pc-l', label)); const v = el('b', null, val); if (col) v.style.color = col; d.append(v); if (sub) d.append(el('span', 'pc-s', sub)); kv.appendChild(d); };
+      item('Registration', p.registered === 'Yes' ? 'Registered' : 'Not registered', `Stage: ${p.stage}`);
+      item('First course start', p.engaged_on ? fd(Date.parse(p.engaged_on + 'T00:00:00Z')) : 'Not started');
+      if (p.no_target) item('Final compliance (28 Oct)', 'Not measured', `On leave: monitored without a target${f != null ? ` (would score ${F.pct(f)})` : ''}`);
+      else item('Final compliance (28 Oct)', f == null ? 'N/A' : `${F.pct(f)} · ${f >= 100 ? 'Compliant' : 'Below target'}`, f == null ? 'Not assessable: no course started yet' : null, f == null ? null : window.SV.bcol(f));
+      item('A · Frequency', F.pct(fq), num(p.eligible_days) ? `${F.int(num(p.completed_in_window))} completions ÷ ${d3.format('.2f')(num(p.expected))} expected (${F.int(num(p.eligible_days))} eligible days; target 2 a month)` : null);
+      item('B · Lifetime', F.pct(lf), `${F.int(num(p.completed))} completed ÷ ${F.int(num(p.assigned))} assigned`);
+      const pend = (num(p.not_started) || 0) + (num(p.in_progress) || 0);
+      item('Pending now', F.int(pend), X.status === 'ok' ? `${F.int(num(p.in_progress))} in progress · ${F.int(X.aged)} assigned over 90 days ago` : `${F.int(num(p.in_progress))} in progress`);
+      const parts = [head, kv];
+      if (X.status !== 'ok') { parts.push(el('p', 'note-inline', X.status === 'error' ? 'Failed to load course records' : 'Loading course records…')); box.replaceChildren(...parts); return; }
+      const hist = el('div', 'pc-hist'); hist.append(el('span', 'note-inline', 'Weekly score history (final %): '));
+      X.dates.forEach((d, i) => { const v = X.hist[i]; const s = el('span', 'pill', `${d3.utcFormat('%-d %b')(new Date(d + 'T00:00:00Z'))}: ${v === '' || v == null ? 'N/A' : v + '%'}`); hist.appendChild(s); });
+      parts.push(hist, el('h3', 'sub-h', `Course records (${X.recs.length} started or completed)`));
+      const tb = el('table', 'hier'); const th = el('thead'), hr = el('tr');
+      ['Course', 'Status', 'Assigned', 'Started', 'Completed', 'In 90-day window'].forEach((h) => { const c = el('th'); c.appendChild(el('button', null, h)); hr.appendChild(c); }); th.appendChild(hr);
+      const body = el('tbody');
+      if (!X.recs.length) { const tr = el('tr'); const td = el('td', 'note-inline', 'No course started'); td.colSpan = 6; tr.appendChild(td); body.appendChild(tr); }
+      for (const r of X.recs) { const tr = el('tr'); tr.append(el('td', 'wrapc', r.course)); const sc = el('td'); sc.appendChild(window.SV.H.chipEl(r.status, r.status.startsWith('Completed') ? 'Completed' : 'In progress')); tr.append(sc, el('td', null, fd(r.a)), el('td', null, fd(r.s)), el('td', null, fd(r.c)), el('td', null, r.win ? '✓' : '')); body.appendChild(tr); }
+      tb.append(th, body); const tbx = el('div', 'tablebox'); tbx.style.maxHeight = '30rem'; tbx.appendChild(tb); parts.push(tbx);
+      const det = el('details', 'pc-ns'); det.appendChild(el('summary', null, `Not started (${X.ns.length})`)); const wrap = el('div'); X.ns.forEach((t) => wrap.appendChild(el('span', 'pill', t))); det.appendChild(wrap); parts.push(det);
+      box.replaceChildren(...parts);
+    }
+    window.SV.P = { render, rows };
+  })();
+
+  // ---- downloads + fleet hierarchy (drill-down: DoCs → vessels → personnel) ----
+  const REPORT = { date: '28 Oct 2026', window: '31 Jul – 28 Oct 2026', iso: '2026-10-28' };
+  let downloads = null;
+  try { window.claude && window.claude.use && window.claude.use('downloads').then((d) => { downloads = d; window.SV.redraw && window.SV.redraw(); }).catch(() => {}); } catch (e) { /* no downloads here */ }
+  const H = { sort: ['comp', -1], vt: '', rank: '', eng: '', q: '', person: null, personVessel: null };
+  const hq = document.querySelector('.lx-hq'), hdoc = document.querySelector('.lx-hdoc'), hves = document.querySelector('.lx-hves'),
+    hvt = document.querySelector('.lx-hvt'), hrank = document.querySelector('.lx-hrank'), heng = document.querySelector('.lx-heng');
+  let hqT = null, lastLevel = null;
+  // leaving a person: drop the person and the filters that were filled in from them, back to the vessel's full complement
+  function hLeavePerson() {
+    const a = H.auto; H.person = null; H.auto = null; H.q = ''; hq.value = '';
+    if (a) { H.rank = ''; window.SV.clearStage(); if (dash.params().pop !== a.pop) { dash.setParams({ pop: a.pop }); return; } }
+    draw();
+  }
+  hq.addEventListener('input', () => { clearTimeout(hqT); const v = hq.value.trim();
+    if (H.person && !v) { hLeavePerson(); return; }
+    hqT = setTimeout(() => { H.q = v.toLowerCase(); if (H.person && H.auto && v !== H.auto.name) { H.person = null; H.auto = null; } draw(); }, 250); });
+  hdoc.addEventListener('change', () => dash.setParams({ doc: hdoc.value || null, vessel: null }));
+  hves.addEventListener('change', () => { const v = hves.value; const row = (dash.data('vessels').data || []).find((r) => r.vessel === v); if (row && row.vessel_type) H.vt = row.vessel_type; dash.setParams(v ? { doc: row ? row.doc : null, vessel: v } : { vessel: null }); });
+  hvt.addEventListener('change', () => { H.vt = hvt.value; H.auto = null; const v = dash.params().vessel; const row = v && (dash.data('vessels').data || []).find((r) => r.vessel === v); if (H.vt && row && row.vessel_type !== H.vt) dash.setParams({ vessel: null }); else draw(); });
+  // reset buttons: reset this filter and every filter after it (DoC › Vessel type › Vessel › Rank › Engagement)
+  function hResetFrom(i) {
+    const p = { pop: window.SV.resetPop(i > 2 && !!dash.params().vessel) };
+    if (i <= 0) p.doc = null;
+    if (i <= 1) H.vt = '';
+    if (i <= 2) p.vessel = null;
+    if (i <= 3) H.rank = '';
+    H.person = null; H.auto = null; H.q = ''; hq.value = '';
+    window.SV.clearStage();
+    dash.setParams(p); draw();
+  }
+  document.querySelectorAll('#sea .fx').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return; const i = +b.dataset.fx; if (i === 5) { if (H.person) hLeavePerson(); else { H.q = ''; hq.value = ''; draw(); } } else hResetFrom(i); }));
+  hrank.addEventListener('change', () => { H.rank = hrank.value; H.auto = null; if (H.person) { H.person = null; H.q = ''; hq.value = ''; } draw(); });
+  heng.addEventListener('change', () => { window.SV.markUser(); const [t, v] = heng.value.split(':'); if (t === 'pop') { window.SV.clearStage(); dash.setParams({ pop: v }); } else { window.SV.clearStage(); H.eng = v; dash.setParams({ pop: STAGE_POP[v] }); draw(); } });
+  const _clr = window.SV.clearStage; window.SV.clearStage = () => { H.eng = ''; _clr && _clr(); };
+  document.querySelector('.lx-hclr').addEventListener('click', () => { H.vt = H.rank = H.eng = H.q = ''; hq.value = ''; window.SV.clearStage(); dash.setParams({ doc: null, vessel: null, pop: window.SV.resetPop(false) }); });
+  const POPF = { 'All onboard': () => true, 'Registered': (r) => r.registered === 'Yes', 'Engaged': (r) => r.stage === 'Engaged' || r.stage === 'Active', 'Active': (r) => r.stage === 'Active' };
+  const FILLV = new Set(['All onboard', 'Registered']);
+  const med = (a) => { if (!a.length) return null; const s = a.slice().sort((x, y) => x - y), m = s.length; return m % 2 ? s[(m - 1) / 2] : (s[m / 2 - 1] + s[m / 2]) / 2; };
+  const mean = (a) => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
+  function hagg(list, pop) {
+    const S = list.filter(POPF[pop]), fill = FILLV.has(pop);
+    const sc = []; let nA = 0; const fq = [], lf = [];
+    for (const r of S) {
+      const f = num(r.final_pct);
+      if (f != null) { nA++; sc.push(f); if (num(r.frequency_pct) != null) fq.push(num(r.frequency_pct)); if (num(r.lifetime_pct) != null) lf.push(num(r.lifetime_pct)); }
+      else if (fill) sc.push(0);
+    }
+    const reg = list.filter((r) => r.registered === 'Yes').length;
+    return { n: list.length, reg, cov: list.length ? reg / list.length * 100 : null, people: S.length, nA, comp: mean(sc), med: med(sc),
+      fqAvg: mean(fq), lfAvg: mean(lf), ok: sc.filter((x) => x >= 100).length, below: sc.filter((x) => x < 100).length,
+      c90: S.reduce((t, r) => t + (num(r.completed_90d) || 0), 0) };
+  }
+  const bandOfV = (x) => x == null ? null : x >= 100 ? 'On target' : x >= 75 ? 'Near target' : x >= 50 ? 'Below target' : x > 0 ? 'Low activity' : 'No activity';
+  const statusOf = (a, empty) => empty ? 'No crew onboard' : (a.nA || (FILLV.has(window.SV.pop()) && a.people)) ? bandOfV(a.comp) : 'No assessable crew';
+  // aggregate columns (label, key, formatter) — shared by DoC and vessel levels
+  const ACOLS = [['Onboard', 'n', F.int], ['Registered', 'reg', F.int], ['Reg. cov.', 'cov', F.pct0], ['Assessable', 'nA', F.int], ['Compliance', 'comp', F.pct],
+    ['Status', 'status'], ['Avg freq.', 'fqAvg', F.pct0], ['Avg lifetime', 'lfAvg', F.pct0], ['At ≥100%', 'ok', F.int], ['Below target', 'below', F.int], ['Compl. 90d', 'c90', F.int]];
+  // personnel columns
+  const PCOLS = [['Name', 'name'], ['Employee ID', 'employee_id'], ['Rank', 'rank'], ['Stage', 'stage'], ['Registered', 'registered'], ['First course', 'engaged_on', F.date],
+    ['Eligible days', 'eligible_days', F.int, 1], ['Expected', 'expected', (v) => v == null ? '—' : d3.format('.1f')(v), 1], ['Actual', 'completed_in_window', F.int, 1],
+    ['Frequency', 'frequency_pct', F.pct0, 1], ['Lifetime', 'lifetime_pct', F.pct0, 1], ['Final', 'final_pct', F.pct, 1], ['Status', 'band'], ['Compl. 90d', 'completed_90d', F.int, 1],
+    ['Completed', 'completed', F.int, 1], ['Assigned', 'assigned', F.int, 1], ['Last completed', 'last_completed', F.date]];
+  function hState() {
+    const pop = window.SV.pop(), doc = window.SV.doc(), vessel = dash.params().vessel || null;
+    const P = dash.data('sea_staff'), V = dash.data('vessels');
+    const people = P.status === 'ok' ? P.data : [], vesAll = V.status === 'ok' ? V.data.filter((r) => r.population === 'All onboard') : [];
+    const personOk = (r) => (!H.rank || r.rank === H.rank) && (!H.eng || r.stage === H.eng);
+    const byV = new Map();
+    for (const r of people) { if (!personOk(r)) continue; if (!byV.has(r.vessel)) byV.set(r.vessel, []); byV.get(r.vessel).push(r); }
+    const hasCrew = new Set(people.map((r) => r.vessel));
+    const narrowing = !!(H.rank || H.eng);
+    const ves = vesAll.filter((v) => (!H.vt || v.vessel_type === H.vt) && (!narrowing || (byV.get(v.vessel) || []).length));
+    return { pop, doc, vessel, ves, byV, hasCrew, vesAll, people };
+  }
+  function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  function chipEl(t, b) { const s = el('span', 'chip', t); s.dataset.b = b || t; return s; }
+  const hcmp = (x, y) => { const [k, d] = H.sort; if (k === 'name') return String(x.name).localeCompare(String(y.name)) * d; const a = x[k] ?? -Infinity, b = y[k] ?? -Infinity; return (typeof a === 'string' ? String(a).localeCompare(String(b)) : (a < b ? -1 : a > b ? 1 : 0)) * d; };
+  // build the rows currently on screen: {level, cols:[[label,key,fmt,num]], head, total, rows}
+  function hView() {
+    const S = hState(), q = H.q;
+    const level = S.vessel ? 'vessel' : S.doc !== ALL ? 'doc' : 'fleet';
+    const aggRow = (name, crew, extra) => { const a = hagg(crew, S.pop); return { name, ...a, status: statusOf(a, extra && extra.empty), ...(extra || {}) }; };
+    if (level === 'fleet') {
+      const byDoc = new Map();
+      for (const v of S.ves) { if (!byDoc.has(v.doc)) byDoc.set(v.doc, []); byDoc.get(v.doc).push(v); }
+      let rows = [...byDoc.entries()].map(([d, vs]) => aggRow(d, vs.flatMap((v) => S.byV.get(v.vessel) || []), { vessels: vs.length, key: d }));
+      if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q));
+      const total = aggRow('All DoCs', rows.flatMap((r) => [...byDoc.get(r.key)].flatMap((v) => S.byV.get(v.vessel) || [])), { vessels: rows.reduce((t, r) => t + r.vessels, 0) });
+      return { S, level, first: 'DoC', extra: ['Vessels', 'vessels', F.int], cols: ACOLS, total, rows: rows.sort(hcmp) };
+    }
+    if (level === 'doc') {
+      let vs = S.ves.filter((v) => v.doc === S.doc);
+      if (q) vs = vs.filter((v) => v.vessel.toLowerCase().includes(q));
+      const rows = vs.map((v) => aggRow(v.vessel, S.byV.get(v.vessel) || [], { type: v.vessel_type, key: v.vessel, doc: v.doc, empty: !S.hasCrew.has(v.vessel) }));
+      const total = aggRow(S.doc, vs.flatMap((v) => S.byV.get(v.vessel) || []), { vessels: vs.length });
+      return { S, level, first: 'Vessel', extra: ['Type', 'type'], cols: ACOLS, total, rows: rows.sort(hcmp) };
+    }
+    let crew = (S.byV.get(S.vessel) || []).filter(POPF[S.pop]);
+    if (q) crew = crew.filter((r) => [r.name, r.employee_id, r.rank].join(' ').toLowerCase().includes(q));
+    const all = S.byV.get(S.vessel) || [];
+    const total = aggRow(S.vessel, all, { empty: !S.hasCrew.has(S.vessel) });
+    const k = H.sort[0], d = H.sort[1];
+    const pk = { name: 'name', comp: 'final_pct' }[k] || (PCOLS.some((c) => c[1] === k) ? k : 'final_pct');
+    const isNum = PCOLS.find((c) => c[1] === pk)?.[3];
+    crew = crew.slice().sort((a, b) => { if (!isNum) return String(a[pk] ?? '').localeCompare(String(b[pk] ?? '')) * (pk === 'final_pct' ? -1 : d); const x = num(a[pk]), y = num(b[pk]); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * d; });
+    return { S, level, cols: PCOLS, total, rows: crew };
+  }
+  function drawHier() {
+    const S = hState();
+    const docsAll = [...new Set(S.vesAll.map((v) => v.doc))].sort();
+    if (hdoc.options.length !== docsAll.length + 1) hdoc.replaceChildren(new Option('All DoCs', ''), ...docsAll.map((d) => new Option(d, d)));
+    hdoc.value = S.doc === ALL ? '' : S.doc;
+    // cascade: DoC › Vessel type › Vessel › Rank — each list only offers what exists within the filters before it
+    const inDoc = S.vesAll.filter((v) => S.doc === ALL || v.doc === S.doc);
+    const vts = [...new Set(inDoc.map((v) => v.vessel_type).filter(Boolean))].sort();
+    if (H.vt && !vts.includes(H.vt)) H.vt = '';
+    const vtk = vts.join('|');
+    if (hvt.dataset.k !== vtk) { hvt.replaceChildren(new Option('All types', ''), ...vts.map((v) => new Option(v, v))); hvt.dataset.k = vtk; }
+    hvt.value = H.vt;
+    const inVt = inDoc.filter((v) => !H.vt || v.vessel_type === H.vt);
+    const vlist = inVt.map((v) => v.vessel).sort();
+    const vkey = vlist.join('|');
+    if (hves.dataset.k !== vkey) { hves.replaceChildren(new Option('All vessels', ''), ...vlist.map((v) => new Option(v, v))); hves.dataset.k = vkey; }
+    hves.value = S.vessel && vlist.includes(S.vessel) ? S.vessel : '';
+    const scopeV = new Set(S.vessel ? [S.vessel] : vlist);
+    const ranks = [...new Set(S.people.filter((r) => scopeV.has(r.vessel)).map((r) => r.rank).filter(Boolean))].sort();
+    if (H.rank && !ranks.includes(H.rank)) H.rank = '';
+    const rk = ranks.join('|');
+    if (hrank.dataset.k !== rk) { hrank.replaceChildren(new Option('All ranks', ''), ...ranks.map((v) => new Option(v, v))); hrank.dataset.k = rk; }
+    const fxOff = [S.doc === ALL, !H.vt, !S.vessel, !H.rank, !H.eng && S.pop === window.SV.levelPop(!!S.vessel), !H.q && !hq.value];
+    document.querySelectorAll('#sea .fx').forEach((b) => b.toggleAttribute('data-off', fxOff[+b.dataset.fx]));
+    hrank.value = H.rank; heng.value = H.eng ? 'st:' + H.eng : 'pop:' + S.pop;
+    const Vw = hView();
+    window.SV.drill('sea', Vw.level === 'vessel');
+    if (H.person && (Vw.level !== 'vessel' || H.personVessel !== S.vessel)) H.person = null;
+    const PP = H.person ? S.people.find((r) => String(r.employee_id) === H.person) : null;
+    Vw.person = PP;
+    if (Vw.level !== lastLevel) { if (lastLevel !== null) { H.q = ''; hq.value = ''; } H.sort = Vw.level === 'vessel' ? ['final_pct', -1] : (H.sort[0] === 'final_pct' ? ['comp', -1] : H.sort); lastLevel = Vw.level; }
+    hq.placeholder = Vw.level === 'fleet' ? 'Search DoCs' : Vw.level === 'doc' ? 'Search vessels' : 'Search personnel';
+    // breadcrumbs
+    const cr = document.querySelector('.lx-hcrumbs');
+    const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
+    const parts = [Vw.level === 'fleet' ? el('span', null, 'All DoCs') : b('All DoCs', () => dash.setParams({ doc: null, vessel: null }))];
+    if (Vw.level !== 'fleet') parts.push(el('span', 'sep', '›'), Vw.level === 'doc' ? el('span', null, S.doc) : b(S.doc, () => dash.setParams({ vessel: null })));
+    if (Vw.level === 'vessel') parts.push(el('span', 'sep', '›'), PP ? b(S.vessel, () => hLeavePerson()) : el('span', null, S.vessel));
+    if (PP) parts.push(el('span', 'sep', '›'), el('span', null, PP.name || PP.employee_id));
+    cr.replaceChildren(...parts);
+    document.querySelector('.lx-hintro').textContent = (Vw.level === 'fleet' ? 'Every DoC. Click a DoC to see its vessels.' : Vw.level === 'doc' ? 'Every active vessel under this DoC. Click a vessel to see its onboard personnel.' : 'Onboard personnel on this vessel.')
+      + ` Counting ${S.pop.toLowerCase()}; onboard, registered and coverage always count everyone onboard. Use the breadcrumb to go back up.`;
+    const fl = [H.vt, H.rank, H.eng && heng.selectedOptions[0] && heng.selectedOptions[0].text, H.q && `“${H.q}”`].filter(Boolean);
+    document.querySelector('.lx-hfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
+    // table
+    const table = document.querySelector('.lx-htable');
+    const thead = el('thead'), hr = el('tr');
+    const heads = Vw.level === 'vessel' ? Vw.cols.map(([l, k, , n]) => [l, k, n]) : [[Vw.first, 'name'], [Vw.extra[0], Vw.extra[1], !!Vw.extra[2]], ...Vw.cols.map(([l, k]) => [l, k, k !== 'status'])];
+    heads.forEach(([l, k, n]) => {
+      const th = el('th', n ? 'num' : ''); const bt = el('button', null, l); th.appendChild(bt);
+      bt.addEventListener('click', () => { H.sort = H.sort[0] === k ? [k, -H.sort[1]] : [k, k === 'name' || !n ? 1 : -1]; draw(); });
+      const on = H.sort[0] === k; th.setAttribute('aria-sort', on ? (H.sort[1] > 0 ? 'ascending' : 'descending') : 'none'); if (on) bt.textContent = l + (H.sort[1] > 0 ? ' ▴' : ' ▾');
+      hr.appendChild(th);
+    });
+    thead.appendChild(hr);
+    const tb = el('tbody');
+    const aggTr = (r, cls, click) => {
+      const tr = el('tr', cls);
+      const nd = el('td'); nd.textContent = r.name; tr.appendChild(nd);
+      if (Vw.level !== 'vessel') { const x = el('td', Vw.extra[2] ? 'num' : 'sm2'); x.textContent = Vw.extra[2] ? Vw.extra[2](r[Vw.extra[1]]) : (r[Vw.extra[1]] ?? ''); tr.appendChild(x); }
+      for (const [, k, f] of ACOLS) {
+        const td = el('td', k === 'status' ? '' : 'num');
+        if (k === 'status') td.appendChild(chipEl(r.status));
+        else { td.textContent = f(r[k]); if (k === 'comp' && r[k] != null) td.style.color = window.SV.bcol(r[k]); }
+        tr.appendChild(td);
+      }
+      if (click) { tr.classList.add('click'); tr.addEventListener('click', click); }
+      return tr;
+    };
+    if (Vw.level === 'vessel') {
+      for (const p of Vw.rows) {
+        const tr = el('tr', 'p click' + (p.classification === 'Not assessable' ? ' dim' : ''));
+        tr.addEventListener('click', () => {
+          // fill every filter from the chosen person: type, vessel (already), rank, engagement, and their name in search
+          const prevPop = S.pop, nm = String(p.name || p.employee_id);
+          H.person = String(p.employee_id); H.personVessel = S.vessel; H.auto = { pop: prevPop, name: nm };
+          if (p.vessel_type) H.vt = p.vessel_type;
+          H.rank = p.rank || ''; H.q = nm.toLowerCase(); hq.value = nm;
+          window.SV.clearStage();
+          let pop = 'All onboard';
+          if (p.stage === 'Active') pop = 'Active'; else if (STAGE_POP[p.stage]) { H.eng = p.stage; pop = STAGE_POP[p.stage]; }
+          if (pop !== prevPop) dash.setParams({ pop }); else draw();
+        });
+        for (const [, k, f, n] of PCOLS) {
+          const td = el('td', n ? 'num' : '');
+          const v = n ? num(p[k]) : p[k];
+          if (k === 'band') td.appendChild(chipEl(p.classification === 'Not assessable' ? p.stage : p.band, p.classification === 'Not assessable' ? 'Not assessable' : p.band));
+          else { td.textContent = f ? f(v) : (v ?? ''); if (k === 'final_pct' && v != null) td.style.color = window.SV.bcol(v); }
+          tr.appendChild(td);
+        }
+        tb.appendChild(tr);
+      }
+    } else {
+      tb.appendChild(aggTr({ ...Vw.total, name: Vw.level === 'fleet' ? `All DoCs (${Vw.rows.length})` : `${S.doc} · all vessels (${Vw.rows.length})` }, 'h0'));
+      for (const r of Vw.rows) tb.appendChild(aggTr(r, '', Vw.level === 'fleet' ? () => dash.setParams({ doc: r.key, vessel: null }) : () => { if (r.type) H.vt = r.type; dash.setParams({ doc: r.doc, vessel: r.key }); }));
+    }
+    table.replaceChildren(thead, tb);
+    const vt = document.querySelector('.lx-hvtotal');
+    if (Vw.level === 'vessel') { const a = Vw.total; vt.textContent = `${S.vessel}: ${F.int(a.n)} onboard · ${F.int(a.reg)} registered (${F.pct0(a.cov)}) · ${F.int(a.nA)} assessable · compliance ${F.pct(a.comp)} · ${F.int(a.ok)} at ≥100% · showing ${F.int(Vw.rows.length)} people.`; vt.hidden = false; }
+    else vt.hidden = true;
+    document.querySelector('.lx-dlbar').hidden = !downloads;
+    const pc = document.querySelector('.lx-hpcard'), hb = document.querySelector('.lx-hbox');
+    hb.hidden = !!PP; pc.hidden = !PP; if (PP) { vt.hidden = true; document.querySelector('.lx-hintro').textContent = 'Personnel record: course-by-course history for this person. Use the breadcrumb to go back to the vessel.'; window.SV.P.render(pc, PP, `${PP.vessel} · ${PP.doc} · onboard sea staff`); }
+    window.SV._hv = Vw;
+  }
+
+  window.SV.H = { hagg, POPF, FILLV, statusOf, ACOLS, PCOLS, chipEl, el };
+  // ---- download exactly the table on screen ----
+  const r1 = (x) => x == null ? '' : Math.round(x * 10) / 10;
+  function screenRows() {
+    const Vw = window.SV._hv; if (!Vw) return null;
+    const S = Vw.S;
+    if (Vw.person) { const rows = window.SV.P.rows(Vw.person); return rows ? { title: `${Vw.person.name} · course records`, rows, person: true } : null; }
+    if (Vw.level === 'vessel') {
+      return { title: `${S.vessel} · onboard personnel`, rows: [PCOLS.map((c) => c[0]), ...Vw.rows.map((p) => PCOLS.map(([, k]) => k === 'band' ? (p.classification === 'Not assessable' ? p.stage : p.band) : (p[k] ?? '')))] };
+    }
+    const head = [Vw.first, Vw.extra[0], ...ACOLS.map((c) => c[0])];
+    const line = (r) => [r.name, r[Vw.extra[1]] ?? '', r.n, r.reg, r1(r.cov), r.nA, r1(r.comp), r.status, r1(r.fqAvg), r1(r.lfAvg), r.ok, r.below, r.c90];
+    const tot = { ...Vw.total, name: Vw.level === 'fleet' ? 'All DoCs' : `${S.doc} · all vessels` };
+    return { title: Vw.level === 'fleet' ? 'DoCs' : `${S.doc} · vessels`, rows: [head, line(tot), ...Vw.rows.map(line)] };
+  }
+  function context() {
+    const Vw = window.SV._hv, S = Vw.S;
+    const path = ['All DoCs', S.doc !== ALL && S.doc, S.vessel, Vw.person && Vw.person.name].filter(Boolean).join(' › ');
+    const f = document.querySelector('.lx-hfilt').textContent.replace(/^Filtered: /, '') || 'none';
+    return { path, f, pop: S.pop };
+  }
+  const csvOf = (rows) => '﻿' + rows.map((r) => r.map((v) => { v = v == null ? '' : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }).join(',')).join('\n');
+  const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  const crc32 = (b) => { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC[(c ^ b[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; };
+  function zip(files) {
+    const enc = new TextEncoder(), parts = [], cen = []; let off = 0;
+    for (const [name, text] of files) {
+      const nb = enc.encode(name), db = enc.encode(text), crc = crc32(db);
+      const h = new DataView(new ArrayBuffer(30)); h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint32(14, crc, true); h.setUint32(18, db.length, true); h.setUint32(22, db.length, true); h.setUint16(26, nb.length, true);
+      parts.push(new Uint8Array(h.buffer), nb, db);
+      const c = new DataView(new ArrayBuffer(46)); c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint32(16, crc, true); c.setUint32(20, db.length, true); c.setUint32(24, db.length, true); c.setUint16(28, nb.length, true); c.setUint32(42, off, true);
+      cen.push(new Uint8Array(c.buffer), nb); off += 30 + nb.length + db.length;
+    }
+    const csz = cen.reduce((t, x) => t + x.length, 0);
+    const e = new DataView(new ArrayBuffer(22)); e.setUint32(0, 0x06054b50, true); e.setUint16(8, files.length, true); e.setUint16(10, files.length, true); e.setUint32(12, csz, true); e.setUint32(16, off, true);
+    return new Blob([...parts, ...cen, new Uint8Array(e.buffer)], { type: 'application/zip' });
+  }
+  const xe = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '');
+  const colL = (i) => { let s = ''; i++; while (i) { const m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); } return s; };
+  function sheetXml(rows, headRow) {
+    const body = rows.map((r, ri) => `<row r="${ri + 1}">` + r.map((v, ci) => {
+      const ref = colL(ci) + (ri + 1), st = ri === headRow ? ' s="1"' : '';
+      if (v === '' || v == null) return '';
+      if (ri > headRow && !isNaN(+v) && !/^0\d/.test(String(v)) && String(v).length < 16) return `<c r="${ref}"${st}><v>${+v}</v></c>`;
+      return `<c r="${ref}" t="inlineStr"${st}><is><t xml:space="preserve">${xe(v)}</t></is></c>`;
+    }).join('') + '</row>').join('');
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="${headRow + 1}" topLeftCell="A${headRow + 2}" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><sheetData>${body}</sheetData></worksheet>`;
+  }
+  function xlsx(name, rows, headRow) {
+    return zip([
+      ['[Content_Types].xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>`],
+      ['_rels/.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`],
+      ['xl/workbook.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="${xe(name.slice(0, 31))}" sheetId="1" r:id="rId1"/></sheets></workbook>`],
+      ['xl/_rels/workbook.xml.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`],
+      ['xl/styles.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="2"><xf/><xf fontId="1" applyFont="1"/></cellXfs></styleSheet>`],
+      ['xl/worksheets/sheet1.xml', sheetXml(rows, headRow)],
+    ]);
+  }
+  function htmlDoc(title, rows, ctx) {
+    return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${xe(title)} · ${REPORT.date}</title><style>
+body{font:12px/1.45 -apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#1f2328;margin:0 auto;padding:24px;max-width:1600px}h1{font-size:19px;margin:0}.mu{color:#59636e;margin:4px 0 12px}
+table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa;text-align:left;padding:5px;border-bottom:1px solid #d0d7de;white-space:nowrap}td{padding:4px 5px;border-bottom:1px solid #eaeef2;white-space:nowrap}td.n{text-align:right;font-variant-numeric:tabular-nums}tr.t td{font-weight:600;background:#f6f8fa}
+@media print{body{padding:0;max-width:none}tr{break-inside:avoid}@page{size:A4 landscape;margin:10mm}}</style></head><body>
+<h1>${xe(title)}</h1><p class="mu">${xe(ctx.path)} · counting ${xe(ctx.pop)} · filters: ${xe(ctx.f)} · reporting date ${REPORT.date} · window ${REPORT.window}</p>
+<table><thead><tr>${rows[0].map((h) => `<th>${xe(h)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map((r, i) => `<tr${i === 0 && window.SV._hv.level !== 'vessel' && !window.SV._hv.person ? ' class="t"' : ''}>${r.map((v) => `<td${v !== '' && v != null && !isNaN(+v) ? ' class="n"' : ''}>${xe(v ?? '')}</td>`).join('')}</tr>`).join('')}</tbody></table></body></html>`;
+  }
+  async function saveFile(filename, data, btn) {
+    if (!downloads) return; if (btn) btn.disabled = true;
+    try { await downloads.save({ filename, data }); } catch (e) { /* declined or unavailable */ }
+    if (btn) btn.disabled = false;
+  }
+  function htmlGeneric(title, rows, ctxLine, totalFirst) {
+    return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${xe(title)} · ${REPORT.date}</title><style>
+body{font:12px/1.45 -apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#1f2328;margin:0 auto;padding:24px;max-width:1600px}h1{font-size:19px;margin:0}.mu{color:#59636e;margin:4px 0 12px}
+table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa;text-align:left;padding:5px;border-bottom:1px solid #d0d7de;white-space:nowrap}td{padding:4px 5px;border-bottom:1px solid #eaeef2;white-space:nowrap}td.n{text-align:right;font-variant-numeric:tabular-nums}tr.t td{font-weight:600;background:#f6f8fa}
+@media print{body{padding:0;max-width:none}tr{break-inside:avoid}@page{size:A4 landscape;margin:10mm}}</style></head><body>
+<h1>${xe(title)}</h1><p class="mu">${xe(ctxLine)}</p>
+<table><thead><tr>${rows[0].map((h) => `<th>${xe(h)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map((r, i) => `<tr${i === 0 && totalFirst ? ' class="t"' : ''}>${r.map((v) => `<td${v !== '' && v != null && !isNaN(+v) ? ' class="n"' : ''}>${xe(v ?? '')}</td>`).join('')}</tr>`).join('')}</tbody></table></body></html>`;
+  }
+  window.SV.exporter = { has: () => !!downloads, csvOf, xlsx, saveFile, htmlGeneric, r1, REPORT };
+  document.querySelectorAll('.lx-dlbar [data-dl]').forEach((b) => b.addEventListener('click', () => {
+    const T = screenRows(); if (!T) return; const ctx = context();
+    const base = ('seaverse_' + ctx.path.replace(/ › /g, '_')).replace(/[^A-Za-z0-9 _-]+/g, '').trim().replace(/\s+/g, '_').slice(0, 80) + '_' + REPORT.iso;
+    const k = b.dataset.dl;
+    if (k === 'xlsx') { const meta = [[T.title], [`${ctx.path} · counting ${ctx.pop} · filters: ${ctx.f} · reporting date ${REPORT.date} · window ${REPORT.window}`], []]; saveFile(base + '.xlsx', xlsx(T.title, [...meta, ...T.rows], meta.length), b); }
+    else if (k === 'csv') saveFile(base + '.csv', csvOf(T.rows), b);
+    else saveFile(base + '.html', htmlDoc(T.title, T.rows, ctx), b);
+  }));
+
+})();
+</script>
+
+<script>
+// search boxes: show the clear (×) as soon as there is text
+document.addEventListener('input', (e) => { const i = e.target; if (!i.matches || !i.matches('.sv .fw.fs input[type=search]')) return; const x = i.parentNode.querySelector('.fx'); if (x && i.value) x.removeAttribute('data-off'); }, true);
+</script>
+<script>
+// Ranks & courses tab
+(() => {
+  const { ALL, num, F, tip, fail } = window.SV;
+  function hbars(box, rows, opt) {
+    box.querySelector('svg')?.remove();
+    if (!rows.length) return;
+    const W = box.clientWidth || 400, bh = 20, H = rows.length * bh + 8;
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const meas = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+    let rw = 0; rows.forEach((r) => { meas.text(r.right); rw = Math.max(rw, meas.node().getComputedTextLength()); });
+    let lw = 0; rows.forEach((r) => { meas.text(r.label); lw = Math.max(lw, meas.node().getComputedTextLength()); });
+    lw = Math.min(lw + 10, W * 0.4); rw += 10;
+    const fit = (s) => { meas.text(s); let out = s; while (out.length > 4 && meas.node().getComputedTextLength() > lw - 10) { out = out.slice(0, -2) + '…'; meas.text(out); } return out; };
+    const labs = rows.map((r) => fit(r.label)); meas.remove();
+    const showR = W - lw - rw > 80;
+    const max = Math.max(opt.target || 0, d3.max(rows, (r) => r.v) || 1);
+    const x = d3.scaleLinear([0, max], [lw, W - (showR ? rw : 6)]);
+    const y = d3.scaleBand(rows.map((_, i) => i), [4, H - 4]).padding(0.22);
+    const t = tip(box);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', lw).attr('y', (r, i) => y(i)).attr('height', y.bandwidth()).attr('rx', 4)
+      .attr('width', (r) => Math.max(1, x(r.v) - lw)).attr('fill', (r) => opt.color ? opt.color(r) : dash.colors[0])
+      .on('mousemove', (e, r) => t.show(e, r.label, r.right)).on('mouseleave', () => t.hide());
+    svg.append('g').selectAll('text').data(rows).join('text').text((r, i) => labs[i]).attr('x', lw - 8).attr('text-anchor', 'end')
+      .attr('y', (r, i) => y(i) + y.bandwidth() / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    if (showR) svg.append('g').selectAll('text').data(rows).join('text').text((r) => r.right).attr('x', W).attr('text-anchor', 'end')
+      .attr('y', (r, i) => y(i) + y.bandwidth() / 2).attr('dy', '0.35em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    if (opt.target) svg.append('line').attr('x1', x(opt.target)).attr('x2', x(opt.target)).attr('y1', 0).attr('y2', H).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+    box.style.minHeight = H + 'px';
+  }
+  function one(sel, id, fn) {
+    const box = document.querySelector(sel);
+    const R = dash.data(id);
+    if (R.status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (R.status !== 'ok') return;
+    box.classList.remove('dash-skeleton');
+    fn(box, R.data);
+  }
+  function draw() {
+    if (window.SV.tab !== 'analysis') return;
+    const doc = window.SV.doc(), pop = window.SV.pop();
+    const comp = (k) => (box, data) => {
+      const rows = data.filter((r) => r.doc === doc && r.population === pop && num(r.assessable) > 0)
+        .sort((a, b) => num(b.onboard) - num(a.onboard)).slice(0, k === 'rank' ? 25 : 99)
+        .map((r) => ({ label: r[k], v: num(r.mean_pct), right: `${F.pct0(num(r.mean_pct))} · ${F.int(num(r.assessable))} assessable · ${F.pct0(num(r.coverage_pct))} reg.` }))
+        .sort((a, b) => b.v - a.v);
+      hbars(box, rows, { target: 100, color: (r) => window.SV.bcol(r.v) });
+    };
+    one('.lx-rank', 'ranks', comp('rank'));
+    one('.lx-vt', 'vtypes', comp('vessel_type'));
+    one('.lx-courses', 'courses', (box, data) => {
+      hbars(box, data.filter((r) => r.doc === doc).map((r) => ({ label: r.title, v: num(r.completions), right: F.int(num(r.completions)) })).sort((a, b) => b.v - a.v), {});
+    });
+  }
+  window.SV.drawAnalysis = draw;
+})();
+</script>
+
+<script>
+// Trainees and office staff tabs
+(() => {
+  const { ALL, num, F, enc, key2, table, tip, fail, axisClean } = window.SV;
+  const tpl = document.getElementById('learner-tpl');
+  const CAT = { trainee: 'Trainee', office: 'Office staff' };
+  const states = {}, query = {};
+  ['trainee', 'office'].forEach((k) => { document.getElementById(k).appendChild(tpl.content.cloneNode(true)); });
+  // ---- drill-down table: All ranks → rank → people (same approach as Fleet summary) ----
+  const LD = {};
+  const HX = () => window.SV.H;
+  ['trainee', 'office'].forEach((k) => {
+    const sec = document.getElementById(k);
+    LD[k] = { rank: null, sort: ['comp', -1], eng: '', q: '', person: null, auto: null };
+    const S = LD[k];
+    const qi = sec.querySelector('.lx-lq'); let tq = null;
+    // leaving a person: drop the person and the filters filled in from them, back to everyone in the rank
+    S.leave = () => { const a = S.auto; S.person = null; S.auto = null; S.q = ''; qi.value = '';
+      if (a) { window.SV.clearStage(); if (dash.params().pop !== a.pop) { dash.setParams({ pop: a.pop }); return; } }
+      draw(); };
+    // fill the filters from a clicked person: rank, engagement, and their name in search
+    S.pick = (p) => { const prevPop = window.SV.pop(), nm = String(p.name || p.employee_id);
+      S.person = String(p.employee_id); S.auto = { pop: prevPop, name: nm }; S.rank = p.rank || S.rank; S.q = nm.toLowerCase(); qi.value = nm;
+      window.SV.clearStage(); let pop = 'All onboard';
+      if (p.stage === 'Active') pop = 'Active'; else if (window.SV.STAGE_POP[p.stage]) { S.eng = p.stage; pop = window.SV.STAGE_POP[p.stage]; }
+      if (pop !== prevPop) dash.setParams({ pop }); else draw(); };
+    qi.addEventListener('input', () => { clearTimeout(tq); const v = qi.value.trim();
+      if (S.person && !v) { S.leave(); return; }
+      tq = setTimeout(() => { S.q = v.toLowerCase(); if (S.person && S.auto && v !== S.auto.name) { S.person = null; S.auto = null; } draw(); }, 250); });
+    sec.querySelector('.lx-lrank').addEventListener('change', (e) => { S.rank = e.target.value || null; S.person = null; S.auto = null; S.q = ''; qi.value = ''; draw(); });
+    // × resets: Rank › Engagement › Search — each resets itself and everything after it
+    sec.querySelectorAll('.fx[data-lfx]').forEach((b) => b.addEventListener('click', (e) => {
+      e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return;
+      const i = +b.dataset.lfx;
+      if (i === 2) { if (S.person) S.leave(); else { S.q = ''; qi.value = ''; draw(); } return; }
+      if (i === 0) S.rank = null;
+      S.person = null; S.auto = null; S.q = ''; qi.value = '';
+      window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(!!S.rank) }); draw();
+    }));
+    sec.querySelector('.lx-leng').addEventListener('change', (e) => {
+      window.SV.markUser(); const [t, v] = e.target.value.split(':');
+      window.SV.clearStage();
+      if (t === 'pop') dash.setParams({ pop: v });
+      else { S.eng = v; dash.setParams({ pop: window.SV.STAGE_POP[v] }); draw(); }
+    });
+    sec.querySelector('.lx-lclr').addEventListener('click', () => { S.rank = null; S.person = null; S.auto = null; S.eng = S.q = ''; qi.value = ''; window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(false) }); draw(); });
+    sec.querySelectorAll('.lx-ldl [data-dl]').forEach((b) => b.addEventListener('click', () => exportLD(k, b)));
+  });
+  { const prev = window.SV.clearStage; window.SV.clearStage = () => { LD.trainee.eng = ''; LD.office.eng = ''; prev && prev(); }; }
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const RCOLS = () => [['People', 'n', F.int, 1], ['Registered', 'reg', F.int, 1], ['Reg. cov.', 'cov', F.pct0, 1], ['Assessable', 'nA', F.int, 1], ['Compliance', 'comp', F.pct, 1],
+    ['Status', 'status'], ['Avg freq.', 'fqAvg', F.pct0, 1], ['Avg lifetime', 'lfAvg', F.pct0, 1], ['At ≥100%', 'ok', F.int, 1], ['Below target', 'below', F.int, 1], ['Compl. 90d', 'c90', F.int, 1],
+    ['Mandatory', 'mand', (v) => v == null ? 'Not set' : F.pct(v), 1]];
+  const LPCOLS = () => [...HX().PCOLS, ['Mandatory', 'mand', (v) => v == null ? '—' : v]];
+  function ldView(k, cat) {
+    const S = LD[k], H = HX(), pop = window.SV.pop();
+    const L = dash.data('learners'), MR = dash.data('mand_ranks'), MP = dash.data('mand_people');
+    const all = L.status === 'ok' ? L.data.filter((r) => r.category === cat) : [];
+    const mr = new Map((MR.status === 'ok' ? MR.data : []).filter((r) => r.category === cat).map((r) => [r.rank, r]));
+    const mp = new Map((MP.status === 'ok' ? MP.data : []).map((r) => [String(r.employee_id), r]));
+    const people = all.filter((r) => !S.eng || r.stage === S.eng);
+    const mandOf = (name) => { const m = mr.get(name); return m && num(m.mandatory_titles) > 0 ? num(m.mandatory_pct) : null; };
+    const agg = (name, list) => { const a = H.hagg(list, pop); return { name, ...a, status: H.statusOf(a, !list.length), mand: mandOf(name) }; };
+    const [sk, sd] = S.sort;
+    const cmpf = (a, b) => { const x = a[sk], y = b[sk]; if (typeof x === 'string' || typeof y === 'string') return String(x ?? '').localeCompare(String(y ?? '')) * sd; const xa = num(x), ya = num(y); if (xa == null && ya == null) return 0; if (xa == null) return 1; if (ya == null) return -1; return (xa - ya) * sd; };
+    if (!S.rank) {
+      const by = d3.group(people, (r) => r.rank);
+      let rows = [...by.entries()].map(([r, list]) => agg(r, list));
+      if (S.q) rows = rows.filter((r) => r.name.toLowerCase().includes(S.q));
+      const total = agg('All ranks', rows.flatMap((r) => by.get(r.name)));
+      return { level: 'ranks', total, rows: rows.sort(cmpf), all, pop };
+    }
+    const inRank = people.filter((r) => r.rank === S.rank);
+    let rows = inRank.filter(H.POPF[pop]).map((r) => { const m = mp.get(String(r.employee_id)); return { ...r, mand: m ? `${m.completed} / ${m.mandatory}` : null }; });
+    if (S.q) rows = rows.filter((r) => [r.name, r.employee_id].join(' ').toLowerCase().includes(S.q));
+    const pk = { comp: 'final_pct', name: 'name' }[sk] || sk;
+    const isNum = LPCOLS().find((c) => c[1] === pk)?.[3];
+    rows = rows.slice().sort((a, b) => { if (!isNum) return String(a[pk] ?? '').localeCompare(String(b[pk] ?? '')) * sd; const x = num(a[pk]), y = num(b[pk]); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * sd; });
+    return { level: 'rank', total: agg(S.rank, inRank), rows, all, pop };
+  }
+  function drawLD(k, sec, cat) {
+    const S = LD[k], V = ldView(k, cat), H = HX();
+    window.SV.drill(k, V.level === 'rank');
+    const label = k === 'trainee' ? 'trainees' : 'office staff';
+    const rs = sec.querySelector('.lx-lrank'); const ranks = [...new Set(V.all.map((r) => r.rank))].sort();
+    if (rs.options.length !== ranks.length + 1) rs.replaceChildren(new Option('All ranks', ''), ...ranks.map((r) => new Option(r, r)));
+    rs.value = S.rank || '';
+    const es = sec.querySelector('.lx-leng'); es.value = S.eng ? 'st:' + S.eng : 'pop:' + V.pop;
+    const lOff = [!S.rank, !S.eng && V.pop === window.SV.levelPop(!!S.rank), !S.q && !sec.querySelector('.lx-lq').value];
+    sec.querySelectorAll('.fx[data-lfx]').forEach((x) => x.toggleAttribute('data-off', lOff[+x.dataset.lfx]));
+    sec.querySelector('.lx-lq').placeholder = V.level === 'ranks' ? 'Search ranks' : 'Search people';
+    const cr = sec.querySelector('.lx-lcrumbs');
+    const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
+    cr.replaceChildren(...(V.level === 'ranks' ? [el('span', null, `All ranks · ${label}`)] : [b(`All ranks · ${label}`, () => { S.rank = null; S.q = ''; sec.querySelector('.lx-lq').value = ''; draw(); }), el('span', 'sep', '›'), el('span', null, S.rank)]));
+    sec.querySelector('.lx-lintro').textContent = (V.level === 'ranks' ? `Every rank among ${label}. Click a rank to see its people.` : `Everyone with this rank, counting ${V.pop.toLowerCase()}. Use the breadcrumb to go back.`)
+      + ` Same scoring as sea staff: target 2 courses a month; compliance follows the counting toggle (${V.pop}). Mandatory shows completion against the rank's mandatory list once it is set.`;
+    const fl = [S.eng && es.selectedOptions[0] && es.selectedOptions[0].text, S.q && `“${S.q}”`].filter(Boolean);
+    sec.querySelector('.lx-lfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
+    const tbl = sec.querySelector('.lx-ltbl');
+    const cols = V.level === 'ranks' ? RCOLS() : LPCOLS();
+    const heads = V.level === 'ranks' ? [['Rank', 'name'], ...cols.map(([l, key, , n]) => [l, key, n])] : cols.map(([l, key, , n]) => [l, key === 'final_pct' ? 'comp' : key, n]);
+    const thead = el('thead'), hr = el('tr');
+    heads.forEach(([l, key, n]) => {
+      const th = el('th', n ? 'num' : ''); const bt = el('button', null, l); th.appendChild(bt);
+      bt.addEventListener('click', () => { S.sort = S.sort[0] === key ? [key, -S.sort[1]] : [key, n ? -1 : 1]; draw(); });
+      const on = S.sort[0] === key; th.setAttribute('aria-sort', on ? (S.sort[1] > 0 ? 'ascending' : 'descending') : 'none'); if (on) bt.textContent = l + (S.sort[1] > 0 ? ' ▴' : ' ▾');
+      hr.appendChild(th);
+    });
+    thead.appendChild(hr);
+    const tb = el('tbody');
+    const aggTr = (r, cls, click) => {
+      const tr = el('tr', cls); tr.appendChild(el('td', null, r.name));
+      for (const [, key, f] of cols) {
+        const td = el('td', key === 'status' ? '' : 'num');
+        if (key === 'status') td.appendChild(H.chipEl(r.status)); else { td.textContent = f(r[key]); if (key === 'comp' && r[key] != null) td.style.color = window.SV.bcol(r[key]); }
+        tr.appendChild(td);
+      }
+      if (click) { tr.classList.add('click'); tr.addEventListener('click', click); }
+      return tr;
+    };
+    if (V.level === 'ranks') {
+      tb.appendChild(aggTr({ ...V.total, name: `All ranks (${V.rows.length})` }, 'h0'));
+      for (const r of V.rows) tb.appendChild(aggTr(r, '', () => { S.rank = r.name; S.q = ''; sec.querySelector('.lx-lq').value = ''; draw(); }));
+    } else {
+      for (const p of V.rows) {
+        const tr = el('tr', 'p click' + (p.classification === 'Not assessable' ? ' dim' : ''));
+        tr.addEventListener('click', () => S.pick(p));
+        for (const [, key, f, n] of cols) {
+          const td = el('td', n ? 'num' : ''); const v = n ? num(p[key]) : p[key];
+          if (key === 'band') td.appendChild(H.chipEl(p.classification === 'Not assessable' ? p.stage : p.band, p.classification === 'Not assessable' ? 'Not assessable' : p.band));
+          else { td.textContent = f ? f(v) : (v ?? ''); if (key === 'final_pct' && v != null) td.style.color = window.SV.bcol(v); }
+          tr.appendChild(td);
+        }
+        tb.appendChild(tr);
+      }
+    }
+    tbl.replaceChildren(thead, tb);
+    const vt = sec.querySelector('.lx-lvtotal');
+    if (V.level === 'rank') { const a = V.total; vt.textContent = `${S.rank}: ${F.int(a.n)} people · ${F.int(a.reg)} registered (${F.pct0(a.cov)}) · ${F.int(a.nA)} assessable · compliance ${F.pct(a.comp)} · ${F.int(a.ok)} at ≥100% · showing ${F.int(V.rows.length)}.`; vt.hidden = false; }
+    else vt.hidden = true;
+    sec.querySelector('.lx-ldl').hidden = !(window.SV.exporter && window.SV.exporter.has());
+    const PP = S.person && S.rank ? V.all.find((r) => String(r.employee_id) === S.person) : null;
+    if (!PP) S.person = null;
+    const pc = sec.querySelector('.lx-lpcard'), lb = sec.querySelector('.lx-lbox');
+    lb.hidden = !!PP; pc.hidden = !PP;
+    if (PP) {
+      vt.hidden = true;
+      cr.replaceChildren(b(`All ranks · ${label}`, () => { S.rank = null; S.person = null; S.auto = null; S.q = ''; sec.querySelector('.lx-lq').value = ''; draw(); }), el('span', 'sep', '›'), b(S.rank, () => S.leave()), el('span', 'sep', '›'), el('span', null, PP.name || PP.employee_id));
+      sec.querySelector('.lx-lintro').textContent = 'Personnel record: course-by-course history for this person. Use the breadcrumb to go back to the rank.';
+      window.SV.P.render(pc, PP, k === 'trainee' ? 'Trainee (training ship)' : 'Office staff');
+    }
+    V.person = PP;
+    LD[k].view = V;
+  }
+  function exportLD(k, btn) {
+    const X = window.SV.exporter; if (!X || !X.has()) return;
+    const sec = document.getElementById(k), S = LD[k], V = S.view; if (!V) return;
+    const label = k === 'trainee' ? 'Trainees' : 'Office staff';
+    let rows, title, totalFirst;
+    if (V.person) {
+      rows = window.SV.P.rows(V.person); if (!rows) return; title = `${V.person.name} · course records`; totalFirst = false;
+    } else if (V.level === 'ranks') {
+      const cols = RCOLS(); const line = (r) => [r.name, ...cols.map(([, key]) => key === 'status' ? r.status : key === 'mand' && r[key] == null ? 'Not set' : (X.r1(r[key]) ?? ''))];
+      rows = [['Rank', ...cols.map((c) => c[0])], line({ ...V.total, name: 'All ranks' }), ...V.rows.map(line)];
+      title = `${label} · by rank`; totalFirst = true;
+    } else {
+      const cols = LPCOLS();
+      rows = [cols.map((c) => c[0]), ...V.rows.map((p) => cols.map(([, key]) => key === 'band' ? (p.classification === 'Not assessable' ? p.stage : p.band) : (p[key] ?? '')))];
+      title = `${label} · ${S.rank}`; totalFirst = false;
+    }
+    const ctx = `${label}${S.rank ? ' › ' + S.rank : ''}${V.person ? ' › ' + V.person.name : ''} · counting ${V.pop} · filters: ${sec.querySelector('.lx-lfilt').textContent.replace(/^Filtered: /, '') || 'none'} · target 2 courses a month · reporting date ${X.REPORT.date}`;
+    const base = ('seaverse_' + title.replace(/ · /g, '_')).replace(/[^A-Za-z0-9 _-]+/g, '').trim().replace(/\s+/g, '_').slice(0, 80) + '_' + X.REPORT.iso;
+    const kind = btn.dataset.dl;
+    if (kind === 'xlsx') { const meta = [[title], [ctx], []]; X.saveFile(base + '.xlsx', X.xlsx(title, [...meta, ...rows], meta.length), btn); }
+    else if (kind === 'csv') X.saveFile(base + '.csv', X.csvOf(rows), btn);
+    else X.saveFile(base + '.html', X.htmlGeneric(title, rows, ctx, totalFirst), btn);
+  }
+
+  // ---- mandatory courses ----
+  const mstate = {};
+  const mst = {};
+  ['trainee', 'office'].forEach((k) => {
+    const sec = document.getElementById(k);
+    mstate[k] = { rank: null, person: null, q: '' };
+    mst[k] = { ranks: { key: 'mandatory_pct', dir: 1 }, titles: { key: 'completed_pct', dir: 1 }, people: { key: 'mandatory_pct', dir: 1 }, status: { key: 'status', dir: -1 } };
+    const mx = sec.querySelector('.lx-mfx'), mi = sec.querySelector('.lx-msearch');
+    mi.addEventListener('input', (e) => { mstate[k].q = e.target.value.toLowerCase(); mx.toggleAttribute('data-off', !mi.value); draw(); });
+    mx.addEventListener('click', (e) => { e.preventDefault(); mi.value = ''; mstate[k].q = ''; mx.toggleAttribute('data-off', true); draw(); });
+  });
+  function drawMand(k, sec, cat) {
+    const S = mstate[k];
+    const level = S.person ? 'person' : S.rank ? 'rank' : 'ranks';
+    const go = (rank, person) => { S.rank = rank; S.person = person; S.q = ''; sec.querySelector('.lx-msearch').value = ''; sec.querySelector('.lx-mfx').toggleAttribute('data-off', true); draw(); };
+    const cr = sec.querySelector('.lx-mcrumbs');
+    const b = (t, fn) => { const x = document.createElement('button'); x.textContent = t; x.addEventListener('click', fn); return x; };
+    const sp = (t, c) => { const x = document.createElement('span'); x.textContent = t; if (c) x.className = c; return x; };
+    const parts = [level === 'ranks' ? sp('Mandatory courses') : b('Mandatory courses', () => go(null, null))];
+    if (S.rank) parts.push(sp('›', 'sep'), level === 'rank' ? sp(S.rank) : b(S.rank, () => go(S.rank, null)));
+    if (S.person) parts.push(sp('›', 'sep'), sp(S.person.name || S.person.id));
+    cr.replaceChildren(...parts);
+    sec.querySelector('.lx-mb-ranks').hidden = level !== 'ranks';
+    sec.querySelector('.lx-mb-rank').hidden = level !== 'rank';
+    sec.querySelector('.lx-mb-person').hidden = level !== 'person';
+    const R = dash.data('mand_ranks');
+    const rrows = R.status === 'ok' ? R.data.filter((r) => r.category === cat) : [];
+    const krow = rrows.find((r) => r.rank === (S.rank || 'All ranks'));
+    sec.querySelectorAll('.lx-m').forEach((el) => {
+      el.dataset.where = 'category=' + enc(cat) + '&rank=' + enc(S.rank || 'All ranks');
+      el.textContent = krow ? F[el.dataset.fmt](num(krow[el.dataset.field])) : '—';
+    });
+    sec.querySelector('.lx-mtlab').textContent = S.rank ? 'Mandatory titles' : 'Ranks with a list';
+    sec.querySelector('.lx-mtsub').textContent = S.rank ? 'Courses set as mandatory for this rank' : `of ${F.int(rrows.length - 1 > 0 ? rrows.length - 1 : 0)} ranks have mandatory courses set`;
+    const anySet = rrows.some((r) => r.rank !== 'All ranks' && num(r.mandatory_titles) > 0);
+    sec.querySelector('.lx-mkpis').hidden = !anySet;
+    const note = sec.querySelector('.lx-mnote');
+    const q = S.q, has = (r, ks) => !q || ks.map((x) => r[x] ?? '').join(' ').toLowerCase().includes(q);
+    const pctOrNot = (r) => num(r.mandatory_titles) > 0;
+    if (level === 'ranks') {
+      note.textContent = anySet
+        ? 'Share of mandatory courses completed, by rank. Ranks marked "Not set" have no mandatory list yet. Click a rank to see its titles and people.'
+        : 'No mandatory courses have been set for these ranks yet. Once the list of mandatory titles per rank is added, this card shows completion against it, with a drill-down to each person’s completed and pending courses.';
+      table(sec.querySelector('.lx-mranks'), mst[k].ranks, [
+        { key: 'rank', label: 'Rank' },
+        { key: 'people', label: 'People', num: true, fmt: F.int },
+        { key: 'mandatory_titles', label: 'Mandatory titles', num: true, fmt: (v) => v ? F.int(v) : 'Not set' },
+        { key: 'mandatory_pct', label: 'Completion', num: true, fmt: F.pct, bar: 100 },
+        { key: 'completed', label: 'Done', num: true, fmt: F.int, narrow: true },
+        { key: 'items', label: 'Required', num: true, fmt: F.int, narrow: true },
+        { key: 'fully_complete', label: 'Fully complete', num: true, fmt: F.int },
+      ], rrows.filter((r) => r.rank !== 'All ranks' && has(r, ['rank'])), { redraw: draw, key: (r) => key2(r.category, r.rank), click: (r) => pctOrNot(r) && go(r.rank, null), dim: (r) => !pctOrNot(r) });
+    } else if (level === 'rank') {
+      note.textContent = `Mandatory titles for ${S.rank} and how many people have completed each; below, each person’s progress. Click a person to see their completed and pending courses.`;
+      const T = dash.data('mand_titles');
+      table(sec.querySelector('.lx-mtitles'), mst[k].titles, [
+        { key: 'course_title', label: 'Course' },
+        { key: 'completed_pct', label: 'Completed by', num: true, fmt: F.pct, bar: 100 },
+        { key: 'completed', label: 'Completed', num: true, fmt: F.int },
+        { key: 'in_progress', label: 'In progress', num: true, fmt: F.int, narrow: true },
+        { key: 'not_started', label: 'Not started', num: true, fmt: F.int, narrow: true },
+        { key: 'not_assigned', label: 'Not assigned', num: true, fmt: F.int, narrow: true },
+      ], T.status === 'ok' ? T.data.filter((r) => r.category === cat && r.rank === S.rank && has(r, ['course_title'])) : [], { redraw: draw, key: (r) => key2(r.rank, r.course_title) });
+      const P = dash.data('mand_people');
+      table(sec.querySelector('.lx-mpeople'), mst[k].people, [
+        { key: 'name', label: 'Name' },
+        { key: 'employee_id', label: 'Employee ID' },
+        { key: 'mandatory_pct', label: 'Completion', num: true, fmt: F.pct, bar: 100 },
+        { key: 'completed', label: 'Done', num: true, fmt: F.int },
+        { key: 'mandatory', label: 'Required', num: true, fmt: F.int },
+        { key: 'in_progress', label: 'In progress', num: true, fmt: F.int, narrow: true },
+        { key: 'not_started', label: 'Not started', num: true, fmt: F.int, narrow: true },
+        { key: 'not_assigned', label: 'Not assigned', num: true, fmt: F.int, narrow: true },
+      ], P.status === 'ok' ? P.data.filter((r) => r.category === cat && r.rank === S.rank && has(r, ['name', 'employee_id'])) : [], { redraw: draw, click: (r) => go(S.rank, { id: r.employee_id, name: r.name }) });
+    } else {
+      note.textContent = 'This person’s mandatory courses: completed, and still pending (in progress, not started, or not yet assigned to them).';
+      const M = dash.data('mand_status');
+      table(sec.querySelector('.lx-mstatus'), mst[k].status, [
+        { key: 'course_title', label: 'Course' },
+        { key: 'status', label: 'Status', chip: (r) => r.status },
+        { key: 'completed_on', label: 'Completed on', fmt: F.date },
+      ], M.status === 'ok' ? M.data.filter((r) => String(r.employee_id) === String(S.person.id) && has(r, ['course_title', 'status'])) : [], { redraw: draw, key: (r) => key2(r.employee_id, r.course_title) });
+    }
+  }
+  function draw() {
+    const k = window.SV.tab;
+    if (!CAT[k]) return;
+    const sec = document.getElementById(k);
+    const cat = CAT[k];
+    drawMand(k, sec, cat);
+    drawLD(k, sec, cat);
+  }
+
+  window.SV.redraw = () => { window.SV.drawSea && window.SV.drawSea(); window.SV.drawAnalysis && window.SV.drawAnalysis(); draw(); };
+  window.SV.show(window.SV.tab, false);
+  dash.onData(() => window.SV.redraw());
+})();
+</script>
+<script>
+// Ranks & courses: course status by personnel (Category › Rank › Course › Engagement › Search)
+(() => {
+  const { ALL, num, F } = window.SV;
+  const sec = document.getElementById('cstat-card');
+  const qs = (s) => sec.querySelector(s);
+  const ccat = qs('.lx-ccat'), crank = qs('.lx-crank'), ccourse = qs('.lx-ccourse'), ceng = qs('.lx-ceng'), cq = qs('.lx-cq');
+  const C = { cat: '', rank: '', course: null, eng: '', q: '', person: null, auto: null, sortC: ['a', -1], sortP: ['status', 1], view: null };
+  const NCS = 32, D0 = Date.UTC(2020, 0, 1);
+  const dstr = (h) => h ? new Date(D0 + parseInt(h, 16) * 864e5).toISOString().slice(0, 10) : '';
+  const CATLAB = { 'Sea staff': 'Sea staff (onboard)', 'Trainee': 'Trainees', 'Office staff': 'Office staff', 'Off-board': 'Off-board sea staff' };
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const draw = () => window.SV.drawCS();
+  // ---- data helpers ----
+  let titles = null, titlesKey = null;
+  function titleMap() { const T = dash.data('course_idx'); if (T.status !== 'ok') return null; if (titlesKey !== T.data) { titles = new Map(T.data.map((r) => [num(r.ci), r.title])); titlesKey = T.data; } return titles; }
+  let pidx = null, pidxKey = null;
+  function people() {
+    const S = dash.data('sea_staff'), L = dash.data('learners'), OB = dash.data('offboard'); if (S.status !== 'ok' || L.status !== 'ok' || OB.status !== 'ok') return null;
+    if (pidxKey !== S.data.length + ':' + L.data.length + ':' + OB.data.length + (S.data[0] && S.data[0].pi)) {
+      pidx = new Map();
+      for (const r of S.data) pidx.set(num(r.pi), { ...r, category: 'Sea staff' });
+      for (const r of L.data) pidx.set(num(r.pi), { ...r, doc: '' });
+      for (const r of OB.data) pidx.set(num(r.pi), r);
+      pidxKey = S.data.length + ':' + L.data.length + ':' + OB.data.length + (S.data[0] && S.data[0].pi);
+    }
+    return pidx;
+  }
+  // scope tests shared by aggregate rows and people
+  const docOk = (r, doc) => doc === ALL ? true : (r.category === 'Sea staff' || r.category === 'Off-board' ? r.doc === doc : !!C.cat);
+  const catOk = (r) => !C.cat || r.category === C.cat;
+  const rankOk = (r) => !C.rank || r.rank === C.rank;
+  const engOk = (r, pop) => window.SV.H.POPF[pop](r) && (!C.eng || r.stage === C.eng);
+  // ---- events ----
+  function leave() { const a = C.auto; C.person = null; C.auto = null; C.q = ''; cq.value = '';
+    if (a) { C.cat = a.cat; C.rank = a.rank; window.SV.clearStage(); if (dash.params().pop !== a.pop) { dash.setParams({ pop: a.pop }); return; } }
+    draw(); }
+  function pick(p) { const prevPop = window.SV.pop(), nm = String(p.name || p.employee_id);
+    C.auto = { pop: prevPop, name: nm, cat: C.cat, rank: C.rank };
+    C.person = p; C.cat = p.category; C.rank = p.rank || ''; C.q = nm.toLowerCase(); cq.value = nm;
+    window.SV.clearStage(); let pop = 'All onboard';
+    if (p.stage === 'Active') pop = 'Active'; else if (window.SV.STAGE_POP[p.stage]) { C.eng = p.stage; pop = window.SV.STAGE_POP[p.stage]; }
+    if (pop !== prevPop) dash.setParams({ pop }); else draw(); }
+  let tq = null;
+  cq.addEventListener('input', () => { clearTimeout(tq); const v = cq.value.trim();
+    if (C.person && !v) { leave(); return; }
+    tq = setTimeout(() => { C.q = v.toLowerCase(); if (C.person && C.auto && v !== C.auto.name) { C.person = null; C.auto = null; } draw(); }, 250); });
+  ccat.addEventListener('change', () => { C.cat = ccat.value; C.person = null; C.auto = null; draw(); });
+  crank.addEventListener('change', () => { C.rank = crank.value; C.person = null; C.auto = null; draw(); });
+  ccourse.addEventListener('change', () => { C.course = ccourse.value === '' ? null : +ccourse.value; C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw(); });
+  ceng.addEventListener('change', () => { window.SV.markUser(); const [t, v] = ceng.value.split(':'); window.SV.clearStage();
+    if (t === 'pop') dash.setParams({ pop: v }); else { C.eng = v; dash.setParams({ pop: window.SV.STAGE_POP[v] }); draw(); } });
+  { const prev = window.SV.clearStage; window.SV.clearStage = () => { C.eng = ''; prev && prev(); }; }
+  sec.querySelectorAll('.fx[data-cfx]').forEach((b) => b.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return;
+    const i = +b.dataset.cfx;
+    if (i === 4) { if (C.person) leave(); else { C.q = ''; cq.value = ''; draw(); } return; }
+    if (i <= 0) C.cat = ''; if (i <= 1) C.rank = ''; if (i <= 2) C.course = null;
+    C.person = null; C.auto = null; C.q = ''; cq.value = '';
+    window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(C.course != null) }); draw();
+  }));
+  qs('.lx-cclr').addEventListener('click', () => { C.cat = C.rank = ''; C.course = null; C.person = null; C.auto = null; C.q = ''; cq.value = ''; window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(false) }); draw(); });
+  sec.querySelectorAll('.lx-cdl [data-dl]').forEach((b) => b.addEventListener('click', () => exportCS(b)));
+  // ---- view ----
+  const CCOLS = [['Assigned', 'a', F.int], ['Not started', 'ns', F.int], ['In progress', 'ip', F.int], ['Started', 'st', F.int], ['Completed', 'cp', F.int], ['Completion', 'pct', F.pct]];
+  const PCOLS = [['Name', 'name'], ['Employee ID', 'employee_id'], ['Category', 'category'], ['Rank', 'rank'], ['Vessel', 'vessel'], ['DoC', 'doc'], ['Stage', 'stage'],
+    ['Status', 'status'], ['Assigned', 'ad', F.date], ['Started', 'sd', F.date], ['Completed', 'cd', F.date]];
+  const ORDER = { 'Completed': 1, 'Completed (admin)': 2, 'In progress': 3, 'Not started': 4 };
+  function view() {
+    const doc = window.SV.doc(), pop = window.SV.pop();
+    const A = dash.data('course_agg'), T = titleMap();
+    if (A.status !== 'ok' || !T) return { loading: true };
+    const base = A.data.filter((r) => docOk(r, doc));
+    const ranks = [...new Set(base.filter(catOk).map((r) => r.rank).filter(Boolean))].sort();
+    if (C.rank && !ranks.includes(C.rank)) C.rank = '';
+    const scope = base.filter((r) => catOk(r) && rankOk(r));
+    const avail = new Set(); for (const r of scope) for (const s of r.s.split(';')) avail.add(parseInt(s, 16));
+    const courses = [...avail].map((ci) => ({ ci, title: T.get(ci) || `Course ${ci}` })).sort((a, b) => a.title.localeCompare(b.title));
+    if (C.course != null && !avail.has(C.course)) C.course = null;
+    const out = { doc, pop, ranks, courses, T };
+    if (C.course == null) {
+      const sum = new Map();
+      for (const r of scope) { if (!engOk(r, pop)) continue;
+        for (const s of r.s.split(';')) { const [ci, a, ip, cp] = s.split('.').map((x) => parseInt(x, 16)); const o = sum.get(ci) || { ci, a: 0, ip: 0, cp: 0 }; o.a += a; o.ip += ip; o.cp += cp; sum.set(ci, o); } }
+      let rows = [...sum.values()].map((o) => ({ ...o, name: T.get(o.ci) || `Course ${o.ci}`, ns: o.a - o.ip - o.cp, st: o.ip + o.cp, pct: o.a ? o.cp / o.a * 100 : null }));
+      if (C.q) rows = rows.filter((r) => r.name.toLowerCase().includes(C.q));
+      const tot = rows.reduce((t, r) => { t.a += r.a; t.ip += r.ip; t.cp += r.cp; return t; }, { a: 0, ip: 0, cp: 0 });
+      const total = { name: `All courses (${rows.length})`, ...tot, ns: tot.a - tot.ip - tot.cp, st: tot.ip + tot.cp, pct: tot.a ? tot.cp / tot.a * 100 : null };
+      const [k, d] = C.sortC;
+      rows.sort((x, y) => k === 'name' ? x.name.localeCompare(y.name) * d : ((x[k] ?? -1) - (y[k] ?? -1)) * d || x.name.localeCompare(y.name));
+      return { ...out, level: 'courses', rows, total };
+    }
+    const shard = 'cs_' + String(C.course % NCS).padStart(2, '0');
+    const SH = dash.data(shard), P = people();
+    if (SH.status !== 'ok' || !P) return { ...out, level: 'course', shard, loading: true };
+    const rec = SH.data.find((r) => num(r.ci) === C.course) || { a: '', n: '' };
+    const list = [];
+    for (const s of (rec.a || '').split(';').filter(Boolean)) { const [pi, k, ad, sd, cd] = s.split('.'); list.push({ pi: parseInt(pi, 16), status: k === '2' ? 'In progress' : k === '3' ? 'Completed (admin)' : 'Completed', ad: dstr(ad), sd: dstr(sd), cd: dstr(cd) }); }
+    for (const g of (rec.n || '').split(';').filter(Boolean)) { const [ad, pis] = g.split(':'); const a = dstr(ad); for (const pi of pis.split(',')) list.push({ pi: parseInt(pi, 16), status: 'Not started', ad: a, sd: '', cd: '' }); }
+    let rows = [];
+    for (const x of list) { const p = P.get(x.pi); if (!p || !docOk(p, doc) || !catOk(p) || !rankOk(p) || !engOk(p, pop)) continue; rows.push({ ...x, p, name: p.name, employee_id: p.employee_id, category: CATLAB[p.category] || p.category, rank: p.rank, vessel: p.vessel || '', doc: p.doc || '', stage: p.stage }); }
+    const all = rows;
+    if (C.q) rows = rows.filter((r) => [r.name, r.employee_id, r.vessel].join(' ').toLowerCase().includes(C.q));
+    const [k, d] = C.sortP;
+    rows.sort((x, y) => (k === 'status' ? (ORDER[x.status] - ORDER[y.status]) * d : String(x[k] ?? '').localeCompare(String(y[k] ?? '')) * d) || String(x.name).localeCompare(String(y.name)));
+    const cnt = (l, f) => l.filter(f).length;
+    const total = { a: all.length, cp: cnt(all, (r) => r.status.startsWith('Completed')), ip: cnt(all, (r) => r.status === 'In progress') };
+    return { ...out, level: 'course', shard, rows, total, title: T.get(C.course) || `Course ${C.course}` };
+  }
+  function drawCS() {
+    if (window.SV.tab !== 'analysis') return;
+    window.SV.drill('analysis', C.course != null);
+    const V = view();
+    const box = qs('.lx-cbox'), pc = qs('.lx-cpcard'), tbl = qs('.lx-ctbl');
+    box.dataset.source = 'course_agg course_idx sea_staff learners offboard' + (V.shard ? ' ' + V.shard : '');
+    if (V.loading && !V.courses) { tbl.replaceChildren(el('caption', 'note-inline', 'Loading course status…')); return; }
+    // filters (cascade)
+    ccat.value = C.cat;
+    const rk = V.ranks.join('|'); if (crank.dataset.k !== rk) { crank.replaceChildren(new Option('All ranks', ''), ...V.ranks.map((r) => new Option(r, r))); crank.dataset.k = rk; }
+    crank.value = C.rank;
+    const ck = V.courses.map((c) => c.ci).join('|'); if (ccourse.dataset.k !== ck) { ccourse.replaceChildren(new Option('All courses', ''), ...V.courses.map((c) => new Option(c.title, c.ci))); ccourse.dataset.k = ck; }
+    ccourse.value = C.course == null ? '' : String(C.course);
+    ceng.value = C.eng ? 'st:' + C.eng : 'pop:' + V.pop;
+    const off = [!C.cat, !C.rank, C.course == null, !C.eng && V.pop === window.SV.levelPop(C.course != null), !C.q && !cq.value];
+    sec.querySelectorAll('.fx[data-cfx]').forEach((x) => x.toggleAttribute('data-off', off[+x.dataset.cfx]));
+    cq.placeholder = V.level === 'courses' ? 'Search courses' : 'Search people';
+    const fl = [C.cat && CATLAB[C.cat], C.rank, C.eng && ceng.selectedOptions[0] && ceng.selectedOptions[0].text, C.q && `“${C.q}”`].filter(Boolean);
+    qs('.lx-cfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
+    const docNote = V.doc !== ALL ? ` DoC filter (${V.doc}) applies to sea staff${C.cat && C.cat !== 'Sea staff' ? '; trainees and office staff have no DoC, so it is ignored here' : '; trainees and office staff are left out while a DoC is selected; off-board crew with no DoC tagged are left out too'}.` : '';
+    // breadcrumb
+    const cr = qs('.lx-ccrumbs');
+    const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
+    const toAll = () => { C.course = null; C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw(); };
+    const parts = [V.level === 'courses' ? el('span', null, 'All courses') : b('All courses', toAll)];
+    if (V.level === 'course') parts.push(el('span', 'sep', '›'), C.person ? b(V.title, () => leave()) : el('span', null, V.title));
+    if (C.person) parts.push(el('span', 'sep', '›'), el('span', null, C.person.name || C.person.employee_id));
+    cr.replaceChildren(...parts);
+    qs('.lx-cdl').hidden = !(window.SV.exporter && window.SV.exporter.has());
+    const vt = qs('.lx-cvtotal');
+    // person record
+    pc.hidden = !C.person; box.hidden = !!C.person;
+    if (C.person) {
+      vt.hidden = true;
+      qs('.lx-cintro').textContent = 'Personnel record: course-by-course history for this person. Clear the search, or use the breadcrumb, to go back to the course.';
+      const p = C.person; window.SV.P.render(pc, p, p.category === 'Off-board' ? [p.off_status, p.vessel ? 'last vessel ' + p.vessel : 'no vessel tagged', p.doc].join(' · ') : p.category === 'Sea staff' ? [p.vessel, p.doc].filter(Boolean).join(' · ') : (CATLAB[p.category] || p.category));
+      C.view = { ...V, person: p }; return;
+    }
+    if (V.loading) { tbl.replaceChildren(el('caption', 'note-inline', 'Loading the people assigned this course…')); vt.hidden = true; C.view = null; return; }
+    qs('.lx-cintro').textContent = (V.level === 'courses'
+      ? 'Assigned, started and completed courses for the people in the filters, counted per assignment. Click a course to see who it is assigned to.'
+      : 'Everyone in the filters who is assigned this course, with their status and dates. Click a person to open their record.')
+      + ` Counting ${V.pop.toLowerCase()}. Sea staff (onboard) are the crew onboard today; off-board sea staff are those assigned to join or on leave.` + docNote;
+    const thead = el('thead'), hr = el('tr'), tb = el('tbody');
+    const sortTh = (l, key, n, st) => { const th = el('th', n ? 'num' : ''); const bt = el('button', null, l); th.appendChild(bt);
+      bt.addEventListener('click', () => { C[st] = C[st][0] === key ? [key, -C[st][1]] : [key, n ? -1 : 1]; draw(); });
+      const on = C[st][0] === key; th.setAttribute('aria-sort', on ? (C[st][1] > 0 ? 'ascending' : 'descending') : 'none'); if (on) bt.textContent = l + (C[st][1] > 0 ? ' ▴' : ' ▾'); hr.appendChild(th); };
+    if (V.level === 'courses') {
+      sortTh('Course', 'name', false, 'sortC'); CCOLS.forEach(([l, k]) => sortTh(l, k, true, 'sortC'));
+      const line = (r, cls, click) => { const tr = el('tr', cls); tr.appendChild(el('td', null, r.name)); for (const [, k, f] of CCOLS) tr.appendChild(el('td', 'num', f(r[k]))); if (click) { tr.classList.add('click'); tr.addEventListener('click', click); } return tr; };
+      tb.appendChild(line(V.total, 'h0'));
+      for (const r of V.rows) tb.appendChild(line(r, '', () => { C.course = r.ci; C.q = ''; cq.value = ''; draw(); }));
+      vt.hidden = true;
+    } else {
+      PCOLS.forEach(([l, k]) => sortTh(l, k, false, 'sortP'));
+      for (const r of V.rows) {
+        const tr = el('tr', 'p click');
+        for (const [, k, f] of PCOLS) { const td = el('td'); if (k === 'status') td.appendChild(window.SV.H.chipEl(r.status, r.status.startsWith('Completed') ? 'Completed' : r.status)); else td.textContent = f ? (r[k] ? f(r[k]) : '—') : (r[k] ?? ''); tr.appendChild(td); }
+        tr.addEventListener('click', () => pick(r.p));
+        tb.appendChild(tr);
+      }
+      const t = V.total; vt.textContent = `${V.title}: ${F.int(t.a)} assigned · ${F.int(t.ip + t.cp)} started · ${F.int(t.cp)} completed (${F.pct(t.a ? t.cp / t.a * 100 : null)}) · ${F.int(t.a - t.ip - t.cp)} not started · showing ${F.int(V.rows.length)}.`;
+      vt.hidden = false;
+    }
+    thead.appendChild(hr); tbl.replaceChildren(thead, tb);
+    C.view = V;
+  }
+  function exportCS(btn) {
+    const X = window.SV.exporter; if (!X || !X.has()) return; const V = C.view; if (!V) return;
+    let rows, title, totalFirst;
+    if (V.person) { rows = window.SV.P.rows(V.person); if (!rows) return; title = `${V.person.name} · course records`; totalFirst = false; }
+    else if (V.level === 'courses') { const line = (r) => [r.name, ...CCOLS.map(([, k]) => X.r1(r[k]) ?? '')]; rows = [['Course', ...CCOLS.map((c) => c[0])], line({ ...V.total, name: 'All courses' }), ...V.rows.map(line)]; title = 'Course status · all courses'; totalFirst = true; }
+    else { rows = [PCOLS.map((c) => c[0]), ...V.rows.map((r) => PCOLS.map(([, k]) => r[k] ?? ''))]; title = `Course status · ${V.title}`; totalFirst = false; }
+    const ctx = `Course status by personnel${V.title ? ' › ' + V.title : ''}${V.person ? ' › ' + V.person.name : ''} · DoC ${V.doc} · counting ${V.pop} · filters: ${qs('.lx-cfilt').textContent.replace(/^Filtered: /, '') || 'none'} · reporting date ${X.REPORT.date}`;
+    const base = ('seaverse_' + title.replace(/ · /g, '_')).replace(/[^A-Za-z0-9 _-]+/g, '').trim().replace(/\s+/g, '_').slice(0, 80) + '_' + X.REPORT.iso;
+    const kind = btn.dataset.dl;
+    if (kind === 'xlsx') { const meta = [[title], [ctx], []]; X.saveFile(base + '.xlsx', X.xlsx(title, [...meta, ...rows], meta.length), btn); }
+    else if (kind === 'csv') X.saveFile(base + '.csv', X.csvOf(rows), btn);
+    else X.saveFile(base + '.html', X.htmlGeneric(title, rows, ctx, totalFirst), btn);
+  }
+  window.SV.drawCS = drawCS;
+  const prev = window.SV.redraw; window.SV.redraw = () => { prev && prev(); drawCS(); };
+  drawCS();
+})();
+</script>
+<script>
+// Off-board crew: Status › DoC › Last vessel › Rank › Engagement › Search; drill All ranks › rank › person
+(() => {
+  const { num, F } = window.SV;
+  const sec = document.getElementById('offb');
+  const qs = (s) => sec.querySelector(s);
+  const ostat = qs('.lx-ostat'), odoc = qs('.lx-odoc'), oves = qs('.lx-oves'), orank = qs('.lx-orank'), oeng = qs('.lx-oeng'), oq = qs('.lx-oq');
+  const O = { stat: '', doc: '', ves: '', rank: '', eng: '', q: '', person: null, auto: null, sortR: ['n', -1], sortP: ['final_pct', -1], view: null };
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const draw = () => window.SV.drawOffb();
+  const H = () => window.SV.H;
+  // ---- events ----
+  function leave() { const a = O.auto; O.person = null; O.auto = null; O.q = ''; oq.value = '';
+    if (a) { Object.assign(O, { stat: a.stat, doc: a.doc, ves: a.ves }); window.SV.clearStage(); if (dash.params().pop !== a.pop) { dash.setParams({ pop: a.pop }); return; } }
+    draw(); }
+  function pick(p) { const prevPop = window.SV.pop(), nm = String(p.name || p.employee_id);
+    O.auto = { pop: prevPop, name: nm, stat: O.stat, doc: O.doc, ves: O.ves };
+    O.person = String(p.employee_id); O.stat = p.off_status; O.doc = p.doc; O.ves = p.vessel || ''; O.rank = p.rank || '';
+    O.q = nm.toLowerCase(); oq.value = nm;
+    window.SV.clearStage(); let pop = 'All onboard';
+    if (p.stage === 'Active') pop = 'Active'; else if (window.SV.STAGE_POP[p.stage]) { O.eng = p.stage; pop = window.SV.STAGE_POP[p.stage]; }
+    if (pop !== prevPop) dash.setParams({ pop }); else draw(); }
+  let tq = null;
+  oq.addEventListener('input', () => { clearTimeout(tq); const v = oq.value.trim();
+    if (O.person && !v) { leave(); return; }
+    tq = setTimeout(() => { O.q = v.toLowerCase(); if (O.person && O.auto && v !== O.auto.name) { O.person = null; O.auto = null; } draw(); }, 250); });
+  const drop = () => { O.person = null; O.auto = null; };
+  ostat.addEventListener('change', () => { O.stat = ostat.value; drop(); draw(); });
+  odoc.addEventListener('change', () => { O.doc = odoc.value; O.ves = ''; drop(); draw(); });
+  oves.addEventListener('change', () => { O.ves = oves.value; drop(); const r = O.ves && (dash.data('offboard').data || []).find((x) => x.vessel === O.ves); if (r) O.doc = r.doc; draw(); });
+  orank.addEventListener('change', () => { O.rank = orank.value; drop(); O.q = ''; oq.value = ''; draw(); });
+  oeng.addEventListener('change', () => { window.SV.markUser(); const [t, v] = oeng.value.split(':'); window.SV.clearStage();
+    if (t === 'pop') dash.setParams({ pop: v }); else { O.eng = v; dash.setParams({ pop: window.SV.STAGE_POP[v] }); draw(); } });
+  { const prev = window.SV.clearStage; window.SV.clearStage = () => { O.eng = ''; prev && prev(); }; }
+  sec.querySelectorAll('.fx[data-ofx]').forEach((b) => b.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return;
+    const i = +b.dataset.ofx;
+    if (i === 5) { if (O.person) leave(); else { O.q = ''; oq.value = ''; draw(); } return; }
+    if (i <= 0) O.stat = ''; if (i <= 1) O.doc = ''; if (i <= 2) O.ves = ''; if (i <= 3) O.rank = '';
+    drop(); O.q = ''; oq.value = '';
+    window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(!!O.rank) }); draw();
+  }));
+  qs('.lx-oclr').addEventListener('click', () => { O.stat = O.doc = O.ves = O.rank = ''; drop(); O.q = ''; oq.value = ''; window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(false) }); draw(); });
+  sec.querySelectorAll('.lx-odl [data-dl]').forEach((b) => b.addEventListener('click', () => exportO(b)));
+  // ---- aggregates ----
+  const mean = (a) => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
+  function oagg(name, list, pop) {
+    const S = list.filter(H().POPF[pop]);
+    const asg = S.filter((r) => r.off_status === 'Assigned');
+    const ha = H().hagg(asg, pop);
+    const sum = (k) => S.reduce((t, r) => t + (num(r[k]) || 0), 0);
+    const reg = S.filter((r) => r.registered === 'Yes').length, act = S.filter((r) => r.stage === 'Active').length;
+    const A = sum('assigned'), Cm = sum('completed');
+    return { name, n: S.length, nAsg: asg.length, nLeave: S.filter((r) => r.off_status === 'On leave').length, reg, cov: S.length ? reg / S.length * 100 : null,
+      act, actPct: S.length ? act / S.length * 100 : null, life: A ? Cm / A * 100 : null, c90: sum('completed_90d'),
+      aged: S.filter((r) => num(r.pending_aged) > 0).length, agedN: sum('pending_aged'), untag: S.filter((r) => r.doc === 'Not tagged').length,
+      comp: asg.length ? ha.comp : null, nA: ha.nA, ok: ha.ok, status: asg.length ? H().statusOf(ha, false) : 'No assigned crew' };
+  }
+  const RCOLS = [['People', 'n', F.int], ['Assigned', 'nAsg', F.int], ['On leave', 'nLeave', F.int], ['Registered', 'reg', F.int], ['Reg. cov.', 'cov', F.pct0],
+    ['Active 90d', 'act', F.int], ['Active %', 'actPct', F.pct0], ['Lifetime', 'life', F.pct0], ['Compl. 90d', 'c90', F.int], ['Pending >90d', 'aged', F.int],
+    ['Assigned: compliance', 'comp', F.pct], ['Assigned: ≥100%', 'ok', F.int], ['Assigned: status', 'status']];
+  const PCOLS = [['Name', 'name'], ['Employee ID', 'employee_id'], ['Status', 'off_status'], ['Rank', 'rank'], ['Last vessel', 'vessel'], ['DoC', 'doc'], ['Stage', 'stage'],
+    ['Registered', 'registered'], ['First course', 'engaged_on', F.date], ['Lifetime', 'lifetime_pct', F.pct0, 1], ['Compl. 90d', 'completed_90d', F.int, 1],
+    ['Completed', 'completed', F.int, 1], ['Assigned', 'assigned', F.int, 1], ['Pending', 'pending', F.int, 1], ['Pending >90d', 'pending_aged', F.int, 1],
+    ['Last completed', 'last_completed', F.date], ['Compliance', 'final_pct', F.pct, 1], ['Band', 'band']];
+  function view() {
+    const D = dash.data('offboard'), pop = window.SV.pop();
+    if (D.status !== 'ok') return { loading: true, pop };
+    const all = D.data;
+    const s1 = all.filter((r) => !O.stat || r.off_status === O.stat);
+    const docs = [...new Set(s1.map((r) => r.doc))].sort((a, b) => (a === 'Not tagged') - (b === 'Not tagged') || a.localeCompare(b));
+    if (O.doc && !docs.includes(O.doc)) O.doc = '';
+    const s2 = s1.filter((r) => !O.doc || r.doc === O.doc);
+    const vessels = [...new Set(s2.map((r) => r.vessel).filter(Boolean))].sort();
+    if (O.ves && !vessels.includes(O.ves)) O.ves = '';
+    const s3 = s2.filter((r) => !O.ves || r.vessel === O.ves);
+    const ranks = [...new Set(s3.map((r) => r.rank).filter(Boolean))].sort();
+    if (O.rank && !ranks.includes(O.rank)) O.rank = '';
+    const scope = s3.filter((r) => !O.eng || r.stage === O.eng);   // before rank: for KPIs and rank list
+    const out = { pop, docs, vessels, ranks, all, scope };
+    out.kpi = oagg('All', O.rank ? scope.filter((r) => r.rank === O.rank) : scope, pop);
+    if (!O.rank) {
+      const by = d3.group(scope, (r) => r.rank);
+      let rows = [...by.entries()].map(([k, l]) => oagg(k, l, pop)).filter((r) => r.n);
+      if (O.q) rows = rows.filter((r) => String(r.name).toLowerCase().includes(O.q));
+      const total = oagg(`All ranks (${rows.length})`, rows.flatMap((r) => by.get(r.name)), pop);
+      const [k, d] = O.sortR;
+      rows.sort((x, y) => k === 'name' || k === 'status' ? String(x[k]).localeCompare(String(y[k])) * d : (((x[k] ?? -Infinity) > (y[k] ?? -Infinity)) - ((x[k] ?? -Infinity) < (y[k] ?? -Infinity))) * d || String(x.name).localeCompare(String(y.name)));
+      return { ...out, level: 'ranks', rows, total };
+    }
+    let rows = scope.filter((r) => r.rank === O.rank).filter(H().POPF[pop]).map((r) => ({ ...r, pending: (num(r.in_progress) || 0) + (num(r.not_started) || 0) }));
+    if (O.q) rows = rows.filter((r) => [r.name, r.employee_id, r.vessel].join(' ').toLowerCase().includes(O.q));
+    const [k, d] = O.sortP; const isNum = PCOLS.find((c) => c[1] === k)?.[3];
+    const val = (r) => k === 'final_pct' && r.no_target ? null : r[k];
+    rows.sort((a, b) => { if (!isNum) return String(a[k] ?? '').localeCompare(String(b[k] ?? '')) * d; const x = num(val(a)), y = num(val(b)); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * d; });
+    return { ...out, level: 'rank', rows };
+  }
+  function kpis(V) {
+    const box = qs('.lx-okpis'), a = V.kpi;
+    const k = (lab, val, sub, col) => { const d = el('div', 'kpi'); d.append(el('div', 'lab', lab)); const v = el('div', 'val', val); if (col) v.style.color = col; d.append(v, el('div', 'sub', sub)); return d; };
+    box.replaceChildren(
+      k('Off-board crew', F.int(a.n), `${F.int(a.nAsg)} assigned to join · ${F.int(a.nLeave)} on leave${a.n - a.nAsg - a.nLeave ? ` · ${F.int(a.n - a.nAsg - a.nLeave)} status not set` : ''}`),
+      k('Assigned · compliance', a.nAsg ? F.pct(a.comp) : '—', a.nAsg ? `${F.int(a.ok)} of ${F.int(a.nA)} assessable at ≥100% · target 2 courses a month` : 'No assigned crew in the filters', a.comp == null ? null : window.SV.bcol(a.comp)),
+      k('Registered', F.pct(a.cov), `${F.int(a.reg)} of ${F.int(a.n)}`),
+      k('Active in 90 days', F.pct(a.actPct), `${F.int(a.act)} people completed a course · ${F.int(a.c90)} completions`),
+      k('Lifetime completion', F.pct(a.life), 'Completed ÷ assigned courses'),
+      k('Pending over 90 days', F.int(a.aged), `People with assigned courses left open >90 days (${F.int(a.agedN)} courses)`),
+      k('No vessel / DoC tagged', F.int(a.untag), `${F.pct0(a.n ? a.untag / a.n * 100 : null)} of off-board crew in the filters`));
+  }
+  function drawOffb() {
+    if (window.SV.tab !== 'offb') return;
+    window.SV.drill('offb', !!O.rank);
+    const V = view(); const tbl = qs('.lx-otbl'), box = qs('.lx-obox'), pc = qs('.lx-opcard');
+    if (V.loading) { tbl.replaceChildren(el('caption', 'note-inline', 'Loading off-board crew…')); return; }
+    // filters
+    ostat.value = O.stat;
+    const set = (sel, list, allLab, v) => { const key = list.join('|'); if (sel.dataset.k !== key) { sel.replaceChildren(new Option(allLab, ''), ...list.map((x) => new Option(x, x))); sel.dataset.k = key; } sel.value = v; };
+    set(odoc, V.docs, 'All DoCs', O.doc); set(oves, V.vessels, 'All vessels', O.ves); set(orank, V.ranks, 'All ranks', O.rank);
+    oeng.value = O.eng ? 'st:' + O.eng : 'pop:' + V.pop;
+    const off = [!O.stat, !O.doc, !O.ves, !O.rank, !O.eng && V.pop === window.SV.levelPop(!!O.rank), !O.q && !oq.value];
+    sec.querySelectorAll('.fx[data-ofx]').forEach((x) => x.toggleAttribute('data-off', off[+x.dataset.ofx]));
+    oq.placeholder = V.level === 'ranks' ? 'Search ranks' : 'Search people';
+    const fl = [O.stat, O.doc, O.ves, O.eng && oeng.selectedOptions[0] && oeng.selectedOptions[0].text, O.q && `“${O.q}”`].filter(Boolean);
+    qs('.lx-ofilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
+    kpis(V);
+    const all = dash.data('offboard').data;
+    const PP = O.person ? all.find((r) => String(r.employee_id) === O.person) : null;
+    if (!PP) O.person = null;
+    // breadcrumb
+    const cr = qs('.lx-ocrumbs');
+    const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
+    const parts = [V.level === 'ranks' ? el('span', null, 'All ranks · off-board crew') : b('All ranks · off-board crew', () => { O.rank = ''; drop(); O.q = ''; oq.value = ''; draw(); })];
+    if (V.level === 'rank') parts.push(el('span', 'sep', '›'), PP ? b(O.rank, () => leave()) : el('span', null, O.rank));
+    if (PP) parts.push(el('span', 'sep', '›'), el('span', null, PP.name || PP.employee_id));
+    cr.replaceChildren(...parts);
+    qs('.lx-odl').hidden = !(window.SV.exporter && window.SV.exporter.has());
+    const vt = qs('.lx-ovtotal');
+    pc.hidden = !PP; box.hidden = !!PP;
+    if (PP) {
+      vt.hidden = true;
+      qs('.lx-ointro').textContent = 'Personnel record: course-by-course history. Clear the search, or use the breadcrumb, to go back to the rank.';
+      window.SV.P.render(pc, PP, [PP.off_status === 'Assigned' ? 'Assigned to join' : PP.off_status, PP.vessel ? 'last vessel ' + PP.vessel : 'no vessel tagged', PP.doc].join(' · '));
+      O.view = { ...V, person: PP }; return;
+    }
+    qs('.lx-ointro').textContent = (V.level === 'ranks' ? 'Every rank among off-board sea staff. Click a rank to see its people.' : 'Everyone with this rank in the filters. Click a person to open their record.')
+      + ` Counting ${V.pop === 'All onboard' ? 'everyone' : V.pop.toLowerCase()}. Compliance is measured for assigned crew only (2 courses a month, same scoring as onboard); people on leave are monitored without a target. Last vessel and DoC come from the vessel still tagged on the profile; "Not tagged" means none.`;
+    const thead = el('thead'), hr = el('tr'), tb = el('tbody');
+    const sortTh = (l, key, n, st) => { const th = el('th', n ? 'num' : ''); const bt = el('button', null, l); th.appendChild(bt);
+      bt.addEventListener('click', () => { O[st] = O[st][0] === key ? [key, -O[st][1]] : [key, n ? -1 : 1]; draw(); });
+      const on = O[st][0] === key; th.setAttribute('aria-sort', on ? (O[st][1] > 0 ? 'ascending' : 'descending') : 'none'); if (on) bt.textContent = l + (O[st][1] > 0 ? ' ▴' : ' ▾'); hr.appendChild(th); };
+    if (V.level === 'ranks') {
+      sortTh('Rank', 'name', false, 'sortR'); RCOLS.forEach(([l, k]) => sortTh(l, k, k !== 'status', 'sortR'));
+      const line = (r, cls, click) => { const tr = el('tr', cls); tr.appendChild(el('td', null, r.name));
+        for (const [, k, f] of RCOLS) { const td = el('td', k === 'status' ? '' : 'num'); if (k === 'status') td.appendChild(H().chipEl(r.status)); else { td.textContent = f(r[k]); if (k === 'comp' && r[k] != null) td.style.color = window.SV.bcol(r[k]); } tr.appendChild(td); }
+        if (click) { tr.classList.add('click'); tr.addEventListener('click', click); } return tr; };
+      tb.appendChild(line(V.total, 'h0'));
+      for (const r of V.rows) tb.appendChild(line(r, '', () => { O.rank = r.name; O.q = ''; oq.value = ''; draw(); }));
+      vt.hidden = true;
+    } else {
+      PCOLS.forEach(([l, k, , n]) => sortTh(l, k, !!n, 'sortP'));
+      for (const p of V.rows) {
+        const tr = el('tr', 'p click' + (p.stage === 'Not registered' ? ' dim' : ''));
+        for (const [, k, f, n] of PCOLS) { const td = el('td', n ? 'num' : '');
+          if (k === 'band') td.appendChild(p.no_target ? H().chipEl('No target', 'Not assessable') : H().chipEl(p.classification === 'Not assessable' ? p.stage : p.band, p.classification === 'Not assessable' ? 'Not assessable' : p.band));
+          else if (k === 'final_pct' && p.no_target) td.textContent = 'Not measured';
+          else { const v = n ? num(p[k]) : p[k]; td.textContent = f ? f(v) : (v ?? ''); if (k === 'final_pct' && v != null) td.style.color = window.SV.bcol(v); }
+          tr.appendChild(td); }
+        tr.addEventListener('click', () => pick(p));
+        tb.appendChild(tr);
+      }
+      const a = V.kpi; vt.textContent = `${O.rank}: ${F.int(a.n)} people (${F.int(a.nAsg)} assigned, ${F.int(a.nLeave)} on leave) · ${F.pct0(a.cov)} registered · ${F.pct0(a.actPct)} active in 90 days · lifetime ${F.pct0(a.life)}${a.nAsg ? ` · assigned compliance ${F.pct(a.comp)}` : ''} · showing ${F.int(V.rows.length)}.`;
+      vt.hidden = false;
+    }
+    thead.appendChild(hr); tbl.replaceChildren(thead, tb);
+    O.view = V;
+  }
+  function exportO(btn) {
+    const X = window.SV.exporter; if (!X || !X.has()) return; const V = O.view; if (!V) return;
+    let rows, title, totalFirst;
+    if (V.person) { rows = window.SV.P.rows(V.person); if (!rows) return; title = `${V.person.name} · course records`; totalFirst = false; }
+    else if (V.level === 'ranks') { const line = (r) => [r.name, ...RCOLS.map(([, k]) => k === 'status' ? r.status : (X.r1(r[k]) ?? ''))]; rows = [['Rank', ...RCOLS.map((c) => c[0])], line({ ...V.total, name: 'All ranks' }), ...V.rows.map(line)]; title = 'Off-board crew · by rank'; totalFirst = true; }
+    else { rows = [PCOLS.map((c) => c[0]), ...V.rows.map((p) => PCOLS.map(([, k]) => k === 'final_pct' && p.no_target ? 'Not measured' : k === 'band' ? (p.no_target ? 'No target' : p.classification === 'Not assessable' ? p.stage : p.band) : (p[k] ?? '')))]; title = `Off-board crew · ${O.rank}`; totalFirst = false; }
+    const ctx = `Off-board crew${O.rank ? ' › ' + O.rank : ''}${V.person ? ' › ' + V.person.name : ''} · counting ${V.pop === 'All onboard' ? 'everyone' : V.pop} · filters: ${qs('.lx-ofilt').textContent.replace(/^Filtered: /, '') || 'none'} · reporting date ${X.REPORT.date}`;
+    const base = ('seaverse_' + title.replace(/ · /g, '_')).replace(/[^A-Za-z0-9 _-]+/g, '').trim().replace(/\s+/g, '_').slice(0, 80) + '_' + X.REPORT.iso;
+    const kind = btn.dataset.dl;
+    if (kind === 'xlsx') { const meta = [[title], [ctx], []]; X.saveFile(base + '.xlsx', X.xlsx(title, [...meta, ...rows], meta.length), btn); }
+    else if (kind === 'csv') X.saveFile(base + '.csv', X.csvOf(rows), btn);
+    else X.saveFile(base + '.html', X.htmlGeneric(title, rows, ctx, totalFirst), btn);
+  }
+  window.SV.drawOffb = drawOffb;
+  const prev = window.SV.redraw; window.SV.redraw = () => { prev && prev(); drawOffb(); };
+  drawOffb();
+})();
+</script>
+
+
+
+</div>
+<p class="sa-foot">Seaverse training compliance · reporting date 28 Oct 2026 · internal use only.</p>
+</body></html>
