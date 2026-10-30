@@ -183,10 +183,10 @@ Bright Cosmos,All onboard,DS Ship Management Pte Ltd (DSSM),Container,11,1,0,1,0
 Bright Cosmos,Registered,DS Ship Management Pte Ltd (DSSM),Container,11,1,0,1,0,0,0,1,1,7.7,7.7,0,0.0,0.0,0.0,0,1,9.1,Low activity
 Bright Cosmos,Engaged,DS Ship Management Pte Ltd (DSSM),Container,11,1,0,1,0,0,0,1,1,7.7,7.7,0,0.0,0.0,0.0,0,1,9.1,Low activity
 Bright Cosmos,Active,DS Ship Management Pte Ltd (DSSM),Container,11,1,0,1,0,0,0,0,0,,,0,,,,0,0,9.1,No assessable crew
-Bright Fuji,All onboard,DS Ship Management Pte Ltd (DSSM),Container,20,10,5,5,0,4,4,20,5,254.9,0.0,4,20.0,0.16,0.68,40,16,50.0,On target
-Bright Fuji,Registered,DS Ship Management Pte Ltd (DSSM),Container,20,10,5,5,0,4,4,10,5,509.8,0.0,4,40.0,0.31,1.35,40,6,50.0,On target
-Bright Fuji,Engaged,DS Ship Management Pte Ltd (DSSM),Container,20,10,5,5,0,4,4,5,5,1019.7,913.1,4,80.0,0.62,2.71,40,1,50.0,On target
-Bright Fuji,Active,DS Ship Management Pte Ltd (DSSM),Container,20,10,5,5,0,4,4,4,4,1274.6,1217.5,4,100.0,0.78,3.38,40,0,50.0,On target
+Bright Fuji,All onboard,DS Ship Management Pte Ltd (DSSM),Container,20,11,6,5,0,4,4,20,5,254.9,0.0,4,20.0,0.16,0.68,40,16,55.0,On target
+Bright Fuji,Registered,DS Ship Management Pte Ltd (DSSM),Container,20,11,6,5,0,4,4,11,5,463.5,0.0,4,36.4,0.28,1.23,40,7,55.0,On target
+Bright Fuji,Engaged,DS Ship Management Pte Ltd (DSSM),Container,20,11,6,5,0,4,4,5,5,1019.7,913.1,4,80.0,0.62,2.71,40,1,55.0,On target
+Bright Fuji,Active,DS Ship Management Pte Ltd (DSSM),Container,20,11,6,5,0,4,4,4,4,1274.6,1217.5,4,100.0,0.78,3.38,40,0,55.0,On target
 Crystal Eternity,All onboard,DS Ship Management Pte Ltd (DSSM),Bulk Carrier,12,1,0,1,0,0,0,12,1,1.2,0.0,0,0.0,0.0,0.0,0,12,8.3,Low activity
 Crystal Eternity,Registered,DS Ship Management Pte Ltd (DSSM),Bulk Carrier,12,1,0,1,0,0,0,1,1,14.7,14.7,0,0.0,0.0,0.0,0,1,8.3,Low activity
 Crystal Eternity,Engaged,DS Ship Management Pte Ltd (DSSM),Bulk Carrier,12,1,0,1,0,0,0,1,1,14.7,14.7,0,0.0,0.0,0.0,0,1,8.3,Low activity
@@ -239,18 +239,18 @@ Genco Enterprise,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24
 Genco Enterprise,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,9,1,16,8,7,3,9,8,265.5,50.7,3,33.3,0.99,4.28,114,2,37.5,On target
 Genco Enterprise,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,9,1,16,8,7,3,16,16,153.4,13.4,3,18.8,0.55,2.41,114,9,37.5,On target
 Genco Enterprise,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,9,1,16,8,7,3,7,7,341.3,67.6,3,42.9,1.27,5.51,114,0,37.5,On target
-Genco Freedom,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,13,1,16,4,2,2,22,16,96.1,2.8,2,9.1,0.33,1.45,94,20,59.1,Near target
-Genco Freedom,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,13,1,16,4,2,2,13,12,160.9,11.1,2,15.4,0.56,2.45,94,11,59.1,On target
-Genco Freedom,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,13,1,16,4,2,2,16,16,132.1,8.2,2,12.5,0.46,1.99,94,14,59.1,On target
-Genco Freedom,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,13,1,16,4,2,2,2,2,927.6,927.6,2,100.0,3.66,15.9,94,0,59.1,On target
+Genco Freedom,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,14,1,17,4,3,2,22,17,99.3,3.6,2,9.1,0.35,1.51,98,19,63.6,Near target
+Genco Freedom,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,14,1,17,4,3,2,14,13,154.4,12.7,2,14.3,0.54,2.37,98,11,63.6,On target
+Genco Freedom,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,14,1,17,4,3,2,17,17,128.5,11.1,2,11.8,0.45,1.95,98,14,63.6,On target
+Genco Freedom,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,14,1,17,4,3,2,3,3,641.8,434.8,2,66.7,2.54,11.05,98,0,63.6,On target
 Genco Hornet,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,15,0,20,5,6,5,24,20,145.1,9.4,5,20.8,0.54,2.37,168,18,62.5,On target
 Genco Hornet,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,15,0,20,5,6,5,15,15,230.4,16.9,5,33.3,0.87,3.79,168,9,62.5,On target
 Genco Hornet,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,15,0,20,5,6,5,20,20,174.1,15.4,5,25.0,0.65,2.84,168,14,62.5,On target
 Genco Hornet,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,15,0,20,5,6,5,6,6,556.4,253.6,5,83.3,2.18,9.47,168,0,62.5,On target
-Genco Intrepid,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,10,0,11,1,0,0,23,11,5.9,0.0,0,0.0,0.0,0.0,0,23,43.5,Low activity
-Genco Intrepid,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,10,0,11,1,0,0,10,10,11.7,6.4,0,0.0,0.0,0.0,0,10,43.5,Low activity
-Genco Intrepid,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,10,0,11,1,0,0,11,11,12.4,8.6,0,0.0,0.0,0.0,0,11,43.5,Low activity
-Genco Intrepid,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,10,0,11,1,0,0,0,0,,,0,,,,0,0,43.5,No assessable crew
+Genco Intrepid,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,11,0,12,1,1,1,23,12,118.5,0.8,1,4.3,0.39,1.68,114,22,47.8,On target
+Genco Intrepid,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,11,0,12,1,1,1,11,11,246.0,8.6,1,9.1,0.81,3.5,114,10,47.8,On target
+Genco Intrepid,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,11,0,12,1,1,1,12,12,227.2,10.4,1,8.3,0.74,3.21,114,11,47.8,On target
+Genco Intrepid,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,11,0,12,1,1,1,1,1,2589.5,2589.5,1,100.0,8.87,38.55,114,0,47.8,On target
 Genco Laddey,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,15,1,17,3,4,2,23,17,146.8,1.6,2,8.7,0.62,2.69,183,19,65.2,On target
 Genco Laddey,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,15,1,17,3,4,2,15,14,224.8,25.9,2,13.3,0.95,4.13,183,11,65.2,On target
 Genco Laddey,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,23,15,1,17,3,4,2,17,17,198.6,5.8,2,11.8,0.84,3.64,183,13,65.2,On target
@@ -287,10 +287,10 @@ Genco Mayflower,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,
 Genco Mayflower,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,10,1,14,5,3,2,10,9,452.2,13.8,2,20.0,0.4,1.76,52,7,45.5,On target
 Genco Mayflower,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,10,1,14,5,3,2,14,14,325.7,10.9,2,14.3,0.29,1.26,52,11,45.5,On target
 Genco Mayflower,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,22,10,1,14,5,3,2,3,3,1480.3,126.8,2,66.7,1.35,5.86,52,0,45.5,On target
-Genco Ranger,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,11,2,11,2,2,2,24,11,22.6,0.0,2,8.3,0.07,0.3,21,22,45.8,Low activity
-Genco Ranger,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,11,2,11,2,2,2,11,9,49.0,3.5,2,18.2,0.15,0.65,21,9,45.8,Low activity
-Genco Ranger,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,11,2,11,2,2,2,11,11,49.3,3.5,2,18.2,0.15,0.65,21,9,45.8,Low activity
-Genco Ranger,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,11,2,11,2,2,2,2,2,234.0,234.0,2,100.0,0.82,3.55,21,0,45.8,On target
+Genco Ranger,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,12,2,12,2,3,3,24,12,28.2,0.4,3,12.5,0.09,0.41,29,21,50.0,Low activity
+Genco Ranger,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,12,2,12,2,3,3,12,10,56.2,4.2,3,25.0,0.19,0.82,29,9,50.0,Below target
+Genco Ranger,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,12,2,12,2,3,3,12,12,56.4,4.2,3,25.0,0.19,0.82,29,9,50.0,Below target
+Genco Ranger,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,12,2,12,2,3,3,3,3,201.1,169.1,3,100.0,0.75,3.27,29,0,50.0,On target
 Genco Reliance,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,19,11,1,13,3,2,1,19,13,28.2,3.1,1,5.3,0.09,0.41,23,17,57.9,Low activity
 Genco Reliance,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,19,11,1,13,3,2,1,11,10,46.3,8.7,1,9.1,0.16,0.71,23,9,57.9,Low activity
 Genco Reliance,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,19,11,1,13,3,2,1,13,13,41.3,8.7,1,7.7,0.14,0.6,23,11,57.9,Low activity
@@ -299,10 +299,10 @@ Genco Resolute,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,7
 Genco Resolute,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,7,1,11,5,1,1,7,6,36.1,5.8,1,14.3,0.14,0.63,13,6,29.2,Low activity
 Genco Resolute,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,7,1,11,5,1,1,11,11,24.4,4.1,1,9.1,0.09,0.4,13,10,29.2,Low activity
 Genco Resolute,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,7,1,11,5,1,1,1,1,219.8,219.8,1,100.0,1.01,4.4,13,0,29.2,On target
-Genco Scorpion,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,19,4,2,2,25,19,25.8,2.1,2,8.0,0.09,0.39,29,23,72.0,Low activity
-Genco Scorpion,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,19,4,2,2,18,15,35.3,4.3,2,11.1,0.13,0.54,29,16,72.0,Low activity
-Genco Scorpion,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,19,4,2,2,19,19,33.9,4.3,2,10.5,0.12,0.52,29,17,72.0,Low activity
-Genco Scorpion,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,19,4,2,2,2,2,245.2,245.2,2,100.0,1.13,4.9,29,0,72.0,On target
+Genco Scorpion,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,20,5,5,4,25,20,36.5,4.3,4,16.0,0.15,0.66,49,20,72.0,Low activity
+Genco Scorpion,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,20,5,5,4,18,15,49.7,6.8,4,22.2,0.21,0.92,49,13,72.0,Low activity
+Genco Scorpion,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,20,5,5,4,20,20,45.6,6.8,4,20.0,0.19,0.83,49,15,72.0,Low activity
+Genco Scorpion,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,25,18,3,20,5,5,4,5,5,165.7,169.1,4,80.0,0.76,3.31,49,0,72.0,On target
 Genco Star and Stripes,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,17,1,20,4,7,4,24,20,210.5,11.7,4,16.7,0.82,3.55,252,17,70.8,On target
 Genco Star and Stripes,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,17,1,20,4,7,4,17,16,293.9,32.6,4,23.5,1.15,5.01,252,10,70.8,On target
 Genco Star and Stripes,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,17,1,20,4,7,4,20,20,252.6,22.9,4,20.0,0.98,4.26,252,13,70.8,On target
@@ -339,18 +339,18 @@ Genco Weatherly,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,19,
 Genco Weatherly,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,19,12,3,11,2,2,2,12,9,165.3,4.4,2,16.7,0.64,2.76,98,10,63.2,On target
 Genco Weatherly,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,19,12,3,11,2,2,2,11,11,182.1,5.8,2,18.2,0.69,3.01,98,9,63.2,On target
 Genco Weatherly,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,19,12,3,11,2,2,2,2,2,923.7,923.7,2,100.0,3.81,16.57,98,0,63.2,On target
-Genco Wolf,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,27,12,1,14,3,2,1,27,14,8.6,0.0,1,3.7,0.02,0.08,6,25,44.4,Low activity
-Genco Wolf,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,27,12,1,14,3,2,1,12,11,18.5,5.9,1,8.3,0.04,0.17,6,10,44.4,Low activity
-Genco Wolf,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,27,12,1,14,3,2,1,14,14,16.7,5.9,1,7.1,0.03,0.14,6,12,44.4,Low activity
-Genco Wolf,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,27,12,1,14,3,2,1,2,2,76.6,76.6,1,50.0,0.23,1.01,6,0,44.4,Near target
+Genco Wolf,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,26,11,1,13,3,1,0,26,13,4.4,0.0,0,0.0,0.01,0.03,2,25,42.3,Low activity
+Genco Wolf,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,26,11,1,13,3,1,0,11,10,9.3,5.8,0,0.0,0.01,0.06,2,10,42.3,Low activity
+Genco Wolf,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,26,11,1,13,3,1,0,13,13,8.8,5.8,0,0.0,0.01,0.05,2,12,42.3,Low activity
+Genco Wolf,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,26,11,1,13,3,1,0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0,42.3,Low activity
 Genco Aquitaine,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,24,15,2,18,5,5,3,24,18,166.8,3.2,3,12.5,0.47,2.06,146,19,62.5,On target
 Genco Aquitaine,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,24,15,2,18,5,5,3,15,13,266.1,11.3,3,20.0,0.76,3.29,146,10,62.5,On target
 Genco Aquitaine,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,24,15,2,18,5,5,3,18,18,222.4,7.6,3,16.7,0.63,2.74,146,13,62.5,On target
 Genco Aquitaine,Active,Genco-Synergy Pvt Ltd,Bulk Carrier,24,15,2,18,5,5,3,5,5,762.4,120.1,3,60.0,2.27,9.88,146,0,62.5,On target
-Genco Ardennes,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,22,16,1,17,2,3,1,22,17,51.2,5.2,1,4.5,0.19,0.85,55,19,72.7,Below target
-Genco Ardennes,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,22,16,1,17,2,3,1,16,15,69.6,12.2,1,6.2,0.27,1.16,55,13,72.7,Below target
-Genco Ardennes,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,22,16,1,17,2,3,1,17,17,66.3,11.5,1,5.9,0.25,1.09,55,14,72.7,Below target
-Genco Ardennes,Active,Genco-Synergy Pvt Ltd,Bulk Carrier,22,16,1,17,2,3,1,3,3,310.0,50.7,1,33.3,1.43,6.2,55,0,72.7,On target
+Genco Ardennes,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,19,2,5,3,24,19,162.1,8.7,3,12.5,0.65,2.82,200,19,75.0,On target
+Genco Ardennes,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,19,2,5,3,18,17,215.3,14.3,3,16.7,0.86,3.76,200,13,75.0,On target
+Genco Ardennes,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,19,2,5,3,19,19,204.7,13.2,3,15.8,0.82,3.56,200,14,75.0,On target
+Genco Ardennes,Active,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,19,2,5,3,5,5,730.1,845.5,3,60.0,3.11,13.53,200,0,75.0,On target
 Genco Auvergne,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,24,14,0,19,5,2,2,24,19,18.8,2.1,2,8.3,0.05,0.23,16,22,58.3,Low activity
 Genco Auvergne,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,24,14,0,19,5,2,2,14,14,31.4,4.6,2,14.3,0.09,0.39,16,12,58.3,Low activity
 Genco Auvergne,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,24,14,0,19,5,2,2,19,19,23.8,3.6,2,10.5,0.07,0.28,16,17,58.3,Low activity
@@ -359,10 +359,10 @@ Genco Bourgogne,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,24,21,2,21,2,9,4,
 Genco Bourgogne,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,24,21,2,21,2,9,4,21,19,267.5,17.9,4,19.0,1.07,4.64,288,12,87.5,On target
 Genco Bourgogne,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,24,21,2,21,2,9,4,21,21,268.5,21.2,4,19.0,1.07,4.64,288,12,87.5,On target
 Genco Bourgogne,Active,Genco-Synergy Pvt Ltd,Bulk Carrier,24,21,2,21,2,9,4,9,9,601.3,70.0,4,44.4,2.49,10.82,288,0,87.5,On target
-Genco Brittany,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,22,17,0,18,1,4,2,22,18,59.1,3.8,2,9.1,0.25,1.11,72,18,77.3,Below target
-Genco Brittany,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,22,17,0,18,1,4,2,17,17,76.2,6.6,2,11.8,0.33,1.43,72,13,77.3,Near target
-Genco Brittany,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,22,17,0,18,1,4,2,18,18,72.2,6.0,2,11.1,0.31,1.35,72,14,77.3,Below target
-Genco Brittany,Active,Genco-Synergy Pvt Ltd,Bulk Carrier,22,17,0,18,1,4,2,4,4,304.4,109.9,2,50.0,1.4,6.09,72,0,77.3,On target
+Genco Brittany,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,18,1,6,3,24,18,87.7,3.8,3,12.5,0.39,1.69,120,18,75.0,Near target
+Genco Brittany,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,18,1,6,3,18,17,116.7,7.9,3,16.7,0.52,2.25,120,12,75.0,On target
+Genco Brittany,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,18,1,6,3,18,18,116.9,7.9,3,16.7,0.52,2.25,120,12,75.0,On target
+Genco Brittany,Active,Genco-Synergy Pvt Ltd,Bulk Carrier,24,18,1,18,1,6,3,6,6,338.2,118.4,3,50.0,1.56,6.76,120,0,75.0,On target
 Genco Hunter,All onboard,Genco-Synergy Pvt Ltd,Bulk Carrier,25,13,6,14,7,1,1,25,14,24.1,1.7,1,4.0,0.07,0.31,23,24,52.0,Low activity
 Genco Hunter,Registered,Genco-Synergy Pvt Ltd,Bulk Carrier,25,13,6,14,7,1,1,13,7,42.9,1.7,1,7.7,0.14,0.6,23,12,52.0,Low activity
 Genco Hunter,Engaged,Genco-Synergy Pvt Ltd,Bulk Carrier,25,13,6,14,7,1,1,14,14,43.0,5.3,1,7.1,0.13,0.56,23,13,52.0,Low activity
@@ -391,10 +391,10 @@ UOG Korthi,All onboard,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,24,
 UOG Korthi,Registered,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,24,11,0,15,4,4,3,11,11,253.2,4.6,3,27.3,1.15,4.98,162,7,45.8,On target
 UOG Korthi,Engaged,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,24,11,0,15,4,4,3,15,15,186.7,3.1,3,20.0,0.84,3.65,162,11,45.8,On target
 UOG Korthi,Active,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,24,11,0,15,4,4,3,4,4,689.1,532.7,3,75.0,3.15,13.7,162,0,45.8,On target
-UOG Tinos,All onboard,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,26,10,3,14,7,3,1,26,14,13.2,0.8,1,3.8,0.05,0.23,18,23,38.5,Low activity
-UOG Tinos,Registered,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,26,10,3,14,7,3,1,10,7,33.5,3.9,1,10.0,0.14,0.61,18,7,38.5,Low activity
-UOG Tinos,Engaged,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,26,10,3,14,7,3,1,14,14,24.6,1.7,1,7.1,0.1,0.43,18,11,38.5,Low activity
-UOG Tinos,Active,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,26,10,3,14,7,3,1,3,3,101.5,84.5,1,33.3,0.47,2.03,18,0,38.5,On target
+UOG Tinos,All onboard,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,25,10,3,13,6,3,1,25,13,13.7,0.8,1,4.0,0.06,0.24,18,22,40.0,Low activity
+UOG Tinos,Registered,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,25,10,3,13,6,3,1,10,7,33.5,3.9,1,10.0,0.14,0.61,18,7,40.0,Low activity
+UOG Tinos,Engaged,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,25,10,3,13,6,3,1,13,13,26.4,1.8,1,7.7,0.11,0.47,18,10,40.0,Low activity
+UOG Tinos,Active,General Ship Management Pte. Ltd.,Chemical/Oil Tanker,25,10,3,13,6,3,1,3,3,101.5,84.5,1,33.3,0.47,2.03,18,0,40.0,On target
 ALAIA C W,All onboard,P.T Synergy Marine Indonesia,Chemical/Oil Tanker,14,0,0,0,0,0,0,14,0,0.0,0.0,0,0.0,0.0,0.0,0,14,0.0,No assessable crew
 ALAIA C W,Registered,P.T Synergy Marine Indonesia,Chemical/Oil Tanker,14,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
 ALAIA C W,Engaged,P.T Synergy Marine Indonesia,Chemical/Oil Tanker,14,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
@@ -619,10 +619,10 @@ Western Dahlia,All onboard,Synergy Denmark A/S,Oil Tanker,0,0,0,0,0,0,0,0,0,,,0,
 Western Dahlia,Registered,Synergy Denmark A/S,Oil Tanker,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
 Western Dahlia,Engaged,Synergy Denmark A/S,Oil Tanker,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
 Western Dahlia,Active,Synergy Denmark A/S,Oil Tanker,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
-HL Leader,All onboard,Synergy Korea Co Ltd,Bulk Carrier,21,1,0,1,0,0,0,21,1,1.5,0.0,0,0.0,0.0,0.0,0,21,4.8,Low activity
-HL Leader,Registered,Synergy Korea Co Ltd,Bulk Carrier,21,1,0,1,0,0,0,1,1,32.1,32.1,0,0.0,0.0,0.0,0,1,4.8,Low activity
-HL Leader,Engaged,Synergy Korea Co Ltd,Bulk Carrier,21,1,0,1,0,0,0,1,1,32.1,32.1,0,0.0,0.0,0.0,0,1,4.8,Low activity
-HL Leader,Active,Synergy Korea Co Ltd,Bulk Carrier,21,1,0,1,0,0,0,0,0,,,0,,,,0,0,4.8,No assessable crew
+HL Leader,All onboard,Synergy Korea Co Ltd,Bulk Carrier,19,0,0,0,0,0,0,19,0,0.0,0.0,0,0.0,0.0,0.0,0,19,0.0,No assessable crew
+HL Leader,Registered,Synergy Korea Co Ltd,Bulk Carrier,19,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
+HL Leader,Engaged,Synergy Korea Co Ltd,Bulk Carrier,19,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
+HL Leader,Active,Synergy Korea Co Ltd,Bulk Carrier,19,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
 HL Mercury,All onboard,Synergy Korea Co Ltd,Bulk Carrier,12,0,0,0,0,0,0,12,0,0.0,0.0,0,0.0,0.0,0.0,0,12,0.0,No assessable crew
 HL Mercury,Registered,Synergy Korea Co Ltd,Bulk Carrier,12,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
 HL Mercury,Engaged,Synergy Korea Co Ltd,Bulk Carrier,12,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
@@ -647,10 +647,10 @@ Yeosu Voyager,All onboard,Synergy Korea Co Ltd,Container,15,13,2,11,0,1,0,15,11,
 Yeosu Voyager,Registered,Synergy Korea Co Ltd,Container,15,13,2,11,0,1,0,13,11,5.7,1.8,0,0.0,0.01,0.05,2,12,86.7,Low activity
 Yeosu Voyager,Engaged,Synergy Korea Co Ltd,Container,15,13,2,11,0,1,0,11,11,6.8,2.1,0,0.0,0.01,0.06,2,10,86.7,Low activity
 Yeosu Voyager,Active,Synergy Korea Co Ltd,Container,15,13,2,11,0,1,0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0,86.7,Low activity
-Dali,All onboard,Synergy Marine (Singapore) pre ltd,Container,21,19,4,16,1,0,0,21,16,6.9,1.1,0,0.0,0.0,0.0,0,21,90.5,Low activity
-Dali,Registered,Synergy Marine (Singapore) pre ltd,Container,21,19,4,16,1,0,0,19,15,7.6,1.3,0,0.0,0.0,0.0,0,19,90.5,Low activity
-Dali,Engaged,Synergy Marine (Singapore) pre ltd,Container,21,19,4,16,1,0,0,16,16,9.0,3.0,0,0.0,0.0,0.0,0,16,90.5,Low activity
-Dali,Active,Synergy Marine (Singapore) pre ltd,Container,21,19,4,16,1,0,0,0,0,,,0,,,,0,0,90.5,No assessable crew
+Dali,All onboard,Synergy Marine (Singapore) pre ltd,Container,18,16,3,14,1,0,0,18,14,3.3,1.1,0,0.0,0.0,0.0,0,18,88.9,Low activity
+Dali,Registered,Synergy Marine (Singapore) pre ltd,Container,18,16,3,14,1,0,0,16,13,3.7,1.2,0,0.0,0.0,0.0,0,16,88.9,Low activity
+Dali,Engaged,Synergy Marine (Singapore) pre ltd,Container,18,16,3,14,1,0,0,14,14,4.3,1.9,0,0.0,0.0,0.0,0,14,88.9,Low activity
+Dali,Active,Synergy Marine (Singapore) pre ltd,Container,18,16,3,14,1,0,0,0,0,,,0,,,,0,0,88.9,No assessable crew
 Dream Team,All onboard,Synergy Marine (Singapore) pre ltd,Bulk Carrier,20,2,1,1,0,1,1,20,1,16.4,0.0,1,5.0,0.04,0.19,11,19,10.0,Low activity
 Dream Team,Registered,Synergy Marine (Singapore) pre ltd,Bulk Carrier,20,2,1,1,0,1,1,2,1,164.1,164.1,1,50.0,0.43,1.86,11,1,10.0,On target
 Dream Team,Engaged,Synergy Marine (Singapore) pre ltd,Bulk Carrier,20,2,1,1,0,1,1,1,1,328.2,328.2,1,100.0,0.86,3.72,11,0,10.0,On target
@@ -659,10 +659,10 @@ Lampard,All onboard,Synergy Marine (Singapore) pre ltd,Bulk Carrier,21,18,0,19,1
 Lampard,Registered,Synergy Marine (Singapore) pre ltd,Bulk Carrier,21,18,0,19,1,7,3,18,18,81.2,23.5,3,16.7,0.33,1.43,76,11,85.7,Near target
 Lampard,Engaged,Synergy Marine (Singapore) pre ltd,Bulk Carrier,21,18,0,19,1,7,3,19,19,77.0,16.9,3,15.8,0.31,1.35,76,12,85.7,Near target
 Lampard,Active,Synergy Marine (Singapore) pre ltd,Bulk Carrier,21,18,0,19,1,7,3,7,7,183.6,67.6,3,42.9,0.84,3.67,76,0,85.7,On target
-Texas Triumph,All onboard,Synergy Marine (Singapore) pre ltd,Container,24,20,0,22,2,5,2,24,22,28.3,6.8,2,8.3,0.1,0.45,32,19,83.3,Low activity
-Texas Triumph,Registered,Synergy Marine (Singapore) pre ltd,Container,24,20,0,22,2,5,2,20,20,33.5,8.6,2,10.0,0.12,0.54,32,15,83.3,Low activity
-Texas Triumph,Engaged,Synergy Marine (Singapore) pre ltd,Container,24,20,0,22,2,5,2,22,22,30.9,7.5,2,9.1,0.11,0.49,32,17,83.3,Low activity
-Texas Triumph,Active,Synergy Marine (Singapore) pre ltd,Container,24,20,0,22,2,5,2,5,5,109.8,50.7,2,40.0,0.5,2.16,32,0,83.3,On target
+Texas Triumph,All onboard,Synergy Marine (Singapore) pre ltd,Container,25,21,1,22,2,5,2,25,22,27.2,6.3,2,8.0,0.1,0.43,32,20,84.0,Low activity
+Texas Triumph,Registered,Synergy Marine (Singapore) pre ltd,Container,25,21,1,22,2,5,2,21,20,31.9,7.6,2,9.5,0.12,0.52,32,16,84.0,Low activity
+Texas Triumph,Engaged,Synergy Marine (Singapore) pre ltd,Container,25,21,1,22,2,5,2,22,22,30.9,7.5,2,9.1,0.11,0.49,32,17,84.0,Low activity
+Texas Triumph,Active,Synergy Marine (Singapore) pre ltd,Container,25,21,1,22,2,5,2,5,5,109.8,50.7,2,40.0,0.5,2.16,32,0,84.0,On target
 BONETTI,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,21,14,1,15,2,7,3,21,15,37.2,4.9,3,14.3,0.16,0.69,43,14,66.7,Low activity
 BONETTI,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,21,14,1,15,2,7,3,14,13,55.1,19.1,3,21.4,0.24,1.04,43,7,66.7,Below target
 BONETTI,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,21,14,1,15,2,7,3,15,15,52.1,16.9,3,20.0,0.22,0.97,43,8,66.7,Below target
@@ -699,14 +699,14 @@ CL Lianyungang,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,18,3,15,0
 CL Lianyungang,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,18,3,15,0,9,4,18,15,125.5,17.4,4,22.2,0.48,2.09,111,9,94.7,On target
 CL Lianyungang,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,18,3,15,0,9,4,15,15,150.5,30.4,4,26.7,0.58,2.5,111,6,94.7,On target
 CL Lianyungang,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,18,3,15,0,9,4,9,9,238.6,86.1,4,44.4,0.96,4.17,111,0,94.7,On target
-CL Loudi,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,1,19,0,18,1,20,19,23.0,16.9,1,5.0,0.1,0.46,27,2,100.0,Low activity
-CL Loudi,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,1,19,0,18,1,20,19,23.0,16.9,1,5.0,0.1,0.46,27,2,100.0,Low activity
-CL Loudi,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,1,19,0,18,1,19,19,24.2,16.9,1,5.3,0.11,0.48,27,1,100.0,Low activity
-CL Loudi,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,1,19,0,18,1,18,18,25.4,16.9,1,5.6,0.12,0.51,27,0,100.0,Low activity
-CL Luzhou,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,16,5,12,1,2,1,20,12,17.9,0.8,1,5.0,0.04,0.19,11,18,80.0,Low activity
-CL Luzhou,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,16,5,12,1,2,1,16,11,22.4,1.6,1,6.2,0.05,0.23,11,14,80.0,Low activity
-CL Luzhou,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,16,5,12,1,2,1,12,12,29.9,6.1,1,8.3,0.07,0.31,11,10,80.0,Low activity
-CL Luzhou,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,16,5,12,1,2,1,2,2,124.0,124.0,1,50.0,0.43,1.86,11,0,80.0,On target
+CL Loudi,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,21,20,1,19,0,18,1,21,19,21.9,16.9,1,4.8,0.1,0.43,27,3,95.2,Low activity
+CL Loudi,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,21,20,1,19,0,18,1,20,19,23.0,16.9,1,5.0,0.1,0.46,27,2,95.2,Low activity
+CL Loudi,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,21,20,1,19,0,18,1,19,19,24.2,16.9,1,5.3,0.11,0.48,27,1,95.2,Low activity
+CL Loudi,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,21,20,1,19,0,18,1,18,18,25.4,16.9,1,5.6,0.12,0.51,27,0,95.2,Low activity
+CL Luzhou,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,17,14,5,10,1,2,1,17,10,20.8,0.8,1,5.9,0.05,0.22,11,15,82.4,Low activity
+CL Luzhou,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,17,14,5,10,1,2,1,14,9,25.2,1.6,1,7.1,0.06,0.27,11,12,82.4,Low activity
+CL Luzhou,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,17,14,5,10,1,2,1,10,10,35.4,8.8,1,10.0,0.09,0.37,11,8,82.4,Low activity
+CL Luzhou,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,17,14,5,10,1,2,1,2,2,124.0,124.0,1,50.0,0.43,1.86,11,0,82.4,On target
 CL Maoming,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,18,9,1,9,1,4,1,18,9,17.7,0.4,1,5.6,0.06,0.24,13,14,50.0,Low activity
 CL Maoming,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,18,9,1,9,1,4,1,9,8,35.3,16.9,1,11.1,0.11,0.49,13,5,50.0,Low activity
 CL Maoming,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,18,9,1,9,1,4,1,9,9,35.4,16.9,1,11.1,0.11,0.49,13,5,50.0,Low activity
@@ -739,10 +739,10 @@ CL Yangjiang,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,27,5,0,7,2,0,0
 CL Yangjiang,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,27,5,0,7,2,0,0,5,5,10.2,0.8,0,0.0,0.0,0.0,0,5,18.5,Low activity
 CL Yangjiang,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,27,5,0,7,2,0,0,7,7,9.2,1.6,0,0.0,0.0,0.0,0,7,18.5,Low activity
 CL Yangjiang,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,27,5,0,7,2,0,0,0,0,,,0,,,,0,0,18.5,No assessable crew
-CL Yangzhou,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,3,17,0,13,8,20,17,158.9,65.1,8,40.0,0.55,2.38,141,7,100.0,On target
-CL Yangzhou,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,3,17,0,13,8,20,17,158.9,65.1,8,40.0,0.55,2.38,141,7,100.0,On target
-CL Yangzhou,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,3,17,0,13,8,17,17,187.0,84.5,8,47.1,0.65,2.81,141,4,100.0,On target
-CL Yangzhou,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,20,3,17,0,13,8,13,13,242.1,141.6,8,61.5,0.84,3.67,141,0,100.0,On target
+CL Yangzhou,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,19,2,17,0,13,8,19,17,167.3,67.6,8,42.1,0.58,2.51,141,6,100.0,On target
+CL Yangzhou,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,19,2,17,0,13,8,19,17,167.3,67.6,8,42.1,0.58,2.51,141,6,100.0,On target
+CL Yangzhou,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,19,2,17,0,13,8,17,17,187.0,84.5,8,47.1,0.65,2.81,141,4,100.0,On target
+CL Yangzhou,Active,Synergy Marine Bulk Pte Ltd,Bulk Carrier,19,19,2,17,0,13,8,13,13,242.1,141.6,8,61.5,0.84,3.67,141,0,100.0,On target
 CL Yichun,All onboard,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,3,0,3,0,0,0,20,3,4.2,0.0,0,0.0,0.0,0.0,0,20,15.0,Low activity
 CL Yichun,Registered,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,3,0,3,0,0,0,3,3,27.9,1.6,0,0.0,0.0,0.0,0,3,15.0,Low activity
 CL Yichun,Engaged,Synergy Marine Bulk Pte Ltd,Bulk Carrier,20,3,0,3,0,0,0,3,3,27.9,1.6,0,0.0,0.0,0.0,0,3,15.0,Low activity
@@ -875,9 +875,9 @@ ORIS Viktoria,All onboard,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,22,21
 ORIS Viktoria,Registered,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,22,21,1,20,0,8,2,21,20,32.7,12.1,2,9.5,0.13,0.58,36,13,95.5,Low activity
 ORIS Viktoria,Engaged,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,22,21,1,20,0,8,2,20,20,34.3,12.7,2,10.0,0.14,0.61,36,12,95.5,Low activity
 ORIS Viktoria,Active,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,22,21,1,20,0,8,2,8,8,77.9,24.2,2,25.0,0.35,1.52,36,0,95.5,Near target
-Oris Michelle,All onboard,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,13,12,2,10,0,2,2,13,10,42.9,21.4,2,15.4,0.11,0.49,19,11,92.3,Low activity
-Oris Michelle,Registered,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,13,12,2,10,0,2,2,12,10,46.5,22.3,2,16.7,0.12,0.54,19,10,92.3,Low activity
-Oris Michelle,Engaged,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,13,12,2,10,0,2,2,10,10,55.7,24.6,2,20.0,0.15,0.64,19,8,92.3,Below target
+Oris Michelle,All onboard,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,13,12,2,10,0,2,2,13,10,41.7,12.5,2,15.4,0.11,0.49,19,11,92.3,Low activity
+Oris Michelle,Registered,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,13,12,2,10,0,2,2,12,10,45.2,17.0,2,16.7,0.12,0.54,19,10,92.3,Low activity
+Oris Michelle,Engaged,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,13,12,2,10,0,2,2,10,10,54.3,23.6,2,20.0,0.15,0.64,19,8,92.3,Below target
 Oris Michelle,Active,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,13,12,2,10,0,2,2,2,2,179.7,179.7,2,100.0,0.74,3.21,19,0,92.3,On target
 Tradewind Endurance,All onboard,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,23,18,2,18,2,6,2,23,18,27.7,5.3,2,8.7,0.11,0.49,33,17,78.3,Low activity
 Tradewind Endurance,Registered,Synergy Marine Copenhagen AS,Chemical/Oil Tanker,23,18,2,18,2,6,2,18,16,34.3,8.7,2,11.1,0.14,0.62,33,12,78.3,Low activity
@@ -971,26 +971,26 @@ Lilas Ease,All onboard,Synergy Marine Shanghai Limited,Bulk Carrier,0,0,0,0,0,0,
 Lilas Ease,Registered,Synergy Marine Shanghai Limited,Bulk Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
 Lilas Ease,Engaged,Synergy Marine Shanghai Limited,Bulk Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
 Lilas Ease,Active,Synergy Marine Shanghai Limited,Bulk Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
-Lilas Shine,All onboard,Synergy Marine Shanghai Limited,Bulk Carrier,20,5,0,5,0,2,2,20,5,38.9,0.0,2,10.0,0.16,0.71,42,18,25.0,Low activity
-Lilas Shine,Registered,Synergy Marine Shanghai Limited,Bulk Carrier,20,5,0,5,0,2,2,5,5,155.7,30.5,2,40.0,0.65,2.84,42,3,25.0,On target
-Lilas Shine,Engaged,Synergy Marine Shanghai Limited,Bulk Carrier,20,5,0,5,0,2,2,5,5,155.7,30.5,2,40.0,0.65,2.84,42,3,25.0,On target
-Lilas Shine,Active,Synergy Marine Shanghai Limited,Bulk Carrier,20,5,0,5,0,2,2,2,2,373.7,373.7,2,100.0,1.63,7.1,42,0,25.0,On target
+Lilas Shine,All onboard,Synergy Marine Shanghai Limited,Bulk Carrier,14,4,0,4,0,3,3,14,4,384.1,0.0,3,21.4,0.99,4.3,178,11,28.6,On target
+Lilas Shine,Registered,Synergy Marine Shanghai Limited,Bulk Carrier,14,4,0,4,0,3,3,4,4,1344.3,373.7,3,75.0,3.46,15.05,178,1,28.6,On target
+Lilas Shine,Engaged,Synergy Marine Shanghai Limited,Bulk Carrier,14,4,0,4,0,3,3,4,4,1344.3,373.7,3,75.0,3.46,15.05,178,1,28.6,On target
+Lilas Shine,Active,Synergy Marine Shanghai Limited,Bulk Carrier,14,4,0,4,0,3,3,3,3,1782.3,490.4,3,100.0,4.61,20.07,178,0,28.6,On target
 MFM Nicole,All onboard,Synergy Maritime Gas Pte. Ltd,Gas Carrier,22,20,1,19,0,11,6,22,19,109.9,26.2,6,27.3,0.38,1.66,108,11,90.9,On target
 MFM Nicole,Registered,Synergy Maritime Gas Pte. Ltd,Gas Carrier,22,20,1,19,0,11,6,20,19,120.9,33.8,6,30.0,0.42,1.83,108,9,90.9,On target
 MFM Nicole,Engaged,Synergy Maritime Gas Pte. Ltd,Gas Carrier,22,20,1,19,0,11,6,19,19,127.3,33.8,6,31.6,0.44,1.92,108,8,90.9,On target
 MFM Nicole,Active,Synergy Maritime Gas Pte. Ltd,Gas Carrier,22,20,1,19,0,11,6,11,11,211.5,219.8,6,54.5,0.76,3.32,108,0,90.9,On target
-AMIS Ace,All onboard,Synergy Maritime Private Limited,Bulk Carrier,24,8,0,10,2,4,1,24,10,49.2,0.0,1,4.2,0.22,0.94,67,20,33.3,Low activity
-AMIS Ace,Registered,Synergy Maritime Private Limited,Bulk Carrier,24,8,0,10,2,4,1,8,8,146.7,23.2,1,12.5,0.65,2.83,67,4,33.3,On target
-AMIS Ace,Engaged,Synergy Maritime Private Limited,Bulk Carrier,24,8,0,10,2,4,1,10,10,118.0,11.5,1,10.0,0.52,2.27,67,6,33.3,On target
-AMIS Ace,Active,Synergy Maritime Private Limited,Bulk Carrier,24,8,0,10,2,4,1,4,4,283.6,59.9,1,25.0,1.3,5.66,67,0,33.3,On target
-AMIS Brave,All onboard,Synergy Maritime Private Limited,Bulk Carrier,27,19,2,17,0,13,5,27,17,53.6,2.5,5,18.5,0.18,0.79,63,14,70.4,Below target
-AMIS Brave,Registered,Synergy Maritime Private Limited,Bulk Carrier,27,19,2,17,0,13,5,19,17,76.2,49.1,5,26.3,0.26,1.12,63,6,70.4,Near target
-AMIS Brave,Engaged,Synergy Maritime Private Limited,Bulk Carrier,27,19,2,17,0,13,5,17,17,85.2,50.7,5,29.4,0.29,1.25,63,4,70.4,Near target
-AMIS Brave,Active,Synergy Maritime Private Limited,Bulk Carrier,27,19,2,17,0,13,5,13,13,111.0,87.8,5,38.5,0.38,1.64,63,0,70.4,On target
-AMIS Wisdom II,All onboard,Synergy Maritime Private Limited,Bulk Carrier,17,8,1,7,0,4,1,17,7,34.6,0.0,1,5.9,0.1,0.42,21,13,47.1,Low activity
-AMIS Wisdom II,Registered,Synergy Maritime Private Limited,Bulk Carrier,17,8,1,7,0,4,1,8,7,73.6,45.6,1,12.5,0.2,0.89,21,4,47.1,Below target
-AMIS Wisdom II,Engaged,Synergy Maritime Private Limited,Bulk Carrier,17,8,1,7,0,4,1,7,7,84.1,57.4,1,14.3,0.23,1.01,21,3,47.1,Near target
-AMIS Wisdom II,Active,Synergy Maritime Private Limited,Bulk Carrier,17,8,1,7,0,4,1,4,4,131.7,84.5,1,25.0,0.41,1.78,21,0,47.1,On target
+AMIS Ace,All onboard,Synergy Maritime Private Limited,Bulk Carrier,23,8,0,10,2,4,1,23,10,51.3,0.0,1,4.3,0.23,0.99,67,19,34.8,Below target
+AMIS Ace,Registered,Synergy Maritime Private Limited,Bulk Carrier,23,8,0,10,2,4,1,8,8,146.7,23.2,1,12.5,0.65,2.83,67,4,34.8,On target
+AMIS Ace,Engaged,Synergy Maritime Private Limited,Bulk Carrier,23,8,0,10,2,4,1,10,10,118.0,11.5,1,10.0,0.52,2.27,67,6,34.8,On target
+AMIS Ace,Active,Synergy Maritime Private Limited,Bulk Carrier,23,8,0,10,2,4,1,4,4,283.6,59.9,1,25.0,1.3,5.66,67,0,34.8,On target
+AMIS Brave,All onboard,Synergy Maritime Private Limited,Bulk Carrier,26,19,2,17,0,13,5,26,17,55.7,9.7,5,19.2,0.19,0.82,63,13,73.1,Below target
+AMIS Brave,Registered,Synergy Maritime Private Limited,Bulk Carrier,26,19,2,17,0,13,5,19,17,76.2,49.1,5,26.3,0.26,1.12,63,6,73.1,Near target
+AMIS Brave,Engaged,Synergy Maritime Private Limited,Bulk Carrier,26,19,2,17,0,13,5,17,17,85.2,50.7,5,29.4,0.29,1.25,63,4,73.1,Near target
+AMIS Brave,Active,Synergy Maritime Private Limited,Bulk Carrier,26,19,2,17,0,13,5,13,13,111.0,87.8,5,38.5,0.38,1.64,63,0,73.1,On target
+AMIS Wisdom II,All onboard,Synergy Maritime Private Limited,Bulk Carrier,14,7,1,6,0,4,1,14,6,42.1,0.0,1,7.1,0.12,0.51,21,10,50.0,Low activity
+AMIS Wisdom II,Registered,Synergy Maritime Private Limited,Bulk Carrier,14,7,1,6,0,4,1,7,6,84.1,57.4,1,14.3,0.23,1.01,21,3,50.0,Near target
+AMIS Wisdom II,Engaged,Synergy Maritime Private Limited,Bulk Carrier,14,7,1,6,0,4,1,6,6,98.1,71.0,1,16.7,0.27,1.18,21,2,50.0,Near target
+AMIS Wisdom II,Active,Synergy Maritime Private Limited,Bulk Carrier,14,7,1,6,0,4,1,4,4,131.7,84.5,1,25.0,0.41,1.78,21,0,50.0,On target
 Ace Eternity,All onboard,Synergy Maritime Private Limited,Bulk Carrier,22,8,2,8,2,2,1,22,8,16.5,0.0,1,4.5,0.07,0.29,19,20,36.4,Low activity
 Ace Eternity,Registered,Synergy Maritime Private Limited,Bulk Carrier,22,8,2,8,2,2,1,8,6,44.7,7.5,1,12.5,0.18,0.8,19,6,36.4,Low activity
 Ace Eternity,Engaged,Synergy Maritime Private Limited,Bulk Carrier,22,8,2,8,2,2,1,8,8,45.3,8.8,1,12.5,0.18,0.8,19,6,36.4,Low activity
@@ -1011,10 +1011,10 @@ Amis Kalon,All onboard,Synergy Maritime Private Limited,Bulk Carrier,20,4,0,6,2,
 Amis Kalon,Registered,Synergy Maritime Private Limited,Bulk Carrier,20,4,0,6,2,0,0,4,4,8.8,6.7,0,0.0,0.0,0.0,0,4,20.0,Low activity
 Amis Kalon,Engaged,Synergy Maritime Private Limited,Bulk Carrier,20,4,0,6,2,0,0,6,6,7.2,5.9,0,0.0,0.0,0.0,0,6,20.0,Low activity
 Amis Kalon,Active,Synergy Maritime Private Limited,Bulk Carrier,20,4,0,6,2,0,0,0,0,,,0,,,,0,0,20.0,No assessable crew
-Amis Leader,All onboard,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,20,15,20,20,341.0,143.7,15,75.0,1.54,6.68,395,0,100.0,On target
-Amis Leader,Registered,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,20,15,20,20,341.0,143.7,15,75.0,1.54,6.68,395,0,100.0,On target
-Amis Leader,Engaged,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,20,15,20,20,341.0,143.7,15,75.0,1.54,6.68,395,0,100.0,On target
-Amis Leader,Active,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,20,15,20,20,341.0,143.7,15,75.0,1.54,6.68,395,0,100.0,On target
+Amis Leader,All onboard,Synergy Maritime Private Limited,Bulk Carrier,14,14,0,14,0,14,10,14,14,297.5,143.7,10,71.4,1.32,5.75,238,0,100.0,On target
+Amis Leader,Registered,Synergy Maritime Private Limited,Bulk Carrier,14,14,0,14,0,14,10,14,14,297.5,143.7,10,71.4,1.32,5.75,238,0,100.0,On target
+Amis Leader,Engaged,Synergy Maritime Private Limited,Bulk Carrier,14,14,0,14,0,14,10,14,14,297.5,143.7,10,71.4,1.32,5.75,238,0,100.0,On target
+Amis Leader,Active,Synergy Maritime Private Limited,Bulk Carrier,14,14,0,14,0,14,10,14,14,297.5,143.7,10,71.4,1.32,5.75,238,0,100.0,On target
 Amis Wisdom I,All onboard,Synergy Maritime Private Limited,Bulk Carrier,18,12,0,14,2,4,1,18,14,16.0,1.8,1,5.6,0.06,0.26,14,14,66.7,Low activity
 Amis Wisdom I,Registered,Synergy Maritime Private Limited,Bulk Carrier,18,12,0,14,2,4,1,12,12,23.9,3.5,1,8.3,0.09,0.39,14,8,66.7,Low activity
 Amis Wisdom I,Engaged,Synergy Maritime Private Limited,Bulk Carrier,18,12,0,14,2,4,1,14,14,20.6,2.5,1,7.1,0.08,0.34,14,10,66.7,Low activity
@@ -1031,10 +1031,10 @@ Athens Bridge,All onboard,Synergy Maritime Private Limited,Container,22,6,3,7,4,
 Athens Bridge,Registered,Synergy Maritime Private Limited,Container,22,6,3,7,4,1,0,6,3,16.4,0.5,0,0.0,0.01,0.06,1,5,27.3,Low activity
 Athens Bridge,Engaged,Synergy Maritime Private Limited,Container,22,6,3,7,4,1,0,7,7,18.7,14.3,0,0.0,0.01,0.05,1,6,27.3,Low activity
 Athens Bridge,Active,Synergy Maritime Private Limited,Container,22,6,3,7,4,1,0,1,1,19.5,19.5,0,0.0,0.08,0.34,1,0,27.3,Low activity
-BW Kizoku,All onboard,Synergy Maritime Private Limited,Gas Carrier,22,16,4,13,1,4,1,22,13,21.2,2.2,1,4.5,0.08,0.37,24,18,72.7,Low activity
-BW Kizoku,Registered,Synergy Maritime Private Limited,Gas Carrier,22,16,4,13,1,4,1,16,12,28.9,3.8,1,6.2,0.12,0.51,24,12,72.7,Low activity
-BW Kizoku,Engaged,Synergy Maritime Private Limited,Gas Carrier,22,16,4,13,1,4,1,13,13,35.9,5.1,1,7.7,0.14,0.62,24,9,72.7,Low activity
-BW Kizoku,Active,Synergy Maritime Private Limited,Gas Carrier,22,16,4,13,1,4,1,4,4,102.6,42.3,1,25.0,0.47,2.03,24,0,72.7,On target
+BW Kizoku,All onboard,Synergy Maritime Private Limited,Gas Carrier,24,17,4,14,1,5,2,24,14,24.4,2.2,2,8.3,0.09,0.39,28,19,70.8,Low activity
+BW Kizoku,Registered,Synergy Maritime Private Limited,Gas Carrier,24,17,4,14,1,5,2,17,13,34.2,4.1,2,11.8,0.13,0.56,28,12,70.8,Low activity
+BW Kizoku,Engaged,Synergy Maritime Private Limited,Gas Carrier,24,17,4,14,1,5,2,14,14,41.9,8.9,2,14.3,0.16,0.68,28,9,70.8,Low activity
+BW Kizoku,Active,Synergy Maritime Private Limited,Gas Carrier,24,17,4,14,1,5,2,5,5,106.0,50.7,2,40.0,0.44,1.89,28,0,70.8,On target
 BW Messina,All onboard,Synergy Maritime Private Limited,Gas Carrier,20,12,2,12,2,2,0,20,12,10.2,0.4,0,0.0,0.03,0.14,8,18,60.0,Low activity
 BW Messina,Registered,Synergy Maritime Private Limited,Gas Carrier,20,12,2,12,2,2,0,12,10,14.4,3.3,0,0.0,0.05,0.23,8,10,60.0,Low activity
 BW Messina,Engaged,Synergy Maritime Private Limited,Gas Carrier,20,12,2,12,2,2,0,12,12,17.1,8.0,0,0.0,0.05,0.23,8,10,60.0,Low activity
@@ -1083,10 +1083,10 @@ C. Earnest,All onboard,Synergy Maritime Private Limited,Oil Tanker,21,21,0,21,0,
 C. Earnest,Registered,Synergy Maritime Private Limited,Oil Tanker,21,21,0,21,0,12,3,21,21,74.4,33.8,3,14.3,0.27,1.18,73,9,100.0,Below target
 C. Earnest,Engaged,Synergy Maritime Private Limited,Oil Tanker,21,21,0,21,0,12,3,21,21,74.4,33.8,3,14.3,0.27,1.18,73,9,100.0,Below target
 C. Earnest,Active,Synergy Maritime Private Limited,Oil Tanker,21,21,0,21,0,12,3,12,12,123.4,50.7,3,25.0,0.47,2.06,73,0,100.0,On target
-C. Genuine,All onboard,Synergy Maritime Private Limited,Oil Tanker,21,11,0,14,3,1,0,21,14,7.0,1.6,0,0.0,0.01,0.05,3,20,52.4,Low activity
-C. Genuine,Registered,Synergy Maritime Private Limited,Oil Tanker,21,11,0,14,3,1,0,11,11,12.1,4.5,0,0.0,0.02,0.09,3,10,52.4,Low activity
-C. Genuine,Engaged,Synergy Maritime Private Limited,Oil Tanker,21,11,0,14,3,1,0,14,14,10.5,4.0,0,0.0,0.02,0.07,3,13,52.4,Low activity
-C. Genuine,Active,Synergy Maritime Private Limited,Oil Tanker,21,11,0,14,3,1,0,1,1,50.7,50.7,0,0.0,0.23,1.01,3,0,52.4,Below target
+C. Genuine,All onboard,Synergy Maritime Private Limited,Oil Tanker,26,14,0,18,4,2,1,26,18,11.9,1.8,1,3.8,0.03,0.14,11,24,53.8,Low activity
+C. Genuine,Registered,Synergy Maritime Private Limited,Oil Tanker,26,14,0,18,4,2,1,14,14,21.0,8.2,1,7.1,0.06,0.27,11,12,53.8,Low activity
+C. Genuine,Engaged,Synergy Maritime Private Limited,Oil Tanker,26,14,0,18,4,2,1,18,18,17.2,6.2,1,5.6,0.05,0.21,11,16,53.8,Low activity
+C. Genuine,Active,Synergy Maritime Private Limited,Oil Tanker,26,14,0,18,4,2,1,2,2,93.0,93.0,1,50.0,0.43,1.86,11,0,53.8,Near target
 Castara,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,12,7,2,6,1,2,1,12,6,58.0,0.5,1,8.3,0.26,1.13,40,10,58.3,Below target
 Castara,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,12,7,2,6,1,2,1,7,5,99.3,3.4,1,14.3,0.44,1.93,40,5,58.3,Near target
 Castara,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,12,7,2,6,1,2,1,6,6,116.1,8.6,1,16.7,0.52,2.25,40,4,58.3,On target
@@ -1119,18 +1119,18 @@ Daiwan Infinity,All onboard,Synergy Maritime Private Limited,Bulk Carrier,17,12,
 Daiwan Infinity,Registered,Synergy Maritime Private Limited,Bulk Carrier,17,12,2,10,0,2,0,12,10,18.0,5.5,0,0.0,0.04,0.17,6,10,70.6,Low activity
 Daiwan Infinity,Engaged,Synergy Maritime Private Limited,Bulk Carrier,17,12,2,10,0,2,0,10,10,21.5,10.2,0,0.0,0.05,0.2,6,8,70.6,Low activity
 Daiwan Infinity,Active,Synergy Maritime Private Limited,Bulk Carrier,17,12,2,10,0,2,0,2,2,51.7,51.7,0,0.0,0.23,1.01,6,0,70.6,Below target
-Daiwan Kalon,All onboard,Synergy Maritime Private Limited,Bulk Carrier,23,11,2,10,1,8,7,23,10,113.8,0.0,7,30.4,0.41,1.76,120,15,47.8,On target
-Daiwan Kalon,Registered,Synergy Maritime Private Limited,Bulk Carrier,23,11,2,10,1,8,7,11,9,237.7,198.5,7,63.6,0.85,3.69,120,3,47.8,On target
-Daiwan Kalon,Engaged,Synergy Maritime Private Limited,Bulk Carrier,23,11,2,10,1,8,7,10,10,261.7,231.0,7,70.0,0.93,4.06,120,2,47.8,On target
-Daiwan Kalon,Active,Synergy Maritime Private Limited,Bulk Carrier,23,11,2,10,1,8,7,8,8,324.4,299.1,7,87.5,1.17,5.07,120,0,47.8,On target
+Daiwan Kalon,All onboard,Synergy Maritime Private Limited,Bulk Carrier,18,9,1,9,1,8,7,18,9,144.3,1.1,7,38.9,0.52,2.25,120,10,50.0,On target
+Daiwan Kalon,Registered,Synergy Maritime Private Limited,Bulk Carrier,18,9,1,9,1,8,7,9,8,288.4,263.4,7,77.8,1.04,4.51,120,1,50.0,On target
+Daiwan Kalon,Engaged,Synergy Maritime Private Limited,Bulk Carrier,18,9,1,9,1,8,7,9,9,288.6,263.4,7,77.8,1.04,4.51,120,1,50.0,On target
+Daiwan Kalon,Active,Synergy Maritime Private Limited,Bulk Carrier,18,9,1,9,1,8,7,8,8,324.4,299.1,7,87.5,1.17,5.07,120,0,50.0,On target
 Daiwan Wisdom,All onboard,Synergy Maritime Private Limited,Bulk Carrier,22,13,1,15,3,6,2,22,15,23.6,3.8,2,9.1,0.09,0.38,25,16,59.1,Low activity
 Daiwan Wisdom,Registered,Synergy Maritime Private Limited,Bulk Carrier,22,13,1,15,3,6,2,13,12,39.2,9.4,2,15.4,0.15,0.65,25,7,59.1,Low activity
 Daiwan Wisdom,Engaged,Synergy Maritime Private Limited,Bulk Carrier,22,13,1,15,3,6,2,15,15,34.7,7.4,2,13.3,0.13,0.56,25,9,59.1,Low activity
 Daiwan Wisdom,Active,Synergy Maritime Private Limited,Bulk Carrier,22,13,1,15,3,6,2,6,6,79.3,66.8,2,33.3,0.32,1.41,25,0,59.1,Near target
-Dee4 Ilex,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,18,12,1,11,0,6,3,18,11,135.1,3.7,3,16.7,0.53,2.31,123,12,66.7,On target
-Dee4 Ilex,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,18,12,1,11,0,6,3,12,11,202.6,29.7,3,25.0,0.8,3.47,123,6,66.7,On target
-Dee4 Ilex,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,18,12,1,11,0,6,3,11,11,221.1,50.7,3,27.3,0.87,3.78,123,5,66.7,On target
-Dee4 Ilex,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,18,12,1,11,0,6,3,6,6,401.6,93.0,3,50.0,1.59,6.93,123,0,66.7,On target
+Dee4 Ilex,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,17,12,1,11,0,6,3,17,11,143.0,3.8,3,17.6,0.56,2.45,123,11,70.6,On target
+Dee4 Ilex,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,17,12,1,11,0,6,3,12,11,202.6,29.7,3,25.0,0.8,3.47,123,6,70.6,On target
+Dee4 Ilex,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,17,12,1,11,0,6,3,11,11,221.1,50.7,3,27.3,0.87,3.78,123,5,70.6,On target
+Dee4 Ilex,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,17,12,1,11,0,6,3,6,6,401.6,93.0,3,50.0,1.59,6.93,123,0,70.6,On target
 Dee4 Juniper,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,19,15,1,15,1,8,0,19,15,25.8,16.9,0,0.0,0.07,0.32,18,11,78.9,Low activity
 Dee4 Juniper,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,19,15,1,15,1,8,0,15,14,31.6,33.8,0,0.0,0.09,0.41,18,7,78.9,Low activity
 Dee4 Juniper,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,19,15,1,15,1,8,0,15,15,32.7,33.8,0,0.0,0.09,0.41,18,7,78.9,Low activity
@@ -1203,10 +1203,10 @@ Great White,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,22,
 Great White,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,22,19,5,15,1,6,3,19,14,246.7,11.1,3,15.8,1.09,4.73,266,13,86.4,On target
 Great White,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,22,19,5,15,1,6,3,15,15,313.4,25.0,3,20.0,1.38,6.0,266,9,86.4,On target
 Great White,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,22,19,5,15,1,6,3,6,6,754.9,93.0,3,50.0,3.45,14.99,266,0,86.4,On target
-Hourai Maru,All onboard,Synergy Maritime Private Limited,Gas Carrier,23,21,1,20,0,18,12,23,20,210.8,101.5,12,52.2,0.65,2.84,193,5,91.3,On target
-Hourai Maru,Registered,Synergy Maritime Private Limited,Gas Carrier,23,21,1,20,0,18,12,21,20,230.9,118.4,12,57.1,0.71,3.11,193,3,91.3,On target
-Hourai Maru,Engaged,Synergy Maritime Private Limited,Gas Carrier,23,21,1,20,0,18,12,20,20,242.4,118.4,12,60.0,0.75,3.26,193,2,91.3,On target
-Hourai Maru,Active,Synergy Maritime Private Limited,Gas Carrier,23,21,1,20,0,18,12,18,18,268.9,118.4,12,66.7,0.83,3.63,193,0,91.3,On target
+Hourai Maru,All onboard,Synergy Maritime Private Limited,Gas Carrier,22,20,1,19,0,16,10,22,19,198.9,84.5,10,45.5,0.58,2.52,164,6,90.9,On target
+Hourai Maru,Registered,Synergy Maritime Private Limited,Gas Carrier,22,20,1,19,0,16,10,20,19,218.8,93.0,10,50.0,0.64,2.77,164,4,90.9,On target
+Hourai Maru,Engaged,Synergy Maritime Private Limited,Gas Carrier,22,20,1,19,0,16,10,19,19,230.3,101.5,10,52.6,0.67,2.92,164,3,90.9,On target
+Hourai Maru,Active,Synergy Maritime Private Limited,Gas Carrier,22,20,1,19,0,16,10,16,16,271.8,118.4,10,62.5,0.8,3.47,164,0,90.9,On target
 Isleman,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,18,1,18,1,15,3,20,18,58.1,50.7,3,15.0,0.18,0.79,47,5,90.0,Below target
 Isleman,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,18,1,18,1,15,3,18,17,64.5,53.8,3,16.7,0.2,0.88,47,3,90.0,Below target
 Isleman,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,18,1,18,1,15,3,18,18,64.6,53.8,3,16.7,0.2,0.88,47,3,90.0,Below target
@@ -1219,14 +1219,14 @@ Karadeniz LNGT Powership Anatolia,All onboard,Synergy Maritime Private Limited,G
 Karadeniz LNGT Powership Anatolia,Registered,Synergy Maritime Private Limited,Gas Carrier,9,8,2,6,0,0,0,8,6,4.7,3.1,0,0.0,0.0,0.0,0,8,88.9,Low activity
 Karadeniz LNGT Powership Anatolia,Engaged,Synergy Maritime Private Limited,Gas Carrier,9,8,2,6,0,0,0,6,6,6.3,6.2,0,0.0,0.0,0.0,0,6,88.9,Low activity
 Karadeniz LNGT Powership Anatolia,Active,Synergy Maritime Private Limited,Gas Carrier,9,8,2,6,0,0,0,0,0,,,0,,,,0,0,88.9,No assessable crew
-Karadeniz LNGT Powership Oceania,All onboard,Synergy Maritime Private Limited,Gas Carrier,18,10,1,10,1,1,1,18,10,10.4,0.9,1,5.6,0.01,0.06,3,17,55.6,Low activity
-Karadeniz LNGT Powership Oceania,Registered,Synergy Maritime Private Limited,Gas Carrier,18,10,1,10,1,1,1,10,9,18.7,6.9,1,10.0,0.02,0.1,3,9,55.6,Low activity
-Karadeniz LNGT Powership Oceania,Engaged,Synergy Maritime Private Limited,Gas Carrier,18,10,1,10,1,1,1,10,10,18.8,6.9,1,10.0,0.02,0.1,3,9,55.6,Low activity
-Karadeniz LNGT Powership Oceania,Active,Synergy Maritime Private Limited,Gas Carrier,18,10,1,10,1,1,1,1,1,114.1,114.1,1,100.0,0.23,1.01,3,0,55.6,On target
-Karadeniz LNGT Powership Turkiye,All onboard,Synergy Maritime Private Limited,Gas Carrier,27,14,4,12,2,2,2,27,12,68.6,0.0,2,7.4,0.29,1.28,102,25,51.9,Below target
-Karadeniz LNGT Powership Turkiye,Registered,Synergy Maritime Private Limited,Gas Carrier,27,14,4,12,2,2,2,14,10,131.8,1.5,2,14.3,0.57,2.46,102,12,51.9,On target
-Karadeniz LNGT Powership Turkiye,Engaged,Synergy Maritime Private Limited,Gas Carrier,27,14,4,12,2,2,2,12,12,154.3,3.3,2,16.7,0.66,2.87,102,10,51.9,On target
-Karadeniz LNGT Powership Turkiye,Active,Synergy Maritime Private Limited,Gas Carrier,27,14,4,12,2,2,2,2,2,907.2,907.2,2,100.0,3.97,17.25,102,0,51.9,On target
+Karadeniz LNGT Powership Oceania,All onboard,Synergy Maritime Private Limited,Gas Carrier,14,8,1,8,1,0,0,14,8,3.6,0.9,0,0.0,0.0,0.0,0,14,57.1,Low activity
+Karadeniz LNGT Powership Oceania,Registered,Synergy Maritime Private Limited,Gas Carrier,14,8,1,8,1,0,0,8,7,6.3,3.5,0,0.0,0.0,0.0,0,8,57.1,Low activity
+Karadeniz LNGT Powership Oceania,Engaged,Synergy Maritime Private Limited,Gas Carrier,14,8,1,8,1,0,0,8,8,6.4,3.5,0,0.0,0.0,0.0,0,8,57.1,Low activity
+Karadeniz LNGT Powership Oceania,Active,Synergy Maritime Private Limited,Gas Carrier,14,8,1,8,1,0,0,0,0,,,0,,,,0,0,57.1,No assessable crew
+Karadeniz LNGT Powership Turkiye,All onboard,Synergy Maritime Private Limited,Gas Carrier,9,3,0,5,2,0,0,9,5,1.5,0.9,0,0.0,0.0,0.0,0,9,33.3,Low activity
+Karadeniz LNGT Powership Turkiye,Registered,Synergy Maritime Private Limited,Gas Carrier,9,3,0,5,2,0,0,3,3,2.5,3.2,0,0.0,0.0,0.0,0,3,33.3,Low activity
+Karadeniz LNGT Powership Turkiye,Engaged,Synergy Maritime Private Limited,Gas Carrier,9,3,0,5,2,0,0,5,5,2.8,3.2,0,0.0,0.0,0.0,0,5,33.3,Low activity
+Karadeniz LNGT Powership Turkiye,Active,Synergy Maritime Private Limited,Gas Carrier,9,3,0,5,2,0,0,0,0,,,0,,,,0,0,33.3,No assessable crew
 Karadeniz Lngt Powership Americas,All onboard,Synergy Maritime Private Limited,Gas Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
 Karadeniz Lngt Powership Americas,Registered,Synergy Maritime Private Limited,Gas Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
 Karadeniz Lngt Powership Americas,Engaged,Synergy Maritime Private Limited,Gas Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
@@ -1387,10 +1387,10 @@ Pacific Diamond,All onboard,Synergy Maritime Private Limited,Oil Tanker,17,7,1,8
 Pacific Diamond,Registered,Synergy Maritime Private Limited,Oil Tanker,17,7,1,8,2,2,0,7,6,14.9,4.3,0,0.0,0.04,0.19,4,5,41.2,Low activity
 Pacific Diamond,Engaged,Synergy Maritime Private Limited,Oil Tanker,17,7,1,8,2,2,0,8,8,13.4,3.5,0,0.0,0.04,0.17,4,6,41.2,Low activity
 Pacific Diamond,Active,Synergy Maritime Private Limited,Oil Tanker,17,7,1,8,2,2,0,2,2,45.5,45.5,0,0.0,0.16,0.68,4,0,41.2,Low activity
-Pacific Emerald,All onboard,Synergy Maritime Private Limited,Oil Tanker,21,8,1,9,2,1,0,21,9,6.0,0.0,0,0.0,0.01,0.03,2,20,38.1,Low activity
-Pacific Emerald,Registered,Synergy Maritime Private Limited,Oil Tanker,21,8,1,9,2,1,0,8,7,15.2,1.3,0,0.0,0.02,0.08,2,7,38.1,Low activity
-Pacific Emerald,Engaged,Synergy Maritime Private Limited,Oil Tanker,21,8,1,9,2,1,0,9,9,13.9,1.8,0,0.0,0.02,0.08,2,8,38.1,Low activity
-Pacific Emerald,Active,Synergy Maritime Private Limited,Oil Tanker,21,8,1,9,2,1,0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0,38.1,Low activity
+Pacific Emerald,All onboard,Synergy Maritime Private Limited,Oil Tanker,19,8,1,9,2,1,0,19,9,6.6,0.0,0,0.0,0.01,0.04,2,18,42.1,Low activity
+Pacific Emerald,Registered,Synergy Maritime Private Limited,Oil Tanker,19,8,1,9,2,1,0,8,7,15.2,1.3,0,0.0,0.02,0.08,2,7,42.1,Low activity
+Pacific Emerald,Engaged,Synergy Maritime Private Limited,Oil Tanker,19,8,1,9,2,1,0,9,9,13.9,1.8,0,0.0,0.02,0.08,2,8,42.1,Low activity
+Pacific Emerald,Active,Synergy Maritime Private Limited,Oil Tanker,19,8,1,9,2,1,0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0,42.1,Low activity
 Pacific Garnet,All onboard,Synergy Maritime Private Limited,Oil Tanker,30,29,4,26,1,15,5,30,26,159.5,18.7,5,16.7,0.7,3.06,271,15,96.7,On target
 Pacific Garnet,Registered,Synergy Maritime Private Limited,Oil Tanker,30,29,4,26,1,15,5,29,25,164.9,20.5,5,17.2,0.73,3.16,271,14,96.7,On target
 Pacific Garnet,Engaged,Synergy Maritime Private Limited,Oil Tanker,30,29,4,26,1,15,5,26,26,184.0,40.0,5,19.2,0.81,3.53,271,11,96.7,On target
@@ -1427,10 +1427,10 @@ Pelican Mariner,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker
 Pelican Mariner,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,22,16,1,16,1,9,4,16,15,190.4,42.3,4,25.0,0.59,2.56,121,7,72.7,On target
 Pelican Mariner,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,22,16,1,16,1,9,4,16,16,190.9,42.3,4,25.0,0.59,2.56,121,7,72.7,On target
 Pelican Mariner,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,22,16,1,16,1,9,4,9,9,335.1,83.0,4,44.4,1.05,4.55,121,0,72.7,On target
-Pertamina Gas Amaryllis,All onboard,Synergy Maritime Private Limited,Gas Carrier,23,22,0,22,0,16,2,23,22,129.0,29.8,2,8.7,0.44,1.91,130,7,95.7,On target
-Pertamina Gas Amaryllis,Registered,Synergy Maritime Private Limited,Gas Carrier,23,22,0,22,0,16,2,22,22,134.8,30.1,2,9.1,0.46,2.0,130,6,95.7,On target
-Pertamina Gas Amaryllis,Engaged,Synergy Maritime Private Limited,Gas Carrier,23,22,0,22,0,16,2,22,22,134.8,30.1,2,9.1,0.46,2.0,130,6,95.7,On target
-Pertamina Gas Amaryllis,Active,Synergy Maritime Private Limited,Gas Carrier,23,22,0,22,0,16,2,16,16,184.1,32.1,2,12.5,0.63,2.75,130,0,95.7,On target
+Pertamina Gas Amaryllis,All onboard,Synergy Maritime Private Limited,Gas Carrier,24,23,0,23,0,16,2,24,23,123.9,29.0,2,8.3,0.42,1.83,130,8,95.8,On target
+Pertamina Gas Amaryllis,Registered,Synergy Maritime Private Limited,Gas Carrier,24,23,0,23,0,16,2,23,23,129.3,29.8,2,8.7,0.44,1.91,130,7,95.8,On target
+Pertamina Gas Amaryllis,Engaged,Synergy Maritime Private Limited,Gas Carrier,24,23,0,23,0,16,2,23,23,129.3,29.8,2,8.7,0.44,1.91,130,7,95.8,On target
+Pertamina Gas Amaryllis,Active,Synergy Maritime Private Limited,Gas Carrier,24,23,0,23,0,16,2,16,16,184.1,32.1,2,12.5,0.63,2.75,130,0,95.8,On target
 Petite Soeur,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,23,10,1,12,3,2,0,23,12,10.9,0.0,0,0.0,0.01,0.06,4,21,43.5,Low activity
 Petite Soeur,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,23,10,1,12,3,2,0,10,9,23.3,3.5,0,0.0,0.03,0.14,4,8,43.5,Low activity
 Petite Soeur,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,23,10,1,12,3,2,0,12,12,20.9,4.3,0,0.0,0.03,0.11,4,10,43.5,Low activity
@@ -1447,18 +1447,18 @@ Poavosa Brave,All onboard,Synergy Maritime Private Limited,Bulk Carrier,20,11,3,
 Poavosa Brave,Registered,Synergy Maritime Private Limited,Bulk Carrier,20,11,3,11,3,3,3,11,8,80.2,5.3,3,27.3,0.35,1.51,49,8,55.0,Near target
 Poavosa Brave,Engaged,Synergy Maritime Private Limited,Bulk Carrier,20,11,3,11,3,3,3,11,11,80.8,5.3,3,27.3,0.35,1.51,49,8,55.0,Near target
 Poavosa Brave,Active,Synergy Maritime Private Limited,Bulk Carrier,20,11,3,11,3,3,3,3,3,276.2,118.4,3,100.0,1.27,5.52,49,0,55.0,On target
-Poavosa Wisdom,All onboard,Synergy Maritime Private Limited,Bulk Carrier,21,9,0,10,1,4,4,21,10,63.9,0.0,4,19.0,0.24,1.06,66,17,42.9,Below target
-Poavosa Wisdom,Registered,Synergy Maritime Private Limited,Bulk Carrier,21,9,0,10,1,4,4,9,9,149.1,13.9,4,44.4,0.57,2.48,66,5,42.9,On target
-Poavosa Wisdom,Engaged,Synergy Maritime Private Limited,Bulk Carrier,21,9,0,10,1,4,4,10,10,134.3,11.5,4,40.0,0.51,2.23,66,6,42.9,On target
-Poavosa Wisdom,Active,Synergy Maritime Private Limited,Bulk Carrier,21,9,0,10,1,4,4,4,4,327.9,319.2,4,100.0,1.28,5.58,66,0,42.9,On target
+Poavosa Wisdom,All onboard,Synergy Maritime Private Limited,Bulk Carrier,16,8,0,8,0,4,4,16,8,83.3,0.0,4,25.0,0.32,1.4,66,12,50.0,Near target
+Poavosa Wisdom,Registered,Synergy Maritime Private Limited,Bulk Carrier,16,8,0,8,0,4,4,8,8,166.6,73.1,4,50.0,0.64,2.79,66,4,50.0,On target
+Poavosa Wisdom,Engaged,Synergy Maritime Private Limited,Bulk Carrier,16,8,0,8,0,4,4,8,8,166.6,73.1,4,50.0,0.64,2.79,66,4,50.0,On target
+Poavosa Wisdom,Active,Synergy Maritime Private Limited,Bulk Carrier,16,8,0,8,0,4,4,4,4,327.9,319.2,4,100.0,1.28,5.58,66,0,50.0,On target
 Poavosa Wisdom III,All onboard,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,18,9,20,20,135.1,76.1,9,45.0,0.49,2.13,126,2,100.0,On target
 Poavosa Wisdom III,Registered,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,18,9,20,20,135.1,76.1,9,45.0,0.49,2.13,126,2,100.0,On target
 Poavosa Wisdom III,Engaged,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,18,9,20,20,135.1,76.1,9,45.0,0.49,2.13,126,2,100.0,On target
 Poavosa Wisdom III,Active,Synergy Maritime Private Limited,Bulk Carrier,20,20,0,20,0,18,9,18,18,149.6,104.6,9,50.0,0.54,2.37,126,0,100.0,On target
-Point Lisas,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,19,7,2,7,2,1,1,19,7,21.4,0.0,1,5.3,0.09,0.39,22,18,36.8,Low activity
-Point Lisas,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,19,7,2,7,2,1,1,7,5,54.7,0.0,1,14.3,0.24,1.06,22,6,36.8,Below target
-Point Lisas,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,19,7,2,7,2,1,1,7,7,58.0,2.6,1,14.3,0.24,1.06,22,6,36.8,Below target
-Point Lisas,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,19,7,2,7,2,1,1,1,1,372.0,372.0,1,100.0,1.71,7.44,22,0,36.8,On target
+Point Lisas,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,8,2,8,2,2,2,20,8,28.7,0.0,2,10.0,0.12,0.54,32,18,40.0,Low activity
+Point Lisas,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,8,2,8,2,2,2,8,6,69.0,0.4,2,25.0,0.31,1.35,32,6,40.0,Below target
+Point Lisas,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,8,2,8,2,2,2,8,8,71.8,6.3,2,25.0,0.31,1.35,32,6,40.0,Below target
+Point Lisas,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,8,2,8,2,2,2,2,2,270.6,270.6,2,100.0,1.24,5.41,32,0,40.0,On target
 Princess Eternity,All onboard,Synergy Maritime Private Limited,Bulk Carrier,26,8,1,11,4,2,0,26,11,2.6,0.0,0,0.0,0.01,0.03,2,24,30.8,Low activity
 Princess Eternity,Registered,Synergy Maritime Private Limited,Bulk Carrier,26,8,1,11,4,2,0,8,7,6.0,3.9,0,0.0,0.02,0.08,2,6,30.8,Low activity
 Princess Eternity,Engaged,Synergy Maritime Private Limited,Bulk Carrier,26,8,1,11,4,2,0,11,11,6.1,3.8,0,0.0,0.01,0.06,2,9,30.8,Low activity
@@ -1511,10 +1511,10 @@ Tiny Daisy,All onboard,Synergy Maritime Private Limited,Gas Carrier,24,15,4,14,3
 Tiny Daisy,Registered,Synergy Maritime Private Limited,Gas Carrier,24,15,4,14,3,1,0,15,11,20.6,5.3,0,0.0,0.01,0.02,1,14,62.5,Low activity
 Tiny Daisy,Engaged,Synergy Maritime Private Limited,Gas Carrier,24,15,4,14,3,1,0,14,14,22.7,5.5,0,0.0,0.01,0.02,1,13,62.5,Low activity
 Tiny Daisy,Active,Synergy Maritime Private Limited,Gas Carrier,24,15,4,14,3,1,0,1,1,81.1,81.1,0,0.0,0.08,0.34,1,0,62.5,Near target
-Trammo Marycam,All onboard,Synergy Maritime Private Limited,Gas Carrier,16,7,0,10,3,3,0,16,10,13.1,1.4,0,0.0,0.05,0.21,10,13,43.8,Low activity
-Trammo Marycam,Registered,Synergy Maritime Private Limited,Gas Carrier,16,7,0,10,3,3,0,7,7,29.5,16.9,0,0.0,0.11,0.48,10,4,43.8,Low activity
-Trammo Marycam,Engaged,Synergy Maritime Private Limited,Gas Carrier,16,7,0,10,3,3,0,10,10,21.0,5.6,0,0.0,0.08,0.34,10,7,43.8,Low activity
-Trammo Marycam,Active,Synergy Maritime Private Limited,Gas Carrier,16,7,0,10,3,3,0,3,3,56.4,67.6,0,0.0,0.26,1.13,10,0,43.8,Below target
+Trammo Marycam,All onboard,Synergy Maritime Private Limited,Gas Carrier,18,10,1,11,2,4,1,18,11,51.7,1.8,1,5.6,0.17,0.75,40,14,55.6,Below target
+Trammo Marycam,Registered,Synergy Maritime Private Limited,Gas Carrier,18,10,1,11,2,4,1,10,9,92.8,12.8,1,10.0,0.31,1.35,40,6,55.6,Near target
+Trammo Marycam,Engaged,Synergy Maritime Private Limited,Gas Carrier,18,10,1,11,2,4,1,11,11,84.6,8.7,1,9.1,0.28,1.23,40,7,55.6,Near target
+Trammo Marycam,Active,Synergy Maritime Private Limited,Gas Carrier,18,10,1,11,2,4,1,4,4,220.6,76.1,1,25.0,0.78,3.38,40,0,55.6,On target
 Trammo Paris,All onboard,Synergy Maritime Private Limited,Gas Carrier,20,15,2,16,3,2,2,20,16,60.2,2.7,2,10.0,0.11,0.49,29,18,75.0,Below target
 Trammo Paris,Registered,Synergy Maritime Private Limited,Gas Carrier,20,15,2,16,3,2,2,15,13,79.1,3.5,2,13.3,0.15,0.65,29,13,75.0,Near target
 Trammo Paris,Engaged,Synergy Maritime Private Limited,Gas Carrier,20,15,2,16,3,2,2,16,16,75.3,3.6,2,12.5,0.14,0.61,29,14,75.0,Near target
@@ -1555,14 +1555,14 @@ World Prize,All onboard,Synergy Maritime Private Limited,Bulk Carrier,22,8,2,7,1
 World Prize,Registered,Synergy Maritime Private Limited,Bulk Carrier,22,8,2,7,1,3,3,8,6,1668.0,3.8,3,37.5,0.91,3.97,94,5,36.4,On target
 World Prize,Engaged,Synergy Maritime Private Limited,Bulk Carrier,22,8,2,7,1,3,3,7,7,1908.1,12.6,3,42.9,1.04,4.54,94,4,36.4,On target
 World Prize,Active,Synergy Maritime Private Limited,Bulk Carrier,22,8,2,7,1,3,3,3,3,4444.7,405.8,3,100.0,2.44,10.6,94,0,36.4,On target
-ELORA 1,All onboard,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,19,3,16,0,3,1,25,16,24.3,1.9,1,4.0,0.02,0.09,7,22,76.0,Low activity
-ELORA 1,Registered,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,19,3,16,0,3,1,19,16,31.9,7.8,1,5.3,0.03,0.12,7,16,76.0,Low activity
-ELORA 1,Engaged,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,19,3,16,0,3,1,16,16,37.9,9.3,1,6.2,0.03,0.15,7,13,76.0,Low activity
-ELORA 1,Active,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,19,3,16,0,3,1,3,3,88.8,50.7,1,33.3,0.18,0.79,7,0,76.0,Near target
-Joury,All onboard,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,15,5,11,1,4,2,25,11,30.9,0.0,2,8.0,0.13,0.58,43,21,60.0,Low activity
-Joury,Registered,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,15,5,11,1,4,2,15,10,50.5,1.7,2,13.3,0.22,0.97,43,11,60.0,Below target
-Joury,Engaged,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,15,5,11,1,4,2,11,11,70.2,14.6,2,18.2,0.3,1.32,43,7,60.0,Below target
-Joury,Active,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,25,15,5,11,1,4,2,4,4,181.8,126.8,2,50.0,0.84,3.64,43,0,60.0,On target
+ELORA 1,All onboard,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,26,20,4,16,0,3,1,26,16,23.3,1.8,1,3.8,0.02,0.09,7,23,76.9,Low activity
+ELORA 1,Registered,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,26,20,4,16,0,3,1,20,16,30.3,5.6,1,5.0,0.03,0.12,7,17,76.9,Low activity
+ELORA 1,Engaged,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,26,20,4,16,0,3,1,16,16,37.9,9.3,1,6.2,0.03,0.15,7,13,76.9,Low activity
+ELORA 1,Active,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,26,20,4,16,0,3,1,3,3,88.8,50.7,1,33.3,0.18,0.79,7,0,76.9,Near target
+Joury,All onboard,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,24,14,5,10,1,3,1,24,10,14.5,0.0,1,4.2,0.06,0.25,18,21,58.3,Low activity
+Joury,Registered,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,24,14,5,10,1,3,1,14,9,23.9,1.3,1,7.1,0.1,0.43,18,11,58.3,Low activity
+Joury,Engaged,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,24,14,5,10,1,3,1,10,10,34.9,9.5,1,10.0,0.14,0.61,18,7,58.3,Low activity
+Joury,Active,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,24,14,5,10,1,3,1,3,3,101.5,84.5,1,33.3,0.47,2.03,18,0,58.3,On target
 Lubna,All onboard,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,27,14,2,18,6,3,0,27,18,7.0,1.7,0,0.0,0.02,0.09,7,24,51.9,Low activity
 Lubna,Registered,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,27,14,2,18,6,3,0,14,12,12.6,3.4,0,0.0,0.04,0.17,7,11,51.9,Low activity
 Lubna,Engaged,Synergy Mideast Ship Management DMCC,Chemical/Oil Tanker,27,14,2,18,6,3,0,18,18,10.4,3.1,0,0.0,0.03,0.13,7,15,51.9,Low activity
@@ -1639,10 +1639,10 @@ Nordic Copenhagen,All onboard,Synergy Navis marine Private Limited,Chemical/Oil 
 Nordic Copenhagen,Registered,Synergy Navis marine Private Limited,Chemical/Oil Tanker,23,12,0,16,4,7,4,12,12,148.6,50.7,4,33.3,0.52,2.28,81,5,52.2,On target
 Nordic Copenhagen,Engaged,Synergy Navis marine Private Limited,Chemical/Oil Tanker,23,12,0,16,4,7,4,16,16,112.6,13.1,4,25.0,0.39,1.71,81,9,52.2,On target
 Nordic Copenhagen,Active,Synergy Navis marine Private Limited,Chemical/Oil Tanker,23,12,0,16,4,7,4,7,7,241.7,101.5,4,57.1,0.9,3.91,81,0,52.2,On target
-Octonaut,All onboard,Synergy Navis marine Private Limited,Chemical/Oil Tanker,17,6,1,11,6,1,1,17,11,17.6,1.0,1,5.9,0.07,0.3,15,16,35.3,Low activity
-Octonaut,Registered,Synergy Navis marine Private Limited,Chemical/Oil Tanker,17,6,1,11,6,1,1,6,5,46.1,3.9,1,16.7,0.19,0.85,15,5,35.3,Low activity
-Octonaut,Engaged,Synergy Navis marine Private Limited,Chemical/Oil Tanker,17,6,1,11,6,1,1,11,11,27.1,4.0,1,9.1,0.11,0.46,15,10,35.3,Low activity
-Octonaut,Active,Synergy Navis marine Private Limited,Chemical/Oil Tanker,17,6,1,11,6,1,1,1,1,253.6,253.6,1,100.0,1.17,5.07,15,0,35.3,On target
+Octonaut,All onboard,Synergy Navis marine Private Limited,Chemical/Oil Tanker,18,7,1,12,6,2,1,18,12,18.5,1.7,1,5.6,0.07,0.32,17,16,38.9,Low activity
+Octonaut,Registered,Synergy Navis marine Private Limited,Chemical/Oil Tanker,18,7,1,12,6,2,1,7,6,44.3,6.9,1,14.3,0.19,0.82,17,5,38.9,Low activity
+Octonaut,Engaged,Synergy Navis marine Private Limited,Chemical/Oil Tanker,18,7,1,12,6,2,1,12,12,27.7,4.2,1,8.3,0.11,0.48,17,10,38.9,Low activity
+Octonaut,Active,Synergy Navis marine Private Limited,Chemical/Oil Tanker,18,7,1,12,6,2,1,2,2,143.7,143.7,1,50.0,0.66,2.87,17,0,38.9,On target
 Opera,All onboard,Synergy Navis marine Private Limited,Chemical/Oil Tanker,23,22,0,22,0,21,11,23,22,132.0,95.1,11,47.8,0.56,2.43,165,2,95.7,On target
 Opera,Registered,Synergy Navis marine Private Limited,Chemical/Oil Tanker,23,22,0,22,0,21,11,22,22,138.0,106.7,11,50.0,0.58,2.54,165,1,95.7,On target
 Opera,Engaged,Synergy Navis marine Private Limited,Chemical/Oil Tanker,23,22,0,22,0,21,11,22,22,138.0,106.7,11,50.0,0.58,2.54,165,1,95.7,On target
@@ -1803,18 +1803,18 @@ BW Birch,All onboard,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,23,11,2,
 BW Birch,Registered,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,23,11,2,16,7,1,1,11,9,18.3,3.4,1,9.1,0.04,0.18,6,10,47.8,Low activity
 BW Birch,Engaged,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,23,11,2,16,7,1,1,16,16,13.2,1.9,1,6.2,0.03,0.13,6,15,47.8,Low activity
 BW Birch,Active,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,23,11,2,16,7,1,1,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0,47.8,On target
-BW Chinook,All onboard,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,24,19,4,17,2,6,5,24,17,83.2,3.6,5,20.8,0.14,0.61,43,18,79.2,Near target
-BW Chinook,Registered,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,24,19,4,17,2,6,5,19,15,104.4,7.1,5,26.3,0.18,0.77,43,13,79.2,On target
-BW Chinook,Engaged,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,24,19,4,17,2,6,5,17,17,117.4,10.2,5,29.4,0.2,0.86,43,11,79.2,On target
-BW Chinook,Active,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,24,19,4,17,2,6,5,6,6,316.3,171.4,5,83.3,0.56,2.42,43,0,79.2,On target
+BW Chinook,All onboard,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,19,4,17,2,6,5,25,17,79.8,2.7,5,20.0,0.13,0.58,43,19,76.0,Near target
+BW Chinook,Registered,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,19,4,17,2,6,5,19,15,104.4,7.1,5,26.3,0.18,0.77,43,13,76.0,On target
+BW Chinook,Engaged,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,19,4,17,2,6,5,17,17,117.4,10.2,5,29.4,0.2,0.86,43,11,76.0,On target
+BW Chinook,Active,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,19,4,17,2,6,5,6,6,316.3,171.4,5,83.3,0.56,2.42,43,0,76.0,On target
 BW Loyalty,All onboard,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,28,22,1,22,1,13,6,28,22,122.8,16.9,6,21.4,0.46,2.01,166,15,78.6,On target
 BW Loyalty,Registered,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,28,22,1,22,1,13,6,22,21,156.3,33.8,6,27.3,0.59,2.55,166,9,78.6,On target
 BW Loyalty,Engaged,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,28,22,1,22,1,13,6,22,22,156.3,33.8,6,27.3,0.59,2.55,166,9,78.6,On target
 BW Loyalty,Active,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,28,22,1,22,1,13,6,13,13,250.6,50.7,6,46.2,0.99,4.32,166,0,78.6,On target
-BW Oak,All onboard,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,26,17,3,17,3,5,3,26,17,39.9,3.6,3,11.5,0.13,0.56,43,21,65.4,Low activity
-BW Oak,Registered,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,26,17,3,17,3,5,3,17,14,60.7,15.6,3,17.6,0.2,0.86,43,12,65.4,Below target
-BW Oak,Engaged,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,26,17,3,17,3,5,3,17,17,61.0,15.6,3,17.6,0.2,0.86,43,12,65.4,Below target
-BW Oak,Active,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,26,17,3,17,3,5,3,5,5,173.3,186.0,3,60.0,0.67,2.91,43,0,65.4,On target
+BW Oak,All onboard,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,17,3,17,3,5,3,25,17,41.5,3.6,3,12.0,0.13,0.58,43,20,68.0,Low activity
+BW Oak,Registered,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,17,3,17,3,5,3,17,14,60.7,15.6,3,17.6,0.2,0.86,43,12,68.0,Below target
+BW Oak,Engaged,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,17,3,17,3,5,3,17,17,61.0,15.6,3,17.6,0.2,0.86,43,12,68.0,Below target
+BW Oak,Active,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,25,17,3,17,3,5,3,5,5,173.3,186.0,3,60.0,0.67,2.91,43,0,68.0,On target
 BW Pampero,All onboard,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,26,16,2,18,4,3,1,26,18,21.3,1.5,1,3.8,0.02,0.08,6,23,61.5,Low activity
 BW Pampero,Registered,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,26,16,2,18,4,3,1,16,14,34.1,7.0,1,6.2,0.03,0.13,6,13,61.5,Low activity
 BW Pampero,Engaged,Synergy Oceanic Services India Pvt Ltd,Gas Carrier,26,16,2,18,4,3,1,18,18,30.8,6.2,1,5.6,0.03,0.11,6,15,61.5,Low activity
@@ -1871,14 +1871,14 @@ Key Journey,All onboard,Synergy Onyx Marine Pvt Ltd,Bulk Carrier,22,17,1,18,2,5,
 Key Journey,Registered,Synergy Onyx Marine Pvt Ltd,Bulk Carrier,22,17,1,18,2,5,4,17,16,133.0,3.2,4,23.5,0.59,2.55,128,12,77.3,On target
 Key Journey,Engaged,Synergy Onyx Marine Pvt Ltd,Bulk Carrier,22,17,1,18,2,5,4,18,18,125.8,2.7,4,22.2,0.55,2.4,128,13,77.3,On target
 Key Journey,Active,Synergy Onyx Marine Pvt Ltd,Bulk Carrier,22,17,1,18,2,5,4,5,5,432.9,236.7,4,80.0,1.99,8.66,128,0,77.3,On target
-MOL Earnest,All onboard,Synergy Onyx Marine Pvt Ltd,Container,25,14,2,13,1,4,2,25,13,24.8,0.0,2,8.0,0.09,0.38,28,21,56.0,Low activity
-MOL Earnest,Registered,Synergy Onyx Marine Pvt Ltd,Container,25,14,2,13,1,4,2,14,12,44.2,10.0,2,14.3,0.16,0.68,28,10,56.0,Low activity
-MOL Earnest,Engaged,Synergy Onyx Marine Pvt Ltd,Container,25,14,2,13,1,4,2,13,13,47.8,11.5,2,15.4,0.17,0.73,28,9,56.0,Low activity
-MOL Earnest,Active,Synergy Onyx Marine Pvt Ltd,Container,25,14,2,13,1,4,2,4,4,140.1,95.5,2,50.0,0.54,2.37,28,0,56.0,On target
-MOL Endowment,All onboard,Synergy Onyx Marine Pvt Ltd,Container,28,16,4,14,2,2,1,28,14,15.0,0.0,1,3.6,0.02,0.1,8,26,57.1,Low activity
-MOL Endowment,Registered,Synergy Onyx Marine Pvt Ltd,Container,28,16,4,14,2,2,1,16,12,25.4,1.3,1,6.2,0.04,0.17,8,14,57.1,Low activity
-MOL Endowment,Engaged,Synergy Onyx Marine Pvt Ltd,Container,28,16,4,14,2,2,1,14,14,30.1,6.7,1,7.1,0.04,0.19,8,12,57.1,Low activity
-MOL Endowment,Active,Synergy Onyx Marine Pvt Ltd,Container,28,16,4,14,2,2,1,2,2,141.5,141.5,1,50.0,0.31,1.35,8,0,57.1,On target
+MOL Earnest,All onboard,Synergy Onyx Marine Pvt Ltd,Container,26,15,2,14,1,4,2,26,14,24.4,0.8,2,7.7,0.08,0.36,28,22,57.7,Low activity
+MOL Earnest,Registered,Synergy Onyx Marine Pvt Ltd,Container,26,15,2,14,1,4,2,15,13,42.2,11.5,2,13.3,0.15,0.63,28,11,57.7,Low activity
+MOL Earnest,Engaged,Synergy Onyx Marine Pvt Ltd,Container,26,15,2,14,1,4,2,14,14,45.3,12.7,2,14.3,0.16,0.68,28,10,57.7,Low activity
+MOL Earnest,Active,Synergy Onyx Marine Pvt Ltd,Container,26,15,2,14,1,4,2,4,4,140.1,95.5,2,50.0,0.54,2.37,28,0,57.7,On target
+MOL Endowment,All onboard,Synergy Onyx Marine Pvt Ltd,Container,28,16,3,14,1,3,2,28,14,53.7,0.0,2,7.1,0.2,0.87,72,25,57.1,Below target
+MOL Endowment,Registered,Synergy Onyx Marine Pvt Ltd,Container,28,16,3,14,1,3,2,16,13,93.0,3.5,2,12.5,0.35,1.52,72,13,57.1,Near target
+MOL Endowment,Engaged,Synergy Onyx Marine Pvt Ltd,Container,28,16,3,14,1,3,2,14,14,107.3,8.7,2,14.3,0.4,1.74,72,11,57.1,On target
+MOL Endowment,Active,Synergy Onyx Marine Pvt Ltd,Container,28,16,3,14,1,3,2,3,3,455.1,198.5,2,66.7,1.87,8.12,72,0,57.1,On target
 MOL Proficiency,All onboard,Synergy Onyx Marine Pvt Ltd,Container,23,21,1,20,0,18,15,23,20,679.3,321.3,15,65.2,2.94,12.79,870,5,91.3,On target
 MOL Proficiency,Registered,Synergy Onyx Marine Pvt Ltd,Container,23,21,1,20,0,18,15,21,20,744.0,372.0,15,71.4,3.22,14.01,870,3,91.3,On target
 MOL Proficiency,Engaged,Synergy Onyx Marine Pvt Ltd,Container,23,21,1,20,0,18,15,20,20,781.3,372.0,15,75.0,3.38,14.71,870,2,91.3,On target
@@ -1931,10 +1931,10 @@ Beagle,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,2
 Beagle,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,20,13,22,22,181.2,131.1,13,59.1,0.68,2.94,191,2,100.0,On target
 Beagle,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,20,13,22,22,181.2,131.1,13,59.1,0.68,2.94,191,2,100.0,On target
 Beagle,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,20,13,20,20,198.3,135.3,13,65.0,0.74,3.23,191,0,100.0,On target
-Bella Thalassa,All onboard,Synergy Pacific Private Limited,Gas Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
-Bella Thalassa,Registered,Synergy Pacific Private Limited,Gas Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
-Bella Thalassa,Engaged,Synergy Pacific Private Limited,Gas Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
-Bella Thalassa,Active,Synergy Pacific Private Limited,Gas Carrier,0,0,0,0,0,0,0,0,0,,,0,,,,0,0,,No assessable crew
+Bella Thalassa,All onboard,Synergy Pacific Private Limited,Gas Carrier,24,20,4,16,0,6,4,24,16,125.1,2.1,4,16.7,0.55,2.38,169,18,83.3,On target
+Bella Thalassa,Registered,Synergy Pacific Private Limited,Gas Carrier,24,20,4,16,0,6,4,20,16,150.2,4.5,4,20.0,0.66,2.86,169,14,83.3,On target
+Bella Thalassa,Engaged,Synergy Pacific Private Limited,Gas Carrier,24,20,4,16,0,6,4,16,16,187.7,18.9,4,25.0,0.82,3.57,169,10,83.3,On target
+Bella Thalassa,Active,Synergy Pacific Private Limited,Gas Carrier,24,20,4,16,0,6,4,6,6,487.9,135.3,4,66.7,2.19,9.53,169,0,83.3,On target
 Bella Tortum,All onboard,Synergy Pacific Private Limited,Gas Carrier,24,17,2,17,2,2,1,24,17,17.6,1.7,1,4.2,0.04,0.17,12,22,70.8,Low activity
 Bella Tortum,Registered,Synergy Pacific Private Limited,Gas Carrier,24,17,2,17,2,2,1,17,15,24.6,3.5,1,5.9,0.05,0.24,12,15,70.8,Low activity
 Bella Tortum,Engaged,Synergy Pacific Private Limited,Gas Carrier,24,17,2,17,2,2,1,17,17,24.8,3.5,1,5.9,0.05,0.24,12,15,70.8,Low activity
@@ -1975,10 +1975,10 @@ Bow Jaguar,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,20
 Bow Jaguar,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,20,0,21,1,19,6,20,20,204.8,44.8,6,30.0,0.84,3.65,216,1,87.0,On target
 Bow Jaguar,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,20,0,21,1,19,6,21,21,195.3,44.8,6,28.6,0.8,3.48,216,2,87.0,On target
 Bow Jaguar,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,20,0,21,1,19,6,19,19,215.5,44.8,6,31.6,0.88,3.84,216,0,87.0,On target
-Bow Leopard,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,21,0,22,1,14,9,23,22,119.6,48.3,9,39.1,0.39,1.71,116,9,91.3,On target
-Bow Leopard,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,21,0,22,1,14,9,21,21,130.9,50.7,9,42.9,0.43,1.87,116,7,91.3,On target
-Bow Leopard,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,21,0,22,1,14,9,22,22,125.1,49.5,9,40.9,0.41,1.78,116,8,91.3,On target
-Bow Leopard,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,21,0,22,1,14,9,14,14,187.2,118.4,9,64.3,0.64,2.8,116,0,91.3,On target
+Bow Leopard,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,20,0,21,1,13,9,22,21,122.8,41.0,9,40.9,0.4,1.74,113,9,90.9,On target
+Bow Leopard,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,20,0,21,1,13,9,20,20,134.9,71.6,9,45.0,0.44,1.91,113,7,90.9,On target
+Bow Leopard,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,20,0,21,1,13,9,21,21,128.6,48.3,9,42.9,0.42,1.82,113,8,90.9,On target
+Bow Leopard,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,20,0,21,1,13,9,13,13,197.7,118.4,9,69.2,0.68,2.94,113,0,90.9,On target
 Bow Luna,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,12,2,11,1,3,2,20,11,129.3,1.6,2,10.0,0.5,2.18,129,17,60.0,On target
 Bow Luna,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,12,2,11,1,3,2,12,10,215.4,5.6,2,16.7,0.84,3.64,129,9,60.0,On target
 Bow Luna,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,12,2,11,1,3,2,11,11,235.1,6.0,2,18.2,0.91,3.97,129,8,60.0,On target
@@ -1987,10 +1987,10 @@ Bow Lynx,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,22,2
 Bow Lynx,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,22,2,20,0,14,5,22,20,62.0,23.9,5,22.7,0.17,0.72,47,8,95.7,Below target
 Bow Lynx,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,22,2,20,0,14,5,20,20,68.2,30.5,5,25.0,0.18,0.79,47,6,95.7,Below target
 Bow Lynx,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,22,2,20,0,14,5,14,14,90.6,40.0,5,35.7,0.26,1.14,47,0,95.7,Near target
-Bow Mercury,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,18,12,1,12,1,5,4,18,12,171.6,3.9,4,22.2,0.75,3.27,174,13,66.7,On target
-Bow Mercury,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,18,12,1,12,1,5,4,12,11,257.3,59.9,4,33.3,1.13,4.9,174,7,66.7,On target
-Bow Mercury,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,18,12,1,12,1,5,4,12,12,257.4,59.9,4,33.3,1.13,4.9,174,7,66.7,On target
-Bow Mercury,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,18,12,1,12,1,5,4,5,5,588.5,388.9,4,80.0,2.71,11.77,174,0,66.7,On target
+Bow Mercury,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,19,12,1,12,1,5,4,19,12,162.6,3.4,4,21.1,0.71,3.1,174,14,63.2,On target
+Bow Mercury,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,19,12,1,12,1,5,4,12,11,257.3,59.9,4,33.3,1.13,4.9,174,7,63.2,On target
+Bow Mercury,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,19,12,1,12,1,5,4,12,12,257.4,59.9,4,33.3,1.13,4.9,174,7,63.2,On target
+Bow Mercury,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,19,12,1,12,1,5,4,5,5,588.5,388.9,4,80.0,2.71,11.77,174,0,63.2,On target
 Bow Neptune,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,8,3,23,23,42.8,1.6,3,13.0,0.16,0.68,46,15,100.0,Low activity
 Bow Neptune,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,8,3,23,23,42.8,1.6,3,13.0,0.16,0.68,46,15,100.0,Low activity
 Bow Neptune,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,8,3,23,23,42.8,1.6,3,13.0,0.16,0.68,46,15,100.0,Low activity
@@ -2011,10 +2011,10 @@ Bow Success,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,1
 Bow Success,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,14,1,16,3,5,3,14,13,71.1,1.2,3,21.4,0.17,0.72,30,9,63.6,Below target
 Bow Success,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,14,1,16,3,5,3,16,16,63.2,3.3,3,18.8,0.15,0.63,30,11,63.6,Below target
 Bow Success,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,14,1,16,3,5,3,5,5,190.3,202.9,3,60.0,0.47,2.03,30,0,63.6,On target
-Bow Tanaka,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,22,1,22,1,19,7,24,22,125.2,29.0,7,29.2,0.11,0.47,33,5,91.7,On target
-Bow Tanaka,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,22,1,22,1,19,7,22,21,136.5,42.3,7,31.8,0.12,0.51,33,3,91.7,On target
-Bow Tanaka,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,22,1,22,1,19,7,22,22,136.6,42.3,7,31.8,0.12,0.51,33,3,91.7,On target
-Bow Tanaka,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,22,1,22,1,19,7,19,19,158.0,57.0,7,36.8,0.14,0.59,33,0,91.7,On target
+Bow Tanaka,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,25,23,2,22,1,19,7,25,22,120.2,24.2,7,28.0,0.1,0.45,33,6,92.0,On target
+Bow Tanaka,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,25,23,2,22,1,19,7,23,21,130.6,33.8,7,30.4,0.11,0.49,33,4,92.0,On target
+Bow Tanaka,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,25,23,2,22,1,19,7,22,22,136.6,42.3,7,31.8,0.12,0.51,33,3,92.0,On target
+Bow Tanaka,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,25,23,2,22,1,19,7,19,19,158.0,57.0,7,36.8,0.14,0.59,33,0,92.0,On target
 Bow Tiger,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,4,17,0,3,0,21,17,12.0,0.9,0,0.0,0.03,0.14,9,18,100.0,Low activity
 Bow Tiger,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,4,17,0,3,0,21,17,12.0,0.9,0,0.0,0.03,0.14,9,18,100.0,Low activity
 Bow Tiger,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,4,17,0,3,0,17,17,14.9,4.3,0,0.0,0.04,0.18,9,14,100.0,Low activity
@@ -2087,10 +2087,10 @@ Gas Planet,All onboard,Synergy Pacific Private Limited,Gas Carrier,23,13,2,14,3,
 Gas Planet,Registered,Synergy Pacific Private Limited,Gas Carrier,23,13,2,14,3,4,2,13,11,37.8,4.8,2,15.4,0.16,0.68,26,9,56.5,Low activity
 Gas Planet,Engaged,Synergy Pacific Private Limited,Gas Carrier,23,13,2,14,3,4,2,14,14,36.1,5.7,2,14.3,0.14,0.63,26,10,56.5,Low activity
 Gas Planet,Active,Synergy Pacific Private Limited,Gas Carrier,23,13,2,14,3,4,2,4,4,110.6,76.1,2,50.0,0.51,2.2,26,0,56.5,On target
-Gas Stella,All onboard,Synergy Pacific Private Limited,Gas Carrier,25,19,0,20,1,3,1,25,20,41.3,5.2,1,4.0,0.14,0.62,46,22,76.0,Low activity
-Gas Stella,Registered,Synergy Pacific Private Limited,Gas Carrier,25,19,0,20,1,3,1,19,19,54.4,8.8,1,5.3,0.19,0.82,46,16,76.0,Below target
-Gas Stella,Engaged,Synergy Pacific Private Limited,Gas Carrier,25,19,0,20,1,3,1,20,20,51.7,8.3,1,5.0,0.18,0.78,46,17,76.0,Below target
-Gas Stella,Active,Synergy Pacific Private Limited,Gas Carrier,25,19,0,20,1,3,1,3,3,259.3,33.8,1,33.3,1.19,5.19,46,0,76.0,On target
+Gas Stella,All onboard,Synergy Pacific Private Limited,Gas Carrier,24,18,0,19,1,3,1,24,19,42.0,4.5,1,4.2,0.15,0.65,46,21,75.0,Low activity
+Gas Stella,Registered,Synergy Pacific Private Limited,Gas Carrier,24,18,0,19,1,3,1,18,18,56.0,8.3,1,5.6,0.2,0.86,46,15,75.0,Below target
+Gas Stella,Engaged,Synergy Pacific Private Limited,Gas Carrier,24,18,0,19,1,3,1,19,19,53.1,7.9,1,5.3,0.19,0.82,46,16,75.0,Below target
+Gas Stella,Active,Synergy Pacific Private Limited,Gas Carrier,24,18,0,19,1,3,1,3,3,259.3,33.8,1,33.3,1.19,5.19,46,0,75.0,On target
 Ginga Endurance,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,22,8,23,23,148.3,43.5,8,34.8,0.61,2.66,181,1,100.0,On target
 Ginga Endurance,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,22,8,23,23,148.3,43.5,8,34.8,0.61,2.66,181,1,100.0,On target
 Ginga Endurance,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,22,8,23,23,148.3,43.5,8,34.8,0.61,2.66,181,1,100.0,On target
@@ -2111,10 +2111,10 @@ Ginga Serval,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,
 Ginga Serval,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,15,1,17,3,7,4,15,14,72.0,16.9,4,26.7,0.22,0.97,43,8,62.5,Below target
 Ginga Serval,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,15,1,17,3,7,4,17,17,64.0,9.6,4,23.5,0.2,0.86,43,10,62.5,Below target
 Ginga Serval,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,15,1,17,3,7,4,7,7,138.9,118.4,4,57.1,0.48,2.08,43,0,62.5,On target
-Globe Atlas,All onboard,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,5,3,25,20,30.7,2.5,3,12.0,0.09,0.41,30,20,80.0,Low activity
-Globe Atlas,Registered,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,5,3,20,19,38.3,7.4,3,15.0,0.12,0.51,30,15,80.0,Low activity
-Globe Atlas,Engaged,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,5,3,20,20,38.3,7.4,3,15.0,0.12,0.51,30,15,80.0,Low activity
-Globe Atlas,Active,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,5,3,5,5,101.5,101.5,3,60.0,0.47,2.03,30,0,80.0,On target
+Globe Atlas,All onboard,Synergy Pacific Private Limited,Gas Carrier,24,20,1,19,0,5,3,24,19,31.9,3.0,3,12.5,0.1,0.42,30,19,83.3,Low activity
+Globe Atlas,Registered,Synergy Pacific Private Limited,Gas Carrier,24,20,1,19,0,5,3,20,19,38.3,7.4,3,15.0,0.12,0.51,30,15,83.3,Low activity
+Globe Atlas,Engaged,Synergy Pacific Private Limited,Gas Carrier,24,20,1,19,0,5,3,19,19,40.3,9.6,3,15.8,0.12,0.53,30,14,83.3,Low activity
+Globe Atlas,Active,Synergy Pacific Private Limited,Gas Carrier,24,20,1,19,0,5,3,5,5,101.5,101.5,3,60.0,0.47,2.03,30,0,83.3,On target
 Globe Frontier,All onboard,Synergy Pacific Private Limited,Gas Carrier,24,17,0,20,3,10,3,24,20,53.0,10.5,3,12.5,0.23,1.01,72,14,70.8,Below target
 Globe Frontier,Registered,Synergy Pacific Private Limited,Gas Carrier,24,17,0,20,3,10,3,17,17,73.4,16.9,3,17.6,0.33,1.43,72,7,70.8,Below target
 Globe Frontier,Engaged,Synergy Pacific Private Limited,Gas Carrier,24,17,0,20,3,10,3,20,20,63.6,15.0,3,15.0,0.28,1.22,72,10,70.8,Below target
@@ -2155,18 +2155,18 @@ Honor Galaxy,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,
 Honor Galaxy,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,15,3,16,4,5,2,15,12,79.8,6.9,2,13.3,0.34,1.47,65,10,68.2,Near target
 Honor Galaxy,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,15,3,16,4,5,2,16,16,75.9,8.3,2,12.5,0.32,1.37,65,11,68.2,Near target
 Honor Galaxy,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,15,3,16,4,5,2,5,5,227.2,84.5,2,40.0,1.01,4.4,65,0,68.2,On target
-Husky,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,4,22,22,90.0,42.3,4,18.2,0.37,1.63,106,1,100.0,Near target
-Husky,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,4,22,22,90.0,42.3,4,18.2,0.37,1.63,106,1,100.0,Near target
-Husky,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,4,22,22,90.0,42.3,4,18.2,0.37,1.63,106,1,100.0,Near target
-Husky,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,4,21,21,93.8,50.7,4,19.0,0.39,1.71,106,0,100.0,Near target
+Husky,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,20,4,22,22,86.9,33.8,4,18.2,0.37,1.6,104,2,100.0,Near target
+Husky,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,20,4,22,22,86.9,33.8,4,18.2,0.37,1.6,104,2,100.0,Near target
+Husky,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,20,4,22,22,86.9,33.8,4,18.2,0.37,1.6,104,2,100.0,Near target
+Husky,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,20,4,20,20,95.1,42.3,4,20.0,0.4,1.76,104,0,100.0,Near target
 Jeffreys Bay,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,23,1,22,0,21,10,24,22,215.2,84.5,10,41.7,0.74,3.23,229,3,95.8,On target
 Jeffreys Bay,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,23,1,22,0,21,10,23,22,224.6,84.5,10,43.5,0.77,3.37,229,2,95.8,On target
 Jeffreys Bay,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,23,1,22,0,21,10,22,22,234.8,85.0,10,45.5,0.81,3.52,229,1,95.8,On target
 Jeffreys Bay,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,23,1,22,0,21,10,21,21,242.1,85.5,10,47.6,0.85,3.69,229,0,95.8,On target
-Kodkod,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,0,21,0,21,3,21,21,127.9,41.1,3,14.3,0.5,2.17,135,0,100.0,On target
-Kodkod,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,0,21,0,21,3,21,21,127.9,41.1,3,14.3,0.5,2.17,135,0,100.0,On target
-Kodkod,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,0,21,0,21,3,21,21,127.9,41.1,3,14.3,0.5,2.17,135,0,100.0,On target
-Kodkod,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,0,21,0,21,3,21,21,127.9,41.1,3,14.3,0.5,2.17,135,0,100.0,On target
+Kodkod,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,21,0,21,0,21,3,22,21,122.1,34.5,3,13.6,0.48,2.08,135,1,95.5,On target
+Kodkod,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,21,0,21,0,21,3,21,21,127.9,41.1,3,14.3,0.5,2.17,135,0,95.5,On target
+Kodkod,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,21,0,21,0,21,3,21,21,127.9,41.1,3,14.3,0.5,2.17,135,0,95.5,On target
+Kodkod,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,21,0,21,0,21,3,21,21,127.9,41.1,3,14.3,0.5,2.17,135,0,95.5,On target
 Loyalty Galaxy,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,11,1,14,4,3,1,23,14,11.1,2.5,1,4.3,0.03,0.15,10,20,47.8,Low activity
 Loyalty Galaxy,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,11,1,14,4,3,1,11,10,20.9,11.2,1,9.1,0.07,0.31,10,8,47.8,Low activity
 Loyalty Galaxy,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,11,1,14,4,3,1,14,14,18.3,9.5,1,7.1,0.06,0.24,10,11,47.8,Low activity
@@ -2175,10 +2175,10 @@ MH Daisen,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,15,
 MH Daisen,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,15,3,13,1,1,1,15,12,247.3,2.6,1,6.7,0.53,2.3,102,14,71.4,On target
 MH Daisen,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,15,3,13,1,1,1,13,13,285.4,4.1,1,7.7,0.61,2.65,102,12,71.4,On target
 MH Daisen,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,15,3,13,1,1,1,1,1,3528.0,3528.0,1,100.0,7.93,34.5,102,0,71.4,On target
-MH HOTAKA,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,2,19,0,15,3,21,19,102.6,16.9,3,14.3,0.44,1.93,120,6,100.0,On target
-MH HOTAKA,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,2,19,0,15,3,21,19,102.6,16.9,3,14.3,0.44,1.93,120,6,100.0,On target
-MH HOTAKA,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,2,19,0,15,3,19,19,113.4,19.8,3,15.8,0.49,2.14,120,4,100.0,On target
-MH HOTAKA,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,21,2,19,0,15,3,15,15,137.2,25.8,3,20.0,0.62,2.71,120,0,100.0,On target
+MH HOTAKA,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,17,17,2,15,0,13,2,17,15,35.6,19.8,2,11.8,0.13,0.58,29,4,100.0,Low activity
+MH HOTAKA,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,17,17,2,15,0,13,2,17,15,35.6,19.8,2,11.8,0.13,0.58,29,4,100.0,Low activity
+MH HOTAKA,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,17,17,2,15,0,13,2,15,15,40.3,25.8,2,13.3,0.15,0.65,29,2,100.0,Low activity
+MH HOTAKA,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,17,17,2,15,0,13,2,13,13,40.0,25.8,2,15.4,0.17,0.75,29,0,100.0,Low activity
 MH Ibuki,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,18,4,15,1,9,4,21,15,126.6,8.6,4,19.0,0.14,0.6,37,12,85.7,On target
 MH Ibuki,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,18,4,15,1,9,4,18,14,147.3,33.8,4,22.2,0.16,0.7,37,9,85.7,On target
 MH Ibuki,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,18,4,15,1,9,4,15,15,177.3,34.5,4,26.7,0.19,0.83,37,6,85.7,On target
@@ -2199,10 +2199,10 @@ Maersk Biscayne,All onboard,Synergy Pacific Private Limited,Container,20,16,1,16
 Maersk Biscayne,Registered,Synergy Pacific Private Limited,Container,20,16,1,16,1,3,1,16,15,36.3,1.4,1,6.2,0.12,0.53,25,13,80.0,Low activity
 Maersk Biscayne,Engaged,Synergy Pacific Private Limited,Container,20,16,1,16,1,3,1,16,16,37.1,2.0,1,6.2,0.12,0.53,25,13,80.0,Low activity
 Maersk Biscayne,Active,Synergy Pacific Private Limited,Container,20,16,1,16,1,3,1,3,3,157.3,67.6,1,33.3,0.65,2.82,25,0,80.0,On target
-Maersk EL Palomar,All onboard,Synergy Pacific Private Limited,Container,24,17,1,17,1,12,5,24,17,645.3,16.9,5,20.8,0.18,0.8,57,12,70.8,On target
-Maersk EL Palomar,Registered,Synergy Pacific Private Limited,Container,24,17,1,17,1,12,5,17,16,910.6,50.7,5,29.4,0.26,1.13,57,5,70.8,On target
-Maersk EL Palomar,Engaged,Synergy Pacific Private Limited,Container,24,17,1,17,1,12,5,17,17,911.0,50.7,5,29.4,0.26,1.13,57,5,70.8,On target
-Maersk EL Palomar,Active,Synergy Pacific Private Limited,Container,24,17,1,17,1,12,5,12,12,1288.0,76.1,5,41.7,0.37,1.61,57,0,70.8,On target
+Maersk EL Palomar,All onboard,Synergy Pacific Private Limited,Container,24,18,1,17,0,12,5,24,17,645.3,16.9,5,20.8,0.18,0.8,57,12,75.0,On target
+Maersk EL Palomar,Registered,Synergy Pacific Private Limited,Container,24,18,1,17,0,12,5,18,17,860.4,42.3,5,27.8,0.25,1.07,57,6,75.0,On target
+Maersk EL Palomar,Engaged,Synergy Pacific Private Limited,Container,24,18,1,17,0,12,5,17,17,911.0,50.7,5,29.4,0.26,1.13,57,5,75.0,On target
+Maersk EL Palomar,Active,Synergy Pacific Private Limited,Container,24,18,1,17,0,12,5,12,12,1288.0,76.1,5,41.7,0.37,1.61,57,0,75.0,On target
 Maersk El Alto,All onboard,Synergy Pacific Private Limited,Container,19,15,3,12,0,6,0,19,12,27.6,8.9,0,0.0,0.05,0.21,12,13,78.9,Low activity
 Maersk El Alto,Registered,Synergy Pacific Private Limited,Container,19,15,3,12,0,6,0,15,12,35.0,16.9,0,0.0,0.06,0.27,12,9,78.9,Low activity
 Maersk El Alto,Engaged,Synergy Pacific Private Limited,Container,19,15,3,12,0,6,0,12,12,43.7,29.9,0,0.0,0.08,0.34,12,6,78.9,Low activity
@@ -2211,10 +2211,10 @@ Maersk El Banco,All onboard,Synergy Pacific Private Limited,Container,21,14,2,13
 Maersk El Banco,Registered,Synergy Pacific Private Limited,Container,21,14,2,13,1,3,2,14,12,90.1,15.4,2,14.3,0.36,1.55,64,11,66.7,Near target
 Maersk El Banco,Engaged,Synergy Pacific Private Limited,Container,21,14,2,13,1,3,2,13,13,97.2,16.0,2,15.4,0.38,1.66,64,10,66.7,Near target
 Maersk El Banco,Active,Synergy Pacific Private Limited,Container,21,14,2,13,1,3,2,3,3,365.3,355.1,2,66.7,1.66,7.21,64,0,66.7,On target
-Maersk El Bosque,All onboard,Synergy Pacific Private Limited,Container,21,18,8,11,1,4,4,21,11,138.1,0.8,4,19.0,0.47,2.05,127,17,85.7,On target
-Maersk El Bosque,Registered,Synergy Pacific Private Limited,Container,21,18,8,11,1,4,4,18,10,160.9,0.9,4,22.2,0.55,2.39,127,14,85.7,On target
-Maersk El Bosque,Engaged,Synergy Pacific Private Limited,Container,21,18,8,11,1,4,4,11,11,263.6,70.5,4,36.4,0.9,3.9,127,7,85.7,On target
-Maersk El Bosque,Active,Synergy Pacific Private Limited,Container,21,18,8,11,1,4,4,4,4,680.0,346.6,4,100.0,2.47,10.74,127,0,85.7,On target
+Maersk El Bosque,All onboard,Synergy Pacific Private Limited,Container,25,20,8,13,1,6,5,25,13,123.9,0.8,5,20.0,0.43,1.87,138,19,80.0,On target
+Maersk El Bosque,Registered,Synergy Pacific Private Limited,Container,25,20,8,13,1,6,5,20,12,154.7,1.4,5,25.0,0.54,2.33,138,14,80.0,On target
+Maersk El Bosque,Engaged,Synergy Pacific Private Limited,Container,25,20,8,13,1,6,5,13,13,238.3,70.5,5,38.5,0.83,3.59,138,7,80.0,On target
+Maersk El Bosque,Active,Synergy Pacific Private Limited,Container,25,20,8,13,1,6,5,6,6,486.3,186.0,5,83.3,1.79,7.78,138,0,80.0,On target
 Maersk Emerald,All onboard,Synergy Pacific Private Limited,Container,25,23,3,20,0,18,12,25,20,229.2,79.3,12,48.0,0.94,4.07,301,7,92.0,On target
 Maersk Emerald,Registered,Synergy Pacific Private Limited,Container,25,23,3,20,0,18,12,23,20,249.1,101.5,12,52.2,1.02,4.43,301,5,92.0,On target
 Maersk Emerald,Engaged,Synergy Pacific Private Limited,Container,25,23,3,20,0,18,12,20,20,286.5,127.9,12,60.0,1.17,5.09,301,2,92.0,On target
@@ -2247,10 +2247,10 @@ Maersk Glacier,All onboard,Synergy Pacific Private Limited,Container,22,20,1,19,
 Maersk Glacier,Registered,Synergy Pacific Private Limited,Container,22,20,1,19,0,14,11,20,19,191.1,118.4,11,55.0,0.85,3.7,219,6,90.9,On target
 Maersk Glacier,Engaged,Synergy Pacific Private Limited,Container,22,20,1,19,0,14,11,19,19,201.2,118.4,11,57.9,0.9,3.9,219,5,90.9,On target
 Maersk Glacier,Active,Synergy Pacific Private Limited,Container,22,20,1,19,0,14,11,14,14,271.4,169.1,11,78.6,1.22,5.29,219,0,90.9,On target
-Maersk Mammoth,All onboard,Synergy Pacific Private Limited,Container,22,22,1,21,0,17,12,22,21,170.2,101.5,12,54.5,0.46,2.01,131,5,100.0,On target
-Maersk Mammoth,Registered,Synergy Pacific Private Limited,Container,22,22,1,21,0,17,12,22,21,170.2,101.5,12,54.5,0.46,2.01,131,5,100.0,On target
-Maersk Mammoth,Engaged,Synergy Pacific Private Limited,Container,22,22,1,21,0,17,12,21,21,178.3,101.5,12,57.1,0.49,2.11,131,4,100.0,On target
-Maersk Mammoth,Active,Synergy Pacific Private Limited,Container,22,22,1,21,0,17,12,17,17,205.5,135.3,12,70.6,0.6,2.61,131,0,100.0,On target
+Maersk Mammoth,All onboard,Synergy Pacific Private Limited,Container,19,19,1,18,0,15,10,19,18,160.4,101.5,10,52.6,0.39,1.69,95,4,100.0,On target
+Maersk Mammoth,Registered,Synergy Pacific Private Limited,Container,19,19,1,18,0,15,10,19,18,160.4,101.5,10,52.6,0.39,1.69,95,4,100.0,On target
+Maersk Mammoth,Engaged,Synergy Pacific Private Limited,Container,19,19,1,18,0,15,10,18,18,169.4,101.5,10,55.6,0.41,1.78,95,3,100.0,On target
+Maersk Mammoth,Active,Synergy Pacific Private Limited,Container,19,19,1,18,0,15,10,15,15,192.3,121.8,10,66.7,0.49,2.14,95,0,100.0,On target
 Maersk Olympic,All onboard,Synergy Pacific Private Limited,Container,18,14,3,11,0,4,2,18,11,31.3,3.2,2,11.1,0.12,0.51,27,14,77.8,Low activity
 Maersk Olympic,Registered,Synergy Pacific Private Limited,Container,18,14,3,11,0,4,2,14,11,40.3,6.3,2,14.3,0.15,0.65,27,10,77.8,Low activity
 Maersk Olympic,Engaged,Synergy Pacific Private Limited,Container,18,14,3,11,0,4,2,11,11,51.2,7.9,2,18.2,0.19,0.83,27,7,77.8,Below target
@@ -2267,10 +2267,10 @@ Maersk Sequoia,All onboard,Synergy Pacific Private Limited,Container,22,21,3,18,
 Maersk Sequoia,Registered,Synergy Pacific Private Limited,Container,22,21,3,18,0,9,4,21,18,93.5,5.0,4,19.0,0.31,1.34,83,12,95.5,Near target
 Maersk Sequoia,Engaged,Synergy Pacific Private Limited,Container,22,21,3,18,0,9,4,18,18,109.1,12.6,4,22.2,0.36,1.56,83,9,95.5,On target
 Maersk Sequoia,Active,Synergy Pacific Private Limited,Container,22,21,3,18,0,9,4,9,9,215.5,84.5,4,44.4,0.72,3.12,83,0,95.5,On target
-Maersk Tokyo,All onboard,Synergy Pacific Private Limited,Container,23,19,1,20,2,9,5,23,20,173.1,16.9,5,21.7,0.76,3.31,225,14,82.6,On target
-Maersk Tokyo,Registered,Synergy Pacific Private Limited,Container,23,19,1,20,2,9,5,19,18,209.3,30.1,5,26.3,0.92,4.0,225,10,82.6,On target
-Maersk Tokyo,Engaged,Synergy Pacific Private Limited,Container,23,19,1,20,2,9,5,20,20,199.1,26.3,5,25.0,0.88,3.8,225,11,82.6,On target
-Maersk Tokyo,Active,Synergy Pacific Private Limited,Container,23,19,1,20,2,9,5,9,9,422.7,186.0,5,55.6,1.94,8.45,225,0,82.6,On target
+Maersk Tokyo,All onboard,Synergy Pacific Private Limited,Container,22,18,1,19,2,9,5,22,19,180.0,15.3,5,22.7,0.8,3.46,225,13,81.8,On target
+Maersk Tokyo,Registered,Synergy Pacific Private Limited,Container,22,18,1,19,2,9,5,18,17,219.7,32.0,5,27.8,0.97,4.23,225,9,81.8,On target
+Maersk Tokyo,Engaged,Synergy Pacific Private Limited,Container,22,18,1,19,2,9,5,19,19,208.4,30.1,5,26.3,0.92,4.0,225,10,81.8,On target
+Maersk Tokyo,Active,Synergy Pacific Private Limited,Container,22,18,1,19,2,9,5,9,9,422.7,186.0,5,55.6,1.94,8.45,225,0,81.8,On target
 Maersk Yellowstone,All onboard,Synergy Pacific Private Limited,Container,28,22,5,18,1,11,7,28,18,173.7,9.3,7,25.0,0.6,2.62,217,17,78.6,On target
 Maersk Yellowstone,Registered,Synergy Pacific Private Limited,Container,28,22,5,18,1,11,7,22,17,220.8,33.8,7,31.8,0.77,3.34,217,11,78.6,On target
 Maersk Yellowstone,Engaged,Synergy Pacific Private Limited,Container,28,22,5,18,1,11,7,18,18,270.2,55.4,7,38.9,0.94,4.08,217,7,78.6,On target
@@ -2375,10 +2375,10 @@ Stena Contender,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,
 Stena Contender,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,21,0,21,0,15,4,21,21,117.6,40.0,4,19.0,0.37,1.59,99,6,95.5,On target
 Stena Contender,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,21,0,21,0,15,4,21,21,117.6,40.0,4,19.0,0.37,1.59,99,6,95.5,On target
 Stena Contender,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,21,0,21,0,15,4,15,15,153.1,50.7,4,26.7,0.51,2.23,99,0,95.5,On target
-Stena Continent,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,3,22,22,115.9,36.1,3,13.6,0.44,1.92,125,1,100.0,On target
-Stena Continent,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,3,22,22,115.9,36.1,3,13.6,0.44,1.92,125,1,100.0,On target
-Stena Continent,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,3,22,22,115.9,36.1,3,13.6,0.44,1.92,125,1,100.0,On target
-Stena Continent,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,3,21,21,119.6,33.8,3,14.3,0.46,2.01,125,0,100.0,On target
+Stena Continent,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,22,3,23,23,114.5,38.4,3,13.0,0.43,1.87,127,1,100.0,On target
+Stena Continent,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,22,3,23,23,114.5,38.4,3,13.0,0.43,1.87,127,1,100.0,On target
+Stena Continent,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,22,3,23,23,114.5,38.4,3,13.0,0.43,1.87,127,1,100.0,On target
+Stena Continent,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,23,0,23,0,22,3,22,22,117.9,50.7,3,13.6,0.45,1.95,127,0,100.0,On target
 Stena Convoy,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,20,1,19,0,18,5,21,19,189.9,28.4,5,23.8,0.11,0.5,31,3,95.2,On target
 Stena Convoy,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,20,1,19,0,18,5,20,19,199.4,51.4,5,25.0,0.12,0.52,31,2,95.2,On target
 Stena Convoy,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,20,1,19,0,18,5,19,19,209.9,74.4,5,26.3,0.13,0.55,31,1,95.2,On target
@@ -2387,10 +2387,10 @@ TIELT,All onboard,Synergy Pacific Private Limited,Gas Carrier,23,23,0,23,0,23,16
 TIELT,Registered,Synergy Pacific Private Limited,Gas Carrier,23,23,0,23,0,23,16,23,23,154.7,118.4,16,69.6,0.48,2.09,142,0,100.0,On target
 TIELT,Engaged,Synergy Pacific Private Limited,Gas Carrier,23,23,0,23,0,23,16,23,23,154.7,118.4,16,69.6,0.48,2.09,142,0,100.0,On target
 TIELT,Active,Synergy Pacific Private Limited,Gas Carrier,23,23,0,23,0,23,16,23,23,154.7,118.4,16,69.6,0.48,2.09,142,0,100.0,On target
-Trust Galaxy,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,19,3,17,1,5,3,23,17,47.9,3.6,3,13.0,0.15,0.66,45,18,82.6,Low activity
-Trust Galaxy,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,19,3,17,1,5,3,19,16,57.9,10.8,3,15.8,0.18,0.8,45,14,82.6,Below target
-Trust Galaxy,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,19,3,17,1,5,3,17,17,64.8,12.0,3,17.6,0.21,0.9,45,12,82.6,Below target
-Trust Galaxy,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,23,19,3,17,1,5,3,5,5,202.0,169.1,3,60.0,0.7,3.04,45,0,82.6,On target
+Trust Galaxy,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,18,3,16,1,5,3,24,16,45.1,2.2,3,12.5,0.15,0.63,45,19,75.0,Low activity
+Trust Galaxy,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,18,3,16,1,5,3,18,15,60.1,8.4,3,16.7,0.19,0.85,45,13,75.0,Below target
+Trust Galaxy,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,18,3,16,1,5,3,16,16,67.6,11.4,3,18.8,0.22,0.95,45,11,75.0,Below target
+Trust Galaxy,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,24,18,3,16,1,5,3,5,5,202.0,169.1,3,60.0,0.7,3.04,45,0,75.0,On target
 Tsukuba Galaxy,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,1,22,22,39.8,36.4,1,4.5,0.13,0.57,37,1,100.0,Low activity
 Tsukuba Galaxy,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,1,22,22,39.8,36.4,1,4.5,0.13,0.57,37,1,100.0,Low activity
 Tsukuba Galaxy,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,0,22,0,21,1,22,22,39.8,36.4,1,4.5,0.13,0.57,37,1,100.0,Low activity
@@ -2403,10 +2403,10 @@ UM Edo,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,11,0,1
 UM Edo,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,11,0,12,1,5,2,11,11,308.2,21.0,2,18.2,1.36,5.9,192,6,52.4,On target
 UM Edo,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,11,0,12,1,5,2,12,12,282.8,20.3,2,16.7,1.24,5.41,192,7,52.4,On target
 UM Edo,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,11,0,12,1,5,2,5,5,651.8,67.6,2,40.0,2.99,12.99,192,0,52.4,On target
-UM KISO,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,19,3,16,0,7,2,21,16,47.8,2.4,2,9.5,0.1,0.43,27,14,90.5,Low activity
-UM KISO,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,19,3,16,0,7,2,19,16,52.8,2.5,2,10.5,0.11,0.48,27,12,90.5,Below target
-UM KISO,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,19,3,16,0,7,2,16,16,62.7,15.8,2,12.5,0.13,0.57,27,9,90.5,Below target
-UM KISO,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,19,3,16,0,7,2,7,7,130.8,50.7,2,28.6,0.3,1.3,27,0,90.5,On target
+UM KISO,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,18,3,15,0,6,1,20,15,31.1,1.7,1,5.0,0.1,0.44,26,14,90.0,Low activity
+UM KISO,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,18,3,15,0,6,1,18,15,34.6,2.5,1,5.6,0.11,0.49,26,12,90.0,Low activity
+UM KISO,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,18,3,15,0,6,1,15,15,41.5,7.5,1,6.7,0.13,0.59,26,9,90.0,Low activity
+UM KISO,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,18,3,15,0,6,1,6,6,89.2,50.7,1,16.7,0.34,1.47,26,0,90.0,Near target
 UM Shimanto,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,2,20,0,8,2,22,20,49.1,16.9,2,9.1,0.17,0.74,48,14,100.0,Low activity
 UM Shimanto,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,2,20,0,8,2,22,20,49.1,16.9,2,9.1,0.17,0.74,48,14,100.0,Low activity
 UM Shimanto,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,22,22,2,20,0,8,2,20,20,54.0,16.9,2,10.0,0.19,0.81,48,12,100.0,Below target
@@ -2419,10 +2419,10 @@ Valor Galaxy,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,
 Valor Galaxy,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,15,3,12,0,4,2,15,12,79.0,5.2,2,13.3,0.33,1.44,64,11,75.0,Near target
 Valor Galaxy,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,15,3,12,0,4,2,12,12,98.8,10.4,2,16.7,0.41,1.8,64,8,75.0,Near target
 Valor Galaxy,Active,Synergy Pacific Private Limited,Chemical/Oil Tanker,20,15,3,12,0,4,2,4,4,270.9,76.7,2,50.0,1.24,5.41,64,0,75.0,On target
-White Cliffs,All onboard,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,8,4,25,20,53.1,16.9,4,16.0,0.11,0.49,36,17,80.0,Below target
-White Cliffs,Registered,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,8,4,20,19,66.4,24.2,4,20.0,0.14,0.61,36,12,80.0,Below target
-White Cliffs,Engaged,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,8,4,20,20,66.4,24.2,4,20.0,0.14,0.61,36,12,80.0,Below target
-White Cliffs,Active,Synergy Pacific Private Limited,Gas Carrier,25,20,1,20,1,8,4,8,8,139.5,84.5,4,50.0,0.35,1.52,36,0,80.0,On target
+White Cliffs,All onboard,Synergy Pacific Private Limited,Gas Carrier,24,19,1,19,1,7,4,24,19,53.9,10.6,4,16.7,0.11,0.48,34,17,79.2,Below target
+White Cliffs,Registered,Synergy Pacific Private Limited,Gas Carrier,24,19,1,19,1,7,4,19,18,68.1,18.8,4,21.1,0.14,0.61,34,12,79.2,Below target
+White Cliffs,Engaged,Synergy Pacific Private Limited,Gas Carrier,24,19,1,19,1,7,4,19,19,68.1,18.8,4,21.1,0.14,0.61,34,12,79.2,Below target
+White Cliffs,Active,Synergy Pacific Private Limited,Gas Carrier,24,19,1,19,1,7,4,7,7,154.6,135.3,4,57.1,0.38,1.64,34,0,79.2,On target
 Wisco Adventure,All onboard,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,20,0,20,0,20,9,21,20,216.9,83.3,9,42.9,0.85,3.69,229,1,95.2,On target
 Wisco Adventure,Registered,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,20,0,20,0,20,9,20,20,227.7,91.3,9,45.0,0.89,3.87,229,0,95.2,On target
 Wisco Adventure,Engaged,Synergy Pacific Private Limited,Chemical/Oil Tanker,21,20,0,20,0,20,9,20,20,227.7,91.3,9,45.0,0.89,3.87,229,0,95.2,On target
@@ -2575,10 +2575,10 @@ Paiwan Ace,All onboard,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,25,17,
 Paiwan Ace,Registered,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,25,17,2,16,1,6,3,17,15,68.2,22.6,3,17.6,0.25,1.07,54,11,68.0,Below target
 Paiwan Ace,Engaged,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,25,17,2,16,1,6,3,16,16,72.9,23.6,3,18.8,0.26,1.14,54,10,68.0,Below target
 Paiwan Ace,Active,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,25,17,2,16,1,6,3,6,6,160.5,97.2,3,50.0,0.7,3.04,54,0,68.0,On target
-Sakizaya Unicorn,All onboard,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,6,3,3,0,1,0,19,3,5.8,0.0,0,0.0,0.02,0.09,5,18,31.6,Low activity
-Sakizaya Unicorn,Registered,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,6,3,3,0,1,0,6,3,18.4,0.9,0,0.0,0.06,0.28,5,5,31.6,Low activity
-Sakizaya Unicorn,Engaged,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,6,3,3,0,1,0,3,3,36.9,24.3,0,0.0,0.13,0.56,5,2,31.6,Low activity
-Sakizaya Unicorn,Active,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,6,3,3,0,1,0,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0,31.6,Near target
+Sakizaya Unicorn,All onboard,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,8,5,3,0,1,0,19,3,5.8,0.0,0,0.0,0.02,0.09,5,18,42.1,Low activity
+Sakizaya Unicorn,Registered,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,8,5,3,0,1,0,8,3,13.8,0.0,0,0.0,0.05,0.21,5,7,42.1,Low activity
+Sakizaya Unicorn,Engaged,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,8,5,3,0,1,0,3,3,36.9,24.3,0,0.0,0.13,0.56,5,2,42.1,Low activity
+Sakizaya Unicorn,Active,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,19,8,5,3,0,1,0,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0,42.1,Near target
 Sakizaya justice,All onboard,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,20,6,0,6,0,3,2,20,6,46.1,0.0,2,10.0,0.07,0.32,19,17,30.0,Low activity
 Sakizaya justice,Registered,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,20,6,0,6,0,3,2,6,6,153.6,18.5,2,33.3,0.25,1.07,19,3,30.0,On target
 Sakizaya justice,Engaged,Wisdom Synergy Shipmanagement Pte Ltd,Bulk Carrier,20,6,0,6,0,3,2,6,6,153.6,18.5,2,33.3,0.25,1.07,19,3,30.0,On target
