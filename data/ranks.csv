@@ -1,7 +1,7 @@
 rank,doc,population,onboard,coverage_pct,people,assessable,mean_pct,median_pct,at_target,ok_pct,per_week,per_month,c90,zero_90d
 Able Bodied Seaman,All DoCs,All onboard,1899,51.6,1899,983,62.1,0.0,186,9.8,0.16,0.7,3955,1496
 Bosun,All DoCs,All onboard,412,48.1,412,227,96.1,0.9,43,10.4,0.15,0.63,769,328
-Chief Cook,All DoCs,All onboard,597,48.4,597,306,56.6,0.0,53,8.9,0.14,0.63,1112,483
+Chief Cook,All DoCs,All onboard,597,48.6,597,306,56.6,0.0,53,8.9,0.14,0.63,1112,483
 Chief Engineer,All DoCs,All onboard,603,58.0,603,352,114.6,0.9,122,20.2,0.4,1.74,3100,406
 Chief Officer,All DoCs,All onboard,601,69.1,601,389,111.8,3.8,110,18.3,0.32,1.38,2449,400
 Crane Operator,All DoCs,All onboard,20,10.0,20,2,77.2,0.0,1,5.0,0.03,0.15,9,18
@@ -11,8 +11,8 @@ Electrical Officer,All DoCs,All onboard,257,61.1,257,154,71.4,1.0,37,14.4,0.24,1
 Electro Technical Officer,All DoCs,All onboard,221,59.3,221,125,69.6,1.0,29,13.1,0.23,0.98,642,160
 Electro Technical Rating,All DoCs,All onboard,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,All DoCs,All onboard,269,65.4,269,154,212.9,3.6,55,20.4,0.7,3.05,2423,185
-Fitter,All DoCs,All onboard,495,53.9,495,273,69.7,1.0,52,10.5,0.23,1.02,1492,375
-Fourth Engineer,All DoCs,All onboard,455,67.5,455,287,70.3,1.8,67,14.7,0.21,0.92,1232,318
+Fitter,All DoCs,All onboard,495,54.1,495,273,69.7,1.0,52,10.5,0.23,1.02,1492,375
+Fourth Engineer,All DoCs,All onboard,455,67.7,455,287,70.3,1.8,67,14.7,0.21,0.92,1232,318
 Gas Engineer,All DoCs,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 General Steward,All DoCs,All onboard,542,50.4,542,277,51.5,0.0,59,10.9,0.15,0.64,1027,426
 H2S Technician,All DoCs,All onboard,10,10.0,10,1,9.5,0.0,0,0.0,0.01,0.03,1,9
@@ -38,7 +38,7 @@ Trainee Wiper,All DoCs,All onboard,10,60.0,10,7,11.0,0.5,0,0.0,0.01,0.03,1,9
 Wiper,All DoCs,All onboard,157,46.5,157,71,72.3,0.0,14,8.9,0.2,0.86,401,132
 Able Bodied Seaman,All DoCs,Registered,1899,51.6,980,855,119.7,13.2,186,19.0,0.31,1.36,3955,577
 Bosun,All DoCs,Registered,412,48.1,198,178,198.8,16.9,43,21.7,0.3,1.31,769,114
-Chief Cook,All DoCs,Registered,597,48.4,289,251,115.5,16.9,53,18.3,0.3,1.3,1112,175
+Chief Cook,All DoCs,Registered,597,48.6,290,251,115.1,16.9,53,18.3,0.3,1.3,1112,176
 Chief Engineer,All DoCs,Registered,603,58.0,350,325,197.0,33.8,122,34.9,0.69,3.0,3100,153
 Chief Officer,All DoCs,Registered,601,69.1,415,362,161.4,20.8,110,26.5,0.46,2.0,2449,214
 Crane Operator,All DoCs,Registered,20,10.0,2,2,771.7,771.7,1,50.0,0.35,1.52,9,0
@@ -48,8 +48,8 @@ Electrical Officer,All DoCs,Registered,257,61.1,157,141,116.5,41.7,37,23.6,0.39,
 Electro Technical Officer,All DoCs,Registered,221,59.3,131,114,116.8,20.6,29,22.1,0.38,1.66,642,70
 Electro Technical Rating,All DoCs,Registered,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,All DoCs,Registered,269,65.4,176,154,325.4,79.8,55,31.2,1.07,4.66,2423,92
-Fitter,All DoCs,Registered,495,53.9,267,229,128.4,16.9,52,19.5,0.43,1.89,1492,147
-Fourth Engineer,All DoCs,Registered,455,67.5,307,264,103.9,16.9,67,21.8,0.31,1.36,1232,170
+Fitter,All DoCs,Registered,495,54.1,268,229,127.9,16.9,52,19.4,0.43,1.88,1492,148
+Fourth Engineer,All DoCs,Registered,455,67.7,308,264,103.5,16.9,67,21.8,0.31,1.35,1232,171
 Gas Engineer,All DoCs,Registered,1,0.0,0,0,,,0,,,,0,0
 General Steward,All DoCs,Registered,542,50.4,273,240,101.5,16.2,59,21.6,0.29,1.27,1027,157
 H2S Technician,All DoCs,Registered,10,10.0,1,1,95.1,95.1,0,0.0,0.08,0.34,1,0
@@ -75,7 +75,7 @@ Trainee Wiper,All DoCs,Registered,10,60.0,6,6,18.1,1.0,0,0.0,0.01,0.06,1,5
 Wiper,All DoCs,Registered,157,46.5,73,57,155.0,5.3,14,19.2,0.43,1.86,401,48
 Able Bodied Seaman,All DoCs,Engaged,1899,51.6,983,983,119.9,13.8,186,18.9,0.31,1.36,3955,580
 Bosun,All DoCs,Engaged,412,48.1,227,227,174.4,15.1,43,18.9,0.26,1.15,769,143
-Chief Cook,All DoCs,Engaged,597,48.4,306,306,110.4,16.9,53,17.3,0.28,1.23,1112,192
+Chief Cook,All DoCs,Engaged,597,48.6,306,306,110.4,16.9,53,17.3,0.28,1.23,1112,192
 Chief Engineer,All DoCs,Engaged,603,58.0,352,352,196.2,33.8,122,34.7,0.68,2.98,3100,155
 Chief Officer,All DoCs,Engaged,601,69.1,389,389,172.7,31.2,110,28.3,0.49,2.13,2449,188
 Crane Operator,All DoCs,Engaged,20,10.0,2,2,771.7,771.7,1,50.0,0.35,1.52,9,0
@@ -85,8 +85,8 @@ Electrical Officer,All DoCs,Engaged,257,61.1,154,154,119.1,45.0,37,24.0,0.39,1.7
 Electro Technical Officer,All DoCs,Engaged,221,59.3,125,125,123.0,25.9,29,23.2,0.4,1.74,642,64
 Electro Technical Rating,All DoCs,Engaged,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,All DoCs,Engaged,269,65.4,154,154,371.8,81.4,55,35.7,1.22,5.32,2423,70
-Fitter,All DoCs,Engaged,495,53.9,273,273,126.3,16.9,52,19.0,0.43,1.85,1492,153
-Fourth Engineer,All DoCs,Engaged,455,67.5,287,287,111.4,16.9,67,23.3,0.33,1.45,1232,150
+Fitter,All DoCs,Engaged,495,54.1,273,273,126.3,16.9,52,19.0,0.43,1.85,1492,153
+Fourth Engineer,All DoCs,Engaged,455,67.7,287,287,111.4,16.9,67,23.3,0.33,1.45,1232,150
 Gas Engineer,All DoCs,Engaged,1,0.0,0,0,,,0,,,,0,0
 General Steward,All DoCs,Engaged,542,50.4,277,277,100.7,16.0,59,21.3,0.29,1.25,1027,161
 H2S Technician,All DoCs,Engaged,10,10.0,1,1,95.1,95.1,0,0.0,0.08,0.34,1,0
@@ -112,7 +112,7 @@ Trainee Wiper,All DoCs,Engaged,10,60.0,7,7,15.8,1.1,0,0.0,0.01,0.05,1,6
 Wiper,All DoCs,Engaged,157,46.5,71,71,159.9,7.3,14,19.7,0.44,1.91,401,46
 Able Bodied Seaman,All DoCs,Active,1899,51.6,403,403,279.4,84.5,186,46.2,0.76,3.32,3955,0
 Bosun,All DoCs,Active,412,48.1,84,84,452.3,101.5,43,51.2,0.71,3.1,769,0
-Chief Cook,All DoCs,Active,597,48.4,114,114,273.0,94.5,53,46.5,0.76,3.3,1112,0
+Chief Cook,All DoCs,Active,597,48.6,114,114,273.0,94.5,53,46.5,0.76,3.3,1112,0
 Chief Engineer,All DoCs,Active,603,58.0,197,197,342.0,135.3,122,61.9,1.22,5.32,3100,0
 Chief Officer,All DoCs,Active,601,69.1,201,201,324.8,121.8,110,54.7,0.95,4.12,2449,0
 Crane Operator,All DoCs,Active,20,10.0,2,2,771.7,771.7,1,50.0,0.35,1.52,9,0
@@ -122,8 +122,8 @@ Electrical Officer,All DoCs,Active,257,61.1,72,72,232.0,109.9,37,51.4,0.84,3.66,
 Electro Technical Officer,All DoCs,Active,221,59.3,61,61,235.6,92.2,29,47.5,0.82,3.56,642,0
 Electro Technical Rating,All DoCs,Active,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,All DoCs,Active,269,65.4,84,84,646.8,169.1,55,65.5,2.24,9.76,2423,0
-Fitter,All DoCs,Active,495,53.9,120,120,273.3,83.9,52,43.3,0.97,4.2,1492,0
-Fourth Engineer,All DoCs,Active,455,67.5,137,137,223.2,84.5,67,48.9,0.7,3.04,1232,0
+Fitter,All DoCs,Active,495,54.1,120,120,273.3,83.9,52,43.3,0.97,4.2,1492,0
+Fourth Engineer,All DoCs,Active,455,67.7,137,137,223.2,84.5,67,48.9,0.7,3.04,1232,0
 Gas Engineer,All DoCs,Active,1,0.0,0,0,,,0,,,,0,0
 General Steward,All DoCs,Active,542,50.4,116,116,227.1,101.5,59,50.9,0.69,2.99,1027,0
 H2S Technician,All DoCs,Active,10,10.0,1,1,95.1,95.1,0,0.0,0.08,0.34,1,0
@@ -1563,7 +1563,7 @@ Electro Technical Officer,Synergy Maritime Private Limited,All onboard,46,56.5,4
 Electro Technical Rating,Synergy Maritime Private Limited,All onboard,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,Synergy Maritime Private Limited,All onboard,39,84.6,39,31,256.9,80.0,13,33.3,1.02,4.44,512,21
 Fitter,Synergy Maritime Private Limited,All onboard,128,50.8,128,68,70.9,1.0,13,10.2,0.19,0.84,318,99
-Fourth Engineer,Synergy Maritime Private Limited,All onboard,114,70.2,114,75,42.0,1.8,14,12.3,0.14,0.63,211,79
+Fourth Engineer,Synergy Maritime Private Limited,All onboard,114,71.1,114,75,42.0,1.8,14,12.3,0.14,0.63,211,79
 General Steward,Synergy Maritime Private Limited,All onboard,123,57.7,123,71,41.2,1.3,13,10.6,0.1,0.42,154,98
 Junior Fourth Engineer,Synergy Maritime Private Limited,All onboard,3,66.7,3,1,1.5,0.0,0,0.0,0.0,0.0,0,3
 Master,Synergy Maritime Private Limited,All onboard,132,76.5,132,97,90.6,13.2,28,21.2,0.32,1.4,548,79
@@ -1593,7 +1593,7 @@ Electro Technical Officer,Synergy Maritime Private Limited,Registered,46,56.5,26
 Electro Technical Rating,Synergy Maritime Private Limited,Registered,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,Synergy Maritime Private Limited,Registered,39,84.6,33,31,303.7,81.7,13,39.4,1.21,5.25,512,15
 Fitter,Synergy Maritime Private Limited,Registered,128,50.8,65,56,138.5,10.6,13,20.0,0.38,1.65,318,36
-Fourth Engineer,Synergy Maritime Private Limited,Registered,114,70.2,80,71,59.7,16.9,14,17.5,0.21,0.89,211,45
+Fourth Engineer,Synergy Maritime Private Limited,Registered,114,71.1,81,71,58.9,16.9,14,17.3,0.2,0.88,211,46
 General Steward,Synergy Maritime Private Limited,Registered,123,57.7,71,63,70.9,10.0,13,18.3,0.17,0.73,154,46
 Junior Fourth Engineer,Synergy Maritime Private Limited,Registered,3,66.7,2,0,0.0,0.0,0,0.0,0.0,0.0,0,2
 Master,Synergy Maritime Private Limited,Registered,132,76.5,101,91,118.0,24.8,28,27.7,0.42,1.83,548,48
@@ -1623,7 +1623,7 @@ Electro Technical Officer,Synergy Maritime Private Limited,Engaged,46,56.5,28,28
 Electro Technical Rating,Synergy Maritime Private Limited,Engaged,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,Synergy Maritime Private Limited,Engaged,39,84.6,31,31,323.3,82.1,13,41.9,1.28,5.59,512,13
 Fitter,Synergy Maritime Private Limited,Engaged,128,50.8,68,68,133.4,11.9,13,19.1,0.36,1.58,318,39
-Fourth Engineer,Synergy Maritime Private Limited,Engaged,114,70.2,75,75,63.9,18.3,14,18.7,0.22,0.95,211,40
+Fourth Engineer,Synergy Maritime Private Limited,Engaged,114,71.1,75,75,63.9,18.3,14,18.7,0.22,0.95,211,40
 General Steward,Synergy Maritime Private Limited,Engaged,123,57.7,71,71,71.3,10.0,13,18.3,0.17,0.73,154,46
 Junior Fourth Engineer,Synergy Maritime Private Limited,Engaged,3,66.7,1,1,4.4,4.4,0,0.0,0.0,0.0,0,1
 Master,Synergy Maritime Private Limited,Engaged,132,76.5,97,97,123.3,30.4,28,28.9,0.44,1.91,548,44
@@ -1653,7 +1653,7 @@ Electro Technical Officer,Synergy Maritime Private Limited,Active,46,56.5,13,13,
 Electro Technical Rating,Synergy Maritime Private Limited,Active,1,100.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
 Engine Cadet,Synergy Maritime Private Limited,Active,39,84.6,18,18,523.3,135.3,13,72.2,2.21,9.62,512,0
 Fitter,Synergy Maritime Private Limited,Active,128,50.8,29,29,303.4,84.5,13,44.8,0.85,3.71,318,0
-Fourth Engineer,Synergy Maritime Private Limited,Active,114,70.2,35,35,127.7,80.1,14,40.0,0.47,2.04,211,0
+Fourth Engineer,Synergy Maritime Private Limited,Active,114,71.1,35,35,127.7,80.1,14,40.0,0.47,2.04,211,0
 General Steward,Synergy Maritime Private Limited,Active,123,57.7,25,25,186.5,118.4,13,52.0,0.48,2.08,154,0
 Junior Fourth Engineer,Synergy Maritime Private Limited,Active,3,66.7,0,0,,,0,,,,0,0
 Master,Synergy Maritime Private Limited,Active,132,76.5,53,53,216.3,101.5,28,52.8,0.8,3.5,548,0
@@ -2145,7 +2145,7 @@ Trainee Seaman,Synergy Onyx Marine Pvt Ltd,Active,1,100.0,1,1,372.0,372.0,1,100.
 Wiper,Synergy Onyx Marine Pvt Ltd,Active,1,100.0,1,1,3889.2,3889.2,1,100.0,17.89,77.78,230,0
 Able Bodied Seaman,Synergy Pacific Private Limited,All onboard,392,75.3,392,281,94.2,6.1,69,17.6,0.27,1.18,1364,242
 Bosun,Synergy Pacific Private Limited,All onboard,32,78.1,32,20,24.4,3.1,3,9.4,0.09,0.41,39,25
-Chief Cook,Synergy Pacific Private Limited,All onboard,125,73.6,125,87,75.6,7.3,13,10.4,0.25,1.1,406,86
+Chief Cook,Synergy Pacific Private Limited,All onboard,125,74.4,125,87,75.6,7.3,13,10.4,0.25,1.1,406,86
 Chief Engineer,Synergy Pacific Private Limited,All onboard,121,89.3,121,104,176.2,27.8,40,33.1,0.58,2.51,897,53
 Chief Officer,Synergy Pacific Private Limited,All onboard,122,90.2,122,101,128.3,19.4,31,25.4,0.41,1.79,647,57
 Deck Cadet,Synergy Pacific Private Limited,All onboard,123,97.6,123,112,153.3,79.5,31,25.2,0.54,2.35,855,60
@@ -2153,7 +2153,7 @@ Electrical Cadet,Synergy Pacific Private Limited,All onboard,19,94.7,19,17,155.0
 Electrical Officer,Synergy Pacific Private Limited,All onboard,59,76.3,59,43,77.3,16.9,9,15.3,0.23,1.01,176,34
 Electro Technical Officer,Synergy Pacific Private Limited,All onboard,65,83.1,65,49,50.1,16.8,9,13.8,0.16,0.68,130,38
 Engine Cadet,Synergy Pacific Private Limited,All onboard,55,98.2,55,51,167.3,81.5,17,30.9,0.64,2.79,454,23
-Fitter,Synergy Pacific Private Limited,All onboard,120,72.5,120,88,115.9,9.4,21,17.5,0.43,1.88,668,75
+Fitter,Synergy Pacific Private Limited,All onboard,120,73.3,120,88,115.9,9.4,21,17.5,0.43,1.88,668,75
 Fourth Engineer,Synergy Pacific Private Limited,All onboard,110,86.4,110,92,117.4,16.9,26,23.6,0.34,1.47,477,55
 General Steward,Synergy Pacific Private Limited,All onboard,124,71.0,124,85,67.2,10.9,21,16.9,0.19,0.83,306,75
 Junior Fourth Engineer,Synergy Pacific Private Limited,All onboard,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
@@ -2172,7 +2172,7 @@ Trainee Seaman,Synergy Pacific Private Limited,All onboard,18,55.6,18,10,49.8,0.
 Wiper,Synergy Pacific Private Limited,All onboard,19,78.9,19,12,14.8,2.0,1,5.3,0.05,0.21,12,15
 Able Bodied Seaman,Synergy Pacific Private Limited,Registered,392,75.3,295,260,124.9,16.9,69,23.4,0.36,1.56,1364,145
 Bosun,Synergy Pacific Private Limited,Registered,32,78.1,25,19,31.2,8.8,3,12.0,0.12,0.53,39,18
-Chief Cook,Synergy Pacific Private Limited,Registered,125,73.6,92,82,102.3,16.9,13,14.1,0.34,1.49,406,53
+Chief Cook,Synergy Pacific Private Limited,Registered,125,74.4,93,82,101.2,16.9,13,14.0,0.34,1.48,406,54
 Chief Engineer,Synergy Pacific Private Limited,Registered,121,89.3,108,102,197.3,43.2,40,37.0,0.65,2.81,897,40
 Chief Officer,Synergy Pacific Private Limited,Registered,122,90.2,110,97,142.0,33.8,31,28.2,0.46,1.99,647,45
 Deck Cadet,Synergy Pacific Private Limited,Registered,123,97.6,120,111,157.1,80.3,31,25.8,0.55,2.41,855,57
@@ -2180,7 +2180,7 @@ Electrical Cadet,Synergy Pacific Private Limited,Registered,19,94.7,18,17,163.6,
 Electrical Officer,Synergy Pacific Private Limited,Registered,59,76.3,45,42,101.3,50.7,9,20.0,0.3,1.32,176,20
 Electro Technical Officer,Synergy Pacific Private Limited,Registered,65,83.1,54,47,59.8,17.9,9,16.7,0.19,0.81,130,27
 Engine Cadet,Synergy Pacific Private Limited,Registered,55,98.2,54,51,170.4,81.7,17,31.5,0.65,2.84,454,22
-Fitter,Synergy Pacific Private Limited,Registered,120,72.5,87,78,159.6,33.8,21,24.1,0.6,2.6,668,42
+Fitter,Synergy Pacific Private Limited,Registered,120,73.3,88,78,157.8,29.5,21,23.9,0.59,2.57,668,43
 Fourth Engineer,Synergy Pacific Private Limited,Registered,110,86.4,95,87,135.6,17.9,26,27.4,0.39,1.7,477,40
 General Steward,Synergy Pacific Private Limited,Registered,124,71.0,88,78,94.2,26.5,21,23.9,0.27,1.18,306,39
 Junior Fourth Engineer,Synergy Pacific Private Limited,Registered,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
@@ -2199,7 +2199,7 @@ Trainee Seaman,Synergy Pacific Private Limited,Registered,18,55.6,10,9,89.4,40.2
 Wiper,Synergy Pacific Private Limited,Registered,19,78.9,15,12,18.8,2.0,1,6.7,0.06,0.27,12,11
 Able Bodied Seaman,Synergy Pacific Private Limited,Engaged,392,75.3,281,281,131.3,17.2,69,24.6,0.38,1.64,1364,131
 Bosun,Synergy Pacific Private Limited,Engaged,32,78.1,20,20,39.1,15.5,3,15.0,0.15,0.66,39,13
-Chief Cook,Synergy Pacific Private Limited,Engaged,125,73.6,87,87,108.6,17.3,13,14.9,0.36,1.58,406,48
+Chief Cook,Synergy Pacific Private Limited,Engaged,125,74.4,87,87,108.6,17.3,13,14.9,0.36,1.58,406,48
 Chief Engineer,Synergy Pacific Private Limited,Engaged,121,89.3,104,104,204.9,47.1,40,38.5,0.67,2.92,897,36
 Chief Officer,Synergy Pacific Private Limited,Engaged,122,90.2,101,101,154.9,35.2,31,30.7,0.5,2.17,647,36
 Deck Cadet,Synergy Pacific Private Limited,Engaged,123,97.6,112,112,168.4,81.0,31,27.7,0.59,2.58,855,49
@@ -2207,7 +2207,7 @@ Electrical Cadet,Synergy Pacific Private Limited,Engaged,19,94.7,17,17,173.2,69.
 Electrical Officer,Synergy Pacific Private Limited,Engaged,59,76.3,43,43,106.1,67.6,9,20.9,0.32,1.38,176,18
 Electro Technical Officer,Synergy Pacific Private Limited,Engaged,65,83.1,49,49,66.5,24.5,9,18.4,0.21,0.9,130,22
 Engine Cadet,Synergy Pacific Private Limited,Engaged,55,98.2,51,51,180.4,83.3,17,33.3,0.69,3.01,454,19
-Fitter,Synergy Pacific Private Limited,Engaged,120,72.5,88,88,158.1,29.5,21,23.9,0.59,2.57,668,43
+Fitter,Synergy Pacific Private Limited,Engaged,120,73.3,88,88,158.1,29.5,21,23.9,0.59,2.57,668,43
 Fourth Engineer,Synergy Pacific Private Limited,Engaged,110,86.4,92,92,140.4,20.9,26,28.3,0.4,1.75,477,37
 General Steward,Synergy Pacific Private Limited,Engaged,124,71.0,85,85,98.0,32.0,21,24.7,0.28,1.22,306,36
 Junior Fourth Engineer,Synergy Pacific Private Limited,Engaged,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
@@ -2226,7 +2226,7 @@ Trainee Seaman,Synergy Pacific Private Limited,Engaged,18,55.6,10,10,89.6,40.2,3
 Wiper,Synergy Pacific Private Limited,Engaged,19,78.9,12,12,23.5,5.3,1,8.3,0.08,0.34,12,8
 Able Bodied Seaman,Synergy Pacific Private Limited,Active,392,75.3,150,150,236.4,83.2,69,46.0,0.71,3.08,1364,0
 Bosun,Synergy Pacific Private Limited,Active,32,78.1,7,7,94.2,84.5,3,42.9,0.43,1.88,39,0
-Chief Cook,Synergy Pacific Private Limited,Active,125,73.6,39,39,224.8,67.6,13,33.3,0.81,3.52,406,0
+Chief Cook,Synergy Pacific Private Limited,Active,125,74.4,39,39,224.8,67.6,13,33.3,0.81,3.52,406,0
 Chief Engineer,Synergy Pacific Private Limited,Active,121,89.3,68,68,307.7,143.7,40,58.8,1.03,4.46,897,0
 Chief Officer,Synergy Pacific Private Limited,Active,122,90.2,65,65,237.8,69.2,31,47.7,0.77,3.37,647,0
 Deck Cadet,Synergy Pacific Private Limited,Active,123,97.6,63,63,271.9,97.1,31,49.2,1.06,4.59,855,0
@@ -2234,7 +2234,7 @@ Electrical Cadet,Synergy Pacific Private Limited,Active,19,94.7,9,9,294.9,135.3,
 Electrical Officer,Synergy Pacific Private Limited,Active,59,76.3,25,25,167.2,82.9,9,36.0,0.55,2.38,176,0
 Electro Technical Officer,Synergy Pacific Private Limited,Active,65,83.1,27,27,110.0,67.6,9,33.3,0.37,1.63,130,0
 Engine Cadet,Synergy Pacific Private Limited,Active,55,98.2,32,32,253.8,109.9,17,53.1,1.1,4.8,454,0
-Fitter,Synergy Pacific Private Limited,Active,120,72.5,45,45,294.7,86.1,21,46.7,1.15,5.02,668,0
+Fitter,Synergy Pacific Private Limited,Active,120,73.3,45,45,294.7,86.1,21,46.7,1.15,5.02,668,0
 Fourth Engineer,Synergy Pacific Private Limited,Active,110,86.4,55,55,230.8,84.5,26,47.3,0.67,2.93,477,0
 General Steward,Synergy Pacific Private Limited,Active,124,71.0,49,49,161.0,67.6,21,42.9,0.49,2.11,306,0
 Junior Fourth Engineer,Synergy Pacific Private Limited,Active,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
