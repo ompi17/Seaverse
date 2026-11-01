@@ -23,7 +23,7 @@ date,doc,population,completions,people,per_person
 2026-08-24,All DoCs,All onboard,512,13030,0.0393
 2026-08-25,All DoCs,All onboard,410,13030,0.0315
 2026-08-26,All DoCs,All onboard,418,13030,0.0321
-2026-08-27,All DoCs,All onboard,444,13030,0.0341
+2026-08-27,All DoCs,All onboard,446,13030,0.0342
 2026-08-28,All DoCs,All onboard,427,13030,0.0328
 2026-08-29,All DoCs,All onboard,495,13030,0.038
 2026-08-30,All DoCs,All onboard,596,13030,0.0457
@@ -89,96 +89,96 @@ date,doc,population,completions,people,per_person
 2026-10-29,All DoCs,All onboard,327,13030,0.0251
 2026-10-30,All DoCs,All onboard,356,13030,0.0273
 2026-10-31,All DoCs,All onboard,411,13030,0.0315
-2026-08-03,All DoCs,Registered,399,7722,0.0517
-2026-08-04,All DoCs,Registered,424,7722,0.0549
-2026-08-05,All DoCs,Registered,546,7722,0.0707
-2026-08-06,All DoCs,Registered,454,7722,0.0588
-2026-08-07,All DoCs,Registered,319,7722,0.0413
-2026-08-08,All DoCs,Registered,371,7722,0.048
-2026-08-09,All DoCs,Registered,218,7722,0.0282
-2026-08-10,All DoCs,Registered,249,7722,0.0322
-2026-08-11,All DoCs,Registered,299,7722,0.0387
-2026-08-12,All DoCs,Registered,402,7722,0.0521
-2026-08-13,All DoCs,Registered,692,7722,0.0896
-2026-08-14,All DoCs,Registered,628,7722,0.0813
-2026-08-15,All DoCs,Registered,774,7722,0.1002
-2026-08-16,All DoCs,Registered,613,7722,0.0794
-2026-08-17,All DoCs,Registered,500,7722,0.0648
-2026-08-18,All DoCs,Registered,492,7722,0.0637
-2026-08-19,All DoCs,Registered,677,7722,0.0877
-2026-08-20,All DoCs,Registered,553,7722,0.0716
-2026-08-21,All DoCs,Registered,429,7722,0.0556
-2026-08-22,All DoCs,Registered,514,7722,0.0666
-2026-08-23,All DoCs,Registered,479,7722,0.062
-2026-08-24,All DoCs,Registered,512,7722,0.0663
-2026-08-25,All DoCs,Registered,410,7722,0.0531
-2026-08-26,All DoCs,Registered,418,7722,0.0541
-2026-08-27,All DoCs,Registered,444,7722,0.0575
-2026-08-28,All DoCs,Registered,427,7722,0.0553
-2026-08-29,All DoCs,Registered,495,7722,0.0641
-2026-08-30,All DoCs,Registered,596,7722,0.0772
-2026-08-31,All DoCs,Registered,940,7722,0.1217
-2026-09-01,All DoCs,Registered,902,7722,0.1168
-2026-09-02,All DoCs,Registered,686,7722,0.0888
-2026-09-03,All DoCs,Registered,617,7722,0.0799
-2026-09-04,All DoCs,Registered,538,7722,0.0697
-2026-09-05,All DoCs,Registered,394,7722,0.051
-2026-09-06,All DoCs,Registered,429,7722,0.0556
-2026-09-07,All DoCs,Registered,397,7722,0.0514
-2026-09-08,All DoCs,Registered,507,7722,0.0657
-2026-09-09,All DoCs,Registered,365,7722,0.0473
-2026-09-10,All DoCs,Registered,347,7722,0.0449
-2026-09-11,All DoCs,Registered,377,7722,0.0488
-2026-09-12,All DoCs,Registered,262,7722,0.0339
-2026-09-13,All DoCs,Registered,244,7722,0.0316
-2026-09-14,All DoCs,Registered,302,7722,0.0391
-2026-09-15,All DoCs,Registered,685,7722,0.0887
-2026-09-16,All DoCs,Registered,1238,7722,0.1603
-2026-09-17,All DoCs,Registered,1122,7722,0.1453
-2026-09-18,All DoCs,Registered,828,7722,0.1072
-2026-09-19,All DoCs,Registered,784,7722,0.1015
-2026-09-20,All DoCs,Registered,694,7722,0.0899
-2026-09-21,All DoCs,Registered,374,7722,0.0484
-2026-09-22,All DoCs,Registered,565,7722,0.0732
-2026-09-23,All DoCs,Registered,675,7722,0.0874
-2026-09-24,All DoCs,Registered,534,7722,0.0692
-2026-09-25,All DoCs,Registered,535,7722,0.0693
-2026-09-26,All DoCs,Registered,422,7722,0.0546
-2026-09-27,All DoCs,Registered,553,7722,0.0716
-2026-09-28,All DoCs,Registered,440,7722,0.057
-2026-09-29,All DoCs,Registered,646,7722,0.0837
-2026-09-30,All DoCs,Registered,537,7722,0.0695
-2026-10-01,All DoCs,Registered,442,7722,0.0572
-2026-10-02,All DoCs,Registered,529,7722,0.0685
-2026-10-03,All DoCs,Registered,459,7722,0.0594
-2026-10-04,All DoCs,Registered,490,7722,0.0635
-2026-10-05,All DoCs,Registered,337,7722,0.0436
-2026-10-06,All DoCs,Registered,471,7722,0.061
-2026-10-07,All DoCs,Registered,275,7722,0.0356
-2026-10-08,All DoCs,Registered,206,7722,0.0267
-2026-10-09,All DoCs,Registered,138,7722,0.0179
-2026-10-10,All DoCs,Registered,306,7722,0.0396
-2026-10-11,All DoCs,Registered,214,7722,0.0277
-2026-10-12,All DoCs,Registered,193,7722,0.025
-2026-10-13,All DoCs,Registered,351,7722,0.0455
-2026-10-14,All DoCs,Registered,224,7722,0.029
-2026-10-15,All DoCs,Registered,422,7722,0.0546
-2026-10-16,All DoCs,Registered,462,7722,0.0598
-2026-10-17,All DoCs,Registered,312,7722,0.0404
-2026-10-18,All DoCs,Registered,310,7722,0.0401
-2026-10-19,All DoCs,Registered,190,7722,0.0246
-2026-10-20,All DoCs,Registered,232,7722,0.03
-2026-10-21,All DoCs,Registered,293,7722,0.0379
-2026-10-22,All DoCs,Registered,391,7722,0.0506
-2026-10-23,All DoCs,Registered,491,7722,0.0636
-2026-10-24,All DoCs,Registered,349,7722,0.0452
-2026-10-25,All DoCs,Registered,442,7722,0.0572
-2026-10-26,All DoCs,Registered,409,7722,0.053
-2026-10-27,All DoCs,Registered,287,7722,0.0372
-2026-10-28,All DoCs,Registered,367,7722,0.0475
-2026-10-29,All DoCs,Registered,327,7722,0.0423
-2026-10-30,All DoCs,Registered,356,7722,0.0461
-2026-10-31,All DoCs,Registered,411,7722,0.0532
+2026-08-03,All DoCs,Registered,399,7724,0.0517
+2026-08-04,All DoCs,Registered,424,7724,0.0549
+2026-08-05,All DoCs,Registered,546,7724,0.0707
+2026-08-06,All DoCs,Registered,454,7724,0.0588
+2026-08-07,All DoCs,Registered,319,7724,0.0413
+2026-08-08,All DoCs,Registered,371,7724,0.048
+2026-08-09,All DoCs,Registered,218,7724,0.0282
+2026-08-10,All DoCs,Registered,249,7724,0.0322
+2026-08-11,All DoCs,Registered,299,7724,0.0387
+2026-08-12,All DoCs,Registered,402,7724,0.052
+2026-08-13,All DoCs,Registered,692,7724,0.0896
+2026-08-14,All DoCs,Registered,628,7724,0.0813
+2026-08-15,All DoCs,Registered,774,7724,0.1002
+2026-08-16,All DoCs,Registered,613,7724,0.0794
+2026-08-17,All DoCs,Registered,500,7724,0.0647
+2026-08-18,All DoCs,Registered,492,7724,0.0637
+2026-08-19,All DoCs,Registered,677,7724,0.0876
+2026-08-20,All DoCs,Registered,553,7724,0.0716
+2026-08-21,All DoCs,Registered,429,7724,0.0555
+2026-08-22,All DoCs,Registered,514,7724,0.0665
+2026-08-23,All DoCs,Registered,479,7724,0.062
+2026-08-24,All DoCs,Registered,512,7724,0.0663
+2026-08-25,All DoCs,Registered,410,7724,0.0531
+2026-08-26,All DoCs,Registered,418,7724,0.0541
+2026-08-27,All DoCs,Registered,446,7724,0.0577
+2026-08-28,All DoCs,Registered,427,7724,0.0553
+2026-08-29,All DoCs,Registered,495,7724,0.0641
+2026-08-30,All DoCs,Registered,596,7724,0.0772
+2026-08-31,All DoCs,Registered,940,7724,0.1217
+2026-09-01,All DoCs,Registered,902,7724,0.1168
+2026-09-02,All DoCs,Registered,686,7724,0.0888
+2026-09-03,All DoCs,Registered,617,7724,0.0799
+2026-09-04,All DoCs,Registered,538,7724,0.0697
+2026-09-05,All DoCs,Registered,394,7724,0.051
+2026-09-06,All DoCs,Registered,429,7724,0.0555
+2026-09-07,All DoCs,Registered,397,7724,0.0514
+2026-09-08,All DoCs,Registered,507,7724,0.0656
+2026-09-09,All DoCs,Registered,365,7724,0.0473
+2026-09-10,All DoCs,Registered,347,7724,0.0449
+2026-09-11,All DoCs,Registered,377,7724,0.0488
+2026-09-12,All DoCs,Registered,262,7724,0.0339
+2026-09-13,All DoCs,Registered,244,7724,0.0316
+2026-09-14,All DoCs,Registered,302,7724,0.0391
+2026-09-15,All DoCs,Registered,685,7724,0.0887
+2026-09-16,All DoCs,Registered,1238,7724,0.1603
+2026-09-17,All DoCs,Registered,1122,7724,0.1453
+2026-09-18,All DoCs,Registered,828,7724,0.1072
+2026-09-19,All DoCs,Registered,784,7724,0.1015
+2026-09-20,All DoCs,Registered,694,7724,0.0898
+2026-09-21,All DoCs,Registered,374,7724,0.0484
+2026-09-22,All DoCs,Registered,565,7724,0.0731
+2026-09-23,All DoCs,Registered,675,7724,0.0874
+2026-09-24,All DoCs,Registered,534,7724,0.0691
+2026-09-25,All DoCs,Registered,535,7724,0.0693
+2026-09-26,All DoCs,Registered,422,7724,0.0546
+2026-09-27,All DoCs,Registered,553,7724,0.0716
+2026-09-28,All DoCs,Registered,440,7724,0.057
+2026-09-29,All DoCs,Registered,646,7724,0.0836
+2026-09-30,All DoCs,Registered,537,7724,0.0695
+2026-10-01,All DoCs,Registered,442,7724,0.0572
+2026-10-02,All DoCs,Registered,529,7724,0.0685
+2026-10-03,All DoCs,Registered,459,7724,0.0594
+2026-10-04,All DoCs,Registered,490,7724,0.0634
+2026-10-05,All DoCs,Registered,337,7724,0.0436
+2026-10-06,All DoCs,Registered,471,7724,0.061
+2026-10-07,All DoCs,Registered,275,7724,0.0356
+2026-10-08,All DoCs,Registered,206,7724,0.0267
+2026-10-09,All DoCs,Registered,138,7724,0.0179
+2026-10-10,All DoCs,Registered,306,7724,0.0396
+2026-10-11,All DoCs,Registered,214,7724,0.0277
+2026-10-12,All DoCs,Registered,193,7724,0.025
+2026-10-13,All DoCs,Registered,351,7724,0.0454
+2026-10-14,All DoCs,Registered,224,7724,0.029
+2026-10-15,All DoCs,Registered,422,7724,0.0546
+2026-10-16,All DoCs,Registered,462,7724,0.0598
+2026-10-17,All DoCs,Registered,312,7724,0.0404
+2026-10-18,All DoCs,Registered,310,7724,0.0401
+2026-10-19,All DoCs,Registered,190,7724,0.0246
+2026-10-20,All DoCs,Registered,232,7724,0.03
+2026-10-21,All DoCs,Registered,293,7724,0.0379
+2026-10-22,All DoCs,Registered,391,7724,0.0506
+2026-10-23,All DoCs,Registered,491,7724,0.0636
+2026-10-24,All DoCs,Registered,349,7724,0.0452
+2026-10-25,All DoCs,Registered,442,7724,0.0572
+2026-10-26,All DoCs,Registered,409,7724,0.053
+2026-10-27,All DoCs,Registered,287,7724,0.0372
+2026-10-28,All DoCs,Registered,367,7724,0.0475
+2026-10-29,All DoCs,Registered,327,7724,0.0423
+2026-10-30,All DoCs,Registered,356,7724,0.0461
+2026-10-31,All DoCs,Registered,411,7724,0.0532
 2026-08-03,All DoCs,Engaged,399,7583,0.0526
 2026-08-04,All DoCs,Engaged,424,7583,0.0559
 2026-08-05,All DoCs,Engaged,546,7583,0.072
@@ -203,7 +203,7 @@ date,doc,population,completions,people,per_person
 2026-08-24,All DoCs,Engaged,512,7583,0.0675
 2026-08-25,All DoCs,Engaged,410,7583,0.0541
 2026-08-26,All DoCs,Engaged,418,7583,0.0551
-2026-08-27,All DoCs,Engaged,444,7583,0.0586
+2026-08-27,All DoCs,Engaged,446,7583,0.0588
 2026-08-28,All DoCs,Engaged,427,7583,0.0563
 2026-08-29,All DoCs,Engaged,495,7583,0.0653
 2026-08-30,All DoCs,Engaged,596,7583,0.0786
@@ -293,7 +293,7 @@ date,doc,population,completions,people,per_person
 2026-08-24,All DoCs,Active,512,3493,0.1466
 2026-08-25,All DoCs,Active,410,3493,0.1174
 2026-08-26,All DoCs,Active,418,3493,0.1197
-2026-08-27,All DoCs,Active,444,3493,0.1271
+2026-08-27,All DoCs,Active,446,3493,0.1277
 2026-08-28,All DoCs,Active,427,3493,0.1222
 2026-08-29,All DoCs,Active,495,3493,0.1417
 2026-08-30,All DoCs,Active,596,3493,0.1706
@@ -7943,7 +7943,7 @@ date,doc,population,completions,people,per_person
 2026-08-24,Synergy Oceanic Services India Pvt Ltd,All onboard,2,322,0.0062
 2026-08-25,Synergy Oceanic Services India Pvt Ltd,All onboard,2,322,0.0062
 2026-08-26,Synergy Oceanic Services India Pvt Ltd,All onboard,3,322,0.0093
-2026-08-27,Synergy Oceanic Services India Pvt Ltd,All onboard,28,322,0.087
+2026-08-27,Synergy Oceanic Services India Pvt Ltd,All onboard,30,322,0.0932
 2026-08-28,Synergy Oceanic Services India Pvt Ltd,All onboard,33,322,0.1025
 2026-08-29,Synergy Oceanic Services India Pvt Ltd,All onboard,1,322,0.0031
 2026-08-30,Synergy Oceanic Services India Pvt Ltd,All onboard,4,322,0.0124
@@ -8033,7 +8033,7 @@ date,doc,population,completions,people,per_person
 2026-08-24,Synergy Oceanic Services India Pvt Ltd,Registered,2,200,0.01
 2026-08-25,Synergy Oceanic Services India Pvt Ltd,Registered,2,200,0.01
 2026-08-26,Synergy Oceanic Services India Pvt Ltd,Registered,3,200,0.015
-2026-08-27,Synergy Oceanic Services India Pvt Ltd,Registered,28,200,0.14
+2026-08-27,Synergy Oceanic Services India Pvt Ltd,Registered,30,200,0.15
 2026-08-28,Synergy Oceanic Services India Pvt Ltd,Registered,33,200,0.165
 2026-08-29,Synergy Oceanic Services India Pvt Ltd,Registered,1,200,0.005
 2026-08-30,Synergy Oceanic Services India Pvt Ltd,Registered,4,200,0.02
@@ -8123,7 +8123,7 @@ date,doc,population,completions,people,per_person
 2026-08-24,Synergy Oceanic Services India Pvt Ltd,Engaged,2,206,0.0097
 2026-08-25,Synergy Oceanic Services India Pvt Ltd,Engaged,2,206,0.0097
 2026-08-26,Synergy Oceanic Services India Pvt Ltd,Engaged,3,206,0.0146
-2026-08-27,Synergy Oceanic Services India Pvt Ltd,Engaged,28,206,0.1359
+2026-08-27,Synergy Oceanic Services India Pvt Ltd,Engaged,30,206,0.1456
 2026-08-28,Synergy Oceanic Services India Pvt Ltd,Engaged,33,206,0.1602
 2026-08-29,Synergy Oceanic Services India Pvt Ltd,Engaged,1,206,0.0049
 2026-08-30,Synergy Oceanic Services India Pvt Ltd,Engaged,4,206,0.0194
@@ -8213,7 +8213,7 @@ date,doc,population,completions,people,per_person
 2026-08-24,Synergy Oceanic Services India Pvt Ltd,Active,2,85,0.0235
 2026-08-25,Synergy Oceanic Services India Pvt Ltd,Active,2,85,0.0235
 2026-08-26,Synergy Oceanic Services India Pvt Ltd,Active,3,85,0.0353
-2026-08-27,Synergy Oceanic Services India Pvt Ltd,Active,28,85,0.3294
+2026-08-27,Synergy Oceanic Services India Pvt Ltd,Active,30,85,0.3529
 2026-08-28,Synergy Oceanic Services India Pvt Ltd,Active,33,85,0.3882
 2026-08-29,Synergy Oceanic Services India Pvt Ltd,Active,1,85,0.0118
 2026-08-30,Synergy Oceanic Services India Pvt Ltd,Active,4,85,0.0471
@@ -8729,96 +8729,96 @@ date,doc,population,completions,people,per_person
 2026-10-29,Synergy Pacific Private Limited,All onboard,117,2866,0.0408
 2026-10-30,Synergy Pacific Private Limited,All onboard,130,2866,0.0454
 2026-10-31,Synergy Pacific Private Limited,All onboard,146,2866,0.0509
-2026-08-03,Synergy Pacific Private Limited,Registered,162,2346,0.0691
-2026-08-04,Synergy Pacific Private Limited,Registered,128,2346,0.0546
-2026-08-05,Synergy Pacific Private Limited,Registered,110,2346,0.0469
-2026-08-06,Synergy Pacific Private Limited,Registered,130,2346,0.0554
-2026-08-07,Synergy Pacific Private Limited,Registered,117,2346,0.0499
-2026-08-08,Synergy Pacific Private Limited,Registered,79,2346,0.0337
-2026-08-09,Synergy Pacific Private Limited,Registered,85,2346,0.0362
-2026-08-10,Synergy Pacific Private Limited,Registered,84,2346,0.0358
-2026-08-11,Synergy Pacific Private Limited,Registered,93,2346,0.0396
-2026-08-12,Synergy Pacific Private Limited,Registered,126,2346,0.0537
-2026-08-13,Synergy Pacific Private Limited,Registered,196,2346,0.0835
-2026-08-14,Synergy Pacific Private Limited,Registered,141,2346,0.0601
-2026-08-15,Synergy Pacific Private Limited,Registered,109,2346,0.0465
-2026-08-16,Synergy Pacific Private Limited,Registered,120,2346,0.0512
-2026-08-17,Synergy Pacific Private Limited,Registered,167,2346,0.0712
-2026-08-18,Synergy Pacific Private Limited,Registered,86,2346,0.0367
-2026-08-19,Synergy Pacific Private Limited,Registered,164,2346,0.0699
-2026-08-20,Synergy Pacific Private Limited,Registered,268,2346,0.1142
-2026-08-21,Synergy Pacific Private Limited,Registered,153,2346,0.0652
-2026-08-22,Synergy Pacific Private Limited,Registered,157,2346,0.0669
-2026-08-23,Synergy Pacific Private Limited,Registered,219,2346,0.0934
-2026-08-24,Synergy Pacific Private Limited,Registered,236,2346,0.1006
-2026-08-25,Synergy Pacific Private Limited,Registered,132,2346,0.0563
-2026-08-26,Synergy Pacific Private Limited,Registered,123,2346,0.0524
-2026-08-27,Synergy Pacific Private Limited,Registered,144,2346,0.0614
-2026-08-28,Synergy Pacific Private Limited,Registered,101,2346,0.0431
-2026-08-29,Synergy Pacific Private Limited,Registered,143,2346,0.061
-2026-08-30,Synergy Pacific Private Limited,Registered,141,2346,0.0601
-2026-08-31,Synergy Pacific Private Limited,Registered,307,2346,0.1309
-2026-09-01,Synergy Pacific Private Limited,Registered,261,2346,0.1113
-2026-09-02,Synergy Pacific Private Limited,Registered,133,2346,0.0567
-2026-09-03,Synergy Pacific Private Limited,Registered,76,2346,0.0324
-2026-09-04,Synergy Pacific Private Limited,Registered,92,2346,0.0392
-2026-09-05,Synergy Pacific Private Limited,Registered,68,2346,0.029
-2026-09-06,Synergy Pacific Private Limited,Registered,80,2346,0.0341
-2026-09-07,Synergy Pacific Private Limited,Registered,82,2346,0.035
-2026-09-08,Synergy Pacific Private Limited,Registered,107,2346,0.0456
-2026-09-09,Synergy Pacific Private Limited,Registered,41,2346,0.0175
-2026-09-10,Synergy Pacific Private Limited,Registered,55,2346,0.0234
-2026-09-11,Synergy Pacific Private Limited,Registered,51,2346,0.0217
-2026-09-12,Synergy Pacific Private Limited,Registered,32,2346,0.0136
-2026-09-13,Synergy Pacific Private Limited,Registered,49,2346,0.0209
-2026-09-14,Synergy Pacific Private Limited,Registered,97,2346,0.0413
-2026-09-15,Synergy Pacific Private Limited,Registered,231,2346,0.0985
-2026-09-16,Synergy Pacific Private Limited,Registered,361,2346,0.1539
-2026-09-17,Synergy Pacific Private Limited,Registered,328,2346,0.1398
-2026-09-18,Synergy Pacific Private Limited,Registered,279,2346,0.1189
-2026-09-19,Synergy Pacific Private Limited,Registered,190,2346,0.081
-2026-09-20,Synergy Pacific Private Limited,Registered,255,2346,0.1087
-2026-09-21,Synergy Pacific Private Limited,Registered,86,2346,0.0367
-2026-09-22,Synergy Pacific Private Limited,Registered,214,2346,0.0912
-2026-09-23,Synergy Pacific Private Limited,Registered,214,2346,0.0912
-2026-09-24,Synergy Pacific Private Limited,Registered,205,2346,0.0874
-2026-09-25,Synergy Pacific Private Limited,Registered,263,2346,0.1121
-2026-09-26,Synergy Pacific Private Limited,Registered,181,2346,0.0772
-2026-09-27,Synergy Pacific Private Limited,Registered,157,2346,0.0669
-2026-09-28,Synergy Pacific Private Limited,Registered,179,2346,0.0763
-2026-09-29,Synergy Pacific Private Limited,Registered,294,2346,0.1253
-2026-09-30,Synergy Pacific Private Limited,Registered,226,2346,0.0963
-2026-10-01,Synergy Pacific Private Limited,Registered,146,2346,0.0622
-2026-10-02,Synergy Pacific Private Limited,Registered,154,2346,0.0656
-2026-10-03,Synergy Pacific Private Limited,Registered,151,2346,0.0644
-2026-10-04,Synergy Pacific Private Limited,Registered,124,2346,0.0529
-2026-10-05,Synergy Pacific Private Limited,Registered,98,2346,0.0418
-2026-10-06,Synergy Pacific Private Limited,Registered,90,2346,0.0384
-2026-10-07,Synergy Pacific Private Limited,Registered,86,2346,0.0367
-2026-10-08,Synergy Pacific Private Limited,Registered,100,2346,0.0426
-2026-10-09,Synergy Pacific Private Limited,Registered,50,2346,0.0213
-2026-10-10,Synergy Pacific Private Limited,Registered,125,2346,0.0533
-2026-10-11,Synergy Pacific Private Limited,Registered,55,2346,0.0234
-2026-10-12,Synergy Pacific Private Limited,Registered,71,2346,0.0303
-2026-10-13,Synergy Pacific Private Limited,Registered,118,2346,0.0503
-2026-10-14,Synergy Pacific Private Limited,Registered,67,2346,0.0286
-2026-10-15,Synergy Pacific Private Limited,Registered,142,2346,0.0605
-2026-10-16,Synergy Pacific Private Limited,Registered,147,2346,0.0627
-2026-10-17,Synergy Pacific Private Limited,Registered,103,2346,0.0439
-2026-10-18,Synergy Pacific Private Limited,Registered,86,2346,0.0367
-2026-10-19,Synergy Pacific Private Limited,Registered,50,2346,0.0213
-2026-10-20,Synergy Pacific Private Limited,Registered,59,2346,0.0251
-2026-10-21,Synergy Pacific Private Limited,Registered,138,2346,0.0588
-2026-10-22,Synergy Pacific Private Limited,Registered,211,2346,0.0899
-2026-10-23,Synergy Pacific Private Limited,Registered,273,2346,0.1164
-2026-10-24,Synergy Pacific Private Limited,Registered,143,2346,0.061
-2026-10-25,Synergy Pacific Private Limited,Registered,208,2346,0.0887
-2026-10-26,Synergy Pacific Private Limited,Registered,187,2346,0.0797
-2026-10-27,Synergy Pacific Private Limited,Registered,130,2346,0.0554
-2026-10-28,Synergy Pacific Private Limited,Registered,81,2346,0.0345
-2026-10-29,Synergy Pacific Private Limited,Registered,117,2346,0.0499
-2026-10-30,Synergy Pacific Private Limited,Registered,130,2346,0.0554
-2026-10-31,Synergy Pacific Private Limited,Registered,146,2346,0.0622
+2026-08-03,Synergy Pacific Private Limited,Registered,162,2347,0.069
+2026-08-04,Synergy Pacific Private Limited,Registered,128,2347,0.0545
+2026-08-05,Synergy Pacific Private Limited,Registered,110,2347,0.0469
+2026-08-06,Synergy Pacific Private Limited,Registered,130,2347,0.0554
+2026-08-07,Synergy Pacific Private Limited,Registered,117,2347,0.0499
+2026-08-08,Synergy Pacific Private Limited,Registered,79,2347,0.0337
+2026-08-09,Synergy Pacific Private Limited,Registered,85,2347,0.0362
+2026-08-10,Synergy Pacific Private Limited,Registered,84,2347,0.0358
+2026-08-11,Synergy Pacific Private Limited,Registered,93,2347,0.0396
+2026-08-12,Synergy Pacific Private Limited,Registered,126,2347,0.0537
+2026-08-13,Synergy Pacific Private Limited,Registered,196,2347,0.0835
+2026-08-14,Synergy Pacific Private Limited,Registered,141,2347,0.0601
+2026-08-15,Synergy Pacific Private Limited,Registered,109,2347,0.0464
+2026-08-16,Synergy Pacific Private Limited,Registered,120,2347,0.0511
+2026-08-17,Synergy Pacific Private Limited,Registered,167,2347,0.0712
+2026-08-18,Synergy Pacific Private Limited,Registered,86,2347,0.0366
+2026-08-19,Synergy Pacific Private Limited,Registered,164,2347,0.0699
+2026-08-20,Synergy Pacific Private Limited,Registered,268,2347,0.1142
+2026-08-21,Synergy Pacific Private Limited,Registered,153,2347,0.0652
+2026-08-22,Synergy Pacific Private Limited,Registered,157,2347,0.0669
+2026-08-23,Synergy Pacific Private Limited,Registered,219,2347,0.0933
+2026-08-24,Synergy Pacific Private Limited,Registered,236,2347,0.1006
+2026-08-25,Synergy Pacific Private Limited,Registered,132,2347,0.0562
+2026-08-26,Synergy Pacific Private Limited,Registered,123,2347,0.0524
+2026-08-27,Synergy Pacific Private Limited,Registered,144,2347,0.0614
+2026-08-28,Synergy Pacific Private Limited,Registered,101,2347,0.043
+2026-08-29,Synergy Pacific Private Limited,Registered,143,2347,0.0609
+2026-08-30,Synergy Pacific Private Limited,Registered,141,2347,0.0601
+2026-08-31,Synergy Pacific Private Limited,Registered,307,2347,0.1308
+2026-09-01,Synergy Pacific Private Limited,Registered,261,2347,0.1112
+2026-09-02,Synergy Pacific Private Limited,Registered,133,2347,0.0567
+2026-09-03,Synergy Pacific Private Limited,Registered,76,2347,0.0324
+2026-09-04,Synergy Pacific Private Limited,Registered,92,2347,0.0392
+2026-09-05,Synergy Pacific Private Limited,Registered,68,2347,0.029
+2026-09-06,Synergy Pacific Private Limited,Registered,80,2347,0.0341
+2026-09-07,Synergy Pacific Private Limited,Registered,82,2347,0.0349
+2026-09-08,Synergy Pacific Private Limited,Registered,107,2347,0.0456
+2026-09-09,Synergy Pacific Private Limited,Registered,41,2347,0.0175
+2026-09-10,Synergy Pacific Private Limited,Registered,55,2347,0.0234
+2026-09-11,Synergy Pacific Private Limited,Registered,51,2347,0.0217
+2026-09-12,Synergy Pacific Private Limited,Registered,32,2347,0.0136
+2026-09-13,Synergy Pacific Private Limited,Registered,49,2347,0.0209
+2026-09-14,Synergy Pacific Private Limited,Registered,97,2347,0.0413
+2026-09-15,Synergy Pacific Private Limited,Registered,231,2347,0.0984
+2026-09-16,Synergy Pacific Private Limited,Registered,361,2347,0.1538
+2026-09-17,Synergy Pacific Private Limited,Registered,328,2347,0.1398
+2026-09-18,Synergy Pacific Private Limited,Registered,279,2347,0.1189
+2026-09-19,Synergy Pacific Private Limited,Registered,190,2347,0.081
+2026-09-20,Synergy Pacific Private Limited,Registered,255,2347,0.1086
+2026-09-21,Synergy Pacific Private Limited,Registered,86,2347,0.0366
+2026-09-22,Synergy Pacific Private Limited,Registered,214,2347,0.0912
+2026-09-23,Synergy Pacific Private Limited,Registered,214,2347,0.0912
+2026-09-24,Synergy Pacific Private Limited,Registered,205,2347,0.0873
+2026-09-25,Synergy Pacific Private Limited,Registered,263,2347,0.1121
+2026-09-26,Synergy Pacific Private Limited,Registered,181,2347,0.0771
+2026-09-27,Synergy Pacific Private Limited,Registered,157,2347,0.0669
+2026-09-28,Synergy Pacific Private Limited,Registered,179,2347,0.0763
+2026-09-29,Synergy Pacific Private Limited,Registered,294,2347,0.1253
+2026-09-30,Synergy Pacific Private Limited,Registered,226,2347,0.0963
+2026-10-01,Synergy Pacific Private Limited,Registered,146,2347,0.0622
+2026-10-02,Synergy Pacific Private Limited,Registered,154,2347,0.0656
+2026-10-03,Synergy Pacific Private Limited,Registered,151,2347,0.0643
+2026-10-04,Synergy Pacific Private Limited,Registered,124,2347,0.0528
+2026-10-05,Synergy Pacific Private Limited,Registered,98,2347,0.0418
+2026-10-06,Synergy Pacific Private Limited,Registered,90,2347,0.0383
+2026-10-07,Synergy Pacific Private Limited,Registered,86,2347,0.0366
+2026-10-08,Synergy Pacific Private Limited,Registered,100,2347,0.0426
+2026-10-09,Synergy Pacific Private Limited,Registered,50,2347,0.0213
+2026-10-10,Synergy Pacific Private Limited,Registered,125,2347,0.0533
+2026-10-11,Synergy Pacific Private Limited,Registered,55,2347,0.0234
+2026-10-12,Synergy Pacific Private Limited,Registered,71,2347,0.0303
+2026-10-13,Synergy Pacific Private Limited,Registered,118,2347,0.0503
+2026-10-14,Synergy Pacific Private Limited,Registered,67,2347,0.0285
+2026-10-15,Synergy Pacific Private Limited,Registered,142,2347,0.0605
+2026-10-16,Synergy Pacific Private Limited,Registered,147,2347,0.0626
+2026-10-17,Synergy Pacific Private Limited,Registered,103,2347,0.0439
+2026-10-18,Synergy Pacific Private Limited,Registered,86,2347,0.0366
+2026-10-19,Synergy Pacific Private Limited,Registered,50,2347,0.0213
+2026-10-20,Synergy Pacific Private Limited,Registered,59,2347,0.0251
+2026-10-21,Synergy Pacific Private Limited,Registered,138,2347,0.0588
+2026-10-22,Synergy Pacific Private Limited,Registered,211,2347,0.0899
+2026-10-23,Synergy Pacific Private Limited,Registered,273,2347,0.1163
+2026-10-24,Synergy Pacific Private Limited,Registered,143,2347,0.0609
+2026-10-25,Synergy Pacific Private Limited,Registered,208,2347,0.0886
+2026-10-26,Synergy Pacific Private Limited,Registered,187,2347,0.0797
+2026-10-27,Synergy Pacific Private Limited,Registered,130,2347,0.0554
+2026-10-28,Synergy Pacific Private Limited,Registered,81,2347,0.0345
+2026-10-29,Synergy Pacific Private Limited,Registered,117,2347,0.0499
+2026-10-30,Synergy Pacific Private Limited,Registered,130,2347,0.0554
+2026-10-31,Synergy Pacific Private Limited,Registered,146,2347,0.0622
 2026-08-03,Synergy Pacific Private Limited,Engaged,162,2241,0.0723
 2026-08-04,Synergy Pacific Private Limited,Engaged,128,2241,0.0571
 2026-08-05,Synergy Pacific Private Limited,Engaged,110,2241,0.0491
@@ -9449,96 +9449,96 @@ date,doc,population,completions,people,per_person
 2026-10-29,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,0,136,0.0
 2026-10-30,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,0,136,0.0
 2026-10-31,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,0,136,0.0
-2026-08-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-04,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,5,66,0.0758
-2026-08-06,Wisdom Synergy Shipmanagement Pte Ltd,Registered,7,66,0.1061
-2026-08-07,Wisdom Synergy Shipmanagement Pte Ltd,Registered,2,66,0.0303
-2026-08-08,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,66,0.0152
-2026-08-09,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,66,0.0455
-2026-08-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,4,66,0.0606
-2026-08-11,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-13,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-14,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-15,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-16,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-18,Wisdom Synergy Shipmanagement Pte Ltd,Registered,4,66,0.0606
-2026-08-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,6,66,0.0909
-2026-08-20,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,66,0.0455
-2026-08-21,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-22,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-23,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-24,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-25,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,66,0.0152
-2026-08-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-27,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-08-28,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,66,0.0455
-2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,33,66,0.5
-2026-08-30,Wisdom Synergy Shipmanagement Pte Ltd,Registered,9,66,0.1364
-2026-08-31,Wisdom Synergy Shipmanagement Pte Ltd,Registered,17,66,0.2576
-2026-09-01,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-02,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,66,0.0152
-2026-09-04,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,66,0.0152
-2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,66,0.0152
-2026-09-06,Wisdom Synergy Shipmanagement Pte Ltd,Registered,5,66,0.0758
-2026-09-07,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-08,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-09,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-11,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-13,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-14,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-15,Wisdom Synergy Shipmanagement Pte Ltd,Registered,7,66,0.1061
-2026-09-16,Wisdom Synergy Shipmanagement Pte Ltd,Registered,6,66,0.0909
-2026-09-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,66,0.0455
-2026-09-18,Wisdom Synergy Shipmanagement Pte Ltd,Registered,2,66,0.0303
-2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-20,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-21,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-22,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-23,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-24,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-25,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-27,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-28,Wisdom Synergy Shipmanagement Pte Ltd,Registered,9,66,0.1364
-2026-09-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-09-30,Wisdom Synergy Shipmanagement Pte Ltd,Registered,13,66,0.197
-2026-10-01,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-02,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-04,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-06,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-07,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-08,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-09,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-11,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-13,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-14,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-15,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-16,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-18,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-20,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-21,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,66,0.0152
-2026-10-22,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-23,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-24,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-25,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-27,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-28,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-30,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
-2026-10-31,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,66,0.0
+2026-08-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-04,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,5,67,0.0746
+2026-08-06,Wisdom Synergy Shipmanagement Pte Ltd,Registered,7,67,0.1045
+2026-08-07,Wisdom Synergy Shipmanagement Pte Ltd,Registered,2,67,0.0299
+2026-08-08,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,67,0.0149
+2026-08-09,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,67,0.0448
+2026-08-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,4,67,0.0597
+2026-08-11,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-13,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-14,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-15,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-16,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-18,Wisdom Synergy Shipmanagement Pte Ltd,Registered,4,67,0.0597
+2026-08-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,6,67,0.0896
+2026-08-20,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,67,0.0448
+2026-08-21,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-22,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-23,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-24,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-25,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,67,0.0149
+2026-08-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-27,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-08-28,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,67,0.0448
+2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,33,67,0.4925
+2026-08-30,Wisdom Synergy Shipmanagement Pte Ltd,Registered,9,67,0.1343
+2026-08-31,Wisdom Synergy Shipmanagement Pte Ltd,Registered,17,67,0.2537
+2026-09-01,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-02,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,67,0.0149
+2026-09-04,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,67,0.0149
+2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,67,0.0149
+2026-09-06,Wisdom Synergy Shipmanagement Pte Ltd,Registered,5,67,0.0746
+2026-09-07,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-08,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-09,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-11,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-13,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-14,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-15,Wisdom Synergy Shipmanagement Pte Ltd,Registered,7,67,0.1045
+2026-09-16,Wisdom Synergy Shipmanagement Pte Ltd,Registered,6,67,0.0896
+2026-09-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,3,67,0.0448
+2026-09-18,Wisdom Synergy Shipmanagement Pte Ltd,Registered,2,67,0.0299
+2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-20,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-21,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-22,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-23,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-24,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-25,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-27,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-28,Wisdom Synergy Shipmanagement Pte Ltd,Registered,9,67,0.1343
+2026-09-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-09-30,Wisdom Synergy Shipmanagement Pte Ltd,Registered,13,67,0.194
+2026-10-01,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-02,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-04,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-06,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-07,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-08,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-09,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-11,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-13,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-14,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-15,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-16,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-18,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-20,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-21,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,67,0.0149
+2026-10-22,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-23,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-24,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-25,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-27,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-28,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-30,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
+2026-10-31,Wisdom Synergy Shipmanagement Pte Ltd,Registered,0,67,0.0
 2026-08-03,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,0,51,0.0
 2026-08-04,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,0,51,0.0
 2026-08-05,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,5,51,0.098
