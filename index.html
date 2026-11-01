@@ -1096,14 +1096,15 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (level === 'fleet') {
       const byDoc = new Map();
       for (const v of S.ves) { if (!byDoc.has(v.doc)) byDoc.set(v.doc, []); byDoc.get(v.doc).push(v); }
+      // search matches the DoC name (whole DoC) or vessel names (only the matching vessels are counted)
+      if (q) for (const [d, vs] of [...byDoc.entries()]) { if (d.toLowerCase().includes(q)) continue; const m = vs.filter((v) => v.vessel.toLowerCase().includes(q)); if (m.length) byDoc.set(d, m); else byDoc.delete(d); }
       let rows = [...byDoc.entries()].map(([d, vs]) => aggRow(d, vs.flatMap((v) => S.byV.get(v.vessel) || []), { vessels: vs.length, key: d }));
-      if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q));
       const total = aggRow('All DoCs', rows.flatMap((r) => [...byDoc.get(r.key)].flatMap((v) => S.byV.get(v.vessel) || [])), { vessels: rows.reduce((t, r) => t + r.vessels, 0) });
       return { S, level, first: 'DoC', extra: ['Vessels', 'vessels', F.int], cols: ACOLS, total, rows: rows.sort(hcmp) };
     }
     if (level === 'doc') {
       let vs = S.ves.filter((v) => v.doc === S.doc);
-      if (q) vs = vs.filter((v) => v.vessel.toLowerCase().includes(q));
+      if (q && !String(S.doc).toLowerCase().includes(q)) vs = vs.filter((v) => v.vessel.toLowerCase().includes(q));
       const rows = vs.map((v) => aggRow(v.vessel, S.byV.get(v.vessel) || [], { type: v.vessel_type, key: v.vessel, doc: v.doc, empty: !S.hasCrew.has(v.vessel) }));
       const total = aggRow(S.doc, vs.flatMap((v) => S.byV.get(v.vessel) || []), { vessels: vs.length });
       return { S, level, first: 'Vessel', extra: ['Type', 'type'], cols: ACOLS, total, rows: rows.sort(hcmp) };
@@ -1148,8 +1149,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (H.person && (Vw.level !== 'vessel' || H.personVessel !== S.vessel)) H.person = null;
     const PP = H.person ? S.people.find((r) => String(r.employee_id) === H.person) : null;
     Vw.person = PP;
-    if (Vw.level !== lastLevel) { if (lastLevel !== null) { H.q = ''; hq.value = ''; } H.sort = Vw.level === 'vessel' ? ['final_pct', -1] : (H.sort[0] === 'final_pct' ? ['comp', -1] : H.sort); lastLevel = Vw.level; }
-    hq.placeholder = Vw.level === 'fleet' ? 'Search DoCs' : Vw.level === 'doc' ? 'Search vessels' : 'Search personnel';
+    if (Vw.level !== lastLevel) { if (lastLevel !== null && !(lastLevel === 'fleet' && Vw.level === 'doc')) { H.q = ''; hq.value = ''; } H.sort = Vw.level === 'vessel' ? ['final_pct', -1] : (H.sort[0] === 'final_pct' ? ['comp', -1] : H.sort); lastLevel = Vw.level; }
+    hq.placeholder = Vw.level === 'fleet' ? 'Search DoC or vessel' : Vw.level === 'doc' ? 'Search vessel' : 'Search name, ID or rank';
     // breadcrumbs
     const cr = document.querySelector('.lx-hcrumbs');
     const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
@@ -1444,15 +1445,16 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     const [sk, sd] = S.sort;
     const cmpf = (a, b) => { const x = a[sk], y = b[sk]; if (typeof x === 'string' || typeof y === 'string') return String(x ?? '').localeCompare(String(y ?? '')) * sd; const xa = num(x), ya = num(y); if (xa == null && ya == null) return 0; if (xa == null) return 1; if (ya == null) return -1; return (xa - ya) * sd; };
     if (!S.rank) {
-      const by = d3.group(people, (r) => r.rank);
+      // search matches the rank (whole rank) or a person's name / ID (only the matching people are counted)
+      const hit = (r) => !S.q || String(r.rank).toLowerCase().includes(S.q) || [r.name, r.employee_id].join(' ').toLowerCase().includes(S.q);
+      const by = d3.group(people.filter(hit), (r) => r.rank);
       let rows = [...by.entries()].map(([r, list]) => agg(r, list));
-      if (S.q) rows = rows.filter((r) => r.name.toLowerCase().includes(S.q));
       const total = agg('All ranks', rows.flatMap((r) => by.get(r.name)));
       return { level: 'ranks', total, rows: rows.sort(cmpf), all, pop };
     }
     const inRank = people.filter((r) => r.rank === S.rank);
     let rows = inRank.filter(H.POPF[pop]).map((r) => { const m = mp.get(String(r.employee_id)); return { ...r, mand: m ? `${m.completed} / ${m.mandatory}` : null }; });
-    if (S.q) rows = rows.filter((r) => [r.name, r.employee_id].join(' ').toLowerCase().includes(S.q));
+    if (S.q) rows = rows.filter((r) => [r.name, r.employee_id, r.rank].join(' ').toLowerCase().includes(S.q));
     const pk = { comp: 'final_pct', name: 'name' }[sk] || sk;
     const isNum = LPCOLS().find((c) => c[1] === pk)?.[3];
     rows = rows.slice().sort((a, b) => { if (!isNum) return String(a[pk] ?? '').localeCompare(String(b[pk] ?? '')) * sd; const x = num(a[pk]), y = num(b[pk]); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * sd; });
@@ -1468,7 +1470,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     const es = sec.querySelector('.lx-leng'); es.value = S.eng ? 'st:' + S.eng : 'pop:' + V.pop;
     const lOff = [!S.rank, !S.eng && V.pop === window.SV.levelPop(!!S.rank), !S.q && !sec.querySelector('.lx-lq').value];
     sec.querySelectorAll('.fx[data-lfx]').forEach((x) => x.toggleAttribute('data-off', lOff[+x.dataset.lfx]));
-    sec.querySelector('.lx-lq').placeholder = V.level === 'ranks' ? 'Search ranks' : 'Search people';
+    sec.querySelector('.lx-lq').placeholder = V.level === 'ranks' ? 'Search rank or name' : 'Search name, ID or rank';
     const cr = sec.querySelector('.lx-lcrumbs');
     const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
     cr.replaceChildren(...(V.level === 'ranks' ? [el('span', null, `All ranks · ${label}`)] : [b(`All ranks · ${label}`, () => { S.rank = null; S.q = ''; sec.querySelector('.lx-lq').value = ''; draw(); }), el('span', 'sep', '›'), el('span', null, S.rank)]));
@@ -1500,7 +1502,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     };
     if (V.level === 'ranks') {
       tb.appendChild(aggTr({ ...V.total, name: `All ranks (${V.rows.length})` }, 'h0'));
-      for (const r of V.rows) tb.appendChild(aggTr(r, '', () => { S.rank = r.name; S.q = ''; sec.querySelector('.lx-lq').value = ''; draw(); }));
+      for (const r of V.rows) tb.appendChild(aggTr(r, '', () => { S.rank = r.name; draw(); }));
     } else {
       for (const p of V.rows) {
         const tr = el('tr', 'p click' + (p.classification === 'Not assessable' ? ' dim' : ''));
