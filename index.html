@@ -174,7 +174,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 <div class="sv">
   <header>
     <h1 id="top">Seaverse Dashboard</h1>
-    <p class="note-inline lx-asofl" style="margin:2px 0 0"><span id="asof">Updated 2 Nov 2026, 07:40 IST (02:10 UTC)</span></p>
+    <p class="note-inline lx-asofl" style="margin:2px 0 0"><span id="asof">Updated 2 Nov 2026, 13:40 IST (08:10 UTC)</span></p>
     <p class="take lx-take dash-skeleton" data-source="docs">—</p>
   </header>
 
@@ -193,7 +193,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   <div class="bar lx-globalctl" style="margin-top:calc(-1 * var(--cds-gap-sm))">
     <div style="display:flex;gap:var(--cds-gap-sm);align-items:center;flex-wrap:wrap">
       <div class="seg lx-pop" role="radiogroup" aria-label="Who to count">
-        <button role="radio" data-pop="All onboard">All onboard</button>
+        <button role="radio" data-pop="All onboard">All invitees</button>
         <button role="radio" data-pop="Registered">Registered</button>
         <button role="radio" data-pop="Engaged">Engaged</button>
         <button role="radio" data-pop="Active">Active</button>
@@ -285,7 +285,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
         <label class="fl">Vessel <span class="fw"><select class="lx-hves"></select><button class="fx" data-fx="2" title="Reset vessel and the filters after it" aria-label="Reset vessel">×</button></span></label>
         <label class="fl">Rank <span class="fw"><select class="lx-hrank"></select><button class="fx" data-fx="3" title="Reset rank and the filter after it" aria-label="Reset rank">×</button></span></label>
         <label class="fl">Engagement <span class="fw"><select class="lx-heng">
-          <option value="pop:All onboard">All onboard</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
+          <option value="pop:All onboard">All invitees</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
           <option value="st:Not registered">Not registered only</option><option value="st:Registered">Registered, no course yet</option><option value="st:Engaged">Engaged, nothing in 90 days</option>
         </select><button class="fx" data-fx="4" title="Reset engagement" aria-label="Reset engagement">×</button></span></label>
         <label class="fl">Search <span class="fw fs"><input type="search" class="lx-hq" placeholder="Search"><button class="fx" data-fx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
@@ -300,7 +300,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 
   <!-- RANKS & COURSES -->
   <section id="analysis" data-page="analysis" hidden>
-    <p class="note-inline" style="margin-bottom:var(--cds-gap-md)">Uses the DoC filter and the <span class="lx-popname">All onboard</span> counting toggle above.</p>
+    <p class="note-inline" style="margin-bottom:var(--cds-gap-md)">Uses the DoC filter and the <span class="lx-popname">All invitees</span> counting toggle above.</p>
     <div class="grid">
       <div class="card" id="rank-card"><h2>Compliance by rank</h2><p class="note">Average individual compliance for the 25 ranks with the most onboard crew. Right: average · assessable · registration coverage.</p><div class="chart lx-rank dash-skeleton" data-source="ranks"></div></div>
       <div class="card" id="vt-card"><h2>Compliance by vessel type</h2><p class="note">Average individual compliance. Right: average · assessable · registration coverage.</p><div class="chart lx-vt dash-skeleton" data-source="vtypes"></div></div>
@@ -320,13 +320,11 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <p class="note lx-cintro"></p>
       <div class="fbar">
         <label class="fl">Category <span class="fw"><select class="lx-ccat"><option value="">All categories</option><option value="Sea staff">Sea staff</option><option value="Trainee">Trainees</option><option value="Office staff">Office staff</option><option value="Off-board">Off-board sea staff</option></select><button class="fx" data-cfx="0" title="Reset category and the filters after it" aria-label="Reset category">×</button></span></label>
-        <label class="fl">Rank <span class="fw"><select class="lx-crank"></select><button class="fx" data-cfx="1" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
-        <label class="fl">Course <span class="fw"><select class="lx-ccourse"></select><button class="fx" data-cfx="2" title="Reset course and the filters after it" aria-label="Reset course">×</button></span></label>
-        <label class="fl">Engagement <span class="fw"><select class="lx-ceng">
-          <option value="pop:All onboard">All onboard</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
-          <option value="st:Not registered">Not registered only</option><option value="st:Registered">Registered, no course yet</option><option value="st:Engaged">Engaged, nothing in 90 days</option>
-        </select><button class="fx" data-cfx="3" title="Reset engagement and clear search" aria-label="Reset engagement">×</button></span></label>
-        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-cq" placeholder="Search"><button class="fx" data-cfx="4" title="Clear search" aria-label="Clear search">×</button></span></label>
+        <label class="fl">DoC <span class="fw"><select class="lx-cdoc"></select><button class="fx" data-cfx="1" title="Reset DoC and the filters after it" aria-label="Reset DoC">×</button></span></label>
+        <label class="fl">Vessel <span class="fw"><select class="lx-cves"></select><button class="fx" data-cfx="2" title="Reset vessel and the filters after it" aria-label="Reset vessel">×</button></span></label>
+        <label class="fl">Rank <span class="fw"><select class="lx-crank"></select><button class="fx" data-cfx="3" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
+        <label class="fl">Course <span class="fw"><select class="lx-ccourse"></select><button class="fx" data-cfx="4" title="Reset course and the filters after it" aria-label="Reset course">×</button></span></label>
+        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-cq" placeholder="Search"><button class="fx" data-cfx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
         <div class="fbtns"><button class="dl lx-cclr">Clear filters</button></div>
       </div>
       <p class="note-inline lx-cfilt" style="margin:0 0 var(--cds-gap-sm)"></p>
@@ -432,7 +430,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <div class="fbar">
         <label class="fl">Rank <span class="fw"><select class="lx-lrank"></select><button class="fx" data-lfx="0" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
         <label class="fl">Engagement <span class="fw"><select class="lx-leng">
-          <option value="pop:All onboard">All onboard</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
+          <option value="pop:All onboard">All invitees</option><option value="pop:Registered">Registered</option><option value="pop:Engaged">Engaged</option><option value="pop:Active">Active</option>
           <option value="st:Not registered">Not registered only</option><option value="st:Registered">Registered, no course yet</option><option value="st:Engaged">Engaged, nothing in 90 days</option>
         </select><button class="fx" data-lfx="1" title="Reset engagement and clear search" aria-label="Reset engagement">×</button></span></label>
         <label class="fl">Search <span class="fw fs"><input type="search" class="lx-lq" placeholder="Search"><button class="fx" data-lfx="2" title="Clear search" aria-label="Clear search">×</button></span></label>
@@ -473,14 +471,14 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <li><b>Engaged</b>: has started a first course on Seaverse, or has course history from the previous service provider. These are the <b>assessable</b> crew.</li>
       <li><b>Active</b>: engaged and has completed at least one course in the last 90 days (the rolling window).</li>
     </ul>
-    <p>The toggle picks who is counted, from widest to narrowest. The page opens on <b>Registered</b>. Drilling a table down to its list of people switches to <b>All onboard</b>, and going back up returns to the earlier view, unless you pick a different one yourself.</p>
+    <p>The toggle picks who is counted, from widest to narrowest. The page opens on <b>Registered</b>. Drilling a table down to its list of people switches to <b>All invitees</b>, and going back up returns to the earlier view, unless you pick a different one yourself.</p>
     <ul>
-      <li><b>All onboard</b>: every invitee. Crew not yet assessable count as <b>0%</b>, so this shows the whole fleet's position, registration gaps included.</li>
+      <li><b>All invitees</b>: everyone invited to Seaverse (for sea staff, every crew member onboard who has been sent an invite), registered or not. Crew not yet assessable count as <b>0%</b>, so this shows the whole fleet's position, registration gaps included.</li>
       <li><b>Registered</b>: crew who have completed registration (with or without a course started). Registered crew who haven't started yet count as <b>0%</b>.</li>
       <li><b>Engaged</b>: only the assessable crew, with nothing filled in as 0%.</li>
       <li><b>Active</b>: engaged crew with at least one course completed in the last 90 days.</li>
     </ul>
-    <p>So the figures rise from All onboard to Active. Headcounts, coverage and the funnel always cover everyone onboard.</p>
+    <p>So the figures rise from All invitees to Active. Headcounts, coverage and the funnel always cover everyone onboard.</p>
     <h2>Individual score (same model as v24)</h2>
     <ul>
       <li><b>First course start (E)</b>: the earliest course start. Records brought over from the previous provider without a start date count as starting on 1 Nov 2025 (the Seaverse roll-out).</li>
@@ -488,7 +486,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <li><b>A · Frequency</b>: courses completed in those eligible days ÷ expected × 100%. Not capped. Completions an admin marked complete (because of an app glitch) count like any other.</li>
       <li><b>B · Lifetime</b>: completed ÷ assigned × 100%.</li>
       <li><b>Final</b> = the higher of A and B. Compliant at 100% or more.</li>
-      <li><b>Not assessable</b>: invitees who haven't registered and registered crew who haven't started a course. They have no score of their own; in the All onboard and Registered views they count as 0%, and the Engaged and Active views leave them out.</li>
+      <li><b>Not assessable</b>: invitees who haven't registered and registered crew who haven't started a course. They have no score of their own; in the All invitees and Registered views they count as 0%, and the Engaged and Active views leave them out.</li>
     </ul>
     <p>Vessel, DoC and fleet <b>compliance</b> is the average of the final scores of the people counted. A few very active people can lift the average, so also check the share at target. Bands: on target 100%+, near 75–99%, below 50–74%, low 1–49%, none 0%.</p>
     <p><b>Example:</b> someone who first started a course 40 days ago and completed 4 since then, with 9 of 20 assigned courses done: expected = 40 ÷ 15.22 = 2.63, so A = 4 ÷ 2.63 = 152%, B = 45%, final = 152% (on target).</p>
@@ -497,7 +495,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <h2>Trainees and office staff</h2>
     <p>Scored exactly like sea staff (same stages, same 2-courses-a-month target, same counting toggle), but everyone in the group is counted, not just people onboard. Each page has a drill-down table: all ranks, then the people in a rank, with the same columns as Fleet summary. They will also be measured against a <b>set of mandatory courses per rank</b> once that list is supplied: mandatory completion = mandatory courses completed ÷ required, with each person's mandatory courses shown as completed, in progress, not started or not assigned.</p>
     <h2>Engagement filter</h2>
-    <p>The Engagement filter in each table and the All onboard / Registered / Engaged / Active toggle are linked: changing one changes the other. The filter also offers single stages (not registered only, registered with no course yet, engaged with nothing in 90 days); picking one sets the toggle to the view that contains it.</p>
+    <p>The Engagement filter in each table and the All invitees / Registered / Engaged / Active toggle are linked: changing one changes the other. The filter also offers single stages (not registered only, registered with no course yet, engaged with nothing in 90 days); picking one sets the toggle to the view that contains it.</p>
     <h2>Off-board crew</h2>
     <p>Sea staff whose status is not onboard: <b>assigned</b> to join a ship, <b>on leave</b> (onshore), or with no status set. Same stages as onboard crew. <b>Assigned</b> crew are scored exactly like onboard crew (2 courses a month, final = higher of frequency and lifetime) so they arrive compliance-ready; <b>on leave</b> crew have no target and are monitored on registration, activity in the last 90 days, lifetime completion (completed ÷ assigned) and courses left open more than 90 days. Last vessel and DoC come from the vessel still tagged on the profile; people with none are shown as "Not tagged". These people are not included in any onboard figure.</p>
     <h2>Feedback</h2>
@@ -507,7 +505,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <h2>Vessels</h2>
     <p>Every active vessel is listed, including those with no crew registered or onboard on Seaverse. DoC is the company the vessel is registered to.</p>
     <h2>Data</h2>
-    <p>Seaverse database export of 22 Oct 2026 plus the daily incremental updates to 2 Nov 2026, 07:40 IST / 02:10 UTC (the later run of each day, which includes the earlier one); reporting date 1 Nov 2026 (the last full day), with the 13-week trend at weekly reporting dates before it. Completions migrated from the previous provider count by their completion date but don't set the engagement date.</p>
+    <p>Seaverse database export of 22 Oct 2026 plus the daily incremental updates to 2 Nov 2026, 13:40 IST / 08:10 UTC (the later run of each day, which includes the earlier one); reporting date 1 Nov 2026 (the last full day), with the 13-week trend at weekly reporting dates before it. Completions migrated from the previous provider count by their completion date but don't set the engagement date.</p>
   </section>
 </div>
 
@@ -546,6 +544,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   // resets: stay at personnel level -> All onboard; back at the top -> the page default (Registered)
   window.SV.resetPop = (stillPL) => { if (stillPL) return window.SV.TBLPOP; A.key = A.seen = null; return window.SV.DEFPOP; };
   window.SV.levelPop = (isPL) => isPL ? window.SV.TBLPOP : window.SV.DEFPOP;
+  window.SV.popLabel = (p) => p === 'All onboard' ? 'All invitees' : p;   // display name for the widest counting view
   window.SV.pop = () => (['All onboard', 'Registered', 'Engaged', 'Active'].includes(dash.params().pop) ? dash.params().pop : window.SV.DEFPOP);
 
   let tab = 'sea';
@@ -663,7 +662,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   const STAGE_POP = { 'Not registered': 'All onboard', 'Registered': 'Registered', 'Engaged': 'Engaged' };
   window.SV.STAGE_POP = STAGE_POP;
   const POPNOTE = {
-    'All onboard': 'Every onboard invitee. Anyone not yet assessable (not registered, or no course started) counts as 0%.',
+    'All onboard': 'Everyone invited to Seaverse, registered or not. Anyone not yet assessable (not registered, or no course started) counts as 0%.',
     'Registered': 'Crew who have completed registration. Those who haven’t started a course yet count as 0%.',
     'Engaged': 'Started a first course on Seaverse or has previous-provider history: the assessable crew only.',
     'Active': 'Engaged and completed at least one course in the last 90 days.',
@@ -677,7 +676,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     const vessel = dash.params().vessel || null;
     popBtns.forEach((b) => b.setAttribute('aria-checked', b.dataset.pop === pop));
     document.querySelector('.lx-popnote').textContent = POPNOTE[pop];
-    document.querySelectorAll('.lx-popname').forEach((e) => e.textContent = pop);
+    document.querySelectorAll('.lx-popname').forEach((e) => e.textContent = window.SV.popLabel(pop));
     const D = dash.data('docs');
     const docs = D.status === 'ok' ? D.data : [];
     const list = [...new Set(docs.filter((r) => r.doc !== ALL).map((r) => r.doc))].sort();
@@ -862,7 +861,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       .map((r) => ({ doc: r.doc, v: num(r.lifetime_pool_pct) })).sort((a, b) => b.v - a.v);
     const fleet = docs.find((r) => r.doc === ALL && r.population === pop);
     const best = rows[0];
-    document.querySelector('.lx-lifenote').textContent = `All-time completed ÷ assigned courses, by DoC (${pop.toLowerCase()}). Fleet ${F.pct(fleet ? num(fleet.lifetime_pool_pct) : null)}${best ? ` · best DoC: ${best.doc} ${F.pct(best.v)}` : ''}. Dashed line = 80% target.`;
+    document.querySelector('.lx-lifenote').textContent = `All-time completed ÷ assigned courses, by DoC (${window.SV.popLabel(pop).toLowerCase()}). Fleet ${F.pct(fleet ? num(fleet.lifetime_pool_pct) : null)}${best ? ` · best DoC: ${best.doc} ${F.pct(best.v)}` : ''}. Dashed line = 80% target.`;
     box.querySelector('svg')?.remove();
     if (!rows.length) return;
     const W = box.clientWidth || 400, H = 220, m = { t: 10, r: 8, b: 70, l: 40 };
@@ -925,7 +924,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (R.status === 'error') { [bA, bT].forEach((b) => { b.classList.remove('dash-skeleton'); fail(b); }); return; }
     if (R.status !== 'ok') return; [bA, bT].forEach((b) => b.classList.remove('dash-skeleton'));
     const rows = R.data.filter((r) => r.doc === doc && r.population === pop).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), v: num(r.per_person) || 0, c: num(r.completions) || 0, n: num(r.people) }));
-    document.querySelector('.lx-dailynote').textContent = `Last 90 days to 1 Nov · ${doc === ALL ? 'all DoCs' : doc} · ${pop.toLowerCase()} (${F.int(rows[0] ? rows[0].n : 0)} people). Uses the DoC selector above.`;
+    document.querySelector('.lx-dailynote').textContent = `Last 90 days to 1 Nov · ${doc === ALL ? 'all DoCs' : doc} · ${window.SV.popLabel(pop).toLowerCase()} (${F.int(rows[0] ? rows[0].n : 0)} people). Uses the DoC selector above.`;
     const line = (box, key, target, fmtY, label) => {
       box.querySelector('svg')?.remove(); if (!rows.length) return;
       const W = box.clientWidth || 400, H = 220, m = { t: 12, r: 12, b: 24, l: 48 };
@@ -1160,7 +1159,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (PP) parts.push(el('span', 'sep', '›'), el('span', null, PP.name || PP.employee_id));
     cr.replaceChildren(...parts);
     document.querySelector('.lx-hintro').textContent = (Vw.level === 'fleet' ? 'Every DoC. Click a DoC to see its vessels.' : Vw.level === 'doc' ? 'Every active vessel under this DoC. Click a vessel to see its onboard personnel.' : 'Onboard personnel on this vessel.')
-      + ` Counting ${S.pop.toLowerCase()}; onboard, registered and coverage always count everyone onboard. Use the breadcrumb to go back up.`;
+      + ` Counting ${window.SV.popLabel(S.pop).toLowerCase()}; onboard, registered and coverage always count everyone onboard. Use the breadcrumb to go back up.`;
     const fl = [H.vt, H.rank, H.eng && heng.selectedOptions[0] && heng.selectedOptions[0].text, H.q && `“${H.q}”`].filter(Boolean);
     document.querySelector('.lx-hfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
     // table
@@ -1244,7 +1243,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     const Vw = window.SV._hv, S = Vw.S;
     const path = ['All DoCs', S.doc !== ALL && S.doc, S.vessel, Vw.person && Vw.person.name].filter(Boolean).join(' › ');
     const f = document.querySelector('.lx-hfilt').textContent.replace(/^Filtered: /, '') || 'none';
-    return { path, f, pop: S.pop };
+    return { path, f, pop: window.SV.popLabel(S.pop) };
   }
   const csvOf = (rows) => '﻿' + rows.map((r) => r.map((v) => { v = v == null ? '' : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }).join(',')).join('\n');
   const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
@@ -1474,8 +1473,8 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     const cr = sec.querySelector('.lx-lcrumbs');
     const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
     cr.replaceChildren(...(V.level === 'ranks' ? [el('span', null, `All ranks · ${label}`)] : [b(`All ranks · ${label}`, () => { S.rank = null; S.q = ''; sec.querySelector('.lx-lq').value = ''; draw(); }), el('span', 'sep', '›'), el('span', null, S.rank)]));
-    sec.querySelector('.lx-lintro').textContent = (V.level === 'ranks' ? `Every rank among ${label}. Click a rank to see its people.` : `Everyone with this rank, counting ${V.pop.toLowerCase()}. Use the breadcrumb to go back.`)
-      + ` Same scoring as sea staff: target 2 courses a month; compliance follows the counting toggle (${V.pop}). Mandatory shows completion against the rank's mandatory list once it is set.`;
+    sec.querySelector('.lx-lintro').textContent = (V.level === 'ranks' ? `Every rank among ${label}. Click a rank to see its people.` : `Everyone with this rank, counting ${window.SV.popLabel(V.pop).toLowerCase()}. Use the breadcrumb to go back.`)
+      + ` Same scoring as sea staff: target 2 courses a month; compliance follows the counting toggle (${window.SV.popLabel(V.pop)}). Mandatory shows completion against the rank's mandatory list once it is set.`;
     const fl = [S.eng && es.selectedOptions[0] && es.selectedOptions[0].text, S.q && `“${S.q}”`].filter(Boolean);
     sec.querySelector('.lx-lfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
     const tbl = sec.querySelector('.lx-ltbl');
@@ -1550,7 +1549,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
       rows = [cols.map((c) => c[0]), ...V.rows.map((p) => cols.map(([, key]) => key === 'band' ? (p.classification === 'Not assessable' ? p.stage : p.band) : (p[key] ?? '')))];
       title = `${label} · ${S.rank}`; totalFirst = false;
     }
-    const ctx = `${label}${S.rank ? ' › ' + S.rank : ''}${V.person ? ' › ' + V.person.name : ''} · counting ${V.pop} · filters: ${sec.querySelector('.lx-lfilt').textContent.replace(/^Filtered: /, '') || 'none'} · target 2 courses a month · reporting date ${X.REPORT.date}`;
+    const ctx = `${label}${S.rank ? ' › ' + S.rank : ''}${V.person ? ' › ' + V.person.name : ''} · counting ${window.SV.popLabel(V.pop)} · filters: ${sec.querySelector('.lx-lfilt').textContent.replace(/^Filtered: /, '') || 'none'} · target 2 courses a month · reporting date ${X.REPORT.date}`;
     const base = ('seaverse_' + title.replace(/ · /g, '_')).replace(/[^A-Za-z0-9 _-]+/g, '').trim().replace(/\s+/g, '_').slice(0, 80) + '_' + X.REPORT.iso;
     const kind = btn.dataset.dl;
     if (kind === 'xlsx') { const meta = [[title], [ctx], []]; X.saveFile(base + '.xlsx', X.xlsx(title, [...meta, ...rows], meta.length), btn); }
@@ -1657,14 +1656,14 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
 })();
 </script>
 <script>
-// Ranks & courses: course status by personnel (Category › Rank › Course › Engagement › Search)
+// Ranks & courses: course status by personnel (Category › DoC › Vessel › Rank › Course › Search); counts everyone in the filters
 (() => {
   const { ALL, num, F } = window.SV;
   const sec = document.getElementById('cstat-card');
   const qs = (s) => sec.querySelector(s);
-  const ccat = qs('.lx-ccat'), crank = qs('.lx-crank'), ccourse = qs('.lx-ccourse'), ceng = qs('.lx-ceng'), cq = qs('.lx-cq');
-  const C = { cat: '', rank: '', course: null, eng: '', q: '', person: null, auto: null, sortC: ['a', -1], sortP: ['status', 1], view: null };
-  const NCS = 32, D0 = Date.UTC(2020, 0, 1);
+  const ccat = qs('.lx-ccat'), cdoc = qs('.lx-cdoc'), cves = qs('.lx-cves'), crank = qs('.lx-crank'), ccourse = qs('.lx-ccourse'), cq = qs('.lx-cq');
+  const C = { cat: '', doc: '', ves: '', rank: '', course: null, q: '', person: null, auto: null, sortC: ['a', -1], sortP: ['status', 1], view: null };
+  const NCS = 32, NCV = 16, D0 = Date.UTC(2020, 0, 1);
   const dstr = (h) => h ? new Date(D0 + parseInt(h, 16) * 864e5).toISOString().slice(0, 10) : '';
   const CATLAB = { 'Sea staff': 'Sea staff (onboard)', 'Trainee': 'Trainees', 'Office staff': 'Office staff', 'Off-board': 'Off-board sea staff' };
   const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
@@ -1685,39 +1684,37 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     return pidx;
   }
   // scope tests shared by aggregate rows and people
-  const docOk = (r, doc) => doc === ALL ? true : (r.category === 'Sea staff' || r.category === 'Off-board' ? r.doc === doc : !!C.cat);
   const catOk = (r) => !C.cat || r.category === C.cat;
+  const docOk = (r) => !C.doc || r.doc === C.doc;
+  const vesOk = (r) => !C.ves || r.vessel === C.ves;
   const rankOk = (r) => !C.rank || r.rank === C.rank;
-  const engOk = (r, pop) => window.SV.H.POPF[pop](r) && (!C.eng || r.stage === C.eng);
+  const vshard = (v) => { let h = 0; for (const ch of v) h += ch.codePointAt(0); return 'cv_' + String(h % NCV).padStart(2, '0'); };
   // ---- events ----
   function leave() { const a = C.auto; C.person = null; C.auto = null; C.q = ''; cq.value = '';
-    if (a) { C.cat = a.cat; C.rank = a.rank; window.SV.clearStage(); if (dash.params().pop !== a.pop) { dash.setParams({ pop: a.pop }); return; } }
+    if (a) Object.assign(C, { cat: a.cat, doc: a.doc, ves: a.ves, rank: a.rank });
     draw(); }
-  function pick(p) { const prevPop = window.SV.pop(), nm = String(p.name || p.employee_id);
-    C.auto = { pop: prevPop, name: nm, cat: C.cat, rank: C.rank };
-    C.person = p; C.cat = p.category; C.rank = p.rank || ''; C.q = nm.toLowerCase(); cq.value = nm;
-    window.SV.clearStage(); let pop = 'All onboard';
-    if (p.stage === 'Active') pop = 'Active'; else if (window.SV.STAGE_POP[p.stage]) { C.eng = p.stage; pop = window.SV.STAGE_POP[p.stage]; }
-    if (pop !== prevPop) dash.setParams({ pop }); else draw(); }
+  function pick(p) { const nm = String(p.name || p.employee_id);
+    C.auto = { name: nm, cat: C.cat, doc: C.doc, ves: C.ves, rank: C.rank };
+    Object.assign(C, { person: p, cat: p.category, doc: p.doc || '', ves: p.vessel || '', rank: p.rank || '', q: nm.toLowerCase() }); cq.value = nm;
+    draw(); }
   let tq = null;
   cq.addEventListener('input', () => { clearTimeout(tq); const v = cq.value.trim();
     if (C.person && !v) { leave(); return; }
     tq = setTimeout(() => { C.q = v.toLowerCase(); if (C.person && C.auto && v !== C.auto.name) { C.person = null; C.auto = null; } draw(); }, 250); });
   ccat.addEventListener('change', () => { C.cat = ccat.value; C.person = null; C.auto = null; draw(); });
+  cdoc.addEventListener('change', () => { C.doc = cdoc.value; C.ves = ''; C.person = null; C.auto = null; draw(); });
+  cves.addEventListener('change', () => { C.ves = cves.value; C.person = null; C.auto = null; const P = people(); if (C.ves && P) { for (const r of P.values()) if (r.vessel === C.ves) { if (r.doc) C.doc = r.doc; break; } } draw(); });
   crank.addEventListener('change', () => { C.rank = crank.value; C.person = null; C.auto = null; draw(); });
   ccourse.addEventListener('change', () => { C.course = ccourse.value === '' ? null : +ccourse.value; C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw(); });
-  ceng.addEventListener('change', () => { window.SV.markUser(); const [t, v] = ceng.value.split(':'); window.SV.clearStage();
-    if (t === 'pop') dash.setParams({ pop: v }); else { C.eng = v; dash.setParams({ pop: window.SV.STAGE_POP[v] }); draw(); } });
-  { const prev = window.SV.clearStage; window.SV.clearStage = () => { C.eng = ''; prev && prev(); }; }
+
   sec.querySelectorAll('.fx[data-cfx]').forEach((b) => b.addEventListener('click', (e) => {
     e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return;
     const i = +b.dataset.cfx;
-    if (i === 4) { if (C.person) leave(); else { C.q = ''; cq.value = ''; draw(); } return; }
-    if (i <= 0) C.cat = ''; if (i <= 1) C.rank = ''; if (i <= 2) C.course = null;
-    C.person = null; C.auto = null; C.q = ''; cq.value = '';
-    window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(C.course != null) }); draw();
+    if (i === 5) { if (C.person) leave(); else { C.q = ''; cq.value = ''; draw(); } return; }
+    if (i <= 0) C.cat = ''; if (i <= 1) C.doc = ''; if (i <= 2) C.ves = ''; if (i <= 3) C.rank = ''; if (i <= 4) C.course = null;
+    C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw();
   }));
-  qs('.lx-cclr').addEventListener('click', () => { C.cat = C.rank = ''; C.course = null; C.person = null; C.auto = null; C.q = ''; cq.value = ''; window.SV.clearStage(); dash.setParams({ pop: window.SV.resetPop(false) }); draw(); });
+  qs('.lx-cclr').addEventListener('click', () => { C.cat = C.doc = C.ves = C.rank = ''; C.course = null; C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw(); });
   sec.querySelectorAll('.lx-cdl [data-dl]').forEach((b) => b.addEventListener('click', () => exportCS(b)));
   // ---- view ----
   const CCOLS = [['Assigned', 'a', F.int], ['Not started', 'ns', F.int], ['In progress', 'ip', F.int], ['Started', 'st', F.int], ['Completed', 'cp', F.int], ['Completion', 'pct', F.pct]];
@@ -1725,20 +1722,27 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     ['Status', 'status'], ['Assigned', 'ad', F.date], ['Started', 'sd', F.date], ['Completed', 'cd', F.date]];
   const ORDER = { 'Completed': 1, 'Completed (admin)': 2, 'In progress': 3, 'Not started': 4 };
   function view() {
-    const doc = window.SV.doc(), pop = window.SV.pop();
-    const A = dash.data('course_agg'), T = titleMap();
-    if (A.status !== 'ok' || !T) return { loading: true };
-    const base = A.data.filter((r) => docOk(r, doc));
-    const ranks = [...new Set(base.filter(catOk).map((r) => r.rank).filter(Boolean))].sort();
+    const A = dash.data('course_agg'), T = titleMap(), P = people();
+    if (A.status !== 'ok' || !T || !P) return { loading: true };
+    const ppl = [...P.values()].filter(catOk);
+    const docs = [...new Set(ppl.map((r) => r.doc).filter(Boolean))].sort((a, b) => (a === 'Not tagged') - (b === 'Not tagged') || a.localeCompare(b));
+    if (C.doc && !docs.includes(C.doc)) C.doc = '';
+    const p2 = ppl.filter(docOk);
+    const vessels = [...new Set(p2.map((r) => r.vessel).filter(Boolean))].sort();
+    if (C.ves && !vessels.includes(C.ves)) C.ves = '';
+    let src = A.data, vshardId = null;
+    if (C.ves) { vshardId = vshard(C.ves); const VS = dash.data(vshardId); if (VS.status !== 'ok') return { loading: true, docs, vessels, shardExtra: vshardId }; src = VS.data.filter((r) => r.vessel === C.ves); }
+    const base = src.filter((r) => catOk(r) && (C.ves || docOk(r)));
+    const ranks = [...new Set(base.map((r) => r.rank).filter(Boolean))].sort();
     if (C.rank && !ranks.includes(C.rank)) C.rank = '';
-    const scope = base.filter((r) => catOk(r) && rankOk(r));
+    const scope = base.filter(rankOk);
     const avail = new Set(); for (const r of scope) for (const s of r.s.split(';')) avail.add(parseInt(s, 16));
     const courses = [...avail].map((ci) => ({ ci, title: T.get(ci) || `Course ${ci}` })).sort((a, b) => a.title.localeCompare(b.title));
     if (C.course != null && !avail.has(C.course)) C.course = null;
-    const out = { doc, pop, ranks, courses, T };
+    const out = { docs, vessels, ranks, courses, T, shardExtra: vshardId };
     if (C.course == null) {
       const sum = new Map();
-      for (const r of scope) { if (!engOk(r, pop)) continue;
+      for (const r of scope) {
         for (const s of r.s.split(';')) { const [ci, a, ip, cp] = s.split('.').map((x) => parseInt(x, 16)); const o = sum.get(ci) || { ci, a: 0, ip: 0, cp: 0 }; o.a += a; o.ip += ip; o.cp += cp; sum.set(ci, o); } }
       let rows = [...sum.values()].map((o) => ({ ...o, name: T.get(o.ci) || `Course ${o.ci}`, ns: o.a - o.ip - o.cp, st: o.ip + o.cp, pct: o.a ? o.cp / o.a * 100 : null }));
       if (C.q) rows = rows.filter((r) => r.name.toLowerCase().includes(C.q));
@@ -1749,14 +1753,14 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
       return { ...out, level: 'courses', rows, total };
     }
     const shard = 'cs_' + String(C.course % NCS).padStart(2, '0');
-    const SH = dash.data(shard), P = people();
-    if (SH.status !== 'ok' || !P) return { ...out, level: 'course', shard, loading: true };
+    const SH = dash.data(shard);
+    if (SH.status !== 'ok') return { ...out, level: 'course', shard, loading: true };
     const rec = SH.data.find((r) => num(r.ci) === C.course) || { a: '', n: '' };
     const list = [];
     for (const s of (rec.a || '').split(';').filter(Boolean)) { const [pi, k, ad, sd, cd] = s.split('.'); list.push({ pi: parseInt(pi, 16), status: k === '2' ? 'In progress' : k === '3' ? 'Completed (admin)' : 'Completed', ad: dstr(ad), sd: dstr(sd), cd: dstr(cd) }); }
     for (const g of (rec.n || '').split(';').filter(Boolean)) { const [ad, pis] = g.split(':'); const a = dstr(ad); for (const pi of pis.split(',')) list.push({ pi: parseInt(pi, 16), status: 'Not started', ad: a, sd: '', cd: '' }); }
     let rows = [];
-    for (const x of list) { const p = P.get(x.pi); if (!p || !docOk(p, doc) || !catOk(p) || !rankOk(p) || !engOk(p, pop)) continue; rows.push({ ...x, p, name: p.name, employee_id: p.employee_id, category: CATLAB[p.category] || p.category, rank: p.rank, vessel: p.vessel || '', doc: p.doc || '', stage: p.stage }); }
+    for (const x of list) { const p = P.get(x.pi); if (!p || !catOk(p) || !docOk(p) || !vesOk(p) || !rankOk(p)) continue; rows.push({ ...x, p, name: p.name, employee_id: p.employee_id, category: CATLAB[p.category] || p.category, rank: p.rank, vessel: p.vessel || '', doc: p.doc || '', stage: p.stage }); }
     const all = rows;
     if (C.q) rows = rows.filter((r) => [r.name, r.employee_id, r.vessel].join(' ').toLowerCase().includes(C.q));
     const [k, d] = C.sortP;
@@ -1767,10 +1771,11 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
   }
   function drawCS() {
     if (window.SV.tab !== 'analysis') return;
-    window.SV.drill('analysis', C.course != null);
     const V = view();
     const box = qs('.lx-cbox'), pc = qs('.lx-cpcard'), tbl = qs('.lx-ctbl');
-    box.dataset.source = 'course_agg course_idx sea_staff learners offboard' + (V.shard ? ' ' + V.shard : '');
+    box.dataset.source = 'course_agg course_idx sea_staff learners offboard' + (V.shard ? ' ' + V.shard : '') + (V.shardExtra ? ' ' + V.shardExtra : '');
+    const setSel = (sel, list, allLab, v) => { const key = list.join('|'); if (sel.dataset.k !== key) { sel.replaceChildren(new Option(allLab, ''), ...list.map((x) => new Option(x, x))); sel.dataset.k = key; } sel.value = v; };
+    if (V.docs) { setSel(cdoc, V.docs, 'All DoCs', C.doc); setSel(cves, V.vessels, 'All vessels', C.ves); }
     if (V.loading && !V.courses) { tbl.replaceChildren(el('caption', 'note-inline', 'Loading course status…')); return; }
     // filters (cascade)
     ccat.value = C.cat;
@@ -1778,13 +1783,12 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     crank.value = C.rank;
     const ck = V.courses.map((c) => c.ci).join('|'); if (ccourse.dataset.k !== ck) { ccourse.replaceChildren(new Option('All courses', ''), ...V.courses.map((c) => new Option(c.title, c.ci))); ccourse.dataset.k = ck; }
     ccourse.value = C.course == null ? '' : String(C.course);
-    ceng.value = C.eng ? 'st:' + C.eng : 'pop:' + V.pop;
-    const off = [!C.cat, !C.rank, C.course == null, !C.eng && V.pop === window.SV.levelPop(C.course != null), !C.q && !cq.value];
+    const off = [!C.cat, !C.doc, !C.ves, !C.rank, C.course == null, !C.q && !cq.value];
     sec.querySelectorAll('.fx[data-cfx]').forEach((x) => x.toggleAttribute('data-off', off[+x.dataset.cfx]));
     cq.placeholder = V.level === 'courses' ? 'Search courses' : 'Search people';
-    const fl = [C.cat && CATLAB[C.cat], C.rank, C.eng && ceng.selectedOptions[0] && ceng.selectedOptions[0].text, C.q && `“${C.q}”`].filter(Boolean);
+    const fl = [C.cat && CATLAB[C.cat], C.doc, C.ves, C.rank, C.q && `“${C.q}”`].filter(Boolean);
     qs('.lx-cfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
-    const docNote = V.doc !== ALL ? ` DoC filter (${V.doc}) applies to sea staff${C.cat && C.cat !== 'Sea staff' ? '; trainees and office staff have no DoC, so it is ignored here' : '; trainees and office staff are left out while a DoC is selected; off-board crew with no DoC tagged are left out too'}.` : '';
+    const docNote = '';
     // breadcrumb
     const cr = qs('.lx-ccrumbs');
     const b = (t, fn) => { const x = el('button', null, t); x.addEventListener('click', fn); return x; };
@@ -1807,7 +1811,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     qs('.lx-cintro').textContent = (V.level === 'courses'
       ? 'Assigned, started and completed courses for the people in the filters, counted per assignment. Click a course to see who it is assigned to.'
       : 'Everyone in the filters who is assigned this course, with their status and dates. Click a person to open their record.')
-      + ` Counting ${V.pop.toLowerCase()}. Sea staff (onboard) are the crew onboard today; off-board sea staff are those assigned to join or on leave.` + docNote;
+      + ' Everyone in the filters is counted, registered or not. Sea staff (onboard) are the crew onboard today; off-board sea staff are those assigned to join or on leave. These filters are separate from the DoC selector at the top of the page.';
     const thead = el('thead'), hr = el('tr'), tb = el('tbody');
     const sortTh = (l, key, n, st) => { const th = el('th', n ? 'num' : ''); const bt = el('button', null, l); th.appendChild(bt);
       bt.addEventListener('click', () => { C[st] = C[st][0] === key ? [key, -C[st][1]] : [key, n ? -1 : 1]; draw(); });
@@ -1838,7 +1842,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     if (V.person) { rows = window.SV.P.rows(V.person); if (!rows) return; title = `${V.person.name} · course records`; totalFirst = false; }
     else if (V.level === 'courses') { const line = (r) => [r.name, ...CCOLS.map(([, k]) => X.r1(r[k]) ?? '')]; rows = [['Course', ...CCOLS.map((c) => c[0])], line({ ...V.total, name: 'All courses' }), ...V.rows.map(line)]; title = 'Course status · all courses'; totalFirst = true; }
     else { rows = [PCOLS.map((c) => c[0]), ...V.rows.map((r) => PCOLS.map(([, k]) => r[k] ?? ''))]; title = `Course status · ${V.title}`; totalFirst = false; }
-    const ctx = `Course status by personnel${V.title ? ' › ' + V.title : ''}${V.person ? ' › ' + V.person.name : ''} · DoC ${V.doc} · counting ${V.pop} · filters: ${qs('.lx-cfilt').textContent.replace(/^Filtered: /, '') || 'none'} · reporting date ${X.REPORT.date}`;
+    const ctx = `Course status by personnel${V.title ? ' › ' + V.title : ''}${V.person ? ' › ' + V.person.name : ''} · filters: ${qs('.lx-cfilt').textContent.replace(/^Filtered: /, '') || 'none'} · reporting date ${X.REPORT.date}`;
     const base = ('seaverse_' + title.replace(/ · /g, '_')).replace(/[^A-Za-z0-9 _-]+/g, '').trim().replace(/\s+/g, '_').slice(0, 80) + '_' + X.REPORT.iso;
     const kind = btn.dataset.dl;
     if (kind === 'xlsx') { const meta = [[title], [ctx], []]; X.saveFile(base + '.xlsx', X.xlsx(title, [...meta, ...rows], meta.length), btn); }
