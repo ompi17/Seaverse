@@ -154,7 +154,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <p class="note-inline ins-snap" style="margin:2px 0 0"></p>
   </div>
   <div class="tabs" role="tablist">
-    <button class="tab" role="tab" data-tab="comp" aria-selected="true">Compulsory training</button>
+    <button class="tab" role="tab" data-tab="plan" aria-selected="true">Learning plans</button>
+    <button class="tab" role="tab" data-tab="comp">Compulsory training</button>
     <button class="tab" role="tab" data-tab="cert">Certificates &amp; validity</button>
     <button class="tab" role="tab" data-tab="act">Logins &amp; app use</button>
     <button class="tab" role="tab" data-tab="cont">Content</button>
@@ -166,11 +167,11 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   <section data-page="people" class="ins-people">
     <p class="note-inline ins-pintro" style="margin:0"></p>
     <div class="fbar">
-      <label class="fl">Category <span class="fw"><select class="f-cat"></select><button class="fx" data-px="0" title="Reset category and the filters after it">×</button></span></label>
-      <label class="fl">DoC <span class="fw"><select class="f-doc"></select><button class="fx" data-px="1" title="Reset DoC and the filters after it">×</button></span></label>
-      <label class="fl">Vessel <span class="fw"><select class="f-ves"></select><button class="fx" data-px="2" title="Reset vessel and the filters after it">×</button></span></label>
-      <label class="fl">Rank <span class="fw"><select class="f-rank"></select><button class="fx" data-px="3" title="Reset rank and the filters after it">×</button></span></label>
-      <label class="fl">Search <span class="fw fs"><input type="search" class="f-q" placeholder="Name, ID, vessel or DoC"><button class="fx" data-px="4" title="Clear search">×</button></span></label>
+      <label class="fl">Category <span class="fw"><select class="f-cat"></select><button class="fx" data-px="cat" title="Clear category">×</button></span></label>
+      <label class="fl">DoC <span class="fw"><select class="f-doc"></select><button class="fx" data-px="doc" title="Clear DoC (and its vessel)">×</button></span></label>
+      <label class="fl">Vessel <span class="fw"><select class="f-ves"></select><button class="fx" data-px="ves" title="Clear vessel">×</button></span></label>
+      <label class="fl">Rank <span class="fw"><select class="f-rank"></select><button class="fx" data-px="rank" title="Clear rank">×</button></span></label>
+      <label class="fl">Search <span class="fw fs"><input type="search" class="f-q" placeholder="Name, ID, vessel or DoC"><button class="fx" data-px="q" title="Clear search">×</button></span></label>
       <div class="fbtns"><button class="dl f-clr">Clear filters</button></div>
     </div>
     <p class="note-inline f-filt" style="margin:0"></p>
@@ -182,6 +183,12 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
         <label class="note-inline p-bylab">Group by <select class="p-by"><option value="doc">DoC</option><option value="vessel">Vessel</option><option value="rank">Rank</option><option value="vessel_type">Vessel type</option><option value="category">Category</option><option value="nat">Nationality</option></select></label></div>
       <div class="tablebox p-box" style="max-height:40rem"><table class="hier p-tbl"></table></div>
       <div class="p-card" hidden></div>
+    </div>
+    <div class="card c-noplan" hidden>
+      <div class="bar"><h2 style="margin:0">People with no learning plan</h2>
+        <div class="dlbar np-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+      <p class="note np-note"></p>
+      <div class="tablebox" style="max-height:24rem"><table class="hier np-tbl"></table></div>
     </div>
     <div class="card c-due" hidden>
       <div class="bar"><h2 style="margin:0">Due and expired compulsory certificates</h2>
@@ -232,6 +239,10 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   <section data-page="how" hidden class="method">
     <h2>What this site adds</h2>
     <p>A companion to the Seaverse Dashboard, for DoC, fleet, LMS and content admins. It uses the same people and groups (sea staff onboard, off-board sea staff, trainees, office staff).</p>
+    <h2>Learning plans</h2>
+    <p>Active learning plans and the conditions that put people in them (rank, vessel type, or a group). For each plan: how many people in the current filters are enrolled, onboard and off-board, and how many of the plan's compulsory courses are done and in date. Opening a plan lists its courses; that course table follows the Category and DoC filters. <b>People with no plan</b> are in scope but enrolled in no active plan, so nothing is assigned to them.</p>
+    <h2>Filters</h2>
+    <p>Filters are shared by the Learning plans, Compulsory training, Certificates and Logins tabs. Each list only offers values that exist with the other filters; picking a vessel also sets its DoC; × clears that filter (clearing a DoC also clears its vessel). Clicking a DoC row sets the DoC filter and shows its vessels; clicking a vessel shows its people. Use All crew / Onboard / Off-board beside the table to split a DoC or vessel by where people are now (off-board people are listed under their last vessel).</p>
     <h2>Compulsory training</h2>
     <p>Learning plans assign courses by rank and vessel type, with each course tagged <b>Assigned</b> (compulsory, the matrix's C) or <b>Recommended</b> (R). A person's compulsory courses are the Assigned courses of every active plan they are enrolled in. <b>Done</b> = completed at least once, on Seaverse or with the previous provider. <b>Up to date</b> = done and not past its validity (courses with no expiry count once done).</p>
     <h2>Certificates and validity</h2>
@@ -350,7 +361,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   }
 
   // ---------- tabs ----------
-  const PEOPLE = new Set(['comp', 'cert', 'act']);
+  const PEOPLE = new Set(['plan', 'comp', 'cert', 'act']);
   let TAB = 'comp';
   function show(t) {
     TAB = t;
@@ -362,146 +373,170 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   }
   $$('.tab').forEach((b) => b.addEventListener('click', () => show(b.dataset.tab)));
 
-  // ---------- people explorer (compulsory / certificates / logins) ----------
+  // ---------- people explorer (learning plans / compulsory / certificates / logins) ----------
+  // One shared filter state for these tabs. Filters are faceted: each list only offers values that exist with the other filters,
+  // a selection that stops existing is cleared, and drilling into a table row sets the matching filter (DoC → vessel → people).
   const P = (() => {
-    const S = { cat: '', doc: '', ves: '', rank: '', q: '', by: 'doc', grp: null, person: null, pop: 'Registered', popUser: false };
-    let people = null, cidx = null, due = null;
+    const S = { cat: '', doc: '', ves: '', rank: '', q: '', by: 'doc', grp: '', person: null, plan: null, pop: 'Registered', popUser: false };
+    let people = null, cidx = null, due = null, plans = null, pp = null, byId = null;
     const sel = { cat: $('.f-cat'), doc: $('.f-doc'), ves: $('.f-ves'), rank: $('.f-rank') }, qbox = $('.f-q');
-    const ORDER = ['cat', 'doc', 'ves', 'rank', 'q'];
+    const KEYS = ['cat', 'doc', 'ves', 'rank'];
     const FK = { cat: 'category', doc: 'doc', ves: 'vessel', rank: 'rank' };
     const ALLL = { cat: 'All categories', doc: 'All DoCs', ves: 'All vessels', rank: 'All ranks' };
+    const DEPS = { cat: [], doc: ['ves'], ves: [], rank: [] };          // clearing a DoC also clears its vessel
     const BYL = { doc: 'DoC', vessel: 'Vessel', rank: 'Rank', vessel_type: 'Vessel type', category: 'Category', nat: 'Nationality' };
-    const BYP = { doc: 'DoCs', vessel: 'vessels', rank: 'ranks', vessel_type: 'vessel types', category: 'categories', nat: 'nationalities' };
-    // counting basis: registered at group level, all invitees once you open a group or person (user's choice sticks until reset)
+    const PLUR = { cat: 'categories', doc: 'DoCs', ves: 'vessels', rank: 'ranks', vessel_type: 'vessel types', nat: 'nationalities' };
+    const CHAIN = { doc: ['doc', 'ves'], vessel: ['ves'], rank: ['rank'], category: ['cat', 'doc', 'ves'], vessel_type: ['grp'], nat: ['grp'] };
+    const ONB = 'Sea staff (onboard)', OFB = 'Off-board sea staff';
+
+    // ---- counting basis (registered at summary levels, all invitees once you are looking at people) ----
     const popSel = el('select', { class: 'f-pop' }, el('option', { value: 'Registered' }, 'Registered'), el('option', { value: 'All' }, 'All invitees'));
-    const popLab = el('label', { class: 'fl' }, 'Count ', el('span', { class: 'fw' }, popSel, el('button', { class: 'fx', title: 'Back to the default for this level', onclick: (e) => { e.preventDefault(); S.popUser = false; S.pop = defPop(); go(); } }, '×')));
-    $('.fbar .fbtns').before(popLab);
-    popSel.addEventListener('change', () => { S.pop = popSel.value; S.popUser = true; go(); });
-    const defPop = () => (S.grp != null || S.person || S.ves || S.q) ? 'All' : 'Registered';
-    function base(upto) {
-      let r = people;
-      for (const k of ORDER) { if (k === upto) break; if (k === 'q') continue; if (S[k]) r = r.filter((p) => p[FK[k]] === S[k]); }
-      return r;
+    const popX = el('button', { class: 'fx', title: 'Back to the default for this level' }, '×');
+    $('.fbar .fbtns').before(el('label', { class: 'fl' }, 'Count ', el('span', { class: 'fw' }, popSel, popX)));
+    popSel.addEventListener('change', () => { S.pop = popSel.value; S.popUser = true; render(); });
+    popX.addEventListener('click', (e) => { e.preventDefault(); S.popUser = false; render(); });
+    // ---- crew quick filter (same as the Category filter, shown beside the table) ----
+    const crew = el('div', { class: 'seg p-crew', role: 'radiogroup', 'aria-label': 'Crew' },
+      ...[['', 'All crew'], [ONB, 'Onboard'], [OFB, 'Off-board']].map(([v, t]) => el('button', { role: 'radio', 'data-v': v, onclick: () => setF('cat', v) }, t)));
+    $('.p-bylab').before(crew);
+
+    const level = () => {   // what the main table shows now
+      if (TAB === 'plan') return S.plan != null ? { kind: 'plan' } : { kind: 'plans' };
+      if (S.person) return { kind: 'person' };
+      if (S.q) return { kind: 'people' };
+      for (const k of CHAIN[S.by]) if (!(k === 'grp' ? S.grp : S[k])) return { kind: 'group', key: k, field: k === 'grp' ? S.by : FK[k] };
+      return { kind: 'people' };
+    };
+    const defPop = () => { const L = level().kind; return L === 'people' || L === 'person' ? 'All' : 'Registered'; };
+    const syncPop = () => { if (!S.popUser) S.pop = defPop(); };
+
+    // ---- faceting ----
+    const match = (p, skip) => KEYS.every((k) => k === skip || !S[k] || p[FK[k]] === S[k]);
+    const opts = (k) => [...new Set(people.filter((p) => match(p, k)).map((p) => p[FK[k]]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+    function validate(keep) {   // clear any selection that no longer exists with the others, keeping the one just changed
+      for (let i = 0; i < 4; i++) { let ch = false; for (const k of KEYS) if (k !== keep && S[k] && !opts(k).includes(S[k])) { S[k] = ''; ch = true; } if (!ch) break; }
     }
-    function filtered() {
-      let r = base('q');
-      if (S.q) { const q = S.q.toLowerCase(); r = r.filter((p) => (p.name + ' ' + p.employee_id + ' ' + p.vessel + ' ' + p.doc + ' ' + p.rank).toLowerCase().includes(q)); }
-      if (S.pop === 'Registered') r = r.filter((p) => p.registered === 'Yes');
-      if (TAB === 'comp') r = r.filter((p) => p.c_n > 0 || p.r_n > 0);
-      if (TAB === 'cert') r = r.filter((p) => p.c_n > 0);
-      return r;
+    function setF(k, v) {
+      S[k] = v; S.person = null; S.plan = S.plan; if (k !== 'cat' && k !== 'rank') S.grp = '';
+      if (k === 'ves' && v) { const p = people.find((x) => x.vessel === v && (!S.cat || x.category === S.cat)) || people.find((x) => x.vessel === v); if (p && p.doc) S.doc = p.doc; }
+      if (!v) for (const d of DEPS[k]) S[d] = '';
+      validate(k); syncPop(); render();
     }
     function fillSel() {
-      for (const k of ['cat', 'doc', 'ves', 'rank']) {
-        const vals = [...new Set(base(k).map((p) => p[FK[k]]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
-        if (S[k] && !vals.includes(S[k])) S[k] = '';
+      for (const k of KEYS) {
+        const vals = opts(k);
         sel[k].replaceChildren(el('option', { value: '' }, ALLL[k]), ...vals.map((v) => el('option', { value: v }, v)));
         sel[k].value = S[k];
-        $(`[data-px="${ORDER.indexOf(k)}"]`).toggleAttribute('data-off', !S[k]);
+        $(`[data-px="${k}"]`).toggleAttribute('data-off', !S[k]);
       }
-      $('[data-px="4"]').toggleAttribute('data-off', !S.q);
-      popSel.value = S.pop;
+      $('[data-px="q"]').toggleAttribute('data-off', !S.q);
+      popSel.value = S.pop; popX.toggleAttribute('data-off', !S.popUser);
+      $$('button', crew).forEach((b) => b.setAttribute('aria-checked', String(b.dataset.v === S.cat)));
     }
-    const reset = (i) => { for (const k of ORDER.slice(i)) S[k] = ''; qbox.value = S.q; S.grp = null; S.person = null; if (!S.popUser) S.pop = defPop(); };
-    for (const k of ['cat', 'doc', 'ves', 'rank']) sel[k].addEventListener('change', () => { const i = ORDER.indexOf(k); const v = sel[k].value; reset(i); S[k] = v; if (!S.popUser) S.pop = defPop(); go(); });
+    for (const k of KEYS) sel[k].addEventListener('change', () => setF(k, sel[k].value));
     let qt = null;
-    qbox.addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(() => { S.q = qbox.value.trim(); S.grp = null; S.person = null; if (!S.popUser) S.pop = defPop(); go(); }, 250); });
-    $$('[data-px]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); reset(+b.dataset.px); go(); }));
-    $('.f-clr').addEventListener('click', () => { reset(0); S.popUser = false; S.pop = defPop(); go(); });
-    $('.p-by').addEventListener('change', (e) => { S.by = e.target.value; S.grp = null; $('.p-tbl')._sort = null; go(); });
-    const go = () => render();
+    qbox.addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(() => { S.q = qbox.value.trim(); S.person = null; syncPop(); render(); }, 250); });
+    $$('[data-px]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); const k = b.dataset.px; if (k === 'q') { S.q = ''; qbox.value = ''; S.person = null; syncPop(); render(); } else setF(k, ''); }));
+    $('.f-clr').addEventListener('click', () => { for (const k of KEYS) S[k] = ''; S.q = ''; qbox.value = ''; S.grp = ''; S.person = null; S.plan = null; S.popUser = false; syncPop(); render(); });
+    $('.p-by').addEventListener('change', (e) => { S.by = e.target.value; S.grp = ''; S.person = null; syncPop(); render(); });
+
+    function filtered() {
+      let r = people.filter((p) => match(p, null));
+      if (S.q) { const q = S.q.toLowerCase(); r = r.filter((p) => (p.name + ' ' + p.employee_id + ' ' + p.vessel + ' ' + p.doc + ' ' + p.rank).toLowerCase().includes(q)); }
+      if (S.grp && CHAIN[S.by][0] === 'grp') r = r.filter((p) => (p[S.by] || '(none)') === S.grp);
+      if (S.pop === 'Registered') r = r.filter((p) => p.registered === 'Yes');
+      return r;
+    }
 
     // ---- aggregates ----
     function agg(rows) {
-      const a = { n: rows.length, reg: 0, plan: 0, cn: 0, ever: 0, ok: 0, exp: 0, d30: 0, d60: 0, d90: 0, miss: 0, prev: 0, rn: 0, rd: 0, full: 0, L7: 0, L30: 0, L90: 0, Lold: 0, Lnone: 0, app: 0 };
+      const a = { n: rows.length, reg: 0, onb: 0, ofb: 0, plan: 0, cn: 0, ever: 0, ok: 0, exp: 0, d30: 0, d60: 0, d90: 0, miss: 0, prev: 0, rn: 0, rd: 0, full: 0, none: 0, L7: 0, L30: 0, L90: 0, Lold: 0, Lnone: 0, app: 0 };
       for (const p of rows) {
         if (p.registered === 'Yes') a.reg++;
-        if (p.c_n > 0) { a.plan++; if (p.c_ok === p.c_n) a.full++; }
+        if (p.category === ONB) a.onb++; else if (p.category === OFB) a.ofb++;
+        if (p.c_n > 0) { a.plan++; if (p.c_ok === p.c_n) a.full++; } else if (!p.r_n) a.none++;
         a.cn += p.c_n; a.ever += p.c_ever; a.ok += p.c_ok; a.exp += p.c_exp; a.d30 += p.c_d30; a.d60 += p.c_d60; a.d90 += p.c_d90; a.miss += p.c_miss; a.prev += p.c_prev; a.rn += p.r_n; a.rd += p.r_done;
-        const L = p.login; if (L === '≤7 days') a.L7++; else if (L === '8–30 days') a.L30++; else if (L === '31–90 days') a.L90++; else if (L === '>90 days') a.Lold++; else a.Lnone++;
+        const L = p.login; if (L === '≤7 days') a.L7++; else if (L === '8–30 days') a.L30++; else if (L === '31–90 days') a.L90++; else if (L === '>90 days' || L === 'Never') a.Lold++; else a.Lnone++;
         if (p.app === 'Yes') a.app++;
       }
       a.donePct = share(a.ever, a.cn); a.okPct = share(a.ok, a.cn); a.recPct = share(a.rd, a.rn); a.appPct = share(a.app, a.n); a.due = a.d30 + a.d60 + a.d90;
       a.dormant = a.L90 + a.Lold;
       return a;
     }
-    const nm = { f: (r) => r.name, k: 'name', num: false };
+    const N = (h, k, t) => ({ h, k, cls: 'num', f: (r) => int(r[k]), t });
+    const PC = (h, k, t) => ({ h, k, cls: 'num', f: (r) => pct(r[k]), t });
+    const CREW = [N('People', 'n'), N('Onboard', 'onb'), N('Off-board', 'ofb')];
     const GC = {
-      comp: [
-        { h: 'People with a compulsory plan', k: 'plan', cls: 'num', f: (r) => int(r.plan) },
-        { h: 'Compulsory courses', k: 'cn', cls: 'num', f: (r) => int(r.cn), t: 'Person-course links: each person × each compulsory course' },
-        { h: 'Done at least once', k: 'donePct', cls: 'num', f: (r) => pct(r.donePct) },
-        { h: 'Up to date', k: 'okPct', cls: 'num', f: (r) => pct(r.okPct), t: 'Done and not past validity' },
-        { h: 'Fully up to date (people)', k: 'full', cls: 'num', f: (r) => int(r.full) },
-        { h: 'Not yet done', k: 'miss', cls: 'num', f: (r) => int(r.miss) },
-        { h: 'Recommended done', k: 'recPct', cls: 'num', f: (r) => pct(r.recPct) },
-      ],
-      cert: [
-        { h: 'People', k: 'plan', cls: 'num', f: (r) => int(r.plan) },
-        { h: 'Valid or no expiry', k: 'ok', cls: 'num', f: (r) => int(r.ok) },
-        { h: 'Expired', k: 'exp', cls: 'num', f: (r) => int(r.exp) },
-        { h: 'Due ≤30 days', k: 'd30', cls: 'num', f: (r) => int(r.d30) },
-        { h: 'Due 31–60', k: 'd60', cls: 'num', f: (r) => int(r.d60) },
-        { h: 'Due 61–90', k: 'd90', cls: 'num', f: (r) => int(r.d90) },
-        { h: 'Not yet done', k: 'miss', cls: 'num', f: (r) => int(r.miss) },
-        { h: 'Previous-provider records', k: 'prev', cls: 'num', f: (r) => int(r.prev) },
-      ],
-      act: [
-        { h: 'People', k: 'n', cls: 'num', f: (r) => int(r.n) },
-        { h: 'Registered', k: 'reg', cls: 'num', f: (r) => int(r.reg) },
-        { h: 'Login ≤7 days', k: 'L7', cls: 'num', f: (r) => int(r.L7) },
-        { h: '8–30 days', k: 'L30', cls: 'num', f: (r) => int(r.L30) },
-        { h: '31–90 days', k: 'L90', cls: 'num', f: (r) => int(r.L90) },
-        { h: 'Over 90 days', k: 'Lold', cls: 'num', f: (r) => int(r.Lold) },
-        { h: 'App users', k: 'app', cls: 'num', f: (r) => int(r.app) },
-        { h: 'App use', k: 'appPct', cls: 'num', f: (r) => pct(r.appPct) },
-      ],
-    };
-    const ndate = (r) => r.next_due ? fmtD(r.next_due) : '';
-    const PCOL = {
-      comp: [
-        { h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Done', k: 'c_ever', cls: 'num' }, { h: 'Up to date', k: 'c_ok', cls: 'num' },
-        { h: 'Up to date %', k: 'okp', cls: 'num', v: (r) => share(r.c_ok, r.c_n), f: (r) => pct0(share(r.c_ok, r.c_n)) },
-        { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Recommended', k: 'r_n', cls: 'num' }, { h: 'Rec. done', k: 'r_done', cls: 'num' },
-      ],
-      cert: [
-        { h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Valid', k: 'c_ok', cls: 'num' }, { h: 'Expired', k: 'c_exp', cls: 'num' },
-        { h: 'Due ≤90 days', k: 'due', cls: 'num', v: (r) => r.c_d30 + r.c_d60 + r.c_d90, f: (r) => r.c_d30 + r.c_d60 + r.c_d90 },
-        { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Next expiry', k: 'next_due', f: ndate, x: (r) => r.next_due },
-      ],
-      act: [
-        { h: 'Stage', k: 'stage', num: false }, { h: 'Last login', k: 'last_login', f: (r) => fmtD(r.last_login), x: (r) => r.last_login },
-        { h: 'Since last login', k: 'login', num: false }, { h: 'Mobile app', k: 'app', num: false }, { h: 'Course language (feedback)', k: 'langs', num: false },
-      ],
+      comp: [...CREW, N('With a compulsory plan', 'plan'), N('Compulsory courses', 'cn', 'Person-course links: each person × each compulsory course'),
+        PC('Done at least once', 'donePct'), PC('Up to date', 'okPct', 'Done and not past validity'), N('Fully up to date (people)', 'full'), N('Not yet done', 'miss'), PC('Recommended done', 'recPct')],
+      cert: [...CREW, N('Valid or no expiry', 'ok'), N('Expired', 'exp'), N('Due ≤30 days', 'd30'), N('Due 31–60', 'd60'), N('Due 61–90', 'd90'), N('Not yet done', 'miss'), N('Previous-provider records', 'prev')],
+      act: [...CREW, N('Registered', 'reg'), N('Login ≤7 days', 'L7'), N('8–30 days', 'L30'), N('31–90 days', 'L90'), N('Over 90 days', 'Lold'), N('App users', 'app'), PC('App use', 'appPct')],
     };
     const PBASE = [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 }, { h: 'Category', k: 'category', num: false }, { h: 'Registered', k: 'registered', num: false }];
-    let view = null;
+    const PCOL = {
+      comp: [{ h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Done', k: 'c_ever', cls: 'num' }, { h: 'Up to date', k: 'c_ok', cls: 'num' },
+        { h: 'Up to date %', k: 'okp', cls: 'num', v: (r) => share(r.c_ok, r.c_n), f: (r) => pct0(share(r.c_ok, r.c_n)) },
+        { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Recommended', k: 'r_n', cls: 'num' }, { h: 'Rec. done', k: 'r_done', cls: 'num' }],
+      cert: [{ h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Valid', k: 'c_ok', cls: 'num' }, { h: 'Expired', k: 'c_exp', cls: 'num' },
+        { h: 'Due ≤90 days', k: 'due', cls: 'num', v: (r) => r.c_d30 + r.c_d60 + r.c_d90, f: (r) => r.c_d30 + r.c_d60 + r.c_d90 },
+        { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Next expiry', k: 'next_due', f: (r) => fmtD(r.next_due), x: (r) => r.next_due }],
+      act: [{ h: 'Stage', k: 'stage', num: false }, { h: 'Last login', k: 'last_login', f: (r) => fmtD(r.last_login), x: (r) => r.last_login },
+        { h: 'Since last login', k: 'login', num: false }, { h: 'Mobile app', k: 'app', num: false }, { h: 'Course language (feedback)', k: 'langs', num: false }],
+    };
     const INTRO = {
+      plan: 'Learning plans assign courses by rank and vessel type. Each course in a plan is compulsory (Assigned) or recommended. Figures follow the filters.',
       comp: 'Compulsory (Assigned) and recommended courses from each person’s learning plans, and how many are done and still in date.',
       cert: 'Certificate validity for compulsory courses: latest completion (Seaverse or previous provider) plus the course’s validity period.',
       act: `Logins and mobile app use, as at ${loginD}. Dormant = not logged in for over 30 days.`,
     };
+    const TITLE = { comp: 'compulsory training', cert: 'certificate validity', act: 'logins and app use', plan: 'learning plans' };
+    let view = null;
+    const crumbA = (t, fn) => fn ? el('a', { href: '#', onclick: (e) => { e.preventDefault(); fn(); } }, t) : el('b', {}, t);
+    const sep = () => document.createTextNode(' › ');
+
+    function crumbsFor(L, extra) {
+      const out = [];
+      if (S.q) out.push(crumbA(`Search “${S.q}”`, extra ? () => { S.person = null; syncPop(); render(); } : null));
+      else {
+        const ch = CHAIN[S.by];
+        const val = (k) => k === 'grp' ? S.grp : S[k];
+        const clearFrom = (i) => () => { for (const k of ch.slice(i)) { if (k === 'grp') S.grp = ''; else S[k] = ''; } S.person = null; syncPop(); render(); };
+        const set = ch.filter((k) => val(k));
+        const top = `All ${PLUR[ch[0] === 'grp' ? S.by : ch[0]]}`;
+        out.push(crumbA(top, set.length || extra ? clearFrom(0) : null));
+        ch.forEach((k, i) => { if (!val(k)) return; const last = i === ch.length - 1 || !val(ch[i + 1]); out.push(sep(), crumbA(val(k), last && !extra ? null : clearFrom(i + 1))); });
+      }
+      if (extra) out.push(sep(), crumbA(extra));
+      return out;
+    }
 
     async function render() {
       if (!PEOPLE.has(TAB)) return;
       $('.ins-pintro').textContent = INTRO[TAB];
-      $('.c-due').hidden = TAB !== 'cert'; $('.c-top').hidden = TAB !== 'cert';
+      $('.c-due').hidden = TAB !== 'cert'; $('.c-top').hidden = TAB !== 'cert'; $('.c-noplan').hidden = TAB !== 'plan';
       if (!people) {
         $('.p-note').textContent = 'Loading…';
         const [p, ci] = await Promise.all([get('ins_people.csv'), get('ins_cidx.json')]);
         for (const r of p) for (const k of NUM) r[k] = +r[k] || 0;
-        people = p; cidx = ci.map((d) => d.title);
+        people = p; cidx = ci.map((d) => d.title); byId = new Map(p.map((x) => [x.employee_id, x]));
       }
-      fillSel();
+      if (TAB === 'plan' && !plans) {
+        $('.p-note').textContent = 'Loading…';
+        const [a, b] = await Promise.all([get('ins_plans.csv'), get('ins_pp.csv')]);
+        plans = a; pp = b.map((r) => ({ p: byId.get(r.employee_id), pi: +r.pi, n: +r.n, ever: +r.ever, ok: +r.ok, exp: +r.exp, due: +r.due, miss: +r.miss, rn: +r.rn, rd: +r.rd })).filter((r) => r.p);
+      }
+      syncPop(); fillSel();
       const rows = filtered();
       const f = [S.cat, S.doc, S.ves, S.rank, S.q && `“${S.q}”`].filter(Boolean);
       $('.f-filt').textContent = f.length ? 'Filtered: ' + f.join(' · ') : '';
-      // KPIs follow what is open: the whole filtered view, or the group you clicked into
-      const byK0 = S.by;
-      const A = agg(S.grp != null ? rows.filter((p) => (p[byK0] || '(none)') === S.grp) : rows);
+      const L = level();
+      $('.p-bylab').hidden = L.kind !== 'group';
+      $('.p-card').hidden = L.kind !== 'person' && L.kind !== 'plan'; $('.p-box').hidden = !$('.p-card').hidden;
       const basis = S.pop === 'Registered' ? 'registered' : 'invitees';
+      if (TAB === 'plan') return planView(rows, L, basis, f);
+      const A = agg(rows);
       if (TAB === 'comp') kpis($('.p-kpis'), [
-        ['People with a compulsory plan', int(A.plan), S.grp != null ? S.grp : `${basis}${f.length ? ', filtered' : ''}`],
+        ['People with a compulsory plan', int(A.plan), `of ${int(A.n)} ${basis}${f.length ? ' in this selection' : ''}`],
         ['Compulsory course links', int(A.cn), A.plan ? `about ${int(A.cn / A.plan)} per person` : ''],
         ['Done at least once', pct(A.donePct), `${int(A.ever)} links`],
         ['Up to date', pct(A.okPct), `${int(A.ok)} links in date`],
@@ -523,56 +558,107 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
         ['Uses the mobile app', int(A.app), pct(A.appPct)],
         ['Not in snapshot', int(A.Lnone), `added after ${snapD}`],
       ]);
-      // level
-      const byK = S.by, label = BYL[byK];
-      const tbl = $('.p-tbl'), crumbs = $('.p-crumbs');
-      const crumb = (t, fn) => fn ? el('a', { href: '#', onclick: (e) => { e.preventDefault(); fn(); } }, t) : el('b', {}, t);
-      const sep = () => document.createTextNode(' › ');
-      const direct = S.ves || S.q;   // a single vessel or a search goes straight to the people list
-      $('.p-bylab').hidden = !!(S.grp != null || direct || S.person);
-      if (S.person) return personView(crumbs, crumb, sep, rows);
-      $('.p-card').hidden = true; $('.p-box').hidden = false;
-      if (S.grp == null && !direct) {
-        const g = d3.groups(rows, (p) => p[byK] || '(none)').map(([k, v]) => ({ name: k, ...agg(v) }));
-        crumbs.replaceChildren(crumb(`All ${BYP[byK]} (${g.length})`));
-        const n = table(tbl, [{ h: label, k: 'name', num: false, w: 1 }, ...GC[TAB]], g, { total: { name: 'Total', ...A }, click: (r) => { S.grp = r.name; if (!S.popUser) S.pop = defPop(); go(); }, sortK: TAB === 'act' ? 'n' : TAB === 'cert' ? 'exp' : 'plan' });
-        $('.p-note').textContent = `${int(n)} ${BYP[byK]}. Click a row to see its people. Counting ${S.pop === 'Registered' ? 'registered users' : 'all invitees'}.`;
-        view = { title: `${TAB === 'comp' ? 'Compulsory training' : TAB === 'cert' ? 'Certificate validity' : 'Logins and app use'} by ${label}`, tbl };
+      const tbl = $('.p-tbl'), crumbs = $('.p-crumbs'), cnt = S.pop === 'Registered' ? 'registered users' : 'all invitees';
+      if (L.kind === 'person') await personView(crumbs);
+      else if (L.kind === 'group') {
+        const g = d3.groups(rows, (p) => p[L.field] || '(none)').map(([k, v]) => ({ name: k, ...agg(v) }));
+        crumbs.replaceChildren(...crumbsFor(L));
+        const lab = BYL[L.field];
+        const n = table(tbl, [{ h: lab, k: 'name', num: false, w: 1 }, ...GC[TAB]], g, {
+          total: { name: 'Total', ...A }, sortK: TAB === 'cert' ? 'exp' : 'n',
+          click: (r) => { if (r.name === '(none)') return; if (L.key === 'grp') { S.grp = r.name; S.person = null; syncPop(); render(); } else setF(L.key, r.name); } });
+        const nextL = L.key === 'doc' && CHAIN[S.by].includes('ves') ? 'its vessels' : L.key === 'cat' ? 'its DoCs' : 'its people';
+        $('.p-note').textContent = `${int(n)} ${PLUR[L.key === 'grp' ? S.by : L.key]}. Click a row to see ${nextL}. Counting ${cnt}.`;
+        view = { title: `${TITLE[TAB]} by ${lab}${f.length ? ' · ' + f.join(' · ') : ''}`, tbl };
       } else {
-        const list = S.grp != null ? rows.filter((p) => (p[byK] || '(none)') === S.grp) : rows;
-        const nmTxt = S.grp != null ? S.grp : S.ves || `Search “${S.q}”`;
-        crumbs.replaceChildren(...(S.grp != null ? [crumb(`All ${BYP[byK]}`, () => { S.grp = null; if (!S.popUser) S.pop = defPop(); go(); }), sep()] : []), crumb(`${nmTxt} (${int(list.length)})`));
-        const n = table(tbl, [...PBASE, ...PCOL[TAB]], list, { click: TAB === 'act' ? null : (r) => { S.person = r; go(); }, limit: 2000, sortK: TAB === 'cert' ? 'c_exp' : TAB === 'act' ? 'last_login' : 'c_miss' });
-        $('.p-note').textContent = `${int(n)} people${n > 2000 ? ' (first 2,000 shown; the download has all)' : ''}. ${TAB === 'act' ? '' : 'Click a person for their course list. '}Counting ${S.pop === 'Registered' ? 'registered users' : 'all invitees'}.`;
-        view = { title: `${nmTxt} · ${TAB === 'comp' ? 'compulsory training' : TAB === 'cert' ? 'certificate validity' : 'logins'}`, tbl };
+        crumbs.replaceChildren(...crumbsFor(L));
+        const n = table(tbl, [...PBASE, ...PCOL[TAB]], rows, { click: (r) => { S.person = r; syncPop(); render(); }, limit: 2000, sortK: TAB === 'cert' ? 'c_exp' : TAB === 'act' ? 'last_login' : 'c_miss' });
+        $('.p-note').textContent = `${int(n)} people${n > 2000 ? ' (first 2,000 shown; the download has all)' : ''}. Click a person for their course list. Counting ${cnt}.`;
+        view = { title: `${f.join(' · ') || 'All'} · ${TITLE[TAB]}`, tbl };
       }
       if (TAB === 'cert') dueCard(rows);
     }
 
-    async function personView(crumbs, crumb, sep, rows) {
-      const p = S.person, byK = S.by;
-      const back = [];
-      if (S.grp != null) back.push(crumb(`All ${BYP[byK]}`, () => { S.grp = null; S.person = null; if (!S.popUser) S.pop = defPop(); go(); }), sep(), crumb(S.grp, () => { S.person = null; go(); }), sep());
-      else back.push(crumb(S.ves || `Search “${S.q}”`, () => { S.person = null; go(); }), sep());
-      crumbs.replaceChildren(...back, crumb(p.name));
+    async function personView(crumbs) {
+      const p = S.person;
+      crumbs.replaceChildren(...crumbsFor(null, p.name));
       $('.p-note').textContent = 'Every compulsory and recommended course in this person’s learning plans. Click a heading to sort.';
-      $('.p-box').hidden = true; const card = $('.p-card'); card.hidden = false;
+      const card = $('.p-card');
       card.replaceChildren(el('p', { class: 'note' }, 'Loading course list…'));
       const sh = await get(p.shard + '.json');
       const rec = sh.find((d) => d.e === p.employee_id);
       const SL = { m: 'Not yet done', n: 'No expiry', x: 'Expired', 1: 'Due ≤30 days', 2: 'Due 31–60 days', 3: 'Due 61–90 days', v: 'Valid' };
-      const items = (rec ? rec.k.split(';') : []).map((s) => { const [ci, comp, stc, src, last, exp, vm, ip] = s.split('.'); const vmn = parseInt(vm || '0', 16);
+      const items = (rec ? rec.k.split(';') : []).filter(Boolean).map((s) => { const [ci, comp, stc, src, last, exp, vm, ip] = s.split('.'); const vmn = parseInt(vm || '0', 16);
         return { course: cidx[parseInt(ci, 16)] || '?', type: comp === '1' ? 'Compulsory' : 'Recommended', status: SL[stc] || stc, sc: stc, src: src === 'P' ? 'Previous provider' : src === 'S' ? 'Seaverse' : '', last: hexD(last), exp: hexD(exp), validity: vmn ? (vmn % 12 ? vmn + ' months' : vmn / 12 + ' years') : 'No expiry', inprog: ip === '1' ? 'Yes' : '' }; });
       const ord = { x: 0, 1: 1, 2: 2, 3: 3, m: 4, v: 5, n: 6 };
       items.sort((a, b) => (a.type > b.type ? 1 : a.type < b.type ? -1 : 0) || ord[a.sc] - ord[b.sc] || a.course.localeCompare(b.course));
       const t = el('table', { class: 'hier' });
       card.replaceChildren(
-        el('p', { class: 'note' }, `${p.name} · ${p.employee_id} · ${p.rank} · ${p.vessel || p.category}${p.doc ? ' · ' + p.doc : ''} · ${p.registered === 'Yes' ? 'registered' : 'not registered'} · last login ${p.last_login ? fmtD(p.last_login) : 'never/unknown'}. ${p.c_n} compulsory, ${p.r_n} recommended.`),
-        el('div', { class: 'tablebox', style: 'max-height:40rem' }, t));
+        el('p', { class: 'note' }, `${p.name} · ${p.employee_id} · ${p.rank} · ${p.vessel || p.category}${p.doc ? ' · ' + p.doc : ''} · ${p.category} · ${p.registered === 'Yes' ? 'registered' : 'not registered'} · last login ${p.last_login ? fmtD(p.last_login) : 'never/unknown'}. ${p.c_n} compulsory, ${p.r_n} recommended.`),
+        items.length ? el('div', { class: 'tablebox', style: 'max-height:40rem' }, t) : el('p', { class: 'note' }, 'This person is not in any learning plan.'));
       table(t, [{ h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Type', k: 'type', num: false }, { h: 'Status', k: 'status', num: false, f: (r) => chip(r.status, r.sc) },
         { h: 'Source', k: 'src', num: false }, { h: 'Last completed', k: 'last', f: (r) => fmtD(r.last) }, { h: 'Expires', k: 'exp', f: (r) => fmtD(r.exp) }, { h: 'Validity', k: 'validity', num: false }, { h: 'In progress now', k: 'inprog', num: false }], items);
       view = { title: `${p.name} · ${p.employee_id} · courses`, tbl: t };
-      if (TAB === 'cert') dueCard(rows);
+    }
+
+    // ---- learning plans ----
+    async function planView(rows, L, basis, f) {
+      const ids = new Set(rows.map((p) => p.employee_id));
+      const A = new Map(plans.map((p) => [+p.pi, { ...p, pi: +p.pi, people: 0, onb: 0, ofb: 0, n: 0, ever: 0, ok: 0, exp: 0, due: 0, miss: 0, rn: 0, rd: 0, full: 0 }]));
+      const per = new Map();
+      for (const r of pp) {
+        if (!ids.has(r.p.employee_id)) continue;
+        const a = A.get(r.pi); if (!a) continue;
+        a.people++; if (r.p.category === ONB) a.onb++; else if (r.p.category === OFB) a.ofb++;
+        a.n += r.n; a.ever += r.ever; a.ok += r.ok; a.exp += r.exp; a.due += r.due; a.miss += r.miss; a.rn += r.rn; a.rd += r.rd; if (r.n && r.ok === r.n) a.full++;
+        per.set(r.p.employee_id, (per.get(r.p.employee_id) || 0) + 1);
+      }
+      const list = [...A.values()].map((a) => ({ ...a, okPct: share(a.ok, a.n), donePct: share(a.ever, a.n), recPct: share(a.rd, a.rn), fullPct: share(a.full, a.people) }));
+      const used = list.filter((a) => a.people > 0);
+      const noPlan = rows.filter((p) => !per.has(p.employee_id));
+      const T = list.reduce((t, a) => { t.n += a.n; t.ok += a.ok; return t; }, { n: 0, ok: 0 });
+      kpis($('.p-kpis'), [
+        ['Plans in use', int(used.length), `of ${int(plans.length)} active plans`],
+        ['People covered', int(per.size), `of ${int(rows.length)} ${basis}${f.length ? ' in this selection' : ''}`],
+        ['People with no plan', int(noPlan.length), pct(share(noPlan.length, rows.length)) + ' — no courses assigned'],
+        ['Plans per person', per.size ? (d3.mean([...per.values()])).toFixed(1) : '–', 'average, for people covered'],
+        ['Compulsory up to date', pct(share(T.ok, T.n)), 'across all plan courses'],
+        ['Plans with no courses', int(plans.filter((p) => +p.comp_courses + +p.rec_courses === 0).length), 'set up but empty'],
+      ]);
+      // people with no plan, by rank
+      const nr = d3.groups(noPlan, (p) => p.rank || '(no rank)').map(([rank, v]) => ({ rank, n: v.length, onb: v.filter((p) => p.category === ONB).length, ofb: v.filter((p) => p.category === OFB).length, reg: v.filter((p) => p.registered === 'Yes').length,
+        cats: [...new Set(v.map((p) => p.category))].join(', ') }));
+      table($('.np-tbl'), [{ h: 'Rank', k: 'rank', num: false, w: 1 }, N('People', 'n'), N('Onboard', 'onb'), N('Off-board', 'ofb'), N('Registered', 'reg'), { h: 'Categories', k: 'cats', num: false, w: 1 }], nr, { sortK: 'n' });
+      $('.np-note').textContent = `${int(noPlan.length)} people in ${int(nr.length)} ranks have no learning plan, so no compulsory courses are assigned to them.`;
+      const tbl = $('.p-tbl'), crumbs = $('.p-crumbs');
+      if (L.kind === 'plans') {
+        crumbs.replaceChildren(crumbA(`All learning plans (${int(plans.length)})`));
+        const n = table(tbl, [{ h: 'Learning plan', k: 'title', num: false, w: 1 }, { h: 'Applies to ranks', k: 'ranks', num: false, w: 1, x: (r) => r.ranks || r.other, f: (r) => { const L = (r.ranks || '').split(', ').filter(Boolean); if (!L.length) return r.other || r.type; return L.length <= 5 ? r.ranks : el('span', { title: r.ranks }, `${L.length} ranks: ${L.slice(0, 4).join(', ')} … +${L.length - 4} more`); } },
+          { h: 'Vessel types', k: 'vessel_types', num: false, w: 1 }, { h: 'Compulsory courses', k: 'comp_courses', cls: 'num', v: (r) => +r.comp_courses }, { h: 'Recommended', k: 'rec_courses', cls: 'num', v: (r) => +r.rec_courses },
+          N('People', 'people'), N('Onboard', 'onb'), N('Off-board', 'ofb'), PC('Done at least once', 'donePct'), PC('Up to date', 'okPct'), N('Fully up to date (people)', 'full'),
+          N('Expired', 'exp'), N('Due ≤90 days', 'due'), N('Not yet done', 'miss'), PC('Recommended done', 'recPct')], list, { sortK: 'people', click: (r) => { S.plan = r.pi; render(); } });
+        $('.p-note').textContent = `${int(n)} active plans; ${int(used.length)} have people in this selection. Click a plan to see its courses. Counting ${S.pop === 'Registered' ? 'registered users' : 'all invitees'}.`;
+        view = { title: `Learning plans${f.length ? ' · ' + f.join(' · ') : ''}`, tbl };
+        return;
+      }
+      const P0 = list.find((a) => a.pi === S.plan);
+      crumbs.replaceChildren(crumbA('All learning plans', () => { S.plan = null; render(); }), sep(), crumbA(P0.title));
+      $('.p-note').textContent = '';
+      const card = $('.p-card'); card.replaceChildren(el('p', { class: 'note' }, 'Loading plan…'));
+      const rowsC = await get(`ins_plc_${String(S.plan).padStart(3, '0')}.json`).catch(() => []);
+      const sub = rowsC.filter(([c, d]) => (!S.cat || c === S.cat) && (!S.doc || d === S.doc));
+      const by = new Map();
+      for (const [, , ci, t, n, e, o, x, du, m] of sub) { const k = ci + '.' + t; const a = by.get(k) || by.set(k, { course: cidx[ci], type: t ? 'Compulsory' : 'Recommended', n: 0, ever: 0, ok: 0, exp: 0, due: 0, miss: 0 }).get(k); a.n += n; a.ever += e; a.ok += o; a.exp += x; a.due += du; a.miss += m; }
+      const cs = [...by.values()].map((a) => ({ ...a, donePct: share(a.ever, a.n), okPct: share(a.ok, a.n) }));
+      const scope = [S.cat, S.doc].filter(Boolean).join(' · ') || 'everyone in the plan';
+      const t = el('table', { class: 'hier' });
+      card.replaceChildren(
+        el('p', { class: 'note' }, `${P0.title} · ${P0.type}${P0.match ? ' (' + P0.match.toLowerCase() + ')' : ''}. Ranks: ${P0.ranks || '–'}. Vessel types: ${P0.vessel_types || '–'}.${P0.other ? ' ' + P0.other + '.' : ''} ${P0.comp_courses} compulsory and ${P0.rec_courses} recommended courses; created ${fmtD(P0.created)}.`),
+        el('p', { class: 'note' }, `In this selection: ${int(P0.people)} people (${int(P0.onb)} onboard, ${int(P0.ofb)} off-board), ${pct(P0.okPct)} of compulsory courses up to date, ${int(P0.full)} people fully up to date. Course figures below are for ${scope}${S.ves || S.rank || S.q ? ' (vessel, rank and search filters apply to the counts above, not to this course table)' : ''}; they include unregistered invitees.`),
+        el('div', { class: 'tablebox', style: 'max-height:40rem' }, t));
+      table(t, [{ h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Type', k: 'type', num: false }, N('People', 'n'), PC('Done at least once', 'donePct'), PC('Up to date', 'okPct'),
+        N('Expired', 'exp'), N('Due ≤90 days', 'due'), N('Not yet done', 'miss')], cs, { sortK: 'okPct', sortD: 1 });
+      view = { title: `${P0.title} · courses`, tbl: t };
     }
 
     // ---- due list (certificates tab) ----
@@ -582,10 +668,9 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     let dueView = null;
     async function dueCard(rows) {
       if (!due) { $('.d-note').textContent = 'Loading…'; due = await get('ins_due.csv'); }
-      const ids = new Set(rows.map((p) => p.employee_id));
+      let ids = new Set(rows.map((p) => p.employee_id));
+      if (S.person) ids = new Set([S.person.employee_id]);
       let d = due.filter((r) => ids.has(r.employee_id));
-      if (S.grp != null) { const g = new Set(rows.filter((p) => (p[S.by] || '(none)') === S.grp).map((p) => p.employee_id)); d = d.filter((r) => g.has(r.employee_id)); }
-      if (S.person) d = d.filter((r) => r.employee_id === S.person.employee_id);
       const top = d3.rollups(d, (v) => v.length, (r) => r.course).map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n).slice(0, 15);
       if (dst.value) d = d.filter((r) => r.status === dst.value);
       $('[data-dx="0"]').toggleAttribute('data-off', !dst.value);
@@ -598,7 +683,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     }
     wireDl($('.p-dl'), () => view && { title: view.title, rows: view.tbl._rows() });
     wireDl($('.d-dl'), () => dueView && { title: dueView.title, rows: dueView.tbl._rows() });
-    return { render };
+    wireDl($('.np-dl'), () => ({ title: 'People with no learning plan by rank', rows: $('.np-tbl')._rows() }));
+    return { render, S };
   })();
 
   // ---------- content ----------
@@ -702,7 +788,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   })();
 
   const h = (location.hash || '').slice(1);
-  show(['comp', 'cert', 'act', 'cont', 'ops', 'how'].includes(h) ? h : 'comp');
+  show(['plan', 'comp', 'cert', 'act', 'cont', 'ops', 'how'].includes(h) ? h : 'plan');
 })();
 </script>
 </body></html>

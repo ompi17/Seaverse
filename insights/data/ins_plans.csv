@@ -1,0 +1,112 @@
+pi,title,type,match,ranks,vessel_types,other,comp_courses,rec_courses,enrolled_all,created
+0,All Catering,By rank / vessel type,All conditions,"Chief Cook, General Steward, Messman, Trainee General Steward","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,66,5,0,2025-10-10
+1,All Chief Cook,By rank / vessel type,All conditions,Chief Cook,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,1,0,0,2026-06-11
+2,All Chief Engineer,By rank / vessel type,All conditions,Chief Engineer,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,67,38,0,2025-10-09
+3,All Chief Officers,By rank / vessel type,All conditions,Chief Officer,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,86,32,0,2025-10-09
+4,All Deck Cadet,By rank / vessel type,All conditions,Deck Cadet,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,95,10,0,2025-10-10
+5,All Deck Ratings,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Ordinary Seaman, Pumpman, Trainee Seaman","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,79,17,0,2025-10-09
+6,All Electrical Officers,By rank / vessel type,All conditions,"Electrical Cadet, Electrical Officer, Electro Technical Officer, Electro Technical Rating, Trainee Electrical Officer","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,86,11,0,2025-10-10
+7,All Engine Cadets,By rank / vessel type,All conditions,Engine Cadet,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,90,12,0,2025-10-09
+8,All Engine Ratings,By rank / vessel type,All conditions,"Motorman, Oiler, Trainee Wiper, Wiper","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,74,16,0,2025-10-10
+9,All Fitters,By rank / vessel type,All conditions,"Fitter, Trainee Fitter","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,74,15,0,2025-10-10
+10,All Fourth Engineer,By rank / vessel type,All conditions,Fourth Engineer,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,1,0,0,2026-06-11
+11,All Gas Engineer,By rank / vessel type,All conditions,Gas Engineer,,,88,17,0,2025-10-10
+12,All General Steward,By rank / vessel type,All conditions,General Steward,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,1,0,0,2026-06-11
+13,All Junior Deck Officers,By rank / vessel type,All conditions,"Junior Third Officer, Second Officer, Third Officer","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,97,12,0,2025-10-09
+14,All Junior Engineer Officers,By rank / vessel type,All conditions,"Additional Engineer, Fourth Engineer, Junior Fourth Engineer, Third Engineer","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,88,17,0,2025-10-10
+15,All Master,By rank / vessel type,All conditions,Master,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,70,43,1,2025-10-09
+16,All Office Staff,By rank / vessel type,Any condition,"Assistant Fleet Manager, Assistant Manager, Assistant Superintendent, Assistant Technical Manager, Director, Fleet Head, Fleet Manager, Head, Manager, Managing Director, Marine Manager, Marine Superintendent, Regional Manager, Senior Crew Coordinator, Senior Fleet Manager, Senior Manager, Senior Marine Superintendent, Senior Superintendent, Senior Technical Superintendent, Superintendent, Technical Head, Technical Manager",,,200,0,0,2026-01-29
+17,All Second Engineer,By rank / vessel type,All conditions,Second Engineer,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,77,33,1,2025-10-09
+18,All Second Officer,By rank / vessel type,All conditions,Second Officer,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,1,0,0,2026-06-11
+19,All Third Engineer,By rank / vessel type,All conditions,Third Engineer,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,1,0,0,2026-06-11
+20,All Third Officer,By rank / vessel type,All conditions,Third Officer,"Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,1,0,0,2026-06-11
+21,All Vessel -Junior Officer & Crew Except Top 4,By rank / vessel type,All conditions,"Able Bodied Seaman, Additional Engineer, Bosun, Chief Cook, Deck Cadet, Electrical Cadet, Electrical Officer, Electro Technical Officer, Electro Technical Rating, Engine Cadet, Fitter, Fourth Engineer, Gas Engineer, General Steward, Junior Fourth Engineer, Junior Third Officer, Messman, Motorman, Oiler, Ordinary Seaman, Pumpman, Second Officer, Third Engineer, Third Officer, Trainee Electrical Officer, Trainee Fitter, Trainee General Steward, Trainee Seaman, Trainee Wiper, Wiper","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,2,0,0,2026-07-21
+22,All Vessel- Top 4,By rank / vessel type,All conditions,"Chief Engineer, Chief Officer, Master, Second Engineer","Bulk Carrier, Chemical Tanker, Chemical/Oil Tanker, Container, Gas Carrier, Oil Tanker",,1,0,1,2026-07-21
+23,Bilash,Manual,Any condition,,,,32,0,,2026-01-28
+24,Bulk Carrier - Catering,By rank / vessel type,All conditions,"Chief Cook, General Steward, Messman, Trainee General Steward",Bulk Carrier,,1,3,0,2026-02-26
+25,Bulk Carrier - Chief Engineer,By rank / vessel type,All conditions,Chief Engineer,Bulk Carrier,,1,3,0,2026-02-26
+26,Bulk Carrier - Chief Officer,By rank / vessel type,All conditions,Chief Officer,Bulk Carrier,,12,1,0,2025-10-10
+27,Bulk Carrier - Deck Cadet,By rank / vessel type,All conditions,Deck Cadet,Bulk Carrier,,12,1,0,2025-10-10
+28,Bulk Carrier - Deck Ratings,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Ordinary Seaman, Pumpman, Trainee Seaman",Bulk Carrier,,10,1,0,2025-10-10
+29,Bulk Carrier - Electrical Officers,By rank / vessel type,All conditions,"Electrical Cadet, Electrical Officer, Electro Technical Officer, Electro Technical Rating, Trainee Electrical Officer",Bulk Carrier,,1,3,0,2026-02-26
+30,Bulk Carrier - Engine Cadet,By rank / vessel type,All conditions,Engine Cadet,Bulk Carrier,,1,3,0,2026-02-26
+31,Bulk Carrier - Junior Deck Officers,By rank / vessel type,All conditions,"Junior Third Officer, Second Officer, Third Officer",Bulk Carrier,,12,1,0,2025-10-10
+32,Bulk Carrier - Junior Engineer Officers,By rank / vessel type,All conditions,"Additional Engineer, Fourth Engineer, Junior Fourth Engineer, Third Engineer",Bulk Carrier,,1,3,0,2026-02-26
+33,Bulk Carrier - Master,By rank / vessel type,All conditions,Master,Bulk Carrier,,9,5,1,2025-10-10
+34,Bulk Carrier - Second Engineer,By rank / vessel type,All conditions,Second Engineer,Bulk Carrier,,1,3,1,2026-02-26
+35,Chemical Oil Tanker - Catering,By rank / vessel type,All conditions,"Chief Cook, General Steward, Messman, Trainee General Steward",Chemical/Oil Tanker,,4,0,1,2026-02-26
+36,Chemical Oil Tanker - Chief Engineer,By rank / vessel type,All conditions,Chief Engineer,Chemical/Oil Tanker,,3,1,1,2026-02-26
+37,Chemical Oil Tanker - Chief Officer,By rank / vessel type,All conditions,Chief Officer,Chemical/Oil Tanker,,9,0,0,2025-10-10
+38,Chemical Oil Tanker - Deck Cadet,By rank / vessel type,All conditions,Deck Cadet,Chemical/Oil Tanker,,8,0,0,2025-10-13
+39,Chemical Oil Tanker - Deck Ratings,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Ordinary Seaman, Pumpman, Trainee Seaman",Chemical/Oil Tanker,,7,0,2,2025-10-13
+40,Chemical Oil Tanker - Electrical Officers,By rank / vessel type,All conditions,"Electrical Cadet, Electrical Officer, Electro Technical Officer, Electro Technical Rating, Trainee Electrical Officer",Chemical/Oil Tanker,,4,0,0,2025-10-13
+41,Chemical Oil Tanker - Engine Cadet,By rank / vessel type,All conditions,Engine Cadet,Chemical/Oil Tanker,,4,0,0,2025-10-13
+42,Chemical Oil Tanker - Engine Ratings,By rank / vessel type,All conditions,"Motorman, Oiler, Trainee Wiper, Wiper",Chemical/Oil Tanker,,5,0,0,2025-10-13
+43,Chemical Oil Tanker - Fitter,By rank / vessel type,All conditions,"Fitter, Trainee Fitter",Chemical/Oil Tanker,,4,0,0,2025-10-13
+44,Chemical Oil Tanker - Junior Deck Officers,By rank / vessel type,All conditions,"Junior Third Officer, Second Officer, Third Officer",Chemical/Oil Tanker,,8,0,0,2025-10-13
+45,Chemical Oil Tanker - Junior Engineer Officers,By rank / vessel type,All conditions,"Additional Engineer, Fourth Engineer, Junior Fourth Engineer, Third Engineer",Chemical/Oil Tanker,,4,0,1,2025-10-13
+46,Chemical Oil Tanker - Master,By rank / vessel type,All conditions,Master,Chemical/Oil Tanker,,4,1,0,2026-02-26
+47,Chemical Oil Tanker - Second Engineer,By rank / vessel type,All conditions,Second Engineer,Chemical/Oil Tanker,,4,0,0,2025-10-13
+48,Chemical Tanker - Chief Engineer,By rank / vessel type,All conditions,Chief Engineer,Chemical Tanker,,2,0,,2026-02-26
+49,Chemical Tanker - Chief Officer,By rank / vessel type,All conditions,Chief Officer,Chemical Tanker,,7,0,,2025-10-10
+50,Chemical Tanker - Deck Cadet,By rank / vessel type,All conditions,Deck Cadet,Chemical Tanker,,7,0,,2025-10-10
+51,Chemical Tanker - Deck Ratings,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Ordinary Seaman, Pumpman, Trainee Seaman",Chemical Tanker,,6,0,,2025-10-10
+52,Chemical Tanker - Electrical Officers,By rank / vessel type,All conditions,"Electrical Cadet, Electrical Officer, Electro Technical Officer, Electro Technical Rating, Trainee Electrical Officer",Chemical Tanker,,3,0,,2025-10-10
+53,Chemical Tanker - Engine Cadet,By rank / vessel type,All conditions,Engine Cadet,Chemical Tanker,,3,0,,2025-10-10
+54,Chemical Tanker - Engine Ratings,By rank / vessel type,All conditions,"Motorman, Oiler, Trainee Wiper, Wiper",Chemical Tanker,,4,0,,2025-10-10
+55,Chemical Tanker - Fitter,By rank / vessel type,All conditions,"Fitter, Trainee Fitter",Chemical Tanker,,3,0,,2025-10-10
+56,Chemical Tanker - Junior Deck Officers,By rank / vessel type,All conditions,"Junior Third Officer, Second Officer, Third Officer",Chemical Tanker,,7,0,,2025-10-10
+57,Chemical Tanker - Junior Engineer Officers,By rank / vessel type,All conditions,"Additional Engineer, Fourth Engineer, Junior Fourth Engineer, Third Engineer",Chemical Tanker,,3,0,,2025-10-10
+58,Chemical Tanker - Master,By rank / vessel type,All conditions,Master,Chemical Tanker,,3,3,,2026-02-26
+59,Chemical Tanker - Second Engineer,By rank / vessel type,All conditions,Second Engineer,Chemical Tanker,,3,0,,2025-10-13
+60,Container - Chief Officer,By rank / vessel type,All conditions,Chief Officer,Container,,4,0,0,2025-10-10
+61,Container - Deck Cadet,By rank / vessel type,All conditions,Deck Cadet,Container,,4,0,1,2025-10-10
+62,Container - Deck Ratings,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Ordinary Seaman, Pumpman, Trainee Seaman",Container,,4,0,0,2025-10-10
+63,Container - Engine Cadet,By rank / vessel type,All conditions,Engine Cadet,Container,,2,0,0,2026-02-26
+64,Container - Junior Deck Officers,By rank / vessel type,All conditions,"Junior Third Officer, Second Officer, Third Officer",Container,,4,0,0,2025-10-10
+65,Container - Master,By rank / vessel type,All conditions,Master,Container,,2,2,0,2025-10-10
+66,Gas Carrier - Catering,By rank / vessel type,All conditions,"Chief Cook, General Steward, Messman, Trainee General Steward",Gas Carrier,,3,0,1,2025-10-10
+67,Gas Carrier - Chief Engineer,By rank / vessel type,All conditions,Chief Engineer,Gas Carrier,,2,1,0,2025-10-10
+68,Gas Carrier - Chief Officer,By rank / vessel type,All conditions,Chief Officer,Gas Carrier,,4,0,0,2025-10-10
+69,Gas Carrier - Deck Cadet,By rank / vessel type,All conditions,Deck Cadet,Gas Carrier,,4,0,0,2025-10-10
+70,Gas Carrier - Deck Ratings,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Ordinary Seaman, Pumpman, Trainee Seaman",Gas Carrier,,3,0,0,2025-10-10
+71,Gas Carrier - Electrical Officers,By rank / vessel type,All conditions,"Electrical Cadet, Electrical Officer, Electro Technical Officer, Electro Technical Rating, Trainee Electrical Officer",Gas Carrier,,4,0,0,2025-10-10
+72,Gas Carrier - Engine Cadet,By rank / vessel type,All conditions,Engine Cadet,Gas Carrier,,4,0,0,2025-10-10
+73,Gas Carrier - Engine Ratings,By rank / vessel type,All conditions,"Motorman, Oiler, Trainee Wiper, Wiper",Gas Carrier,,3,0,0,2025-10-13
+74,Gas Carrier - Fitter,By rank / vessel type,All conditions,"Fitter, Trainee Fitter",Gas Carrier,,3,0,0,2025-10-10
+75,Gas Carrier - Gas Engineer,By rank / vessel type,All conditions,Gas Engineer,Gas Carrier,,4,0,0,2025-10-10
+76,Gas Carrier - Junior Deck Officers,By rank / vessel type,All conditions,"Junior Third Officer, Second Officer, Third Officer",Gas Carrier,,3,0,0,2025-10-10
+77,Gas Carrier - Junior Engineer Officers,By rank / vessel type,All conditions,"Additional Engineer, Fourth Engineer, Junior Fourth Engineer, Third Engineer",Gas Carrier,,4,0,1,2025-10-10
+78,Gas Carrier - Master,By rank / vessel type,All conditions,Master,Gas Carrier,,2,1,0,2025-10-10
+79,Gas Carrier - Second Engineer,By rank / vessel type,All conditions,Second Engineer,Gas Carrier,,4,0,0,2025-10-10
+80,Heavy Lift Vessel - Chinese Crew,Manual,Any condition,,,,3,0,,2025-12-24
+81,Media Handling for Office Staff 14/10/2026,By rank / vessel type,Any condition,,,"Group: 0ae69c2a-23d9-4b38-9d67-815707129efa, 0d3111e4-d727-4c55-80f8-adc9f5fd90d1, 18423107-30cc-4a3e-8036-d802aa907e82, 1c3ce271-0012-4652-be32-2b1b0760e902, 1c7e03c5-fe72-46d7-b961-a915841dfab9, 1cf07603-2504-44e7-905e-4daa39fd1403, 246d8830-3ec2-45ae-bb3b-913fc3bc9707, 32abab58-0dc4-42a8-957b-b59c98d48435, 3525507f-def4-4be3-a2c8-b1f514095a0b, 37825a2d-6fd8-4aed-8455-801af410e8e8, 4336b4f4-5eb1-4633-9a1a-a413bfd5e5e6, 44675e77-1876-41a0-b68e-0bb7684e8827, 447d01b2-517c-441b-90ac-e4cbc8ee1a9e, 4d2aa586-7976-4fd9-80bc-7eb812e04b9c, 4e6c433b-b0dc-4d26-b8c3-eafbe3002577, 5a18f67f-7cf6-47e4-ac71-78e7710f867f, 5e11807f-7b59-4dc9-8de0-e568511e649e, 5e3a4fb6-9e29-47e6-9bbc-c0d817baaa2d, 5e43d9f5-bc47-4857-b183-6e0907bd6d55, 69119096-8eee-47aa-8a07-64e7a98f15a8, 71d40627-59e2-40db-a9a4-bf85850958ca, 74a06fd9-7afe-4276-b788-2a06b96e0bbd, 7afaf25e-3fa7-4dfe-92bd-e9ef0098cfcb, 7e99b266-4992-4473-972e-bdc510a941df, 803194cc-554e-4c68-9ee1-1c5e5285721f, 87752077-7bb0-470f-ae09-86fd1f1771f7, 8b09a22e-be54-4b96-bed7-2920ef9b29ad, 8e7dc9b9-c77b-481b-9347-6b8903b07b01, 90f8d045-4976-48c2-b7f7-0b2f3a5a3b49, 9256a031-4fb1-46f6-a872-4a626ef95c1d, 96e36384-85a3-4973-8562-7b581f019d74, a193ae34-6246-4407-81ef-2875db096d6b, a324f046-7c2b-41e2-a4f2-806942b3e8e7, a5570a33-6c93-494c-8e93-cc4623d44943, a6bc0180-1e34-4729-89a9-1144971eae41, ac5629d6-df7f-4ca3-96ad-f447d30a171f, ad8595a3-6184-4519-b5d0-a226e40753e7, adb11c4c-defd-48ab-b74a-2d9ada6db0bf, b09e23e0-7364-4335-8296-5a30f8e2594f, b3255cdb-a458-4331-90f2-53efd6bdd255, bb95b106-9eda-4ace-a528-e88d2ca56204, bc42af4d-ccc8-4be5-8e87-634d66b63a0b, bdff7c97-b891-43b3-95a3-1c6cb14de939, bf71053a-da2f-44d9-9e5c-4c5706fba6be, bfee9c61-a4dd-4d0a-b4c0-0f4b8d5fd63a, c0b18b5b-46b2-4ec3-9692-0a134269552f, c6b92b55-f937-41a9-a58b-8b8850070c97, cb1c7357-fe95-46e6-b9fd-d3e38843549b, cdd169ae-c7d1-4cde-b569-9b3ea1a0412d, d82ec114-07ce-4441-a69d-78621ff5dcb3, da7d20dd-6111-4549-b214-73944720d78f, df84d3a2-e423-495a-ad35-da98ef0545df, eaf460d2-7d8d-4f62-8839-b756a6e94963, f1abd205-1e26-4654-807b-9ea360fcd4ae, f231c5b4-06f8-4650-8cab-685d3e0e649a, f47f63c6-0178-43a0-a2e7-897d9e62158d, f5f6349b-5eba-4502-9abb-3ff719a5f6d2, f9b41e55-9745-4bfa-b53a-5aff1e23b8a7, fbdd4d18-008c-4fd3-9b57-b466ee9d3c91, fc370fc0-e0c9-4e3e-b245-a412a61dd634, fcc2a421-dde2-430c-a2ec-7a2a1da9871c",1,0,1061,2026-10-14
+82,Oil Tanker - Catering,By rank / vessel type,All conditions,"Chief Cook, General Steward, Messman, Trainee General Steward",Oil Tanker,,4,0,1,2026-02-26
+83,Oil Tanker - Chief Engineer,By rank / vessel type,All conditions,Chief Engineer,Oil Tanker,,3,0,0,2026-02-26
+84,Oil Tanker - Chief Officer,By rank / vessel type,All conditions,Chief Officer,Oil Tanker,,7,0,1,2025-10-10
+85,Oil Tanker - Deck Cadet,By rank / vessel type,All conditions,Deck Cadet,Oil Tanker,,6,0,1,2025-10-10
+86,Oil Tanker - Deck Ratings,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Ordinary Seaman, Pumpman, Trainee Seaman",Oil Tanker,,5,0,1,2025-10-10
+87,Oil Tanker - Electrical Officers,By rank / vessel type,All conditions,"Electrical Cadet, Electrical Officer, Electro Technical Officer, Electro Technical Rating, Trainee Electrical Officer",Oil Tanker,,4,0,1,2025-10-10
+88,Oil Tanker - Engine Cadet,By rank / vessel type,All conditions,Engine Cadet,Oil Tanker,,4,0,0,2025-10-10
+89,Oil Tanker - Engine Ratings,By rank / vessel type,All conditions,"Motorman, Oiler, Trainee Wiper, Wiper",Oil Tanker,,5,0,1,2025-10-10
+90,Oil Tanker - Fitter,By rank / vessel type,All conditions,"Fitter, Trainee Fitter",Oil Tanker,,4,0,0,2025-10-10
+91,Oil Tanker - Junior Deck Officers,By rank / vessel type,All conditions,"Junior Third Officer, Second Officer, Third Officer",Oil Tanker,,6,1,0,2025-10-10
+92,Oil Tanker - Junior Engineer Officers,By rank / vessel type,All conditions,"Additional Engineer, Fourth Engineer, Junior Fourth Engineer, Third Engineer",Oil Tanker,,4,0,1,2025-10-10
+93,Oil Tanker - Master,By rank / vessel type,All conditions,Master,Oil Tanker,,5,1,0,2026-02-26
+94,Oil Tanker - Second Engineer,By rank / vessel type,All conditions,Second Engineer,Oil Tanker,,4,0,1,2025-10-10
+95,Rio Tinto - All Bulk Carrier,By rank / vessel type,Any condition,,Bulk Carrier,,1,0,1,2025-12-29
+96,SMRSPL PORTAGE BILL (Office Staff ),By group,Any condition,,,Group: c815be9c-4e61-45fb-87ea-1293c138b6a2,1,0,0,2026-09-25
+97,SMRSPL PORTAGE BILL (Vessel),By group,Any condition,Master,,Group: ebe264ff-5ad6-4169-992a-c1dffe350388,1,0,0,2026-09-25
+98,SMSL & SMBL DOC Vessels,By rank / vessel type,All conditions,,,"Current Status: onboard; Vessel: BONETTI, CL Changsha, CL Chenzhou, CL Fuzhou He, CL Ganjiang, CL Guangzhou, CL Hengyang, CL Huaihua, CL Lianyungang, CL Loudi, CL Luzhou, CL Maoming, CL Shanggao, CL Shaoyang, CL XINYU, CL Xiangtan, CL Xiangxi, CL Xuchang, CL Yangjiang, CL Yangzhou, CL Yichun, CL Yingna HE, CL ZHANJIANG, CL Zhangjiajie, Capricorn Confidence, DIXON, Dali, Dream Team, FUGA, Hollins, Incheon Voyager, Lampard, Ocean Brave, Ocean Cadence, Ocean Diligence, SDTR Alice, SDTR Erica, SDTR Faith, SDTR Gloria, SDTR Hera, Scorpio Confidence, Shandong Fu Xin, Shandong Fu Yi, Tambling, Texas Triumph, XIN ZHI SEA, XIN Zheng Sea, Xin Xiang Sea, Yeosu Voyager, ZY Ningbo, ZY YULONG, Zola",1,0,1,2026-07-24
+99,SPPL Super,By group,Any condition,,,Group: 62f7a885-d9f4-4e31-a778-fe7133a1d44f,2,0,0,2026-09-29
+100,SSA - All Catering,By rank / vessel type,All conditions,"Chief Cook, General Steward","Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,8,0,78,2026-10-14
+101,SSA - All Jack Up Barge,By rank / vessel type,Any condition,,Self-Propelled Jack-Up Barge,,5,0,229,2026-10-15
+102,SSA - All Junior Officer Deck,By rank / vessel type,All conditions,"Deck Cadet, Second Officer","Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,17,0,24,2026-10-14
+103,SSA - All Junior Officer Engine,By rank / vessel type,All conditions,"Electro Technical Officer, Engine Cadet, Third Engineer, Trainee Electrical Officer","Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,24,0,39,2026-10-14
+104,SSA - All Ranks,By rank / vessel type,All conditions,,"Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,50,0,0,2026-10-14
+105,SSA - All Ratings Deck,By rank / vessel type,All conditions,"Able Bodied Seaman, Bosun, Crane Operator, Radio Officer / Radio Operator","Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,2,0,0,2026-10-14
+106,SSA - All Ratings Engine,By rank / vessel type,All conditions,"Fitter, Marine Technician / Marine Welder, Mechanic, Motorman, Oiler, Technician-HVAC","Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,13,0,111,2026-10-14
+107,SSA - All Senior Officer Deck,By rank / vessel type,All conditions,"Chief Officer, Master","Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,22,0,106,2026-10-14
+108,SSA - All Senior Officer Engine,By rank / vessel type,All conditions,"Chief Engineer, Second Engineer","Crew Boat, Fast Support Intrevention Vessel, Offshore Work / Support Vessel, Self-Propelled Jack-Up Barge, Voith Mooring Tug",,26,0,82,2026-10-14
+109,Sealearning Team,Manual,Any condition,,,,189,0,6,2025-10-03
+110,chemical Tanker - Catering,By rank / vessel type,All conditions,"Chief Cook, General Steward, Messman, Trainee General Steward",Chemical Tanker,,3,0,,2026-02-26
