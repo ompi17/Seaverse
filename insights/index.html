@@ -191,13 +191,13 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <div class="tablebox" style="max-height:24rem"><table class="hier np-tbl"></table></div>
     </div>
     <div class="card c-due" hidden>
-      <div class="bar"><h2 style="margin:0">Due and expired compulsory certificates</h2>
+      <div class="bar"><h2 style="margin:0" class="d-h">Due and expired compulsory certificates</h2>
         <div class="dlbar d-dl"><span class="note-inline">Download this list:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
       <div class="fbar" style="margin-top:var(--cds-gap-sm)"><label class="fl">Status <span class="fw"><select class="d-st"><option value="">Expired and due ≤90 days</option><option>Expired</option><option>Due ≤30d</option><option>Due 31–60d</option><option>Due 61–90d</option></select><button class="fx" data-dx="0" title="Reset status">×</button></span></label></div>
       <p class="note-inline d-note" style="margin:0 0 var(--cds-gap-sm)"></p>
       <div class="tablebox" style="max-height:30rem"><table class="hier d-tbl"></table></div>
     </div>
-    <div class="card c-top" hidden><h2>Courses with the most expired or due certificates</h2><p class="note">Compulsory courses only, for the filters above.</p><div class="chart t-chart"></div></div>
+    <div class="card c-top" hidden><h2>Courses with the most expired or due certificates</h2><p class="note t-n">Compulsory courses, for the filters above.</p><div class="chart t-chart"></div></div>
   </section>
 
   <section data-page="cont" hidden>
@@ -246,7 +246,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <h2>Compulsory training</h2>
     <p>Learning plans assign courses by rank and vessel type, with each course tagged <b>Assigned</b> (compulsory, the matrix's C) or <b>Recommended</b> (R). A person's compulsory courses are the Assigned courses of every active plan they are enrolled in. <b>Done</b> = completed at least once, on Seaverse or with the previous provider. <b>Up to date</b> = done and not past its validity (courses with no expiry count once done).</p>
     <h2>Certificates and validity</h2>
-    <p>Each course's validity comes from its certificate set-up (3 years, 5 years, or no expiry). The latest completion, on Seaverse or from the previous provider (matched by email), plus the validity gives the expiry date. Status at the reporting date: <b>Valid</b>, <b>Due</b> within 30, 60 or 90 days, <b>Expired</b>, or <b>Not yet done</b>. Records migrated from the previous provider show as “Previous provider”.</p>
+    <p>Each course's validity comes from its certificate set-up (3 years, 5 years, or no expiry). The latest completion, on Seaverse or from the previous provider (matched by email), plus the validity gives the expiry date. Status at the reporting date: <b>Valid</b>, <b>Due</b> within 30, 60 or 90 days, <b>Expired</b>, or <b>Not yet done</b>. The Courses selector on that tab switches between compulsory courses (default), recommended courses, or both. Records migrated from the previous provider show as “Previous provider”.</p>
     <h2>Logins and app use</h2>
     <p>Last login from the user record; <b>App</b> = has a mobile push token. <b>Dormant</b> = registered but not logged in for over 30 days. Until the daily users file carries the last-login field, this tab shows the 16 Oct snapshot.</p>
     <h2>Content</h2>
@@ -280,7 +280,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   const cache = {};
   const get = (f) => cache[f] || (cache[f] = fetch('data/' + f + '?v=' + V, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(f + ' ' + r.status); return r.text(); })
     .then((t) => f.endsWith('.json') ? JSON.parse(t) : d3.csvParse(t)));
-  const NUM = ['c_n', 'c_ever', 'c_ok', 'c_exp', 'c_d30', 'c_d60', 'c_d90', 'c_miss', 'c_prev', 'r_n', 'r_done'];
+  const NUM = ['c_n', 'c_ever', 'c_ok', 'c_exp', 'c_d30', 'c_d60', 'c_d90', 'c_miss', 'c_prev', 'r_n', 'r_done', 'r_ok', 'r_exp', 'r_d30', 'r_d60', 'r_d90', 'r_miss', 'r_prev'];
 
   // ---------- downloads ----------
   const csvOf = (rows) => '﻿' + rows.map((r) => r.map((v) => { v = v == null ? '' : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }).join(',')).join('\n');
@@ -381,6 +381,19 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     let people = null, cidx = null, due = null, plans = null, pp = null, byId = null;
     const sel = { cat: $('.f-cat'), doc: $('.f-doc'), ves: $('.f-ves'), rank: $('.f-rank') }, qbox = $('.f-q');
     const KEYS = ['cat', 'doc', 'ves', 'rank'];
+    // which plan courses the certificates tab covers: compulsory (default), recommended, or both
+    let CT = 'comp';
+    const ctSel = el('select', { class: 'f-ct' }, el('option', { value: 'comp' }, 'Compulsory'), el('option', { value: 'rec' }, 'Recommended'), el('option', { value: 'all' }, 'Compulsory and recommended'));
+    const ctX = el('button', { class: 'fx', title: 'Back to compulsory' }, '×');
+    const ctLab = el('label', { class: 'fl' }, 'Courses ', el('span', { class: 'fw' }, ctSel, ctX));
+    $('.fbar .fbtns').before(ctLab);
+    ctSel.addEventListener('change', () => { CT = ctSel.value; render(); });
+    ctX.addEventListener('click', (e) => { e.preventDefault(); CT = 'comp'; render(); });
+    const mode = () => TAB === 'cert' ? CT : 'comp';
+    const RK = { n: 'r_n', ever: 'r_done', ok: 'r_ok', exp: 'r_exp', d30: 'r_d30', d60: 'r_d60', d90: 'r_d90', miss: 'r_miss', prev: 'r_prev' };
+    const F = (p, k, m = mode()) => m === 'comp' ? p['c_' + k] : m === 'rec' ? p[RK[k]] : p['c_' + k] + p[RK[k]];
+    const NEXT = (p, m = mode()) => { const a = m === 'rec' ? '' : p.next_due, b = m === 'comp' ? '' : p.r_next; return !a ? b : !b ? a : a < b ? a : b; };
+    const CTL = () => ({ comp: 'compulsory', rec: 'recommended', all: 'compulsory and recommended' }[mode()]);
     const FK = { cat: 'category', doc: 'doc', ves: 'vessel', rank: 'rank' };
     const ALLL = { cat: 'All categories', doc: 'All DoCs', ves: 'All vessels', rank: 'All ranks' };
     const DEPS = { cat: [], doc: ['ves'], ves: [], rank: [] };          // clearing a DoC also clears its vessel
@@ -431,6 +444,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       }
       $('[data-px="q"]').toggleAttribute('data-off', !S.q);
       popSel.value = S.pop; popX.toggleAttribute('data-off', !S.popUser);
+      ctLab.hidden = TAB !== 'cert'; ctSel.value = CT; ctX.toggleAttribute('data-off', CT === 'comp');
       $$('button', crew).forEach((b) => b.setAttribute('aria-checked', String(b.dataset.v === S.cat)));
     }
     for (const k of KEYS) sel[k].addEventListener('change', () => setF(k, sel[k].value));
@@ -454,8 +468,9 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       for (const p of rows) {
         if (p.registered === 'Yes') a.reg++;
         if (p.category === ONB) a.onb++; else if (p.category === OFB) a.ofb++;
-        if (p.c_n > 0) { a.plan++; if (p.c_ok === p.c_n) a.full++; } else if (!p.r_n) a.none++;
-        a.cn += p.c_n; a.ever += p.c_ever; a.ok += p.c_ok; a.exp += p.c_exp; a.d30 += p.c_d30; a.d60 += p.c_d60; a.d90 += p.c_d90; a.miss += p.c_miss; a.prev += p.c_prev; a.rn += p.r_n; a.rd += p.r_done;
+        const n = F(p, 'n'), okp = F(p, 'ok');
+        if (n > 0) { a.plan++; if (okp === n) a.full++; } else if (!p.r_n && !p.c_n) a.none++;
+        a.cn += n; a.ever += F(p, 'ever'); a.ok += okp; a.exp += F(p, 'exp'); a.d30 += F(p, 'd30'); a.d60 += F(p, 'd60'); a.d90 += F(p, 'd90'); a.miss += F(p, 'miss'); a.prev += F(p, 'prev'); a.rn += p.r_n; a.rd += p.r_done;
         const L = p.login; if (L === '≤7 days') a.L7++; else if (L === '8–30 days') a.L30++; else if (L === '31–90 days') a.L90++; else if (L === '>90 days' || L === 'Never') a.Lold++; else a.Lnone++;
         if (p.app === 'Yes') a.app++;
       }
@@ -477,16 +492,17 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       comp: [{ h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Done', k: 'c_ever', cls: 'num' }, { h: 'Up to date', k: 'c_ok', cls: 'num' },
         { h: 'Up to date %', k: 'okp', cls: 'num', v: (r) => share(r.c_ok, r.c_n), f: (r) => pct0(share(r.c_ok, r.c_n)) },
         { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Recommended', k: 'r_n', cls: 'num' }, { h: 'Rec. done', k: 'r_done', cls: 'num' }],
-      cert: [{ h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Valid', k: 'c_ok', cls: 'num' }, { h: 'Expired', k: 'c_exp', cls: 'num' },
-        { h: 'Due ≤90 days', k: 'due', cls: 'num', v: (r) => r.c_d30 + r.c_d60 + r.c_d90, f: (r) => r.c_d30 + r.c_d60 + r.c_d90 },
-        { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Next expiry', k: 'next_due', f: (r) => fmtD(r.next_due), x: (r) => r.next_due }],
+      cert: [{ h: 'Courses', k: 'xn', cls: 'num', v: (r) => F(r, 'n'), f: (r) => F(r, 'n') }, { h: 'Valid', k: 'xok', cls: 'num', v: (r) => F(r, 'ok'), f: (r) => F(r, 'ok') },
+        { h: 'Expired', k: 'xexp', cls: 'num', v: (r) => F(r, 'exp'), f: (r) => F(r, 'exp') },
+        { h: 'Due ≤90 days', k: 'due', cls: 'num', v: (r) => F(r, 'd30') + F(r, 'd60') + F(r, 'd90'), f: (r) => F(r, 'd30') + F(r, 'd60') + F(r, 'd90') },
+        { h: 'Not yet done', k: 'xmiss', cls: 'num', v: (r) => F(r, 'miss'), f: (r) => F(r, 'miss') }, { h: 'Next expiry', k: 'xnext', v: NEXT, f: (r) => fmtD(NEXT(r)), x: NEXT }],
       act: [{ h: 'Stage', k: 'stage', num: false }, { h: 'Last login', k: 'last_login', f: (r) => fmtD(r.last_login), x: (r) => r.last_login },
         { h: 'Since last login', k: 'login', num: false }, { h: 'Mobile app', k: 'app', num: false }, { h: 'Course language (feedback)', k: 'langs', num: false }],
     };
     const INTRO = {
       plan: 'Learning plans assign courses by rank and vessel type. Each course in a plan is compulsory (Assigned) or recommended. Figures follow the filters.',
       comp: 'Compulsory (Assigned) and recommended courses from each person’s learning plans, and how many are done and still in date.',
-      cert: 'Certificate validity for compulsory courses: latest completion (Seaverse or previous provider) plus the course’s validity period.',
+      cert: 'Certificate validity for plan courses (choose compulsory, recommended or both under Courses): latest completion (Seaverse or previous provider) plus the course’s validity period.',
       act: `Logins and mobile app use, as at ${loginD}. Dormant = not logged in for over 30 days.`,
     };
     const TITLE = { comp: 'compulsory training', cert: 'certificate validity', act: 'logins and app use', plan: 'learning plans' };
@@ -544,11 +560,11 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
         ['Recommended done', pct(A.recPct), `${int(A.rd)} of ${int(A.rn)}`],
       ]);
       else if (TAB === 'cert') kpis($('.p-kpis'), [
-        ['Valid or no expiry', int(A.ok), pct(share(A.ok, A.cn)) + ' of compulsory links'],
+        ['Valid or no expiry', int(A.ok), pct(share(A.ok, A.cn)) + ` of ${CTL()} links`],
         ['Expired', int(A.exp), 'needs recertification now'],
         ['Due within 30 days', int(A.d30), ''],
         ['Due in 31–90 days', int(A.d60 + A.d90), `${int(A.d60)} in 31–60 · ${int(A.d90)} in 61–90`],
-        ['Not yet done', int(A.miss), 'compulsory, never completed'],
+        ['Not yet done', int(A.miss), `${CTL()}, never completed`],
         ['From previous provider', int(A.prev), 'completions carried over'],
       ]);
       else kpis($('.p-kpis'), [
@@ -670,15 +686,16 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       if (!due) { $('.d-note').textContent = 'Loading…'; due = await get('ins_due.csv'); }
       let ids = new Set(rows.map((p) => p.employee_id));
       if (S.person) ids = new Set([S.person.employee_id]);
-      let d = due.filter((r) => ids.has(r.employee_id));
+      const m = mode(); let d = due.filter((r) => ids.has(r.employee_id) && (m === 'all' || r.type === (m === 'comp' ? 'Compulsory' : 'Recommended')));
+      $('.d-h').textContent = `Due and expired ${CTL()} certificates`; $('.t-n').textContent = `${CTL()[0].toUpperCase() + CTL().slice(1)} courses, for the filters above.`;
       const top = d3.rollups(d, (v) => v.length, (r) => r.course).map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n).slice(0, 15);
       if (dst.value) d = d.filter((r) => r.status === dst.value);
       $('[data-dx="0"]').toggleAttribute('data-off', !dst.value);
       const n = table($('.d-tbl'), [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 },
-        { h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Status', k: 'status', num: false, f: (r) => chip(r.status, r.status === 'Expired' ? 'x' : '1') }, { h: 'Last completed', k: 'last_completed', f: (r) => fmtD(r.last_completed), x: (r) => r.last_completed },
+        { h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Type', k: 'type', num: false }, { h: 'Status', k: 'status', num: false, f: (r) => chip(r.status, r.status === 'Expired' ? 'x' : '1') }, { h: 'Last completed', k: 'last_completed', f: (r) => fmtD(r.last_completed), x: (r) => r.last_completed },
         { h: 'Expires', k: 'expires', f: (r) => fmtD(r.expires), x: (r) => r.expires }, { h: 'Source', k: 'source', num: false }], d, { limit: 1000, sortK: 'expires', sortD: 1 });
       $('.d-note').textContent = `${int(n)} certificate${n === 1 ? '' : 's'}${n > 1000 ? ' (first 1,000 shown; the download has all)' : ''}, for the filters and the row you opened above.`;
-      dueView = { title: 'Due and expired compulsory certificates', tbl: $('.d-tbl') };
+      dueView = { title: `Due and expired ${CTL()} certificates`, tbl: $('.d-tbl') };
       bars($('.t-chart'), top, { aria: 'Courses with the most expired or due certificates', color: 'var(--color-bad)' });
     }
     wireDl($('.p-dl'), () => view && { title: view.title, rows: view.tbl._rows() });
