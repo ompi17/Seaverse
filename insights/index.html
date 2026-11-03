@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Seaverse Insights</title>
+<style>
+:root{--font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif;
+--color-bg:#ffffff;--color-panel:#ffffff;--color-fg:#1f1e1d;--color-fg-muted:#6b6a66;--color-border:#d9d7d0;--color-border-line:#e6e4dd;
+--color-ok:#2f8a4c;--color-warn:#c27c0e;--color-bad:#c2412d;--page:#f6f5f1;
+--cds-border:#d9d7d0;--cds-chart-axis:#c9c7c0;--cds-chart-grid:#ecebe6;--cds-chart-muted:#b5b3ac;--cds-chart-reference:#8a8984;--cds-chart-status-critical:#c2412d;
+--cds-surface-popover:#ffffff;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.12);--cds-text-secondary:#6b6a66;
+--cds-font-size-caption:12px;--cds-font-size-body:14px;--cds-font-size-heading:16px;--cds-font-size-title:26px;--cds-font-weight-medium:500;
+--cds-gap-xs:4px;--cds-gap-sm:8px;--cds-gap-md:12px;--cds-gap-lg:20px;--cds-pad-xs:3px;--cds-pad-sm:6px;--cds-pad-md:10px;--cds-pad-lg:16px;--cds-radius:8px;--cds-dur-slow:.4s}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--color-bg:#1f1e1d;--color-panel:#262624;--color-fg:#ecebe6;--color-fg-muted:#a3a19b;--color-border:#3d3c39;--color-border-line:#363532;
+--color-ok:#5cb87a;--color-warn:#e0a240;--color-bad:#e36b55;--page:#191918;--cds-border:#3d3c39;--cds-chart-axis:#4a4945;--cds-chart-grid:#2f2e2b;--cds-chart-muted:#5e5d58;--cds-chart-reference:#9b9a94;
+--cds-surface-popover:#2c2b29;--cds-shadow-popover:0 4px 16px rgba(0,0,0,.5);--cds-text-secondary:#a3a19b}}
+html,body{margin:0;background:var(--page);color:var(--color-fg)}
+#dash-root{max-width:1280px;margin:0 auto;padding:16px}
+.dash-skeleton{min-height:2em;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--color-fg) 6%,transparent),transparent);background-size:200% 100%;animation:sk 1.4s infinite}
+@keyframes sk{from{background-position:200% 0}to{background-position:-200% 0}}
+.sa-load{position:fixed;inset:auto 16px 16px auto;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:8px;padding:8px 12px;font:13px system-ui;color:var(--color-fg-muted);box-shadow:var(--cds-shadow-popover);z-index:9}
+.sa-dl{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);max-width:min(92vw,560px);background:var(--color-panel);border:1px solid var(--color-border);border-radius:8px;padding:10px 36px 10px 14px;font:13px system-ui;color:var(--color-fg);box-shadow:var(--cds-shadow-popover);z-index:10}
+.sa-dl a{color:#3a6ea5;font-weight:600;word-break:break-all}.sa-dl button{position:absolute;top:6px;right:8px;border:0;background:none;font-size:18px;cursor:pointer;color:var(--color-fg-muted)}
+.sa-dl-n{margin-top:4px;font-size:12px;color:var(--color-fg-muted)}
+.sa-frame{background:#fff4d6;color:#5a4300;font:13px system-ui;padding:8px 16px;text-align:center}
+.sa-foot{max-width:1280px;margin:0 auto;padding:0 16px 24px;font:12px system-ui;color:var(--color-fg-muted)}
+</style>
+<style>
+.sv{font-family:var(--font-anthropic-sans);color:var(--color-fg);display:flex;flex-direction:column;gap:var(--cds-gap-lg)}
+.sv h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.sv .take{color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 0;font-size:var(--cds-font-size-body)}
+.sv .bar{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm);align-items:center;justify-content:space-between}
+.sv .tabs{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs);border-bottom:1px solid var(--color-border-line)}
+.sv .tab{background:none;border:0;border-bottom:2px solid transparent;padding:var(--cds-pad-sm) var(--cds-pad-md);color:var(--color-fg-muted);font:inherit;cursor:pointer}
+.sv .tab[aria-selected=true]{color:var(--color-fg);border-bottom-color:var(--color-fg)}
+.sv select,.sv input[type=search]{font:inherit;font-size:var(--cds-font-size-caption);padding:var(--cds-pad-xs) var(--cds-pad-sm);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-bg);color:var(--color-fg);max-width:100%}
+.sv .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:var(--cds-gap-md)}
+.sv .kpi,.sv .card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg)}
+.sv .kpi .lab{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .kpi .val{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);font-variant-numeric:tabular-nums;margin:var(--cds-gap-xs) 0;min-height:1.2em}
+.sv .kpi .sub{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:var(--cds-gap-md)}
+.sv .card h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.sv .card .note{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 var(--cds-gap-md)}
+.sv .chart{position:relative;min-height:220px}
+.sv .tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);white-space:nowrap;display:none;z-index:2}
+.sv .tip .t{color:var(--cds-text-secondary)}
+.sv .seg{display:inline-flex;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);overflow:hidden}
+.sv .seg button{font:inherit;font-size:var(--cds-font-size-caption);background:var(--color-bg);color:var(--color-fg-muted);border:0;padding:var(--cds-pad-xs) var(--cds-pad-md);cursor:pointer}
+.sv .seg button+button{border-left:1px solid var(--color-border-line)}
+.sv .seg button[aria-checked=true]{background:var(--color-panel);color:var(--color-fg);font-weight:var(--cds-font-weight-medium)}
+.sv .note-inline{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .tdef{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);background:var(--color-panel);border:1px solid var(--color-border-line);border-left:3px solid var(--color-fg);border-radius:var(--cds-radius);padding:var(--cds-pad-sm) var(--cds-pad-md);line-height:1.7;margin-bottom:var(--cds-gap-md)}
+.sv .tdef b{color:var(--color-fg)}
+.sv .pill{display:inline-block;border-radius:999px;padding:0 var(--cds-pad-sm);color:var(--color-fg);border:1px solid var(--color-border-line);background:var(--color-bg);white-space:nowrap}
+.sv .gauges{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:var(--cds-gap-md)}
+.sv .lx-globalctl{margin-bottom:var(--cds-gap-sm)}
+.sv .gauge{text-align:center}
+.sv .gauge .gw{max-width:220px;margin:var(--cds-gap-sm) auto 0;min-height:90px}
+.sv .gauge .val{margin-top:calc(-1 * var(--cds-gap-sm))}
+.sv .bands{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,8rem),1fr));gap:var(--cds-gap-sm)}
+.sv .band{border-radius:var(--cds-radius);padding:var(--cds-pad-sm);text-align:center;border:1px solid var(--color-border-line)}
+.sv .band b{display:block;font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);line-height:1.2;font-variant-numeric:tabular-nums}
+.sv .band span{display:block;font-size:var(--cds-font-size-caption);font-weight:var(--cds-font-weight-medium)}
+.sv .band small{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv .b-on{background:color-mix(in srgb,var(--b-on) 14%,transparent)}.sv .b-on b,.sv .b-on span{color:var(--b-on)}
+.sv .b-near{background:color-mix(in srgb,var(--b-near) 14%,transparent)}.sv .b-near b,.sv .b-near span{color:var(--b-near)}
+.sv .b-below{background:color-mix(in srgb,var(--b-below) 14%,transparent)}.sv .b-below b,.sv .b-below span{color:var(--b-below)}
+.sv .b-low{background:color-mix(in srgb,var(--b-low) 14%,transparent)}.sv .b-low b,.sv .b-low span{color:var(--b-low)}
+.sv .b-no{background:color-mix(in srgb,var(--b-no) 14%,transparent)}.sv .b-no b,.sv .b-no span{color:var(--b-no)}
+.sv .chip{display:inline-block;border-radius:999px;padding:1px var(--cds-pad-sm);font-size:var(--cds-font-size-caption);white-space:nowrap;--c:var(--cds-chart-muted);color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent)}
+.sv .chip[data-b="On target"]{--c:var(--b-on)}.sv .chip[data-b="Near target"]{--c:var(--b-near)}.sv .chip[data-b="Below target"]{--c:var(--b-below)}.sv .chip[data-b="Low activity"]{--c:var(--b-low)}.sv .chip[data-b="No activity"]{--c:var(--b-no)}
+.sv .chip[data-b="Not assessable"],.sv .chip[data-b="No assessable crew"]{--c:var(--color-fg-muted)}
+.sv .sub-h{font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium);margin:var(--cds-gap-md) 0 var(--cds-gap-xs)}
+.sv .chip[data-b="Completed"]{--c:var(--color-ok)}.sv .chip[data-b="In progress"]{--c:var(--color-warn)}.sv .chip[data-b="Not started"]{--c:var(--color-bad)}.sv .chip[data-b="Not assigned"]{--c:var(--color-fg-muted)}
+.sv .dl{font:inherit;font-size:var(--cds-font-size-caption);padding:var(--cds-pad-xs) var(--cds-pad-md);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-panel);color:var(--color-fg);cursor:pointer}
+.sv .dl:hover{background:var(--color-bg)}
+.sv .dl[disabled]{opacity:.5;cursor:default}
+.sv .fbar{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm) var(--cds-gap-md);align-items:flex-end;margin:0 0 var(--cds-gap-sm)}
+.sv .fbar label{display:flex;flex-direction:column;gap:2px;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);min-width:0}
+.sv .fbar select,.sv .fbar input{max-width:200px}
+.sv .fw{position:relative;display:inline-block}
+.sv .fw[hidden]{display:none}
+.sv .fw select{padding-right:14px}
+.sv .fw input[type=search]::-webkit-search-cancel-button{display:none}
+.sv .fx{position:absolute;right:-6px;bottom:-6px;width:16px;height:16px;padding:0;border-radius:50%;border:1px solid var(--color-border, #8884);background:var(--color-bg, #fff);color:var(--color-fg-muted);font-size:11px;line-height:14px;text-align:center;cursor:pointer;z-index:1}
+.sv .fx:hover{color:var(--color-fg);border-color:var(--color-fg-muted)}
+.sv .fx[data-off]{opacity:.35;cursor:default}
+.sv .fw.fs input{padding-right:22px}
+.sv .fw.fs .fx{top:50%;bottom:auto;right:4px;transform:translateY(-50%);border:none;background:transparent;font-size:15px;line-height:16px}
+.sv .fw.fs .fx[data-off]{display:none}
+.sv .fbtns{display:flex;gap:var(--cds-gap-xs);flex-wrap:wrap}
+.sv .dlbar{display:flex;gap:var(--cds-gap-xs);align-items:center;flex-wrap:wrap}
+.sv table.hier td,.sv table.hier th{white-space:nowrap}
+.sv table.hier tr.h0 td{font-weight:var(--cds-font-weight-medium);background:var(--color-bg)}
+.sv table.hier tr.click td{cursor:pointer}.sv table.hier tr.click:hover td{background:var(--color-bg)}.sv table.hier tr.dim td{color:var(--color-fg-muted)}.sv table.hier td.sm2{color:var(--color-fg-muted)}
+.sv table.hier tr.h2 td{cursor:pointer}.sv table.hier tr.h2 td:first-child{padding-left:22px}
+.sv table.hier tr.h3 td{color:var(--color-fg-muted)}.sv table.hier tr.h3 td:first-child{padding-left:44px;color:var(--color-fg)}
+.sv table.hier tr.h3.out td{opacity:.55}
+.sv table.hier tr.h1:hover td,.sv table.hier tr.h2:hover td{background:var(--color-bg)}
+.sv table.hier .car{display:inline-block;width:14px;color:var(--color-fg-muted)}
+.sv table.hier .sm{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.sv .mini{font:inherit;font-size:var(--cds-font-size-caption);padding:0 var(--cds-pad-xs);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-panel);color:var(--color-fg);cursor:pointer}
+.sv .pc-head{margin-bottom:var(--cds-gap-sm)}.sv .pc-name{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.sv .pc-kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:var(--cds-gap-sm) var(--cds-gap-md);margin:var(--cds-gap-sm) 0 var(--cds-gap-md)}
+.sv .pc-item{display:flex;flex-direction:column;gap:2px;font-size:var(--cds-font-size-caption)}.sv .pc-l{color:var(--color-fg-muted)}.sv .pc-item b{font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium)}.sv .pc-s{color:var(--color-fg-muted)}
+.sv .pc-hist{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-bottom:var(--cds-gap-sm)}
+.sv .pc-ns{margin-top:var(--cds-gap-sm);font-size:var(--cds-font-size-caption)}.sv .pc-ns summary{cursor:pointer;color:var(--color-fg-muted)}.sv .pc-ns .pill{margin:2px}
+.sv table.hier td.wrapc{white-space:normal;min-width:16rem}
+.sv .chip[data-b="Completed"]{--c:var(--color-ok)}.sv .chip[data-b="In progress"]{--c:var(--color-warn)}
+.sv .crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:var(--cds-gap-xs);font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium)}
+.sv .crumbs button{all:unset;cursor:pointer;color:var(--color-fg-muted);text-decoration:underline;text-underline-offset:3px}
+.sv .crumbs .sep{color:var(--color-fg-muted)}
+.sv .tablebox{max-height:32rem;overflow:auto}
+.sv table{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption);font-variant-numeric:tabular-nums}
+.sv th{position:sticky;top:0;background:var(--color-panel);text-align:left;font-weight:var(--cds-font-weight-medium);border-bottom:1px solid var(--color-border-line);padding:0;z-index:1}
+.sv th button{all:unset;cursor:pointer;display:block;padding:var(--cds-pad-xs) var(--cds-pad-sm);white-space:nowrap}
+.sv th.num button,.sv td.num{text-align:right}
+.sv td{padding:var(--cds-pad-xs) var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.sv tbody tr.click{cursor:pointer}
+.sv tbody tr.click:hover{background:var(--color-bg)}
+.sv tbody tr.dim td{color:var(--color-fg-muted)}
+.sv .cellbar{display:flex;align-items:center;gap:var(--cds-gap-xs);justify-content:flex-end}
+.sv .cellbar i{display:block;height:6px;border-radius:3px;background:var(--cds-chart-muted)}
+.sv .cellbar i.ok{background:var(--color-ok)}
+.sv .good{color:var(--color-ok)}
+.sv .badtxt{color:var(--color-bad)}
+.sv .method p,.sv .method li{font-size:var(--cds-font-size-body);line-height:1.5;max-width:52rem}
+.sv .method h2{margin-top:var(--cds-gap-md)}
+.sv [data-dash-source-state=empty]{color:transparent}
+.sv [data-dash-source-state=refreshing]{opacity:.5;transition:opacity var(--cds-dur-slow)}
+.sv .failed{display:flex;align-items:center;justify-content:center;gap:var(--cds-gap-xs);color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);min-height:inherit}
+.sv .failed::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
+@media (max-width:640px){.sv .hide-narrow{display:none}}
+
+.sv a.lnk,.sv .crumbs a{color:var(--color-accent,#3a6ea5)}
+.sv{--ins-bar:#3a6ea5}
+.sv .ins-bl{font-size:12px;fill:var(--color-fg,#1f2328)}.sv .ins-bv{font-size:11.5px;fill:var(--color-fg-muted,#59636e);font-variant-numeric:tabular-nums}
+.sv .chip[data-s="x"]{--c:var(--color-bad)}.sv .chip[data-s="1"],.sv .chip[data-s="2"],.sv .chip[data-s="3"]{--c:var(--color-warn)}
+.sv .chip[data-s="v"],.sv .chip[data-s="n"]{--c:var(--color-ok)}.sv .chip[data-s="m"]{--c:var(--color-fg-muted)}
+.sv table.hier th{position:sticky;top:0;z-index:1;background:var(--color-panel,#fff)}
+.sv .method{max-width:60rem}.sv .method p{line-height:1.55}
+.sv table.hier th{white-space:nowrap;padding-right:10px}.sv table.hier td{padding-right:10px}.sv .tablebox{overflow:auto}
+.sv .o-tchart,.sv .lu-chart,.sv .t-chart{height:auto;min-height:0}
+.sv table.hier td.wrapc{min-width:12rem}
+.sv td.num,.sv th.num{text-align:right;font-variant-numeric:tabular-nums}
+</style>
+<script src="d3.v7.9.0.min.js"></script>
+</head><body>
+<div id="dash-root">
+<div class="sv">
+  <div>
+    <h1>Seaverse Insights</h1>
+    <p class="note-inline" style="margin:2px 0 0"><span id="asof">Updated 3 Nov 2026, 13:38 IST (08:08 UTC)</span> · <a href="../" class="lnk">Open the Seaverse Dashboard</a></p>
+    <p class="note-inline ins-snap" style="margin:2px 0 0"></p>
+  </div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="comp" aria-selected="true">Compulsory training</button>
+    <button class="tab" role="tab" data-tab="cert">Certificates &amp; validity</button>
+    <button class="tab" role="tab" data-tab="act">Logins &amp; app use</button>
+    <button class="tab" role="tab" data-tab="cont">Content</button>
+    <button class="tab" role="tab" data-tab="ops">LMS operations</button>
+    <button class="tab" role="tab" data-tab="how">How it's measured</button>
+  </div>
+
+  <!-- people explorer, shared by the first three tabs -->
+  <section data-page="people" class="ins-people">
+    <p class="note-inline ins-pintro" style="margin:0"></p>
+    <div class="fbar">
+      <label class="fl">Category <span class="fw"><select class="f-cat"></select><button class="fx" data-px="0" title="Reset category and the filters after it">×</button></span></label>
+      <label class="fl">DoC <span class="fw"><select class="f-doc"></select><button class="fx" data-px="1" title="Reset DoC and the filters after it">×</button></span></label>
+      <label class="fl">Vessel <span class="fw"><select class="f-ves"></select><button class="fx" data-px="2" title="Reset vessel and the filters after it">×</button></span></label>
+      <label class="fl">Rank <span class="fw"><select class="f-rank"></select><button class="fx" data-px="3" title="Reset rank and the filters after it">×</button></span></label>
+      <label class="fl">Search <span class="fw fs"><input type="search" class="f-q" placeholder="Name, ID, vessel or DoC"><button class="fx" data-px="4" title="Clear search">×</button></span></label>
+      <div class="fbtns"><button class="dl f-clr">Clear filters</button></div>
+    </div>
+    <p class="note-inline f-filt" style="margin:0"></p>
+    <div class="kpis p-kpis"></div>
+    <div class="card">
+      <div class="bar"><div class="crumbs p-crumbs"></div>
+        <div class="dlbar p-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+      <div class="bar" style="margin:var(--cds-gap-xs) 0"><p class="note p-note" style="margin:0"></p>
+        <label class="note-inline p-bylab">Group by <select class="p-by"><option value="doc">DoC</option><option value="vessel">Vessel</option><option value="rank">Rank</option><option value="vessel_type">Vessel type</option><option value="category">Category</option><option value="nat">Nationality</option></select></label></div>
+      <div class="tablebox p-box" style="max-height:40rem"><table class="hier p-tbl"></table></div>
+      <div class="p-card" hidden></div>
+    </div>
+    <div class="card c-due" hidden>
+      <div class="bar"><h2 style="margin:0">Due and expired compulsory certificates</h2>
+        <div class="dlbar d-dl"><span class="note-inline">Download this list:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+      <div class="fbar" style="margin-top:var(--cds-gap-sm)"><label class="fl">Status <span class="fw"><select class="d-st"><option value="">Expired and due ≤90 days</option><option>Expired</option><option>Due ≤30d</option><option>Due 31–60d</option><option>Due 61–90d</option></select><button class="fx" data-dx="0" title="Reset status">×</button></span></label></div>
+      <p class="note-inline d-note" style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="tablebox" style="max-height:30rem"><table class="hier d-tbl"></table></div>
+    </div>
+    <div class="card c-top" hidden><h2>Courses with the most expired or due certificates</h2><p class="note">Compulsory courses only, for the filters above.</p><div class="chart t-chart"></div></div>
+  </section>
+
+  <section data-page="cont" hidden>
+    <div class="kpis k-kpis"></div>
+    <div class="card">
+      <div class="bar"><h2 style="margin:0">Course catalogue: design, languages and results</h2>
+        <div class="dlbar k-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+      <p class="note">One row per course. Structure and languages from the course set-up; assigned and completed from the daily data; feedback stars from all feedback; duration, clarity and usefulness answers from the multiple-choice feedback (to 16 Oct until the option tables arrive daily). Click a heading to sort.</p>
+      <div class="fbar">
+        <label class="fl">Video language <span class="fw"><select class="k-vl"></select><button class="fx" data-kx="0" title="Reset">×</button></span></label>
+        <label class="fl">Show <span class="fw"><select class="k-st"><option value="pub">Published courses</option><option value="all">All courses</option><option value="noloc">English-only video</option><option value="long">Rated “long” by 20%+</option><option value="low">Completion under 5%</option></select><button class="fx" data-kx="1" title="Reset">×</button></span></label>
+        <label class="fl">Search <span class="fw fs"><input type="search" class="k-q" placeholder="Course"><button class="fx" data-kx="2" title="Clear search">×</button></span></label>
+      </div>
+      <p class="note-inline k-note" style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="tablebox" style="max-height:40rem"><table class="hier k-tbl"></table></div>
+    </div>
+    <div class="grid">
+      <div class="card"><h2>Crew languages and content coverage</h2><p class="note">People by nationality (from the employee ID prefix) and how many published courses offer that language as video or subtitles.</p><div class="tablebox"><table class="hier l-tbl"></table></div></div>
+      <div class="card"><h2>Language learners say they used</h2><p class="note">Feedback answers to “What language did you use to complete the course?” (to 16 Oct).</p><div class="chart lu-chart"></div>
+        <h2 style="margin-top:var(--cds-gap-lg)">Where learners drop off</h2><p class="note">Waiting for the <b>content_progress</b> table. Once it is in the export this shows where in each course learners stop, time spent, and quiz attempts.</p></div>
+    </div>
+  </section>
+
+  <section data-page="ops" hidden>
+    <p class="note-inline">Platform administration, from the 16 Oct snapshot until these tables are in the daily export.</p>
+    <div class="kpis o-kpis"></div>
+    <div class="card"><div class="bar"><h2 style="margin:0">Self-signup requests</h2><label class="note-inline">Show <select class="o-sst"><option value="Pending approval">Pending approval</option><option value="">All</option><option>Email not verified</option><option>Approved</option><option>Rejected</option></select></label></div>
+      <p class="note o-snote"></p><div class="tablebox" style="max-height:24rem"><table class="hier o-stbl"></table></div></div>
+    <div class="card"><div class="bar"><h2 style="margin:0">Support requests</h2><label class="note-inline">Topic <select class="o-top"></select></label></div>
+      <p class="note">Topics are assigned by keywords in the subject and message.</p><div class="chart o-tchart"></div><div class="tablebox" style="max-height:24rem"><table class="hier o-ptbl"></table></div></div>
+    <div class="card"><div class="bar"><h2 style="margin:0">Vessel admin emails and monthly summary</h2><label class="note-inline">Show <select class="o-vf"><option value="issue">Vessels with an issue</option><option value="">All active vessels</option></select></label></div>
+      <p class="note">The monthly vessel summary email goes to the vessel's admin address. Vessels with it switched off, or with no admin email, do not get it.</p><div class="tablebox" style="max-height:24rem"><table class="hier o-vtbl"></table></div></div>
+    <div class="grid">
+      <div class="card"><h2>Bulk user imports</h2><p class="note">Crew lists loaded by admins; large imports explain jumps in invited numbers.</p><div class="tablebox" style="max-height:20rem"><table class="hier o-itbl"></table></div></div>
+      <div class="card"><h2>Summary emails and deleted accounts</h2><div class="o-misc"></div></div>
+    </div>
+  </section>
+
+  <section data-page="how" hidden class="method">
+    <h2>What this site adds</h2>
+    <p>A companion to the Seaverse Dashboard, for DoC, fleet, LMS and content admins. It uses the same people and groups (sea staff onboard, off-board sea staff, trainees, office staff).</p>
+    <h2>Compulsory training</h2>
+    <p>Learning plans assign courses by rank and vessel type, with each course tagged <b>Assigned</b> (compulsory, the matrix's C) or <b>Recommended</b> (R). A person's compulsory courses are the Assigned courses of every active plan they are enrolled in. <b>Done</b> = completed at least once, on Seaverse or with the previous provider. <b>Up to date</b> = done and not past its validity (courses with no expiry count once done).</p>
+    <h2>Certificates and validity</h2>
+    <p>Each course's validity comes from its certificate set-up (3 years, 5 years, or no expiry). The latest completion, on Seaverse or from the previous provider (matched by email), plus the validity gives the expiry date. Status at the reporting date: <b>Valid</b>, <b>Due</b> within 30, 60 or 90 days, <b>Expired</b>, or <b>Not yet done</b>. Records migrated from the previous provider show as “Previous provider”.</p>
+    <h2>Logins and app use</h2>
+    <p>Last login from the user record; <b>App</b> = has a mobile push token. <b>Dormant</b> = registered but not logged in for over 30 days. Until the daily users file carries the last-login field, this tab shows the 16 Oct snapshot.</p>
+    <h2>Content</h2>
+    <p>Structure (lessons, videos, PDFs, quizzes, questions, pass mark, minutes) from the latest published version of each course. Video languages count all language versions of the course videos; subtitle languages come from the subtitle files. Nationality is read from the employee ID prefix (IN, PH, CN, ID…).</p>
+    <h2>Data</h2>
+    <p class="ins-datanote"></p>
+  </section>
+  <p class="sa-foot" style="padding:0">Seaverse Insights · internal use only.</p>
+</div>
+
+</div>
+<script>window.INS_META = [{"k": "rep", "v": "2026-11-02"}, {"k": "snap", "v": "2026-10-16"}, {"k": "login_asof", "v": "2026-10-16"}, {"k": "plans", "v": 111}, {"k": "plan_links", "v": 2371}]; window.INS_V = '202611020808';</script>
+<script>(() => {
+  const root = document.querySelector('.sv');
+  const $ = (s, r = root) => r.querySelector(s), $$ = (s, r = root) => [...r.querySelectorAll(s)];
+  const META = Object.fromEntries((window.INS_META || []).map((d) => [d.k, d.v]));
+  const D0 = Date.UTC(2020, 0, 1);
+  const fmtD = (iso) => { if (!iso) return ''; const d = new Date(iso + 'T00:00:00Z'); return isNaN(d) ? iso : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); };
+  const hexD = (h) => h ? new Date(D0 + parseInt(h, 16) * 864e5).toISOString().slice(0, 10) : '';
+  const int = (v) => v == null || v === '' || isNaN(v) ? '–' : Math.round(+v).toLocaleString('en-GB');
+  const pct = (v) => v == null || isNaN(v) ? '–' : (Math.round(v * 10) / 10).toFixed(1) + '%';
+  const pct0 = (v) => v == null || isNaN(v) ? '–' : Math.round(v) + '%';
+  const share = (a, b) => b ? 100 * a / b : null;
+  const el = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) { if (v == null || v === false) continue; if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v; else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v === true ? '' : v); } for (const c of kids) if (c != null) e.append(c); return e; };
+  const repD = fmtD(META.rep), snapD = fmtD(META.snap), loginD = fmtD(META.login_asof);
+  $('.ins-snap').textContent = `Completions to ${repD}. Learning plans, certificate rules, logins, content set-up and LMS operations are from the ${snapD} database snapshot until those tables are in the daily export.`;
+  $('.ins-datanote').textContent = `Completions and enrolments: daily export to ${repD}. Learning plans (${int(META.plans)} active plans, ${int(META.plan_links)} plan-course links), certificates, previous-provider history, last login, content structure, subtitles and the LMS operations tables: ${snapD} snapshot. Course drop-off needs the content_progress table, which is not yet supplied.`;
+
+  // ---------- data ----------
+  const V = window.INS_V || '';
+  const cache = {};
+  const get = (f) => cache[f] || (cache[f] = fetch('data/' + f + '?v=' + V, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(f + ' ' + r.status); return r.text(); })
+    .then((t) => f.endsWith('.json') ? JSON.parse(t) : d3.csvParse(t)));
+  const NUM = ['c_n', 'c_ever', 'c_ok', 'c_exp', 'c_d30', 'c_d60', 'c_d90', 'c_miss', 'c_prev', 'r_n', 'r_done'];
+
+  // ---------- downloads ----------
+  const csvOf = (rows) => '﻿' + rows.map((r) => r.map((v) => { v = v == null ? '' : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }).join(',')).join('\n');
+  const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  const crc32 = (b) => { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC[(c ^ b[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; };
+  function zip(files) {
+    const enc = new TextEncoder(), parts = [], cen = []; let off = 0;
+    for (const [name, text] of files) {
+      const nb = enc.encode(name), db = enc.encode(text), crc = crc32(db);
+      const h = new DataView(new ArrayBuffer(30)); h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint32(14, crc, true); h.setUint32(18, db.length, true); h.setUint32(22, db.length, true); h.setUint16(26, nb.length, true);
+      parts.push(new Uint8Array(h.buffer), nb, db);
+      const c = new DataView(new ArrayBuffer(46)); c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint32(16, crc, true); c.setUint32(20, db.length, true); c.setUint32(24, db.length, true); c.setUint16(28, nb.length, true); c.setUint32(42, off, true);
+      cen.push(new Uint8Array(c.buffer), nb); off += 30 + nb.length + db.length;
+    }
+    const csz = cen.reduce((t, x) => t + x.length, 0);
+    const e = new DataView(new ArrayBuffer(22)); e.setUint32(0, 0x06054b50, true); e.setUint16(8, files.length, true); e.setUint16(10, files.length, true); e.setUint32(12, csz, true); e.setUint32(16, off, true);
+    return new Blob([...parts, ...cen, new Uint8Array(e.buffer)], { type: 'application/zip' });
+  }
+  const xe = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '');
+  const colL = (i) => { let s = ''; i++; while (i) { const m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); } return s; };
+  function sheetXml(rows, headRow) {
+    const body = rows.map((r, ri) => `<row r="${ri + 1}">` + r.map((v, ci) => {
+      const ref = colL(ci) + (ri + 1), st = ri === headRow ? ' s="1"' : '';
+      if (v === '' || v == null) return '';
+      if (ri > headRow && !isNaN(+v) && !/^0\d/.test(String(v)) && String(v).length < 16) return `<c r="${ref}"${st}><v>${+v}</v></c>`;
+      return `<c r="${ref}" t="inlineStr"${st}><is><t xml:space="preserve">${xe(v)}</t></is></c>`;
+    }).join('') + '</row>').join('');
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="${headRow + 1}" topLeftCell="A${headRow + 2}" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><sheetData>${body}</sheetData></worksheet>`;
+  }
+  function xlsx(name, rows, headRow) {
+    return zip([
+      ['[Content_Types].xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>`],
+      ['_rels/.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`],
+      ['xl/workbook.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="${xe(name.slice(0, 31))}" sheetId="1" r:id="rId1"/></sheets></workbook>`],
+      ['xl/_rels/workbook.xml.rels', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`],
+      ['xl/styles.xml', `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="2"><xf/><xf fontId="1" applyFont="1"/></cellXfs></styleSheet>`],
+      ['xl/worksheets/sheet1.xml', sheetXml(rows, headRow)],
+    ]);
+  }
+  function save(name, rows, kind) {
+    const fn = name.replace(/[\\/:*?"<>|]+/g, ' ').replace(/\s+/g, ' ').trim() + ' - ' + META.rep + '.' + kind;
+    const blob = kind === 'csv' ? new Blob([csvOf(rows)], { type: 'text/csv;charset=utf-8' }) : xlsx(name, rows, 0);
+    const url = URL.createObjectURL(blob), a = el('a', { href: url, download: fn, style: 'display:none' });
+    document.body.append(a); a.click(); setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 60000);
+  }
+  const wireDl = (bar, fn) => $$('[data-dl]', bar).forEach((b) => b.addEventListener('click', () => { const x = fn(); if (x) save(x.title, x.rows, b.dataset.dl); }));
+
+  // ---------- generic sortable table ----------
+  // cols: {h, k, f (display), cls, v (sort/export value), w (wrap)}
+  function table(tbl, cols, rows, o = {}) {
+    const sig = cols.map((c) => c.h).join('|');
+    if (tbl._sig !== sig) { tbl._sig = sig; tbl._sort = null; }
+    const st = tbl._sort || (tbl._sort = { k: o.sortK ?? null, d: o.sortD ?? -1 });
+    const val = (c, r) => c.v ? c.v(r) : r[c.k];
+    let rs = rows;
+    if (st.k != null) { const c = cols.find((x) => x.k === st.k); if (c) rs = rows.slice().sort((a, b) => { let x = val(c, a), y = val(c, b); const nx = x === '' || x == null, ny = y === '' || y == null; if (nx || ny) return nx - ny; if (!isNaN(+x) && !isNaN(+y)) return st.d * (+x - +y); return st.d * String(x).localeCompare(String(y)); }); }
+    const lim = o.limit || 1e9, shown = rs.slice(0, lim);
+    const th = el('thead', {}, el('tr', {}, ...cols.map((c) => el('th', { class: c.cls, title: c.t || 'Sort', style: 'cursor:pointer', onclick: () => { if (st.k === c.k) st.d = -st.d; else { st.k = c.k; st.d = c.num === false ? 1 : -1; } table(tbl, cols, rows, o); } }, c.h + (st.k === c.k ? (st.d > 0 ? ' ▲' : ' ▼') : '')))));
+    const tb = el('tbody');
+    const cell = (c, r) => { const x = c.f ? c.f(r) : r[c.k]; return el('td', { class: [c.cls, c.w && 'wrapc'].filter(Boolean).join(' ') || null }, x instanceof Node ? x : (x ?? '')); };
+    if (o.total) tb.append(el('tr', { class: 'h0' }, ...cols.map((c) => cell(c, o.total))));
+    for (const r of shown) tb.append(el('tr', { class: o.click ? 'click' : null, onclick: o.click ? () => o.click(r) : null }, ...cols.map((c) => cell(c, r))));
+    tbl.replaceChildren(th, tb);
+    tbl._rows = () => [cols.map((c) => c.h), ...(o.total ? [o.total] : []), ...rs].map((r, i) => i === 0 ? r : cols.map((c) => { const x = c.x ? c.x(r) : val(c, r); return typeof x === 'number' && !Number.isInteger(x) ? Math.round(x * 10) / 10 : (x ?? ''); }));
+    return rs.length;
+  }
+  const chip = (txt, s) => el('span', { class: 'chip', 'data-s': s || txt }, txt);
+  function kpis(box, items) { box.replaceChildren(...items.map(([lab, val, sub]) => el('div', { class: 'kpi' }, el('div', { class: 'lab' }, lab), el('div', { class: 'val' }, val), sub ? el('div', { class: 'sub' }, sub) : null))); }
+  function bars(box, data, o = {}) {   // horizontal bars: [{label, n}]
+    box.replaceChildren(); if (!data.length) { box.append(el('p', { class: 'note' }, 'Nothing to show for these filters.')); return; }
+    const W = Math.max(320, box.clientWidth || 640), lw = Math.min(W * 0.48, o.lw || 300), bh = 22, H = data.length * bh + 8;
+    const x = d3.scaleLinear().domain([0, d3.max(data, (d) => d.n) || 1]).range([0, W - lw - 70]);
+    const svg = d3.select(box).append('svg').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', o.aria || 'Bar chart');
+    const g = svg.selectAll('g').data(data).join('g').attr('transform', (d, i) => `translate(0,${i * bh + 4})`);
+    g.append('text').attr('x', lw - 8).attr('y', bh / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('class', 'ins-bl').text((d) => d.label.length > 48 ? d.label.slice(0, 46) + '…' : d.label).append('title').text((d) => d.label);
+    g.append('rect').attr('x', lw).attr('y', 3).attr('height', bh - 7).attr('rx', 2).attr('width', (d) => Math.max(1, x(d.n))).attr('fill', o.color || 'var(--ins-bar)');
+    g.append('text').attr('x', (d) => lw + x(d.n) + 6).attr('y', bh / 2).attr('dy', '0.32em').attr('class', 'ins-bv').text((d) => int(d.n));
+  }
+
+  // ---------- tabs ----------
+  const PEOPLE = new Set(['comp', 'cert', 'act']);
+  let TAB = 'comp';
+  function show(t) {
+    TAB = t;
+    $$('.tab').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === t)));
+    $('[data-page=people]').hidden = !PEOPLE.has(t);
+    for (const p of ['cont', 'ops', 'how']) $(`[data-page=${p}]`).hidden = p !== t;
+    try { history.replaceState(null, '', '#' + t); } catch (e) {}
+    if (PEOPLE.has(t)) P.render(); else if (t === 'cont') Cont.render(); else if (t === 'ops') Ops.render();
+  }
+  $$('.tab').forEach((b) => b.addEventListener('click', () => show(b.dataset.tab)));
+
+  // ---------- people explorer (compulsory / certificates / logins) ----------
+  const P = (() => {
+    const S = { cat: '', doc: '', ves: '', rank: '', q: '', by: 'doc', grp: null, person: null, pop: 'Registered', popUser: false };
+    let people = null, cidx = null, due = null;
+    const sel = { cat: $('.f-cat'), doc: $('.f-doc'), ves: $('.f-ves'), rank: $('.f-rank') }, qbox = $('.f-q');
+    const ORDER = ['cat', 'doc', 'ves', 'rank', 'q'];
+    const FK = { cat: 'category', doc: 'doc', ves: 'vessel', rank: 'rank' };
+    const ALLL = { cat: 'All categories', doc: 'All DoCs', ves: 'All vessels', rank: 'All ranks' };
+    const BYL = { doc: 'DoC', vessel: 'Vessel', rank: 'Rank', vessel_type: 'Vessel type', category: 'Category', nat: 'Nationality' };
+    const BYP = { doc: 'DoCs', vessel: 'vessels', rank: 'ranks', vessel_type: 'vessel types', category: 'categories', nat: 'nationalities' };
+    // counting basis: registered at group level, all invitees once you open a group or person (user's choice sticks until reset)
+    const popSel = el('select', { class: 'f-pop' }, el('option', { value: 'Registered' }, 'Registered'), el('option', { value: 'All' }, 'All invitees'));
+    const popLab = el('label', { class: 'fl' }, 'Count ', el('span', { class: 'fw' }, popSel, el('button', { class: 'fx', title: 'Back to the default for this level', onclick: (e) => { e.preventDefault(); S.popUser = false; S.pop = defPop(); go(); } }, '×')));
+    $('.fbar .fbtns').before(popLab);
+    popSel.addEventListener('change', () => { S.pop = popSel.value; S.popUser = true; go(); });
+    const defPop = () => (S.grp != null || S.person || S.ves || S.q) ? 'All' : 'Registered';
+    function base(upto) {
+      let r = people;
+      for (const k of ORDER) { if (k === upto) break; if (k === 'q') continue; if (S[k]) r = r.filter((p) => p[FK[k]] === S[k]); }
+      return r;
+    }
+    function filtered() {
+      let r = base('q');
+      if (S.q) { const q = S.q.toLowerCase(); r = r.filter((p) => (p.name + ' ' + p.employee_id + ' ' + p.vessel + ' ' + p.doc + ' ' + p.rank).toLowerCase().includes(q)); }
+      if (S.pop === 'Registered') r = r.filter((p) => p.registered === 'Yes');
+      if (TAB === 'comp') r = r.filter((p) => p.c_n > 0 || p.r_n > 0);
+      if (TAB === 'cert') r = r.filter((p) => p.c_n > 0);
+      return r;
+    }
+    function fillSel() {
+      for (const k of ['cat', 'doc', 'ves', 'rank']) {
+        const vals = [...new Set(base(k).map((p) => p[FK[k]]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+        if (S[k] && !vals.includes(S[k])) S[k] = '';
+        sel[k].replaceChildren(el('option', { value: '' }, ALLL[k]), ...vals.map((v) => el('option', { value: v }, v)));
+        sel[k].value = S[k];
+        $(`[data-px="${ORDER.indexOf(k)}"]`).toggleAttribute('data-off', !S[k]);
+      }
+      $('[data-px="4"]').toggleAttribute('data-off', !S.q);
+      popSel.value = S.pop;
+    }
+    const reset = (i) => { for (const k of ORDER.slice(i)) S[k] = ''; qbox.value = S.q; S.grp = null; S.person = null; if (!S.popUser) S.pop = defPop(); };
+    for (const k of ['cat', 'doc', 'ves', 'rank']) sel[k].addEventListener('change', () => { const i = ORDER.indexOf(k); const v = sel[k].value; reset(i); S[k] = v; if (!S.popUser) S.pop = defPop(); go(); });
+    let qt = null;
+    qbox.addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(() => { S.q = qbox.value.trim(); S.grp = null; S.person = null; if (!S.popUser) S.pop = defPop(); go(); }, 250); });
+    $$('[data-px]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); reset(+b.dataset.px); go(); }));
+    $('.f-clr').addEventListener('click', () => { reset(0); S.popUser = false; S.pop = defPop(); go(); });
+    $('.p-by').addEventListener('change', (e) => { S.by = e.target.value; S.grp = null; $('.p-tbl')._sort = null; go(); });
+    const go = () => render();
+
+    // ---- aggregates ----
+    function agg(rows) {
+      const a = { n: rows.length, reg: 0, plan: 0, cn: 0, ever: 0, ok: 0, exp: 0, d30: 0, d60: 0, d90: 0, miss: 0, prev: 0, rn: 0, rd: 0, full: 0, L7: 0, L30: 0, L90: 0, Lold: 0, Lnone: 0, app: 0 };
+      for (const p of rows) {
+        if (p.registered === 'Yes') a.reg++;
+        if (p.c_n > 0) { a.plan++; if (p.c_ok === p.c_n) a.full++; }
+        a.cn += p.c_n; a.ever += p.c_ever; a.ok += p.c_ok; a.exp += p.c_exp; a.d30 += p.c_d30; a.d60 += p.c_d60; a.d90 += p.c_d90; a.miss += p.c_miss; a.prev += p.c_prev; a.rn += p.r_n; a.rd += p.r_done;
+        const L = p.login; if (L === '≤7 days') a.L7++; else if (L === '8–30 days') a.L30++; else if (L === '31–90 days') a.L90++; else if (L === '>90 days') a.Lold++; else a.Lnone++;
+        if (p.app === 'Yes') a.app++;
+      }
+      a.donePct = share(a.ever, a.cn); a.okPct = share(a.ok, a.cn); a.recPct = share(a.rd, a.rn); a.appPct = share(a.app, a.n); a.due = a.d30 + a.d60 + a.d90;
+      a.dormant = a.L90 + a.Lold;
+      return a;
+    }
+    const nm = { f: (r) => r.name, k: 'name', num: false };
+    const GC = {
+      comp: [
+        { h: 'People with a compulsory plan', k: 'plan', cls: 'num', f: (r) => int(r.plan) },
+        { h: 'Compulsory courses', k: 'cn', cls: 'num', f: (r) => int(r.cn), t: 'Person-course links: each person × each compulsory course' },
+        { h: 'Done at least once', k: 'donePct', cls: 'num', f: (r) => pct(r.donePct) },
+        { h: 'Up to date', k: 'okPct', cls: 'num', f: (r) => pct(r.okPct), t: 'Done and not past validity' },
+        { h: 'Fully up to date (people)', k: 'full', cls: 'num', f: (r) => int(r.full) },
+        { h: 'Not yet done', k: 'miss', cls: 'num', f: (r) => int(r.miss) },
+        { h: 'Recommended done', k: 'recPct', cls: 'num', f: (r) => pct(r.recPct) },
+      ],
+      cert: [
+        { h: 'People', k: 'plan', cls: 'num', f: (r) => int(r.plan) },
+        { h: 'Valid or no expiry', k: 'ok', cls: 'num', f: (r) => int(r.ok) },
+        { h: 'Expired', k: 'exp', cls: 'num', f: (r) => int(r.exp) },
+        { h: 'Due ≤30 days', k: 'd30', cls: 'num', f: (r) => int(r.d30) },
+        { h: 'Due 31–60', k: 'd60', cls: 'num', f: (r) => int(r.d60) },
+        { h: 'Due 61–90', k: 'd90', cls: 'num', f: (r) => int(r.d90) },
+        { h: 'Not yet done', k: 'miss', cls: 'num', f: (r) => int(r.miss) },
+        { h: 'Previous-provider records', k: 'prev', cls: 'num', f: (r) => int(r.prev) },
+      ],
+      act: [
+        { h: 'People', k: 'n', cls: 'num', f: (r) => int(r.n) },
+        { h: 'Registered', k: 'reg', cls: 'num', f: (r) => int(r.reg) },
+        { h: 'Login ≤7 days', k: 'L7', cls: 'num', f: (r) => int(r.L7) },
+        { h: '8–30 days', k: 'L30', cls: 'num', f: (r) => int(r.L30) },
+        { h: '31–90 days', k: 'L90', cls: 'num', f: (r) => int(r.L90) },
+        { h: 'Over 90 days', k: 'Lold', cls: 'num', f: (r) => int(r.Lold) },
+        { h: 'App users', k: 'app', cls: 'num', f: (r) => int(r.app) },
+        { h: 'App use', k: 'appPct', cls: 'num', f: (r) => pct(r.appPct) },
+      ],
+    };
+    const ndate = (r) => r.next_due ? fmtD(r.next_due) : '';
+    const PCOL = {
+      comp: [
+        { h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Done', k: 'c_ever', cls: 'num' }, { h: 'Up to date', k: 'c_ok', cls: 'num' },
+        { h: 'Up to date %', k: 'okp', cls: 'num', v: (r) => share(r.c_ok, r.c_n), f: (r) => pct0(share(r.c_ok, r.c_n)) },
+        { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Recommended', k: 'r_n', cls: 'num' }, { h: 'Rec. done', k: 'r_done', cls: 'num' },
+      ],
+      cert: [
+        { h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Valid', k: 'c_ok', cls: 'num' }, { h: 'Expired', k: 'c_exp', cls: 'num' },
+        { h: 'Due ≤90 days', k: 'due', cls: 'num', v: (r) => r.c_d30 + r.c_d60 + r.c_d90, f: (r) => r.c_d30 + r.c_d60 + r.c_d90 },
+        { h: 'Not yet done', k: 'c_miss', cls: 'num' }, { h: 'Next expiry', k: 'next_due', f: ndate, x: (r) => r.next_due },
+      ],
+      act: [
+        { h: 'Stage', k: 'stage', num: false }, { h: 'Last login', k: 'last_login', f: (r) => fmtD(r.last_login), x: (r) => r.last_login },
+        { h: 'Since last login', k: 'login', num: false }, { h: 'Mobile app', k: 'app', num: false }, { h: 'Course language (feedback)', k: 'langs', num: false },
+      ],
+    };
+    const PBASE = [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 }, { h: 'Category', k: 'category', num: false }, { h: 'Registered', k: 'registered', num: false }];
+    let view = null;
+    const INTRO = {
+      comp: 'Compulsory (Assigned) and recommended courses from each person’s learning plans, and how many are done and still in date.',
+      cert: 'Certificate validity for compulsory courses: latest completion (Seaverse or previous provider) plus the course’s validity period.',
+      act: `Logins and mobile app use, as at ${loginD}. Dormant = not logged in for over 30 days.`,
+    };
+
+    async function render() {
+      if (!PEOPLE.has(TAB)) return;
+      $('.ins-pintro').textContent = INTRO[TAB];
+      $('.c-due').hidden = TAB !== 'cert'; $('.c-top').hidden = TAB !== 'cert';
+      if (!people) {
+        $('.p-note').textContent = 'Loading…';
+        const [p, ci] = await Promise.all([get('ins_people.csv'), get('ins_cidx.json')]);
+        for (const r of p) for (const k of NUM) r[k] = +r[k] || 0;
+        people = p; cidx = ci.map((d) => d.title);
+      }
+      fillSel();
+      const rows = filtered();
+      const f = [S.cat, S.doc, S.ves, S.rank, S.q && `“${S.q}”`].filter(Boolean);
+      $('.f-filt').textContent = f.length ? 'Filtered: ' + f.join(' · ') : '';
+      // KPIs follow what is open: the whole filtered view, or the group you clicked into
+      const byK0 = S.by;
+      const A = agg(S.grp != null ? rows.filter((p) => (p[byK0] || '(none)') === S.grp) : rows);
+      const basis = S.pop === 'Registered' ? 'registered' : 'invitees';
+      if (TAB === 'comp') kpis($('.p-kpis'), [
+        ['People with a compulsory plan', int(A.plan), S.grp != null ? S.grp : `${basis}${f.length ? ', filtered' : ''}`],
+        ['Compulsory course links', int(A.cn), A.plan ? `about ${int(A.cn / A.plan)} per person` : ''],
+        ['Done at least once', pct(A.donePct), `${int(A.ever)} links`],
+        ['Up to date', pct(A.okPct), `${int(A.ok)} links in date`],
+        ['Fully up to date', int(A.full), `people with every compulsory course in date (${pct(share(A.full, A.plan))})`],
+        ['Recommended done', pct(A.recPct), `${int(A.rd)} of ${int(A.rn)}`],
+      ]);
+      else if (TAB === 'cert') kpis($('.p-kpis'), [
+        ['Valid or no expiry', int(A.ok), pct(share(A.ok, A.cn)) + ' of compulsory links'],
+        ['Expired', int(A.exp), 'needs recertification now'],
+        ['Due within 30 days', int(A.d30), ''],
+        ['Due in 31–90 days', int(A.d60 + A.d90), `${int(A.d60)} in 31–60 · ${int(A.d90)} in 61–90`],
+        ['Not yet done', int(A.miss), 'compulsory, never completed'],
+        ['From previous provider', int(A.prev), 'completions carried over'],
+      ]);
+      else kpis($('.p-kpis'), [
+        ['Logged in ≤7 days', int(A.L7), pct(share(A.L7, A.n)) + ' of ' + basis],
+        ['8–30 days', int(A.L30), pct(share(A.L30, A.n))],
+        ['Dormant (over 30 days)', int(A.dormant), pct(share(A.dormant, A.n))],
+        ['Uses the mobile app', int(A.app), pct(A.appPct)],
+        ['Not in snapshot', int(A.Lnone), `added after ${snapD}`],
+      ]);
+      // level
+      const byK = S.by, label = BYL[byK];
+      const tbl = $('.p-tbl'), crumbs = $('.p-crumbs');
+      const crumb = (t, fn) => fn ? el('a', { href: '#', onclick: (e) => { e.preventDefault(); fn(); } }, t) : el('b', {}, t);
+      const sep = () => document.createTextNode(' › ');
+      const direct = S.ves || S.q;   // a single vessel or a search goes straight to the people list
+      $('.p-bylab').hidden = !!(S.grp != null || direct || S.person);
+      if (S.person) return personView(crumbs, crumb, sep, rows);
+      $('.p-card').hidden = true; $('.p-box').hidden = false;
+      if (S.grp == null && !direct) {
+        const g = d3.groups(rows, (p) => p[byK] || '(none)').map(([k, v]) => ({ name: k, ...agg(v) }));
+        crumbs.replaceChildren(crumb(`All ${BYP[byK]} (${g.length})`));
+        const n = table(tbl, [{ h: label, k: 'name', num: false, w: 1 }, ...GC[TAB]], g, { total: { name: 'Total', ...A }, click: (r) => { S.grp = r.name; if (!S.popUser) S.pop = defPop(); go(); }, sortK: TAB === 'act' ? 'n' : TAB === 'cert' ? 'exp' : 'plan' });
+        $('.p-note').textContent = `${int(n)} ${BYP[byK]}. Click a row to see its people. Counting ${S.pop === 'Registered' ? 'registered users' : 'all invitees'}.`;
+        view = { title: `${TAB === 'comp' ? 'Compulsory training' : TAB === 'cert' ? 'Certificate validity' : 'Logins and app use'} by ${label}`, tbl };
+      } else {
+        const list = S.grp != null ? rows.filter((p) => (p[byK] || '(none)') === S.grp) : rows;
+        const nmTxt = S.grp != null ? S.grp : S.ves || `Search “${S.q}”`;
+        crumbs.replaceChildren(...(S.grp != null ? [crumb(`All ${BYP[byK]}`, () => { S.grp = null; if (!S.popUser) S.pop = defPop(); go(); }), sep()] : []), crumb(`${nmTxt} (${int(list.length)})`));
+        const n = table(tbl, [...PBASE, ...PCOL[TAB]], list, { click: TAB === 'act' ? null : (r) => { S.person = r; go(); }, limit: 2000, sortK: TAB === 'cert' ? 'c_exp' : TAB === 'act' ? 'last_login' : 'c_miss' });
+        $('.p-note').textContent = `${int(n)} people${n > 2000 ? ' (first 2,000 shown; the download has all)' : ''}. ${TAB === 'act' ? '' : 'Click a person for their course list. '}Counting ${S.pop === 'Registered' ? 'registered users' : 'all invitees'}.`;
+        view = { title: `${nmTxt} · ${TAB === 'comp' ? 'compulsory training' : TAB === 'cert' ? 'certificate validity' : 'logins'}`, tbl };
+      }
+      if (TAB === 'cert') dueCard(rows);
+    }
+
+    async function personView(crumbs, crumb, sep, rows) {
+      const p = S.person, byK = S.by;
+      const back = [];
+      if (S.grp != null) back.push(crumb(`All ${BYP[byK]}`, () => { S.grp = null; S.person = null; if (!S.popUser) S.pop = defPop(); go(); }), sep(), crumb(S.grp, () => { S.person = null; go(); }), sep());
+      else back.push(crumb(S.ves || `Search “${S.q}”`, () => { S.person = null; go(); }), sep());
+      crumbs.replaceChildren(...back, crumb(p.name));
+      $('.p-note').textContent = 'Every compulsory and recommended course in this person’s learning plans. Click a heading to sort.';
+      $('.p-box').hidden = true; const card = $('.p-card'); card.hidden = false;
+      card.replaceChildren(el('p', { class: 'note' }, 'Loading course list…'));
+      const sh = await get(p.shard + '.json');
+      const rec = sh.find((d) => d.e === p.employee_id);
+      const SL = { m: 'Not yet done', n: 'No expiry', x: 'Expired', 1: 'Due ≤30 days', 2: 'Due 31–60 days', 3: 'Due 61–90 days', v: 'Valid' };
+      const items = (rec ? rec.k.split(';') : []).map((s) => { const [ci, comp, stc, src, last, exp, vm, ip] = s.split('.'); const vmn = parseInt(vm || '0', 16);
+        return { course: cidx[parseInt(ci, 16)] || '?', type: comp === '1' ? 'Compulsory' : 'Recommended', status: SL[stc] || stc, sc: stc, src: src === 'P' ? 'Previous provider' : src === 'S' ? 'Seaverse' : '', last: hexD(last), exp: hexD(exp), validity: vmn ? (vmn % 12 ? vmn + ' months' : vmn / 12 + ' years') : 'No expiry', inprog: ip === '1' ? 'Yes' : '' }; });
+      const ord = { x: 0, 1: 1, 2: 2, 3: 3, m: 4, v: 5, n: 6 };
+      items.sort((a, b) => (a.type > b.type ? 1 : a.type < b.type ? -1 : 0) || ord[a.sc] - ord[b.sc] || a.course.localeCompare(b.course));
+      const t = el('table', { class: 'hier' });
+      card.replaceChildren(
+        el('p', { class: 'note' }, `${p.name} · ${p.employee_id} · ${p.rank} · ${p.vessel || p.category}${p.doc ? ' · ' + p.doc : ''} · ${p.registered === 'Yes' ? 'registered' : 'not registered'} · last login ${p.last_login ? fmtD(p.last_login) : 'never/unknown'}. ${p.c_n} compulsory, ${p.r_n} recommended.`),
+        el('div', { class: 'tablebox', style: 'max-height:40rem' }, t));
+      table(t, [{ h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Type', k: 'type', num: false }, { h: 'Status', k: 'status', num: false, f: (r) => chip(r.status, r.sc) },
+        { h: 'Source', k: 'src', num: false }, { h: 'Last completed', k: 'last', f: (r) => fmtD(r.last) }, { h: 'Expires', k: 'exp', f: (r) => fmtD(r.exp) }, { h: 'Validity', k: 'validity', num: false }, { h: 'In progress now', k: 'inprog', num: false }], items);
+      view = { title: `${p.name} · ${p.employee_id} · courses`, tbl: t };
+      if (TAB === 'cert') dueCard(rows);
+    }
+
+    // ---- due list (certificates tab) ----
+    const dst = $('.d-st');
+    dst.addEventListener('change', () => render());
+    $('[data-dx="0"]').addEventListener('click', (e) => { e.preventDefault(); dst.value = ''; render(); });
+    let dueView = null;
+    async function dueCard(rows) {
+      if (!due) { $('.d-note').textContent = 'Loading…'; due = await get('ins_due.csv'); }
+      const ids = new Set(rows.map((p) => p.employee_id));
+      let d = due.filter((r) => ids.has(r.employee_id));
+      if (S.grp != null) { const g = new Set(rows.filter((p) => (p[S.by] || '(none)') === S.grp).map((p) => p.employee_id)); d = d.filter((r) => g.has(r.employee_id)); }
+      if (S.person) d = d.filter((r) => r.employee_id === S.person.employee_id);
+      const top = d3.rollups(d, (v) => v.length, (r) => r.course).map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n).slice(0, 15);
+      if (dst.value) d = d.filter((r) => r.status === dst.value);
+      $('[data-dx="0"]').toggleAttribute('data-off', !dst.value);
+      const n = table($('.d-tbl'), [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 },
+        { h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Status', k: 'status', num: false, f: (r) => chip(r.status, r.status === 'Expired' ? 'x' : '1') }, { h: 'Last completed', k: 'last_completed', f: (r) => fmtD(r.last_completed), x: (r) => r.last_completed },
+        { h: 'Expires', k: 'expires', f: (r) => fmtD(r.expires), x: (r) => r.expires }, { h: 'Source', k: 'source', num: false }], d, { limit: 1000, sortK: 'expires', sortD: 1 });
+      $('.d-note').textContent = `${int(n)} certificate${n === 1 ? '' : 's'}${n > 1000 ? ' (first 1,000 shown; the download has all)' : ''}, for the filters and the row you opened above.`;
+      dueView = { title: 'Due and expired compulsory certificates', tbl: $('.d-tbl') };
+      bars($('.t-chart'), top, { aria: 'Courses with the most expired or due certificates', color: 'var(--color-bad)' });
+    }
+    wireDl($('.p-dl'), () => view && { title: view.title, rows: view.tbl._rows() });
+    wireDl($('.d-dl'), () => dueView && { title: dueView.title, rows: dueView.tbl._rows() });
+    return { render };
+  })();
+
+  // ---------- content ----------
+  const Cont = (() => {
+    let C = null, done = false;
+    const vl = $('.k-vl'), st = $('.k-st'), q = $('.k-q');
+    const num = (r, k) => r[k] === '' ? null : +r[k];
+    async function render() {
+      if (!C) {
+        const [c, lang, lu] = await Promise.all([get('ins_courses.csv'), get('ins_lang.csv'), get('ins_langused.csv')]);
+        C = c;
+        const langs = [...new Set(c.flatMap((r) => r.vlang ? r.vlang.split(', ') : []))].sort();
+        vl.replaceChildren(el('option', { value: '' }, 'Any'), ...langs.map((l) => el('option', { value: l }, l)));
+        const pub = c.filter((r) => r.course_status === 'PUBLISHED');
+        const engOnly = pub.filter((r) => !r.vlang || r.vlang === 'English').length;
+        const withSub = pub.filter((r) => r.slang && r.slang !== 'English').length;
+        const long = pub.filter((r) => +r.dur_n >= 10 && +r.dur_long >= 20).length;
+        kpis($('.k-kpis'), [
+          ['Published courses', int(pub.length), `${int(c.length - pub.length)} retired`],
+          ['Video in English only', int(engOnly), `${int(pub.length - engOnly)} have other-language video`],
+          ['With other-language subtitles', int(withSub), pct(share(withSub, pub.length))],
+          ['Median length', int(d3.median(pub, (r) => num(r, 'mins'))) + ' min', 'per course'],
+          ['Rated “too long” by 20%+', int(long), 'courses with 10+ answers'],
+        ]);
+        table($('.l-tbl'), [{ h: 'Nationality', k: 'nat', num: false }, { h: 'People', k: 'people', cls: 'num', f: (r) => int(r.people) },
+          { h: 'Onboard', k: 'Sea staff (onboard)', cls: 'num', f: (r) => int(r['Sea staff (onboard)']) }, { h: 'Language', k: 'language', num: false },
+          { h: 'Courses with video', k: 'video_courses', cls: 'num', f: (r) => r.language ? int(r.video_courses) : '' },
+          { h: 'Courses with subtitles', k: 'subtitle_courses', cls: 'num', f: (r) => r.language ? int(r.subtitle_courses) : '' }], lang, { sortK: 'people' });
+        bars($('.lu-chart'), lu.map((r) => ({ label: r.language_used === '普通话' ? 'Mandarin (普通话)' : r.language_used, n: +r.answers })), { aria: 'Language used', lw: 160 });
+      }
+      let r = C;
+      if (st.value !== 'all') r = r.filter((x) => x.course_status === 'PUBLISHED');
+      if (st.value === 'noloc') r = r.filter((x) => !x.vlang || x.vlang === 'English');
+      if (st.value === 'long') r = r.filter((x) => +x.dur_n >= 10 && +x.dur_long >= 20);
+      if (st.value === 'low') r = r.filter((x) => +x.assigned >= 20 && +x.comp_pct < 5);
+      if (vl.value) r = r.filter((x) => (x.vlang || '').split(', ').includes(vl.value));
+      if (q.value.trim()) { const s = q.value.trim().toLowerCase(); r = r.filter((x) => x.title.toLowerCase().includes(s)); }
+      $('[data-kx="0"]').toggleAttribute('data-off', !vl.value); $('[data-kx="1"]').toggleAttribute('data-off', st.value === 'pub'); $('[data-kx="2"]').toggleAttribute('data-off', !q.value);
+      const n1 = (k, d = 0) => ({ k, cls: 'num', v: (x) => num(x, k), f: (x) => x[k] === '' ? '–' : (+x[k]).toFixed(d) });
+      const pc1 = (k) => ({ k, cls: 'num', v: (x) => num(x, k), f: (x) => x[k] === '' ? '–' : pct0(+x[k]) });
+      const n = table($('.k-tbl'), [
+        { h: 'Course', k: 'title', num: false, w: 1 }, { h: 'Status', k: 'course_status', num: false, f: (x) => x.course_status === 'PUBLISHED' ? 'Published' : 'Retired' },
+        { h: 'Lessons', ...n1('lessons') }, { h: 'Minutes', ...n1('mins') }, { h: 'Videos', ...n1('videos') }, { h: 'PDFs', ...n1('pdfs') }, { h: 'Quizzes', ...n1('quizzes') },
+        { h: 'Questions', ...n1('questions') }, { h: 'Pass mark %', ...n1('pass_mark') },
+        { h: 'Must watch', k: 'must_watch', num: false, f: (x) => x.must_watch === 'True' ? 'Yes' : x.must_watch === 'False' ? 'No' : '' },
+        { h: 'Validity', k: 'validity_months', cls: 'num', v: (x) => num(x, 'validity_months'), f: (x) => x.validity_months === '' ? '–' : +x.validity_months ? (+x.validity_months % 12 ? x.validity_months + ' mo' : +x.validity_months / 12 + ' yr') : 'None' },
+        { h: 'Video languages', k: 'vlang', num: false, w: 1 }, { h: 'Subtitles', k: 'slang', num: false, w: 1 },
+        { h: 'Compulsory for (people)', ...n1('comp_people') }, { h: 'Assigned', ...n1('assigned') }, { h: 'Completed', ...n1('completed') }, { h: 'Completion %', ...pc1('comp_pct') },
+        { h: 'Feedback', ...n1('fb_n') }, { h: 'Stars', ...n1('fb_avg', 2) },
+        { h: '“Too long” %', ...pc1('dur_long') }, { h: '“Too short” %', ...pc1('dur_short') }, { h: 'Clear (top 2) %', ...pc1('clar_top2') }, { h: 'Useful (top 2) %', ...pc1('use_top2') },
+      ], r, { sortK: 'assigned' });
+      $('.k-note').textContent = `${int(n)} courses.`;
+      if (!done) { done = true; [vl, st].forEach((s) => s.addEventListener('change', render)); q.addEventListener('input', () => render());
+        $$('[data-kx]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); const i = +b.dataset.kx; if (i === 0) vl.value = ''; if (i === 1) st.value = 'pub'; if (i === 2) q.value = ''; render(); }));
+        wireDl($('.k-dl'), () => ({ title: 'Course catalogue', rows: $('.k-tbl')._rows() })); }
+    }
+    return { render };
+  })();
+
+  // ---------- LMS operations ----------
+  const Ops = (() => {
+    let O = null, wired = false;
+    async function render() {
+      if (!O) {
+        const ks = ['ins_signups.csv', 'ins_support.csv', 'ins_vessels.csv', 'ins_imports.csv', 'ins_reportmails.csv', 'ins_deleted.csv'];
+        const v = await Promise.all(ks.map(get)); O = { sg: v[0], sp: v[1], vs: v[2], im: v[3], rm: v[4], del: v[5] };
+        const topics = [...new Set(O.sp.map((r) => r.topic))].sort();
+        $('.o-top').replaceChildren(el('option', { value: '' }, 'All topics'), ...topics.map((t) => el('option', { value: t }, t)));
+      }
+      const cnt = (a, f) => a.filter(f).length;
+      const act = O.vs.filter((r) => r.active === 'True');
+      const issue = (r) => r.summary_email === 'No' || r.admin_email_set === 'No';
+      const pend = O.sg.filter((r) => r.status === 'Pending approval');
+      kpis($('.o-kpis'), [
+        ['Signups awaiting approval', int(pend.length), pend.length ? `oldest ${fmtD(d3.min(pend, (r) => r.requested))}` : ''],
+        ['Signups, email not verified', int(cnt(O.sg, (r) => r.status === 'Email not verified')), 'cannot log in yet'],
+        ['Support requests', int(O.sp.length), `${int(cnt(O.sp, (r) => r.topic === 'Password / login'))} about password or login`],
+        ['Vessels missing the summary email', int(cnt(act, issue)), `of ${int(act.length)} active vessels`],
+        ['Bulk imports', int(O.im.length), `${int(cnt(O.im, (r) => r.status !== 'success'))} failed`],
+        ['Accounts deleted', int(d3.sum(O.del, (r) => +r.n)), O.del.length ? `${new Date(d3.min(O.del, (r) => r.month) + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })} to ${new Date(d3.max(O.del, (r) => r.month) + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}` : ''],
+      ]);
+      const sv = $('.o-sst').value;
+      const sg = sv ? O.sg.filter((r) => r.status === sv) : O.sg;
+      $('.o-snote').textContent = `${int(sg.length)} request${sg.length === 1 ? '' : 's'}. Approved requests were decided in a median of ${int(d3.median(O.sg.filter((r) => r.wait_days !== '' && (r.status === 'Approved' || r.status === 'Rejected')), (r) => +r.wait_days))} day(s).`;
+      table($('.o-stbl'), [{ h: 'Name', k: 'name', num: false }, { h: 'Email', k: 'email', num: false }, { h: 'Requested', k: 'requested', f: (r) => fmtD(r.requested) }, { h: 'Status', k: 'status', num: false },
+        { h: 'Decided', k: 'decided', f: (r) => fmtD(r.decided) }, { h: 'Days waiting / to decide', k: 'wait_days', cls: 'num', v: (r) => r.wait_days === '' ? null : +r.wait_days, f: (r) => r.wait_days === '' ? '' : int(r.wait_days) }, { h: 'Rejection reason', k: 'rejection_reason', num: false, w: 1 }], sg, { sortK: 'requested' });
+      const tp = $('.o-top').value, sp = tp ? O.sp.filter((r) => r.topic === tp) : O.sp;
+      bars($('.o-tchart'), d3.rollups(O.sp, (v) => v.length, (r) => r.topic).map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n), { aria: 'Support requests by topic', lw: 180 });
+      table($('.o-ptbl'), [{ h: 'Date', k: 'd', f: (r) => fmtD(r.d) }, { h: 'Email', k: 'email', num: false }, { h: 'Topic', k: 'topic', num: false }, { h: 'Subject', k: 'subject', num: false, w: 1 }, { h: 'Message', k: 'message', num: false, w: 1 }], sp, { sortK: 'd' });
+      const vf = $('.o-vf').value, vs = vf ? act.filter(issue) : act;
+      table($('.o-vtbl'), [{ h: 'Vessel', k: 'vessel', num: false }, { h: 'Type', k: 'vessel_type', num: false }, { h: 'DoC', k: 'doc', num: false, w: 1 }, { h: 'Onboard', k: 'onboard', cls: 'num' },
+        { h: 'Monthly summary email', k: 'summary_email', num: false, f: (r) => r.summary_email === 'No' ? chip('Off', 'x') : 'On' }, { h: 'Admin email set', k: 'admin_email_set', num: false, f: (r) => r.admin_email_set === 'No' ? chip('No', 'x') : 'Yes' }, { h: 'CC set', k: 'cc_set', num: false }], vs, { sortK: 'onboard' });
+      table($('.o-itbl'), [{ h: 'Date', k: 'd', f: (r) => fmtD(r.d) }, { h: 'Result', k: 'status', num: false }, { h: 'Rows', k: 'rows', cls: 'num' }, { h: 'Added', k: 'added', cls: 'num' }, { h: 'Updated', k: 'updated', cls: 'num' }, { h: 'File', k: 'file_name', num: false, w: 1 }], O.im, { sortK: 'd' });
+      const t1 = el('table', { class: 'hier' }), t2 = el('table', { class: 'hier' });
+      table(t1, [{ h: 'Sent on', k: 'month', f: (r) => fmtD(r.month) }, { h: 'Status', k: 'status', num: false }, { h: 'Emails', k: 'n', cls: 'num' }], O.rm, { sortK: 'month' });
+      table(t2, [{ h: 'Month', k: 'month', num: false }, { h: 'Accounts deleted', k: 'n', cls: 'num' }], O.del, { sortK: 'month' });
+      $('.o-misc').replaceChildren(el('p', { class: 'note' }, 'Report and summary emails sent by the platform:'), el('div', { class: 'tablebox', style: 'max-height:14rem' }, t1), el('p', { class: 'note', style: 'margin-top:var(--cds-gap-md)' }, 'User accounts deleted by admins:'), el('div', { class: 'tablebox' }, t2));
+      if (!wired) { wired = true; ['.o-sst', '.o-top', '.o-vf'].forEach((s) => $(s).addEventListener('change', render)); }
+    }
+    return { render };
+  })();
+
+  const h = (location.hash || '').slice(1);
+  show(['comp', 'cert', 'act', 'cont', 'ops', 'how'].includes(h) ? h : 'comp');
+})();
+</script>
+</body></html>
