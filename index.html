@@ -2,6 +2,8 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Seaverse Dashboard</title>
+<script>(() => { try { const t = localStorage.getItem('sv-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+</script>
 <style>
 :root{--font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif;
 --color-bg:#ffffff;--color-panel:#ffffff;--color-fg:#1f1e1d;--color-fg-muted:#6b6a66;--color-border:#d9d7d0;--color-border-line:#e6e4dd;
@@ -43,7 +45,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     params: () => ({ ...P }),
     setParams: (o) => { Object.assign(P, o); fire(); },
     onData: (f) => { L.push(f); },
-    colors: ['#3a6ea5', '#c27c0e', '#6b8e23', '#8a8984', '#a05195', '#2a9d8f'],
+    colors: ['var(--sv-accent)', 'var(--color-warn)', 'var(--color-ok)', 'var(--cds-chart-reference)', '#9a6fb0', '#2a9d8f'],
     setLink: (t) => { try { history.replaceState(null, '', '#' + t); } catch (e) {} },
     data(id) { if (!D[id]) load(id); return D[id]; },
   };
@@ -2270,5 +2272,102 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
 
 
 </div>
+<style>/* Seaverse theme: calm slate-and-sea palette, clear tiles and tables. Follows the device's light/dark setting unless the viewer picks one. */
+:root{
+  color-scheme:light;
+  --page:#f2f4f7;--color-bg:#f2f4f7;--color-panel:#ffffff;--sv-panel-2:#f6f8fa;--sv-head:#eef2f6;
+  --color-fg:#17202a;--color-fg-muted:#5c6773;--color-border:#d3dae2;--color-border-line:#e2e7ed;--cds-border:#d3dae2;
+  --sv-accent:#1d5f8f;--sv-accent-2:#86a7c6;--sv-accent-soft:rgba(29,95,143,.08);
+  --color-ok:#2d7a57;--color-warn:#b5771c;--color-bad:#bd4a3c;
+  --cds-chart-grid:#e7ebf0;--cds-chart-axis:#c3ccd6;--cds-chart-muted:#aab4bf;--cds-chart-reference:#7b8794;--cds-chart-status-critical:#bd4a3c;
+  --cds-surface-popover:#ffffff;--cds-text-secondary:#5c6773;
+  --sv-shadow:0 1px 2px rgba(16,24,40,.04),0 2px 6px rgba(16,24,40,.05);
+  --cds-radius:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --page:#0e1319;--color-bg:#0e1319;--color-panel:#151c24;--sv-panel-2:#1b232d;--sv-head:#1f2833;
+  --color-fg:#e4e9ef;--color-fg-muted:#98a4b1;--color-border:#2e3a47;--color-border-line:#243039;--cds-border:#2e3a47;
+  --sv-accent:#73abd9;--sv-accent-2:#47698b;--sv-accent-soft:rgba(115,171,217,.12);
+  --color-ok:#5cb88d;--color-warn:#dca453;--color-bad:#e5786b;
+  --cds-chart-grid:#222c37;--cds-chart-axis:#3a4654;--cds-chart-muted:#56626f;--cds-chart-reference:#8d99a6;--cds-chart-status-critical:#e5786b;
+  --cds-surface-popover:#1b232d;--cds-text-secondary:#98a4b1;
+  --sv-shadow:0 1px 0 rgba(255,255,255,.02),0 2px 8px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0e1319;--color-bg:#0e1319;--color-panel:#151c24;--sv-panel-2:#1b232d;--sv-head:#1f2833;
+  --color-fg:#e4e9ef;--color-fg-muted:#98a4b1;--color-border:#2e3a47;--color-border-line:#243039;--cds-border:#2e3a47;
+  --sv-accent:#73abd9;--sv-accent-2:#47698b;--sv-accent-soft:rgba(115,171,217,.12);
+  --color-ok:#5cb88d;--color-warn:#dca453;--color-bad:#e5786b;
+  --cds-chart-grid:#222c37;--cds-chart-axis:#3a4654;--cds-chart-muted:#56626f;--cds-chart-reference:#8d99a6;--cds-chart-status-critical:#e5786b;
+  --cds-surface-popover:#1b232d;--cds-text-secondary:#98a4b1;
+  --sv-shadow:0 1px 0 rgba(255,255,255,.02),0 2px 8px rgba(0,0,0,.35);
+}
+html,body{background:var(--page);color:var(--color-fg)}
+.sv [hidden]{display:none!important}
+#dash-root{position:relative}
+.sv{font-family:var(--font-anthropic-sans)}
+.sv h1{font-family:var(--font-anthropic-sans);font-weight:650;letter-spacing:-.015em;font-size:25px}
+.sv a{color:var(--sv-accent)}
+/* tabs */
+.sv .tabs{border-bottom:1px solid var(--color-border-line);gap:2px;flex-wrap:wrap}
+.sv .tab{font-weight:500;border-radius:8px 8px 0 0;margin-bottom:-1px;transition:color .15s,background .15s}
+.sv .tab:hover{color:var(--color-fg);background:var(--sv-panel-2)}
+.sv .tab[aria-selected=true]{color:var(--sv-accent);border-bottom-color:var(--sv-accent);font-weight:600}
+/* tiles and cards */
+.sv .kpi,.sv .card{border-radius:12px;border:1px solid var(--color-border-line);box-shadow:var(--sv-shadow);background:var(--color-panel)}
+.sv .kpi{border-top:3px solid var(--sv-accent)}
+.sv .kpi .lab{text-transform:uppercase;letter-spacing:.05em;font-size:11px;font-weight:600;color:var(--color-fg-muted)}
+.sv .kpi .val{font-family:var(--font-anthropic-sans);font-weight:650;font-variant-numeric:tabular-nums;color:var(--color-fg)}
+.sv .kpi .sub{color:var(--color-fg-muted)}
+.sv .card h2{font-weight:650;letter-spacing:-.005em}
+.sv .gauge .val{font-family:var(--font-anthropic-sans);font-weight:650;font-variant-numeric:tabular-nums}
+.sv .tdef{background:var(--color-panel);border:1px solid var(--color-border-line);border-left:3px solid var(--sv-accent);border-radius:10px;box-shadow:var(--sv-shadow)}
+.sv .pill{background:var(--sv-panel-2);border-color:var(--color-border-line)}
+/* compliance band tiles: white tile, coloured rule and number (no heavy fills) */
+.sv .band{background:var(--color-panel)!important;border:1px solid var(--color-border-line);border-top:3px solid var(--color-border);border-radius:12px;box-shadow:var(--sv-shadow)}
+.sv .band b{font-family:var(--font-anthropic-sans);font-weight:650;font-variant-numeric:tabular-nums}
+.sv .b-on{border-top-color:var(--b-on)}.sv .b-near{border-top-color:var(--b-near)}.sv .b-below{border-top-color:var(--b-below)}.sv .b-low{border-top-color:var(--b-low)}.sv .b-no{border-top-color:var(--b-no)}
+.sv .band small{color:var(--color-fg-muted)}
+/* controls */
+.sv select,.sv input[type=search]{background:var(--color-panel);color:var(--color-fg);border:1px solid var(--color-border);border-radius:8px}
+.sv select:focus-visible,.sv input:focus-visible,.sv button:focus-visible{outline:2px solid var(--sv-accent);outline-offset:1px}
+.sv .seg{background:var(--sv-panel-2);border:1px solid var(--color-border-line);border-radius:9px;padding:2px}
+.sv .seg button{border-radius:7px;border:0!important;background:transparent;color:var(--color-fg-muted)}
+.sv .seg button:hover{color:var(--color-fg)}
+.sv .seg button[aria-checked=true]{background:var(--color-panel);color:var(--sv-accent);font-weight:600;box-shadow:var(--sv-shadow)}
+.sv .dl{border-radius:7px;background:var(--color-panel);border:1px solid var(--color-border);color:var(--color-fg)}
+.sv .dl:hover{border-color:var(--sv-accent);color:var(--sv-accent);background:var(--sv-accent-soft)}
+.sv .fx{color:var(--color-fg-muted)}.sv .fx:hover{color:var(--color-bad)}
+/* tables */
+.sv .tablebox{border:1px solid var(--color-border-line);border-radius:10px;background:var(--color-panel)}
+.sv th,.sv table.hier th{background:var(--sv-head);color:var(--color-fg-muted);font-size:12px;font-weight:600;border-bottom:1px solid var(--color-border)}
+.sv th button{color:inherit;font-weight:inherit}
+.sv td,.sv table.hier td{border-bottom:1px solid var(--color-border-line)}
+.sv tbody tr:last-child td{border-bottom:0}
+.sv td.num,.sv table.hier td.num{font-variant-numeric:tabular-nums}
+.sv table.hier tr.h0 td{background:var(--sv-panel-2);font-weight:650;border-bottom:1px solid var(--color-border)}
+.sv tbody tr.click:hover td,.sv table.hier tr.click:hover td{background:var(--sv-accent-soft)}
+.sv .crumbs b,.sv .crumbs{font-weight:600}
+.sv .chip{font-weight:500}
+/* theme switch */
+.sv-theme{position:absolute;top:18px;right:16px;display:inline-flex;gap:0;background:var(--sv-panel-2);border:1px solid var(--color-border-line);border-radius:9px;padding:2px;z-index:5}
+.sv-theme button{font:12px var(--font-anthropic-sans);color:var(--color-fg-muted);background:transparent;border:0;border-radius:7px;padding:3px 9px;cursor:pointer}
+.sv-theme button[aria-checked=true]{background:var(--color-panel);color:var(--sv-accent);font-weight:600;box-shadow:var(--sv-shadow)}
+@media (max-width:640px){.sv-theme{position:static;margin:0 0 8px}}
+.sa-foot{color:var(--color-fg-muted)}
+</style>
+<script>(() => {
+  const root = document.getElementById('dash-root'); if (!root) return;
+  let cur = document.documentElement.getAttribute('data-theme') || 'auto';
+  const box = document.createElement('div'); box.className = 'sv-theme'; box.setAttribute('role', 'radiogroup'); box.setAttribute('aria-label', 'Theme');
+  const set = (t) => { cur = t; if (t === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', t);
+    try { if (t === 'auto') localStorage.removeItem('sv-theme'); else localStorage.setItem('sv-theme', t); } catch (e) {}
+    box.querySelectorAll('button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.t === cur))); };
+  [['auto', 'Device'], ['light', 'Light'], ['dark', 'Dark']].forEach(([t, l]) => { const b = document.createElement('button'); b.type = 'button'; b.dataset.t = t; b.setAttribute('role', 'radio'); b.title = t === 'auto' ? 'Follow the device setting' : l + ' theme'; b.textContent = l; b.onclick = () => set(t); box.append(b); });
+  root.prepend(box); set(cur);
+})();
+</script>
 <p class="sa-foot">Seaverse Dashboard · internal use only.</p>
 </body></html>
