@@ -178,7 +178,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <div class="kpis p-kpis"></div>
     <div class="card">
       <div class="bar"><div class="crumbs p-crumbs"></div>
-        <div class="dlbar p-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+        <div class="dlbar p-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button><button class="dl" data-dl="html">HTML / PDF</button></div></div>
       <div class="bar" style="margin:var(--cds-gap-xs) 0"><p class="note p-note" style="margin:0"></p>
         <label class="note-inline p-bylab">Group by <select class="p-by"><option value="doc">DoC</option><option value="vessel">Vessel</option><option value="rank">Rank</option><option value="vessel_type">Vessel type</option><option value="category">Category</option><option value="nat">Nationality</option></select></label></div>
       <div class="tablebox p-box" style="max-height:40rem"><table class="hier p-tbl"></table></div>
@@ -186,13 +186,13 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     </div>
     <div class="card c-noplan" hidden>
       <div class="bar"><h2 style="margin:0">People with no learning plan</h2>
-        <div class="dlbar np-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+        <div class="dlbar np-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button><button class="dl" data-dl="html">HTML / PDF</button></div></div>
       <p class="note np-note"></p>
       <div class="tablebox" style="max-height:24rem"><table class="hier np-tbl"></table></div>
     </div>
     <div class="card c-due" hidden>
       <div class="bar"><h2 style="margin:0" class="d-h">Due and expired compulsory certificates</h2>
-        <div class="dlbar d-dl"><span class="note-inline">Download this list:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+        <div class="dlbar d-dl"><span class="note-inline">Download this list:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button><button class="dl" data-dl="html">HTML / PDF</button></div></div>
       <div class="fbar" style="margin-top:var(--cds-gap-sm)"><label class="fl">Status <span class="fw"><select class="d-st"><option value="">Expired and due ≤90 days</option><option>Expired</option><option>Due ≤30d</option><option>Due 31–60d</option><option>Due 61–90d</option></select><button class="fx" data-dx="0" title="Reset status">×</button></span></label></div>
       <p class="note-inline d-note" style="margin:0 0 var(--cds-gap-sm)"></p>
       <div class="tablebox" style="max-height:30rem"><table class="hier d-tbl"></table></div>
@@ -204,7 +204,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <div class="kpis k-kpis"></div>
     <div class="card">
       <div class="bar"><h2 style="margin:0">Course catalogue: design, languages and results</h2>
-        <div class="dlbar k-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button></div></div>
+        <div class="dlbar k-dl"><span class="note-inline">Download this table:</span><button class="dl" data-dl="xlsx">Excel</button><button class="dl" data-dl="csv">CSV</button><button class="dl" data-dl="html">HTML / PDF</button></div></div>
       <p class="note">One row per course. Structure and languages from the course set-up; assigned and completed from the daily data; feedback stars from all feedback; duration, clarity and usefulness answers from the multiple-choice feedback. Click a heading to sort.</p>
       <div class="fbar">
         <label class="fl">Video language <span class="fw"><select class="k-vl"></select><button class="fx" data-kx="0" title="Reset">×</button></span></label>
@@ -320,13 +320,37 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       ['xl/worksheets/sheet1.xml', sheetXml(rows, headRow)],
     ]);
   }
-  function save(name, rows, kind) {
-    const fn = name.replace(/[\\/:*?"<>|]+/g, ' ').replace(/\s+/g, ' ').trim() + ' - ' + META.rep + '.' + kind;
-    const blob = kind === 'csv' ? new Blob([csvOf(rows)], { type: 'text/csv;charset=utf-8' }) : xlsx(name, rows, 0);
-    const url = URL.createObjectURL(blob), a = el('a', { href: url, download: fn, style: 'display:none' });
+  // Excel / CSV / HTML-PDF, as on the dashboard: file name seaverse_insights_<table>_<date>; Excel and HTML carry the title and a context line
+  const MIME = { xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', csv: 'text/csv;charset=utf-8', html: 'text/html;charset=utf-8' };
+  function htmlTable(title, rows, ctx, totalFirst) {
+    return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${xe(title)} · ${repD}</title><style>
+body{font:12px/1.45 -apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#1f2328;margin:0 auto;padding:24px;max-width:1600px}h1{font-size:19px;margin:0}.mu{color:#59636e;margin:4px 0 12px}
+table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa;text-align:left;padding:5px;border-bottom:1px solid #d0d7de;white-space:nowrap}td{padding:4px 5px;border-bottom:1px solid #eaeef2;vertical-align:top}td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}tr.t td{font-weight:600;background:#f6f8fa}
+@media print{body{padding:0;max-width:none}tr{break-inside:avoid}@page{size:A4 landscape;margin:10mm}}</style></head><body>
+<h1>${xe(title)}</h1><p class="mu">${xe(ctx)}</p>
+<table><thead><tr>${rows[0].map((h) => `<th>${xe(h)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map((r, i) => `<tr${i === 0 && totalFirst ? ' class="t"' : ''}>${r.map((v) => `<td${v !== '' && v != null && !isNaN(+v) ? ' class="n"' : ''}>${xe(v ?? '')}</td>`).join('')}</tr>`).join('')}</tbody></table>
+<p class="mu">Seaverse Insights · ${xe(document.getElementById('asof').textContent)} · internal use only.</p></body></html>`;
+  }
+  function save(x, kind) {
+    const ctx = x.ctx || `Data to ${repD}`;
+    const base = ('seaverse_insights_' + x.title).replace(/[^A-Za-z0-9 _-]+/g, ' ').trim().replace(/\s+/g, '_').slice(0, 90) + '_' + META.rep;
+    let data;
+    if (kind === 'xlsx') { const meta = [[x.title], [ctx], []]; data = xlsx(x.title.slice(0, 31), [...meta, ...x.rows], meta.length); }
+    else if (kind === 'csv') data = csvOf(x.rows);
+    else data = htmlTable(x.title, x.rows, ctx, x.total);
+    const blob = data instanceof Blob ? data : new Blob([data], { type: MIME[kind] });
+    const url = URL.createObjectURL(blob), a = el('a', { href: url, download: base + '.' + kind, style: 'display:none' });
     document.body.append(a); a.click(); setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 60000);
   }
-  const wireDl = (bar, fn) => $$('[data-dl]', bar).forEach((b) => b.addEventListener('click', () => { const x = fn(); if (x) save(x.title, x.rows, b.dataset.dl); }));
+  const DLB = (label) => el('div', { class: 'dlbar' }, el('span', { class: 'note-inline' }, label || 'Download this table:'),
+    el('button', { class: 'dl', 'data-dl': 'xlsx' }, 'Excel'), el('button', { class: 'dl', 'data-dl': 'csv' }, 'CSV'), el('button', { class: 'dl', 'data-dl': 'html' }, 'HTML / PDF'));
+  const wireDl = (bar, fn) => {
+    if (!$('[data-dl=html]', bar)) bar.append(el('button', { class: 'dl', 'data-dl': 'html' }, 'HTML / PDF'));
+    $$('[data-dl]', bar).forEach((b) => b.addEventListener('click', () => { const x = fn(); if (x && x.rows && x.rows.length) save(x, b.dataset.dl); }));
+  };
+  // a download bar placed above a table that has none in the page
+  const addDl = (tblSel, fn, label) => { const t = $(tblSel), box = t.closest('.tablebox') || t; const bar = DLB(label); bar.style.margin = 'var(--cds-gap-xs) 0'; box.before(bar); wireDl(bar, fn); };
+  const SNAP = () => `Snapshot of ${snapD} (until this table is in the daily export) · page updated ${document.getElementById('asof').textContent.replace(/^Updated /, '')}`;
 
   // ---------- generic sortable table ----------
   // cols: {h, k, f (display), cls, v (sort/export value), w (wrap)}
@@ -698,15 +722,16 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       dueView = { title: `Due and expired ${CTL()} certificates`, tbl: $('.d-tbl') };
       bars($('.t-chart'), top, { aria: 'Courses with the most expired or due certificates', color: 'var(--color-bad)' });
     }
-    wireDl($('.p-dl'), () => view && { title: view.title, rows: view.tbl._rows() });
-    wireDl($('.d-dl'), () => dueView && { title: dueView.title, rows: dueView.tbl._rows() });
-    wireDl($('.np-dl'), () => ({ title: 'People with no learning plan by rank', rows: $('.np-tbl')._rows() }));
+    const pctx = () => `${$('.p-crumbs').textContent.replace(/\s+/g, ' ').trim()} · counting ${S.pop === 'Registered' ? 'registered users' : 'all invitees'} · filters: ${[S.cat, S.doc, S.ves, S.rank, S.q && '"' + S.q + '"'].filter(Boolean).join(' · ') || 'none'}${TAB === 'cert' ? ' · courses: ' + CTL() : ''} · completions to ${repD}`;
+    wireDl($('.p-dl'), () => view && { title: view.title, rows: view.tbl._rows(), ctx: pctx(), total: level().kind === 'group' });
+    wireDl($('.d-dl'), () => dueView && { title: dueView.title, rows: dueView.tbl._rows(), ctx: pctx() + (dst.value ? ' · status: ' + dst.value : '') });
+    wireDl($('.np-dl'), () => ({ title: 'People with no learning plan by rank', rows: $('.np-tbl')._rows(), ctx: pctx() }));
     return { render, S };
   })();
 
   // ---------- content ----------
   const Cont = (() => {
-    let C = null, done = false;
+    let C = null, done = false, LU = [];
     const vl = $('.k-vl'), st = $('.k-st'), q = $('.k-q');
     const num = (r, k) => r[k] === '' ? null : +r[k];
     async function render() {
@@ -730,6 +755,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
           { h: 'Onboard', k: 'Sea staff (onboard)', cls: 'num', f: (r) => int(r['Sea staff (onboard)']) }, { h: 'Language', k: 'language', num: false },
           { h: 'Courses with video', k: 'video_courses', cls: 'num', f: (r) => r.language ? int(r.video_courses) : '' },
           { h: 'Courses with subtitles', k: 'subtitle_courses', cls: 'num', f: (r) => r.language ? int(r.subtitle_courses) : '' }], lang, { sortK: 'people' });
+        LU = lu.map((r) => ({ label: r.language_used === '普通话' ? 'Mandarin (普通话)' : r.language_used, n: +r.answers }));
         bars($('.lu-chart'), lu.map((r) => ({ label: r.language_used === '普通话' ? 'Mandarin (普通话)' : r.language_used, n: +r.answers })), { aria: 'Language used', lw: 160 });
       }
       let r = C;
@@ -756,7 +782,9 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       $('.k-note').textContent = `${int(n)} courses.`;
       if (!done) { done = true; [vl, st].forEach((s) => s.addEventListener('change', render)); q.addEventListener('input', () => render());
         $$('[data-kx]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); const i = +b.dataset.kx; if (i === 0) vl.value = ''; if (i === 1) st.value = 'pub'; if (i === 2) q.value = ''; render(); }));
-        wireDl($('.k-dl'), () => ({ title: 'Course catalogue', rows: $('.k-tbl')._rows() })); }
+        wireDl($('.k-dl'), () => ({ title: 'Course catalogue', rows: $('.k-tbl')._rows(), ctx: `${$('.k-note').textContent} Show: ${st.options[st.selectedIndex].text}${vl.value ? ' · video language: ' + vl.value : ''}${q.value ? ' · search: ' + q.value : ''} · course set-up from the ${snapD} snapshot; assigned, completed and feedback to ${repD}` }));
+        addDl('.l-tbl', () => ({ title: 'Crew languages and content coverage', rows: $('.l-tbl')._rows(), ctx: `People by nationality (employee ID prefix) to ${repD}; course languages from the ${snapD} snapshot` }));
+        addDl('.lu-chart', () => ({ title: 'Language learners say they used', rows: [['Language used', 'Answers'], ...LU.map((r) => [r.label, r.n])], ctx: `Feedback answers to ${repD}` }), 'Download this data:'); }
     }
     return { render };
   })();
@@ -799,7 +827,15 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       table(t1, [{ h: 'Sent on', k: 'month', f: (r) => fmtD(r.month) }, { h: 'Status', k: 'status', num: false }, { h: 'Emails', k: 'n', cls: 'num' }], O.rm, { sortK: 'month' });
       table(t2, [{ h: 'Month', k: 'month', num: false }, { h: 'Accounts deleted', k: 'n', cls: 'num' }], O.del, { sortK: 'month' });
       $('.o-misc').replaceChildren(el('p', { class: 'note' }, 'Report and summary emails sent by the platform:'), el('div', { class: 'tablebox', style: 'max-height:14rem' }, t1), el('p', { class: 'note', style: 'margin-top:var(--cds-gap-md)' }, 'User accounts deleted by admins:'), el('div', { class: 'tablebox' }, t2));
-      if (!wired) { wired = true; ['.o-sst', '.o-top', '.o-vf'].forEach((s) => $(s).addEventListener('change', render)); }
+      if (!wired) { wired = true; ['.o-sst', '.o-top', '.o-vf'].forEach((s) => $(s).addEventListener('change', render));
+        const opt = (sel) => $(sel).options[$(sel).selectedIndex].text;
+        addDl('.o-stbl', () => ({ title: 'Self-signup requests', rows: $('.o-stbl')._rows(), ctx: `Show: ${opt('.o-sst')} · ${SNAP()}` }));
+        addDl('.o-ptbl', () => ({ title: 'Support requests', rows: $('.o-ptbl')._rows(), ctx: `Topic: ${opt('.o-top')} · ${SNAP()}` }));
+        addDl('.o-vtbl', () => ({ title: 'Vessel admin emails and monthly summary', rows: $('.o-vtbl')._rows(), ctx: `Show: ${opt('.o-vf')} · ${SNAP()}` }));
+        addDl('.o-itbl', () => ({ title: 'Bulk user imports', rows: $('.o-itbl')._rows(), ctx: SNAP() })); }
+      // the two small tables are rebuilt each time, so their bars are too
+      $$('.o-misc .tablebox').forEach((box, i) => { const tb = $('table', box), bar = DLB(); bar.style.margin = 'var(--cds-gap-xs) 0'; box.before(bar);
+        wireDl(bar, () => ({ title: i === 0 ? 'Report and summary emails sent' : 'User accounts deleted', rows: tb._rows(), ctx: SNAP() })); });
     }
     return { render };
   })();
