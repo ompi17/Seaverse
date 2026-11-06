@@ -267,7 +267,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <div class="chart lx-daytot dash-skeleton" data-source="sea_daily"></div>
     </div>
     <div class="card" id="reg-card" style="margin-top:var(--cds-gap-md)">
-      <h2>Registered vs onboard sea staff</h2>
+      <h2>Registered vs onboard sea staff · since the rollout</h2>
       <p class="note lx-regnote">Onboard sea staff and how many of them have registered, on each reporting day. Uses the DoC selector above.</p>
       <div class="chart lx-reg dash-skeleton" data-source="reg_hist"></div>
     </div>
@@ -858,36 +858,43 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
   }
 
-  // ---- registered vs onboard sea staff, day by day ----
+  // ---- registered vs invited/onboard sea staff since the rollout ----
+  // weekly points rebuilt from account and activity dates for today's onboard crew, then the figures recorded each reporting day
   function drawReg(doc) {
     const box = document.querySelector('.lx-reg');
     const R = dash.data('reg_hist');
     if (R.status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
     if (R.status !== 'ok') return;
     box.classList.remove('dash-skeleton');
-    const rows = R.data.filter((r) => r.doc === doc).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), on: num(r.onboard), reg: num(r.registered), cov: num(r.coverage_pct) }));
+    const rows = R.data.filter((r) => r.doc === doc && num(r.onboard) > 0).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), on: num(r.onboard), reg: num(r.registered), cov: num(r.coverage_pct), rec: r.kind === 'recorded' }));
     box.querySelector('svg')?.remove();
     const note = document.querySelector('.lx-regnote');
     if (!rows.length) { note.textContent = 'No history for this DoC yet.'; return; }
-    const first = rows[0], last = rows[rows.length - 1], fd = d3.utcFormat('%-d %b');
-    const dReg = last.reg - first.reg, dCov = last.cov - first.cov;
-    note.textContent = `${doc === ALL ? 'Whole group' : doc}: ${F.int(last.reg)} of ${F.int(last.on)} onboard sea staff registered (${F.pct(last.cov)}) on ${fd(last.d)}` +
-      (rows.length > 1 ? `; ${dReg >= 0 ? '+' : '−'}${F.int(Math.abs(dReg))} registered and ${dCov >= 0 ? '+' : '−'}${Math.abs(dCov).toFixed(1)} pts coverage since ${fd(first.d)}` : '') +
-      `. The shaded gap is onboard crew not yet registered. History starts ${d3.utcFormat('%-d %b %Y')(first.d)}, the first published day; a point is added each reporting day. Uses the DoC selector above.`;
-    const W = box.clientWidth || 400, H = 260, m = { t: 14, r: 170, b: 24, l: 52 };
-    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Registered versus onboard sea staff by day');
-    const ext = d3.extent(rows, (r) => r.d); if (+ext[0] === +ext[1]) { ext[0] = new Date(+ext[0] - 864e5); ext[1] = new Date(+ext[1] + 864e5); }
-    const x = d3.scaleUtc(ext, [m.l, W - m.r]);
+    const recd = rows.filter((r) => r.rec), reb = rows.filter((r) => !r.rec);
+    const last = rows[rows.length - 1], first = rows[0], fd = d3.utcFormat('%-d %b %Y');
+    const r0 = recd[0];
+    note.textContent = `${doc === ALL ? 'Whole group' : doc}: ${F.int(last.reg)} of ${F.int(last.on)} onboard sea staff registered (${F.pct(last.cov)}) on ${fd(last.d)}. ` +
+      (reb.length ? `Before ${r0 ? fd(r0.d) : 'daily records'} (dashed, weekly) the lines are rebuilt for today's onboard crew: invited = account created, registered = first course start (or last login). ` : '') +
+      (r0 ? `From ${fd(r0.d)} (solid, shaded) they are the onboard and registered figures recorded each reporting day. ` : '') + 'Uses the DoC selector above.';
+    const W = box.clientWidth || 400, H = 280, m = { t: 22, r: 170, b: 24, l: 52 };
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Registered versus onboard sea staff since the rollout');
+    const x = d3.scaleUtc([first.d, last.d], [m.l, W - m.r]);
     const y = d3.scaleLinear([0, d3.max(rows, (r) => r.on) * 1.08], [H - m.b, m.t]).nice();
-    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.min(rows.length, Math.max(2, Math.floor((W - m.l - m.r) / 70)))).tickFormat(d3.utcFormat('%b %-d'))).call(axisClean);
+    if (r0) {
+      svg.append('rect').attr('x', x(r0.d)).attr('y', m.t).attr('width', Math.max(2, x(last.d) - x(r0.d))).attr('height', H - m.t - m.b).attr('fill', 'var(--sv-accent, #1d5f8f)').attr('opacity', 0.06);
+      svg.append('text').text('recorded daily').attr('x', x(r0.d) + 4).attr('y', m.t - 6).attr('fill', 'var(--color-fg-muted)').style('font-size', '11px');
+    }
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l - m.r) / 75))).tickFormat(d3.utcFormat("%b '%y"))).call(axisClean);
     const ya = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(',')).tickSize(-(W - m.l - m.r))).call(axisClean);
     ya.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'); ya.select('.domain').remove();
     const ACC = 'var(--sv-accent, #1d5f8f)';
     svg.append('path').datum(rows).attr('fill', ACC).attr('opacity', 0.10).attr('d', d3.area((r) => x(r.d), () => y(0), (r) => y(r.reg)));
     svg.append('path').datum(rows).attr('fill', 'var(--color-warn)').attr('opacity', 0.16).attr('d', d3.area((r) => x(r.d), (r) => y(r.on), (r) => y(r.reg)));
+    const seg = (arr, k, col, dash) => arr.length > 1 && svg.append('path').datum(arr).attr('fill', 'none').attr('stroke', col).attr('stroke-width', 2.2).attr('stroke-dasharray', dash || null).attr('stroke-linejoin', 'round').attr('d', d3.line((r) => x(r.d), (r) => y(r[k])));
     [['on', 'var(--cds-chart-reference)'], ['reg', ACC]].forEach(([k, col]) => {
-      svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', col).attr('stroke-width', 2.2).attr('stroke-linejoin', 'round').attr('d', d3.line((r) => x(r.d), (r) => y(r[k])));
-      svg.selectAll(null).data(rows).join('circle').attr('cx', (r) => x(r.d)).attr('cy', (r) => y(r[k])).attr('r', 3).attr('fill', 'var(--color-panel)').attr('stroke', col).attr('stroke-width', 2);
+      seg(reb.length && r0 ? [...reb, r0] : reb, k, col, '5 4');
+      seg(recd, k, col);
+      svg.selectAll(null).data(recd).join('circle').attr('cx', (r) => x(r.d)).attr('cy', (r) => y(r[k])).attr('r', rows.length > 40 ? 1.6 : 2.5).attr('fill', 'var(--color-panel)').attr('stroke', col).attr('stroke-width', 1.8);
     });
     const ends = [{ y: y(last.on), txt: `Onboard ${F.int(last.on)}`, col: 'var(--color-fg-muted)' },
       { y: y((last.on + last.reg) / 2), txt: `Not registered ${F.int(last.on - last.reg)}`, col: 'var(--color-warn)' },
@@ -900,7 +907,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       .on('mousemove', (e) => {
         const [px] = d3.pointer(e); const r = rows[d3.leastIndex(rows, (r) => Math.abs(x(r.d) - px))];
         rule.style('display', null).attr('x1', x(r.d)).attr('x2', x(r.d));
-        t.show(e, d3.utcFormat('%b %-d, %Y')(r.d), `Onboard ${F.int(r.on)} · registered ${F.int(r.reg)} (${F.pct(r.cov)}) · not registered ${F.int(r.on - r.reg)}`);
+        t.show(e, d3.utcFormat('%b %-d, %Y')(r.d) + (r.rec ? ' · recorded' : ' · rebuilt'), `${r.rec ? 'Onboard' : 'Invited (today’s onboard crew)'} ${F.int(r.on)} · registered ${F.int(r.reg)} (${F.pct(r.cov)}) · not registered ${F.int(r.on - r.reg)}`);
       })
       .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
   }
