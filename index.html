@@ -29,7 +29,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 <script src="d3.v7.9.0.min.js"></script>
 <script>
 (() => {
-  const CSV = new Set(["courses", "docs", "fb_comp", "fb_subs", "learners", "mand_people", "mand_ranks", "mand_status", "mand_titles", "offboard", "ranks", "sea_daily", "sea_monthly", "sea_staff", "sea_weekly", "trend", "vessels", "vtypes"]);
+  const CSV = new Set(["courses", "docs", "fb_comp", "fb_subs", "learners", "mand_people", "mand_ranks", "mand_status", "mand_titles", "offboard", "ranks", "reg_hist", "sea_daily", "sea_monthly", "sea_staff", "sea_weekly", "trend", "vessels", "vtypes"]);
   const P = { doc: null, vessel: null, pop: 'Registered' };
   const D = {}, L = [];
   let t = null;
@@ -265,6 +265,11 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       <div class="chart lx-dayavg dash-skeleton" data-source="sea_daily"></div>
       <h3 class="sub-h">Total completions per day</h3>
       <div class="chart lx-daytot dash-skeleton" data-source="sea_daily"></div>
+    </div>
+    <div class="card" id="reg-card" style="margin-top:var(--cds-gap-md)">
+      <h2>Registered vs onboard sea staff</h2>
+      <p class="note lx-regnote">Onboard sea staff and how many of them have registered, on each reporting day. Uses the DoC selector above.</p>
+      <div class="chart lx-reg dash-skeleton" data-source="reg_hist"></div>
     </div>
     </section>
 
@@ -707,7 +712,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (m != null && m4 != null) { const s = document.createElement('span'); s.style.color = m >= m4 ? 'var(--color-ok)' : 'var(--color-bad)'; s.textContent = `${m >= m4 ? '▲' : '▼'} ${Math.abs(m - m4).toFixed(0)} pts in 4 wks`; delta.appendChild(s); }
     document.querySelector('#g-fleet .lx-gv').style.color = bcol(m);
     const tab = window.SV.tab;
-    if (tab === 'dash') { drawGauges(row); drawDocChart(docs, doc, pop, D.status); drawFunnel(row, D.status); drawLifetime(docs, doc, pop, D.status); drawWeeklyC(doc, pop); drawMonthlyC(doc, pop); drawTrend(doc, pop); drawDaily(doc, pop); }
+    if (tab === 'dash') { drawGauges(row); drawDocChart(docs, doc, pop, D.status); drawFunnel(row, D.status); drawLifetime(docs, doc, pop, D.status); drawWeeklyC(doc, pop); drawMonthlyC(doc, pop); drawTrend(doc, pop); drawDaily(doc, pop); drawReg(doc); }
     else if (tab === 'sea') drawHier();
   }
   window.SV.drawSea = draw;
@@ -849,6 +854,53 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
         const [px] = d3.pointer(e); const r = rows[d3.leastIndex(rows, (r) => Math.abs(x(r.d) - px))];
         rule.style('display', null).attr('x1', x(r.d)).attr('x2', x(r.d));
         t.show(e, d3.utcFormat('%b %-d, %Y')(r.d), `Average ${F.pct(r.mean)} · ${F.pct(r.ok)} at target · ${F.int(r.n)} assessable`);
+      })
+      .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
+  }
+
+  // ---- registered vs onboard sea staff, day by day ----
+  function drawReg(doc) {
+    const box = document.querySelector('.lx-reg');
+    const R = dash.data('reg_hist');
+    if (R.status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
+    if (R.status !== 'ok') return;
+    box.classList.remove('dash-skeleton');
+    const rows = R.data.filter((r) => r.doc === doc).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), on: num(r.onboard), reg: num(r.registered), cov: num(r.coverage_pct) }));
+    box.querySelector('svg')?.remove();
+    const note = document.querySelector('.lx-regnote');
+    if (!rows.length) { note.textContent = 'No history for this DoC yet.'; return; }
+    const first = rows[0], last = rows[rows.length - 1], fd = d3.utcFormat('%-d %b');
+    const dReg = last.reg - first.reg, dCov = last.cov - first.cov;
+    note.textContent = `${doc === ALL ? 'Whole group' : doc}: ${F.int(last.reg)} of ${F.int(last.on)} onboard sea staff registered (${F.pct(last.cov)}) on ${fd(last.d)}` +
+      (rows.length > 1 ? `; ${dReg >= 0 ? '+' : '−'}${F.int(Math.abs(dReg))} registered and ${dCov >= 0 ? '+' : '−'}${Math.abs(dCov).toFixed(1)} pts coverage since ${fd(first.d)}` : '') +
+      `. The shaded gap is onboard crew not yet registered. History starts ${d3.utcFormat('%-d %b %Y')(first.d)}, the first published day; a point is added each reporting day. Uses the DoC selector above.`;
+    const W = box.clientWidth || 400, H = 260, m = { t: 14, r: 170, b: 24, l: 52 };
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Registered versus onboard sea staff by day');
+    const ext = d3.extent(rows, (r) => r.d); if (+ext[0] === +ext[1]) { ext[0] = new Date(+ext[0] - 864e5); ext[1] = new Date(+ext[1] + 864e5); }
+    const x = d3.scaleUtc(ext, [m.l, W - m.r]);
+    const y = d3.scaleLinear([0, d3.max(rows, (r) => r.on) * 1.08], [H - m.b, m.t]).nice();
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.min(rows.length, Math.max(2, Math.floor((W - m.l - m.r) / 70)))).tickFormat(d3.utcFormat('%b %-d'))).call(axisClean);
+    const ya = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(',')).tickSize(-(W - m.l - m.r))).call(axisClean);
+    ya.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'); ya.select('.domain').remove();
+    const ACC = 'var(--sv-accent, #1d5f8f)';
+    svg.append('path').datum(rows).attr('fill', ACC).attr('opacity', 0.10).attr('d', d3.area((r) => x(r.d), () => y(0), (r) => y(r.reg)));
+    svg.append('path').datum(rows).attr('fill', 'var(--color-warn)').attr('opacity', 0.16).attr('d', d3.area((r) => x(r.d), (r) => y(r.on), (r) => y(r.reg)));
+    [['on', 'var(--cds-chart-reference)'], ['reg', ACC]].forEach(([k, col]) => {
+      svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', col).attr('stroke-width', 2.2).attr('stroke-linejoin', 'round').attr('d', d3.line((r) => x(r.d), (r) => y(r[k])));
+      svg.selectAll(null).data(rows).join('circle').attr('cx', (r) => x(r.d)).attr('cy', (r) => y(r[k])).attr('r', 3).attr('fill', 'var(--color-panel)').attr('stroke', col).attr('stroke-width', 2);
+    });
+    const ends = [{ y: y(last.on), txt: `Onboard ${F.int(last.on)}`, col: 'var(--color-fg-muted)' },
+      { y: y((last.on + last.reg) / 2), txt: `Not registered ${F.int(last.on - last.reg)}`, col: 'var(--color-warn)' },
+      { y: y(last.reg), txt: `Registered ${F.int(last.reg)} (${F.pct0(last.cov)})`, col: 'var(--color-fg)' }];
+    for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
+    ends.forEach((e) => svg.append('text').text(e.txt).attr('x', W - m.r + 8).attr('y', e.y).attr('dy', '0.35em').attr('fill', e.col).style('font-size', 'var(--cds-font-size-caption)').style('font-weight', 600));
+    const t = tip(box);
+    const rule = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--cds-chart-axis)').style('display', 'none');
+    svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('mousemove', (e) => {
+        const [px] = d3.pointer(e); const r = rows[d3.leastIndex(rows, (r) => Math.abs(x(r.d) - px))];
+        rule.style('display', null).attr('x1', x(r.d)).attr('x2', x(r.d));
+        t.show(e, d3.utcFormat('%b %-d, %Y')(r.d), `Onboard ${F.int(r.on)} · registered ${F.int(r.reg)} (${F.pct(r.cov)}) · not registered ${F.int(r.on - r.reg)}`);
       })
       .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
   }
