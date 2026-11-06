@@ -269,7 +269,15 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <div class="card" id="reg-card" style="margin-top:var(--cds-gap-md)">
       <h2>Registered vs onboard sea staff · since the rollout</h2>
       <p class="note lx-regnote">Onboard sea staff and how many of them have registered, on each reporting day. Uses the DoC selector above.</p>
+      <div class="bar" style="margin:var(--cds-gap-xs) 0;gap:var(--cds-gap-sm);flex-wrap:wrap">
+        <div class="seg lx-regseg" role="radiogroup" aria-label="Range">
+          <button role="radio" data-r="all" aria-checked="true">All</button><button role="radio" data-r="6">6 months</button><button role="radio" data-r="3">3 months</button><button role="radio" data-r="1">1 month</button><button role="radio" data-r="rec">Recorded daily</button>
+        </div>
+        <span class="note-inline lx-regrange"></span>
+      </div>
       <div class="chart lx-reg dash-skeleton" data-source="reg_hist"></div>
+      <div class="chart lx-regnav" style="min-height:0"></div>
+      <p class="note-inline" style="margin-top:2px">Drag across the strip above to zoom into any period, drag the highlighted window to move it, or drag its edges to resize. Click outside the window, double-click the strip, or pick All to reset.</p>
     </div>
     </section>
 
@@ -858,58 +866,111 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
   }
 
-  // ---- registered vs invited/onboard sea staff since the rollout ----
+  // ---- registered vs invited/onboard sea staff since the rollout (zoomable) ----
   // weekly points rebuilt from account and activity dates for today's onboard crew, then the figures recorded each reporting day
+  let REGR = null, REGP = 'all', REGDOC = null;   // visible range [from, to] (null = all), preset, DoC last drawn
+  function regPreset(rows, k) {
+    const last = rows[rows.length - 1].d;
+    if (k === 'all') return null;
+    if (k === 'rec') { const r0 = rows.find((r) => r.rec); return r0 ? [r0.d, last] : null; }
+    const from = new Date(last); from.setUTCMonth(from.getUTCMonth() - (+k));
+    return from <= rows[0].d ? null : [from, last];
+  }
   function drawReg(doc) {
-    const box = document.querySelector('.lx-reg');
+    const box = document.querySelector('.lx-reg'), nav = document.querySelector('.lx-regnav');
     const R = dash.data('reg_hist');
     if (R.status === 'error') { box.classList.remove('dash-skeleton'); return fail(box); }
     if (R.status !== 'ok') return;
     box.classList.remove('dash-skeleton');
+    REGDOC = doc;
     const rows = R.data.filter((r) => r.doc === doc && num(r.onboard) > 0).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), on: num(r.onboard), reg: num(r.registered), cov: num(r.coverage_pct), rec: r.kind === 'recorded' }));
-    box.querySelector('svg')?.remove();
+    box.querySelector('svg')?.remove(); nav.querySelector('svg')?.remove();
     const note = document.querySelector('.lx-regnote');
     if (!rows.length) { note.textContent = 'No history for this DoC yet.'; return; }
-    const recd = rows.filter((r) => r.rec), reb = rows.filter((r) => !r.rec);
-    const last = rows[rows.length - 1], first = rows[0], fd = d3.utcFormat('%-d %b %Y');
-    const r0 = recd[0];
-    note.textContent = `${doc === ALL ? 'Whole group' : doc}: ${F.int(last.reg)} of ${F.int(last.on)} onboard sea staff registered (${F.pct(last.cov)}) on ${fd(last.d)}. ` +
-      (reb.length ? `Before ${r0 ? fd(r0.d) : 'daily records'} (dashed, weekly) the lines are rebuilt for today's onboard crew: invited = account created, registered = first course start (or last login). ` : '') +
+    const seg = document.querySelector('.lx-regseg');
+    if (!seg._wired) {
+      seg._wired = true;
+      seg.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => { REGP = b.dataset.r; REGR = null; drawReg(REGDOC); }));
+    }
+    if (REGP !== 'custom') REGR = regPreset(rows, REGP);
+    seg.querySelectorAll('button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.r === REGP)));
+    const fd = d3.utcFormat('%-d %b %Y');
+    const dom = REGR ? [new Date(Math.max(+REGR[0], +rows[0].d)), new Date(Math.min(+REGR[1], +rows[rows.length - 1].d))] : [rows[0].d, rows[rows.length - 1].d];
+    // points inside the window, plus one either side so the lines run to the edges
+    const i0 = Math.max(0, d3.bisector((r) => r.d).left(rows, dom[0]) - 1), i1 = Math.min(rows.length, d3.bisector((r) => r.d).right(rows, dom[1]) + 1);
+    const vis = rows.slice(i0, i1), inWin = vis.filter((r) => r.d >= dom[0] && r.d <= dom[1]);
+    const recd = vis.filter((r) => r.rec), reb = vis.filter((r) => !r.rec), r0 = rows.find((r) => r.rec);
+    const last = inWin[inWin.length - 1] || rows[rows.length - 1], first = inWin[0] || rows[0];
+    const dReg = last.reg - first.reg, dCov = last.cov - first.cov;
+    document.querySelector('.lx-regrange').textContent = `Showing ${fd(dom[0])} – ${fd(dom[1])}` + (inWin.length > 1 ? ` · registered ${dReg >= 0 ? '+' : '−'}${F.int(Math.abs(dReg))}, coverage ${dCov >= 0 ? '+' : '−'}${Math.abs(dCov).toFixed(1)} pts` : '');
+    note.textContent = `${doc === ALL ? 'Whole group' : doc}: ${F.int(rows[rows.length - 1].reg)} of ${F.int(rows[rows.length - 1].on)} onboard sea staff registered (${F.pct(rows[rows.length - 1].cov)}) on ${fd(rows[rows.length - 1].d)}. ` +
+      (rows.some((r) => !r.rec) ? `Before ${r0 ? fd(r0.d) : 'daily records'} (dashed, weekly) the lines are rebuilt for today's onboard crew: invited = account created, registered = first course start (or last login). ` : '') +
       (r0 ? `From ${fd(r0.d)} (solid, shaded) they are the onboard and registered figures recorded each reporting day. ` : '') + 'Uses the DoC selector above.';
     const W = box.clientWidth || 400, H = 280, m = { t: 22, r: 170, b: 24, l: 52 };
-    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Registered versus onboard sea staff since the rollout');
-    const x = d3.scaleUtc([first.d, last.d], [m.l, W - m.r]);
-    const y = d3.scaleLinear([0, d3.max(rows, (r) => r.on) * 1.08], [H - m.b, m.t]).nice();
-    if (r0) {
-      svg.append('rect').attr('x', x(r0.d)).attr('y', m.t).attr('width', Math.max(2, x(last.d) - x(r0.d))).attr('height', H - m.t - m.b).attr('fill', 'var(--sv-accent, #1d5f8f)').attr('opacity', 0.06);
-      svg.append('text').text('recorded daily').attr('x', x(r0.d) + 4).attr('y', m.t - 6).attr('fill', 'var(--color-fg-muted)').style('font-size', '11px');
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Registered versus onboard sea staff');
+    const x = d3.scaleUtc(+dom[0] === +dom[1] ? [new Date(+dom[0] - 864e5), new Date(+dom[1] + 864e5)] : dom, [m.l, W - m.r]);
+    const zoomed = !!REGR;
+    const lo = zoomed ? d3.min(inWin.length ? inWin : vis, (r) => r.reg) : 0, hi = d3.max(inWin.length ? inWin : vis, (r) => r.on);
+    const y = d3.scaleLinear(zoomed ? [Math.max(0, lo - (hi - lo) * 0.12), hi + (hi - lo) * 0.08 + 1] : [0, hi * 1.08], [H - m.b, m.t]).nice();
+    const cid = 'regclip' + Math.random().toString(36).slice(2, 7);
+    svg.append('clipPath').attr('id', cid).append('rect').attr('x', m.l).attr('y', m.t - 4).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b + 8);
+    const g = svg.append('g').attr('clip-path', `url(#${cid})`);
+    if (r0 && r0.d <= dom[1]) {
+      const xa = Math.max(m.l, x(r0.d)), xb = x(dom[1]);
+      g.append('rect').attr('x', xa).attr('y', m.t).attr('width', Math.max(2, xb - xa)).attr('height', H - m.t - m.b).attr('fill', 'var(--sv-accent, #1d5f8f)').attr('opacity', 0.06);
+      svg.append('text').text('recorded daily').attr('x', xa + 4).attr('y', m.t - 6).attr('fill', 'var(--color-fg-muted)').style('font-size', '11px');
     }
-    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l - m.r) / 75))).tickFormat(d3.utcFormat("%b '%y"))).call(axisClean);
+    const span = (dom[1] - dom[0]) / 864e5;
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.min(span < 1 ? 2 : 12, Math.floor((W - m.l - m.r) / 75)))).tickFormat(d3.utcFormat(span < 200 ? '%-d %b' : "%b '%y"))).call(axisClean);
     const ya = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(',')).tickSize(-(W - m.l - m.r))).call(axisClean);
     ya.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'); ya.select('.domain').remove();
-    const ACC = 'var(--sv-accent, #1d5f8f)';
-    svg.append('path').datum(rows).attr('fill', ACC).attr('opacity', 0.10).attr('d', d3.area((r) => x(r.d), () => y(0), (r) => y(r.reg)));
-    svg.append('path').datum(rows).attr('fill', 'var(--color-warn)').attr('opacity', 0.16).attr('d', d3.area((r) => x(r.d), (r) => y(r.on), (r) => y(r.reg)));
-    const seg = (arr, k, col, dash) => arr.length > 1 && svg.append('path').datum(arr).attr('fill', 'none').attr('stroke', col).attr('stroke-width', 2.2).attr('stroke-dasharray', dash || null).attr('stroke-linejoin', 'round').attr('d', d3.line((r) => x(r.d), (r) => y(r[k])));
+    const ACC = 'var(--sv-accent, #1d5f8f)', base = H - m.b;
+    g.append('path').datum(vis).attr('fill', ACC).attr('opacity', 0.10).attr('d', d3.area((r) => x(r.d), () => base, (r) => y(r.reg)));
+    g.append('path').datum(vis).attr('fill', 'var(--color-warn)').attr('opacity', 0.16).attr('d', d3.area((r) => x(r.d), (r) => y(r.on), (r) => y(r.reg)));
+    const line = (arr, k, col, dash) => arr.length > 1 && g.append('path').datum(arr).attr('fill', 'none').attr('stroke', col).attr('stroke-width', 2.2).attr('stroke-dasharray', dash || null).attr('stroke-linejoin', 'round').attr('d', d3.line((r) => x(r.d), (r) => y(r[k])));
+    const join = reb.length && recd.length ? [...reb, recd[0]] : reb;
+    const dots = inWin.filter((r) => r.rec || inWin.length <= 40);
     [['on', 'var(--cds-chart-reference)'], ['reg', ACC]].forEach(([k, col]) => {
-      seg(reb.length && r0 ? [...reb, r0] : reb, k, col, '5 4');
-      seg(recd, k, col);
-      svg.selectAll(null).data(recd).join('circle').attr('cx', (r) => x(r.d)).attr('cy', (r) => y(r[k])).attr('r', rows.length > 40 ? 1.6 : 2.5).attr('fill', 'var(--color-panel)').attr('stroke', col).attr('stroke-width', 1.8);
+      line(join, k, col, '5 4'); line(recd, k, col);
+      g.selectAll(null).data(dots).join('circle').attr('cx', (r) => x(r.d)).attr('cy', (r) => y(r[k])).attr('r', dots.length > 40 ? 1.6 : 2.6).attr('fill', 'var(--color-panel)').attr('stroke', col).attr('stroke-width', 1.8);
     });
-    const ends = [{ y: y(last.on), txt: `Onboard ${F.int(last.on)}`, col: 'var(--color-fg-muted)' },
+    const ends = [{ y: y(last.on), txt: `${last.rec ? 'Onboard' : 'Invited'} ${F.int(last.on)}`, col: 'var(--color-fg-muted)' },
       { y: y((last.on + last.reg) / 2), txt: `Not registered ${F.int(last.on - last.reg)}`, col: 'var(--color-warn)' },
       { y: y(last.reg), txt: `Registered ${F.int(last.reg)} (${F.pct0(last.cov)})`, col: 'var(--color-fg)' }];
     for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
     ends.forEach((e) => svg.append('text').text(e.txt).attr('x', W - m.r + 8).attr('y', e.y).attr('dy', '0.35em').attr('fill', e.col).style('font-size', 'var(--cds-font-size-caption)').style('font-weight', 600));
     const t = tip(box);
     const rule = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--cds-chart-axis)').style('display', 'none');
+    const pts = inWin.length ? inWin : vis;
     svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
       .on('mousemove', (e) => {
-        const [px] = d3.pointer(e); const r = rows[d3.leastIndex(rows, (r) => Math.abs(x(r.d) - px))];
+        const [px] = d3.pointer(e); const r = pts[d3.leastIndex(pts, (r) => Math.abs(x(r.d) - px))];
         rule.style('display', null).attr('x1', x(r.d)).attr('x2', x(r.d));
         t.show(e, d3.utcFormat('%b %-d, %Y')(r.d) + (r.rec ? ' · recorded' : ' · rebuilt'), `${r.rec ? 'Onboard' : 'Invited (today’s onboard crew)'} ${F.int(r.on)} · registered ${F.int(r.reg)} (${F.pct(r.cov)}) · not registered ${F.int(r.on - r.reg)}`);
       })
       .on('mouseleave', () => { rule.style('display', 'none'); t.hide(); });
+    // overview strip with a draggable window
+    const NH = 54, n = { t: 6, b: 16 };
+    const ns = d3.select(nav).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${NH}`).attr('aria-label', 'Overview: drag to choose a period');
+    const x2 = d3.scaleUtc([rows[0].d, rows[rows.length - 1].d], [m.l, W - m.r]);
+    const y2 = d3.scaleLinear([0, d3.max(rows, (r) => r.on)], [NH - n.b, n.t]);
+    ns.append('rect').attr('x', m.l).attr('y', n.t).attr('width', W - m.l - m.r).attr('height', NH - n.t - n.b).attr('rx', 4).attr('fill', 'var(--sv-panel-2, transparent)');
+    ns.append('path').datum(rows).attr('fill', 'var(--color-warn)').attr('opacity', 0.18).attr('d', d3.area((r) => x2(r.d), (r) => y2(r.on), (r) => y2(r.reg)));
+    ns.append('path').datum(rows).attr('fill', ACC).attr('opacity', 0.18).attr('d', d3.area((r) => x2(r.d), () => NH - n.b, (r) => y2(r.reg)));
+    ns.append('g').attr('transform', `translate(0,${NH - n.b})`).call(d3.axisBottom(x2).ticks(Math.max(2, Math.floor((W - m.l - m.r) / 90))).tickFormat(d3.utcFormat("%b '%y")).tickSize(3)).call(axisClean);
+    const brush = d3.brushX().extent([[m.l, n.t], [W - m.r, NH - n.b]]).on('end', (e) => {
+      if (!e.sourceEvent) return;
+      if (!e.selection) { REGP = 'all'; REGR = null; return drawReg(REGDOC); }
+      const [a, b] = e.selection.map(x2.invert);
+      if (b - a < 2 * 864e5) return;
+      if (REGR && Math.abs(a - REGR[0]) < 864e5 && Math.abs(b - REGR[1]) < 864e5) return;   // a click on the window, not a move
+      REGP = 'custom'; REGR = [a, b]; drawReg(REGDOC);
+    });
+    const bg = ns.append('g').attr('class', 'reg-brush').call(brush);
+    if (REGR) bg.call(brush.move, [x2(dom[0]), x2(dom[1])]);
+    bg.selectAll('.selection').attr('fill', ACC).attr('fill-opacity', 0.18).attr('stroke', ACC);
+    const reset = (e) => { e.stopPropagation(); REGP = 'all'; REGR = null; drawReg(REGDOC); };
+    ns.on('dblclick', reset); bg.on('dblclick.reset', reset); bg.selectAll('.overlay,.selection,.handle').on('dblclick', reset);
   }
 
   // ---- lifetime progress vs 80% (by DoC) ----
