@@ -12,19 +12,19 @@ date,doc,population,mean_pct,median_pct,assessable,ok_pct
 2026-10-22,All DoCs,All onboard,88.5,0.9,7393,13.8
 2026-10-29,All DoCs,All onboard,89.8,1.0,7491,13.9
 2026-11-05,All DoCs,All onboard,86.8,1.2,7581,14.2
-2026-08-13,All DoCs,Registered,177.4,5.3,5575,17.6
-2026-08-20,All DoCs,Registered,191.5,6.5,5706,18.9
-2026-08-27,All DoCs,Registered,178.3,7.1,5783,19.4
-2026-09-03,All DoCs,Registered,208.5,9.2,5961,21.3
-2026-09-10,All DoCs,Registered,190.2,11.1,6053,22.3
-2026-09-17,All DoCs,Registered,210.4,11.4,6171,23.2
-2026-09-24,All DoCs,Registered,186.7,12.8,6257,23.8
-2026-10-01,All DoCs,Registered,188.9,16.9,6418,25.1
-2026-10-08,All DoCs,Registered,170.8,16.9,6504,25.2
-2026-10-15,All DoCs,Registered,156.6,16.9,6554,24.0
-2026-10-22,All DoCs,Registered,147.6,16.9,6640,23.1
-2026-10-29,All DoCs,Registered,150.0,16.9,6738,23.3
-2026-11-05,All DoCs,Registered,145.0,16.9,6828,23.8
+2026-08-13,All DoCs,Registered,177.3,5.3,5575,17.5
+2026-08-20,All DoCs,Registered,191.3,6.4,5706,18.9
+2026-08-27,All DoCs,Registered,178.1,7.0,5783,19.3
+2026-09-03,All DoCs,Registered,208.3,9.2,5961,21.3
+2026-09-10,All DoCs,Registered,190.0,11.0,6053,22.3
+2026-09-17,All DoCs,Registered,210.1,11.3,6171,23.2
+2026-09-24,All DoCs,Registered,186.5,12.7,6257,23.7
+2026-10-01,All DoCs,Registered,188.7,16.9,6418,25.1
+2026-10-08,All DoCs,Registered,170.6,16.9,6504,25.2
+2026-10-15,All DoCs,Registered,156.5,16.9,6554,23.9
+2026-10-22,All DoCs,Registered,147.5,16.9,6640,23.1
+2026-10-29,All DoCs,Registered,149.8,16.9,6738,23.3
+2026-11-05,All DoCs,Registered,144.9,16.9,6828,23.7
 2026-08-13,All DoCs,Engaged,218.8,16.9,6328,22.5
 2026-08-20,All DoCs,Engaged,231.2,16.9,6459,23.5
 2026-08-27,All DoCs,Engaged,212.7,16.9,6536,23.8
@@ -1065,19 +1065,19 @@ date,doc,population,mean_pct,median_pct,assessable,ok_pct
 2026-10-22,Synergy Ocean Maritime Inc.,All onboard,136.9,0.0,302,24.7
 2026-10-29,Synergy Ocean Maritime Inc.,All onboard,217.6,0.8,312,26.0
 2026-11-05,Synergy Ocean Maritime Inc.,All onboard,187.7,1.6,322,27.4
-2026-08-13,Synergy Ocean Maritime Inc.,Registered,147.1,0.0,176,17.8
-2026-08-20,Synergy Ocean Maritime Inc.,Registered,287.0,0.0,188,19.8
-2026-08-27,Synergy Ocean Maritime Inc.,Registered,288.3,0.0,204,23.7
-2026-09-03,Synergy Ocean Maritime Inc.,Registered,476.0,8.7,242,35.9
-2026-09-10,Synergy Ocean Maritime Inc.,Registered,336.5,13.6,245,36.4
-2026-09-17,Synergy Ocean Maritime Inc.,Registered,321.8,16.9,250,36.2
-2026-09-24,Synergy Ocean Maritime Inc.,Registered,332.7,33.6,264,39.0
-2026-10-01,Synergy Ocean Maritime Inc.,Registered,312.0,33.8,272,39.0
-2026-10-08,Synergy Ocean Maritime Inc.,Registered,297.0,38.1,280,39.3
-2026-10-15,Synergy Ocean Maritime Inc.,Registered,235.1,40.7,281,40.1
-2026-10-22,Synergy Ocean Maritime Inc.,Registered,218.6,49.8,283,39.5
-2026-10-29,Synergy Ocean Maritime Inc.,Registered,347.6,50.7,293,41.5
-2026-11-05,Synergy Ocean Maritime Inc.,Registered,299.7,62.2,303,43.8
+2026-08-13,Synergy Ocean Maritime Inc.,Registered,146.7,0.0,176,17.7
+2026-08-20,Synergy Ocean Maritime Inc.,Registered,286.2,0.0,188,19.7
+2026-08-27,Synergy Ocean Maritime Inc.,Registered,287.5,0.0,204,23.7
+2026-09-03,Synergy Ocean Maritime Inc.,Registered,474.6,8.7,242,35.8
+2026-09-10,Synergy Ocean Maritime Inc.,Registered,335.5,13.3,245,36.3
+2026-09-17,Synergy Ocean Maritime Inc.,Registered,320.9,16.9,250,36.1
+2026-09-24,Synergy Ocean Maritime Inc.,Registered,331.7,33.3,264,38.9
+2026-10-01,Synergy Ocean Maritime Inc.,Registered,311.1,33.8,272,38.9
+2026-10-08,Synergy Ocean Maritime Inc.,Registered,296.1,37.2,280,39.2
+2026-10-15,Synergy Ocean Maritime Inc.,Registered,234.5,37.2,281,40.0
+2026-10-22,Synergy Ocean Maritime Inc.,Registered,218.0,49.2,283,39.4
+2026-10-29,Synergy Ocean Maritime Inc.,Registered,346.6,50.7,293,41.4
+2026-11-05,Synergy Ocean Maritime Inc.,Registered,298.9,60.0,303,43.7
 2026-08-13,Synergy Ocean Maritime Inc.,Engaged,269.1,16.9,195,33.8
 2026-08-20,Synergy Ocean Maritime Inc.,Engaged,492.3,17.5,207,34.8
 2026-08-27,Synergy Ocean Maritime Inc.,Engaged,459.2,24.7,223,38.6
@@ -1223,17 +1223,17 @@ date,doc,population,mean_pct,median_pct,assessable,ok_pct
 2026-11-05,Synergy Pacific Private Limited,All onboard,116.6,16.9,2268,21.3
 2026-08-13,Synergy Pacific Private Limited,Registered,178.7,8.4,1780,20.3
 2026-08-20,Synergy Pacific Private Limited,Registered,188.3,9.6,1805,20.9
-2026-08-27,Synergy Pacific Private Limited,Registered,179.2,10.4,1817,20.9
-2026-09-03,Synergy Pacific Private Limited,Registered,204.9,14.0,1850,22.1
-2026-09-10,Synergy Pacific Private Limited,Registered,173.8,14.6,1860,22.3
-2026-09-17,Synergy Pacific Private Limited,Registered,192.4,13.0,1883,22.5
-2026-09-24,Synergy Pacific Private Limited,Registered,177.0,14.0,1913,23.4
+2026-08-27,Synergy Pacific Private Limited,Registered,179.1,10.4,1817,20.9
+2026-09-03,Synergy Pacific Private Limited,Registered,204.8,14.0,1850,22.1
+2026-09-10,Synergy Pacific Private Limited,Registered,173.8,14.5,1860,22.3
+2026-09-17,Synergy Pacific Private Limited,Registered,192.3,13.0,1883,22.5
+2026-09-24,Synergy Pacific Private Limited,Registered,176.9,13.9,1913,23.4
 2026-10-01,Synergy Pacific Private Limited,Registered,178.0,16.9,1992,27.0
 2026-10-08,Synergy Pacific Private Limited,Registered,159.9,16.9,2023,27.0
-2026-10-15,Synergy Pacific Private Limited,Registered,141.3,17.1,2036,24.1
-2026-10-22,Synergy Pacific Private Limited,Registered,142.3,17.3,2068,23.6
-2026-10-29,Synergy Pacific Private Limited,Registered,147.3,23.0,2116,24.8
-2026-11-05,Synergy Pacific Private Limited,Registered,141.4,33.8,2155,25.9
+2026-10-15,Synergy Pacific Private Limited,Registered,141.2,17.1,2036,24.0
+2026-10-22,Synergy Pacific Private Limited,Registered,142.2,17.3,2068,23.6
+2026-10-29,Synergy Pacific Private Limited,Registered,147.2,22.9,2116,24.8
+2026-11-05,Synergy Pacific Private Limited,Registered,141.3,33.4,2155,25.9
 2026-08-13,Synergy Pacific Private Limited,Engaged,223.6,18.4,1893,25.7
 2026-08-20,Synergy Pacific Private Limited,Engaged,232.5,19.7,1918,26.1
 2026-08-27,Synergy Pacific Private Limited,Engaged,219.9,20.4,1930,25.9
@@ -1274,18 +1274,18 @@ date,doc,population,mean_pct,median_pct,assessable,ok_pct
 2026-10-29,Synergy Ship Arabia Inspection Company LLC,All onboard,7.3,0.0,22,1.4
 2026-11-05,Synergy Ship Arabia Inspection Company LLC,All onboard,41.2,0.0,33,2.3
 2026-08-13,Synergy Ship Arabia Inspection Company LLC,Registered,0.0,0.0,0,0.0
-2026-08-20,Synergy Ship Arabia Inspection Company LLC,Registered,30.4,0.0,1,2.0
-2026-08-27,Synergy Ship Arabia Inspection Company LLC,Registered,65.8,0.0,10,20.0
-2026-09-03,Synergy Ship Arabia Inspection Company LLC,Registered,25.3,0.0,10,20.0
-2026-09-10,Synergy Ship Arabia Inspection Company LLC,Registered,19.0,0.0,10,16.0
-2026-09-17,Synergy Ship Arabia Inspection Company LLC,Registered,18.3,0.0,10,16.0
-2026-09-24,Synergy Ship Arabia Inspection Company LLC,Registered,17.8,0.0,10,16.0
-2026-10-01,Synergy Ship Arabia Inspection Company LLC,Registered,17.5,0.0,10,16.0
-2026-10-08,Synergy Ship Arabia Inspection Company LLC,Registered,17.3,0.0,10,16.0
-2026-10-15,Synergy Ship Arabia Inspection Company LLC,Registered,157.8,0.0,15,8.0
-2026-10-22,Synergy Ship Arabia Inspection Company LLC,Registered,73.4,0.0,20,12.0
-2026-10-29,Synergy Ship Arabia Inspection Company LLC,Registered,74.7,0.0,22,14.0
-2026-11-05,Synergy Ship Arabia Inspection Company LLC,Registered,424.7,0.0,33,24.0
+2026-08-20,Synergy Ship Arabia Inspection Company LLC,Registered,27.2,0.0,1,1.8
+2026-08-27,Synergy Ship Arabia Inspection Company LLC,Registered,58.7,0.0,10,17.9
+2026-09-03,Synergy Ship Arabia Inspection Company LLC,Registered,22.6,0.0,10,17.9
+2026-09-10,Synergy Ship Arabia Inspection Company LLC,Registered,17.0,0.0,10,14.3
+2026-09-17,Synergy Ship Arabia Inspection Company LLC,Registered,16.3,0.0,10,14.3
+2026-09-24,Synergy Ship Arabia Inspection Company LLC,Registered,15.9,0.0,10,14.3
+2026-10-01,Synergy Ship Arabia Inspection Company LLC,Registered,15.6,0.0,10,14.3
+2026-10-08,Synergy Ship Arabia Inspection Company LLC,Registered,15.4,0.0,10,14.3
+2026-10-15,Synergy Ship Arabia Inspection Company LLC,Registered,140.9,0.0,15,7.1
+2026-10-22,Synergy Ship Arabia Inspection Company LLC,Registered,65.5,0.0,20,10.7
+2026-10-29,Synergy Ship Arabia Inspection Company LLC,Registered,66.7,0.0,22,12.5
+2026-11-05,Synergy Ship Arabia Inspection Company LLC,Registered,379.2,0.0,33,21.4
 2026-08-20,Synergy Ship Arabia Inspection Company LLC,Engaged,1521.9,1521.9,1,100.0
 2026-08-27,Synergy Ship Arabia Inspection Company LLC,Engaged,328.8,253.6,10,100.0
 2026-09-03,Synergy Ship Arabia Inspection Company LLC,Engaged,126.5,117.1,10,100.0
