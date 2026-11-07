@@ -42,11 +42,11 @@ Fluyt Maritime Private Limited,Barrier Management,1
 Fluyt Maritime Private Limited,Safety Officer Course,1
 Fluyt Maritime Private Limited,HAZMAT (Hazardous Materials),1
 Fluyt Maritime Private Limited,Third Officer - Inspection Training Programme,1
+Fluyt Maritime Private Limited,Impact of Alcohol Consumption and Drug Misuse,1
 Fluyt Maritime Private Limited,Cargo Securing and Solid Bulk Cargoes,1
 Fluyt Maritime Private Limited,Emergency Operation of Hatch Covers,1
 Fluyt Maritime Private Limited,MARPOL Annex I,1
 Fluyt Maritime Private Limited,Safe Handling and Transport of Solid Bulk Cargoes,1
-Fluyt Maritime Private Limited,Incidents While Rigging Pilot Ladder,1
 Genco-Synergy Bulk Carriers Pvt Ltd,MARPOL Annex I,99
 Genco-Synergy Bulk Carriers Pvt Ltd,Enclosed Space Entry -2026,92
 Genco-Synergy Bulk Carriers Pvt Ltd,Injuries from Inhalation of Hydrocarbons and Chemicals,68
@@ -58,7 +58,7 @@ Genco-Synergy Bulk Carriers Pvt Ltd,Black Out – Causes,52
 Genco-Synergy Bulk Carriers Pvt Ltd,Incidents While Rigging Pilot Ladder,44
 Genco-Synergy Bulk Carriers Pvt Ltd,Burn Injuries,39
 Genco-Synergy Bulk Carriers Pvt Ltd,Free Fall Life Boat - Release And Recovery Procedures,39
-Genco-Synergy Bulk Carriers Pvt Ltd,"Prevention of Slip, Trip, Fall",38
+Genco-Synergy Bulk Carriers Pvt Ltd,Safe Handling and Transport of Solid Bulk Cargoes,38
 Genco-Synergy Pvt Ltd,Enclosed Space Entry -2026,42
 Genco-Synergy Pvt Ltd,MARPOL Annex I,33
 Genco-Synergy Pvt Ltd,Barrier Management,28
@@ -71,18 +71,18 @@ Genco-Synergy Pvt Ltd,Black Out – Causes,18
 Genco-Synergy Pvt Ltd,Prohibited Conduct,18
 Genco-Synergy Pvt Ltd,Burn Injuries,17
 Genco-Synergy Pvt Ltd,Near Miss - Main Engine Slow Down,16
-General Ship Management Pte. Ltd.,MARPOL Annex I,6
 General Ship Management Pte. Ltd.,Crew Works - Management,6
 General Ship Management Pte. Ltd.,Enclosed Space Entry -2026,6
+General Ship Management Pte. Ltd.,MARPOL Annex I,6
 General Ship Management Pte. Ltd.,Nitrogen - The Silent Killer,6
 General Ship Management Pte. Ltd.,Injuries from Inhalation of Hydrocarbons and Chemicals,6
 General Ship Management Pte. Ltd.,Black Out – Causes,5
 General Ship Management Pte. Ltd.,Barrier Management,5
 General Ship Management Pte. Ltd.,Electric Shock Injuries,5
+General Ship Management Pte. Ltd.,Burn Injuries,4
 General Ship Management Pte. Ltd.,Crew works - Operation,4
 General Ship Management Pte. Ltd.,Near Miss - Main Engine Slow Down,4
 General Ship Management Pte. Ltd.,Response to Injuries,4
-General Ship Management Pte. Ltd.,Maintenance of Lifeboat,4
 P.T Synergy Marine Indonesia,Nitrogen - The Silent Killer,12
 P.T Synergy Marine Indonesia,Enclosed Space Entry -2026,11
 P.T Synergy Marine Indonesia,MARPOL Annex I,10
@@ -128,9 +128,9 @@ Synergy Korea Co Ltd,Contractor Familiarization,7
 Synergy Korea Co Ltd,"Dangerous, Hazardous and Harmful Cargoes",6
 Synergy Korea Co Ltd,Incidents While Rigging Pilot Ladder,5
 Synergy Korea Co Ltd,Barrier Management,5
-Synergy Korea Co Ltd,Black Out – Causes,5
 Synergy Korea Co Ltd,Emergency Operation of Hatch Covers,5
 Synergy Korea Co Ltd,Spectrometer,5
+Synergy Korea Co Ltd,Black Out – Causes,5
 Synergy Marine (Singapore) pre ltd,Enclosed Space Entry -2026,6
 Synergy Marine (Singapore) pre ltd,Barrier Management,5
 Synergy Marine (Singapore) pre ltd,Injuries from Inhalation of Hydrocarbons and Chemicals,5
@@ -177,8 +177,8 @@ Synergy Marine Germany GmbH,Crew Works - Management,12
 Synergy Marine Germany GmbH,Crew works - Operation,11
 Synergy Marine Germany GmbH,Barrier Management,10
 Synergy Marine Germany GmbH,Contractor Familiarization,9
-Synergy Marine Germany GmbH,Black Out – Causes,8
 Synergy Marine Germany GmbH,Daily Work Plan and Toolbox Meetings,8
+Synergy Marine Germany GmbH,Incidents While Rigging Pilot Ladder,8
 Synergy Marine Shanghai Limited,Emergency Operation of Hatch Covers,9
 Synergy Marine Shanghai Limited,Barrier Management,8
 Synergy Marine Shanghai Limited,Near Miss - Main Engine Slow Down,8
@@ -231,18 +231,18 @@ Synergy Navis marine Private Limited,Nitrogen - The Silent Killer,93
 Synergy Navis marine Private Limited,Enclosed Space Entry -2026,90
 Synergy Navis marine Private Limited,Injuries from Inhalation of Hydrocarbons and Chemicals,68
 Synergy Navis marine Private Limited,MARPOL Annex I,64
-Synergy Navis marine Private Limited,Crew works - Operation,53
 Synergy Navis marine Private Limited,Crew Works - Management,53
+Synergy Navis marine Private Limited,Crew works - Operation,53
 Synergy Navis marine Private Limited,Ship to Ship Operation – Tankers,43
 Synergy Navis marine Private Limited,Barrier Management,42
 Synergy Navis marine Private Limited,Black Out – Causes,40
 Synergy Navis marine Private Limited,Prohibited Conduct,33
-Synergy Navis marine Private Limited,Incidents While Rigging Pilot Ladder,30
 Synergy Navis marine Private Limited,Daily Work Plan and Toolbox Meetings,30
+Synergy Navis marine Private Limited,Incidents While Rigging Pilot Ladder,30
 Synergy Ocean Maritime Inc.,Crew Works - Management,108
 Synergy Ocean Maritime Inc.,Injuries from Inhalation of Hydrocarbons and Chemicals,107
-Synergy Ocean Maritime Inc.,Enclosed Space Entry -2026,94
 Synergy Ocean Maritime Inc.,Emergency Operation of Hatch Covers,94
+Synergy Ocean Maritime Inc.,Enclosed Space Entry -2026,94
 Synergy Ocean Maritime Inc.,MARPOL Annex I,92
 Synergy Ocean Maritime Inc.,Crew works - Operation,85
 Synergy Ocean Maritime Inc.,Cargo Securing and Solid Bulk Cargoes,67
@@ -268,8 +268,8 @@ Synergy Onyx Marine Pvt Ltd,Enclosed Space Entry -2026,35
 Synergy Onyx Marine Pvt Ltd,Injuries from Inhalation of Hydrocarbons and Chemicals,30
 Synergy Onyx Marine Pvt Ltd,Crew works - Operation,26
 Synergy Onyx Marine Pvt Ltd,"Dangerous, Hazardous and Harmful Cargoes",25
-Synergy Onyx Marine Pvt Ltd,Crew Works - Management,24
 Synergy Onyx Marine Pvt Ltd,Incidents While Rigging Pilot Ladder,24
+Synergy Onyx Marine Pvt Ltd,Crew Works - Management,24
 Synergy Onyx Marine Pvt Ltd,Prohibited Conduct,23
 Synergy Onyx Marine Pvt Ltd,Emergency Operation of Hatch Covers,20
 Synergy Onyx Marine Pvt Ltd,"Prevention of Slip, Trip, Fall",19
@@ -293,15 +293,15 @@ Synergy Ship Arabia Inspection Company LLC,Contractor Familiarization,11
 Synergy Ship Arabia Inspection Company LLC,Prohibited Conduct,9
 Synergy Ship Arabia Inspection Company LLC,Working with Tugs,7
 Synergy Ship Arabia Inspection Company LLC,Maintenance of Lifeboat,5
-Synergy Ship Arabia Inspection Company LLC,Enclosed life Boat - On Load Release Gear System,4
 Synergy Ship Arabia Inspection Company LLC,Social Media at Sea,4
+Synergy Ship Arabia Inspection Company LLC,Enclosed life Boat - On Load Release Gear System,4
 Synergy Ship Arabia Inspection Company LLC,Crew works - Operation,4
-Synergy Ship Arabia Inspection Company LLC,An Introduction to Lifeboat Release and Retrieval Systems,3
+Synergy Ship Arabia Inspection Company LLC,Safety in Welding,3
 Synergy Ship Arabia Inspection Company LLC,COLREGS - Rule 15 Crossing Situation,3
-Synergy Ship Arabia Inspection Company LLC,"Synergy - Diversity, Equity and Inclusivity",3
+Synergy Ship Arabia Inspection Company LLC,Grounding During Manoeuvre,3
 Wisdom Synergy Shipmanagement Pte Ltd,Emergency Operation of Hatch Covers,9
-Wisdom Synergy Shipmanagement Pte Ltd,Crew Works - Management,8
 Wisdom Synergy Shipmanagement Pte Ltd,MARPOL Annex I,8
+Wisdom Synergy Shipmanagement Pte Ltd,Crew Works - Management,8
 Wisdom Synergy Shipmanagement Pte Ltd,Enclosed Space Entry -2026,6
 Wisdom Synergy Shipmanagement Pte Ltd,Safe Handling and Transport of Solid Bulk Cargoes,6
 Wisdom Synergy Shipmanagement Pte Ltd,Injuries from Inhalation of Hydrocarbons and Chemicals,6
@@ -309,5 +309,5 @@ Wisdom Synergy Shipmanagement Pte Ltd,Cargo Securing and Solid Bulk Cargoes,6
 Wisdom Synergy Shipmanagement Pte Ltd,"Synergy - Diversity, Equity and Inclusivity",5
 Wisdom Synergy Shipmanagement Pte Ltd,Prohibited Conduct,5
 Wisdom Synergy Shipmanagement Pte Ltd,Daily Work Plan and Toolbox Meetings,4
+Wisdom Synergy Shipmanagement Pte Ltd,Crew works - Operation,4
 Wisdom Synergy Shipmanagement Pte Ltd,Barrier Management,4
-Wisdom Synergy Shipmanagement Pte Ltd,iBulk,4

@@ -420,6 +420,15 @@ html,body{background:var(--page);color:var(--color-fg)}
   const cache = {};
   const get = (f) => cache[f] || (cache[f] = fetch('data/' + f + '?v=' + V, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(f + ' ' + r.status); return r.text(); })
     .then((t) => f.endsWith('.json') ? JSON.parse(t) : d3.csvParse(t)));
+  // shipboard rank hierarchy (same as the dashboard); same rank -> earliest engagement first
+  const RANK_ORDER = ['Master', 'Chief Officer', 'Second Officer', 'Third Officer', 'Junior Third Officer', 'Radio Officer / Radio Operator', 'Deck Cadet',
+    'Chief Engineer', 'Second Engineer', 'Third Engineer', 'Fourth Engineer', 'Junior Fourth Engineer', 'Gas Engineer', 'Engine Cadet',
+    'Electrical Officer', 'Electro Technical Officer', 'Trainee Electrical Officer', 'Electrical Cadet', 'Electro Technical Rating',
+    'Bosun', 'Pumpman', 'Able Bodied Seaman', 'Ordinary Seaman', 'Trainee Seaman', 'Crane Operator', 'H2S Technician',
+    'Fitter', 'Mechanic', 'Trainee Fitter', 'Motorman', 'Oiler', 'Wiper', 'Trainee Wiper',
+    'Chief Cook', 'Messman', 'General Steward', 'Trainee General Steward'];
+  const RIDX = new Map(RANK_ORDER.map((r, i) => [r.toLowerCase(), i]));
+  const rankKey = (p) => { const i = RIDX.get(String(p.rank || '').trim().toLowerCase()); return String(i ?? 999).padStart(3, '0') + (i == null ? String(p.rank || '') : '') + '|' + (p.engaged_on || '9999-99-99') + '|' + (p.name || ''); };
   const NUM = ['c_n', 'c_ever', 'c_ok', 'c_exp', 'c_d30', 'c_d60', 'c_d90', 'c_miss', 'c_prev', 'r_n', 'r_done', 'r_ok', 'r_exp', 'r_d30', 'r_d60', 'r_d90', 'r_miss', 'r_prev'];
 
   // ---------- downloads ----------
@@ -496,7 +505,7 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
   // cols: {h, k, f (display), cls, v (sort/export value), w (wrap)}
   function table(tbl, cols, rows, o = {}) {
     const sig = cols.map((c) => c.h).join('|');
-    if (tbl._sig !== sig) { tbl._sig = sig; tbl._sort = null; }
+    if (tbl._sig !== sig || tbl._sk !== o.sortK) { tbl._sig = sig; tbl._sk = o.sortK; tbl._sort = null; }
     const st = tbl._sort || (tbl._sort = { k: o.sortK ?? null, d: o.sortD ?? -1 });
     const val = (c, r) => c.v ? c.v(r) : r[c.k];
     let rs = rows;
@@ -651,7 +660,7 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
       cert: [...CREW, N('Valid or no expiry', 'ok'), N('Expired', 'exp'), N('Due ≤30 days', 'd30'), N('Due 31–60', 'd60'), N('Due 61–90', 'd90'), N('Not yet done', 'miss'), N('Previous-provider records', 'prev')],
       act: [...CREW, N('Registered', 'reg'), N('Login ≤7 days', 'L7'), N('8–30 days', 'L30'), N('31–90 days', 'L90'), N('Over 90 days', 'Lold'), N('App users', 'app'), PC('App use', 'appPct')],
     };
-    const PBASE = [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 }, { h: 'Category', k: 'category', num: false }, { h: 'Registered', k: 'registered', num: false }];
+    const PBASE = [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false, v: rankKey, x: (r) => r.rank }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 }, { h: 'Category', k: 'category', num: false }, { h: 'Registered', k: 'registered', num: false }, { h: 'Engaged on', k: 'engaged_on', num: false, f: (r) => fmtD(r.engaged_on), x: (r) => r.engaged_on }];
     const PCOL = {
       comp: [{ h: 'Compulsory', k: 'c_n', cls: 'num' }, { h: 'Done', k: 'c_ever', cls: 'num' }, { h: 'Up to date', k: 'c_ok', cls: 'num' },
         { h: 'Up to date %', k: 'okp', cls: 'num', v: (r) => share(r.c_ok, r.c_n), f: (r) => pct0(share(r.c_ok, r.c_n)) },
@@ -752,7 +761,7 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
         view = { title: `${TITLE[TAB]} by ${lab}${f.length ? ' · ' + f.join(' · ') : ''}`, tbl };
       } else {
         crumbs.replaceChildren(...crumbsFor(L));
-        const n = table(tbl, [...PBASE, ...PCOL[TAB]], rows, { click: (r) => { S.person = r; syncPop(); render(); }, limit: 2000, sortK: TAB === 'cert' ? 'c_exp' : TAB === 'act' ? 'last_login' : 'c_miss' });
+        const n = table(tbl, [...PBASE, ...PCOL[TAB]], rows, { click: (r) => { S.person = r; syncPop(); render(); }, limit: 2000, sortK: S.ves ? 'rank' : TAB === 'cert' ? 'c_exp' : TAB === 'act' ? 'last_login' : 'c_miss', sortD: S.ves ? 1 : -1 });
         $('.p-note').textContent = `${int(n)} people${n > 2000 ? ' (first 2,000 shown; the download has all)' : ''}. Click a person for their course list. Counting ${cnt}.`;
         view = { title: `${f.join(' · ') || 'All'} · ${TITLE[TAB]}`, tbl };
       }
@@ -855,9 +864,9 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
       const top = d3.rollups(d, (v) => v.length, (r) => r.course).map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n).slice(0, 15);
       if (dst.value) d = d.filter((r) => r.status === dst.value);
       $('[data-dx="0"]').toggleAttribute('data-off', !dst.value);
-      const n = table($('.d-tbl'), [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 },
+      const n = table($('.d-tbl'), [{ h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false, v: (r) => rankKey(byId.get(r.employee_id) || r) + '|' + r.course, x: (r) => r.rank }, { h: 'Vessel', k: 'vessel', num: false, w: 1 }, { h: 'DoC', k: 'doc', num: false, w: 1 },
         { h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Type', k: 'type', num: false }, { h: 'Status', k: 'status', num: false, f: (r) => chip(r.status, r.status === 'Expired' ? 'x' : '1') }, { h: 'Last completed', k: 'last_completed', f: (r) => fmtD(r.last_completed), x: (r) => r.last_completed },
-        { h: 'Expires', k: 'expires', f: (r) => fmtD(r.expires), x: (r) => r.expires }, { h: 'Source', k: 'source', num: false }], d, { limit: 1000, sortK: 'expires', sortD: 1 });
+        { h: 'Expires', k: 'expires', f: (r) => fmtD(r.expires), x: (r) => r.expires }, { h: 'Source', k: 'source', num: false }], d, { limit: 1000, sortK: S.ves ? 'rank' : 'expires', sortD: 1 });
       $('.d-note').textContent = `${int(n)} certificate${n === 1 ? '' : 's'}${n > 1000 ? ' (first 1,000 shown; the download has all)' : ''}, for the filters and the row you opened above.`;
       dueView = { title: `Due and expired ${CTL()} certificates`, tbl: $('.d-tbl') };
       bars($('.t-chart'), top, { aria: 'Courses with the most expired or due certificates', color: 'var(--color-bad)' });

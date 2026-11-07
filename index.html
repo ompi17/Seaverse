@@ -213,8 +213,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <div class="gauges g3">
       <div class="kpi gauge" id="g-fleet"><div class="lab lx-glab">Fleet compliance</div><div class="gw lx-g" data-g="mean"></div><div class="val lx-k lx-gv" data-source="docs" data-field="mean_pct" data-fmt="pct">—</div>
         <div class="sub"><span class="lx-k" data-source="docs" data-field="per_month" data-fmt="dec">—</span> courses per person per month vs 2.00 target · <span class="lx-delta"></span></div></div>
-      <div class="kpi gauge" id="g-docs"><div class="lab">DoCs on target</div><div class="gw lx-g" data-g="docs"></div><div class="val lx-gv"><span class="lx-k" data-source="docs" data-field="docs_on_target" data-fmt="int">—</span> / <span class="lx-k" data-source="docs" data-field="docs_assessable" data-fmt="int">—</span></div><div class="sub">DoCs averaging 100% or more</div></div>
-      <div class="kpi gauge" id="g-ves"><div class="lab">Vessels on target</div><div class="gw lx-g" data-g="ves"></div><div class="val lx-gv"><span class="lx-k" data-source="docs" data-field="v_on_target" data-fmt="int">—</span> / <span class="lx-k" data-source="docs" data-field="v_assessable" data-fmt="int">—</span></div><div class="sub">Vessels with assessable crew averaging 100%+</div></div>
+      <div class="kpi gauge" id="g-docs"><div class="lab">DoCs on target</div><div class="gw lx-g" data-g="docs"></div><div class="val lx-gv"><span class="lx-k" data-source="docs" data-field="docs_on_target" data-fmt="int">—</span> / <span class="lx-k" data-source="docs" data-field="docs_total" data-fmt="int">—</span></div><div class="sub">DoCs averaging 100% or more, of all DoCs</div></div>
+      <div class="kpi gauge" id="g-ves"><div class="lab">Vessels on target</div><div class="gw lx-g" data-g="ves"></div><div class="val lx-gv"><span class="lx-k" data-source="docs" data-field="v_on_target" data-fmt="int">—</span> / <span class="lx-k" data-source="docs" data-field="vessels" data-fmt="int">—</span></div><div class="sub">Vessels whose crew average 100%+, of all vessels</div></div>
     </div>
     <div class="bands" id="bands" style="margin-top:var(--cds-gap-md)">
       <div class="band b-on"><b class="lx-k" data-source="docs" data-field="b_on" data-fmt="int">—</b><span>On target</span><small>≥ 100%</small></div>
@@ -538,6 +538,22 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   const enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D');
   const key2 = (a, b) => [a, b].map((s) => enc(s).replace(/,/g, '%2C')).join(',');
   window.SV = { ALL, num, F, enc, key2 };
+  // shipboard rank hierarchy: deck officers, engine officers, electrical, deck ratings, engine ratings, catering; same rank -> earliest engagement first
+  const RANK_ORDER = ['Master', 'Chief Officer', 'Second Officer', 'Third Officer', 'Junior Third Officer', 'Radio Officer / Radio Operator', 'Deck Cadet',
+    'Chief Engineer', 'Second Engineer', 'Third Engineer', 'Fourth Engineer', 'Junior Fourth Engineer', 'Gas Engineer', 'Engine Cadet',
+    'Electrical Officer', 'Electro Technical Officer', 'Trainee Electrical Officer', 'Electrical Cadet', 'Electro Technical Rating',
+    'Bosun', 'Pumpman', 'Able Bodied Seaman', 'Ordinary Seaman', 'Trainee Seaman', 'Crane Operator', 'H2S Technician',
+    'Fitter', 'Mechanic', 'Trainee Fitter', 'Motorman', 'Oiler', 'Wiper', 'Trainee Wiper',
+    'Chief Cook', 'Messman', 'General Steward', 'Trainee General Steward'];
+  const RIDX = new Map(RANK_ORDER.map((r, i) => [r.toLowerCase(), i]));
+  const rankIdx = (r) => RIDX.get(String(r || '').trim().toLowerCase()) ?? 999;
+  window.SV.rankCmp = (a, b) => {
+    const x = rankIdx(a.rank), y = rankIdx(b.rank);
+    if (x !== y) return x - y;
+    if (x === 999) { const c = String(a.rank || '').localeCompare(String(b.rank || '')); if (c) return c; }
+    const ea = a.engaged_on || '9999-99-99', eb = b.engaged_on || '9999-99-99';
+    return ea < eb ? -1 : ea > eb ? 1 : String(a.name || '').localeCompare(String(b.name || ''));
+  };
   window.SV.DEFPOP = 'Registered';   // page-level default when the dashboard opens
   window.SV.TBLPOP = 'All onboard';  // default once a table is drilled down to personnel level
   // Drill-down rule: entering a personnel-level list switches counting to All onboard; going back up restores the
@@ -729,8 +745,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     const val = (k) => row ? num(row[k]) : null;
     const frac = {
       mean: [val('mean_pct') == null ? 0 : val('mean_pct') / 100, val('mean_pct')],
-      docs: [val('docs_assessable') ? val('docs_on_target') / val('docs_assessable') : 0, val('docs_assessable') ? val('docs_on_target') / val('docs_assessable') * 100 : null],
-      ves: [val('v_assessable') ? val('v_on_target') / val('v_assessable') : 0, val('v_assessable') ? val('v_on_target') / val('v_assessable') * 100 : null],
+      docs: [val('docs_total') ? val('docs_on_target') / val('docs_total') : 0, val('docs_total') ? val('docs_on_target') / val('docs_total') * 100 : null],
+      ves: [val('vessels') ? val('v_on_target') / val('vessels') : 0, val('vessels') ? val('v_on_target') / val('vessels') * 100 : null],
       crew: [val('ok_pct') == null ? 0 : val('ok_pct') / 100, val('ok_pct')],
     };
     document.querySelectorAll('.lx-g').forEach((box) => {
@@ -1237,7 +1253,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     const k = H.sort[0], d = H.sort[1];
     const pk = { name: 'name', comp: 'final_pct' }[k] || (PCOLS.some((c) => c[1] === k) ? k : 'final_pct');
     const isNum = PCOLS.find((c) => c[1] === pk)?.[3];
-    crew = crew.slice().sort((a, b) => { if (!isNum) return String(a[pk] ?? '').localeCompare(String(b[pk] ?? '')) * (pk === 'final_pct' ? -1 : d); const x = num(a[pk]), y = num(b[pk]); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * d; });
+    crew = crew.slice().sort((a, b) => { if (pk === 'rank') return window.SV.rankCmp(a, b) * d; if (!isNum) return String(a[pk] ?? '').localeCompare(String(b[pk] ?? '')) * (pk === 'final_pct' ? -1 : d); const x = num(a[pk]), y = num(b[pk]); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * d; });
     return { S, level, cols: PCOLS, total, rows: crew };
   }
   function drawHier() {
@@ -1270,7 +1286,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (H.person && (Vw.level !== 'vessel' || H.personVessel !== S.vessel)) H.person = null;
     const PP = H.person ? S.people.find((r) => String(r.employee_id) === H.person) : null;
     Vw.person = PP;
-    if (Vw.level !== lastLevel) { if (lastLevel !== null && !(lastLevel === 'fleet' && Vw.level === 'doc')) { H.q = ''; hq.value = ''; } H.sort = Vw.level === 'vessel' ? ['final_pct', -1] : (H.sort[0] === 'final_pct' ? ['comp', -1] : H.sort); lastLevel = Vw.level; }
+    if (Vw.level !== lastLevel) { if (lastLevel !== null && !(lastLevel === 'fleet' && Vw.level === 'doc')) { H.q = ''; hq.value = ''; } H.sort = Vw.level === 'vessel' ? ['rank', 1] : (H.sort[0] === 'final_pct' ? ['comp', -1] : H.sort); lastLevel = Vw.level; }
     hq.placeholder = Vw.level === 'fleet' ? 'Search DoC or vessel' : Vw.level === 'doc' ? 'Search vessel' : 'Search name, ID or rank';
     // breadcrumbs
     const cr = document.querySelector('.lx-hcrumbs');
@@ -1825,7 +1841,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     tq = setTimeout(() => { C.q = v.toLowerCase(); if (C.person && C.auto && v !== C.auto.name) { C.person = null; C.auto = null; } draw(); }, 250); });
   ccat.addEventListener('change', () => { C.cat = ccat.value; C.person = null; C.auto = null; draw(); });
   cdoc.addEventListener('change', () => { C.doc = cdoc.value; C.ves = ''; C.person = null; C.auto = null; draw(); });
-  cves.addEventListener('change', () => { C.ves = cves.value; C.person = null; C.auto = null; const P = people(); if (C.ves && P) { for (const r of P.values()) if (r.vessel === C.ves) { if (r.doc) C.doc = r.doc; break; } } draw(); });
+  cves.addEventListener('change', () => { C.ves = cves.value; C.person = null; C.auto = null; C.sortP = C.ves ? ['rank', 1] : ['status', 1]; const P = people(); if (C.ves && P) { for (const r of P.values()) if (r.vessel === C.ves) { if (r.doc) C.doc = r.doc; break; } } draw(); });
   crank.addEventListener('change', () => { C.rank = crank.value; C.person = null; C.auto = null; draw(); });
   ccourse.addEventListener('change', () => { C.course = ccourse.value === '' ? null : +ccourse.value; C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw(); });
 
@@ -1886,7 +1902,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     const all = rows;
     if (C.q) rows = rows.filter((r) => [r.name, r.employee_id, r.vessel].join(' ').toLowerCase().includes(C.q));
     const [k, d] = C.sortP;
-    rows.sort((x, y) => (k === 'status' ? (ORDER[x.status] - ORDER[y.status]) * d : String(x[k] ?? '').localeCompare(String(y[k] ?? '')) * d) || String(x.name).localeCompare(String(y.name)));
+    rows.sort((x, y) => (k === 'rank' ? window.SV.rankCmp(x.p, y.p) * d : k === 'status' ? (ORDER[x.status] - ORDER[y.status]) * d : String(x[k] ?? '').localeCompare(String(y[k] ?? '')) * d) || String(x.name).localeCompare(String(y.name)));
     const cnt = (l, f) => l.filter(f).length;
     const total = { a: all.length, cp: cnt(all, (r) => r.status.startsWith('Completed')), ip: cnt(all, (r) => r.status === 'In progress') };
     return { ...out, level: 'course', shard, rows, total, title: T.get(C.course) || `Course ${C.course}` };
@@ -2005,7 +2021,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
   const drop = () => { O.person = null; O.auto = null; };
   ostat.addEventListener('change', () => { O.stat = ostat.value; drop(); draw(); });
   odoc.addEventListener('change', () => { O.doc = odoc.value; O.ves = ''; drop(); draw(); });
-  oves.addEventListener('change', () => { O.ves = oves.value; drop(); const r = O.ves && (dash.data('offboard').data || []).find((x) => x.vessel === O.ves); if (r) O.doc = r.doc; draw(); });
+  oves.addEventListener('change', () => { O.ves = oves.value; O.sortR = O.ves ? ['rankh', 1] : ['n', -1]; O.sortP = O.ves ? ['rank', 1] : ['final_pct', -1]; drop(); const r = O.ves && (dash.data('offboard').data || []).find((x) => x.vessel === O.ves); if (r) O.doc = r.doc; draw(); });
   orank.addEventListener('change', () => { O.rank = orank.value; drop(); O.q = ''; oq.value = ''; draw(); });
   oeng.addEventListener('change', () => { window.SV.markUser(); const [t, v] = oeng.value.split(':'); window.SV.clearStage();
     if (t === 'pop') dash.setParams({ pop: v }); else { O.eng = v; dash.setParams({ pop: window.SV.STAGE_POP[v] }); draw(); } });
@@ -2063,14 +2079,14 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
       if (O.q) rows = rows.filter((r) => String(r.name).toLowerCase().includes(O.q));
       const total = oagg(`All ranks (${rows.length})`, rows.flatMap((r) => by.get(r.name)), pop);
       const [k, d] = O.sortR;
-      rows.sort((x, y) => k === 'name' || k === 'status' ? String(x[k]).localeCompare(String(y[k])) * d : (((x[k] ?? -Infinity) > (y[k] ?? -Infinity)) - ((x[k] ?? -Infinity) < (y[k] ?? -Infinity))) * d || String(x.name).localeCompare(String(y.name)));
+      rows.sort((x, y) => k === 'rankh' ? window.SV.rankCmp({ rank: x.name }, { rank: y.name }) : k === 'name' || k === 'status' ? String(x[k]).localeCompare(String(y[k])) * d : (((x[k] ?? -Infinity) > (y[k] ?? -Infinity)) - ((x[k] ?? -Infinity) < (y[k] ?? -Infinity))) * d || String(x.name).localeCompare(String(y.name)));
       return { ...out, level: 'ranks', rows, total };
     }
     let rows = scope.filter((r) => r.rank === O.rank).filter(H().POPF[pop]).map((r) => ({ ...r, pending: (num(r.in_progress) || 0) + (num(r.not_started) || 0) }));
     if (O.q) rows = rows.filter((r) => [r.name, r.employee_id, r.vessel].join(' ').toLowerCase().includes(O.q));
     const [k, d] = O.sortP; const isNum = PCOLS.find((c) => c[1] === k)?.[3];
     const val = (r) => k === 'final_pct' && r.no_target ? null : r[k];
-    rows.sort((a, b) => { if (!isNum) return String(a[k] ?? '').localeCompare(String(b[k] ?? '')) * d; const x = num(val(a)), y = num(val(b)); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * d; });
+    rows.sort((a, b) => { if (k === 'rank') return window.SV.rankCmp(a, b) * d; if (!isNum) return String(a[k] ?? '').localeCompare(String(b[k] ?? '')) * d; const x = num(val(a)), y = num(val(b)); if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (x - y) * d; });
     return { ...out, level: 'rank', rows };
   }
   function kpis(V) {
