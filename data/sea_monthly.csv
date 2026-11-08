@@ -12,19 +12,19 @@ month,doc,population,completions,people,per_person,days
 2026-09,All DoCs,All onboard,17662,12976,1.361,30
 2026-10,All DoCs,All onboard,11066,12976,0.853,31
 2026-11,All DoCs,All onboard,2432,12976,0.187,7
-2025-11,All DoCs,Registered,4419,7765,0.569,30
-2025-12,All DoCs,Registered,4672,7765,0.602,31
-2026-01,All DoCs,Registered,3143,7765,0.405,31
-2026-02,All DoCs,Registered,2623,7765,0.338,28
-2026-03,All DoCs,Registered,8767,7765,1.129,31
-2026-04,All DoCs,Registered,9756,7765,1.256,30
-2026-05,All DoCs,Registered,7104,7765,0.915,31
-2026-06,All DoCs,Registered,11704,7765,1.507,30
-2026-07,All DoCs,Registered,19482,7765,2.509,31
-2026-08,All DoCs,Registered,15381,7765,1.981,31
-2026-09,All DoCs,Registered,17662,7765,2.275,30
-2026-10,All DoCs,Registered,11066,7765,1.425,31
-2026-11,All DoCs,Registered,2432,7765,0.313,7
+2025-11,All DoCs,Registered,4419,7767,0.569,30
+2025-12,All DoCs,Registered,4672,7767,0.602,31
+2026-01,All DoCs,Registered,3143,7767,0.405,31
+2026-02,All DoCs,Registered,2623,7767,0.338,28
+2026-03,All DoCs,Registered,8767,7767,1.129,31
+2026-04,All DoCs,Registered,9756,7767,1.256,30
+2026-05,All DoCs,Registered,7104,7767,0.915,31
+2026-06,All DoCs,Registered,11704,7767,1.507,30
+2026-07,All DoCs,Registered,19482,7767,2.508,31
+2026-08,All DoCs,Registered,15381,7767,1.98,31
+2026-09,All DoCs,Registered,17662,7767,2.274,30
+2026-10,All DoCs,Registered,11066,7767,1.425,31
+2026-11,All DoCs,Registered,2432,7767,0.313,7
 2025-11,All DoCs,Engaged,4419,7599,0.582,30
 2025-12,All DoCs,Engaged,4672,7599,0.615,31
 2026-01,All DoCs,Engaged,3143,7599,0.414,31
@@ -1156,19 +1156,19 @@ month,doc,population,completions,people,per_person,days
 2026-09,Synergy Oceanic Services India Pvt Ltd,All onboard,592,298,1.987,30
 2026-10,Synergy Oceanic Services India Pvt Ltd,All onboard,483,298,1.621,31
 2026-11,Synergy Oceanic Services India Pvt Ltd,All onboard,146,298,0.49,7
-2025-11,Synergy Oceanic Services India Pvt Ltd,Registered,24,190,0.126,30
-2025-12,Synergy Oceanic Services India Pvt Ltd,Registered,30,190,0.158,31
-2026-01,Synergy Oceanic Services India Pvt Ltd,Registered,58,190,0.305,31
-2026-02,Synergy Oceanic Services India Pvt Ltd,Registered,87,190,0.458,28
-2026-03,Synergy Oceanic Services India Pvt Ltd,Registered,89,190,0.468,31
-2026-04,Synergy Oceanic Services India Pvt Ltd,Registered,299,190,1.574,30
-2026-05,Synergy Oceanic Services India Pvt Ltd,Registered,106,190,0.558,31
-2026-06,Synergy Oceanic Services India Pvt Ltd,Registered,294,190,1.547,30
-2026-07,Synergy Oceanic Services India Pvt Ltd,Registered,318,190,1.674,31
-2026-08,Synergy Oceanic Services India Pvt Ltd,Registered,187,190,0.984,31
-2026-09,Synergy Oceanic Services India Pvt Ltd,Registered,592,190,3.116,30
-2026-10,Synergy Oceanic Services India Pvt Ltd,Registered,483,190,2.542,31
-2026-11,Synergy Oceanic Services India Pvt Ltd,Registered,146,190,0.768,7
+2025-11,Synergy Oceanic Services India Pvt Ltd,Registered,24,191,0.126,30
+2025-12,Synergy Oceanic Services India Pvt Ltd,Registered,30,191,0.157,31
+2026-01,Synergy Oceanic Services India Pvt Ltd,Registered,58,191,0.304,31
+2026-02,Synergy Oceanic Services India Pvt Ltd,Registered,87,191,0.455,28
+2026-03,Synergy Oceanic Services India Pvt Ltd,Registered,89,191,0.466,31
+2026-04,Synergy Oceanic Services India Pvt Ltd,Registered,299,191,1.565,30
+2026-05,Synergy Oceanic Services India Pvt Ltd,Registered,106,191,0.555,31
+2026-06,Synergy Oceanic Services India Pvt Ltd,Registered,294,191,1.539,30
+2026-07,Synergy Oceanic Services India Pvt Ltd,Registered,318,191,1.665,31
+2026-08,Synergy Oceanic Services India Pvt Ltd,Registered,187,191,0.979,31
+2026-09,Synergy Oceanic Services India Pvt Ltd,Registered,592,191,3.099,30
+2026-10,Synergy Oceanic Services India Pvt Ltd,Registered,483,191,2.529,31
+2026-11,Synergy Oceanic Services India Pvt Ltd,Registered,146,191,0.764,7
 2025-11,Synergy Oceanic Services India Pvt Ltd,Engaged,24,190,0.126,30
 2025-12,Synergy Oceanic Services India Pvt Ltd,Engaged,30,190,0.158,31
 2026-01,Synergy Oceanic Services India Pvt Ltd,Engaged,58,190,0.305,31
@@ -1312,19 +1312,19 @@ month,doc,population,completions,people,per_person,days
 2026-09,Synergy Ship Arabia Inspection Company LLC,All onboard,0,515,0.0,30
 2026-10,Synergy Ship Arabia Inspection Company LLC,All onboard,25,515,0.049,31
 2026-11,Synergy Ship Arabia Inspection Company LLC,All onboard,91,515,0.177,7
-2025-11,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,30
-2025-12,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,31
-2026-01,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,31
-2026-02,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,28
-2026-03,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,31
-2026-04,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,30
-2026-05,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,31
-2026-06,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,30
-2026-07,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,31
-2026-08,Synergy Ship Arabia Inspection Company LLC,Registered,10,64,0.156,31
-2026-09,Synergy Ship Arabia Inspection Company LLC,Registered,0,64,0.0,30
-2026-10,Synergy Ship Arabia Inspection Company LLC,Registered,25,64,0.391,31
-2026-11,Synergy Ship Arabia Inspection Company LLC,Registered,91,64,1.422,7
+2025-11,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,30
+2025-12,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,31
+2026-01,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,31
+2026-02,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,28
+2026-03,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,31
+2026-04,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,30
+2026-05,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,31
+2026-06,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,30
+2026-07,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,31
+2026-08,Synergy Ship Arabia Inspection Company LLC,Registered,10,65,0.154,31
+2026-09,Synergy Ship Arabia Inspection Company LLC,Registered,0,65,0.0,30
+2026-10,Synergy Ship Arabia Inspection Company LLC,Registered,25,65,0.385,31
+2026-11,Synergy Ship Arabia Inspection Company LLC,Registered,91,65,1.4,7
 2025-11,Synergy Ship Arabia Inspection Company LLC,Engaged,0,45,0.0,30
 2025-12,Synergy Ship Arabia Inspection Company LLC,Engaged,0,45,0.0,31
 2026-01,Synergy Ship Arabia Inspection Company LLC,Engaged,0,45,0.0,31

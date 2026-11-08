@@ -7,9 +7,9 @@ Fast Support Intrevention Vessel,All DoCs,All onboard,17,52.9,17,7,805.7,0.0,7,4
 Gas Carrier,All DoCs,All onboard,859,73.7,859,635,96.8,5.1,147,17.1,0.26,1.11,2819,589
 Offshore Work / Support Vessel,All DoCs,All onboard,163,1.8,163,2,21.3,0.0,1,0.6,0.01,0.03,16,162
 Oil Tanker,All DoCs,All onboard,1038,55.1,1038,573,65.3,0.8,108,10.4,0.22,0.94,2871,825
-Self-Propelled Jack-Up Barge,All DoCs,All onboard,196,23.5,196,32,154.7,0.0,15,7.7,0.04,0.16,90,169
+Self-Propelled Jack-Up Barge,All DoCs,All onboard,196,24.0,196,32,154.7,0.0,15,7.7,0.04,0.16,90,169
 Voith Mooring Tug,All DoCs,All onboard,20,10.0,20,1,6.1,0.0,1,5.0,0.01,0.03,2,19
-Bulk Carrier,All DoCs,Registered,5438,52.7,2867,2475,158.5,16.0,704,24.6,0.48,2.08,17668,1720
+Bulk Carrier,All DoCs,Registered,5438,52.7,2868,2475,158.4,16.0,704,24.5,0.48,2.08,17668,1721
 Chemical/Oil Tanker,All DoCs,Registered,4116,69.7,2870,2605,117.4,21.2,641,22.3,0.4,1.74,14752,1347
 Container,All DoCs,Registered,1010,75.1,759,654,148.5,16.9,195,25.7,0.48,2.09,4695,453
 Crew Boat,All DoCs,Registered,119,3.4,4,3,0.0,0.0,0,0.0,0.0,0.0,0,4
@@ -17,7 +17,7 @@ Fast Support Intrevention Vessel,All DoCs,Registered,17,52.9,9,7,1521.9,1521.9,7
 Gas Carrier,All DoCs,Registered,859,73.7,633,572,130.9,16.9,147,23.2,0.35,1.51,2819,363
 Offshore Work / Support Vessel,All DoCs,Registered,163,1.8,3,2,1159.5,0.0,1,33.3,0.41,1.8,16,2
 Oil Tanker,All DoCs,Registered,1038,55.1,572,497,117.7,12.3,108,18.9,0.39,1.7,2871,359
-Self-Propelled Jack-Up Barge,All DoCs,Registered,196,23.5,46,32,659.2,19.5,15,32.6,0.15,0.66,90,19
+Self-Propelled Jack-Up Barge,All DoCs,Registered,196,24.0,47,32,645.2,19.5,15,31.9,0.15,0.65,90,20
 Voith Mooring Tug,All DoCs,Registered,20,10.0,2,1,60.9,60.9,1,50.0,0.08,0.34,2,1
 Bulk Carrier,All DoCs,Engaged,5438,52.7,2823,2823,161.6,16.9,704,24.9,0.49,2.12,17668,1676
 Chemical/Oil Tanker,All DoCs,Engaged,4116,69.7,2827,2827,119.5,23.2,641,22.7,0.41,1.76,14752,1304
@@ -27,7 +27,7 @@ Fast Support Intrevention Vessel,All DoCs,Engaged,17,52.9,7,7,1956.7,1521.9,7,10
 Gas Carrier,All DoCs,Engaged,859,73.7,635,635,130.9,16.9,147,23.1,0.35,1.5,2819,365
 Offshore Work / Support Vessel,All DoCs,Engaged,163,1.8,2,2,1739.3,1739.3,1,50.0,0.62,2.71,16,1
 Oil Tanker,All DoCs,Engaged,1038,55.1,573,573,118.3,14.0,108,18.8,0.39,1.69,2871,360
-Self-Propelled Jack-Up Barge,All DoCs,Engaged,196,23.5,32,32,947.6,64.8,15,46.9,0.22,0.95,90,5
+Self-Propelled Jack-Up Barge,All DoCs,Engaged,196,24.0,32,32,947.6,64.8,15,46.9,0.22,0.95,90,5
 Voith Mooring Tug,All DoCs,Engaged,20,10.0,1,1,121.8,121.8,1,100.0,0.16,0.68,2,0
 Bulk Carrier,All DoCs,Active,5438,52.7,1147,1147,380.8,135.3,704,61.4,1.2,5.21,17668,0
 Chemical/Oil Tanker,All DoCs,Active,4116,69.7,1523,1523,212.6,82.9,641,42.1,0.75,3.28,14752,0
@@ -37,7 +37,7 @@ Fast Support Intrevention Vessel,All DoCs,Active,17,52.9,7,7,1956.7,1521.9,7,100
 Gas Carrier,All DoCs,Active,859,73.7,270,270,293.1,101.5,147,54.4,0.81,3.53,2819,0
 Offshore Work / Support Vessel,All DoCs,Active,163,1.8,1,1,3478.6,3478.6,1,100.0,1.24,5.41,16,0
 Oil Tanker,All DoCs,Active,1038,55.1,213,213,299.2,101.5,108,50.7,1.05,4.56,2871,0
-Self-Propelled Jack-Up Barge,All DoCs,Active,196,23.5,27,27,1123.1,126.8,15,55.6,0.26,1.13,90,0
+Self-Propelled Jack-Up Barge,All DoCs,Active,196,24.0,27,27,1123.1,126.8,15,55.6,0.26,1.13,90,0
 Voith Mooring Tug,All DoCs,Active,20,10.0,1,1,121.8,121.8,1,100.0,0.16,0.68,2,0
 Bulk Carrier,Columbus Shipmanagement Inc. Manila,All onboard,495,31.5,495,159,57.7,0.0,56,11.3,0.12,0.54,795,418
 Bulk Carrier,Columbus Shipmanagement Inc. Manila,Registered,495,31.5,156,129,182.0,16.9,56,35.9,0.4,1.72,795,79
@@ -183,16 +183,16 @@ Bulk Carrier,Synergy Ocean Maritime Inc.,All onboard,566,62.9,566,324,179.1,1.6,
 Bulk Carrier,Synergy Ocean Maritime Inc.,Registered,566,62.9,356,306,284.5,61.7,156,43.8,0.85,3.7,3895,145
 Bulk Carrier,Synergy Ocean Maritime Inc.,Engaged,566,62.9,324,324,312.9,87.6,156,48.1,0.94,4.07,3895,113
 Bulk Carrier,Synergy Ocean Maritime Inc.,Active,566,62.9,211,211,475.5,236.7,156,73.9,1.44,6.24,3895,0
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,All onboard,101,55.4,101,54,128.3,0.0,11,10.9,0.29,1.28,382,82
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,All onboard,101,56.4,101,54,128.3,0.0,11,10.9,0.29,1.28,382,82
 Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,All onboard,22,40.9,22,11,165.0,0.0,2,9.1,0.46,2.01,131,18
 Gas Carrier,Synergy Oceanic Services India Pvt Ltd,All onboard,175,71.4,175,125,225.5,7.0,43,24.6,0.39,1.69,877,116
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Registered,101,55.4,56,42,230.4,7.7,11,19.6,0.53,2.31,382,37
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Registered,101,56.4,57,42,226.4,6.2,11,19.3,0.52,2.27,382,38
 Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Registered,22,40.9,9,9,399.4,33.8,2,22.2,1.13,4.92,131,5
 Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Registered,175,71.4,125,108,315.1,33.8,43,34.4,0.55,2.37,877,66
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Engaged,101,55.4,54,54,240.0,12.1,11,20.4,0.55,2.39,382,35
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Engaged,101,56.4,54,54,240.0,12.1,11,20.4,0.55,2.39,382,35
 Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Engaged,22,40.9,11,11,330.1,20.7,2,18.2,0.93,4.03,131,7
 Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Engaged,175,71.4,125,125,315.7,33.8,43,34.4,0.55,2.37,877,66
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Active,101,55.4,19,19,665.3,130.4,11,57.9,1.56,6.8,382,0
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Active,101,56.4,19,19,665.3,130.4,11,57.9,1.56,6.8,382,0
 Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Active,22,40.9,4,4,872.5,177.6,2,50.0,2.55,11.08,131,0
 Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Active,175,71.4,59,59,654.4,213.1,43,72.9,1.16,5.03,877,0
 Bulk Carrier,Synergy Onyx Marine Pvt Ltd,All onboard,145,69.7,145,107,91.6,3.4,18,12.4,0.3,1.31,563,108
@@ -222,22 +222,22 @@ Oil Tanker,Synergy Pacific Private Limited,Active,129,77.5,61,61,438.4,186.0,41,
 Crew Boat,Synergy Ship Arabia Inspection Company LLC,All onboard,119,3.4,119,3,0.0,0.0,0,0.0,0.0,0.0,0,119
 Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,All onboard,17,52.9,17,7,805.7,0.0,7,41.2,0.08,0.36,18,10
 Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,All onboard,163,1.8,163,2,21.3,0.0,1,0.6,0.01,0.03,16,162
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,All onboard,196,23.5,196,32,154.7,0.0,15,7.7,0.04,0.16,90,169
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,All onboard,196,24.0,196,32,154.7,0.0,15,7.7,0.04,0.16,90,169
 Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,All onboard,20,10.0,20,1,6.1,0.0,1,5.0,0.01,0.03,2,19
 Crew Boat,Synergy Ship Arabia Inspection Company LLC,Registered,119,3.4,4,3,0.0,0.0,0,0.0,0.0,0.0,0,4
 Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Registered,17,52.9,9,7,1521.9,1521.9,7,77.8,0.16,0.68,18,2
 Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Registered,163,1.8,3,2,1159.5,0.0,1,33.3,0.41,1.8,16,2
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Registered,196,23.5,46,32,659.2,19.5,15,32.6,0.15,0.66,90,19
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Registered,196,24.0,47,32,645.2,19.5,15,31.9,0.15,0.65,90,20
 Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Registered,20,10.0,2,1,60.9,60.9,1,50.0,0.08,0.34,2,1
 Crew Boat,Synergy Ship Arabia Inspection Company LLC,Engaged,119,3.4,3,3,0.0,0.0,0,0.0,0.0,0.0,0,3
 Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Engaged,17,52.9,7,7,1956.7,1521.9,7,100.0,0.2,0.87,18,0
 Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Engaged,163,1.8,2,2,1739.3,1739.3,1,50.0,0.62,2.71,16,1
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Engaged,196,23.5,32,32,947.6,64.8,15,46.9,0.22,0.95,90,5
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Engaged,196,24.0,32,32,947.6,64.8,15,46.9,0.22,0.95,90,5
 Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Engaged,20,10.0,1,1,121.8,121.8,1,100.0,0.16,0.68,2,0
 Crew Boat,Synergy Ship Arabia Inspection Company LLC,Active,119,3.4,0,0,,,0,,,,0,0
 Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Active,17,52.9,7,7,1956.7,1521.9,7,100.0,0.2,0.87,18,0
 Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Active,163,1.8,1,1,3478.6,3478.6,1,100.0,1.24,5.41,16,0
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Active,196,23.5,27,27,1123.1,126.8,15,55.6,0.26,1.13,90,0
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Active,196,24.0,27,27,1123.1,126.8,15,55.6,0.26,1.13,90,0
 Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Active,20,10.0,1,1,121.8,121.8,1,100.0,0.16,0.68,2,0
 Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,133,51.1,133,51,26.6,0.0,8,6.0,0.08,0.33,131,113
 Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,Registered,133,51.1,68,48,51.5,5.9,8,11.8,0.15,0.65,131,48
