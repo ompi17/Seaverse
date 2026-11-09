@@ -11,14 +11,14 @@ Electrical Officer,All DoCs,All onboard,248,61.3,248,151,95.4,1.4,37,14.9,0.24,1
 Electro Technical Officer,All DoCs,All onboard,226,61.5,226,131,81.5,2.0,33,14.6,0.23,1.01,677,156
 Electro Technical Rating,All DoCs,All onboard,1,100.0,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0
 Engine Cadet,All DoCs,All onboard,267,66.7,267,155,270.5,5.0,59,22.1,0.79,3.45,2725,181
-Fitter,All DoCs,All onboard,495,54.1,495,274,71.5,1.0,52,10.5,0.24,1.06,1550,378
+Fitter,All DoCs,All onboard,495,54.3,495,274,71.5,1.0,52,10.5,0.24,1.06,1550,378
 Fourth Engineer,All DoCs,All onboard,441,66.7,441,278,71.4,1.8,58,13.2,0.23,0.98,1281,308
 Gas Engineer,All DoCs,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 General Steward,All DoCs,All onboard,541,50.8,541,278,43.3,0.0,52,9.6,0.14,0.61,974,429
 H2S Technician,All DoCs,All onboard,10,30.0,10,2,259.7,0.0,1,10.0,0.05,0.2,6,8
 Junior Fourth Engineer,All DoCs,All onboard,12,66.7,12,8,29.0,0.4,1,8.3,0.12,0.54,19,10
 Junior Third Officer,All DoCs,All onboard,3,66.7,3,0,0.0,0.0,0,0.0,0.0,0.0,0,3
-Master,All DoCs,All onboard,611,70.9,611,406,113.1,5.7,132,21.6,0.38,1.64,2969,375
+Master,All DoCs,All onboard,611,71.0,611,406,113.1,5.7,132,21.6,0.38,1.64,2969,375
 Mechanic,All DoCs,All onboard,36,22.2,36,5,117.1,0.0,3,8.3,0.02,0.08,8,31
 Messman,All DoCs,All onboard,8,62.5,8,5,47.3,2.5,1,12.5,0.18,0.8,19,7
 Motorman,All DoCs,All onboard,6,66.7,6,4,54.9,12.4,1,16.7,0.23,1.01,18,4
@@ -48,14 +48,14 @@ Electrical Officer,All DoCs,Registered,248,61.3,152,138,155.3,41.8,37,24.3,0.39,
 Electro Technical Officer,All DoCs,Registered,226,61.5,139,122,132.0,25.9,33,23.7,0.38,1.65,677,69
 Electro Technical Rating,All DoCs,Registered,1,100.0,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0
 Engine Cadet,All DoCs,Registered,267,66.7,178,155,405.8,80.7,59,33.1,1.19,5.18,2725,92
-Fitter,All DoCs,Registered,495,54.1,268,229,131.3,16.9,52,19.4,0.45,1.96,1550,151
+Fitter,All DoCs,Registered,495,54.3,269,229,130.8,16.9,52,19.3,0.45,1.95,1550,152
 Fourth Engineer,All DoCs,Registered,441,66.7,294,255,106.8,16.9,58,19.7,0.34,1.47,1281,161
 Gas Engineer,All DoCs,Registered,1,0.0,0,0,,,0,,,,0,0
 General Steward,All DoCs,Registered,541,50.8,275,242,84.5,16.0,52,18.9,0.28,1.2,974,163
 H2S Technician,All DoCs,Registered,10,30.0,3,2,865.8,60.9,1,33.3,0.16,0.68,6,1
 Junior Fourth Engineer,All DoCs,Registered,12,66.7,8,5,40.8,0.0,1,12.5,0.18,0.8,19,6
 Junior Third Officer,All DoCs,Registered,3,66.7,2,0,0.0,0.0,0,0.0,0.0,0.0,0,2
-Master,All DoCs,Registered,611,70.9,433,389,159.4,32.3,132,30.5,0.53,2.32,2969,197
+Master,All DoCs,Registered,611,71.0,434,389,159.1,31.4,132,30.4,0.53,2.31,2969,198
 Mechanic,All DoCs,Registered,36,22.2,8,5,526.8,19.4,3,37.5,0.08,0.34,8,3
 Messman,All DoCs,Registered,8,62.5,5,5,75.6,17.7,1,20.0,0.3,1.29,19,4
 Motorman,All DoCs,Registered,6,66.7,4,4,82.3,49.9,1,25.0,0.35,1.52,18,2
@@ -85,14 +85,14 @@ Electrical Officer,All DoCs,Engaged,248,61.3,151,151,156.6,41.9,37,24.5,0.4,1.72
 Electro Technical Officer,All DoCs,Engaged,226,61.5,131,131,140.6,33.3,33,25.2,0.4,1.75,677,61
 Electro Technical Rating,All DoCs,Engaged,1,100.0,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0
 Engine Cadet,All DoCs,Engaged,267,66.7,155,155,466.0,82.5,59,38.1,1.37,5.95,2725,69
-Fitter,All DoCs,Engaged,495,54.1,274,274,129.2,16.9,52,19.0,0.44,1.91,1550,157
+Fitter,All DoCs,Engaged,495,54.3,274,274,129.2,16.9,52,19.0,0.44,1.91,1550,157
 Fourth Engineer,All DoCs,Engaged,441,66.7,278,278,113.3,16.9,58,20.9,0.36,1.56,1281,145
 Gas Engineer,All DoCs,Engaged,1,0.0,0,0,,,0,,,,0,0
 General Steward,All DoCs,Engaged,541,50.8,278,278,84.2,16.0,52,18.7,0.27,1.18,974,166
 H2S Technician,All DoCs,Engaged,10,30.0,2,2,1298.7,1298.7,1,50.0,0.23,1.01,6,0
 Junior Fourth Engineer,All DoCs,Engaged,12,66.7,8,8,43.5,4.8,1,12.5,0.18,0.8,19,6
 Junior Third Officer,All DoCs,Engaged,3,66.7,0,0,,,0,,,,0,0
-Master,All DoCs,Engaged,611,70.9,406,406,170.2,33.8,132,32.5,0.57,2.47,2969,170
+Master,All DoCs,Engaged,611,71.0,406,406,170.2,33.8,132,32.5,0.57,2.47,2969,170
 Mechanic,All DoCs,Engaged,36,22.2,5,5,842.8,117.1,3,60.0,0.12,0.54,8,0
 Messman,All DoCs,Engaged,8,62.5,5,5,75.6,17.7,1,20.0,0.3,1.29,19,4
 Motorman,All DoCs,Engaged,6,66.7,4,4,82.3,49.9,1,25.0,0.35,1.52,18,2
@@ -122,14 +122,14 @@ Electrical Officer,All DoCs,Active,248,61.3,71,71,310.6,101.5,37,52.1,0.84,3.66,
 Electro Technical Officer,All DoCs,Active,226,61.5,70,70,249.7,85.5,33,47.1,0.75,3.27,677,0
 Electro Technical Rating,All DoCs,Active,1,100.0,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0
 Engine Cadet,All DoCs,Active,267,66.7,86,86,804.5,186.0,59,68.6,2.46,10.72,2725,0
-Fitter,All DoCs,Active,495,54.1,117,117,287.5,84.5,52,44.4,1.03,4.48,1550,0
+Fitter,All DoCs,Active,495,54.3,117,117,287.5,84.5,52,44.4,1.03,4.48,1550,0
 Fourth Engineer,All DoCs,Active,441,66.7,133,133,226.3,84.5,58,43.6,0.75,3.26,1281,0
 Gas Engineer,All DoCs,Active,1,0.0,0,0,,,0,,,,0,0
 General Steward,All DoCs,Active,541,50.8,112,112,193.7,89.5,52,46.4,0.68,2.94,974,0
 H2S Technician,All DoCs,Active,10,30.0,2,2,1298.7,1298.7,1,50.0,0.23,1.01,6,0
 Junior Fourth Engineer,All DoCs,Active,12,66.7,2,2,160.6,160.6,1,50.0,0.74,3.21,19,0
 Junior Third Officer,All DoCs,Active,3,66.7,0,0,,,0,,,,0,0
-Master,All DoCs,Active,611,70.9,236,236,285.8,118.4,132,55.9,0.98,4.25,2969,0
+Master,All DoCs,Active,611,71.0,236,236,285.8,118.4,132,55.9,0.98,4.25,2969,0
 Mechanic,All DoCs,Active,36,22.2,5,5,842.8,117.1,3,60.0,0.12,0.54,8,0
 Messman,All DoCs,Active,8,62.5,1,1,321.3,321.3,1,100.0,1.48,6.43,19,0
 Motorman,All DoCs,Active,6,66.7,2,2,152.2,152.2,1,50.0,0.7,3.04,18,0
@@ -2153,7 +2153,7 @@ Electrical Cadet,Synergy Pacific Private Limited,All onboard,18,94.4,18,17,331.6
 Electrical Officer,Synergy Pacific Private Limited,All onboard,55,78.2,55,41,73.3,16.9,8,14.5,0.24,1.03,168,30
 Electro Technical Officer,Synergy Pacific Private Limited,All onboard,69,82.6,69,52,79.1,16.9,13,18.8,0.19,0.82,167,37
 Engine Cadet,Synergy Pacific Private Limited,All onboard,56,98.2,56,52,179.2,82.4,17,30.4,0.7,3.03,502,23
-Fitter,Synergy Pacific Private Limited,All onboard,122,73.0,122,90,114.7,14.6,20,16.4,0.41,1.79,647,72
+Fitter,Synergy Pacific Private Limited,All onboard,122,73.8,122,90,114.7,14.6,20,16.4,0.41,1.79,647,72
 Fourth Engineer,Synergy Pacific Private Limited,All onboard,105,86.7,105,90,95.6,16.9,23,21.9,0.35,1.53,476,52
 General Steward,Synergy Pacific Private Limited,All onboard,125,72.0,125,88,55.5,12.5,20,16.0,0.18,0.79,293,76
 Junior Fourth Engineer,Synergy Pacific Private Limited,All onboard,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
@@ -2180,7 +2180,7 @@ Electrical Cadet,Synergy Pacific Private Limited,Registered,18,94.4,17,17,351.1,
 Electrical Officer,Synergy Pacific Private Limited,Registered,55,78.2,43,40,93.7,67.6,8,18.6,0.3,1.32,168,18
 Electro Technical Officer,Synergy Pacific Private Limited,Registered,69,82.6,57,50,95.3,24.5,13,22.8,0.23,0.99,167,25
 Engine Cadet,Synergy Pacific Private Limited,Registered,56,98.2,55,52,182.4,82.9,17,30.9,0.71,3.09,502,22
-Fitter,Synergy Pacific Private Limited,Registered,122,73.0,89,79,156.9,33.8,20,22.5,0.57,2.46,647,39
+Fitter,Synergy Pacific Private Limited,Registered,122,73.8,90,79,155.2,33.8,20,22.2,0.56,2.43,647,40
 Fourth Engineer,Synergy Pacific Private Limited,Registered,105,86.7,91,85,109.9,17.9,23,25.3,0.41,1.77,476,38
 General Steward,Synergy Pacific Private Limited,Registered,125,72.0,90,81,76.6,26.5,20,22.2,0.25,1.1,293,41
 Junior Fourth Engineer,Synergy Pacific Private Limited,Registered,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
@@ -2207,7 +2207,7 @@ Electrical Cadet,Synergy Pacific Private Limited,Engaged,18,94.4,17,17,351.1,81.
 Electrical Officer,Synergy Pacific Private Limited,Engaged,55,78.2,41,41,98.3,67.6,8,19.5,0.32,1.39,168,16
 Electro Technical Officer,Synergy Pacific Private Limited,Engaged,69,82.6,52,52,105.0,30.2,13,25.0,0.25,1.09,167,20
 Engine Cadet,Synergy Pacific Private Limited,Engaged,56,98.2,52,52,193.0,83.3,17,32.7,0.75,3.26,502,19
-Fitter,Synergy Pacific Private Limited,Engaged,122,73.0,90,90,155.5,33.8,20,22.2,0.56,2.43,647,40
+Fitter,Synergy Pacific Private Limited,Engaged,122,73.8,90,90,155.5,33.8,20,22.2,0.56,2.43,647,40
 Fourth Engineer,Synergy Pacific Private Limited,Engaged,105,86.7,90,90,111.5,19.2,23,25.6,0.41,1.79,476,37
 General Steward,Synergy Pacific Private Limited,Engaged,125,72.0,88,88,78.8,30.5,20,22.7,0.26,1.13,293,39
 Junior Fourth Engineer,Synergy Pacific Private Limited,Engaged,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
@@ -2234,7 +2234,7 @@ Electrical Cadet,Synergy Pacific Private Limited,Active,18,94.4,10,10,574.8,165.
 Electrical Officer,Synergy Pacific Private Limited,Active,55,78.2,25,25,147.7,82.9,8,32.0,0.52,2.27,168,0
 Electro Technical Officer,Synergy Pacific Private Limited,Active,69,82.6,32,32,164.4,70.1,13,40.6,0.41,1.76,167,0
 Engine Cadet,Synergy Pacific Private Limited,Active,56,98.2,33,33,273.7,118.4,17,51.5,1.18,5.14,502,0
-Fitter,Synergy Pacific Private Limited,Active,122,73.0,50,50,268.6,82.1,20,40.0,1.01,4.38,647,0
+Fitter,Synergy Pacific Private Limited,Active,122,73.8,50,50,268.6,82.1,20,40.0,1.01,4.38,647,0
 Fourth Engineer,Synergy Pacific Private Limited,Active,105,86.7,53,53,184.9,84.5,23,43.4,0.7,3.04,476,0
 General Steward,Synergy Pacific Private Limited,Active,125,72.0,49,49,130.2,76.1,20,40.8,0.47,2.02,293,0
 Junior Fourth Engineer,Synergy Pacific Private Limited,Active,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
@@ -2259,7 +2259,7 @@ Crane Operator,Synergy Ship Arabia Inspection Company LLC,All onboard,20,25.0,20
 Electro Technical Officer,Synergy Ship Arabia Inspection Company LLC,All onboard,24,12.5,24,2,72.5,0.0,2,8.3,0.01,0.03,2,22
 General Steward,Synergy Ship Arabia Inspection Company LLC,All onboard,25,0.0,25,0,0.0,0.0,0,0.0,0.0,0.0,0,25
 H2S Technician,Synergy Ship Arabia Inspection Company LLC,All onboard,10,30.0,10,2,259.7,0.0,1,10.0,0.05,0.2,6,8
-Master,Synergy Ship Arabia Inspection Company LLC,All onboard,40,15.0,40,4,4.8,0.0,1,2.5,0.0,0.01,1,39
+Master,Synergy Ship Arabia Inspection Company LLC,All onboard,40,17.5,40,4,4.8,0.0,1,2.5,0.0,0.01,1,39
 Mechanic,Synergy Ship Arabia Inspection Company LLC,All onboard,36,22.2,36,5,117.1,0.0,3,8.3,0.02,0.08,8,31
 Oiler,Synergy Ship Arabia Inspection Company LLC,All onboard,57,1.8,57,1,2.1,0.0,1,1.8,0.0,0.01,2,56
 Radio Officer / Radio Operator,Synergy Ship Arabia Inspection Company LLC,All onboard,9,11.1,9,1,394.6,0.0,1,11.1,0.06,0.26,7,8
@@ -2274,7 +2274,7 @@ Crane Operator,Synergy Ship Arabia Inspection Company LLC,Registered,20,25.0,5,3
 Electro Technical Officer,Synergy Ship Arabia Inspection Company LLC,Registered,24,12.5,3,2,579.8,217.4,2,66.7,0.05,0.23,2,1
 General Steward,Synergy Ship Arabia Inspection Company LLC,Registered,25,0.0,0,0,,,0,,,,0,0
 H2S Technician,Synergy Ship Arabia Inspection Company LLC,Registered,10,30.0,3,2,865.8,60.9,1,33.3,0.16,0.68,6,1
-Master,Synergy Ship Arabia Inspection Company LLC,Registered,40,15.0,6,4,31.7,0.0,1,16.7,0.01,0.06,1,5
+Master,Synergy Ship Arabia Inspection Company LLC,Registered,40,17.5,7,4,27.2,0.0,1,14.3,0.01,0.05,1,6
 Mechanic,Synergy Ship Arabia Inspection Company LLC,Registered,36,22.2,8,5,526.8,19.4,3,37.5,0.08,0.34,8,3
 Oiler,Synergy Ship Arabia Inspection Company LLC,Registered,57,1.8,1,1,117.1,117.1,1,100.0,0.16,0.68,2,0
 Radio Officer / Radio Operator,Synergy Ship Arabia Inspection Company LLC,Registered,9,11.1,1,1,3551.0,3551.0,1,100.0,0.54,2.37,7,0
@@ -2289,7 +2289,7 @@ Crane Operator,Synergy Ship Arabia Inspection Company LLC,Engaged,20,25.0,3,3,92
 Electro Technical Officer,Synergy Ship Arabia Inspection Company LLC,Engaged,24,12.5,2,2,869.6,869.6,2,100.0,0.08,0.34,2,0
 General Steward,Synergy Ship Arabia Inspection Company LLC,Engaged,25,0.0,0,0,,,0,,,,0,0
 H2S Technician,Synergy Ship Arabia Inspection Company LLC,Engaged,10,30.0,2,2,1298.7,1298.7,1,50.0,0.23,1.01,6,0
-Master,Synergy Ship Arabia Inspection Company LLC,Engaged,40,15.0,4,4,47.6,0.0,1,25.0,0.02,0.08,1,3
+Master,Synergy Ship Arabia Inspection Company LLC,Engaged,40,17.5,4,4,47.6,0.0,1,25.0,0.02,0.08,1,3
 Mechanic,Synergy Ship Arabia Inspection Company LLC,Engaged,36,22.2,5,5,842.8,117.1,3,60.0,0.12,0.54,8,0
 Oiler,Synergy Ship Arabia Inspection Company LLC,Engaged,57,1.8,1,1,117.1,117.1,1,100.0,0.16,0.68,2,0
 Radio Officer / Radio Operator,Synergy Ship Arabia Inspection Company LLC,Engaged,9,11.1,1,1,3551.0,3551.0,1,100.0,0.54,2.37,7,0
@@ -2304,7 +2304,7 @@ Crane Operator,Synergy Ship Arabia Inspection Company LLC,Active,20,25.0,3,3,921
 Electro Technical Officer,Synergy Ship Arabia Inspection Company LLC,Active,24,12.5,2,2,869.6,869.6,2,100.0,0.08,0.34,2,0
 General Steward,Synergy Ship Arabia Inspection Company LLC,Active,25,0.0,0,0,,,0,,,,0,0
 H2S Technician,Synergy Ship Arabia Inspection Company LLC,Active,10,30.0,2,2,1298.7,1298.7,1,50.0,0.23,1.01,6,0
-Master,Synergy Ship Arabia Inspection Company LLC,Active,40,15.0,1,1,190.2,190.2,1,100.0,0.08,0.34,1,0
+Master,Synergy Ship Arabia Inspection Company LLC,Active,40,17.5,1,1,190.2,190.2,1,100.0,0.08,0.34,1,0
 Mechanic,Synergy Ship Arabia Inspection Company LLC,Active,36,22.2,5,5,842.8,117.1,3,60.0,0.12,0.54,8,0
 Oiler,Synergy Ship Arabia Inspection Company LLC,Active,57,1.8,1,1,117.1,117.1,1,100.0,0.16,0.68,2,0
 Radio Officer / Radio Operator,Synergy Ship Arabia Inspection Company LLC,Active,9,11.1,1,1,3551.0,3551.0,1,100.0,0.54,2.37,7,0
