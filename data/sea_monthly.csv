@@ -12,19 +12,19 @@ month,doc,population,completions,people,per_person,days
 2026-09,All DoCs,All onboard,17662,12976,1.361,30
 2026-10,All DoCs,All onboard,11066,12976,0.853,31
 2026-11,All DoCs,All onboard,3161,12976,0.244,9
-2025-11,All DoCs,Registered,4419,7788,0.567,30
-2025-12,All DoCs,Registered,4672,7788,0.6,31
-2026-01,All DoCs,Registered,3143,7788,0.404,31
-2026-02,All DoCs,Registered,2623,7788,0.337,28
-2026-03,All DoCs,Registered,8767,7788,1.126,31
-2026-04,All DoCs,Registered,9756,7788,1.253,30
-2026-05,All DoCs,Registered,7104,7788,0.912,31
-2026-06,All DoCs,Registered,11704,7788,1.503,30
-2026-07,All DoCs,Registered,19482,7788,2.502,31
-2026-08,All DoCs,Registered,15381,7788,1.975,31
-2026-09,All DoCs,Registered,17662,7788,2.268,30
-2026-10,All DoCs,Registered,11066,7788,1.421,31
-2026-11,All DoCs,Registered,3161,7788,0.406,9
+2025-11,All DoCs,Registered,4419,7791,0.567,30
+2025-12,All DoCs,Registered,4672,7791,0.6,31
+2026-01,All DoCs,Registered,3143,7791,0.403,31
+2026-02,All DoCs,Registered,2623,7791,0.337,28
+2026-03,All DoCs,Registered,8767,7791,1.125,31
+2026-04,All DoCs,Registered,9756,7791,1.252,30
+2026-05,All DoCs,Registered,7104,7791,0.912,31
+2026-06,All DoCs,Registered,11704,7791,1.502,30
+2026-07,All DoCs,Registered,19482,7791,2.501,31
+2026-08,All DoCs,Registered,15381,7791,1.974,31
+2026-09,All DoCs,Registered,17662,7791,2.267,30
+2026-10,All DoCs,Registered,11066,7791,1.42,31
+2026-11,All DoCs,Registered,3161,7791,0.406,9
 2025-11,All DoCs,Engaged,4419,7622,0.58,30
 2025-12,All DoCs,Engaged,4672,7622,0.613,31
 2026-01,All DoCs,Engaged,3143,7622,0.412,31
@@ -688,19 +688,19 @@ month,doc,population,completions,people,per_person,days
 2026-09,Synergy Marine Bulk Pte Ltd,All onboard,723,992,0.729,30
 2026-10,Synergy Marine Bulk Pte Ltd,All onboard,663,992,0.668,31
 2026-11,Synergy Marine Bulk Pte Ltd,All onboard,84,992,0.085,9
-2025-11,Synergy Marine Bulk Pte Ltd,Registered,277,505,0.549,30
-2025-12,Synergy Marine Bulk Pte Ltd,Registered,250,505,0.495,31
-2026-01,Synergy Marine Bulk Pte Ltd,Registered,246,505,0.487,31
-2026-02,Synergy Marine Bulk Pte Ltd,Registered,76,505,0.15,28
-2026-03,Synergy Marine Bulk Pte Ltd,Registered,648,505,1.283,31
-2026-04,Synergy Marine Bulk Pte Ltd,Registered,372,505,0.737,30
-2026-05,Synergy Marine Bulk Pte Ltd,Registered,318,505,0.63,31
-2026-06,Synergy Marine Bulk Pte Ltd,Registered,782,505,1.549,30
-2026-07,Synergy Marine Bulk Pte Ltd,Registered,1794,505,3.552,31
-2026-08,Synergy Marine Bulk Pte Ltd,Registered,1402,505,2.776,31
-2026-09,Synergy Marine Bulk Pte Ltd,Registered,723,505,1.432,30
-2026-10,Synergy Marine Bulk Pte Ltd,Registered,663,505,1.313,31
-2026-11,Synergy Marine Bulk Pte Ltd,Registered,84,505,0.166,9
+2025-11,Synergy Marine Bulk Pte Ltd,Registered,277,506,0.547,30
+2025-12,Synergy Marine Bulk Pte Ltd,Registered,250,506,0.494,31
+2026-01,Synergy Marine Bulk Pte Ltd,Registered,246,506,0.486,31
+2026-02,Synergy Marine Bulk Pte Ltd,Registered,76,506,0.15,28
+2026-03,Synergy Marine Bulk Pte Ltd,Registered,648,506,1.281,31
+2026-04,Synergy Marine Bulk Pte Ltd,Registered,372,506,0.735,30
+2026-05,Synergy Marine Bulk Pte Ltd,Registered,318,506,0.628,31
+2026-06,Synergy Marine Bulk Pte Ltd,Registered,782,506,1.545,30
+2026-07,Synergy Marine Bulk Pte Ltd,Registered,1794,506,3.545,31
+2026-08,Synergy Marine Bulk Pte Ltd,Registered,1402,506,2.771,31
+2026-09,Synergy Marine Bulk Pte Ltd,Registered,723,506,1.429,30
+2026-10,Synergy Marine Bulk Pte Ltd,Registered,663,506,1.31,31
+2026-11,Synergy Marine Bulk Pte Ltd,Registered,84,506,0.166,9
 2025-11,Synergy Marine Bulk Pte Ltd,Engaged,277,445,0.622,30
 2025-12,Synergy Marine Bulk Pte Ltd,Engaged,250,445,0.562,31
 2026-01,Synergy Marine Bulk Pte Ltd,Engaged,246,445,0.553,31
@@ -1312,19 +1312,19 @@ month,doc,population,completions,people,per_person,days
 2026-09,Synergy Ship Arabia Inspection Company LLC,All onboard,0,515,0.0,30
 2026-10,Synergy Ship Arabia Inspection Company LLC,All onboard,25,515,0.049,31
 2026-11,Synergy Ship Arabia Inspection Company LLC,All onboard,149,515,0.289,9
-2025-11,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,30
-2025-12,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,31
-2026-01,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,31
-2026-02,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,28
-2026-03,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,31
-2026-04,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,30
-2026-05,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,31
-2026-06,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,30
-2026-07,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,31
-2026-08,Synergy Ship Arabia Inspection Company LLC,Registered,10,80,0.125,31
-2026-09,Synergy Ship Arabia Inspection Company LLC,Registered,0,80,0.0,30
-2026-10,Synergy Ship Arabia Inspection Company LLC,Registered,25,80,0.312,31
-2026-11,Synergy Ship Arabia Inspection Company LLC,Registered,149,80,1.862,9
+2025-11,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,30
+2025-12,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,31
+2026-01,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,31
+2026-02,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,28
+2026-03,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,31
+2026-04,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,30
+2026-05,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,31
+2026-06,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,30
+2026-07,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,31
+2026-08,Synergy Ship Arabia Inspection Company LLC,Registered,10,82,0.122,31
+2026-09,Synergy Ship Arabia Inspection Company LLC,Registered,0,82,0.0,30
+2026-10,Synergy Ship Arabia Inspection Company LLC,Registered,25,82,0.305,31
+2026-11,Synergy Ship Arabia Inspection Company LLC,Registered,149,82,1.817,9
 2025-11,Synergy Ship Arabia Inspection Company LLC,Engaged,0,58,0.0,30
 2025-12,Synergy Ship Arabia Inspection Company LLC,Engaged,0,58,0.0,31
 2026-01,Synergy Ship Arabia Inspection Company LLC,Engaged,0,58,0.0,31
