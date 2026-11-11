@@ -21,7 +21,7 @@ Jana 501,Self-Propelled Jack-Up Barge,True,No,No,No,,0
 ALAIA C W,Chemical/Oil Tanker,True,Yes,Yes,Yes,P.T Synergy Marine Indonesia,14
 AMIS Ace,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,23
 AMIS Brave,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,26
-AMIS Wisdom II,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,14
+AMIS Wisdom II,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,15
 AMIS XCEL,Bulk Carrier,True,Yes,Yes,Yes,Wisdom Synergy Shipmanagement Pte Ltd,24
 AMIS Youth,Bulk Carrier,True,Yes,Yes,Yes,Wisdom Synergy Shipmanagement Pte Ltd,22
 AOM Marta,Bulk Carrier,True,Yes,Yes,Yes,Synergy Ocean Maritime Inc.,21
@@ -49,7 +49,7 @@ Aom Bianca,Bulk Carrier,True,Yes,Yes,Yes,Synergy Ocean Maritime Inc.,17
 Aom Federica,Bulk Carrier,True,Yes,Yes,Yes,Synergy Ocean Maritime Inc.,20
 Apollo Trader,Container,True,Yes,Yes,Yes,Synergy Marine Germany GmbH,21
 Aqila S,Chemical/Oil Tanker,True,Yes,Yes,Yes,P.T Synergy Marine Indonesia,6
-Ashoka,Oil Tanker,True,Yes,Yes,Yes,Synergy Navis marine Private Limited,24
+Ashoka,Oil Tanker,True,Yes,Yes,Yes,,0
 Athens Bridge,Container,True,Yes,Yes,Yes,Synergy Maritime Private Limited,22
 Ayoe,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Pacific Private Limited,20
 BALSA 85,Bulk Carrier,True,Yes,Yes,Yes,Columbus Shipmanagement Inc. Manila,15
@@ -144,7 +144,7 @@ CMC Antillanca,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Marine Germany GmbH,
 Canon Trader,Bulk Carrier,True,Yes,Yes,Yes,Columbus Shipmanagement Inc. Manila,29
 Cap San Artemissio,Container,True,Yes,Yes,Yes,Synergy Pacific Private Limited,21
 Cap San Maleas,Container,True,Yes,Yes,Yes,Synergy Pacific Private Limited,25
-Cap San Sounio,Container,True,Yes,Yes,Yes,Synergy Pacific Private Limited,25
+Cap San Sounio,Container,True,Yes,Yes,Yes,Synergy Pacific Private Limited,24
 Cap San Tainaro,Container,True,Yes,Yes,Yes,Synergy Pacific Private Limited,24
 Capricorn Confidence,Bulk Carrier,True,Yes,Yes,Yes,Synergy Marine Bulk Pte Ltd,18
 Castara,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Maritime Private Limited,12
@@ -228,7 +228,7 @@ Genco Augustus,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd
 Genco Auvergne,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Pvt Ltd,24
 Genco Bear,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,24
 Genco Bourgogne,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Pvt Ltd,24
-Genco Brittany,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Pvt Ltd,26
+Genco Brittany,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Pvt Ltd,25
 Genco Columbia,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,23
 Genco Constantine,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,25
 Genco Constellation,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,24
@@ -263,7 +263,7 @@ Genco Titus,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,27
 Genco Valkyrie,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,24
 Genco Vigilant,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,25
 Genco Volunteer,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,26
-Genco Wasp,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,20
+Genco Wasp,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,19
 Genco Weatherly,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,19
 Genco Wolf,Bulk Carrier,True,Yes,Yes,Yes,Genco-Synergy Bulk Carriers Pvt Ltd,26
 Ginga Copper,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Navis marine Private Limited,18
@@ -362,7 +362,7 @@ Lilas Shine,Bulk Carrier,True,Yes,Yes,Yes,Synergy Marine Shanghai Limited,23
 Lone Star Mariner,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Maritime Private Limited,17
 Lowlands Shark,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,17
 Loyalty Galaxy,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Pacific Private Limited,23
-Lubna,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Mideast Ship Management DMCC,26
+Lubna,Chemical/Oil Tanker,True,Yes,Yes,Yes,,0
 Lucky Queen,Bulk Carrier,True,Yes,Yes,Yes,Synergy Ocean Maritime Inc.,21
 Lujain,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Mideast Ship Management DMCC,24
 Lynx,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,7
@@ -427,7 +427,7 @@ Nautical Queen,Bulk Carrier,True,Yes,Yes,Yes,Synergy Ocean Maritime Inc.,21
 Navigr8 Venus,Bulk Carrier,True,Yes,Yes,Yes,P.T Synergy Marine Indonesia,0
 Nexus Victoria,Chemical/Oil Tanker,True,Yes,Yes,Yes,Synergy Maritime Private Limited,24
 Noni T,Chemical/Oil Tanker,True,Yes,Yes,Yes,P.T Synergy Marine Indonesia,21
-Nord Antares,Bulk Carrier,True,Yes,Yes,Yes,Synergy Ocean Maritime Inc.,20
+Nord Antares,Bulk Carrier,True,Yes,Yes,Yes,,0
 Nord Copper,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,30
 Nord Durban,Bulk Carrier,True,Yes,Yes,Yes,Synergy Maritime Private Limited,20
 Nord Houston,Bulk Carrier,True,Yes,Yes,Yes,Columbus Shipmanagement Inc. Manila,19
