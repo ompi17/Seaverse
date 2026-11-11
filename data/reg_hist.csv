@@ -1,58 +1,58 @@
 date,doc,onboard,registered,coverage_pct,kind
 2025-10-15,All DoCs,15,0,0.0,rebuilt
-2025-10-22,All DoCs,7448,137,1.8,rebuilt
+2025-10-22,All DoCs,7448,138,1.9,rebuilt
 2025-10-29,All DoCs,7448,300,4.0,rebuilt
 2025-11-05,All DoCs,7448,421,5.7,rebuilt
-2025-11-12,All DoCs,7448,613,8.2,rebuilt
-2025-11-19,All DoCs,7893,808,10.2,rebuilt
-2025-11-26,All DoCs,7893,937,11.9,rebuilt
-2025-12-03,All DoCs,7894,1070,13.6,rebuilt
-2025-12-10,All DoCs,7894,1191,15.1,rebuilt
-2025-12-17,All DoCs,7894,1309,16.6,rebuilt
-2025-12-24,All DoCs,8254,1452,17.6,rebuilt
-2025-12-31,All DoCs,8254,1548,18.8,rebuilt
-2026-01-07,All DoCs,8254,1694,20.5,rebuilt
-2026-01-14,All DoCs,8254,1795,21.7,rebuilt
-2026-01-21,All DoCs,8254,1856,22.5,rebuilt
-2026-01-28,All DoCs,8254,1884,22.8,rebuilt
-2026-02-04,All DoCs,8275,1993,24.1,rebuilt
-2026-02-11,All DoCs,8275,2073,25.1,rebuilt
-2026-02-18,All DoCs,8277,2116,25.6,rebuilt
-2026-02-25,All DoCs,8281,2185,26.4,rebuilt
-2026-03-04,All DoCs,8711,2357,27.1,rebuilt
-2026-03-11,All DoCs,8725,2464,28.2,rebuilt
-2026-03-18,All DoCs,8788,2606,29.7,rebuilt
-2026-03-25,All DoCs,8934,2777,31.1,rebuilt
-2026-04-01,All DoCs,8948,2935,32.8,rebuilt
-2026-04-08,All DoCs,9245,3078,33.3,rebuilt
-2026-04-15,All DoCs,9259,3185,34.4,rebuilt
-2026-04-22,All DoCs,9320,3292,35.3,rebuilt
-2026-04-29,All DoCs,9321,3387,36.3,rebuilt
-2026-05-06,All DoCs,9469,3516,37.1,rebuilt
-2026-05-13,All DoCs,9470,3603,38.0,rebuilt
-2026-05-20,All DoCs,9476,3689,38.9,rebuilt
-2026-05-27,All DoCs,9486,3759,39.6,rebuilt
-2026-06-03,All DoCs,9508,3852,40.5,rebuilt
-2026-06-10,All DoCs,9536,3948,41.4,rebuilt
-2026-06-17,All DoCs,10112,4042,40.0,rebuilt
-2026-06-24,All DoCs,10141,4252,41.9,rebuilt
-2026-07-01,All DoCs,10194,4454,43.7,rebuilt
-2026-07-08,All DoCs,10237,4671,45.6,rebuilt
-2026-07-15,All DoCs,10261,4814,46.9,rebuilt
-2026-07-22,All DoCs,10317,5022,48.7,rebuilt
-2026-07-29,All DoCs,10404,5232,50.3,rebuilt
-2026-08-05,All DoCs,10481,5424,51.8,rebuilt
-2026-08-12,All DoCs,10580,5556,52.5,rebuilt
-2026-08-19,All DoCs,10765,5801,53.9,rebuilt
-2026-08-26,All DoCs,10963,5962,54.4,rebuilt
-2026-09-02,All DoCs,11174,6251,55.9,rebuilt
-2026-09-09,All DoCs,11248,6394,56.8,rebuilt
-2026-09-16,All DoCs,11332,6588,58.1,rebuilt
-2026-09-23,All DoCs,11704,6755,57.7,rebuilt
-2026-09-30,All DoCs,11933,7042,59.0,rebuilt
-2026-10-07,All DoCs,12074,7195,59.6,rebuilt
-2026-10-14,All DoCs,12673,7302,57.6,rebuilt
-2026-10-21,All DoCs,12796,7427,58.0,rebuilt
+2025-11-12,All DoCs,7448,612,8.2,rebuilt
+2025-11-19,All DoCs,7893,807,10.2,rebuilt
+2025-11-26,All DoCs,7893,936,11.9,rebuilt
+2025-12-03,All DoCs,7894,1069,13.5,rebuilt
+2025-12-10,All DoCs,7894,1190,15.1,rebuilt
+2025-12-17,All DoCs,7894,1308,16.6,rebuilt
+2025-12-24,All DoCs,8254,1451,17.6,rebuilt
+2025-12-31,All DoCs,8254,1547,18.7,rebuilt
+2026-01-07,All DoCs,8254,1693,20.5,rebuilt
+2026-01-14,All DoCs,8254,1794,21.7,rebuilt
+2026-01-21,All DoCs,8254,1855,22.5,rebuilt
+2026-01-28,All DoCs,8254,1883,22.8,rebuilt
+2026-02-04,All DoCs,8275,1992,24.1,rebuilt
+2026-02-11,All DoCs,8275,2072,25.0,rebuilt
+2026-02-18,All DoCs,8277,2115,25.6,rebuilt
+2026-02-25,All DoCs,8281,2184,26.4,rebuilt
+2026-03-04,All DoCs,8711,2356,27.0,rebuilt
+2026-03-11,All DoCs,8725,2463,28.2,rebuilt
+2026-03-18,All DoCs,8788,2605,29.6,rebuilt
+2026-03-25,All DoCs,8934,2776,31.1,rebuilt
+2026-04-01,All DoCs,8948,2934,32.8,rebuilt
+2026-04-08,All DoCs,9245,3077,33.3,rebuilt
+2026-04-15,All DoCs,9259,3184,34.4,rebuilt
+2026-04-22,All DoCs,9320,3291,35.3,rebuilt
+2026-04-29,All DoCs,9321,3386,36.3,rebuilt
+2026-05-06,All DoCs,9469,3515,37.1,rebuilt
+2026-05-13,All DoCs,9470,3602,38.0,rebuilt
+2026-05-20,All DoCs,9476,3688,38.9,rebuilt
+2026-05-27,All DoCs,9486,3758,39.6,rebuilt
+2026-06-03,All DoCs,9508,3850,40.5,rebuilt
+2026-06-10,All DoCs,9536,3946,41.4,rebuilt
+2026-06-17,All DoCs,10112,4040,40.0,rebuilt
+2026-06-24,All DoCs,10141,4250,41.9,rebuilt
+2026-07-01,All DoCs,10194,4452,43.7,rebuilt
+2026-07-08,All DoCs,10237,4668,45.6,rebuilt
+2026-07-15,All DoCs,10261,4810,46.9,rebuilt
+2026-07-22,All DoCs,10317,5018,48.6,rebuilt
+2026-07-29,All DoCs,10404,5228,50.2,rebuilt
+2026-08-05,All DoCs,10481,5420,51.7,rebuilt
+2026-08-12,All DoCs,10580,5552,52.5,rebuilt
+2026-08-19,All DoCs,10765,5797,53.9,rebuilt
+2026-08-26,All DoCs,10963,5958,54.3,rebuilt
+2026-09-02,All DoCs,11174,6247,55.9,rebuilt
+2026-09-09,All DoCs,11248,6389,56.8,rebuilt
+2026-09-16,All DoCs,11332,6583,58.1,rebuilt
+2026-09-23,All DoCs,11704,6750,57.7,rebuilt
+2026-09-30,All DoCs,11933,7037,59.0,rebuilt
+2026-10-07,All DoCs,12074,7190,59.5,rebuilt
+2026-10-14,All DoCs,12673,7297,57.6,rebuilt
+2026-10-21,All DoCs,12796,7422,58.0,rebuilt
 2026-10-28,All DoCs,12954,7626,58.9,recorded
 2026-10-29,All DoCs,13019,7682,59.0,recorded
 2026-10-30,All DoCs,13030,7708,59.2,recorded
@@ -66,6 +66,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,All DoCs,12976,7767,59.9,recorded
 2026-11-08,All DoCs,12976,7777,59.9,recorded
 2026-11-09,All DoCs,12976,7791,60.0,recorded
+2026-11-10,All DoCs,12976,7805,60.1,recorded
 2026-10-28,"Century Synergy Ship Management Co.,Limited.",0,0,,recorded
 2026-10-29,"Century Synergy Ship Management Co.,Limited.",0,0,,recorded
 2026-10-30,"Century Synergy Ship Management Co.,Limited.",0,0,,recorded
@@ -79,6 +80,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,"Century Synergy Ship Management Co.,Limited.",0,0,,recorded
 2026-11-08,"Century Synergy Ship Management Co.,Limited.",0,0,,recorded
 2026-11-09,"Century Synergy Ship Management Co.,Limited.",0,0,,recorded
+2026-11-10,"Century Synergy Ship Management Co.,Limited.",0,0,,recorded
 2025-10-15,Columbus Shipmanagement Inc. Manila,0,0,,rebuilt
 2025-10-22,Columbus Shipmanagement Inc. Manila,206,3,1.5,rebuilt
 2025-10-29,Columbus Shipmanagement Inc. Manila,206,3,1.5,rebuilt
@@ -146,6 +148,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Columbus Shipmanagement Inc. Manila,495,156,31.5,recorded
 2026-11-08,Columbus Shipmanagement Inc. Manila,495,156,31.5,recorded
 2026-11-09,Columbus Shipmanagement Inc. Manila,495,156,31.5,recorded
+2026-11-10,Columbus Shipmanagement Inc. Manila,495,156,31.5,recorded
 2025-10-15,DS Ship Management Pte Ltd (DSSM),0,0,,rebuilt
 2025-10-22,DS Ship Management Pte Ltd (DSSM),31,1,3.2,rebuilt
 2025-10-29,DS Ship Management Pte Ltd (DSSM),31,1,3.2,rebuilt
@@ -213,6 +216,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,DS Ship Management Pte Ltd (DSSM),189,67,35.4,recorded
 2026-11-08,DS Ship Management Pte Ltd (DSSM),189,67,35.4,recorded
 2026-11-09,DS Ship Management Pte Ltd (DSSM),189,67,35.4,recorded
+2026-11-10,DS Ship Management Pte Ltd (DSSM),189,67,35.4,recorded
 2025-10-15,Fluyt Maritime Private Limited,0,0,,rebuilt
 2025-10-22,Fluyt Maritime Private Limited,23,1,4.3,rebuilt
 2025-10-29,Fluyt Maritime Private Limited,23,2,8.7,rebuilt
@@ -280,6 +284,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Fluyt Maritime Private Limited,29,17,58.6,recorded
 2026-11-08,Fluyt Maritime Private Limited,29,17,58.6,recorded
 2026-11-09,Fluyt Maritime Private Limited,29,17,58.6,recorded
+2026-11-10,Fluyt Maritime Private Limited,29,17,58.6,recorded
 2025-10-15,Genco-Synergy Bulk Carriers Pvt Ltd,0,0,,rebuilt
 2025-10-22,Genco-Synergy Bulk Carriers Pvt Ltd,671,11,1.6,rebuilt
 2025-10-29,Genco-Synergy Bulk Carriers Pvt Ltd,671,24,3.6,rebuilt
@@ -347,6 +352,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,856,497,58.1,recorded
 2026-11-08,Genco-Synergy Bulk Carriers Pvt Ltd,856,497,58.1,recorded
 2026-11-09,Genco-Synergy Bulk Carriers Pvt Ltd,856,497,58.1,recorded
+2026-11-10,Genco-Synergy Bulk Carriers Pvt Ltd,856,497,58.1,recorded
 2025-10-15,Genco-Synergy Pvt Ltd,1,0,0.0,rebuilt
 2025-10-22,Genco-Synergy Pvt Ltd,166,6,3.6,rebuilt
 2025-10-29,Genco-Synergy Pvt Ltd,166,12,7.2,rebuilt
@@ -414,6 +420,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Genco-Synergy Pvt Ltd,214,146,68.2,recorded
 2026-11-08,Genco-Synergy Pvt Ltd,214,146,68.2,recorded
 2026-11-09,Genco-Synergy Pvt Ltd,214,146,68.2,recorded
+2026-11-10,Genco-Synergy Pvt Ltd,214,146,68.2,recorded
 2025-10-15,General Ship Management Pte. Ltd.,0,0,,rebuilt
 2025-10-22,General Ship Management Pte. Ltd.,66,1,1.5,rebuilt
 2025-10-29,General Ship Management Pte. Ltd.,66,2,3.0,rebuilt
@@ -481,6 +488,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,General Ship Management Pte. Ltd.,89,38,42.7,recorded
 2026-11-08,General Ship Management Pte. Ltd.,89,38,42.7,recorded
 2026-11-09,General Ship Management Pte. Ltd.,89,38,42.7,recorded
+2026-11-10,General Ship Management Pte. Ltd.,89,38,42.7,recorded
 2025-10-15,P.T Synergy Marine Indonesia,0,0,,rebuilt
 2025-10-22,P.T Synergy Marine Indonesia,78,2,2.6,rebuilt
 2025-10-29,P.T Synergy Marine Indonesia,78,4,5.1,rebuilt
@@ -548,6 +556,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,P.T Synergy Marine Indonesia,585,65,11.1,recorded
 2026-11-08,P.T Synergy Marine Indonesia,585,65,11.1,recorded
 2026-11-09,P.T Synergy Marine Indonesia,585,65,11.1,recorded
+2026-11-10,P.T Synergy Marine Indonesia,585,65,11.1,recorded
 2025-10-15,PT Karunya Ship Management,0,0,,rebuilt
 2025-10-22,PT Karunya Ship Management,1,0,0.0,rebuilt
 2025-10-29,PT Karunya Ship Management,1,0,0.0,rebuilt
@@ -615,6 +624,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,PT Karunya Ship Management,13,0,0.0,recorded
 2026-11-08,PT Karunya Ship Management,13,0,0.0,recorded
 2026-11-09,PT Karunya Ship Management,13,0,0.0,recorded
+2026-11-10,PT Karunya Ship Management,13,0,0.0,recorded
 2025-10-15,Spar Synergy Ship Management Private Limited,0,0,,rebuilt
 2025-10-22,Spar Synergy Ship Management Private Limited,114,2,1.8,rebuilt
 2025-10-29,Spar Synergy Ship Management Private Limited,114,4,3.5,rebuilt
@@ -682,6 +692,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Spar Synergy Ship Management Private Limited,173,154,89.0,recorded
 2026-11-08,Spar Synergy Ship Management Private Limited,173,154,89.0,recorded
 2026-11-09,Spar Synergy Ship Management Private Limited,173,154,89.0,recorded
+2026-11-10,Spar Synergy Ship Management Private Limited,173,154,89.0,recorded
 2025-10-15,Synergy Denmark A/S,7,0,0.0,rebuilt
 2025-10-22,Synergy Denmark A/S,103,5,4.9,rebuilt
 2025-10-29,Synergy Denmark A/S,103,7,6.8,rebuilt
@@ -749,6 +760,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Denmark A/S,274,81,29.6,recorded
 2026-11-08,Synergy Denmark A/S,274,81,29.6,recorded
 2026-11-09,Synergy Denmark A/S,274,81,29.6,recorded
+2026-11-10,Synergy Denmark A/S,274,81,29.6,recorded
 2025-10-15,Synergy Korea Co Ltd,0,0,,rebuilt
 2025-10-22,Synergy Korea Co Ltd,35,0,0.0,rebuilt
 2025-10-29,Synergy Korea Co Ltd,35,0,0.0,rebuilt
@@ -816,6 +828,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Korea Co Ltd,109,35,32.1,recorded
 2026-11-08,Synergy Korea Co Ltd,109,35,32.1,recorded
 2026-11-09,Synergy Korea Co Ltd,109,35,32.1,recorded
+2026-11-10,Synergy Korea Co Ltd,109,35,32.1,recorded
 2025-10-15,Synergy Marine (Singapore) pre ltd,0,0,,rebuilt
 2025-10-22,Synergy Marine (Singapore) pre ltd,50,3,6.0,rebuilt
 2025-10-29,Synergy Marine (Singapore) pre ltd,50,6,12.0,rebuilt
@@ -883,6 +896,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Marine (Singapore) pre ltd,85,59,69.4,recorded
 2026-11-08,Synergy Marine (Singapore) pre ltd,85,59,69.4,recorded
 2026-11-09,Synergy Marine (Singapore) pre ltd,85,59,69.4,recorded
+2026-11-10,Synergy Marine (Singapore) pre ltd,85,59,69.4,recorded
 2025-10-15,Synergy Marine Bulk Pte Ltd,0,0,,rebuilt
 2025-10-22,Synergy Marine Bulk Pte Ltd,449,0,0.0,rebuilt
 2025-10-29,Synergy Marine Bulk Pte Ltd,449,5,1.1,rebuilt
@@ -950,6 +964,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Marine Bulk Pte Ltd,992,505,50.9,recorded
 2026-11-08,Synergy Marine Bulk Pte Ltd,992,505,50.9,recorded
 2026-11-09,Synergy Marine Bulk Pte Ltd,992,506,51.0,recorded
+2026-11-10,Synergy Marine Bulk Pte Ltd,992,506,51.0,recorded
 2025-10-15,Synergy Marine Copenhagen AS,0,0,,rebuilt
 2025-10-22,Synergy Marine Copenhagen AS,124,1,0.8,rebuilt
 2025-10-29,Synergy Marine Copenhagen AS,124,8,6.5,rebuilt
@@ -1017,6 +1032,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Marine Copenhagen AS,185,160,86.5,recorded
 2026-11-08,Synergy Marine Copenhagen AS,185,160,86.5,recorded
 2026-11-09,Synergy Marine Copenhagen AS,185,160,86.5,recorded
+2026-11-10,Synergy Marine Copenhagen AS,185,160,86.5,recorded
 2025-10-15,Synergy Marine Germany GmbH,1,0,0.0,rebuilt
 2025-10-22,Synergy Marine Germany GmbH,169,2,1.2,rebuilt
 2025-10-29,Synergy Marine Germany GmbH,169,5,3.0,rebuilt
@@ -1084,6 +1100,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Marine Germany GmbH,249,157,63.1,recorded
 2026-11-08,Synergy Marine Germany GmbH,249,157,63.1,recorded
 2026-11-09,Synergy Marine Germany GmbH,249,157,63.1,recorded
+2026-11-10,Synergy Marine Germany GmbH,249,157,63.1,recorded
 2025-10-15,Synergy Marine Shanghai Limited,0,0,,rebuilt
 2025-10-22,Synergy Marine Shanghai Limited,36,0,0.0,rebuilt
 2025-10-29,Synergy Marine Shanghai Limited,36,0,0.0,rebuilt
@@ -1151,6 +1168,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Marine Shanghai Limited,217,41,18.9,recorded
 2026-11-08,Synergy Marine Shanghai Limited,217,41,18.9,recorded
 2026-11-09,Synergy Marine Shanghai Limited,217,41,18.9,recorded
+2026-11-10,Synergy Marine Shanghai Limited,217,41,18.9,recorded
 2025-10-15,Synergy Maritime Gas Pte. Ltd,0,0,,rebuilt
 2025-10-22,Synergy Maritime Gas Pte. Ltd,22,0,0.0,rebuilt
 2025-10-29,Synergy Maritime Gas Pte. Ltd,22,2,9.1,rebuilt
@@ -1218,6 +1236,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Maritime Gas Pte. Ltd,22,20,90.9,recorded
 2026-11-08,Synergy Maritime Gas Pte. Ltd,22,20,90.9,recorded
 2026-11-09,Synergy Maritime Gas Pte. Ltd,22,20,90.9,recorded
+2026-11-10,Synergy Maritime Gas Pte. Ltd,22,20,90.9,recorded
 2025-10-15,Synergy Maritime Private Limited,1,0,0.0,rebuilt
 2025-10-22,Synergy Maritime Private Limited,1900,40,2.1,rebuilt
 2025-10-29,Synergy Maritime Private Limited,1900,80,4.2,rebuilt
@@ -1256,22 +1275,22 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-06-17,Synergy Maritime Private Limited,2440,1034,42.4,rebuilt
 2026-06-24,Synergy Maritime Private Limited,2448,1081,44.2,rebuilt
 2026-07-01,Synergy Maritime Private Limited,2458,1124,45.7,rebuilt
-2026-07-08,Synergy Maritime Private Limited,2466,1160,47.0,rebuilt
-2026-07-15,Synergy Maritime Private Limited,2468,1184,48.0,rebuilt
-2026-07-22,Synergy Maritime Private Limited,2479,1238,49.9,rebuilt
-2026-07-29,Synergy Maritime Private Limited,2488,1297,52.1,rebuilt
-2026-08-05,Synergy Maritime Private Limited,2505,1334,53.3,rebuilt
-2026-08-12,Synergy Maritime Private Limited,2517,1362,54.1,rebuilt
-2026-08-19,Synergy Maritime Private Limited,2528,1418,56.1,rebuilt
-2026-08-26,Synergy Maritime Private Limited,2552,1438,56.3,rebuilt
-2026-09-02,Synergy Maritime Private Limited,2616,1486,56.8,rebuilt
-2026-09-09,Synergy Maritime Private Limited,2636,1528,58.0,rebuilt
-2026-09-16,Synergy Maritime Private Limited,2675,1606,60.0,rebuilt
-2026-09-23,Synergy Maritime Private Limited,2725,1640,60.2,rebuilt
-2026-09-30,Synergy Maritime Private Limited,2782,1690,60.7,rebuilt
-2026-10-07,Synergy Maritime Private Limited,2808,1721,61.3,rebuilt
-2026-10-14,Synergy Maritime Private Limited,2820,1745,61.9,rebuilt
-2026-10-21,Synergy Maritime Private Limited,2839,1768,62.3,rebuilt
+2026-07-08,Synergy Maritime Private Limited,2466,1159,47.0,rebuilt
+2026-07-15,Synergy Maritime Private Limited,2468,1183,47.9,rebuilt
+2026-07-22,Synergy Maritime Private Limited,2479,1237,49.9,rebuilt
+2026-07-29,Synergy Maritime Private Limited,2488,1296,52.1,rebuilt
+2026-08-05,Synergy Maritime Private Limited,2505,1333,53.2,rebuilt
+2026-08-12,Synergy Maritime Private Limited,2517,1361,54.1,rebuilt
+2026-08-19,Synergy Maritime Private Limited,2528,1417,56.1,rebuilt
+2026-08-26,Synergy Maritime Private Limited,2552,1437,56.3,rebuilt
+2026-09-02,Synergy Maritime Private Limited,2616,1485,56.8,rebuilt
+2026-09-09,Synergy Maritime Private Limited,2636,1527,57.9,rebuilt
+2026-09-16,Synergy Maritime Private Limited,2675,1605,60.0,rebuilt
+2026-09-23,Synergy Maritime Private Limited,2725,1639,60.1,rebuilt
+2026-09-30,Synergy Maritime Private Limited,2782,1689,60.7,rebuilt
+2026-10-07,Synergy Maritime Private Limited,2808,1720,61.3,rebuilt
+2026-10-14,Synergy Maritime Private Limited,2820,1744,61.8,rebuilt
+2026-10-21,Synergy Maritime Private Limited,2839,1767,62.2,rebuilt
 2026-10-28,Synergy Maritime Private Limited,2947,1858,63.0,recorded
 2026-10-29,Synergy Maritime Private Limited,2931,1848,63.1,recorded
 2026-10-30,Synergy Maritime Private Limited,2931,1857,63.4,recorded
@@ -1285,6 +1304,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Maritime Private Limited,2864,1827,63.8,recorded
 2026-11-08,Synergy Maritime Private Limited,2864,1827,63.8,recorded
 2026-11-09,Synergy Maritime Private Limited,2864,1827,63.8,recorded
+2026-11-10,Synergy Maritime Private Limited,2864,1827,63.8,recorded
 2025-10-15,Synergy Mideast Ship Management DMCC,1,0,0.0,rebuilt
 2025-10-22,Synergy Mideast Ship Management DMCC,118,4,3.4,rebuilt
 2025-10-29,Synergy Mideast Ship Management DMCC,118,7,5.9,rebuilt
@@ -1352,6 +1372,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Mideast Ship Management DMCC,176,99,56.2,recorded
 2026-11-08,Synergy Mideast Ship Management DMCC,176,99,56.2,recorded
 2026-11-09,Synergy Mideast Ship Management DMCC,176,99,56.2,recorded
+2026-11-10,Synergy Mideast Ship Management DMCC,176,99,56.2,recorded
 2025-10-15,Synergy Navis marine Private Limited,1,0,0.0,rebuilt
 2025-10-22,Synergy Navis marine Private Limited,381,10,2.6,rebuilt
 2025-10-29,Synergy Navis marine Private Limited,381,26,6.8,rebuilt
@@ -1419,6 +1440,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Navis marine Private Limited,519,416,80.2,recorded
 2026-11-08,Synergy Navis marine Private Limited,519,416,80.2,recorded
 2026-11-09,Synergy Navis marine Private Limited,519,416,80.2,recorded
+2026-11-10,Synergy Navis marine Private Limited,519,416,80.2,recorded
 2025-10-15,Synergy Ocean Maritime Inc.,0,0,,rebuilt
 2025-10-22,Synergy Ocean Maritime Inc.,205,1,0.5,rebuilt
 2025-10-29,Synergy Ocean Maritime Inc.,205,3,1.5,rebuilt
@@ -1486,6 +1508,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Ocean Maritime Inc.,566,356,62.9,recorded
 2026-11-08,Synergy Ocean Maritime Inc.,566,356,62.9,recorded
 2026-11-09,Synergy Ocean Maritime Inc.,566,356,62.9,recorded
+2026-11-10,Synergy Ocean Maritime Inc.,566,356,62.9,recorded
 2025-10-15,Synergy Oceanic Services India Pvt Ltd,0,0,,rebuilt
 2025-10-22,Synergy Oceanic Services India Pvt Ltd,174,5,2.9,rebuilt
 2025-10-29,Synergy Oceanic Services India Pvt Ltd,174,9,5.2,rebuilt
@@ -1553,6 +1576,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Oceanic Services India Pvt Ltd,298,191,64.1,recorded
 2026-11-08,Synergy Oceanic Services India Pvt Ltd,298,191,64.1,recorded
 2026-11-09,Synergy Oceanic Services India Pvt Ltd,298,191,64.1,recorded
+2026-11-10,Synergy Oceanic Services India Pvt Ltd,298,191,64.1,recorded
 2025-10-15,Synergy Onyx Marine Pvt Ltd,1,0,0.0,rebuilt
 2025-10-22,Synergy Onyx Marine Pvt Ltd,199,5,2.5,rebuilt
 2025-10-29,Synergy Onyx Marine Pvt Ltd,199,9,4.5,rebuilt
@@ -1620,60 +1644,61 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Onyx Marine Pvt Ltd,261,185,70.9,recorded
 2026-11-08,Synergy Onyx Marine Pvt Ltd,261,185,70.9,recorded
 2026-11-09,Synergy Onyx Marine Pvt Ltd,261,185,70.9,recorded
+2026-11-10,Synergy Onyx Marine Pvt Ltd,261,185,70.9,recorded
 2025-10-15,Synergy Pacific Private Limited,2,0,0.0,rebuilt
-2025-10-22,Synergy Pacific Private Limited,2072,33,1.6,rebuilt
+2025-10-22,Synergy Pacific Private Limited,2072,34,1.6,rebuilt
 2025-10-29,Synergy Pacific Private Limited,2072,80,3.9,rebuilt
 2025-11-05,Synergy Pacific Private Limited,2072,115,5.6,rebuilt
-2025-11-12,Synergy Pacific Private Limited,2072,170,8.2,rebuilt
-2025-11-19,Synergy Pacific Private Limited,2110,227,10.8,rebuilt
-2025-11-26,Synergy Pacific Private Limited,2110,257,12.2,rebuilt
-2025-12-03,Synergy Pacific Private Limited,2111,305,14.4,rebuilt
-2025-12-10,Synergy Pacific Private Limited,2111,354,16.8,rebuilt
-2025-12-17,Synergy Pacific Private Limited,2111,385,18.2,rebuilt
-2025-12-24,Synergy Pacific Private Limited,2169,441,20.3,rebuilt
-2025-12-31,Synergy Pacific Private Limited,2169,472,21.8,rebuilt
-2026-01-07,Synergy Pacific Private Limited,2169,498,23.0,rebuilt
-2026-01-14,Synergy Pacific Private Limited,2169,521,24.0,rebuilt
-2026-01-21,Synergy Pacific Private Limited,2169,542,25.0,rebuilt
-2026-01-28,Synergy Pacific Private Limited,2169,553,25.5,rebuilt
-2026-02-04,Synergy Pacific Private Limited,2169,572,26.4,rebuilt
-2026-02-11,Synergy Pacific Private Limited,2169,594,27.4,rebuilt
-2026-02-18,Synergy Pacific Private Limited,2169,606,27.9,rebuilt
-2026-02-25,Synergy Pacific Private Limited,2170,633,29.2,rebuilt
-2026-03-04,Synergy Pacific Private Limited,2220,674,30.4,rebuilt
-2026-03-11,Synergy Pacific Private Limited,2220,712,32.1,rebuilt
-2026-03-18,Synergy Pacific Private Limited,2221,750,33.8,rebuilt
-2026-03-25,Synergy Pacific Private Limited,2286,808,35.3,rebuilt
-2026-04-01,Synergy Pacific Private Limited,2289,850,37.1,rebuilt
-2026-04-08,Synergy Pacific Private Limited,2321,889,38.3,rebuilt
-2026-04-15,Synergy Pacific Private Limited,2324,914,39.3,rebuilt
-2026-04-22,Synergy Pacific Private Limited,2338,947,40.5,rebuilt
-2026-04-29,Synergy Pacific Private Limited,2338,969,41.4,rebuilt
-2026-05-06,Synergy Pacific Private Limited,2362,1001,42.4,rebuilt
-2026-05-13,Synergy Pacific Private Limited,2363,1031,43.6,rebuilt
-2026-05-20,Synergy Pacific Private Limited,2367,1058,44.7,rebuilt
-2026-05-27,Synergy Pacific Private Limited,2372,1082,45.6,rebuilt
-2026-06-03,Synergy Pacific Private Limited,2375,1104,46.5,rebuilt
-2026-06-10,Synergy Pacific Private Limited,2381,1133,47.6,rebuilt
-2026-06-17,Synergy Pacific Private Limited,2502,1156,46.2,rebuilt
-2026-06-24,Synergy Pacific Private Limited,2509,1246,49.7,rebuilt
-2026-07-01,Synergy Pacific Private Limited,2524,1317,52.2,rebuilt
-2026-07-08,Synergy Pacific Private Limited,2538,1433,56.5,rebuilt
-2026-07-15,Synergy Pacific Private Limited,2550,1515,59.4,rebuilt
-2026-07-22,Synergy Pacific Private Limited,2554,1585,62.1,rebuilt
-2026-07-29,Synergy Pacific Private Limited,2563,1648,64.3,rebuilt
-2026-08-05,Synergy Pacific Private Limited,2577,1687,65.5,rebuilt
-2026-08-12,Synergy Pacific Private Limited,2586,1710,66.1,rebuilt
-2026-08-19,Synergy Pacific Private Limited,2602,1754,67.4,rebuilt
-2026-08-26,Synergy Pacific Private Limited,2631,1785,67.8,rebuilt
-2026-09-02,Synergy Pacific Private Limited,2675,1861,69.6,rebuilt
-2026-09-09,Synergy Pacific Private Limited,2699,1887,69.9,rebuilt
-2026-09-16,Synergy Pacific Private Limited,2712,1921,70.8,rebuilt
-2026-09-23,Synergy Pacific Private Limited,2748,1961,71.4,rebuilt
-2026-09-30,Synergy Pacific Private Limited,2794,2097,75.1,rebuilt
-2026-10-07,Synergy Pacific Private Limited,2813,2153,76.5,rebuilt
-2026-10-14,Synergy Pacific Private Limited,2830,2175,76.9,rebuilt
-2026-10-21,Synergy Pacific Private Limited,2846,2213,77.8,rebuilt
+2025-11-12,Synergy Pacific Private Limited,2072,169,8.2,rebuilt
+2025-11-19,Synergy Pacific Private Limited,2110,226,10.7,rebuilt
+2025-11-26,Synergy Pacific Private Limited,2110,256,12.1,rebuilt
+2025-12-03,Synergy Pacific Private Limited,2111,304,14.4,rebuilt
+2025-12-10,Synergy Pacific Private Limited,2111,353,16.7,rebuilt
+2025-12-17,Synergy Pacific Private Limited,2111,384,18.2,rebuilt
+2025-12-24,Synergy Pacific Private Limited,2169,440,20.3,rebuilt
+2025-12-31,Synergy Pacific Private Limited,2169,471,21.7,rebuilt
+2026-01-07,Synergy Pacific Private Limited,2169,497,22.9,rebuilt
+2026-01-14,Synergy Pacific Private Limited,2169,520,24.0,rebuilt
+2026-01-21,Synergy Pacific Private Limited,2169,541,24.9,rebuilt
+2026-01-28,Synergy Pacific Private Limited,2169,552,25.4,rebuilt
+2026-02-04,Synergy Pacific Private Limited,2169,571,26.3,rebuilt
+2026-02-11,Synergy Pacific Private Limited,2169,593,27.3,rebuilt
+2026-02-18,Synergy Pacific Private Limited,2169,605,27.9,rebuilt
+2026-02-25,Synergy Pacific Private Limited,2170,632,29.1,rebuilt
+2026-03-04,Synergy Pacific Private Limited,2220,673,30.3,rebuilt
+2026-03-11,Synergy Pacific Private Limited,2220,711,32.0,rebuilt
+2026-03-18,Synergy Pacific Private Limited,2221,749,33.7,rebuilt
+2026-03-25,Synergy Pacific Private Limited,2286,807,35.3,rebuilt
+2026-04-01,Synergy Pacific Private Limited,2289,849,37.1,rebuilt
+2026-04-08,Synergy Pacific Private Limited,2321,888,38.3,rebuilt
+2026-04-15,Synergy Pacific Private Limited,2324,913,39.3,rebuilt
+2026-04-22,Synergy Pacific Private Limited,2338,946,40.5,rebuilt
+2026-04-29,Synergy Pacific Private Limited,2338,968,41.4,rebuilt
+2026-05-06,Synergy Pacific Private Limited,2362,1000,42.3,rebuilt
+2026-05-13,Synergy Pacific Private Limited,2363,1030,43.6,rebuilt
+2026-05-20,Synergy Pacific Private Limited,2367,1057,44.7,rebuilt
+2026-05-27,Synergy Pacific Private Limited,2372,1081,45.6,rebuilt
+2026-06-03,Synergy Pacific Private Limited,2375,1102,46.4,rebuilt
+2026-06-10,Synergy Pacific Private Limited,2381,1131,47.5,rebuilt
+2026-06-17,Synergy Pacific Private Limited,2502,1154,46.1,rebuilt
+2026-06-24,Synergy Pacific Private Limited,2509,1244,49.6,rebuilt
+2026-07-01,Synergy Pacific Private Limited,2524,1315,52.1,rebuilt
+2026-07-08,Synergy Pacific Private Limited,2538,1431,56.4,rebuilt
+2026-07-15,Synergy Pacific Private Limited,2550,1512,59.3,rebuilt
+2026-07-22,Synergy Pacific Private Limited,2554,1582,61.9,rebuilt
+2026-07-29,Synergy Pacific Private Limited,2563,1645,64.2,rebuilt
+2026-08-05,Synergy Pacific Private Limited,2577,1684,65.3,rebuilt
+2026-08-12,Synergy Pacific Private Limited,2586,1707,66.0,rebuilt
+2026-08-19,Synergy Pacific Private Limited,2602,1751,67.3,rebuilt
+2026-08-26,Synergy Pacific Private Limited,2631,1782,67.7,rebuilt
+2026-09-02,Synergy Pacific Private Limited,2675,1858,69.5,rebuilt
+2026-09-09,Synergy Pacific Private Limited,2699,1883,69.8,rebuilt
+2026-09-16,Synergy Pacific Private Limited,2712,1917,70.7,rebuilt
+2026-09-23,Synergy Pacific Private Limited,2748,1957,71.2,rebuilt
+2026-09-30,Synergy Pacific Private Limited,2794,2093,74.9,rebuilt
+2026-10-07,Synergy Pacific Private Limited,2813,2149,76.4,rebuilt
+2026-10-14,Synergy Pacific Private Limited,2830,2171,76.7,rebuilt
+2026-10-21,Synergy Pacific Private Limited,2846,2209,77.6,rebuilt
 2026-10-28,Synergy Pacific Private Limited,2815,2305,81.9,recorded
 2026-10-29,Synergy Pacific Private Limited,2866,2338,81.6,recorded
 2026-10-30,Synergy Pacific Private Limited,2866,2344,81.8,recorded
@@ -1687,6 +1712,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Pacific Private Limited,2868,2362,82.4,recorded
 2026-11-08,Synergy Pacific Private Limited,2868,2364,82.4,recorded
 2026-11-09,Synergy Pacific Private Limited,2868,2368,82.6,recorded
+2026-11-10,Synergy Pacific Private Limited,2868,2376,82.8,recorded
 2025-10-15,Synergy Ship Arabia Inspection Company LLC,0,0,,rebuilt
 2025-10-22,Synergy Ship Arabia Inspection Company LLC,7,0,0.0,rebuilt
 2025-10-29,Synergy Ship Arabia Inspection Company LLC,7,0,0.0,rebuilt
@@ -1754,6 +1780,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Synergy Ship Arabia Inspection Company LLC,515,65,12.6,recorded
 2026-11-08,Synergy Ship Arabia Inspection Company LLC,515,73,14.2,recorded
 2026-11-09,Synergy Ship Arabia Inspection Company LLC,515,82,15.9,recorded
+2026-11-10,Synergy Ship Arabia Inspection Company LLC,515,88,17.1,recorded
 2026-10-28,Taiwan Synergy Marine Co. Ltd.,0,0,,recorded
 2026-10-29,Taiwan Synergy Marine Co. Ltd.,0,0,,recorded
 2026-10-30,Taiwan Synergy Marine Co. Ltd.,0,0,,recorded
@@ -1767,6 +1794,7 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Taiwan Synergy Marine Co. Ltd.,0,0,,recorded
 2026-11-08,Taiwan Synergy Marine Co. Ltd.,0,0,,recorded
 2026-11-09,Taiwan Synergy Marine Co. Ltd.,0,0,,recorded
+2026-11-10,Taiwan Synergy Marine Co. Ltd.,0,0,,recorded
 2025-10-15,Wisdom Synergy Shipmanagement Pte Ltd,0,0,,rebuilt
 2025-10-22,Wisdom Synergy Shipmanagement Pte Ltd,48,1,2.1,rebuilt
 2025-10-29,Wisdom Synergy Shipmanagement Pte Ltd,48,1,2.1,rebuilt
@@ -1834,3 +1862,4 @@ date,doc,onboard,registered,coverage_pct,kind
 2026-11-07,Wisdom Synergy Shipmanagement Pte Ltd,133,68,51.1,recorded
 2026-11-08,Wisdom Synergy Shipmanagement Pte Ltd,133,68,51.1,recorded
 2026-11-09,Wisdom Synergy Shipmanagement Pte Ltd,133,68,51.1,recorded
+2026-11-10,Wisdom Synergy Shipmanagement Pte Ltd,133,68,51.1,recorded
