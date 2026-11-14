@@ -364,6 +364,9 @@ html,body{background:var(--page);color:var(--color-fg)}
   <section data-page="ops" hidden>
     <p class="note-inline">Platform administration, from the 16 Oct snapshot until these tables are in the daily export.</p>
     <div class="kpis o-kpis"></div>
+    <div class="card" id="fbact"><div class="bar"><h2 style="margin:0">Course feedback needing action</h2>
+        <span><label class="note-inline">Action <select class="o-fa"></select></label> <label class="note-inline">Owner <select class="o-fo"></select></label> <label class="note-inline">Search <input type="search" class="o-fq" placeholder="Course, vessel, name or words"></label></span></div>
+      <p class="note o-fnote"></p><div class="chart o-fchart"></div><div class="tablebox" style="max-height:30rem"><table class="hier o-ftbl"></table></div></div>
     <div class="card"><div class="bar"><h2 style="margin:0">Self-signup requests</h2><label class="note-inline">Show <select class="o-sst"><option value="Pending approval">Pending approval</option><option value="">All</option><option>Email not verified</option><option>Approved</option><option>Rejected</option></select></label></div>
       <p class="note o-snote"></p><div class="tablebox" style="max-height:24rem"><table class="hier o-stbl"></table></div></div>
     <div class="card"><div class="bar"><h2 style="margin:0">Support requests</h2><label class="note-inline">Topic <select class="o-top"></select></label></div>
@@ -391,6 +394,8 @@ html,body{background:var(--page);color:var(--color-fg)}
     <p>Last login from the user record; <b>App</b> = has a mobile push token. <b>Dormant</b> = registered but not logged in for over 30 days. Until the daily users file carries the last-login field, this tab shows the 16 Oct snapshot.</p>
     <h2>Content</h2>
     <p>Structure (lessons, videos, PDFs, quizzes, questions, pass mark, minutes) from the latest published version of each course. Video languages count all language versions of the course videos; subtitle languages come from the subtitle files. Nationality is read from the employee ID prefix (IN, PH, CN, ID…).</p>
+    <h2>Course feedback needing action</h2>
+    <p>On the LMS operations tab. Every written feedback comment is checked by keyword rules; a comment is listed when it reports a problem or makes a concrete request, and plain praise is left out. Types: quiz or answer marked wrong, quiz format, content error or outdated, platform or playback problem, onboard internet or data access, language or translation, shorten or re-pace, add or improve content, and low rating (2 stars or less) with a comment. Each type has a suggested owner. The rules can miss a comment or include one that needs no action, and the list does not track whether an item has been dealt with.</p>
     <h2>Data</h2>
     <p class="ins-datanote"></p>
   </section>
@@ -943,8 +948,11 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
     let O = null, wired = false;
     async function render() {
       if (!O) {
-        const ks = ['ins_signups.csv', 'ins_support.csv', 'ins_vessels.csv', 'ins_imports.csv', 'ins_reportmails.csv', 'ins_deleted.csv'];
-        const v = await Promise.all(ks.map(get)); O = { sg: v[0], sp: v[1], vs: v[2], im: v[3], rm: v[4], del: v[5] };
+        const ks = ['ins_signups.csv', 'ins_support.csv', 'ins_vessels.csv', 'ins_imports.csv', 'ins_reportmails.csv', 'ins_deleted.csv', 'ins_fbact.csv'];
+        const v = await Promise.all(ks.map(get)); O = { sg: v[0], sp: v[1], vs: v[2], im: v[3], rm: v[4], del: v[5], fa: v[6] };
+        const uq = (k) => [...new Set(O.fa.map((r) => r[k]))].sort();
+        $('.o-fa').replaceChildren(el('option', { value: '' }, 'All types'), ...uq('action').map((t) => el('option', { value: t }, t)));
+        $('.o-fo').replaceChildren(el('option', { value: '' }, 'All owners'), ...uq('owner').map((t) => el('option', { value: t }, t)));
         const topics = [...new Set(O.sp.map((r) => r.topic))].sort();
         $('.o-top').replaceChildren(el('option', { value: '' }, 'All topics'), ...topics.map((t) => el('option', { value: t }, t)));
       }
@@ -952,7 +960,9 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
       const act = O.vs.filter((r) => r.active === 'True');
       const issue = (r) => r.summary_email === 'No' || r.admin_email_set === 'No';
       const pend = O.sg.filter((r) => r.status === 'Pending approval');
+      const cut30 = new Date(new Date(META.rep + 'T00:00:00Z') - 30 * 864e5).toISOString().slice(0, 10);
       kpis($('.o-kpis'), [
+        ['Feedback needing action', int(O.fa.length), `${int(cnt(O.fa, (r) => r.date >= cut30))} in the last 30 days · ${int(cnt(O.fa, (r) => r.action === 'Quiz or answer marked wrong'))} quiz answers disputed`],
         ['Signups awaiting approval', int(pend.length), pend.length ? `oldest ${fmtD(d3.min(pend, (r) => r.requested))}` : ''],
         ['Signups, email not verified', int(cnt(O.sg, (r) => r.status === 'Email not verified')), 'cannot log in yet'],
         ['Support requests', int(O.sp.length), `${int(cnt(O.sp, (r) => r.topic === 'Password / login'))} about password or login`],
@@ -960,6 +970,13 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
         ['Bulk imports', int(O.im.length), `${int(cnt(O.im, (r) => r.status !== 'success'))} failed`],
         ['Accounts deleted', int(d3.sum(O.del, (r) => +r.n)), O.del.length ? `${new Date(d3.min(O.del, (r) => r.month) + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })} to ${new Date(d3.max(O.del, (r) => r.month) + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}` : ''],
       ]);
+      const fa = $('.o-fa').value, fo = $('.o-fo').value, fq = $('.o-fq').value.trim().toLowerCase();
+      const fr = O.fa.filter((r) => (!fa || r.action === fa || (r.also || '').split('; ').includes(fa)) && (!fo || r.owner === fo) && (!fq || (r.course + ' ' + r.comment + ' ' + r.name + ' ' + r.vessel + ' ' + r.doc + ' ' + r.employee_id).toLowerCase().includes(fq)));
+      $('.o-fnote').textContent = `${int(fr.length)} of ${int(O.fa.length)} comments. Written feedback that reports a problem or asks for a change, sorted newest first, with a suggested owner. Picked by keyword rules, so check each before acting; this list does not track what has been done.`;
+      bars($('.o-fchart'), d3.rollups(O.fa, (v) => v.length, (r) => r.action).map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n), { aria: 'Feedback needing action by type', lw: 230 });
+      table($('.o-ftbl'), [{ h: 'Date', k: 'date', f: (r) => fmtD(r.date), x: (r) => r.date }, { h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Action needed', k: 'action', num: false, f: (r) => chip(r.action, r.owner === 'LMS team' ? 'x' : r.owner === 'Content team' ? '1' : 'm') },
+        { h: 'Owner', k: 'owner', num: false }, { h: 'Comment', k: 'comment', num: false, w: 1 }, { h: 'Stars', k: 'rating', cls: 'num' }, { h: 'Also', k: 'also', num: false, w: 1 },
+        { h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false }, { h: 'DoC', k: 'doc', num: false, w: 1 }, { h: 'Category', k: 'category', num: false }], fr, { sortK: 'date' });
       const sv = $('.o-sst').value;
       const sg = sv ? O.sg.filter((r) => r.status === sv) : O.sg;
       $('.o-snote').textContent = `${int(sg.length)} request${sg.length === 1 ? '' : 's'}. Approved requests were decided in a median of ${int(d3.median(O.sg.filter((r) => r.wait_days !== '' && (r.status === 'Approved' || r.status === 'Rejected')), (r) => +r.wait_days))} day(s).`;
@@ -976,7 +993,8 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
       table(t1, [{ h: 'Sent on', k: 'month', f: (r) => fmtD(r.month) }, { h: 'Status', k: 'status', num: false }, { h: 'Emails', k: 'n', cls: 'num' }], O.rm, { sortK: 'month' });
       table(t2, [{ h: 'Month', k: 'month', num: false }, { h: 'Accounts deleted', k: 'n', cls: 'num' }], O.del, { sortK: 'month' });
       $('.o-misc').replaceChildren(el('p', { class: 'note' }, 'Report and summary emails sent by the platform:'), el('div', { class: 'tablebox', style: 'max-height:14rem' }, t1), el('p', { class: 'note', style: 'margin-top:var(--cds-gap-md)' }, 'User accounts deleted by admins:'), el('div', { class: 'tablebox' }, t2));
-      if (!wired) { wired = true; ['.o-sst', '.o-top', '.o-vf'].forEach((s) => $(s).addEventListener('change', render));
+      if (!wired) { wired = true; ['.o-sst', '.o-top', '.o-vf', '.o-fa', '.o-fo'].forEach((s) => $(s).addEventListener('change', render)); $('.o-fq').addEventListener('input', render);
+        addDl('.o-ftbl', () => ({ title: 'Course feedback needing action', rows: $('.o-ftbl')._rows(), ctx: `Action: ${$('.o-fa').value || 'all'} · owner: ${$('.o-fo').value || 'all'}${$('.o-fq').value ? ' · search: ' + $('.o-fq').value : ''} · feedback to ${repD}` }));
         const opt = (sel) => $(sel).options[$(sel).selectedIndex].text;
         addDl('.o-stbl', () => ({ title: 'Self-signup requests', rows: $('.o-stbl')._rows(), ctx: `Show: ${opt('.o-sst')} · ${SNAP()}` }));
         addDl('.o-ptbl', () => ({ title: 'Support requests', rows: $('.o-ptbl')._rows(), ctx: `Topic: ${opt('.o-top')} · ${SNAP()}` }));
