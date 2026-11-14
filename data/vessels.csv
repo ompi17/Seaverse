@@ -223,10 +223,10 @@ Genco Constellation,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier
 Genco Constellation,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,21,0,23,2,8,3,21,21,216.0,5.1,3,14.3,0.93,4.03,250,13,87.5,On target
 Genco Constellation,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,21,0,23,2,8,3,23,23,197.6,5.1,3,13.0,0.85,3.68,250,15,87.5,On target
 Genco Constellation,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,21,0,23,2,8,3,8,8,553.2,82.2,3,37.5,2.43,10.57,250,0,87.5,On target
-Genco Courageous,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,16,2,19,5,6,2,24,19,267.1,3.1,2,8.3,0.05,0.21,15,18,66.7,On target
-Genco Courageous,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,16,2,19,5,6,2,16,14,398.0,4.0,2,12.5,0.07,0.32,15,10,66.7,On target
-Genco Courageous,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,16,2,19,5,6,2,19,19,337.4,4.9,2,10.5,0.06,0.27,15,13,66.7,On target
-Genco Courageous,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,16,2,19,5,6,2,6,6,1045.8,16.9,2,33.3,0.19,0.85,15,0,66.7,On target
+Genco Courageous,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,20,2,19,1,6,2,24,19,267.1,3.1,2,8.3,0.05,0.21,15,18,83.3,On target
+Genco Courageous,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,20,2,19,1,6,2,20,18,319.8,3.2,2,10.0,0.06,0.25,15,14,83.3,On target
+Genco Courageous,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,20,2,19,1,6,2,19,19,337.4,4.9,2,10.5,0.06,0.27,15,13,83.3,On target
+Genco Courageous,Active,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,24,20,2,19,1,6,2,6,6,1045.8,16.9,2,33.3,0.19,0.85,15,0,83.3,On target
 Genco Defender,All onboard,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,31,13,1,20,8,2,1,31,20,44.8,4.1,1,3.2,0.17,0.74,68,29,41.9,Low activity
 Genco Defender,Registered,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,31,13,1,20,8,2,1,13,12,101.4,9.5,1,7.7,0.41,1.77,68,11,41.9,On target
 Genco Defender,Engaged,Genco-Synergy Bulk Carriers Pvt Ltd,Bulk Carrier,31,13,1,20,8,2,1,20,20,69.5,9.1,1,5.0,0.26,1.15,68,18,41.9,Below target
@@ -955,10 +955,10 @@ JNS Friendship,All onboard,Synergy Marine Shanghai Limited,Bulk Carrier,20,6,0,7
 JNS Friendship,Registered,Synergy Marine Shanghai Limited,Bulk Carrier,20,6,0,7,1,5,3,6,6,106.4,70.8,3,50.0,0.48,2.09,37,1,30.0,On target
 JNS Friendship,Engaged,Synergy Marine Shanghai Limited,Bulk Carrier,20,6,0,7,1,5,3,7,7,91.8,40.0,3,42.9,0.41,1.79,37,2,30.0,Near target
 JNS Friendship,Active,Synergy Marine Shanghai Limited,Bulk Carrier,20,6,0,7,1,5,3,5,5,127.7,101.5,3,60.0,0.58,2.5,37,0,30.0,On target
-JNS Ocean,All onboard,Synergy Marine Shanghai Limited,Bulk Carrier,23,0,0,0,0,0,0,23,0,0.0,0.0,0,0.0,0.0,0.0,0,23,0.0,No assessable crew
-JNS Ocean,Registered,Synergy Marine Shanghai Limited,Bulk Carrier,23,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
-JNS Ocean,Engaged,Synergy Marine Shanghai Limited,Bulk Carrier,23,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
-JNS Ocean,Active,Synergy Marine Shanghai Limited,Bulk Carrier,23,0,0,0,0,0,0,0,0,,,0,,,,0,0,0.0,No assessable crew
+JNS Ocean,All onboard,Synergy Marine Shanghai Limited,Bulk Carrier,23,1,1,0,0,0,0,23,0,0.0,0.0,0,0.0,0.0,0.0,0,23,4.3,No assessable crew
+JNS Ocean,Registered,Synergy Marine Shanghai Limited,Bulk Carrier,23,1,1,0,0,0,0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1,4.3,No assessable crew
+JNS Ocean,Engaged,Synergy Marine Shanghai Limited,Bulk Carrier,23,1,1,0,0,0,0,0,0,,,0,,,,0,0,4.3,No assessable crew
+JNS Ocean,Active,Synergy Marine Shanghai Limited,Bulk Carrier,23,1,1,0,0,0,0,0,0,,,0,,,,0,0,4.3,No assessable crew
 JNS Prosperity,All onboard,Synergy Marine Shanghai Limited,Bulk Carrier,20,5,0,5,0,1,0,20,5,5.4,0.0,0,0.0,0.0,0.02,1,19,25.0,Low activity
 JNS Prosperity,Registered,Synergy Marine Shanghai Limited,Bulk Carrier,20,5,0,5,0,1,0,5,5,21.4,5.3,0,0.0,0.02,0.07,1,4,25.0,Low activity
 JNS Prosperity,Engaged,Synergy Marine Shanghai Limited,Bulk Carrier,20,5,0,5,0,1,0,5,5,21.4,5.3,0,0.0,0.02,0.07,1,4,25.0,Low activity
@@ -1151,10 +1151,10 @@ Dee4 Juniper,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,17
 Dee4 Juniper,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,17,10,1,10,1,3,1,10,9,179.9,4.7,1,10.0,0.78,3.38,100,7,58.8,On target
 Dee4 Juniper,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,17,10,1,10,1,3,1,10,10,181.6,11.0,1,10.0,0.78,3.38,100,7,58.8,On target
 Dee4 Juniper,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,17,10,1,10,1,3,1,3,3,567.5,50.7,1,33.3,2.59,11.27,100,0,58.8,On target
-Dee4 Kastania,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,16,10,0,13,3,3,1,16,13,20.2,9.6,1,6.2,0.04,0.19,9,13,62.5,Low activity
-Dee4 Kastania,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,16,10,0,13,3,3,1,10,10,30.2,17.0,1,10.0,0.07,0.3,9,7,62.5,Low activity
-Dee4 Kastania,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,16,10,0,13,3,3,1,13,13,24.9,15.5,1,7.7,0.05,0.23,9,10,62.5,Low activity
-Dee4 Kastania,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,16,10,0,13,3,3,1,3,3,56.7,51.6,1,33.3,0.23,1.01,9,0,62.5,Below target
+Dee4 Kastania,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,15,9,0,12,3,3,1,15,12,17.1,4.0,1,6.7,0.05,0.2,9,12,60.0,Low activity
+Dee4 Kastania,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,15,9,0,12,3,3,1,9,9,26.1,16.9,1,11.1,0.08,0.34,9,6,60.0,Low activity
+Dee4 Kastania,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,15,9,0,12,3,3,1,12,12,21.4,15.3,1,8.3,0.06,0.25,9,9,60.0,Low activity
+Dee4 Kastania,Active,Synergy Maritime Private Limited,Chemical/Oil Tanker,15,9,0,12,3,3,1,3,3,56.7,51.6,1,33.3,0.23,1.01,9,0,60.0,Below target
 Dee4 Larch,All onboard,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,19,3,16,0,9,4,20,16,92.3,16.3,4,20.0,0.39,1.69,100,11,95.0,Near target
 Dee4 Larch,Registered,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,19,3,16,0,9,4,19,16,97.1,16.9,4,21.1,0.41,1.78,100,10,95.0,Near target
 Dee4 Larch,Engaged,Synergy Maritime Private Limited,Chemical/Oil Tanker,20,19,3,16,0,9,4,16,16,115.3,34.5,4,25.0,0.49,2.11,100,7,95.0,On target
@@ -2211,10 +2211,10 @@ Maersk Emerald,All onboard,Synergy Pacific Private Limited,Container,25,25,1,24,
 Maersk Emerald,Registered,Synergy Pacific Private Limited,Container,25,25,1,24,0,24,17,25,24,250.4,152.2,17,68.0,0.87,3.8,281,1,100.0,On target
 Maersk Emerald,Engaged,Synergy Pacific Private Limited,Container,25,25,1,24,0,24,17,24,24,260.8,160.6,17,70.8,0.91,3.96,281,0,100.0,On target
 Maersk Emerald,Active,Synergy Pacific Private Limited,Container,25,25,1,24,0,24,17,24,24,260.8,160.6,17,70.8,0.91,3.96,281,0,100.0,On target
-Maersk Eunapolis,All onboard,Synergy Pacific Private Limited,Container,22,17,1,17,1,4,2,22,17,557.5,11.5,2,9.1,0.43,1.88,122,18,77.3,On target
-Maersk Eunapolis,Registered,Synergy Pacific Private Limited,Container,22,17,1,17,1,4,2,17,16,720.3,23.4,2,11.8,0.56,2.43,122,13,77.3,On target
-Maersk Eunapolis,Engaged,Synergy Pacific Private Limited,Container,22,17,1,17,1,4,2,17,17,721.5,23.4,2,11.8,0.56,2.43,122,13,77.3,On target
-Maersk Eunapolis,Active,Synergy Pacific Private Limited,Container,22,17,1,17,1,4,2,4,4,2981.0,186.9,2,50.0,2.37,10.31,122,0,77.3,On target
+Maersk Eunapolis,All onboard,Synergy Pacific Private Limited,Container,21,16,1,16,1,3,1,21,16,570.4,3.9,1,4.8,0.39,1.69,105,18,76.2,On target
+Maersk Eunapolis,Registered,Synergy Pacific Private Limited,Container,21,16,1,16,1,3,1,16,15,747.4,21.3,1,6.2,0.51,2.22,105,13,76.2,On target
+Maersk Eunapolis,Engaged,Synergy Pacific Private Limited,Container,21,16,1,16,1,3,1,16,16,748.7,22.0,1,6.2,0.51,2.22,105,13,76.2,On target
+Maersk Eunapolis,Active,Synergy Pacific Private Limited,Container,21,16,1,16,1,3,1,3,3,3878.8,86.4,1,33.3,2.72,11.84,105,0,76.2,On target
 Maersk Everglades,All onboard,Synergy Pacific Private Limited,Container,18,18,4,14,0,3,0,18,14,9.5,1.7,0,0.0,0.02,0.08,4,15,100.0,Low activity
 Maersk Everglades,Registered,Synergy Pacific Private Limited,Container,18,18,4,14,0,3,0,18,14,9.5,1.7,0,0.0,0.02,0.08,4,15,100.0,Low activity
 Maersk Everglades,Engaged,Synergy Pacific Private Limited,Container,18,18,4,14,0,3,0,14,14,12.3,4.1,0,0.0,0.02,0.1,4,11,100.0,Low activity
@@ -2547,10 +2547,10 @@ JANA 510,All onboard,Synergy Ship Arabia Inspection Company LLC,Self-Propelled J
 JANA 510,Registered,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,16,4,0,4,0,3,3,4,4,6087.5,4565.6,3,75.0,0.31,1.35,16,1,25.0,On target
 JANA 510,Engaged,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,16,4,0,4,0,3,3,4,4,6087.5,4565.6,3,75.0,0.31,1.35,16,1,25.0,On target
 JANA 510,Active,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,16,4,0,4,0,3,3,3,3,8116.7,7609.4,3,100.0,0.41,1.8,16,0,25.0,On target
-JANA 511,All onboard,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,4,2,2,0,1,1,15,2,50.7,0.0,1,6.7,0.01,0.02,1,14,26.7,Below target
-JANA 511,Registered,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,4,2,2,0,1,1,4,2,190.2,0.0,1,25.0,0.02,0.08,1,3,26.7,On target
-JANA 511,Engaged,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,4,2,2,0,1,1,2,2,380.5,380.5,1,50.0,0.04,0.17,1,1,26.7,On target
-JANA 511,Active,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,4,2,2,0,1,1,1,1,760.9,760.9,1,100.0,0.08,0.34,1,0,26.7,On target
+JANA 511,All onboard,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,6,4,2,0,1,1,15,2,50.7,0.0,1,6.7,0.01,0.02,1,14,40.0,Below target
+JANA 511,Registered,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,6,4,2,0,1,1,6,2,126.8,0.0,1,16.7,0.01,0.06,1,5,40.0,On target
+JANA 511,Engaged,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,6,4,2,0,1,1,2,2,380.5,380.5,1,50.0,0.04,0.17,1,1,40.0,On target
+JANA 511,Active,Synergy Ship Arabia Inspection Company LLC,Self-Propelled Jack-Up Barge,15,6,4,2,0,1,1,1,1,760.9,760.9,1,100.0,0.08,0.34,1,0,40.0,On target
 JANA 8,All onboard,Synergy Ship Arabia Inspection Company LLC,Crew Boat,11,2,0,2,0,1,1,11,2,27.7,0.0,1,9.1,0.01,0.03,1,10,18.2,Low activity
 JANA 8,Registered,Synergy Ship Arabia Inspection Company LLC,Crew Boat,11,2,0,2,0,1,1,2,2,152.2,152.2,1,50.0,0.04,0.17,1,1,18.2,On target
 JANA 8,Engaged,Synergy Ship Arabia Inspection Company LLC,Crew Boat,11,2,0,2,0,1,1,2,2,152.2,152.2,1,50.0,0.04,0.17,1,1,18.2,On target
