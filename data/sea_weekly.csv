@@ -1,30 +1,30 @@
 week_start,week_end,doc,population,completions,people,per_person
-2026-08-16,2026-08-22,All DoCs,All onboard,3925,13030,0.301
-2026-08-23,2026-08-29,All DoCs,All onboard,3235,13030,0.248
-2026-08-30,2026-09-05,All DoCs,All onboard,4951,13030,0.38
-2026-09-06,2026-09-12,All DoCs,All onboard,2685,13030,0.206
-2026-09-13,2026-09-19,All DoCs,All onboard,5487,13030,0.421
-2026-09-20,2026-09-26,All DoCs,All onboard,4133,13030,0.317
-2026-09-27,2026-10-03,All DoCs,All onboard,3954,13030,0.303
-2026-10-04,2026-10-10,All DoCs,All onboard,2379,13030,0.183
-2026-10-11,2026-10-17,All DoCs,All onboard,2255,13030,0.173
-2026-10-18,2026-10-24,All DoCs,All onboard,2521,13030,0.193
-2026-10-25,2026-10-31,All DoCs,All onboard,2693,13030,0.207
-2026-11-01,2026-11-07,All DoCs,All onboard,2461,13030,0.189
-2026-11-08,2026-11-14,All DoCs,All onboard,2672,13030,0.205
-2026-08-16,2026-08-22,All DoCs,Registered,3925,7869,0.499
-2026-08-23,2026-08-29,All DoCs,Registered,3235,7869,0.411
-2026-08-30,2026-09-05,All DoCs,Registered,4951,7869,0.629
-2026-09-06,2026-09-12,All DoCs,Registered,2685,7869,0.341
-2026-09-13,2026-09-19,All DoCs,Registered,5487,7869,0.697
-2026-09-20,2026-09-26,All DoCs,Registered,4133,7869,0.525
-2026-09-27,2026-10-03,All DoCs,Registered,3954,7869,0.502
-2026-10-04,2026-10-10,All DoCs,Registered,2379,7869,0.302
-2026-10-11,2026-10-17,All DoCs,Registered,2255,7869,0.287
-2026-10-18,2026-10-24,All DoCs,Registered,2521,7869,0.32
-2026-10-25,2026-10-31,All DoCs,Registered,2693,7869,0.342
-2026-11-01,2026-11-07,All DoCs,Registered,2461,7869,0.313
-2026-11-08,2026-11-14,All DoCs,Registered,2672,7869,0.34
+2026-08-16,2026-08-22,All DoCs,All onboard,3925,13029,0.301
+2026-08-23,2026-08-29,All DoCs,All onboard,3235,13029,0.248
+2026-08-30,2026-09-05,All DoCs,All onboard,4951,13029,0.38
+2026-09-06,2026-09-12,All DoCs,All onboard,2685,13029,0.206
+2026-09-13,2026-09-19,All DoCs,All onboard,5487,13029,0.421
+2026-09-20,2026-09-26,All DoCs,All onboard,4133,13029,0.317
+2026-09-27,2026-10-03,All DoCs,All onboard,3954,13029,0.303
+2026-10-04,2026-10-10,All DoCs,All onboard,2379,13029,0.183
+2026-10-11,2026-10-17,All DoCs,All onboard,2255,13029,0.173
+2026-10-18,2026-10-24,All DoCs,All onboard,2521,13029,0.193
+2026-10-25,2026-10-31,All DoCs,All onboard,2693,13029,0.207
+2026-11-01,2026-11-07,All DoCs,All onboard,2461,13029,0.189
+2026-11-08,2026-11-14,All DoCs,All onboard,2672,13029,0.205
+2026-08-16,2026-08-22,All DoCs,Registered,3925,7871,0.499
+2026-08-23,2026-08-29,All DoCs,Registered,3235,7871,0.411
+2026-08-30,2026-09-05,All DoCs,Registered,4951,7871,0.629
+2026-09-06,2026-09-12,All DoCs,Registered,2685,7871,0.341
+2026-09-13,2026-09-19,All DoCs,Registered,5487,7871,0.697
+2026-09-20,2026-09-26,All DoCs,Registered,4133,7871,0.525
+2026-09-27,2026-10-03,All DoCs,Registered,3954,7871,0.502
+2026-10-04,2026-10-10,All DoCs,Registered,2379,7871,0.302
+2026-10-11,2026-10-17,All DoCs,Registered,2255,7871,0.286
+2026-10-18,2026-10-24,All DoCs,Registered,2521,7871,0.32
+2026-10-25,2026-10-31,All DoCs,Registered,2693,7871,0.342
+2026-11-01,2026-11-07,All DoCs,Registered,2461,7871,0.313
+2026-11-08,2026-11-14,All DoCs,Registered,2672,7871,0.339
 2026-08-16,2026-08-22,All DoCs,Engaged,3925,7707,0.509
 2026-08-23,2026-08-29,All DoCs,Engaged,3235,7707,0.42
 2026-08-30,2026-09-05,All DoCs,Engaged,4951,7707,0.642
@@ -532,19 +532,19 @@ week_start,week_end,doc,population,completions,people,per_person
 2026-10-25,2026-10-31,Synergy Denmark A/S,All onboard,25,283,0.088
 2026-11-01,2026-11-07,Synergy Denmark A/S,All onboard,30,283,0.106
 2026-11-08,2026-11-14,Synergy Denmark A/S,All onboard,15,283,0.053
-2026-08-16,2026-08-22,Synergy Denmark A/S,Registered,33,90,0.367
-2026-08-23,2026-08-29,Synergy Denmark A/S,Registered,68,90,0.756
-2026-08-30,2026-09-05,Synergy Denmark A/S,Registered,114,90,1.267
-2026-09-06,2026-09-12,Synergy Denmark A/S,Registered,10,90,0.111
-2026-09-13,2026-09-19,Synergy Denmark A/S,Registered,176,90,1.956
-2026-09-20,2026-09-26,Synergy Denmark A/S,Registered,14,90,0.156
-2026-09-27,2026-10-03,Synergy Denmark A/S,Registered,24,90,0.267
-2026-10-04,2026-10-10,Synergy Denmark A/S,Registered,13,90,0.144
-2026-10-11,2026-10-17,Synergy Denmark A/S,Registered,1,90,0.011
-2026-10-18,2026-10-24,Synergy Denmark A/S,Registered,4,90,0.044
-2026-10-25,2026-10-31,Synergy Denmark A/S,Registered,25,90,0.278
-2026-11-01,2026-11-07,Synergy Denmark A/S,Registered,30,90,0.333
-2026-11-08,2026-11-14,Synergy Denmark A/S,Registered,15,90,0.167
+2026-08-16,2026-08-22,Synergy Denmark A/S,Registered,33,91,0.363
+2026-08-23,2026-08-29,Synergy Denmark A/S,Registered,68,91,0.747
+2026-08-30,2026-09-05,Synergy Denmark A/S,Registered,114,91,1.253
+2026-09-06,2026-09-12,Synergy Denmark A/S,Registered,10,91,0.11
+2026-09-13,2026-09-19,Synergy Denmark A/S,Registered,176,91,1.934
+2026-09-20,2026-09-26,Synergy Denmark A/S,Registered,14,91,0.154
+2026-09-27,2026-10-03,Synergy Denmark A/S,Registered,24,91,0.264
+2026-10-04,2026-10-10,Synergy Denmark A/S,Registered,13,91,0.143
+2026-10-11,2026-10-17,Synergy Denmark A/S,Registered,1,91,0.011
+2026-10-18,2026-10-24,Synergy Denmark A/S,Registered,4,91,0.044
+2026-10-25,2026-10-31,Synergy Denmark A/S,Registered,25,91,0.275
+2026-11-01,2026-11-07,Synergy Denmark A/S,Registered,30,91,0.33
+2026-11-08,2026-11-14,Synergy Denmark A/S,Registered,15,91,0.165
 2026-08-16,2026-08-22,Synergy Denmark A/S,Engaged,33,105,0.314
 2026-08-23,2026-08-29,Synergy Denmark A/S,Engaged,68,105,0.648
 2026-08-30,2026-09-05,Synergy Denmark A/S,Engaged,114,105,1.086
@@ -1247,45 +1247,45 @@ week_start,week_end,doc,population,completions,people,per_person
 2026-10-25,2026-10-31,Synergy Onyx Marine Pvt Ltd,Active,20,74,0.27
 2026-11-01,2026-11-07,Synergy Onyx Marine Pvt Ltd,Active,15,74,0.203
 2026-11-08,2026-11-14,Synergy Onyx Marine Pvt Ltd,Active,45,74,0.608
-2026-08-16,2026-08-22,Synergy Pacific Private Limited,All onboard,1109,2881,0.385
-2026-08-23,2026-08-29,Synergy Pacific Private Limited,All onboard,1109,2881,0.385
-2026-08-30,2026-09-05,Synergy Pacific Private Limited,All onboard,1138,2881,0.395
-2026-09-06,2026-09-12,Synergy Pacific Private Limited,All onboard,436,2881,0.151
-2026-09-13,2026-09-19,Synergy Pacific Private Limited,All onboard,1528,2881,0.53
-2026-09-20,2026-09-26,Synergy Pacific Private Limited,All onboard,1426,2881,0.495
-2026-09-27,2026-10-03,Synergy Pacific Private Limited,All onboard,1546,2881,0.537
-2026-10-04,2026-10-10,Synergy Pacific Private Limited,All onboard,714,2881,0.248
-2026-10-11,2026-10-17,Synergy Pacific Private Limited,All onboard,747,2881,0.259
-2026-10-18,2026-10-24,Synergy Pacific Private Limited,All onboard,1017,2881,0.353
-2026-10-25,2026-10-31,Synergy Pacific Private Limited,All onboard,1075,2881,0.373
-2026-11-01,2026-11-07,Synergy Pacific Private Limited,All onboard,942,2881,0.327
-2026-11-08,2026-11-14,Synergy Pacific Private Limited,All onboard,1082,2881,0.376
-2026-08-16,2026-08-22,Synergy Pacific Private Limited,Registered,1109,2395,0.463
-2026-08-23,2026-08-29,Synergy Pacific Private Limited,Registered,1109,2395,0.463
-2026-08-30,2026-09-05,Synergy Pacific Private Limited,Registered,1138,2395,0.475
-2026-09-06,2026-09-12,Synergy Pacific Private Limited,Registered,436,2395,0.182
-2026-09-13,2026-09-19,Synergy Pacific Private Limited,Registered,1528,2395,0.638
-2026-09-20,2026-09-26,Synergy Pacific Private Limited,Registered,1426,2395,0.595
-2026-09-27,2026-10-03,Synergy Pacific Private Limited,Registered,1546,2395,0.646
-2026-10-04,2026-10-10,Synergy Pacific Private Limited,Registered,714,2395,0.298
-2026-10-11,2026-10-17,Synergy Pacific Private Limited,Registered,747,2395,0.312
-2026-10-18,2026-10-24,Synergy Pacific Private Limited,Registered,1017,2395,0.425
-2026-10-25,2026-10-31,Synergy Pacific Private Limited,Registered,1075,2395,0.449
-2026-11-01,2026-11-07,Synergy Pacific Private Limited,Registered,942,2395,0.393
-2026-11-08,2026-11-14,Synergy Pacific Private Limited,Registered,1082,2395,0.452
-2026-08-16,2026-08-22,Synergy Pacific Private Limited,Engaged,1109,2305,0.481
-2026-08-23,2026-08-29,Synergy Pacific Private Limited,Engaged,1109,2305,0.481
-2026-08-30,2026-09-05,Synergy Pacific Private Limited,Engaged,1138,2305,0.494
-2026-09-06,2026-09-12,Synergy Pacific Private Limited,Engaged,436,2305,0.189
-2026-09-13,2026-09-19,Synergy Pacific Private Limited,Engaged,1528,2305,0.663
-2026-09-20,2026-09-26,Synergy Pacific Private Limited,Engaged,1426,2305,0.619
-2026-09-27,2026-10-03,Synergy Pacific Private Limited,Engaged,1546,2305,0.671
-2026-10-04,2026-10-10,Synergy Pacific Private Limited,Engaged,714,2305,0.31
-2026-10-11,2026-10-17,Synergy Pacific Private Limited,Engaged,747,2305,0.324
-2026-10-18,2026-10-24,Synergy Pacific Private Limited,Engaged,1017,2305,0.441
-2026-10-25,2026-10-31,Synergy Pacific Private Limited,Engaged,1075,2305,0.466
-2026-11-01,2026-11-07,Synergy Pacific Private Limited,Engaged,942,2305,0.409
-2026-11-08,2026-11-14,Synergy Pacific Private Limited,Engaged,1082,2305,0.469
+2026-08-16,2026-08-22,Synergy Pacific Private Limited,All onboard,1109,2880,0.385
+2026-08-23,2026-08-29,Synergy Pacific Private Limited,All onboard,1109,2880,0.385
+2026-08-30,2026-09-05,Synergy Pacific Private Limited,All onboard,1138,2880,0.395
+2026-09-06,2026-09-12,Synergy Pacific Private Limited,All onboard,436,2880,0.151
+2026-09-13,2026-09-19,Synergy Pacific Private Limited,All onboard,1528,2880,0.531
+2026-09-20,2026-09-26,Synergy Pacific Private Limited,All onboard,1426,2880,0.495
+2026-09-27,2026-10-03,Synergy Pacific Private Limited,All onboard,1546,2880,0.537
+2026-10-04,2026-10-10,Synergy Pacific Private Limited,All onboard,714,2880,0.248
+2026-10-11,2026-10-17,Synergy Pacific Private Limited,All onboard,747,2880,0.259
+2026-10-18,2026-10-24,Synergy Pacific Private Limited,All onboard,1017,2880,0.353
+2026-10-25,2026-10-31,Synergy Pacific Private Limited,All onboard,1075,2880,0.373
+2026-11-01,2026-11-07,Synergy Pacific Private Limited,All onboard,942,2880,0.327
+2026-11-08,2026-11-14,Synergy Pacific Private Limited,All onboard,1082,2880,0.376
+2026-08-16,2026-08-22,Synergy Pacific Private Limited,Registered,1109,2396,0.463
+2026-08-23,2026-08-29,Synergy Pacific Private Limited,Registered,1109,2396,0.463
+2026-08-30,2026-09-05,Synergy Pacific Private Limited,Registered,1138,2396,0.475
+2026-09-06,2026-09-12,Synergy Pacific Private Limited,Registered,436,2396,0.182
+2026-09-13,2026-09-19,Synergy Pacific Private Limited,Registered,1528,2396,0.638
+2026-09-20,2026-09-26,Synergy Pacific Private Limited,Registered,1426,2396,0.595
+2026-09-27,2026-10-03,Synergy Pacific Private Limited,Registered,1546,2396,0.645
+2026-10-04,2026-10-10,Synergy Pacific Private Limited,Registered,714,2396,0.298
+2026-10-11,2026-10-17,Synergy Pacific Private Limited,Registered,747,2396,0.312
+2026-10-18,2026-10-24,Synergy Pacific Private Limited,Registered,1017,2396,0.424
+2026-10-25,2026-10-31,Synergy Pacific Private Limited,Registered,1075,2396,0.449
+2026-11-01,2026-11-07,Synergy Pacific Private Limited,Registered,942,2396,0.393
+2026-11-08,2026-11-14,Synergy Pacific Private Limited,Registered,1082,2396,0.452
+2026-08-16,2026-08-22,Synergy Pacific Private Limited,Engaged,1109,2304,0.481
+2026-08-23,2026-08-29,Synergy Pacific Private Limited,Engaged,1109,2304,0.481
+2026-08-30,2026-09-05,Synergy Pacific Private Limited,Engaged,1138,2304,0.494
+2026-09-06,2026-09-12,Synergy Pacific Private Limited,Engaged,436,2304,0.189
+2026-09-13,2026-09-19,Synergy Pacific Private Limited,Engaged,1528,2304,0.663
+2026-09-20,2026-09-26,Synergy Pacific Private Limited,Engaged,1426,2304,0.619
+2026-09-27,2026-10-03,Synergy Pacific Private Limited,Engaged,1546,2304,0.671
+2026-10-04,2026-10-10,Synergy Pacific Private Limited,Engaged,714,2304,0.31
+2026-10-11,2026-10-17,Synergy Pacific Private Limited,Engaged,747,2304,0.324
+2026-10-18,2026-10-24,Synergy Pacific Private Limited,Engaged,1017,2304,0.441
+2026-10-25,2026-10-31,Synergy Pacific Private Limited,Engaged,1075,2304,0.467
+2026-11-01,2026-11-07,Synergy Pacific Private Limited,Engaged,942,2304,0.409
+2026-11-08,2026-11-14,Synergy Pacific Private Limited,Engaged,1082,2304,0.47
 2026-08-16,2026-08-22,Synergy Pacific Private Limited,Active,1079,1379,0.782
 2026-08-23,2026-08-29,Synergy Pacific Private Limited,Active,1109,1379,0.804
 2026-08-30,2026-09-05,Synergy Pacific Private Limited,Active,1138,1379,0.825
@@ -1325,19 +1325,19 @@ week_start,week_end,doc,population,completions,people,per_person
 2026-10-25,2026-10-31,Synergy Ship Arabia Inspection Company LLC,Registered,0,114,0.0
 2026-11-01,2026-11-07,Synergy Ship Arabia Inspection Company LLC,Registered,91,114,0.798
 2026-11-08,2026-11-14,Synergy Ship Arabia Inspection Company LLC,Registered,422,114,3.702
-2026-08-16,2026-08-22,Synergy Ship Arabia Inspection Company LLC,Engaged,5,89,0.056
-2026-08-23,2026-08-29,Synergy Ship Arabia Inspection Company LLC,Engaged,5,89,0.056
-2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,Engaged,0,89,0.0
-2026-09-06,2026-09-12,Synergy Ship Arabia Inspection Company LLC,Engaged,0,89,0.0
-2026-09-13,2026-09-19,Synergy Ship Arabia Inspection Company LLC,Engaged,0,89,0.0
-2026-09-20,2026-09-26,Synergy Ship Arabia Inspection Company LLC,Engaged,0,89,0.0
-2026-09-27,2026-10-03,Synergy Ship Arabia Inspection Company LLC,Engaged,0,89,0.0
-2026-10-04,2026-10-10,Synergy Ship Arabia Inspection Company LLC,Engaged,0,89,0.0
-2026-10-11,2026-10-17,Synergy Ship Arabia Inspection Company LLC,Engaged,14,89,0.157
-2026-10-18,2026-10-24,Synergy Ship Arabia Inspection Company LLC,Engaged,11,89,0.124
-2026-10-25,2026-10-31,Synergy Ship Arabia Inspection Company LLC,Engaged,0,89,0.0
-2026-11-01,2026-11-07,Synergy Ship Arabia Inspection Company LLC,Engaged,91,89,1.022
-2026-11-08,2026-11-14,Synergy Ship Arabia Inspection Company LLC,Engaged,422,89,4.742
+2026-08-16,2026-08-22,Synergy Ship Arabia Inspection Company LLC,Engaged,5,90,0.056
+2026-08-23,2026-08-29,Synergy Ship Arabia Inspection Company LLC,Engaged,5,90,0.056
+2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,Engaged,0,90,0.0
+2026-09-06,2026-09-12,Synergy Ship Arabia Inspection Company LLC,Engaged,0,90,0.0
+2026-09-13,2026-09-19,Synergy Ship Arabia Inspection Company LLC,Engaged,0,90,0.0
+2026-09-20,2026-09-26,Synergy Ship Arabia Inspection Company LLC,Engaged,0,90,0.0
+2026-09-27,2026-10-03,Synergy Ship Arabia Inspection Company LLC,Engaged,0,90,0.0
+2026-10-04,2026-10-10,Synergy Ship Arabia Inspection Company LLC,Engaged,0,90,0.0
+2026-10-11,2026-10-17,Synergy Ship Arabia Inspection Company LLC,Engaged,14,90,0.156
+2026-10-18,2026-10-24,Synergy Ship Arabia Inspection Company LLC,Engaged,11,90,0.122
+2026-10-25,2026-10-31,Synergy Ship Arabia Inspection Company LLC,Engaged,0,90,0.0
+2026-11-01,2026-11-07,Synergy Ship Arabia Inspection Company LLC,Engaged,91,90,1.011
+2026-11-08,2026-11-14,Synergy Ship Arabia Inspection Company LLC,Engaged,422,90,4.689
 2026-08-16,2026-08-22,Synergy Ship Arabia Inspection Company LLC,Active,5,76,0.066
 2026-08-23,2026-08-29,Synergy Ship Arabia Inspection Company LLC,Active,5,76,0.066
 2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,Active,0,76,0.0
