@@ -1,245 +1,245 @@
 vessel_type,doc,population,onboard,coverage_pct,people,assessable,mean_pct,median_pct,at_target,ok_pct,per_week,per_month,c90,zero_90d
-Bulk Carrier,All DoCs,All onboard,5413,53.0,5413,2830,80.2,0.0,671,12.4,0.24,1.04,16582,4282
-Chemical/Oil Tanker,All DoCs,All onboard,4157,70.2,4157,2876,87.2,6.2,632,15.2,0.29,1.25,15383,2573
-Container,All DoCs,All onboard,1015,75.4,1015,700,102.5,4.9,185,18.2,0.34,1.47,4405,724
-Crew Boat,All DoCs,All onboard,119,5.0,119,5,2.1,0.0,1,0.8,0.0,0.0,1,118
-Fast Support Intrevention Vessel,All DoCs,All onboard,17,52.9,17,7,208.9,0.0,7,41.2,0.1,0.42,21,10
-Gas Carrier,All DoCs,All onboard,862,74.2,862,639,91.1,5.1,130,15.1,0.25,1.09,2786,598
-Offshore Work / Support Vessel,All DoCs,All onboard,163,9.2,163,14,109.4,0.0,10,6.1,0.04,0.16,76,153
-Oil Tanker,All DoCs,All onboard,1038,54.3,1038,572,62.5,0.8,103,9.9,0.23,0.98,3006,830
-Self-Propelled Jack-Up Barge,All DoCs,All onboard,225,36.4,225,63,579.9,0.0,45,20.0,0.15,0.67,448,168
-Voith Mooring Tug,All DoCs,All onboard,20,10.0,20,1,4.8,0.0,0,0.0,0.01,0.03,2,19
-Bulk Carrier,All DoCs,Registered,5413,53.0,2870,2485,150.6,16.7,671,23.4,0.45,1.95,16582,1739
-Chemical/Oil Tanker,All DoCs,Registered,4157,70.2,2918,2661,123.8,24.2,632,21.7,0.41,1.78,15383,1334
-Container,All DoCs,Registered,1015,75.4,765,658,135.7,14.9,185,24.2,0.45,1.95,4405,474
-Crew Boat,All DoCs,Registered,119,5.0,6,5,42.3,0.0,1,16.7,0.01,0.06,1,5
-Fast Support Intrevention Vessel,All DoCs,Registered,17,52.9,9,7,394.6,338.2,7,77.8,0.18,0.79,21,2
-Gas Carrier,All DoCs,Registered,862,74.2,640,577,122.3,16.9,130,20.3,0.34,1.47,2786,376
-Offshore Work / Support Vessel,All DoCs,Registered,163,9.2,15,14,1188.5,608.8,10,66.7,0.39,1.71,76,5
-Oil Tanker,All DoCs,Registered,1038,54.3,564,496,114.3,13.0,103,18.3,0.41,1.8,3006,356
-Self-Propelled Jack-Up Barge,All DoCs,Registered,225,36.4,82,63,1591.1,251.2,45,54.9,0.42,1.85,448,25
-Voith Mooring Tug,All DoCs,Registered,20,10.0,2,1,47.6,47.6,0,0.0,0.08,0.34,2,1
-Bulk Carrier,All DoCs,Engaged,5413,53.0,2830,2830,153.4,16.9,671,23.7,0.46,1.98,16582,1699
-Chemical/Oil Tanker,All DoCs,Engaged,4157,70.2,2876,2876,126.0,26.1,632,22.0,0.42,1.81,15383,1292
-Container,All DoCs,Engaged,1015,75.4,700,700,148.6,19.2,185,26.4,0.49,2.13,4405,409
-Crew Boat,All DoCs,Engaged,119,5.0,5,5,50.7,0.0,1,20.0,0.02,0.07,1,4
-Fast Support Intrevention Vessel,All DoCs,Engaged,17,52.9,7,7,507.3,507.3,7,100.0,0.23,1.01,21,0
-Gas Carrier,All DoCs,Engaged,862,74.2,639,639,123.0,16.9,130,20.3,0.34,1.47,2786,375
-Offshore Work / Support Vessel,All DoCs,Engaged,163,9.2,14,14,1273.4,684.8,10,71.4,0.42,1.84,76,4
-Oil Tanker,All DoCs,Engaged,1038,54.3,572,572,113.4,13.4,103,18.0,0.41,1.78,3006,364
-Self-Propelled Jack-Up Barge,All DoCs,Engaged,225,36.4,63,63,2070.9,608.8,45,71.4,0.55,2.4,448,6
-Voith Mooring Tug,All DoCs,Engaged,20,10.0,1,1,95.1,95.1,0,0.0,0.16,0.68,2,0
-Bulk Carrier,All DoCs,Active,5413,53.0,1131,1131,365.5,135.3,671,59.3,1.14,4.96,16582,0
-Chemical/Oil Tanker,All DoCs,Active,4157,70.2,1584,1584,219.6,71.8,632,39.9,0.76,3.28,15383,0
-Container,All DoCs,Active,1015,75.4,291,291,338.8,135.3,185,63.6,1.18,5.12,4405,0
-Crew Boat,All DoCs,Active,119,5.0,1,1,253.6,253.6,1,100.0,0.08,0.34,1,0
-Fast Support Intrevention Vessel,All DoCs,Active,17,52.9,7,7,507.3,507.3,7,100.0,0.23,1.01,21,0
-Gas Carrier,All DoCs,Active,862,74.2,264,264,281.4,96.7,130,49.2,0.82,3.57,2786,0
-Offshore Work / Support Vessel,All DoCs,Active,163,9.2,10,10,1782.8,1750.2,10,100.0,0.59,2.57,76,0
-Oil Tanker,All DoCs,Active,1038,54.3,208,208,292.2,94.5,103,49.5,1.12,4.89,3006,0
-Self-Propelled Jack-Up Barge,All DoCs,Active,225,36.4,57,57,2288.9,760.9,45,78.9,0.61,2.66,448,0
-Voith Mooring Tug,All DoCs,Active,20,10.0,1,1,95.1,95.1,0,0.0,0.16,0.68,2,0
-Bulk Carrier,Columbus Shipmanagement Inc. Manila,All onboard,492,31.5,492,158,46.2,0.0,55,11.2,0.13,0.57,822,411
-Bulk Carrier,Columbus Shipmanagement Inc. Manila,Registered,492,31.5,155,128,145.3,19.8,55,35.5,0.41,1.79,822,74
-Bulk Carrier,Columbus Shipmanagement Inc. Manila,Engaged,492,31.5,158,158,143.7,19.5,55,34.8,0.4,1.76,822,77
-Bulk Carrier,Columbus Shipmanagement Inc. Manila,Active,492,31.5,81,81,275.1,152.2,55,67.9,0.79,3.43,822,0
-Bulk Carrier,DS Ship Management Pte Ltd (DSSM),All onboard,158,34.8,158,51,11.8,0.0,3,1.9,0.03,0.13,60,145
-Container,DS Ship Management Pte Ltd (DSSM),All onboard,31,38.7,31,8,74.5,0.0,4,12.9,0.12,0.52,48,27
-Bulk Carrier,DS Ship Management Pte Ltd (DSSM),Registered,158,34.8,55,47,33.3,3.2,3,5.5,0.08,0.37,60,42
-Container,DS Ship Management Pte Ltd (DSSM),Registered,31,38.7,12,8,192.4,0.0,4,33.3,0.31,1.35,48,8
-Bulk Carrier,DS Ship Management Pte Ltd (DSSM),Engaged,158,34.8,51,51,36.4,11.4,3,5.9,0.09,0.4,60,38
-Container,DS Ship Management Pte Ltd (DSSM),Engaged,31,38.7,8,8,288.6,62.4,4,50.0,0.47,2.03,48,4
-Bulk Carrier,DS Ship Management Pte Ltd (DSSM),Active,158,34.8,13,13,108.6,67.6,3,23.1,0.36,1.56,60,0
-Container,DS Ship Management Pte Ltd (DSSM),Active,31,38.7,4,4,575.2,309.9,4,100.0,0.93,4.06,48,0
+Bulk Carrier,All DoCs,All onboard,5413,53.1,5413,2833,83.8,0.0,668,12.3,0.24,1.03,16539,4282
+Chemical/Oil Tanker,All DoCs,All onboard,4157,70.4,4157,2886,93.8,6.7,644,15.5,0.29,1.26,15469,2563
+Container,All DoCs,All onboard,1015,75.4,1015,701,102.7,5.0,185,18.2,0.34,1.46,4386,726
+Crew Boat,All DoCs,All onboard,119,5.0,119,6,27.4,0.0,2,1.7,0.0,0.01,3,117
+Fast Support Intrevention Vessel,All DoCs,All onboard,17,52.9,17,7,188.0,0.0,7,41.2,0.1,0.42,21,10
+Gas Carrier,All DoCs,All onboard,862,74.7,862,641,107.2,5.1,132,15.3,0.26,1.12,2849,597
+Offshore Work / Support Vessel,All DoCs,All onboard,163,9.2,163,14,99.1,0.0,10,6.1,0.04,0.17,81,153
+Oil Tanker,All DoCs,All onboard,1039,54.9,1039,576,65.1,0.9,105,10.1,0.23,0.98,3021,828
+Self-Propelled Jack-Up Barge,All DoCs,All onboard,225,36.4,225,63,533.6,0.0,46,20.4,0.17,0.75,502,167
+Voith Mooring Tug,All DoCs,All onboard,20,10.0,20,1,4.6,0.0,0,0.0,0.01,0.03,2,19
+Bulk Carrier,All DoCs,Registered,5413,53.1,2875,2490,157.1,16.4,668,23.2,0.45,1.95,16539,1744
+Chemical/Oil Tanker,All DoCs,Registered,4157,70.4,2925,2673,132.9,24.7,644,22.0,0.41,1.79,15469,1331
+Container,All DoCs,Registered,1015,75.4,765,659,136.0,14.9,185,24.2,0.45,1.94,4386,476
+Crew Boat,All DoCs,Registered,119,5.0,6,6,543.5,0.0,2,33.3,0.04,0.17,3,4
+Fast Support Intrevention Vessel,All DoCs,Registered,17,52.9,9,7,355.1,304.4,7,77.8,0.18,0.79,21,2
+Gas Carrier,All DoCs,Registered,862,74.7,644,579,143.1,16.9,132,20.5,0.34,1.5,2849,379
+Offshore Work / Support Vessel,All DoCs,Registered,163,9.2,15,14,1076.4,507.3,10,66.7,0.42,1.83,81,5
+Oil Tanker,All DoCs,Registered,1039,54.9,570,500,117.9,13.0,105,18.4,0.41,1.79,3021,359
+Self-Propelled Jack-Up Barge,All DoCs,Registered,225,36.4,82,63,1464.0,265.2,46,56.1,0.48,2.07,502,24
+Voith Mooring Tug,All DoCs,Registered,20,10.0,2,1,46.1,46.1,0,0.0,0.08,0.34,2,1
+Bulk Carrier,All DoCs,Engaged,5413,53.1,2833,2833,160.1,16.9,668,23.6,0.45,1.97,16539,1702
+Chemical/Oil Tanker,All DoCs,Engaged,4157,70.4,2886,2886,135.1,26.7,644,22.3,0.42,1.81,15469,1292
+Container,All DoCs,Engaged,1015,75.4,701,701,148.7,19.5,185,26.4,0.49,2.12,4386,412
+Crew Boat,All DoCs,Engaged,119,5.0,6,6,543.5,0.0,2,33.3,0.04,0.17,3,4
+Fast Support Intrevention Vessel,All DoCs,Engaged,17,52.9,7,7,456.6,456.6,7,100.0,0.23,1.01,21,0
+Gas Carrier,All DoCs,Engaged,862,74.7,641,641,144.2,16.9,132,20.6,0.35,1.5,2849,376
+Offshore Work / Support Vessel,All DoCs,Engaged,163,9.2,14,14,1153.3,760.9,10,71.4,0.45,1.96,81,4
+Oil Tanker,All DoCs,Engaged,1039,54.9,576,576,117.4,13.6,105,18.2,0.41,1.77,3021,365
+Self-Propelled Jack-Up Barge,All DoCs,Engaged,225,36.4,63,63,1905.6,608.8,46,73.0,0.62,2.69,502,5
+Voith Mooring Tug,All DoCs,Engaged,20,10.0,1,1,92.2,92.2,0,0.0,0.16,0.68,2,0
+Bulk Carrier,All DoCs,Active,5413,53.1,1131,1131,382.6,135.3,668,59.1,1.14,4.95,16539,0
+Chemical/Oil Tanker,All DoCs,Active,4157,70.4,1594,1594,235.3,72.3,644,40.4,0.75,3.28,15469,0
+Container,All DoCs,Active,1015,75.4,289,289,341.6,138.4,185,64.0,1.18,5.13,4386,0
+Crew Boat,All DoCs,Active,119,5.0,2,2,1630.6,1630.6,2,100.0,0.12,0.51,3,0
+Fast Support Intrevention Vessel,All DoCs,Active,17,52.9,7,7,456.6,456.6,7,100.0,0.23,1.01,21,0
+Gas Carrier,All DoCs,Active,862,74.7,265,265,332.9,99.3,132,49.8,0.84,3.64,2849,0
+Offshore Work / Support Vessel,All DoCs,Active,163,9.2,10,10,1614.6,1485.6,10,100.0,0.63,2.74,81,0
+Oil Tanker,All DoCs,Active,1039,54.9,211,211,300.9,92.8,105,49.8,1.11,4.84,3021,0
+Self-Propelled Jack-Up Barge,All DoCs,Active,225,36.4,58,58,2069.9,760.9,46,79.3,0.67,2.93,502,0
+Voith Mooring Tug,All DoCs,Active,20,10.0,1,1,92.2,92.2,0,0.0,0.16,0.68,2,0
+Bulk Carrier,Columbus Shipmanagement Inc. Manila,All onboard,492,31.5,492,158,45.0,0.0,55,11.2,0.13,0.56,819,411
+Bulk Carrier,Columbus Shipmanagement Inc. Manila,Registered,492,31.5,155,128,141.6,19.5,55,35.5,0.41,1.79,819,74
+Bulk Carrier,Columbus Shipmanagement Inc. Manila,Engaged,492,31.5,158,158,140.1,19.3,55,34.8,0.4,1.75,819,77
+Bulk Carrier,Columbus Shipmanagement Inc. Manila,Active,492,31.5,81,81,267.9,152.2,55,67.9,0.79,3.42,819,0
+Bulk Carrier,DS Ship Management Pte Ltd (DSSM),All onboard,158,34.8,158,51,11.7,0.0,3,1.9,0.03,0.13,60,145
+Container,DS Ship Management Pte Ltd (DSSM),All onboard,31,38.7,31,8,72.1,0.0,4,12.9,0.12,0.52,48,27
+Bulk Carrier,DS Ship Management Pte Ltd (DSSM),Registered,158,34.8,55,47,33.0,3.2,3,5.5,0.08,0.37,60,42
+Container,DS Ship Management Pte Ltd (DSSM),Registered,31,38.7,12,8,186.2,0.0,4,33.3,0.31,1.35,48,8
+Bulk Carrier,DS Ship Management Pte Ltd (DSSM),Engaged,158,34.8,51,51,36.1,11.4,3,5.9,0.09,0.4,60,38
+Container,DS Ship Management Pte Ltd (DSSM),Engaged,31,38.7,8,8,279.3,60.2,4,50.0,0.47,2.03,48,4
+Bulk Carrier,DS Ship Management Pte Ltd (DSSM),Active,158,34.8,13,13,107.3,67.6,3,23.1,0.36,1.56,60,0
+Container,DS Ship Management Pte Ltd (DSSM),Active,31,38.7,4,4,556.6,295.9,4,100.0,0.93,4.06,48,0
 Bulk Carrier,Fluyt Maritime Private Limited,All onboard,29,58.6,29,14,12.0,0.0,1,3.4,0.03,0.15,13,27
 Bulk Carrier,Fluyt Maritime Private Limited,Registered,29,58.6,17,14,20.5,1.7,1,5.9,0.06,0.26,13,15
 Bulk Carrier,Fluyt Maritime Private Limited,Engaged,29,58.6,14,14,24.9,6.5,1,7.1,0.07,0.31,13,12
 Bulk Carrier,Fluyt Maritime Private Limited,Active,29,58.6,2,2,109.9,109.9,1,50.0,0.51,2.2,13,0
-Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,853,59.4,853,572,90.0,3.1,105,12.3,0.29,1.25,3143,667
-Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,853,59.4,507,451,150.1,14.0,105,20.7,0.48,2.1,3143,321
-Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,853,59.4,572,572,134.3,10.7,105,18.4,0.43,1.86,3143,386
-Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,Active,853,59.4,186,186,390.6,118.4,105,56.5,1.31,5.71,3143,0
-Bulk Carrier,Genco-Synergy Pvt Ltd,All onboard,212,68.9,212,165,132.8,5.3,37,17.5,0.47,2.02,1268,157
-Bulk Carrier,Genco-Synergy Pvt Ltd,Registered,212,68.9,146,135,192.0,16.8,37,25.3,0.68,2.94,1268,91
-Bulk Carrier,Genco-Synergy Pvt Ltd,Engaged,212,68.9,165,165,170.6,11.5,37,22.4,0.6,2.6,1268,110
-Bulk Carrier,Genco-Synergy Pvt Ltd,Active,212,68.9,55,55,484.4,186.0,37,67.3,1.79,7.8,1268,0
-Chemical/Oil Tanker,General Ship Management Pte. Ltd.,All onboard,69,43.5,69,42,88.3,0.9,5,7.2,0.39,1.69,345,61
+Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,853,59.7,853,572,81.0,3.1,101,11.8,0.28,1.21,3043,669
+Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,853,59.7,509,453,134.4,13.4,101,19.8,0.46,2.02,3043,325
+Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,853,59.7,572,572,120.8,10.7,101,17.7,0.41,1.8,3043,388
+Bulk Carrier,Genco-Synergy Bulk Carriers Pvt Ltd,Active,853,59.7,184,184,352.5,118.4,101,54.9,1.29,5.59,3043,0
+Bulk Carrier,Genco-Synergy Pvt Ltd,All onboard,212,68.9,212,165,128.2,5.3,37,17.5,0.45,1.97,1233,158
+Bulk Carrier,Genco-Synergy Pvt Ltd,Registered,212,68.9,146,135,185.3,16.2,37,25.3,0.66,2.86,1233,92
+Bulk Carrier,Genco-Synergy Pvt Ltd,Engaged,212,68.9,165,165,164.7,11.5,37,22.4,0.58,2.53,1233,111
+Bulk Carrier,Genco-Synergy Pvt Ltd,Active,212,68.9,54,54,474.8,202.9,37,68.5,1.78,7.72,1233,0
+Chemical/Oil Tanker,General Ship Management Pte. Ltd.,All onboard,69,43.5,69,42,87.3,0.9,5,7.2,0.38,1.67,341,61
 Oil Tanker,General Ship Management Pte. Ltd.,All onboard,19,36.8,19,10,14.0,0.9,1,5.3,0.04,0.18,10,18
-Chemical/Oil Tanker,General Ship Management Pte. Ltd.,Registered,69,43.5,30,27,201.5,8.6,5,16.7,0.89,3.89,345,22
+Chemical/Oil Tanker,General Ship Management Pte. Ltd.,Registered,69,43.5,30,27,199.2,8.6,5,16.7,0.88,3.84,341,22
 Oil Tanker,General Ship Management Pte. Ltd.,Registered,19,36.8,7,6,36.3,3.4,1,14.3,0.11,0.48,10,6
-Chemical/Oil Tanker,General Ship Management Pte. Ltd.,Engaged,69,43.5,42,42,145.0,4.0,5,11.9,0.64,2.78,345,34
+Chemical/Oil Tanker,General Ship Management Pte. Ltd.,Engaged,69,43.5,42,42,143.4,4.0,5,11.9,0.63,2.75,341,34
 Oil Tanker,General Ship Management Pte. Ltd.,Engaged,19,36.8,10,10,26.7,2.6,1,10.0,0.08,0.34,10,9
-Chemical/Oil Tanker,General Ship Management Pte. Ltd.,Active,69,43.5,8,8,730.6,583.4,5,62.5,3.35,14.58,345,0
+Chemical/Oil Tanker,General Ship Management Pte. Ltd.,Active,69,43.5,8,8,721.9,583.4,5,62.5,3.32,14.42,341,0
 Oil Tanker,General Ship Management Pte. Ltd.,Active,19,36.8,1,1,169.1,169.1,1,100.0,0.78,3.38,10,0
 Bulk Carrier,P.T Synergy Marine Indonesia,All onboard,45,22.2,45,10,2.5,0.0,0,0.0,0.0,0.02,2,43
-Chemical/Oil Tanker,P.T Synergy Marine Indonesia,All onboard,482,10.2,482,39,11.2,0.0,10,2.1,0.05,0.21,305,467
+Chemical/Oil Tanker,P.T Synergy Marine Indonesia,All onboard,482,10.2,482,39,11.1,0.0,10,2.1,0.05,0.21,305,467
 Oil Tanker,P.T Synergy Marine Indonesia,All onboard,62,9.7,62,5,0.0,0.0,0,0.0,0.0,0.0,0,62
-Bulk Carrier,P.T Synergy Marine Indonesia,Registered,45,22.2,10,9,11.0,11.6,0,0.0,0.02,0.07,2,8
-Chemical/Oil Tanker,P.T Synergy Marine Indonesia,Registered,482,10.2,49,37,110.2,0.9,10,20.4,0.48,2.11,305,34
+Bulk Carrier,P.T Synergy Marine Indonesia,Registered,45,22.2,10,9,10.9,11.6,0,0.0,0.02,0.07,2,8
+Chemical/Oil Tanker,P.T Synergy Marine Indonesia,Registered,482,10.2,49,37,109.5,0.9,10,20.4,0.48,2.11,305,34
 Oil Tanker,P.T Synergy Marine Indonesia,Registered,62,9.7,6,5,0.2,0.0,0,0.0,0.0,0.0,0,6
 Bulk Carrier,P.T Synergy Marine Indonesia,Engaged,45,22.2,10,10,11.1,11.6,0,0.0,0.02,0.07,2,8
-Chemical/Oil Tanker,P.T Synergy Marine Indonesia,Engaged,482,10.2,39,39,138.5,16.9,10,25.6,0.61,2.64,305,24
+Chemical/Oil Tanker,P.T Synergy Marine Indonesia,Engaged,482,10.2,39,39,137.6,16.9,10,25.6,0.61,2.64,305,24
 Oil Tanker,P.T Synergy Marine Indonesia,Engaged,62,9.7,5,5,0.2,0.0,0,0.0,0.0,0.0,0,5
-Bulk Carrier,P.T Synergy Marine Indonesia,Active,45,22.2,2,2,22.3,22.3,0,0.0,0.08,0.34,2,0
-Chemical/Oil Tanker,P.T Synergy Marine Indonesia,Active,482,10.2,15,15,346.8,209.9,10,66.7,1.58,6.88,305,0
+Bulk Carrier,P.T Synergy Marine Indonesia,Active,45,22.2,2,2,22.0,22.0,0,0.0,0.08,0.34,2,0
+Chemical/Oil Tanker,P.T Synergy Marine Indonesia,Active,482,10.2,15,15,344.4,207.5,10,66.7,1.58,6.88,305,0
 Oil Tanker,P.T Synergy Marine Indonesia,Active,62,9.7,0,0,,,0,,,,0,0
 Bulk Carrier,PT Karunya Ship Management,All onboard,13,0.0,13,0,0.0,0.0,0,0.0,0.0,0.0,0,13
 Bulk Carrier,PT Karunya Ship Management,Registered,13,0.0,0,0,,,0,,,,0,0
 Bulk Carrier,PT Karunya Ship Management,Engaged,13,0.0,0,0,,,0,,,,0,0
 Bulk Carrier,PT Karunya Ship Management,Active,13,0.0,0,0,,,0,,,,0,0
-Bulk Carrier,Spar Synergy Ship Management Private Limited,All onboard,175,88.0,175,148,119.3,17.9,27,15.4,0.34,1.46,756,124
-Bulk Carrier,Spar Synergy Ship Management Private Limited,Registered,175,88.0,154,145,135.5,33.6,27,17.5,0.38,1.66,756,103
-Bulk Carrier,Spar Synergy Ship Management Private Limited,Engaged,175,88.0,148,148,141.1,37.5,27,18.2,0.4,1.73,756,97
-Bulk Carrier,Spar Synergy Ship Management Private Limited,Active,175,88.0,51,51,358.8,101.5,27,52.9,1.15,5.01,756,0
-Chemical/Oil Tanker,Synergy Denmark A/S,All onboard,24,29.2,24,6,144.4,0.0,2,8.3,0.28,1.23,87,22
-Oil Tanker,Synergy Denmark A/S,All onboard,259,32.4,259,99,40.2,0.0,12,4.6,0.13,0.57,440,231
-Chemical/Oil Tanker,Synergy Denmark A/S,Registered,24,29.2,7,6,495.0,6.0,2,28.6,0.97,4.2,87,5
-Oil Tanker,Synergy Denmark A/S,Registered,259,32.4,84,68,121.7,7.3,12,14.3,0.41,1.77,440,56
-Chemical/Oil Tanker,Synergy Denmark A/S,Engaged,24,29.2,6,6,577.6,7.3,2,33.3,1.13,4.9,87,4
-Oil Tanker,Synergy Denmark A/S,Engaged,259,32.4,99,99,105.3,9.6,12,12.1,0.35,1.5,440,71
-Chemical/Oil Tanker,Synergy Denmark A/S,Active,24,29.2,2,2,1723.3,1723.3,2,100.0,3.38,14.71,87,0
-Oil Tanker,Synergy Denmark A/S,Active,259,32.4,28,28,342.3,76.1,12,42.9,1.22,5.31,440,0
+Bulk Carrier,Spar Synergy Ship Management Private Limited,All onboard,175,89.1,175,149,145.4,19.1,29,16.6,0.36,1.56,806,120
+Bulk Carrier,Spar Synergy Ship Management Private Limited,Registered,175,89.1,156,146,163.0,33.8,29,18.6,0.4,1.75,806,101
+Bulk Carrier,Spar Synergy Ship Management Private Limited,Engaged,175,89.1,149,149,170.8,41.2,29,19.5,0.42,1.83,806,94
+Bulk Carrier,Spar Synergy Ship Management Private Limited,Active,175,89.1,55,55,416.8,101.5,29,52.7,1.14,4.96,806,0
+Chemical/Oil Tanker,Synergy Denmark A/S,All onboard,24,29.2,24,6,111.5,0.0,2,8.3,0.28,1.23,87,22
+Oil Tanker,Synergy Denmark A/S,All onboard,259,33.2,259,101,45.7,0.0,13,5.0,0.13,0.58,441,230
+Chemical/Oil Tanker,Synergy Denmark A/S,Registered,24,29.2,7,6,382.4,6.0,2,28.6,0.97,4.2,87,5
+Oil Tanker,Synergy Denmark A/S,Registered,259,33.2,86,70,135.2,7.3,13,15.1,0.4,1.73,441,57
+Chemical/Oil Tanker,Synergy Denmark A/S,Engaged,24,29.2,6,6,446.1,7.3,2,33.3,1.13,4.9,87,4
+Oil Tanker,Synergy Denmark A/S,Engaged,259,33.2,101,101,117.1,9.6,13,12.9,0.34,1.48,441,72
+Chemical/Oil Tanker,Synergy Denmark A/S,Active,24,29.2,2,2,1328.9,1328.9,2,100.0,3.38,14.71,87,0
+Oil Tanker,Synergy Denmark A/S,Active,259,33.2,29,29,378.9,84.5,13,44.8,1.18,5.14,441,0
 Bulk Carrier,Synergy Korea Co Ltd,All onboard,75,4.0,75,4,0.1,0.0,0,0.0,0.0,0.0,0,75
-Container,Synergy Korea Co Ltd,All onboard,34,94.1,34,30,110.2,42.3,11,32.4,0.45,1.97,198,18
+Container,Synergy Korea Co Ltd,All onboard,34,94.1,34,30,109.5,42.3,11,32.4,0.45,1.96,197,18
 Bulk Carrier,Synergy Korea Co Ltd,Registered,75,4.0,3,0,0.0,0.0,0,0.0,0.0,0.0,0,3
-Container,Synergy Korea Co Ltd,Registered,34,94.1,32,30,117.1,50.7,11,34.4,0.48,2.09,198,16
+Container,Synergy Korea Co Ltd,Registered,34,94.1,32,30,116.3,50.7,11,34.4,0.48,2.08,197,16
 Bulk Carrier,Synergy Korea Co Ltd,Engaged,75,4.0,4,4,2.4,2.1,0,0.0,0.0,0.0,0,4
-Container,Synergy Korea Co Ltd,Engaged,34,94.1,30,30,124.9,64.0,11,36.7,0.51,2.23,198,14
+Container,Synergy Korea Co Ltd,Engaged,34,94.1,30,30,124.1,64.0,11,36.7,0.51,2.22,197,14
 Bulk Carrier,Synergy Korea Co Ltd,Active,75,4.0,0,0,,,0,,,,0,0
-Container,Synergy Korea Co Ltd,Active,34,94.1,16,16,219.6,160.6,11,68.8,0.96,4.19,198,0
-Bulk Carrier,Synergy Marine (Singapore) pre ltd,All onboard,39,51.3,39,20,39.8,0.8,3,7.7,0.06,0.26,30,34
-Container,Synergy Marine (Singapore) pre ltd,All onboard,46,84.8,46,37,27.3,3.0,3,6.5,0.1,0.44,60,39
-Bulk Carrier,Synergy Marine (Singapore) pre ltd,Registered,39,51.3,20,19,77.5,7.4,3,15.0,0.12,0.51,30,15
-Container,Synergy Marine (Singapore) pre ltd,Registered,46,84.8,39,34,31.9,4.2,3,7.7,0.12,0.52,60,32
-Bulk Carrier,Synergy Marine (Singapore) pre ltd,Engaged,39,51.3,20,20,77.6,7.4,3,15.0,0.12,0.51,30,15
-Container,Synergy Marine (Singapore) pre ltd,Engaged,46,84.8,37,37,33.9,5.9,3,8.1,0.13,0.55,60,30
-Bulk Carrier,Synergy Marine (Singapore) pre ltd,Active,39,51.3,5,5,266.4,118.4,3,60.0,0.47,2.03,30,0
-Container,Synergy Marine (Singapore) pre ltd,Active,46,84.8,7,7,152.3,82.5,3,42.9,0.67,2.9,60,0
-Bulk Carrier,Synergy Marine Bulk Pte Ltd,All onboard,1001,51.3,1001,452,78.4,0.0,98,9.8,0.17,0.73,2159,828
-Bulk Carrier,Synergy Marine Bulk Pte Ltd,Registered,1001,51.3,514,426,152.4,8.5,98,19.1,0.33,1.42,2159,341
-Bulk Carrier,Synergy Marine Bulk Pte Ltd,Engaged,1001,51.3,452,452,173.6,16.8,98,21.7,0.37,1.62,2159,279
-Bulk Carrier,Synergy Marine Bulk Pte Ltd,Active,1001,51.3,173,173,430.8,118.4,98,56.6,0.97,4.22,2159,0
-Chemical/Oil Tanker,Synergy Marine Copenhagen AS,All onboard,183,86.3,183,154,65.5,12.3,23,12.6,0.24,1.05,566,129
-Chemical/Oil Tanker,Synergy Marine Copenhagen AS,Registered,183,86.3,158,146,75.6,16.9,23,14.6,0.28,1.21,566,104
-Chemical/Oil Tanker,Synergy Marine Copenhagen AS,Engaged,183,86.3,154,154,77.8,16.9,23,14.9,0.29,1.24,566,100
-Chemical/Oil Tanker,Synergy Marine Copenhagen AS,Active,183,86.3,54,54,196.1,78.8,23,42.6,0.82,3.54,566,0
-Bulk Carrier,Synergy Marine Germany GmbH,All onboard,27,55.6,27,15,18.5,0.0,2,7.4,0.04,0.18,14,23
-Chemical/Oil Tanker,Synergy Marine Germany GmbH,All onboard,127,62.2,127,85,53.9,1.2,16,12.6,0.23,0.98,369,99
-Container,Synergy Marine Germany GmbH,All onboard,21,33.3,21,6,87.3,0.0,1,4.8,0.33,1.43,89,20
-Oil Tanker,Synergy Marine Germany GmbH,All onboard,87,73.6,87,57,43.4,0.9,4,4.6,0.18,0.77,198,75
-Bulk Carrier,Synergy Marine Germany GmbH,Registered,27,55.6,15,10,32.7,0.9,2,13.3,0.07,0.32,14,11
-Chemical/Oil Tanker,Synergy Marine Germany GmbH,Registered,127,62.2,79,69,85.7,12.5,16,20.3,0.36,1.58,369,51
-Container,Synergy Marine Germany GmbH,Registered,21,33.3,7,5,261.9,2.7,1,14.3,0.99,4.3,89,6
-Oil Tanker,Synergy Marine Germany GmbH,Registered,87,73.6,64,53,58.6,4.0,4,6.2,0.24,1.05,198,52
-Bulk Carrier,Synergy Marine Germany GmbH,Engaged,27,55.6,15,15,33.4,2.4,2,13.3,0.07,0.32,14,11
-Chemical/Oil Tanker,Synergy Marine Germany GmbH,Engaged,127,62.2,85,85,80.5,12.5,16,18.8,0.34,1.47,369,57
-Container,Synergy Marine Germany GmbH,Engaged,21,33.3,6,6,305.7,6.8,1,16.7,1.15,5.02,89,5
-Oil Tanker,Synergy Marine Germany GmbH,Engaged,87,73.6,57,57,66.2,7.0,4,7.0,0.27,1.17,198,45
-Bulk Carrier,Synergy Marine Germany GmbH,Active,27,55.6,4,4,117.4,100.8,2,50.0,0.27,1.18,14,0
-Chemical/Oil Tanker,Synergy Marine Germany GmbH,Active,127,62.2,28,28,226.5,118.4,16,57.1,1.02,4.46,369,0
-Container,Synergy Marine Germany GmbH,Active,21,33.3,1,1,1806.0,1806.0,1,100.0,6.92,30.1,89,0
-Oil Tanker,Synergy Marine Germany GmbH,Active,87,73.6,12,12,280.4,67.6,4,33.3,1.28,5.58,198,0
-Bulk Carrier,Synergy Marine Shanghai Limited,All onboard,217,19.4,217,35,72.9,0.0,11,5.1,0.13,0.55,353,198
-Bulk Carrier,Synergy Marine Shanghai Limited,Registered,217,19.4,42,34,376.5,42.2,11,26.2,0.65,2.84,353,23
-Bulk Carrier,Synergy Marine Shanghai Limited,Engaged,217,19.4,35,35,451.9,57.3,11,31.4,0.78,3.41,353,16
-Bulk Carrier,Synergy Marine Shanghai Limited,Active,217,19.4,19,19,813.8,157.4,11,57.9,1.45,6.28,353,0
-Gas Carrier,Synergy Maritime Gas Pte. Ltd,All onboard,22,100.0,22,20,479.8,67.6,9,40.9,0.53,2.32,151,6
-Gas Carrier,Synergy Maritime Gas Pte. Ltd,Registered,22,100.0,22,20,479.8,67.6,9,40.9,0.53,2.32,151,6
-Gas Carrier,Synergy Maritime Gas Pte. Ltd,Engaged,22,100.0,20,20,527.7,73.0,9,45.0,0.59,2.55,151,4
-Gas Carrier,Synergy Maritime Gas Pte. Ltd,Active,22,100.0,16,16,654.2,148.7,9,56.2,0.73,3.19,151,0
-Bulk Carrier,Synergy Maritime Private Limited,All onboard,1162,56.6,1162,651,55.2,0.9,134,11.5,0.18,0.79,2701,909
-Chemical/Oil Tanker,Synergy Maritime Private Limited,All onboard,890,73.3,890,651,86.2,5.7,142,16.0,0.27,1.16,3040,571
-Container,Synergy Maritime Private Limited,All onboard,42,33.3,42,15,11.4,0.0,1,2.4,0.02,0.07,9,39
-Gas Carrier,Synergy Maritime Private Limited,All onboard,378,67.2,378,259,46.4,2.7,34,9.0,0.15,0.65,730,293
-Oil Tanker,Synergy Maritime Private Limited,All onboard,441,60.8,441,271,49.1,1.6,39,8.8,0.2,0.85,1109,347
-Bulk Carrier,Synergy Maritime Private Limited,Registered,1162,56.6,658,581,97.1,13.4,134,20.4,0.32,1.39,2701,405
-Chemical/Oil Tanker,Synergy Maritime Private Limited,Registered,890,73.3,652,585,117.1,24.3,142,21.8,0.36,1.58,3040,333
-Container,Synergy Maritime Private Limited,Registered,42,33.3,14,9,31.3,5.4,1,7.1,0.05,0.22,9,11
-Gas Carrier,Synergy Maritime Private Limited,Registered,378,67.2,254,225,68.4,9.3,34,13.4,0.22,0.97,730,169
-Oil Tanker,Synergy Maritime Private Limited,Registered,441,60.8,268,240,80.4,12.8,39,14.6,0.32,1.4,1109,174
-Bulk Carrier,Synergy Maritime Private Limited,Engaged,1162,56.6,651,651,98.6,14.6,134,20.6,0.32,1.4,2701,398
-Chemical/Oil Tanker,Synergy Maritime Private Limited,Engaged,890,73.3,651,651,117.8,24.3,142,21.8,0.36,1.58,3040,332
-Container,Synergy Maritime Private Limited,Engaged,42,33.3,15,15,31.8,9.2,1,6.7,0.05,0.2,9,12
-Gas Carrier,Synergy Maritime Private Limited,Engaged,378,67.2,259,259,67.7,10.3,34,13.1,0.22,0.95,730,174
-Oil Tanker,Synergy Maritime Private Limited,Engaged,441,60.8,271,271,79.9,12.6,39,14.4,0.32,1.38,1109,177
-Bulk Carrier,Synergy Maritime Private Limited,Active,1162,56.6,253,253,237.6,104.2,134,53.0,0.83,3.61,2701,0
-Chemical/Oil Tanker,Synergy Maritime Private Limited,Active,890,73.3,319,319,228.6,84.5,142,44.5,0.74,3.22,3040,0
-Container,Synergy Maritime Private Limited,Active,42,33.3,3,3,110.2,57.4,1,33.3,0.23,1.01,9,0
-Gas Carrier,Synergy Maritime Private Limited,Active,378,67.2,85,85,187.2,82.7,34,40.0,0.67,2.9,730,0
-Oil Tanker,Synergy Maritime Private Limited,Active,441,60.8,94,94,208.5,84.5,39,41.5,0.92,3.99,1109,0
-Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,All onboard,149,57.0,149,83,46.8,0.8,8,5.4,0.14,0.61,268,135
-Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,Registered,149,57.0,85,70,81.2,4.4,8,9.4,0.25,1.07,268,71
-Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,Engaged,149,57.0,83,83,84.0,6.0,8,9.6,0.25,1.09,268,69
-Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,Active,149,57.0,14,14,435.0,117.7,8,57.1,1.49,6.47,268,0
-Chemical/Oil Tanker,Synergy Navis marine Private Limited,All onboard,463,77.5,463,356,62.4,5.2,69,14.9,0.24,1.03,1416,313
-Oil Tanker,Synergy Navis marine Private Limited,All onboard,45,86.7,45,35,121.8,4.1,7,15.6,0.54,2.36,314,32
-Chemical/Oil Tanker,Synergy Navis marine Private Limited,Registered,463,77.5,359,323,80.0,15.4,69,19.2,0.31,1.33,1416,209
+Container,Synergy Korea Co Ltd,Active,34,94.1,16,16,218.1,152.2,11,68.8,0.96,4.16,197,0
+Bulk Carrier,Synergy Marine (Singapore) pre ltd,All onboard,39,51.3,39,20,38.3,0.8,3,7.7,0.06,0.26,30,34
+Container,Synergy Marine (Singapore) pre ltd,All onboard,46,84.8,46,37,25.8,3.0,3,6.5,0.09,0.41,56,39
+Bulk Carrier,Synergy Marine (Singapore) pre ltd,Registered,39,51.3,20,19,74.5,7.4,3,15.0,0.12,0.51,30,15
+Container,Synergy Marine (Singapore) pre ltd,Registered,46,84.8,39,34,30.2,4.2,3,7.7,0.11,0.49,56,32
+Bulk Carrier,Synergy Marine (Singapore) pre ltd,Engaged,39,51.3,20,20,74.6,7.4,3,15.0,0.12,0.51,30,15
+Container,Synergy Marine (Singapore) pre ltd,Engaged,46,84.8,37,37,32.1,5.9,3,8.1,0.12,0.51,56,30
+Bulk Carrier,Synergy Marine (Singapore) pre ltd,Active,39,51.3,5,5,254.3,118.4,3,60.0,0.47,2.03,30,0
+Container,Synergy Marine (Singapore) pre ltd,Active,46,84.8,7,7,142.6,82.5,3,42.9,0.62,2.71,56,0
+Bulk Carrier,Synergy Marine Bulk Pte Ltd,All onboard,1001,51.3,1001,452,72.3,0.0,99,9.9,0.17,0.74,2196,829
+Bulk Carrier,Synergy Marine Bulk Pte Ltd,Registered,1001,51.3,514,426,140.5,8.3,99,19.3,0.33,1.44,2196,342
+Bulk Carrier,Synergy Marine Bulk Pte Ltd,Engaged,1001,51.3,452,452,160.1,16.4,99,21.9,0.38,1.64,2196,280
+Bulk Carrier,Synergy Marine Bulk Pte Ltd,Active,1001,51.3,172,172,397.6,118.4,99,57.6,0.99,4.32,2196,0
+Chemical/Oil Tanker,Synergy Marine Copenhagen AS,All onboard,183,86.9,183,154,66.1,12.3,23,12.6,0.24,1.06,575,129
+Chemical/Oil Tanker,Synergy Marine Copenhagen AS,Registered,183,86.9,159,147,75.9,16.9,23,14.5,0.28,1.22,575,105
+Chemical/Oil Tanker,Synergy Marine Copenhagen AS,Engaged,183,86.9,154,154,78.6,16.9,23,14.9,0.29,1.26,575,100
+Chemical/Oil Tanker,Synergy Marine Copenhagen AS,Active,183,86.9,54,54,198.3,78.1,23,42.6,0.83,3.6,575,0
+Bulk Carrier,Synergy Marine Germany GmbH,All onboard,27,55.6,27,15,18.1,0.0,2,7.4,0.04,0.18,14,23
+Chemical/Oil Tanker,Synergy Marine Germany GmbH,All onboard,127,62.2,127,85,53.6,1.2,16,12.6,0.22,0.98,367,100
+Container,Synergy Marine Germany GmbH,All onboard,21,33.3,21,6,86.2,0.0,1,4.8,0.33,1.43,89,20
+Oil Tanker,Synergy Marine Germany GmbH,All onboard,87,73.6,87,57,43.0,0.9,4,4.6,0.18,0.76,196,75
+Bulk Carrier,Synergy Marine Germany GmbH,Registered,27,55.6,15,10,31.9,0.9,2,13.3,0.07,0.32,14,11
+Chemical/Oil Tanker,Synergy Marine Germany GmbH,Registered,127,62.2,79,69,85.2,12.2,16,20.3,0.36,1.57,367,52
+Container,Synergy Marine Germany GmbH,Registered,21,33.3,7,5,258.5,2.7,1,14.3,0.99,4.3,89,6
+Oil Tanker,Synergy Marine Germany GmbH,Registered,87,73.6,64,53,58.0,4.0,4,6.2,0.24,1.04,196,52
+Bulk Carrier,Synergy Marine Germany GmbH,Engaged,27,55.6,15,15,32.6,2.4,2,13.3,0.07,0.32,14,11
+Chemical/Oil Tanker,Synergy Marine Germany GmbH,Engaged,127,62.2,85,85,80.1,12.2,16,18.8,0.34,1.46,367,58
+Container,Synergy Marine Germany GmbH,Engaged,21,33.3,6,6,301.7,6.8,1,16.7,1.15,5.02,89,5
+Oil Tanker,Synergy Marine Germany GmbH,Engaged,87,73.6,57,57,65.6,7.0,4,7.0,0.27,1.16,196,45
+Bulk Carrier,Synergy Marine Germany GmbH,Active,27,55.6,4,4,114.5,99.7,2,50.0,0.27,1.18,14,0
+Chemical/Oil Tanker,Synergy Marine Germany GmbH,Active,127,62.2,27,27,233.5,118.4,16,59.3,1.06,4.6,367,0
+Container,Synergy Marine Germany GmbH,Active,21,33.3,1,1,1782.2,1782.2,1,100.0,6.92,30.1,89,0
+Oil Tanker,Synergy Marine Germany GmbH,Active,87,73.6,12,12,277.6,67.6,4,33.3,1.27,5.52,196,0
+Bulk Carrier,Synergy Marine Shanghai Limited,All onboard,217,19.8,217,36,212.2,0.0,12,5.5,0.14,0.6,382,197
+Bulk Carrier,Synergy Marine Shanghai Limited,Registered,217,19.8,43,35,1070.8,44.9,12,27.9,0.69,3.0,382,23
+Bulk Carrier,Synergy Marine Shanghai Limited,Engaged,217,19.8,36,36,1279.1,61.7,12,33.3,0.83,3.59,382,16
+Bulk Carrier,Synergy Marine Shanghai Limited,Active,217,19.8,20,20,2284.6,177.6,12,60.0,1.49,6.46,382,0
+Gas Carrier,Synergy Maritime Gas Pte. Ltd,All onboard,22,100.0,22,20,381.8,84.5,10,45.5,0.62,2.67,174,4
+Gas Carrier,Synergy Maritime Gas Pte. Ltd,Registered,22,100.0,22,20,381.8,84.5,10,45.5,0.62,2.67,174,4
+Gas Carrier,Synergy Maritime Gas Pte. Ltd,Engaged,22,100.0,20,20,419.9,101.5,10,50.0,0.68,2.94,174,2
+Gas Carrier,Synergy Maritime Gas Pte. Ltd,Active,22,100.0,18,18,466.1,143.7,10,55.6,0.75,3.27,174,0
+Bulk Carrier,Synergy Maritime Private Limited,All onboard,1163,56.7,1163,652,56.6,0.9,134,11.5,0.18,0.8,2736,909
+Chemical/Oil Tanker,Synergy Maritime Private Limited,All onboard,890,73.4,890,653,90.5,5.8,142,16.0,0.27,1.16,3048,571
+Container,Synergy Maritime Private Limited,All onboard,42,33.3,42,15,11.2,0.0,1,2.4,0.02,0.07,9,39
+Gas Carrier,Synergy Maritime Private Limited,All onboard,378,68.0,378,261,91.7,2.7,36,9.5,0.16,0.7,777,293
+Oil Tanker,Synergy Maritime Private Limited,All onboard,442,61.3,442,273,52.3,1.7,40,9.0,0.2,0.85,1110,346
+Bulk Carrier,Synergy Maritime Private Limited,Registered,1163,56.7,659,582,99.6,13.3,134,20.3,0.32,1.4,2736,405
+Chemical/Oil Tanker,Synergy Maritime Private Limited,Registered,890,73.4,653,587,122.8,24.3,142,21.7,0.36,1.58,3048,334
+Container,Synergy Maritime Private Limited,Registered,42,33.3,14,9,30.8,5.4,1,7.1,0.05,0.22,9,11
+Gas Carrier,Synergy Maritime Private Limited,Registered,378,68.0,257,227,134.2,9.1,36,14.0,0.24,1.02,777,172
+Oil Tanker,Synergy Maritime Private Limited,Registered,442,61.3,271,242,84.9,13.1,40,14.8,0.32,1.39,1110,175
+Bulk Carrier,Synergy Maritime Private Limited,Engaged,1163,56.7,652,652,101.0,14.7,134,20.6,0.33,1.42,2736,398
+Chemical/Oil Tanker,Synergy Maritime Private Limited,Engaged,890,73.4,653,653,123.3,24.3,142,21.7,0.36,1.58,3048,334
+Container,Synergy Maritime Private Limited,Engaged,42,33.3,15,15,31.3,9.2,1,6.7,0.05,0.2,9,12
+Gas Carrier,Synergy Maritime Private Limited,Engaged,378,68.0,261,261,132.8,10.2,36,13.8,0.23,1.01,777,176
+Oil Tanker,Synergy Maritime Private Limited,Engaged,442,61.3,273,273,84.7,13.0,40,14.7,0.32,1.38,1110,177
+Bulk Carrier,Synergy Maritime Private Limited,Active,1163,56.7,254,254,243.5,107.4,134,52.8,0.84,3.64,2736,0
+Chemical/Oil Tanker,Synergy Maritime Private Limited,Active,890,73.4,319,319,240.5,84.5,142,44.5,0.74,3.23,3048,0
+Container,Synergy Maritime Private Limited,Active,42,33.3,3,3,107.5,56.4,1,33.3,0.23,1.01,9,0
+Gas Carrier,Synergy Maritime Private Limited,Active,378,68.0,85,85,388.5,84.5,36,42.4,0.71,3.09,777,0
+Oil Tanker,Synergy Maritime Private Limited,Active,442,61.3,96,96,219.6,84.5,40,41.7,0.9,3.91,1110,0
+Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,All onboard,149,57.0,149,83,47.9,0.8,8,5.4,0.14,0.62,271,135
+Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,Registered,149,57.0,85,70,83.1,4.4,8,9.4,0.25,1.08,271,71
+Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,Engaged,149,57.0,83,83,86.0,6.0,8,9.6,0.25,1.1,271,69
+Chemical/Oil Tanker,Synergy Mideast Ship Management DMCC,Active,149,57.0,14,14,446.6,116.3,8,57.1,1.51,6.55,271,0
+Chemical/Oil Tanker,Synergy Navis marine Private Limited,All onboard,463,77.8,463,358,99.5,6.0,72,15.6,0.24,1.06,1445,307
+Oil Tanker,Synergy Navis marine Private Limited,All onboard,45,86.7,45,35,121.7,4.1,7,15.6,0.54,2.36,314,32
+Chemical/Oil Tanker,Synergy Navis marine Private Limited,Registered,463,77.8,360,326,127.5,16.9,72,20.0,0.31,1.36,1445,204
 Oil Tanker,Synergy Navis marine Private Limited,Registered,45,86.7,39,34,140.4,5.1,7,17.9,0.63,2.72,314,26
-Chemical/Oil Tanker,Synergy Navis marine Private Limited,Engaged,463,77.5,356,356,81.2,16.1,69,19.4,0.31,1.35,1416,206
+Chemical/Oil Tanker,Synergy Navis marine Private Limited,Engaged,463,77.8,358,358,128.7,16.9,72,20.1,0.31,1.37,1445,202
 Oil Tanker,Synergy Navis marine Private Limited,Engaged,45,86.7,35,35,156.5,9.9,7,20.0,0.7,3.03,314,22
-Chemical/Oil Tanker,Synergy Navis marine Private Limited,Active,463,77.5,150,150,179.1,71.9,69,46.0,0.73,3.19,1416,0
-Oil Tanker,Synergy Navis marine Private Limited,Active,45,86.7,13,13,410.3,101.5,7,53.8,1.88,8.17,314,0
-Bulk Carrier,Synergy Ocean Maritime Inc.,All onboard,536,65.1,536,321,177.3,2.7,159,29.7,0.6,2.63,4161,324
-Bulk Carrier,Synergy Ocean Maritime Inc.,Registered,536,65.1,349,302,272.0,67.6,159,45.6,0.93,4.03,4161,137
-Bulk Carrier,Synergy Ocean Maritime Inc.,Engaged,536,65.1,321,321,296.0,86.5,159,49.5,1.01,4.38,4161,109
-Bulk Carrier,Synergy Ocean Maritime Inc.,Active,536,65.1,212,212,443.1,220.6,159,75.0,1.53,6.64,4161,0
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,All onboard,102,54.9,102,56,117.0,0.8,12,11.8,0.3,1.32,398,84
-Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,All onboard,22,40.9,22,11,149.0,0.0,2,9.1,0.46,2.01,131,19
-Gas Carrier,Synergy Oceanic Services India Pvt Ltd,All onboard,177,72.3,177,128,170.4,7.0,37,20.9,0.39,1.7,892,119
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Registered,102,54.9,56,43,212.0,7.7,12,21.4,0.55,2.4,398,38
-Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Registered,22,40.9,9,9,360.3,13.1,2,22.2,1.13,4.92,131,6
-Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Registered,177,72.3,128,111,235.0,28.4,37,28.9,0.54,2.36,892,70
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Engaged,102,54.9,56,56,213.2,9.9,12,21.4,0.55,2.4,398,38
-Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Engaged,22,40.9,11,11,298.0,15.2,2,18.2,0.93,4.03,131,8
-Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Engaged,177,72.3,128,128,235.6,28.4,37,28.9,0.54,2.36,892,70
-Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Active,102,54.9,18,18,643.7,169.1,12,66.7,1.72,7.48,398,0
-Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Active,22,40.9,3,3,1042.8,304.4,2,66.7,3.4,14.77,131,0
-Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Active,177,72.3,58,58,503.6,188.6,37,63.8,1.2,5.2,892,0
-Bulk Carrier,Synergy Onyx Marine Pvt Ltd,All onboard,147,70.1,147,109,86.0,3.8,16,10.9,0.3,1.32,573,110
-Container,Synergy Onyx Marine Pvt Ltd,All onboard,119,73.1,119,76,159.6,2.4,26,21.8,0.69,2.99,1053,82
-Bulk Carrier,Synergy Onyx Marine Pvt Ltd,Registered,147,70.1,103,95,121.7,16.0,16,15.5,0.43,1.88,573,66
-Container,Synergy Onyx Marine Pvt Ltd,Registered,119,73.1,87,74,218.2,15.8,26,29.9,0.94,4.09,1053,50
-Bulk Carrier,Synergy Onyx Marine Pvt Ltd,Engaged,147,70.1,109,109,115.9,16.0,16,14.7,0.41,1.78,573,72
-Container,Synergy Onyx Marine Pvt Ltd,Engaged,119,73.1,76,76,249.9,37.8,26,34.2,1.08,4.69,1053,39
-Bulk Carrier,Synergy Onyx Marine Pvt Ltd,Active,147,70.1,37,37,317.5,84.5,16,43.2,1.2,5.24,573,0
-Container,Synergy Onyx Marine Pvt Ltd,Active,119,73.1,37,37,501.7,232.2,26,70.3,2.21,9.62,1053,0
-Chemical/Oil Tanker,Synergy Pacific Private Limited,All onboard,1748,85.2,1748,1449,121.7,17.9,355,20.3,0.39,1.71,8856,757
-Container,Synergy Pacific Private Limited,All onboard,722,79.5,722,528,104.5,7.0,139,19.3,0.32,1.38,2948,499
-Gas Carrier,Synergy Pacific Private Limited,All onboard,285,82.8,285,232,71.3,10.4,50,17.5,0.28,1.2,1013,180
-Oil Tanker,Synergy Pacific Private Limited,All onboard,125,76.8,125,95,186.4,26.6,40,32.0,0.58,2.53,935,65
-Chemical/Oil Tanker,Synergy Pacific Private Limited,Registered,1748,85.2,1490,1389,142.5,33.8,355,23.8,0.46,2.01,8856,499
-Container,Synergy Pacific Private Limited,Registered,722,79.5,574,498,131.1,16.9,139,24.2,0.4,1.74,2948,351
-Gas Carrier,Synergy Pacific Private Limited,Registered,285,82.8,236,221,85.9,19.5,50,21.2,0.33,1.45,1013,131
-Oil Tanker,Synergy Pacific Private Limited,Registered,125,76.8,96,90,242.2,81.5,40,41.7,0.76,3.29,935,36
-Chemical/Oil Tanker,Synergy Pacific Private Limited,Engaged,1748,85.2,1449,1449,146.8,33.8,355,24.5,0.48,2.07,8856,458
-Container,Synergy Pacific Private Limited,Engaged,722,79.5,528,528,142.9,20.8,139,26.3,0.43,1.89,2948,305
-Gas Carrier,Synergy Pacific Private Limited,Engaged,285,82.8,232,232,87.6,21.2,50,21.6,0.34,1.48,1013,127
-Oil Tanker,Synergy Pacific Private Limited,Engaged,125,76.8,95,95,245.3,82.1,40,42.1,0.77,3.33,935,35
-Chemical/Oil Tanker,Synergy Pacific Private Limited,Active,1748,85.2,991,991,209.2,67.6,355,35.8,0.7,3.02,8856,0
-Container,Synergy Pacific Private Limited,Active,722,79.5,223,223,318.5,135.3,139,62.3,1.03,4.47,2948,0
-Gas Carrier,Synergy Pacific Private Limited,Active,285,82.8,105,105,178.1,84.5,50,47.6,0.75,3.26,1013,0
-Oil Tanker,Synergy Pacific Private Limited,Active,125,76.8,60,60,378.6,169.1,40,66.7,1.21,5.27,935,0
-Crew Boat,Synergy Ship Arabia Inspection Company LLC,All onboard,119,5.0,119,5,2.1,0.0,1,0.8,0.0,0.0,1,118
-Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,All onboard,17,52.9,17,7,208.9,0.0,7,41.2,0.1,0.42,21,10
-Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,All onboard,163,9.2,163,14,109.4,0.0,10,6.1,0.04,0.16,76,153
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,All onboard,225,36.4,225,63,579.9,0.0,45,20.0,0.15,0.67,448,168
-Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,All onboard,20,10.0,20,1,4.8,0.0,0,0.0,0.01,0.03,2,19
-Crew Boat,Synergy Ship Arabia Inspection Company LLC,Registered,119,5.0,6,5,42.3,0.0,1,16.7,0.01,0.06,1,5
-Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Registered,17,52.9,9,7,394.6,338.2,7,77.8,0.18,0.79,21,2
-Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Registered,163,9.2,15,14,1188.5,608.8,10,66.7,0.39,1.71,76,5
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Registered,225,36.4,82,63,1591.1,251.2,45,54.9,0.42,1.85,448,25
-Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Registered,20,10.0,2,1,47.6,47.6,0,0.0,0.08,0.34,2,1
-Crew Boat,Synergy Ship Arabia Inspection Company LLC,Engaged,119,5.0,5,5,50.7,0.0,1,20.0,0.02,0.07,1,4
-Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Engaged,17,52.9,7,7,507.3,507.3,7,100.0,0.23,1.01,21,0
-Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Engaged,163,9.2,14,14,1273.4,684.8,10,71.4,0.42,1.84,76,4
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Engaged,225,36.4,63,63,2070.9,608.8,45,71.4,0.55,2.4,448,6
-Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Engaged,20,10.0,1,1,95.1,95.1,0,0.0,0.16,0.68,2,0
-Crew Boat,Synergy Ship Arabia Inspection Company LLC,Active,119,5.0,1,1,253.6,253.6,1,100.0,0.08,0.34,1,0
-Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Active,17,52.9,7,7,507.3,507.3,7,100.0,0.23,1.01,21,0
-Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Active,163,9.2,10,10,1782.8,1750.2,10,100.0,0.59,2.57,76,0
-Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Active,225,36.4,57,57,2288.9,760.9,45,78.9,0.61,2.66,448,0
-Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Active,20,10.0,1,1,95.1,95.1,0,0.0,0.16,0.68,2,0
-Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,130,50.8,130,49,24.0,0.0,8,6.2,0.08,0.34,129,110
-Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,Registered,130,50.8,66,46,46.6,5.2,8,12.1,0.15,0.66,129,46
-Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,130,50.8,49,49,63.6,19.5,8,16.3,0.2,0.89,129,29
-Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,Active,130,50.8,20,20,135.0,84.5,8,40.0,0.5,2.18,129,0
+Chemical/Oil Tanker,Synergy Navis marine Private Limited,Active,463,77.8,156,156,281.9,84.5,72,46.2,0.72,3.13,1445,0
+Oil Tanker,Synergy Navis marine Private Limited,Active,45,86.7,13,13,410.2,101.5,7,53.8,1.88,8.17,314,0
+Bulk Carrier,Synergy Ocean Maritime Inc.,All onboard,536,65.1,536,321,173.3,2.7,157,29.3,0.6,2.6,4118,325
+Bulk Carrier,Synergy Ocean Maritime Inc.,Registered,536,65.1,349,302,265.8,67.6,157,45.0,0.92,3.99,4118,138
+Bulk Carrier,Synergy Ocean Maritime Inc.,Engaged,536,65.1,321,321,289.3,85.5,157,48.9,1.0,4.34,4118,110
+Bulk Carrier,Synergy Ocean Maritime Inc.,Active,536,65.1,211,211,434.9,228.3,157,74.4,1.52,6.6,4118,0
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,All onboard,102,54.9,102,56,111.3,0.8,12,11.8,0.3,1.32,398,84
+Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,All onboard,22,40.9,22,11,147.0,0.0,2,9.1,0.46,2.01,131,19
+Gas Carrier,Synergy Oceanic Services India Pvt Ltd,All onboard,177,72.3,177,128,164.9,7.0,38,21.5,0.39,1.7,888,120
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Registered,102,54.9,56,43,201.6,7.7,12,21.4,0.55,2.4,398,38
+Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Registered,22,40.9,9,9,355.3,13.1,2,22.2,1.13,4.92,131,6
+Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Registered,177,72.3,128,111,227.5,28.0,38,29.7,0.54,2.35,888,71
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Engaged,102,54.9,56,56,202.8,9.9,12,21.4,0.55,2.4,398,38
+Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Engaged,22,40.9,11,11,293.9,15.2,2,18.2,0.93,4.03,131,8
+Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Engaged,177,72.3,128,128,228.1,28.0,38,29.7,0.54,2.35,888,71
+Bulk Carrier,Synergy Oceanic Services India Pvt Ltd,Active,102,54.9,18,18,611.4,169.1,12,66.7,1.72,7.48,398,0
+Chemical/Oil Tanker,Synergy Oceanic Services India Pvt Ltd,Active,22,40.9,3,3,1027.8,304.4,2,66.7,3.4,14.77,131,0
+Gas Carrier,Synergy Oceanic Services India Pvt Ltd,Active,177,72.3,57,57,495.4,183.7,38,66.7,1.21,5.27,888,0
+Bulk Carrier,Synergy Onyx Marine Pvt Ltd,All onboard,147,70.1,147,109,84.9,3.4,16,10.9,0.3,1.31,571,111
+Container,Synergy Onyx Marine Pvt Ltd,All onboard,119,73.1,119,76,160.3,2.4,26,21.8,0.69,3.01,1060,82
+Bulk Carrier,Synergy Onyx Marine Pvt Ltd,Registered,147,70.1,103,95,120.2,13.7,16,15.5,0.43,1.87,571,67
+Container,Synergy Onyx Marine Pvt Ltd,Registered,119,73.1,87,74,219.1,15.8,26,29.9,0.95,4.12,1060,50
+Bulk Carrier,Synergy Onyx Marine Pvt Ltd,Engaged,147,70.1,109,109,114.5,13.7,16,14.7,0.41,1.77,571,73
+Container,Synergy Onyx Marine Pvt Ltd,Engaged,119,73.1,76,76,251.0,37.8,26,34.2,1.08,4.72,1060,39
+Bulk Carrier,Synergy Onyx Marine Pvt Ltd,Active,147,70.1,36,36,322.0,87.9,16,44.4,1.23,5.36,571,0
+Container,Synergy Onyx Marine Pvt Ltd,Active,119,73.1,37,37,503.8,228.3,26,70.3,2.23,9.69,1060,0
+Chemical/Oil Tanker,Synergy Pacific Private Limited,All onboard,1748,85.5,1748,1455,125.8,19.0,364,20.8,0.4,1.72,8899,752
+Container,Synergy Pacific Private Limited,All onboard,722,79.5,722,529,104.9,7.1,139,19.3,0.32,1.37,2927,501
+Gas Carrier,Synergy Pacific Private Limited,All onboard,285,83.2,285,232,70.8,10.4,48,16.8,0.28,1.2,1010,180
+Oil Tanker,Synergy Pacific Private Limited,All onboard,125,77.6,125,95,185.4,26.6,40,32.0,0.59,2.57,950,65
+Chemical/Oil Tanker,Synergy Pacific Private Limited,Registered,1748,85.5,1494,1395,147.0,33.8,364,24.4,0.46,2.01,8899,498
+Container,Synergy Pacific Private Limited,Registered,722,79.5,574,499,131.7,16.9,139,24.2,0.4,1.72,2927,353
+Gas Carrier,Synergy Pacific Private Limited,Registered,285,83.2,237,221,85.0,19.4,48,20.3,0.33,1.44,1010,132
+Oil Tanker,Synergy Pacific Private Limited,Registered,125,77.6,97,90,238.4,81.0,40,41.2,0.76,3.31,950,37
+Chemical/Oil Tanker,Synergy Pacific Private Limited,Engaged,1748,85.5,1455,1455,151.1,33.8,364,25.0,0.48,2.07,8899,459
+Container,Synergy Pacific Private Limited,Engaged,722,79.5,529,529,143.2,21.1,139,26.3,0.43,1.87,2927,308
+Gas Carrier,Synergy Pacific Private Limited,Engaged,285,83.2,232,232,87.0,21.2,48,20.7,0.34,1.47,1010,127
+Oil Tanker,Synergy Pacific Private Limited,Engaged,125,77.6,95,95,244.0,82.1,40,42.1,0.78,3.38,950,35
+Chemical/Oil Tanker,Synergy Pacific Private Limited,Active,1748,85.5,996,996,215.3,67.6,364,36.5,0.69,3.02,8899,0
+Container,Synergy Pacific Private Limited,Active,722,79.5,221,221,322.4,135.3,139,62.9,1.03,4.48,2927,0
+Gas Carrier,Synergy Pacific Private Limited,Active,285,83.2,105,105,176.8,84.5,48,45.7,0.75,3.25,1010,0
+Oil Tanker,Synergy Pacific Private Limited,Active,125,77.6,60,60,376.5,169.1,40,66.7,1.23,5.35,950,0
+Crew Boat,Synergy Ship Arabia Inspection Company LLC,All onboard,119,5.0,119,6,27.4,0.0,2,1.7,0.0,0.01,3,117
+Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,All onboard,17,52.9,17,7,188.0,0.0,7,41.2,0.1,0.42,21,10
+Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,All onboard,163,9.2,163,14,99.1,0.0,10,6.1,0.04,0.17,81,153
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,All onboard,225,36.4,225,63,533.6,0.0,46,20.4,0.17,0.75,502,167
+Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,All onboard,20,10.0,20,1,4.6,0.0,0,0.0,0.01,0.03,2,19
+Crew Boat,Synergy Ship Arabia Inspection Company LLC,Registered,119,5.0,6,6,543.5,0.0,2,33.3,0.04,0.17,3,4
+Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Registered,17,52.9,9,7,355.1,304.4,7,77.8,0.18,0.79,21,2
+Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Registered,163,9.2,15,14,1076.4,507.3,10,66.7,0.42,1.83,81,5
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Registered,225,36.4,82,63,1464.0,265.2,46,56.1,0.48,2.07,502,24
+Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Registered,20,10.0,2,1,46.1,46.1,0,0.0,0.08,0.34,2,1
+Crew Boat,Synergy Ship Arabia Inspection Company LLC,Engaged,119,5.0,6,6,543.5,0.0,2,33.3,0.04,0.17,3,4
+Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Engaged,17,52.9,7,7,456.6,456.6,7,100.0,0.23,1.01,21,0
+Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Engaged,163,9.2,14,14,1153.3,760.9,10,71.4,0.45,1.96,81,4
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Engaged,225,36.4,63,63,1905.6,608.8,46,73.0,0.62,2.69,502,5
+Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Engaged,20,10.0,1,1,92.2,92.2,0,0.0,0.16,0.68,2,0
+Crew Boat,Synergy Ship Arabia Inspection Company LLC,Active,119,5.0,2,2,1630.6,1630.6,2,100.0,0.12,0.51,3,0
+Fast Support Intrevention Vessel,Synergy Ship Arabia Inspection Company LLC,Active,17,52.9,7,7,456.6,456.6,7,100.0,0.23,1.01,21,0
+Offshore Work / Support Vessel,Synergy Ship Arabia Inspection Company LLC,Active,163,9.2,10,10,1614.6,1485.6,10,100.0,0.63,2.74,81,0
+Self-Propelled Jack-Up Barge,Synergy Ship Arabia Inspection Company LLC,Active,225,36.4,58,58,2069.9,760.9,46,79.3,0.67,2.93,502,0
+Voith Mooring Tug,Synergy Ship Arabia Inspection Company LLC,Active,20,10.0,1,1,92.2,92.2,0,0.0,0.16,0.68,2,0
+Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,129,50.4,129,49,33.9,0.0,7,5.4,0.07,0.31,118,109
+Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,Registered,129,50.4,65,46,66.6,5.4,7,10.8,0.14,0.61,118,45
+Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,129,50.4,49,49,89.2,19.3,7,14.3,0.19,0.81,118,29
+Bulk Carrier,Wisdom Synergy Shipmanagement Pte Ltd,Active,129,50.4,20,20,197.8,84.5,7,35.0,0.46,2.0,118,0
