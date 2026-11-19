@@ -1,152 +1,152 @@
 rank,doc,population,onboard,coverage_pct,people,assessable,mean_pct,median_pct,at_target,ok_pct,per_week,per_month,c90,zero_90d
-Able Bodied Seaman,All DoCs,All onboard,1897,53.2,1897,1008,84.3,0.8,211,11.1,0.18,0.78,4360,1452
-Bosun,All DoCs,All onboard,406,49.3,406,224,56.8,0.9,40,9.9,0.14,0.62,750,331
-Chief Cook,All DoCs,All onboard,601,51.7,601,324,68.6,1.2,56,9.3,0.16,0.68,1210,476
-Chief Engineer,All DoCs,All onboard,623,59.9,623,373,112.8,1.8,122,19.6,0.4,1.72,3172,420
-Chief Officer,All DoCs,All onboard,608,71.5,608,402,103.6,3.9,100,16.4,0.33,1.42,2559,416
+Able Bodied Seaman,All DoCs,All onboard,1898,52.9,1898,1004,83.8,0.0,208,11.0,0.18,0.77,4333,1459
+Bosun,All DoCs,All onboard,408,49.0,408,224,56.4,0.9,40,9.8,0.14,0.62,747,334
+Chief Cook,All DoCs,All onboard,600,51.5,600,323,68.8,1.2,57,9.5,0.16,0.69,1216,475
+Chief Engineer,All DoCs,All onboard,622,59.6,622,372,114.2,1.8,123,19.8,0.4,1.75,3218,419
+Chief Officer,All DoCs,All onboard,611,71.4,611,403,104.6,3.9,102,16.7,0.33,1.44,2598,418
 Crane Operator,All DoCs,All onboard,24,29.2,24,6,222.0,0.0,5,20.8,0.09,0.39,28,18
-Deck Cadet,All DoCs,All onboard,443,74.7,443,311,168.1,21.6,97,21.9,0.57,2.46,3219,282
+Deck Cadet,All DoCs,All onboard,443,74.5,443,311,176.4,21.9,98,22.1,0.6,2.62,3436,281
 Electrical Cadet,All DoCs,All onboard,38,89.5,38,31,189.3,49.4,9,23.7,0.46,2.0,225,22
-Electrical Officer,All DoCs,All onboard,243,61.7,243,151,89.1,1.9,39,16.0,0.24,1.05,755,174
-Electro Technical Officer,All DoCs,All onboard,234,65.4,234,142,160.4,4.3,39,16.7,0.29,1.25,866,151
+Electrical Officer,All DoCs,All onboard,245,61.2,245,151,88.3,1.9,39,15.9,0.24,1.05,759,175
+Electro Technical Officer,All DoCs,All onboard,235,65.1,235,141,155.9,3.8,37,15.7,0.27,1.16,808,154
 Electro Technical Rating,All DoCs,All onboard,3,66.7,3,2,28.2,0.0,0,0.0,0.13,0.56,5,2
-Engine Cadet,All DoCs,All onboard,265,67.9,265,162,257.7,20.0,57,21.5,0.82,3.58,2803,181
-Fitter,All DoCs,All onboard,503,54.9,503,283,66.4,1.1,51,10.1,0.21,0.92,1365,386
-Fourth Engineer,All DoCs,All onboard,452,66.6,452,283,68.5,2.1,51,11.3,0.23,0.99,1323,322
+Engine Cadet,All DoCs,All onboard,265,67.5,265,161,257.6,20.0,57,21.5,0.82,3.58,2802,182
+Fitter,All DoCs,All onboard,505,54.9,505,283,66.0,1.1,51,10.1,0.21,0.91,1363,389
+Fourth Engineer,All DoCs,All onboard,449,66.4,449,278,69.3,1.8,51,11.4,0.23,1.01,1338,319
 Gas Engineer,All DoCs,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
-General Steward,All DoCs,All onboard,541,52.9,541,290,70.8,0.0,59,10.9,0.13,0.58,930,423
+General Steward,All DoCs,All onboard,542,52.6,542,289,70.6,0.0,59,10.9,0.13,0.58,929,425
 H2S Technician,All DoCs,All onboard,10,40.0,10,3,976.0,0.0,2,20.0,0.47,2.03,60,7
 Junior Fourth Engineer,All DoCs,All onboard,9,66.7,9,6,6.2,0.0,0,0.0,0.02,0.08,2,8
 Junior Third Officer,All DoCs,All onboard,2,50.0,2,0,0.0,0.0,0,0.0,0.0,0.0,0,2
-Master,All DoCs,All onboard,619,73.0,619,421,105.8,5.8,132,21.3,0.38,1.66,3041,375
+Master,All DoCs,All onboard,623,72.9,623,422,105.2,5.8,131,21.0,0.38,1.65,3041,378
 Mechanic,All DoCs,All onboard,41,34.1,41,12,383.7,0.0,10,24.4,0.17,0.74,90,30
 Messman,All DoCs,All onboard,7,71.4,7,5,54.0,4.9,1,14.3,0.21,0.92,19,6
 Motorman,All DoCs,All onboard,5,60.0,5,3,67.3,15.3,2,40.0,0.3,1.29,19,3
-Oiler,All DoCs,All onboard,1516,53.7,1516,829,75.0,1.0,167,11.0,0.22,0.94,4209,1160
-Ordinary Seaman,All DoCs,All onboard,888,60.0,888,531,80.5,0.9,103,11.6,0.24,1.03,2708,664
-Pumpman,All DoCs,All onboard,182,63.7,182,119,211.2,3.5,23,12.6,0.19,0.82,443,123
+Oiler,All DoCs,All onboard,1514,53.4,1514,823,74.6,1.0,164,10.8,0.21,0.93,4173,1163
+Ordinary Seaman,All DoCs,All onboard,886,59.7,886,525,80.3,0.9,102,11.5,0.24,1.02,2684,665
+Pumpman,All DoCs,All onboard,183,63.9,183,120,210.2,3.5,23,12.6,0.19,0.82,445,122
 Radio Officer / Radio Operator,All DoCs,All onboard,9,33.3,9,2,981.3,0.0,2,22.2,0.51,2.22,59,7
-Second Engineer,All DoCs,All onboard,619,64.0,619,377,89.2,1.8,98,15.8,0.28,1.2,2191,421
-Second Officer,All DoCs,All onboard,607,74.3,607,442,86.4,7.3,123,20.3,0.28,1.22,2198,384
-Third Engineer,All DoCs,All onboard,631,69.3,631,409,77.6,2.6,84,13.3,0.27,1.19,2221,466
-Third Officer,All DoCs,All onboard,659,74.8,659,468,151.3,4.8,108,16.4,0.28,1.21,2350,441
+Second Engineer,All DoCs,All onboard,620,64.0,620,378,89.4,1.7,99,16.0,0.28,1.2,2204,420
+Second Officer,All DoCs,All onboard,609,74.1,609,441,86.1,7.0,122,20.0,0.28,1.22,2196,386
+Third Engineer,All DoCs,All onboard,632,69.3,632,408,77.0,2.2,83,13.1,0.27,1.18,2202,469
+Third Officer,All DoCs,All onboard,657,74.3,657,463,151.4,4.7,107,16.3,0.28,1.2,2335,443
 Trainee Electrical Officer,All DoCs,All onboard,15,93.3,15,12,50.8,50.7,2,13.3,0.13,0.59,26,8
 Trainee Fitter,All DoCs,All onboard,21,38.1,21,6,66.9,0.0,2,9.5,0.3,1.3,81,19
-Trainee General Steward,All DoCs,All onboard,26,50.0,26,11,18.0,0.0,2,7.7,0.08,0.34,26,24
-Trainee Seaman,All DoCs,All onboard,102,54.9,102,53,69.7,0.0,15,14.7,0.14,0.59,179,81
+Trainee General Steward,All DoCs,All onboard,26,46.2,26,11,18.0,0.0,2,7.7,0.08,0.34,26,24
+Trainee Seaman,All DoCs,All onboard,102,53.9,102,53,69.7,0.0,15,14.7,0.14,0.59,179,81
 Trainee Wiper,All DoCs,All onboard,10,60.0,10,6,10.2,0.0,0,0.0,0.01,0.03,1,9
-Wiper,All DoCs,All onboard,148,45.9,148,69,66.2,0.0,13,8.8,0.22,0.95,416,120
-Able Bodied Seaman,All DoCs,Registered,1897,53.2,1009,890,157.9,16.9,211,20.9,0.34,1.46,4360,564
-Bosun,All DoCs,Registered,406,49.3,200,178,114.3,15.8,40,20.0,0.29,1.27,750,125
-Chief Cook,All DoCs,Registered,601,51.7,311,272,131.4,18.5,56,18.0,0.3,1.32,1210,186
-Chief Engineer,All DoCs,Registered,623,59.9,373,346,188.0,33.8,122,32.7,0.66,2.88,3172,170
-Chief Officer,All DoCs,Registered,608,71.5,435,381,144.4,17.3,100,23.0,0.46,1.99,2559,243
+Wiper,All DoCs,All onboard,146,45.2,146,67,60.3,0.0,12,8.2,0.2,0.87,375,119
+Able Bodied Seaman,All DoCs,Registered,1898,52.9,1004,884,157.9,16.9,208,20.7,0.34,1.46,4333,565
+Bosun,All DoCs,Registered,408,49.0,200,177,114.0,15.6,40,20.0,0.29,1.26,747,126
+Chief Cook,All DoCs,Registered,600,51.5,309,271,132.4,18.6,57,18.4,0.31,1.33,1216,184
+Chief Engineer,All DoCs,Registered,622,59.6,371,345,191.1,33.8,123,33.2,0.67,2.93,3218,168
+Chief Officer,All DoCs,Registered,611,71.4,436,382,146.3,19.0,102,23.4,0.46,2.02,2598,243
 Crane Operator,All DoCs,Registered,24,29.2,7,6,761.1,450.9,5,71.4,0.31,1.35,28,1
-Deck Cadet,All DoCs,Registered,443,74.7,331,304,224.9,72.3,97,29.3,0.76,3.29,3219,170
+Deck Cadet,All DoCs,Registered,443,74.5,330,304,236.7,72.4,98,29.7,0.81,3.52,3436,168
 Electrical Cadet,All DoCs,Registered,38,89.5,34,31,211.6,50.7,9,26.5,0.51,2.24,225,18
-Electrical Officer,All DoCs,Registered,243,61.7,150,138,144.0,33.8,39,26.0,0.39,1.7,755,81
-Electro Technical Officer,All DoCs,Registered,234,65.4,153,134,244.8,33.3,39,25.5,0.44,1.91,866,70
+Electrical Officer,All DoCs,Registered,245,61.2,150,138,143.9,33.8,39,26.0,0.39,1.71,759,80
+Electro Technical Officer,All DoCs,Registered,235,65.1,153,133,238.9,33.1,37,24.2,0.41,1.79,808,72
 Electro Technical Rating,All DoCs,Registered,3,66.7,2,2,42.3,42.3,0,0.0,0.19,0.85,5,1
-Engine Cadet,All DoCs,Registered,265,67.9,180,162,379.3,80.7,57,31.7,1.21,5.27,2803,96
-Fitter,All DoCs,Registered,503,54.9,276,238,120.2,16.9,51,18.5,0.38,1.67,1365,159
-Fourth Engineer,All DoCs,Registered,452,66.6,301,258,102.6,16.9,51,16.9,0.34,1.49,1323,171
+Engine Cadet,All DoCs,Registered,265,67.5,179,161,381.3,80.7,57,31.8,1.22,5.29,2802,96
+Fitter,All DoCs,Registered,505,54.9,277,239,119.5,16.3,51,18.4,0.38,1.66,1363,161
+Fourth Engineer,All DoCs,Registered,449,66.4,298,254,104.2,16.9,51,17.1,0.35,1.52,1338,168
 Gas Engineer,All DoCs,Registered,1,0.0,0,0,,,0,,,,0,0
-General Steward,All DoCs,Registered,541,52.9,286,256,133.4,16.9,59,20.6,0.25,1.1,930,168
+General Steward,All DoCs,Registered,542,52.6,285,255,133.7,16.9,59,20.7,0.25,1.1,929,168
 H2S Technician,All DoCs,Registered,10,40.0,4,3,2440.0,314.4,2,50.0,1.17,5.07,60,1
 Junior Fourth Engineer,All DoCs,Registered,9,66.7,6,4,6.5,0.0,0,0.0,0.03,0.11,2,5
 Junior Third Officer,All DoCs,Registered,2,50.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
-Master,All DoCs,Registered,619,73.0,452,408,144.8,27.5,132,29.2,0.52,2.28,3041,208
+Master,All DoCs,Registered,623,72.9,454,409,144.2,27.7,131,28.9,0.52,2.27,3041,209
 Mechanic,All DoCs,Registered,41,34.1,14,12,1123.8,431.2,10,71.4,0.5,2.17,90,3
 Messman,All DoCs,Registered,7,71.4,5,5,75.6,17.7,1,20.0,0.3,1.29,19,4
 Motorman,All DoCs,Registered,5,60.0,3,3,112.2,101.5,2,66.7,0.49,2.14,19,1
-Oiler,All DoCs,Registered,1516,53.7,814,710,138.8,16.9,167,20.5,0.4,1.75,4209,458
-Ordinary Seaman,All DoCs,Registered,888,60.0,533,472,133.7,9.9,103,19.3,0.4,1.72,2708,309
-Pumpman,All DoCs,Registered,182,63.7,116,103,330.8,16.9,23,19.8,0.3,1.29,443,57
+Oiler,All DoCs,Registered,1514,53.4,808,703,139.0,16.9,164,20.3,0.4,1.75,4173,457
+Ordinary Seaman,All DoCs,Registered,886,59.7,529,467,134.0,9.4,102,19.3,0.39,1.72,2684,308
+Pumpman,All DoCs,Registered,183,63.9,117,104,328.2,16.9,23,19.7,0.3,1.29,445,56
 Radio Officer / Radio Operator,All DoCs,Registered,9,33.3,3,2,2944.0,2575.5,2,66.7,1.53,6.65,59,1
-Second Engineer,All DoCs,Registered,619,64.0,396,352,139.0,18.7,98,24.7,0.43,1.87,2191,198
-Second Officer,All DoCs,Registered,607,74.3,451,409,116.0,19.5,123,27.3,0.38,1.65,2198,228
-Third Engineer,All DoCs,Registered,631,69.3,437,390,111.8,12.1,84,19.2,0.4,1.72,2221,272
-Third Officer,All DoCs,Registered,659,74.8,493,444,201.9,16.9,108,21.9,0.37,1.61,2350,275
+Second Engineer,All DoCs,Registered,620,64.0,397,353,139.2,19.5,99,24.9,0.43,1.88,2204,197
+Second Officer,All DoCs,Registered,609,74.1,451,408,115.9,19.5,122,27.1,0.38,1.65,2196,228
+Third Engineer,All DoCs,Registered,632,69.3,438,389,110.9,12.0,83,18.9,0.39,1.7,2202,275
+Third Officer,All DoCs,Registered,657,74.3,488,440,203.5,16.9,107,21.9,0.37,1.62,2335,274
 Trainee Electrical Officer,All DoCs,Registered,15,93.3,14,12,54.5,50.7,2,14.3,0.14,0.63,26,7
 Trainee Fitter,All DoCs,Registered,21,38.1,8,5,175.5,0.0,2,25.0,0.79,3.42,81,6
-Trainee General Steward,All DoCs,Registered,26,50.0,13,10,35.7,1.3,2,15.4,0.16,0.68,26,11
-Trainee Seaman,All DoCs,Registered,102,54.9,56,50,126.9,8.5,15,26.8,0.25,1.08,179,35
+Trainee General Steward,All DoCs,Registered,26,46.2,12,10,38.6,1.9,2,16.7,0.17,0.73,26,10
+Trainee Seaman,All DoCs,Registered,102,53.9,55,50,129.3,9.3,15,27.3,0.25,1.1,179,34
 Trainee Wiper,All DoCs,Registered,10,60.0,6,6,17.0,1.5,0,0.0,0.01,0.06,1,5
-Wiper,All DoCs,Registered,148,45.9,68,57,143.5,16.5,13,19.1,0.48,2.07,416,40
-Able Bodied Seaman,All DoCs,Engaged,1897,53.2,1008,1008,158.6,16.9,211,20.9,0.34,1.46,4360,563
-Bosun,All DoCs,Engaged,406,49.3,224,224,102.9,12.9,40,17.9,0.26,1.13,750,149
-Chief Cook,All DoCs,Engaged,601,51.7,324,324,127.3,18.9,56,17.3,0.29,1.26,1210,199
-Chief Engineer,All DoCs,Engaged,623,59.9,373,373,188.4,33.8,122,32.7,0.66,2.88,3172,170
-Chief Officer,All DoCs,Engaged,608,71.5,402,402,156.6,28.8,100,24.9,0.5,2.15,2559,210
+Wiper,All DoCs,Registered,146,45.2,66,55,132.8,16.5,12,18.2,0.44,1.92,375,39
+Able Bodied Seaman,All DoCs,Engaged,1898,52.9,1004,1004,158.4,16.9,208,20.7,0.34,1.46,4333,565
+Bosun,All DoCs,Engaged,408,49.0,224,224,102.7,12.4,40,17.9,0.26,1.13,747,150
+Chief Cook,All DoCs,Engaged,600,51.5,323,323,127.8,19.2,57,17.6,0.29,1.27,1216,198
+Chief Engineer,All DoCs,Engaged,622,59.6,372,372,191.0,33.8,123,33.1,0.67,2.93,3218,169
+Chief Officer,All DoCs,Engaged,611,71.4,403,403,158.6,29.3,102,25.3,0.5,2.18,2598,210
 Crane Operator,All DoCs,Engaged,24,29.2,6,6,888.0,459.6,5,83.3,0.36,1.58,28,0
-Deck Cadet,All DoCs,Engaged,443,74.7,311,311,239.5,76.7,97,31.2,0.81,3.5,3219,150
+Deck Cadet,All DoCs,Engaged,443,74.5,311,311,251.3,77.6,98,31.5,0.86,3.74,3436,149
 Electrical Cadet,All DoCs,Engaged,38,89.5,31,31,232.0,78.9,9,29.0,0.56,2.45,225,15
-Electrical Officer,All DoCs,Engaged,243,61.7,151,151,143.4,33.8,39,25.8,0.39,1.69,755,82
-Electro Technical Officer,All DoCs,Engaged,234,65.4,142,142,264.2,33.8,39,27.5,0.47,2.06,866,59
+Electrical Officer,All DoCs,Engaged,245,61.2,151,151,143.3,33.8,39,25.8,0.39,1.7,759,81
+Electro Technical Officer,All DoCs,Engaged,235,65.1,141,141,259.8,33.8,37,26.2,0.45,1.94,808,60
 Electro Technical Rating,All DoCs,Engaged,3,66.7,2,2,42.3,42.3,0,0.0,0.19,0.85,5,1
-Engine Cadet,All DoCs,Engaged,265,67.9,162,162,421.5,82.2,57,35.2,1.35,5.85,2803,78
-Fitter,All DoCs,Engaged,503,54.9,283,283,118.0,16.5,51,18.0,0.38,1.63,1365,166
-Fourth Engineer,All DoCs,Engaged,452,66.6,283,283,109.4,16.9,51,18.0,0.36,1.58,1323,153
+Engine Cadet,All DoCs,Engaged,265,67.5,161,161,424.0,82.7,57,35.4,1.35,5.89,2802,78
+Fitter,All DoCs,Engaged,505,54.9,283,283,117.8,16.2,51,18.0,0.37,1.63,1363,167
+Fourth Engineer,All DoCs,Engaged,449,66.4,278,278,112.0,16.9,51,18.3,0.37,1.63,1338,148
 Gas Engineer,All DoCs,Engaged,1,0.0,0,0,,,0,,,,0,0
-General Steward,All DoCs,Engaged,541,52.9,290,290,132.1,16.9,59,20.3,0.25,1.08,930,172
+General Steward,All DoCs,Engaged,542,52.6,289,289,132.5,16.9,59,20.4,0.25,1.09,929,172
 H2S Technician,All DoCs,Engaged,10,40.0,3,3,3253.4,585.3,2,66.7,1.56,6.76,60,0
 Junior Fourth Engineer,All DoCs,Engaged,9,66.7,6,6,9.3,3.1,0,0.0,0.03,0.11,2,5
 Junior Third Officer,All DoCs,Engaged,2,50.0,0,0,,,0,,,,0,0
-Master,All DoCs,Engaged,619,73.0,421,421,155.6,33.8,132,31.4,0.56,2.44,3041,177
+Master,All DoCs,Engaged,623,72.9,422,422,155.3,33.8,131,31.0,0.56,2.44,3041,177
 Mechanic,All DoCs,Engaged,41,34.1,12,12,1311.1,938.5,10,83.3,0.58,2.54,90,1
 Messman,All DoCs,Engaged,7,71.4,5,5,75.6,17.7,1,20.0,0.3,1.29,19,4
 Motorman,All DoCs,Engaged,5,60.0,3,3,112.2,101.5,2,66.7,0.49,2.14,19,1
-Oiler,All DoCs,Engaged,1516,53.7,829,829,137.1,16.9,167,20.1,0.39,1.72,4209,473
-Ordinary Seaman,All DoCs,Engaged,888,60.0,531,531,134.7,12.9,103,19.4,0.4,1.72,2708,307
-Pumpman,All DoCs,Engaged,182,63.7,119,119,323.0,16.9,23,19.3,0.29,1.26,443,60
+Oiler,All DoCs,Engaged,1514,53.4,823,823,137.3,16.9,164,19.9,0.39,1.71,4173,472
+Ordinary Seaman,All DoCs,Engaged,886,59.7,525,525,135.4,12.9,102,19.4,0.4,1.73,2684,304
+Pumpman,All DoCs,Engaged,183,63.9,120,120,320.5,16.9,23,19.2,0.29,1.25,445,59
 Radio Officer / Radio Operator,All DoCs,Engaged,9,33.3,2,2,4416.0,4416.0,2,100.0,2.29,9.98,59,0
-Second Engineer,All DoCs,Engaged,619,64.0,377,377,146.4,21.7,98,26.0,0.45,1.97,2191,179
-Second Officer,All DoCs,Engaged,607,74.3,442,442,118.7,23.4,123,27.8,0.39,1.68,2198,219
-Third Engineer,All DoCs,Engaged,631,69.3,409,409,119.7,14.8,84,20.5,0.42,1.84,2221,244
-Third Officer,All DoCs,Engaged,659,74.8,468,468,213.0,16.9,108,23.1,0.39,1.7,2350,250
+Second Engineer,All DoCs,Engaged,620,64.0,378,378,146.6,26.2,99,26.2,0.45,1.97,2204,178
+Second Officer,All DoCs,Engaged,609,74.1,441,441,118.9,23.6,122,27.7,0.39,1.68,2196,218
+Third Engineer,All DoCs,Engaged,632,69.3,408,408,119.3,14.5,83,20.3,0.42,1.83,2202,245
+Third Officer,All DoCs,Engaged,657,74.3,463,463,214.8,16.9,107,23.1,0.39,1.71,2335,249
 Trainee Electrical Officer,All DoCs,Engaged,15,93.3,12,12,63.6,54.6,2,16.7,0.17,0.73,26,5
 Trainee Fitter,All DoCs,Engaged,21,38.1,6,6,234.1,11.9,2,33.3,1.05,4.57,81,4
-Trainee General Steward,All DoCs,Engaged,26,50.0,11,11,42.5,3.7,2,18.2,0.18,0.8,26,9
-Trainee Seaman,All DoCs,Engaged,102,54.9,53,53,134.2,10.3,15,28.3,0.26,1.14,179,32
+Trainee General Steward,All DoCs,Engaged,26,46.2,11,11,42.5,3.7,2,18.2,0.18,0.8,26,9
+Trainee Seaman,All DoCs,Engaged,102,53.9,53,53,134.2,10.3,15,28.3,0.26,1.14,179,32
 Trainee Wiper,All DoCs,Engaged,10,60.0,6,6,17.0,1.5,0,0.0,0.01,0.06,1,5
-Wiper,All DoCs,Engaged,148,45.9,69,69,141.9,16.2,13,18.8,0.47,2.04,416,41
-Able Bodied Seaman,All DoCs,Active,1897,53.2,445,445,348.1,86.1,211,47.4,0.76,3.31,4360,0
-Bosun,All DoCs,Active,406,49.3,75,75,286.3,108.7,40,53.3,0.78,3.38,750,0
-Chief Cook,All DoCs,Active,601,51.7,125,125,306.5,87.7,56,44.8,0.75,3.27,1210,0
-Chief Engineer,All DoCs,Active,623,59.9,203,203,335.9,135.3,122,60.1,1.22,5.28,3172,0
-Chief Officer,All DoCs,Active,608,71.5,192,192,315.0,103.2,100,52.1,1.04,4.51,2559,0
+Wiper,All DoCs,Engaged,146,45.2,67,67,131.4,16.2,12,17.9,0.44,1.89,375,40
+Able Bodied Seaman,All DoCs,Active,1898,52.9,439,439,351.1,86.1,208,47.4,0.77,3.34,4333,0
+Bosun,All DoCs,Active,408,49.0,74,74,289.5,113.5,40,54.1,0.79,3.41,747,0
+Chief Cook,All DoCs,Active,600,51.5,125,125,307.0,90.0,57,45.6,0.76,3.29,1216,0
+Chief Engineer,All DoCs,Active,622,59.6,203,203,339.7,135.3,123,60.6,1.23,5.36,3218,0
+Chief Officer,All DoCs,Active,611,71.4,193,193,318.2,108.7,102,52.8,1.05,4.55,2598,0
 Crane Operator,All DoCs,Active,24,29.2,6,6,888.0,459.6,5,83.3,0.36,1.58,28,0
-Deck Cadet,All DoCs,Active,443,74.7,161,161,432.3,126.8,97,60.2,1.56,6.76,3219,0
+Deck Cadet,All DoCs,Active,443,74.5,162,162,452.3,131.1,98,60.5,1.65,7.17,3436,0
 Electrical Cadet,All DoCs,Active,38,89.5,16,16,420.4,117.7,9,56.2,1.09,4.76,225,0
-Electrical Officer,All DoCs,Active,243,61.7,69,69,291.3,118.4,39,56.5,0.85,3.7,755,0
-Electro Technical Officer,All DoCs,Active,234,65.4,83,83,441.1,87.2,39,47.0,0.81,3.53,866,0
+Electrical Officer,All DoCs,Active,245,61.2,70,70,288.1,117.7,39,55.7,0.84,3.67,759,0
+Electro Technical Officer,All DoCs,Active,235,65.1,81,81,439.8,84.5,37,45.7,0.78,3.37,808,0
 Electro Technical Rating,All DoCs,Active,3,66.7,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0
-Engine Cadet,All DoCs,Active,265,67.9,84,84,766.1,262.1,57,67.9,2.6,11.29,2803,0
-Fitter,All DoCs,Active,503,54.9,117,117,270.5,84.5,51,43.6,0.91,3.95,1365,0
-Fourth Engineer,All DoCs,Active,452,66.6,130,130,225.7,79.1,51,39.2,0.79,3.44,1323,0
+Engine Cadet,All DoCs,Active,265,67.5,83,83,775.1,270.6,57,68.7,2.63,11.42,2802,0
+Fitter,All DoCs,Active,505,54.9,116,116,272.6,84.5,51,44.0,0.91,3.97,1363,0
+Fourth Engineer,All DoCs,Active,449,66.4,130,130,227.6,79.1,51,39.2,0.8,3.48,1338,0
 Gas Engineer,All DoCs,Active,1,0.0,0,0,,,0,,,,0,0
-General Steward,All DoCs,Active,541,52.9,118,118,308.3,97.5,59,50.0,0.61,2.67,930,0
+General Steward,All DoCs,Active,542,52.6,117,117,310.7,101.5,59,50.4,0.62,2.69,929,0
 H2S Technician,All DoCs,Active,10,40.0,3,3,3253.4,585.3,2,66.7,1.56,6.76,60,0
 Junior Fourth Engineer,All DoCs,Active,9,66.7,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Junior Third Officer,All DoCs,Active,2,50.0,0,0,,,0,,,,0,0
-Master,All DoCs,Active,619,73.0,244,244,261.8,118.4,132,54.1,0.97,4.21,3041,0
+Master,All DoCs,Active,623,72.9,245,245,260.8,118.4,131,53.5,0.97,4.2,3041,0
 Mechanic,All DoCs,Active,41,34.1,11,11,1430.1,1268.2,10,90.9,0.64,2.77,90,0
 Messman,All DoCs,Active,7,71.4,1,1,321.3,321.3,1,100.0,1.48,6.43,19,0
 Motorman,All DoCs,Active,5,60.0,2,2,160.6,160.6,2,100.0,0.74,3.21,19,0
-Oiler,All DoCs,Active,1516,53.7,356,356,304.8,84.5,167,46.9,0.92,4.0,4209,0
-Ordinary Seaman,All DoCs,Active,888,60.0,224,224,308.5,84.5,103,46.0,0.94,4.09,2708,0
-Pumpman,All DoCs,Active,182,63.7,59,59,645.6,50.7,23,39.0,0.58,2.54,443,0
+Oiler,All DoCs,Active,1514,53.4,351,351,307.3,84.5,164,46.7,0.92,4.02,4173,0
+Ordinary Seaman,All DoCs,Active,886,59.7,221,221,310.8,84.5,102,46.2,0.94,4.11,2684,0
+Pumpman,All DoCs,Active,183,63.9,61,61,625.0,50.7,23,37.7,0.57,2.47,445,0
 Radio Officer / Radio Operator,All DoCs,Active,9,33.3,2,2,4416.0,4416.0,2,100.0,2.29,9.98,59,0
-Second Engineer,All DoCs,Active,619,64.0,198,198,269.8,95.9,98,49.5,0.86,3.74,2191,0
-Second Officer,All DoCs,Active,607,74.3,223,223,225.0,118.4,123,55.2,0.77,3.33,2198,0
-Third Engineer,All DoCs,Active,631,69.3,165,165,283.1,101.5,84,50.9,1.05,4.55,2221,0
-Third Officer,All DoCs,Active,659,74.8,218,218,445.6,93.9,108,49.5,0.84,3.65,2350,0
+Second Engineer,All DoCs,Active,620,64.0,200,200,268.2,95.9,99,49.5,0.86,3.73,2204,0
+Second Officer,All DoCs,Active,609,74.1,223,223,224.8,117.1,122,54.7,0.77,3.33,2196,0
+Third Engineer,All DoCs,Active,632,69.3,163,163,284.6,101.5,83,50.9,1.05,4.57,2202,0
+Third Officer,All DoCs,Active,657,74.3,214,214,452.7,99.8,107,50.0,0.85,3.69,2335,0
 Trainee Electrical Officer,All DoCs,Active,15,93.3,7,7,93.3,76.1,2,28.6,0.29,1.26,26,0
 Trainee Fitter,All DoCs,Active,21,38.1,2,2,690.5,690.5,2,100.0,3.15,13.7,81,0
-Trainee General Steward,All DoCs,Active,26,50.0,2,2,219.8,219.8,2,100.0,1.01,4.4,26,0
-Trainee Seaman,All DoCs,Active,102,54.9,21,21,326.1,169.1,15,71.4,0.66,2.88,179,0
+Trainee General Steward,All DoCs,Active,26,46.2,2,2,219.8,219.8,2,100.0,1.01,4.4,26,0
+Trainee Seaman,All DoCs,Active,102,53.9,21,21,326.1,169.1,15,71.4,0.66,2.88,179,0
 Trainee Wiper,All DoCs,Active,10,60.0,1,1,21.1,21.1,0,0.0,0.08,0.34,1,0
-Wiper,All DoCs,Active,148,45.9,28,28,334.8,84.5,13,46.4,1.16,5.02,416,0
+Wiper,All DoCs,Active,146,45.2,27,27,310.5,84.5,12,44.4,1.08,4.7,375,0
 Able Bodied Seaman,Columbus Shipmanagement Inc. Manila,All onboard,77,29.9,77,19,27.3,0.0,7,9.1,0.09,0.4,92,66
 Bosun,Columbus Shipmanagement Inc. Manila,All onboard,29,27.6,29,10,86.1,0.0,4,13.8,0.16,0.7,60,24
 Chief Cook,Columbus Shipmanagement Inc. Manila,All onboard,23,26.1,23,7,101.7,0.0,3,13.0,0.34,1.49,101,17
@@ -166,7 +166,7 @@ Ordinary Seaman,Columbus Shipmanagement Inc. Manila,All onboard,23,52.2,23,11,79
 Second Engineer,Columbus Shipmanagement Inc. Manila,All onboard,25,28.0,25,6,50.9,0.0,3,12.0,0.1,0.42,31,22
 Second Officer,Columbus Shipmanagement Inc. Manila,All onboard,24,66.7,24,15,77.4,0.8,6,25.0,0.33,1.45,103,18
 Third Engineer,Columbus Shipmanagement Inc. Manila,All onboard,26,30.8,26,8,41.9,0.0,3,11.5,0.12,0.53,41,22
-Third Officer,Columbus Shipmanagement Inc. Manila,All onboard,28,42.9,28,16,29.8,0.4,2,7.1,0.12,0.53,44,22
+Third Officer,Columbus Shipmanagement Inc. Manila,All onboard,27,44.4,27,15,30.5,0.0,2,7.4,0.13,0.55,44,21
 Able Bodied Seaman,Columbus Shipmanagement Inc. Manila,Registered,77,29.9,23,17,90.9,16.9,7,30.4,0.31,1.35,92,12
 Bosun,Columbus Shipmanagement Inc. Manila,Registered,29,27.6,8,8,308.6,103.6,4,50.0,0.58,2.54,60,3
 Chief Cook,Columbus Shipmanagement Inc. Manila,Registered,23,26.1,6,6,389.8,149.3,3,50.0,1.31,5.69,101,0
@@ -186,7 +186,7 @@ Ordinary Seaman,Columbus Shipmanagement Inc. Manila,Registered,23,52.2,12,10,152
 Second Engineer,Columbus Shipmanagement Inc. Manila,Registered,25,28.0,7,4,180.2,0.8,3,42.9,0.34,1.5,31,4
 Second Officer,Columbus Shipmanagement Inc. Manila,Registered,24,66.7,16,13,116.0,5.8,6,37.5,0.5,2.18,103,10
 Third Engineer,Columbus Shipmanagement Inc. Manila,Registered,26,30.8,8,8,136.1,47.5,3,37.5,0.4,1.73,41,4
-Third Officer,Columbus Shipmanagement Inc. Manila,Registered,28,42.9,12,12,66.4,12.0,2,16.7,0.29,1.24,44,6
+Third Officer,Columbus Shipmanagement Inc. Manila,Registered,27,44.4,12,12,66.4,12.0,2,16.7,0.29,1.24,44,6
 Able Bodied Seaman,Columbus Shipmanagement Inc. Manila,Engaged,77,29.9,19,19,110.5,23.8,7,36.8,0.38,1.64,92,8
 Bosun,Columbus Shipmanagement Inc. Manila,Engaged,29,27.6,10,10,249.7,37.4,4,40.0,0.47,2.03,60,5
 Chief Cook,Columbus Shipmanagement Inc. Manila,Engaged,23,26.1,7,7,334.3,54.4,3,42.9,1.12,4.88,101,1
@@ -206,7 +206,7 @@ Ordinary Seaman,Columbus Shipmanagement Inc. Manila,Engaged,23,52.2,11,11,166.6,
 Second Engineer,Columbus Shipmanagement Inc. Manila,Engaged,25,28.0,6,6,212.0,79.5,3,50.0,0.4,1.75,31,3
 Second Officer,Columbus Shipmanagement Inc. Manila,Engaged,24,66.7,15,15,123.9,7.8,6,40.0,0.53,2.32,103,9
 Third Engineer,Columbus Shipmanagement Inc. Manila,Engaged,26,30.8,8,8,136.1,47.5,3,37.5,0.4,1.73,41,4
-Third Officer,Columbus Shipmanagement Inc. Manila,Engaged,28,42.9,16,16,52.2,11.4,2,12.5,0.21,0.93,44,10
+Third Officer,Columbus Shipmanagement Inc. Manila,Engaged,27,44.4,15,15,54.8,10.9,2,13.3,0.23,0.99,44,9
 Able Bodied Seaman,Columbus Shipmanagement Inc. Manila,Active,77,29.9,11,11,187.2,135.3,7,63.6,0.65,2.83,92,0
 Bosun,Columbus Shipmanagement Inc. Manila,Active,29,27.6,5,5,491.5,267.0,4,80.0,0.93,4.06,60,0
 Chief Cook,Columbus Shipmanagement Inc. Manila,Active,23,26.1,6,6,389.8,149.3,3,50.0,1.31,5.69,101,0
@@ -226,7 +226,7 @@ Ordinary Seaman,Columbus Shipmanagement Inc. Manila,Active,23,52.2,6,6,304.1,143
 Second Engineer,Columbus Shipmanagement Inc. Manila,Active,25,28.0,3,3,420.3,526.8,3,100.0,0.8,3.49,31,0
 Second Officer,Columbus Shipmanagement Inc. Manila,Active,24,66.7,6,6,296.2,143.7,6,100.0,1.34,5.81,103,0
 Third Engineer,Columbus Shipmanagement Inc. Manila,Active,26,30.8,4,4,268.4,186.1,3,75.0,0.8,3.47,41,0
-Third Officer,Columbus Shipmanagement Inc. Manila,Active,28,42.9,6,6,130.9,63.1,2,33.3,0.57,2.48,44,0
+Third Officer,Columbus Shipmanagement Inc. Manila,Active,27,44.4,6,6,130.9,63.1,2,33.3,0.57,2.48,44,0
 Able Bodied Seaman,DS Ship Management Pte Ltd (DSSM),All onboard,32,18.8,32,4,0.7,0.0,0,0.0,0.0,0.01,1,31
 Bosun,DS Ship Management Pte Ltd (DSSM),All onboard,10,30.0,10,3,21.2,0.0,1,10.0,0.09,0.37,11,9
 Chief Cook,DS Ship Management Pte Ltd (DSSM),All onboard,10,50.0,10,4,12.0,0.0,0,0.0,0.04,0.17,5,8
@@ -367,106 +367,106 @@ Second Engineer,Fluyt Maritime Private Limited,Active,1,0.0,0,0,,,0,,,,0,0
 Third Engineer,Fluyt Maritime Private Limited,Active,1,100.0,0,0,,,0,,,,0,0
 Third Officer,Fluyt Maritime Private Limited,Active,2,100.0,1,1,135.3,135.3,1,100.0,0.62,2.71,8,0
 Trainee Seaman,Fluyt Maritime Private Limited,Active,1,100.0,0,0,,,0,,,,0,0
-Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,104,56.7,104,72,38.0,3.3,11,10.6,0.12,0.53,162,84
-Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,39,53.8,39,28,49.0,5.0,3,7.7,0.11,0.48,55,33
+Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,103,56.3,103,71,37.0,3.3,10,9.7,0.12,0.52,157,84
+Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,38,52.6,38,27,49.0,5.0,3,7.9,0.11,0.46,52,33
 Chief Cook,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,34,52.9,34,23,11.2,2.4,0,0.0,0.01,0.03,3,32
-Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,38,68.4,38,25,60.2,2.7,6,15.8,0.21,0.93,104,27
+Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,37,67.6,37,24,60.2,0.9,6,16.2,0.21,0.93,102,27
 Chief Officer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,35,77.1,35,26,76.8,6.0,4,11.4,0.19,0.81,84,29
 Deck Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,30,100.0,30,28,443.4,75.2,13,43.3,1.98,8.59,762,16
 Electrical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,19,47.4,19,14,181.5,2.8,6,31.6,0.78,3.38,190,13
 Electro Technical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,18,66.7,18,11,90.8,7.0,3,16.7,0.34,1.47,78,11
 Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,19,84.2,19,15,508.7,80.4,8,42.1,1.85,8.03,451,11
 Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,36,36.1,36,22,12.1,1.6,1,2.8,0.03,0.14,15,30
-Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,47,59.6,47,30,79.5,0.9,4,8.5,0.27,1.19,165,38
+Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,45,57.8,45,28,80.7,0.9,3,6.7,0.27,1.19,159,37
 General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,34,50.0,34,21,13.8,1.2,0,0.0,0.03,0.11,11,30
 Junior Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,1,100.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Master,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,40,80.0,40,30,58.3,7.7,3,7.5,0.24,1.05,124,27
+Master,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,41,80.5,41,31,58.1,7.7,3,7.3,0.24,1.05,127,27
 Motorman,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,2,0.0,2,0,0.0,0.0,0,0.0,0.0,0.0,0,2
-Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,103,46.6,103,62,35.7,1.1,5,4.9,0.14,0.61,187,90
-Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,70,50.0,70,40,25.9,0.8,4,5.7,0.05,0.2,42,63
+Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,103,44.7,103,61,34.1,1.1,4,3.9,0.13,0.58,177,92
+Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,68,48.5,68,38,21.0,0.8,3,4.4,0.02,0.09,19,63
 Second Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,38,52.6,38,23,30.8,3.0,4,10.5,0.1,0.45,51,28
-Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,32,90.6,32,30,50.7,15.9,7,21.9,0.19,0.81,77,20
-Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,39,69.2,39,29,47.5,6.0,6,15.4,0.15,0.66,76,29
-Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,38,71.1,38,28,105.2,7.8,7,18.4,0.34,1.47,165,26
+Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,31,90.3,31,29,48.5,14.8,6,19.4,0.18,0.76,70,20
+Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,39,69.2,39,29,45.8,4.3,6,15.4,0.14,0.62,72,30
+Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,37,70.3,37,27,104.8,7.7,6,16.2,0.33,1.44,158,26
 Trainee Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,5,20.0,5,1,0.2,0.0,0,0.0,0.0,0.0,0,5
 Trainee General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 Trainee Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,5,80.0,5,2,0.2,0.0,0,0.0,0.0,0.0,0,5
-Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,31,41.9,31,14,46.9,0.0,2,6.5,0.13,0.58,53,26
-Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,104,56.7,59,52,65.4,9.9,11,18.6,0.21,0.93,162,39
-Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,39,53.8,21,20,89.1,14.0,3,14.3,0.2,0.89,55,15
+Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,30,40.0,30,13,15.5,0.0,1,3.3,0.03,0.14,12,26
+Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,103,56.3,58,51,64.1,9.5,10,17.2,0.21,0.92,157,39
+Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,38,52.6,20,19,91.0,14.0,3,15.0,0.2,0.88,52,15
 Chief Cook,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,34,52.9,18,14,17.6,4.9,0,0.0,0.01,0.06,3,16
-Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,38,68.4,26,25,88.0,23.0,6,23.1,0.31,1.35,104,15
+Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,37,67.6,25,24,89.1,16.7,6,24.0,0.32,1.38,102,15
 Chief Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,35,77.1,27,23,98.2,6.0,4,14.8,0.24,1.05,84,21
 Deck Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,30,100.0,30,28,443.4,75.2,13,43.3,1.98,8.59,762,16
 Electrical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,19,47.4,9,9,381.5,147.3,6,66.7,1.64,7.14,190,3
 Electro Technical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,18,66.7,12,11,136.3,17.2,3,25.0,0.51,2.2,78,5
 Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,19,84.2,16,15,604.1,124.9,8,50.0,2.19,9.53,451,8
 Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,36,36.1,13,12,28.6,16.9,1,7.7,0.09,0.39,15,7
-Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,47,59.6,28,24,132.9,9.9,4,14.3,0.46,1.99,165,19
+Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,45,57.8,26,22,139.2,9.9,3,11.5,0.48,2.07,159,18
 General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,34,50.0,17,14,25.4,8.6,0,0.0,0.05,0.22,11,13
 Junior Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,1,100.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Master,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,40,80.0,32,28,72.8,16.9,3,9.4,0.3,1.31,124,19
+Master,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,41,80.5,33,29,72.1,16.9,3,9.1,0.3,1.3,127,19
 Motorman,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,2,0.0,0,0,,,0,,,,0,0
-Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,103,46.6,48,43,74.3,9.4,5,10.4,0.3,1.32,187,35
-Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,70,50.0,35,30,49.9,5.0,4,11.4,0.09,0.41,42,28
+Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,103,44.7,46,41,73.9,7.8,4,8.7,0.3,1.3,177,35
+Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,68,48.5,33,28,41.2,4.1,3,9.1,0.04,0.19,19,28
 Second Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,38,52.6,20,18,56.2,14.0,4,20.0,0.2,0.86,51,10
-Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,32,90.6,29,28,55.7,18.0,7,24.1,0.21,0.9,77,17
-Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,39,69.2,27,26,67.9,11.1,6,22.2,0.22,0.95,76,17
-Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,38,71.1,27,25,146.6,13.2,7,25.9,0.48,2.07,165,15
+Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,31,90.3,28,27,53.5,17.4,6,21.4,0.19,0.85,70,17
+Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,39,69.2,27,26,65.4,8.7,6,22.2,0.21,0.9,72,18
+Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,37,70.3,26,24,147.7,11.3,6,23.1,0.47,2.06,158,15
 Trainee Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,5,20.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 Trainee General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,1,0.0,0,0,,,0,,,,0,0
 Trainee Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,5,80.0,4,2,0.2,0.0,0,0.0,0.0,0.0,0,4
-Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,31,41.9,13,10,110.7,3.1,2,15.4,0.32,1.38,53,8
-Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,104,56.7,72,72,54.9,7.0,11,15.3,0.18,0.76,162,52
-Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,39,53.8,28,28,68.2,7.4,3,10.7,0.15,0.66,55,22
+Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,30,40.0,12,9,37.4,2.1,1,8.3,0.08,0.34,12,8
+Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,103,56.3,71,71,53.7,6.6,10,14.1,0.17,0.75,157,52
+Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,38,52.6,27,27,68.9,7.4,3,11.1,0.15,0.65,52,22
 Chief Cook,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,34,52.9,23,23,16.6,6.1,0,0.0,0.01,0.04,3,21
-Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,38,68.4,25,25,91.6,27.7,6,24.0,0.32,1.41,104,14
+Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,37,67.6,24,24,92.8,17.5,6,25.0,0.33,1.44,102,14
 Chief Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,35,77.1,26,26,103.4,11.3,4,15.4,0.25,1.09,84,20
 Deck Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,30,100.0,28,28,475.1,75.6,13,46.4,2.12,9.2,762,14
 Electrical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,19,47.4,14,14,246.4,46.0,6,42.9,1.06,4.59,190,8
 Electro Technical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,18,66.7,11,11,148.7,17.5,3,27.3,0.55,2.4,78,4
 Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,19,84.2,15,15,644.3,169.1,8,53.3,2.34,10.17,451,7
 Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,36,36.1,22,22,19.8,8.5,1,4.5,0.05,0.23,15,16
-Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,47,59.6,30,30,124.5,7.4,4,13.3,0.43,1.86,165,21
+Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,45,57.8,28,28,129.7,7.4,3,10.7,0.44,1.92,159,20
 General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,34,50.0,21,21,22.4,8.6,0,0.0,0.04,0.18,11,17
 Junior Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,1,100.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Master,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,40,80.0,30,30,77.7,19.5,3,10.0,0.32,1.4,124,17
+Master,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,41,80.5,31,31,76.9,22.1,3,9.7,0.32,1.39,127,17
 Motorman,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,2,0.0,0,0,,,0,,,,0,0
-Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,103,46.6,62,62,59.3,7.3,5,8.1,0.23,1.02,187,49
-Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,70,50.0,40,40,45.4,5.4,4,10.0,0.08,0.36,42,33
+Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,103,44.7,61,61,57.6,6.4,4,6.6,0.23,0.98,177,50
+Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,68,48.5,38,38,37.5,5.0,3,7.9,0.04,0.17,19,33
 Second Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,38,52.6,23,23,50.9,16.8,4,17.4,0.17,0.75,51,13
-Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,32,90.6,30,30,54.1,17.4,7,23.3,0.2,0.87,77,18
-Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,39,69.2,29,29,63.8,10.3,6,20.7,0.2,0.89,76,19
-Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,38,71.1,28,28,142.8,17.5,7,25.0,0.46,1.99,165,16
+Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,31,90.3,29,29,51.9,16.9,6,20.7,0.19,0.82,70,18
+Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,39,69.2,29,29,61.6,8.7,6,20.7,0.19,0.84,72,20
+Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,37,70.3,27,27,143.7,13.2,6,22.2,0.46,1.98,158,16
 Trainee Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,5,20.0,1,1,1.1,1.1,0,0.0,0.0,0.0,0,1
 Trainee General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,1,0.0,0,0,,,0,,,,0,0
 Trainee Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,5,80.0,2,2,0.4,0.4,0,0.0,0.0,0.0,0,2
-Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,31,41.9,14,14,104.0,6.3,2,14.3,0.29,1.28,53,9
-Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Active,104,56.7,20,20,175.3,109.9,11,55.0,0.63,2.74,162,0
-Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,Active,39,53.8,6,6,273.2,196.8,3,50.0,0.71,3.1,55,0
+Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,30,40.0,13,13,35.8,5.3,1,7.7,0.07,0.31,12,9
+Able Bodied Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Active,103,56.3,19,19,177.1,101.5,10,52.6,0.64,2.79,157,0
+Bosun,Genco-Synergy Bulk Carriers Pvt Ltd,Active,38,52.6,5,5,317.7,304.4,3,60.0,0.81,3.52,52,0
 Chief Cook,Genco-Synergy Bulk Carriers Pvt Ltd,Active,34,52.9,2,2,38.3,38.3,0,0.0,0.12,0.51,3,0
-Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,38,68.4,11,11,194.1,135.3,6,54.5,0.74,3.2,104,0
+Chief Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,37,67.6,10,10,210.2,160.6,6,60.0,0.79,3.45,102,0
 Chief Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,35,77.1,6,6,399.4,279.0,4,66.7,1.09,4.73,84,0
 Deck Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Active,30,100.0,14,14,924.6,676.4,13,92.9,4.23,18.41,762,0
 Electrical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,19,47.4,6,6,557.8,245.4,6,100.0,2.46,10.71,190,0
 Electro Technical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,18,66.7,7,7,229.6,67.6,3,42.9,0.87,3.77,78,0
 Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Active,19,84.2,8,8,1167.5,1031.5,8,100.0,4.38,19.07,451,0
 Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,Active,36,36.1,6,6,53.3,50.1,1,16.7,0.19,0.85,15,0
-Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,47,59.6,9,9,394.5,78.0,4,44.4,1.43,6.2,165,0
+Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,45,57.8,8,8,431.1,72.8,3,37.5,1.55,6.72,159,0
 General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,Active,34,50.0,4,4,53.0,55.2,0,0.0,0.21,0.93,11,0
 Junior Fourth Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,1,100.0,0,0,,,0,,,,0,0
-Master,Genco-Synergy Bulk Carriers Pvt Ltd,Active,40,80.0,13,13,165.3,67.6,3,23.1,0.74,3.23,124,0
+Master,Genco-Synergy Bulk Carriers Pvt Ltd,Active,41,80.5,14,14,157.1,66.9,3,21.4,0.71,3.07,127,0
 Motorman,Genco-Synergy Bulk Carriers Pvt Ltd,Active,2,0.0,0,0,,,0,,,,0,0
-Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,Active,103,46.6,13,13,249.7,84.5,5,38.5,1.12,4.86,187,0
-Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Active,70,50.0,7,7,213.5,208.9,4,57.1,0.47,2.03,42,0
+Oiler,Genco-Synergy Bulk Carriers Pvt Ltd,Active,103,44.7,11,11,279.8,84.5,4,36.4,1.25,5.44,177,0
+Ordinary Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Active,68,48.5,5,5,221.1,208.9,3,60.0,0.3,1.29,19,0
 Second Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,38,52.6,10,10,109.1,75.0,4,40.0,0.4,1.72,51,0
-Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,32,90.6,12,12,121.5,126.8,7,58.3,0.5,2.17,77,0
-Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,39,69.2,10,10,168.6,160.6,6,60.0,0.59,2.57,76,0
-Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,38,71.1,12,12,322.2,143.7,7,58.3,1.07,4.65,165,0
+Second Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,31,90.3,11,11,121.8,135.3,6,54.5,0.49,2.15,70,0
+Third Engineer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,39,69.2,9,9,179.8,202.9,6,66.7,0.62,2.71,72,0
+Third Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,37,70.3,11,11,340.8,169.1,6,54.5,1.12,4.86,158,0
 Trainee Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,Active,5,20.0,0,0,,,0,,,,0,0
 Trainee General Steward,Genco-Synergy Bulk Carriers Pvt Ltd,Active,1,0.0,0,0,,,0,,,,0,0
 Trainee Seaman,Genco-Synergy Bulk Carriers Pvt Ltd,Active,5,80.0,0,0,,,0,,,,0,0
-Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,Active,31,41.9,5,5,283.1,83.2,2,40.0,0.82,3.58,53,0
+Wiper,Genco-Synergy Bulk Carriers Pvt Ltd,Active,30,40.0,4,4,106.3,64.0,1,25.0,0.23,1.01,12,0
 Able Bodied Seaman,Genco-Synergy Pvt Ltd,All onboard,27,63.0,27,21,48.5,3.3,1,3.7,0.18,0.76,61,24
 Bosun,Genco-Synergy Pvt Ltd,All onboard,9,55.6,9,7,29.6,15.7,1,11.1,0.09,0.38,10,7
 Chief Cook,Genco-Synergy Pvt Ltd,All onboard,9,77.8,9,9,235.3,12.3,1,11.1,0.99,4.32,115,7
@@ -567,84 +567,84 @@ Able Bodied Seaman,General Ship Management Pte. Ltd.,All onboard,9,22.2,9,4,22.9
 Bosun,General Ship Management Pte. Ltd.,All onboard,4,0.0,4,2,2.4,0.4,0,0.0,0.0,0.0,0,4
 Chief Cook,General Ship Management Pte. Ltd.,All onboard,4,0.0,4,3,3.1,1.2,0,0.0,0.0,0.0,0,4
 Chief Engineer,General Ship Management Pte. Ltd.,All onboard,4,25.0,4,1,0.5,0.0,0,0.0,0.0,0.0,0,4
-Chief Officer,General Ship Management Pte. Ltd.,All onboard,2,50.0,2,1,2.3,2.3,0,0.0,0.0,0.0,0,2
+Chief Officer,General Ship Management Pte. Ltd.,All onboard,3,66.7,3,2,153.0,4.6,1,33.3,0.52,2.25,20,2
 Deck Cadet,General Ship Management Pte. Ltd.,All onboard,3,66.7,3,2,403.5,9.9,1,33.3,1.84,8.0,71,2
 Electrical Officer,General Ship Management Pte. Ltd.,All onboard,3,33.3,3,1,22.5,0.0,0,0.0,0.1,0.45,4,2
 Engine Cadet,General Ship Management Pte. Ltd.,All onboard,6,83.3,6,5,1668.8,786.7,3,50.0,5.61,24.41,433,3
 Fitter,General Ship Management Pte. Ltd.,All onboard,3,0.0,3,1,1.0,0.0,0,0.0,0.0,0.0,0,3
-Fourth Engineer,General Ship Management Pte. Ltd.,All onboard,4,100.0,4,3,24.3,10.1,0,0.0,0.0,0.0,0,4
+Fourth Engineer,General Ship Management Pte. Ltd.,All onboard,3,100.0,3,2,6.7,1.8,0,0.0,0.0,0.0,0,3
 General Steward,General Ship Management Pte. Ltd.,All onboard,4,0.0,4,1,1.5,0.0,0,0.0,0.0,0.0,0,4
-Master,General Ship Management Pte. Ltd.,All onboard,4,100.0,4,3,283.4,85.0,2,50.0,1.3,5.66,67,2
+Master,General Ship Management Pte. Ltd.,All onboard,3,100.0,3,2,377.7,169.1,2,66.7,1.74,7.55,67,1
 Oiler,General Ship Management Pte. Ltd.,All onboard,11,27.3,11,7,4.1,1.0,0,0.0,0.0,0.0,0,11
 Ordinary Seaman,General Ship Management Pte. Ltd.,All onboard,6,50.0,6,4,0.7,0.9,0,0.0,0.0,0.0,0,6
 Pumpman,General Ship Management Pte. Ltd.,All onboard,4,50.0,4,3,47.3,6.0,1,25.0,0.19,0.85,10,3
 Second Engineer,General Ship Management Pte. Ltd.,All onboard,4,75.0,4,3,17.5,6.4,0,0.0,0.06,0.25,3,3
 Second Officer,General Ship Management Pte. Ltd.,All onboard,4,50.0,4,2,61.0,34.3,1,25.0,0.06,0.25,3,3
-Third Engineer,General Ship Management Pte. Ltd.,All onboard,3,100.0,3,2,536.6,3.4,1,33.3,2.46,10.71,95,2
-Third Officer,General Ship Management Pte. Ltd.,All onboard,8,50.0,8,6,4.8,1.6,0,0.0,0.01,0.04,1,7
+Third Engineer,General Ship Management Pte. Ltd.,All onboard,4,100.0,4,3,407.3,11.3,1,25.0,1.85,8.03,95,3
+Third Officer,General Ship Management Pte. Ltd.,All onboard,7,57.1,7,5,5.4,1.6,0,0.0,0.01,0.05,1,6
 Trainee Fitter,General Ship Management Pte. Ltd.,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 Trainee Seaman,General Ship Management Pte. Ltd.,All onboard,1,100.0,1,1,2.6,2.6,0,0.0,0.0,0.0,0,1
 Able Bodied Seaman,General Ship Management Pte. Ltd.,Registered,9,22.2,2,2,102.3,102.3,1,50.0,0.47,2.03,12,1
 Bosun,General Ship Management Pte. Ltd.,Registered,4,0.0,0,0,,,0,,,,0,0
 Chief Cook,General Ship Management Pte. Ltd.,Registered,4,0.0,0,0,,,0,,,,0,0
 Chief Engineer,General Ship Management Pte. Ltd.,Registered,4,25.0,1,1,1.8,1.8,0,0.0,0.0,0.0,0,1
-Chief Officer,General Ship Management Pte. Ltd.,Registered,2,50.0,1,1,4.6,4.6,0,0.0,0.0,0.0,0,1
+Chief Officer,General Ship Management Pte. Ltd.,Registered,3,66.7,2,2,229.5,229.5,1,50.0,0.78,3.38,20,1
 Deck Cadet,General Ship Management Pte. Ltd.,Registered,3,66.7,2,1,600.3,600.3,1,50.0,2.76,12.01,71,1
 Electrical Officer,General Ship Management Pte. Ltd.,Registered,3,33.3,1,1,67.6,67.6,0,0.0,0.31,1.35,4,0
 Engine Cadet,General Ship Management Pte. Ltd.,Registered,6,83.3,5,5,2002.6,1572.6,3,60.0,6.74,29.29,433,2
 Fitter,General Ship Management Pte. Ltd.,Registered,3,0.0,0,0,,,0,,,,0,0
-Fourth Engineer,General Ship Management Pte. Ltd.,Registered,4,100.0,4,3,24.3,10.1,0,0.0,0.0,0.0,0,4
+Fourth Engineer,General Ship Management Pte. Ltd.,Registered,3,100.0,3,2,6.7,1.8,0,0.0,0.0,0.0,0,3
 General Steward,General Ship Management Pte. Ltd.,Registered,4,0.0,0,0,,,0,,,,0,0
-Master,General Ship Management Pte. Ltd.,Registered,4,100.0,4,3,283.4,85.0,2,50.0,1.3,5.66,67,2
+Master,General Ship Management Pte. Ltd.,Registered,3,100.0,3,2,377.7,169.1,2,66.7,1.74,7.55,67,1
 Oiler,General Ship Management Pte. Ltd.,Registered,11,27.3,3,3,11.7,11.0,0,0.0,0.0,0.0,0,3
 Ordinary Seaman,General Ship Management Pte. Ltd.,Registered,6,50.0,3,3,0.9,0.9,0,0.0,0.0,0.0,0,3
 Pumpman,General Ship Management Pte. Ltd.,Registered,4,50.0,2,2,94.1,94.1,1,50.0,0.39,1.69,10,1
 Second Engineer,General Ship Management Pte. Ltd.,Registered,4,75.0,3,3,23.3,11.1,0,0.0,0.08,0.34,3,2
 Second Officer,General Ship Management Pte. Ltd.,Registered,4,50.0,2,2,122.1,122.1,1,50.0,0.12,0.51,3,1
-Third Engineer,General Ship Management Pte. Ltd.,Registered,3,100.0,3,2,536.6,3.4,1,33.3,2.46,10.71,95,2
-Third Officer,General Ship Management Pte. Ltd.,Registered,8,50.0,4,3,8.7,8.9,0,0.0,0.02,0.08,1,3
+Third Engineer,General Ship Management Pte. Ltd.,Registered,4,100.0,4,3,407.3,11.3,1,25.0,1.85,8.03,95,3
+Third Officer,General Ship Management Pte. Ltd.,Registered,7,57.1,4,3,8.7,8.9,0,0.0,0.02,0.08,1,3
 Trainee Fitter,General Ship Management Pte. Ltd.,Registered,1,0.0,0,0,,,0,,,,0,0
 Trainee Seaman,General Ship Management Pte. Ltd.,Registered,1,100.0,1,1,2.6,2.6,0,0.0,0.0,0.0,0,1
 Able Bodied Seaman,General Ship Management Pte. Ltd.,Engaged,9,22.2,4,4,51.6,1.3,1,25.0,0.23,1.01,12,3
 Bosun,General Ship Management Pte. Ltd.,Engaged,4,0.0,2,2,4.8,4.8,0,0.0,0.0,0.0,0,2
 Chief Cook,General Ship Management Pte. Ltd.,Engaged,4,0.0,3,3,4.1,1.2,0,0.0,0.0,0.0,0,3
 Chief Engineer,General Ship Management Pte. Ltd.,Engaged,4,25.0,1,1,1.8,1.8,0,0.0,0.0,0.0,0,1
-Chief Officer,General Ship Management Pte. Ltd.,Engaged,2,50.0,1,1,4.6,4.6,0,0.0,0.0,0.0,0,1
+Chief Officer,General Ship Management Pte. Ltd.,Engaged,3,66.7,2,2,229.5,229.5,1,50.0,0.78,3.38,20,1
 Deck Cadet,General Ship Management Pte. Ltd.,Engaged,3,66.7,2,2,605.3,605.3,1,50.0,2.76,12.01,71,1
 Electrical Officer,General Ship Management Pte. Ltd.,Engaged,3,33.3,1,1,67.6,67.6,0,0.0,0.31,1.35,4,0
 Engine Cadet,General Ship Management Pte. Ltd.,Engaged,6,83.3,5,5,2002.6,1572.6,3,60.0,6.74,29.29,433,2
 Fitter,General Ship Management Pte. Ltd.,Engaged,3,0.0,1,1,3.1,3.1,0,0.0,0.0,0.0,0,1
-Fourth Engineer,General Ship Management Pte. Ltd.,Engaged,4,100.0,3,3,32.5,18.4,0,0.0,0.0,0.0,0,3
+Fourth Engineer,General Ship Management Pte. Ltd.,Engaged,3,100.0,2,2,10.1,10.1,0,0.0,0.0,0.0,0,2
 General Steward,General Ship Management Pte. Ltd.,Engaged,4,0.0,1,1,6.2,6.2,0,0.0,0.0,0.0,0,1
-Master,General Ship Management Pte. Ltd.,Engaged,4,100.0,3,3,377.9,169.1,2,66.7,1.74,7.55,67,1
+Master,General Ship Management Pte. Ltd.,Engaged,3,100.0,2,2,566.5,566.5,2,100.0,2.61,11.33,67,0
 Oiler,General Ship Management Pte. Ltd.,Engaged,11,27.3,7,7,6.5,4.0,0,0.0,0.0,0.0,0,7
 Ordinary Seaman,General Ship Management Pte. Ltd.,Engaged,6,50.0,4,4,1.1,0.9,0,0.0,0.0,0.0,0,4
 Pumpman,General Ship Management Pte. Ltd.,Engaged,4,50.0,3,3,63.0,11.2,1,33.3,0.26,1.13,10,2
 Second Engineer,General Ship Management Pte. Ltd.,Engaged,4,75.0,3,3,23.3,11.1,0,0.0,0.08,0.34,3,2
 Second Officer,General Ship Management Pte. Ltd.,Engaged,4,50.0,2,2,122.1,122.1,1,50.0,0.12,0.51,3,1
-Third Engineer,General Ship Management Pte. Ltd.,Engaged,3,100.0,2,2,804.9,804.9,1,50.0,3.69,16.06,95,1
-Third Officer,General Ship Management Pte. Ltd.,Engaged,8,50.0,6,6,6.5,1.6,0,0.0,0.01,0.06,1,5
+Third Engineer,General Ship Management Pte. Ltd.,Engaged,4,100.0,3,3,543.0,19.1,1,33.3,2.46,10.71,95,2
+Third Officer,General Ship Management Pte. Ltd.,Engaged,7,57.1,5,5,7.6,1.7,0,0.0,0.02,0.07,1,4
 Trainee Fitter,General Ship Management Pte. Ltd.,Engaged,1,0.0,0,0,,,0,,,,0,0
 Trainee Seaman,General Ship Management Pte. Ltd.,Engaged,1,100.0,1,1,2.6,2.6,0,0.0,0.0,0.0,0,1
 Able Bodied Seaman,General Ship Management Pte. Ltd.,Active,9,22.2,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
 Bosun,General Ship Management Pte. Ltd.,Active,4,0.0,0,0,,,0,,,,0,0
 Chief Cook,General Ship Management Pte. Ltd.,Active,4,0.0,0,0,,,0,,,,0,0
 Chief Engineer,General Ship Management Pte. Ltd.,Active,4,25.0,0,0,,,0,,,,0,0
-Chief Officer,General Ship Management Pte. Ltd.,Active,2,50.0,0,0,,,0,,,,0,0
+Chief Officer,General Ship Management Pte. Ltd.,Active,3,66.7,1,1,454.3,454.3,1,100.0,1.56,6.76,20,0
 Deck Cadet,General Ship Management Pte. Ltd.,Active,3,66.7,1,1,1200.6,1200.6,1,100.0,5.52,24.01,71,0
 Electrical Officer,General Ship Management Pte. Ltd.,Active,3,33.3,1,1,67.6,67.6,0,0.0,0.31,1.35,4,0
 Engine Cadet,General Ship Management Pte. Ltd.,Active,6,83.3,3,3,3337.4,2134.6,3,100.0,11.23,48.81,433,0
 Fitter,General Ship Management Pte. Ltd.,Active,3,0.0,0,0,,,0,,,,0,0
-Fourth Engineer,General Ship Management Pte. Ltd.,Active,4,100.0,0,0,,,0,,,,0,0
+Fourth Engineer,General Ship Management Pte. Ltd.,Active,3,100.0,0,0,,,0,,,,0,0
 General Steward,General Ship Management Pte. Ltd.,Active,4,0.0,0,0,,,0,,,,0,0
-Master,General Ship Management Pte. Ltd.,Active,4,100.0,2,2,566.5,566.5,2,100.0,2.61,11.33,67,0
+Master,General Ship Management Pte. Ltd.,Active,3,100.0,2,2,566.5,566.5,2,100.0,2.61,11.33,67,0
 Oiler,General Ship Management Pte. Ltd.,Active,11,27.3,0,0,,,0,,,,0,0
 Ordinary Seaman,General Ship Management Pte. Ltd.,Active,6,50.0,0,0,,,0,,,,0,0
 Pumpman,General Ship Management Pte. Ltd.,Active,4,50.0,1,1,177.0,177.0,1,100.0,0.78,3.38,10,0
 Second Engineer,General Ship Management Pte. Ltd.,Active,4,75.0,1,1,57.1,57.1,0,0.0,0.23,1.01,3,0
 Second Officer,General Ship Management Pte. Ltd.,Active,4,50.0,1,1,175.6,175.6,1,100.0,0.23,1.01,3,0
-Third Engineer,General Ship Management Pte. Ltd.,Active,3,100.0,1,1,1606.4,1606.4,1,100.0,7.39,32.13,95,0
-Third Officer,General Ship Management Pte. Ltd.,Active,8,50.0,1,1,16.9,16.9,0,0.0,0.08,0.34,1,0
+Third Engineer,General Ship Management Pte. Ltd.,Active,4,100.0,1,1,1606.4,1606.4,1,100.0,7.39,32.13,95,0
+Third Officer,General Ship Management Pte. Ltd.,Active,7,57.1,1,1,16.9,16.9,0,0.0,0.08,0.34,1,0
 Trainee Fitter,General Ship Management Pte. Ltd.,Active,1,0.0,0,0,,,0,,,,0,0
 Trainee Seaman,General Ship Management Pte. Ltd.,Active,1,100.0,0,0,,,0,,,,0,0
 Able Bodied Seaman,P.T Synergy Marine Indonesia,All onboard,94,10.6,94,10,5.1,0.0,1,1.1,0.02,0.1,27,91
@@ -662,10 +662,10 @@ General Steward,P.T Synergy Marine Indonesia,All onboard,10,10.0,10,1,0.6,0.0,0,
 Junior Third Officer,P.T Synergy Marine Indonesia,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 Master,P.T Synergy Marine Indonesia,All onboard,32,18.8,32,4,2.3,0.0,0,0.0,0.0,0.0,0,32
 Oiler,P.T Synergy Marine Indonesia,All onboard,80,7.5,80,6,1.5,0.0,0,0.0,0.01,0.03,6,78
-Ordinary Seaman,P.T Synergy Marine Indonesia,All onboard,12,16.7,12,2,1.5,0.0,0,0.0,0.01,0.03,1,11
+Ordinary Seaman,P.T Synergy Marine Indonesia,All onboard,13,15.4,13,2,1.4,0.0,0,0.0,0.01,0.03,1,12
 Pumpman,P.T Synergy Marine Indonesia,All onboard,6,16.7,6,1,36.6,0.0,1,16.7,0.17,0.73,13,5
 Second Engineer,P.T Synergy Marine Indonesia,All onboard,31,12.9,31,3,34.0,0.0,1,3.2,0.16,0.68,62,30
-Second Officer,P.T Synergy Marine Indonesia,All onboard,29,20.7,29,5,14.0,0.0,1,3.4,0.06,0.26,22,27
+Second Officer,P.T Synergy Marine Indonesia,All onboard,30,20.0,30,5,13.5,0.0,1,3.3,0.06,0.25,22,28
 Third Engineer,P.T Synergy Marine Indonesia,All onboard,30,3.3,30,1,1.1,0.0,0,0.0,0.01,0.02,2,29
 Third Officer,P.T Synergy Marine Indonesia,All onboard,36,27.8,36,6,9.2,0.0,1,2.8,0.04,0.16,17,34
 Trainee Seaman,P.T Synergy Marine Indonesia,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
@@ -685,10 +685,10 @@ General Steward,P.T Synergy Marine Indonesia,Registered,10,10.0,1,1,6.3,6.3,0,0.
 Junior Third Officer,P.T Synergy Marine Indonesia,Registered,1,0.0,0,0,,,0,,,,0,0
 Master,P.T Synergy Marine Indonesia,Registered,32,18.8,6,4,12.5,0.4,0,0.0,0.0,0.0,0,6
 Oiler,P.T Synergy Marine Indonesia,Registered,80,7.5,6,6,19.6,8.2,0,0.0,0.08,0.34,6,4
-Ordinary Seaman,P.T Synergy Marine Indonesia,Registered,12,16.7,2,2,9.2,9.2,0,0.0,0.04,0.17,1,1
+Ordinary Seaman,P.T Synergy Marine Indonesia,Registered,13,15.4,2,2,9.2,9.2,0,0.0,0.04,0.17,1,1
 Pumpman,P.T Synergy Marine Indonesia,Registered,6,16.7,1,1,219.8,219.8,1,100.0,1.01,4.4,13,0
 Second Engineer,P.T Synergy Marine Indonesia,Registered,31,12.9,4,3,263.8,3.4,1,25.0,1.21,5.24,62,3
-Second Officer,P.T Synergy Marine Indonesia,Registered,29,20.7,6,5,67.5,11.9,1,16.7,0.29,1.24,22,4
+Second Officer,P.T Synergy Marine Indonesia,Registered,30,20.0,6,5,67.5,11.9,1,16.7,0.29,1.24,22,4
 Third Engineer,P.T Synergy Marine Indonesia,Registered,30,3.3,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Third Officer,P.T Synergy Marine Indonesia,Registered,36,27.8,10,6,33.2,0.0,1,10.0,0.13,0.57,17,8
 Trainee Seaman,P.T Synergy Marine Indonesia,Registered,1,0.0,0,0,,,0,,,,0,0
@@ -708,10 +708,10 @@ General Steward,P.T Synergy Marine Indonesia,Engaged,10,10.0,1,1,6.3,6.3,0,0.0,0
 Junior Third Officer,P.T Synergy Marine Indonesia,Engaged,1,0.0,0,0,,,0,,,,0,0
 Master,P.T Synergy Marine Indonesia,Engaged,32,18.8,4,4,18.8,13.8,0,0.0,0.0,0.0,0,4
 Oiler,P.T Synergy Marine Indonesia,Engaged,80,7.5,6,6,19.6,8.2,0,0.0,0.08,0.34,6,4
-Ordinary Seaman,P.T Synergy Marine Indonesia,Engaged,12,16.7,2,2,9.2,9.2,0,0.0,0.04,0.17,1,1
+Ordinary Seaman,P.T Synergy Marine Indonesia,Engaged,13,15.4,2,2,9.2,9.2,0,0.0,0.04,0.17,1,1
 Pumpman,P.T Synergy Marine Indonesia,Engaged,6,16.7,1,1,219.8,219.8,1,100.0,1.01,4.4,13,0
 Second Engineer,P.T Synergy Marine Indonesia,Engaged,31,12.9,3,3,351.7,6.8,1,33.3,1.61,6.99,62,2
-Second Officer,P.T Synergy Marine Indonesia,Engaged,29,20.7,5,5,81.1,18.8,1,20.0,0.34,1.49,22,3
+Second Officer,P.T Synergy Marine Indonesia,Engaged,30,20.0,5,5,81.1,18.8,1,20.0,0.34,1.49,22,3
 Third Engineer,P.T Synergy Marine Indonesia,Engaged,30,3.3,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Third Officer,P.T Synergy Marine Indonesia,Engaged,36,27.8,6,6,55.3,22.1,1,16.7,0.22,0.96,17,4
 Trainee Seaman,P.T Synergy Marine Indonesia,Engaged,1,0.0,0,0,,,0,,,,0,0
@@ -731,10 +731,10 @@ General Steward,P.T Synergy Marine Indonesia,Active,10,10.0,0,0,,,0,,,,0,0
 Junior Third Officer,P.T Synergy Marine Indonesia,Active,1,0.0,0,0,,,0,,,,0,0
 Master,P.T Synergy Marine Indonesia,Active,32,18.8,0,0,,,0,,,,0,0
 Oiler,P.T Synergy Marine Indonesia,Active,80,7.5,2,2,50.7,50.7,0,0.0,0.23,1.01,6,0
-Ordinary Seaman,P.T Synergy Marine Indonesia,Active,12,16.7,1,1,18.3,18.3,0,0.0,0.08,0.34,1,0
+Ordinary Seaman,P.T Synergy Marine Indonesia,Active,13,15.4,1,1,18.3,18.3,0,0.0,0.08,0.34,1,0
 Pumpman,P.T Synergy Marine Indonesia,Active,6,16.7,1,1,219.8,219.8,1,100.0,1.01,4.4,13,0
 Second Engineer,P.T Synergy Marine Indonesia,Active,31,12.9,1,1,1048.4,1048.4,1,100.0,4.82,20.97,62,0
-Second Officer,P.T Synergy Marine Indonesia,Active,29,20.7,2,2,186.9,186.9,1,50.0,0.86,3.72,22,0
+Second Officer,P.T Synergy Marine Indonesia,Active,30,20.0,2,2,186.9,186.9,1,50.0,0.86,3.72,22,0
 Third Engineer,P.T Synergy Marine Indonesia,Active,30,3.3,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Third Officer,P.T Synergy Marine Indonesia,Active,36,27.8,2,2,143.7,143.7,1,50.0,0.66,2.87,17,0
 Trainee Seaman,P.T Synergy Marine Indonesia,Active,1,0.0,0,0,,,0,,,,0,0
@@ -794,7 +794,7 @@ Chief Engineer,Spar Synergy Ship Management Private Limited,All onboard,8,87.5,8
 Chief Officer,Spar Synergy Ship Management Private Limited,All onboard,10,90.0,10,6,23.9,1.1,0,0.0,0.01,0.03,1,9
 Deck Cadet,Spar Synergy Ship Management Private Limited,All onboard,5,100.0,5,5,57.9,72.3,0,0.0,0.05,0.2,3,4
 Electrical Cadet,Spar Synergy Ship Management Private Limited,All onboard,1,100.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Electrical Officer,Spar Synergy Ship Management Private Limited,All onboard,7,100.0,7,6,30.8,11.3,1,14.3,0.01,0.05,1,6
+Electrical Officer,Spar Synergy Ship Management Private Limited,All onboard,7,85.7,7,5,19.5,2.8,1,14.3,0.01,0.05,1,6
 Electro Technical Officer,Spar Synergy Ship Management Private Limited,All onboard,2,50.0,2,1,16.7,16.7,0,0.0,0.0,0.0,0,2
 Engine Cadet,Spar Synergy Ship Management Private Limited,All onboard,1,100.0,1,1,81.4,81.4,0,0.0,0.0,0.0,0,1
 Fitter,Spar Synergy Ship Management Private Limited,All onboard,7,100.0,7,6,32.7,12.6,1,14.3,0.08,0.34,7,6
@@ -819,7 +819,7 @@ Chief Engineer,Spar Synergy Ship Management Private Limited,Registered,8,87.5,7,
 Chief Officer,Spar Synergy Ship Management Private Limited,Registered,10,90.0,9,6,26.5,1.5,0,0.0,0.01,0.04,1,8
 Deck Cadet,Spar Synergy Ship Management Private Limited,Registered,5,100.0,5,5,57.9,72.3,0,0.0,0.05,0.2,3,4
 Electrical Cadet,Spar Synergy Ship Management Private Limited,Registered,1,100.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Electrical Officer,Spar Synergy Ship Management Private Limited,Registered,7,100.0,7,6,30.8,11.3,1,14.3,0.01,0.05,1,6
+Electrical Officer,Spar Synergy Ship Management Private Limited,Registered,7,85.7,6,5,22.7,7.1,1,16.7,0.01,0.06,1,5
 Electro Technical Officer,Spar Synergy Ship Management Private Limited,Registered,2,50.0,1,1,33.3,33.3,0,0.0,0.0,0.0,0,1
 Engine Cadet,Spar Synergy Ship Management Private Limited,Registered,1,100.0,1,1,81.4,81.4,0,0.0,0.0,0.0,0,1
 Fitter,Spar Synergy Ship Management Private Limited,Registered,7,100.0,7,6,32.7,12.6,1,14.3,0.08,0.34,7,6
@@ -844,7 +844,7 @@ Chief Engineer,Spar Synergy Ship Management Private Limited,Engaged,8,87.5,7,7,5
 Chief Officer,Spar Synergy Ship Management Private Limited,Engaged,10,90.0,6,6,39.8,46.2,0,0.0,0.01,0.06,1,5
 Deck Cadet,Spar Synergy Ship Management Private Limited,Engaged,5,100.0,5,5,57.9,72.3,0,0.0,0.05,0.2,3,4
 Electrical Cadet,Spar Synergy Ship Management Private Limited,Engaged,1,100.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Electrical Officer,Spar Synergy Ship Management Private Limited,Engaged,7,100.0,6,6,35.9,16.0,1,16.7,0.01,0.06,1,5
+Electrical Officer,Spar Synergy Ship Management Private Limited,Engaged,7,85.7,5,5,27.3,11.3,1,20.0,0.02,0.07,1,4
 Electro Technical Officer,Spar Synergy Ship Management Private Limited,Engaged,2,50.0,1,1,33.3,33.3,0,0.0,0.0,0.0,0,1
 Engine Cadet,Spar Synergy Ship Management Private Limited,Engaged,1,100.0,1,1,81.4,81.4,0,0.0,0.0,0.0,0,1
 Fitter,Spar Synergy Ship Management Private Limited,Engaged,7,100.0,6,6,38.1,13.8,1,16.7,0.09,0.39,7,5
@@ -869,7 +869,7 @@ Chief Engineer,Spar Synergy Ship Management Private Limited,Active,8,87.5,4,4,95
 Chief Officer,Spar Synergy Ship Management Private Limited,Active,10,90.0,1,1,72.5,72.5,0,0.0,0.08,0.34,1,0
 Deck Cadet,Spar Synergy Ship Management Private Limited,Active,5,100.0,1,1,78.5,78.5,0,0.0,0.23,1.01,3,0
 Electrical Cadet,Spar Synergy Ship Management Private Limited,Active,1,100.0,0,0,,,0,,,,0,0
-Electrical Officer,Spar Synergy Ship Management Private Limited,Active,7,100.0,1,1,101.5,101.5,1,100.0,0.08,0.34,1,0
+Electrical Officer,Spar Synergy Ship Management Private Limited,Active,7,85.7,1,1,101.5,101.5,1,100.0,0.08,0.34,1,0
 Electro Technical Officer,Spar Synergy Ship Management Private Limited,Active,2,50.0,0,0,,,0,,,,0,0
 Engine Cadet,Spar Synergy Ship Management Private Limited,Active,1,100.0,0,0,,,0,,,,0,0
 Fitter,Spar Synergy Ship Management Private Limited,Active,7,100.0,1,1,118.4,118.4,1,100.0,0.54,2.37,7,0
@@ -1148,7 +1148,7 @@ Junior Fourth Engineer,Synergy Marine Bulk Pte Ltd,All onboard,1,100.0,1,0,0.0,0
 Master,Synergy Marine Bulk Pte Ltd,All onboard,49,67.3,49,34,110.6,6.2,15,30.6,0.49,2.13,309,29
 Oiler,Synergy Marine Bulk Pte Ltd,All onboard,97,42.3,97,29,99.7,0.0,8,8.2,0.16,0.69,197,87
 Ordinary Seaman,Synergy Marine Bulk Pte Ltd,All onboard,52,48.1,52,20,76.2,0.0,4,7.7,0.13,0.55,85,46
-Second Engineer,Synergy Marine Bulk Pte Ltd,All onboard,49,49.0,49,24,226.9,0.0,4,8.2,0.15,0.65,94,40
+Second Engineer,Synergy Marine Bulk Pte Ltd,All onboard,50,50.0,50,25,225.4,0.0,5,10.0,0.16,0.7,103,40
 Second Officer,Synergy Marine Bulk Pte Ltd,All onboard,49,63.3,49,28,77.4,1.6,6,12.2,0.29,1.24,180,39
 Third Engineer,Synergy Marine Bulk Pte Ltd,All onboard,50,60.0,50,23,99.1,0.0,5,10.0,0.32,1.39,206,42
 Third Officer,Synergy Marine Bulk Pte Ltd,All onboard,57,57.9,57,30,38.2,0.8,3,5.3,0.11,0.49,82,48
@@ -1175,7 +1175,7 @@ Junior Fourth Engineer,Synergy Marine Bulk Pte Ltd,Registered,1,100.0,1,0,0.0,0.
 Master,Synergy Marine Bulk Pte Ltd,Registered,49,67.3,33,32,163.9,67.6,15,45.5,0.73,3.17,309,13
 Oiler,Synergy Marine Bulk Pte Ltd,Registered,97,42.3,41,25,235.5,2.1,8,19.5,0.37,1.62,197,31
 Ordinary Seaman,Synergy Marine Bulk Pte Ltd,Registered,52,48.1,25,20,158.6,2.5,4,16.0,0.26,1.15,85,19
-Second Engineer,Synergy Marine Bulk Pte Ltd,Registered,49,49.0,24,21,462.0,9.4,4,16.7,0.3,1.32,94,15
+Second Engineer,Synergy Marine Bulk Pte Ltd,Registered,50,50.0,25,22,449.6,10.2,5,20.0,0.32,1.39,103,15
 Second Officer,Synergy Marine Bulk Pte Ltd,Registered,49,63.3,31,26,122.1,7.8,6,19.4,0.45,1.96,180,21
 Third Engineer,Synergy Marine Bulk Pte Ltd,Registered,50,60.0,30,23,165.1,2.6,5,16.7,0.53,2.32,206,22
 Third Officer,Synergy Marine Bulk Pte Ltd,Registered,57,57.9,33,29,65.9,7.8,3,9.1,0.19,0.84,82,24
@@ -1202,7 +1202,7 @@ Junior Fourth Engineer,Synergy Marine Bulk Pte Ltd,Engaged,1,100.0,0,0,,,0,,,,0,
 Master,Synergy Marine Bulk Pte Ltd,Engaged,49,67.3,34,34,159.4,59.6,15,44.1,0.71,3.07,309,14
 Oiler,Synergy Marine Bulk Pte Ltd,Engaged,97,42.3,29,29,333.6,13.5,8,27.6,0.53,2.3,197,19
 Ordinary Seaman,Synergy Marine Bulk Pte Ltd,Engaged,52,48.1,20,20,198.2,5.6,4,20.0,0.33,1.44,85,14
-Second Engineer,Synergy Marine Bulk Pte Ltd,Engaged,49,49.0,24,24,463.2,13.5,4,16.7,0.3,1.32,94,15
+Second Engineer,Synergy Marine Bulk Pte Ltd,Engaged,50,50.0,25,25,450.7,16.9,5,20.0,0.32,1.39,103,15
 Second Officer,Synergy Marine Bulk Pte Ltd,Engaged,49,63.3,28,28,135.5,10.9,6,21.4,0.5,2.17,180,18
 Third Engineer,Synergy Marine Bulk Pte Ltd,Engaged,50,60.0,23,23,215.3,6.0,5,21.7,0.7,3.03,206,15
 Third Officer,Synergy Marine Bulk Pte Ltd,Engaged,57,57.9,30,30,72.5,10.8,3,10.0,0.21,0.92,82,21
@@ -1229,7 +1229,7 @@ Junior Fourth Engineer,Synergy Marine Bulk Pte Ltd,Active,1,100.0,0,0,,,0,,,,0,0
 Master,Synergy Marine Bulk Pte Ltd,Active,49,67.3,20,20,264.9,211.4,15,75.0,1.2,5.23,309,0
 Oiler,Synergy Marine Bulk Pte Ltd,Active,97,42.3,10,10,941.8,166.9,8,80.0,1.53,6.66,197,0
 Ordinary Seaman,Synergy Marine Bulk Pte Ltd,Active,52,48.1,6,6,641.1,152.2,4,66.7,1.1,4.79,85,0
-Second Engineer,Synergy Marine Bulk Pte Ltd,Active,49,49.0,9,9,1212.9,96.6,4,44.4,0.81,3.53,94,0
+Second Engineer,Synergy Marine Bulk Pte Ltd,Active,50,50.0,10,10,1106.8,103.3,5,50.0,0.8,3.48,103,0
 Second Officer,Synergy Marine Bulk Pte Ltd,Active,49,63.3,10,10,362.4,160.6,6,60.0,1.4,6.09,180,0
 Third Engineer,Synergy Marine Bulk Pte Ltd,Active,50,60.0,8,8,611.8,187.7,5,62.5,2.0,8.71,206,0
 Third Officer,Synergy Marine Bulk Pte Ltd,Active,57,57.9,9,9,205.3,58.5,3,33.3,0.71,3.08,82,0
@@ -1337,8 +1337,8 @@ Electrical Officer,Synergy Marine Germany GmbH,All onboard,4,75.0,4,2,3.9,0.5,0,
 Electro Technical Officer,Synergy Marine Germany GmbH,All onboard,6,66.7,6,3,27.8,0.0,1,16.7,0.09,0.39,7,5
 Fitter,Synergy Marine Germany GmbH,All onboard,15,46.7,15,8,16.1,0.0,0,0.0,0.07,0.32,14,12
 Fourth Engineer,Synergy Marine Germany GmbH,All onboard,12,50.0,12,3,2.0,0.0,0,0.0,0.0,0.0,0,12
-General Steward,Synergy Marine Germany GmbH,All onboard,13,53.8,13,8,12.5,1.2,1,7.7,0.04,0.18,7,12
-Master,Synergy Marine Germany GmbH,All onboard,12,83.3,12,10,207.4,16.9,3,25.0,0.86,3.75,133,4
+General Steward,Synergy Marine Germany GmbH,All onboard,14,50.0,14,8,11.7,0.6,1,7.1,0.04,0.17,7,13
+Master,Synergy Marine Germany GmbH,All onboard,13,84.6,13,10,191.4,16.9,3,23.1,0.8,3.46,133,5
 Oiler,Synergy Marine Germany GmbH,All onboard,31,48.4,31,16,44.8,1.0,2,6.5,0.18,0.76,70,25
 Ordinary Seaman,Synergy Marine Germany GmbH,All onboard,19,63.2,19,14,13.1,0.9,1,5.3,0.03,0.14,8,18
 Pumpman,Synergy Marine Germany GmbH,All onboard,11,63.6,11,8,28.1,0.9,1,9.1,0.12,0.52,17,8
@@ -1357,8 +1357,8 @@ Electrical Officer,Synergy Marine Germany GmbH,Registered,4,75.0,3,1,0.3,0.0,0,0
 Electro Technical Officer,Synergy Marine Germany GmbH,Registered,6,66.7,4,2,38.0,0.0,1,25.0,0.14,0.59,7,3
 Fitter,Synergy Marine Germany GmbH,Registered,15,46.7,7,6,34.0,1.1,0,0.0,0.16,0.68,14,4
 Fourth Engineer,Synergy Marine Germany GmbH,Registered,12,50.0,6,3,4.1,1.2,0,0.0,0.0,0.0,0,6
-General Steward,Synergy Marine Germany GmbH,Registered,13,53.8,7,6,22.4,12.2,1,14.3,0.08,0.34,7,6
-Master,Synergy Marine Germany GmbH,Registered,12,83.3,10,10,248.9,22.3,3,30.0,1.03,4.5,133,2
+General Steward,Synergy Marine Germany GmbH,Registered,14,50.0,7,6,22.4,12.2,1,14.3,0.08,0.34,7,6
+Master,Synergy Marine Germany GmbH,Registered,13,84.6,11,10,226.2,16.9,3,27.3,0.94,4.09,133,3
 Oiler,Synergy Marine Germany GmbH,Registered,31,48.4,15,12,91.9,33.8,2,13.3,0.36,1.58,70,9
 Ordinary Seaman,Synergy Marine Germany GmbH,Registered,19,63.2,12,11,20.2,1.8,1,8.3,0.05,0.23,8,11
 Pumpman,Synergy Marine Germany GmbH,Registered,11,63.6,7,6,42.0,0.9,1,14.3,0.19,0.82,17,4
@@ -1377,8 +1377,8 @@ Electrical Officer,Synergy Marine Germany GmbH,Engaged,4,75.0,2,2,7.8,7.8,0,0.0,
 Electro Technical Officer,Synergy Marine Germany GmbH,Engaged,6,66.7,3,3,55.5,14.4,1,33.3,0.18,0.79,7,2
 Fitter,Synergy Marine Germany GmbH,Engaged,15,46.7,8,8,30.3,2.2,0,0.0,0.14,0.59,14,5
 Fourth Engineer,Synergy Marine Germany GmbH,Engaged,12,50.0,3,3,8.2,7.0,0,0.0,0.0,0.0,0,3
-General Steward,Synergy Marine Germany GmbH,Engaged,13,53.8,8,8,20.4,7.9,1,12.5,0.07,0.3,7,7
-Master,Synergy Marine Germany GmbH,Engaged,12,83.3,10,10,248.9,22.3,3,30.0,1.03,4.5,133,2
+General Steward,Synergy Marine Germany GmbH,Engaged,14,50.0,8,8,20.4,7.9,1,12.5,0.07,0.3,7,7
+Master,Synergy Marine Germany GmbH,Engaged,13,84.6,10,10,248.9,22.3,3,30.0,1.03,4.5,133,2
 Oiler,Synergy Marine Germany GmbH,Engaged,31,48.4,16,16,86.7,28.4,2,12.5,0.34,1.48,70,10
 Ordinary Seaman,Synergy Marine Germany GmbH,Engaged,19,63.2,14,14,17.7,1.8,1,7.1,0.04,0.19,8,13
 Pumpman,Synergy Marine Germany GmbH,Engaged,11,63.6,8,8,38.6,7.4,1,12.5,0.17,0.72,17,5
@@ -1397,8 +1397,8 @@ Electrical Officer,Synergy Marine Germany GmbH,Active,4,75.0,0,0,,,0,,,,0,0
 Electro Technical Officer,Synergy Marine Germany GmbH,Active,6,66.7,1,1,152.2,152.2,1,100.0,0.54,2.37,7,0
 Fitter,Synergy Marine Germany GmbH,Active,15,46.7,3,3,78.9,84.5,0,0.0,0.36,1.58,14,0
 Fourth Engineer,Synergy Marine Germany GmbH,Active,12,50.0,0,0,,,0,,,,0,0
-General Steward,Synergy Marine Germany GmbH,Active,13,53.8,1,1,118.4,118.4,1,100.0,0.54,2.37,7,0
-Master,Synergy Marine Germany GmbH,Active,12,83.3,8,8,310.6,30.0,3,37.5,1.29,5.62,133,0
+General Steward,Synergy Marine Germany GmbH,Active,14,50.0,1,1,118.4,118.4,1,100.0,0.54,2.37,7,0
+Master,Synergy Marine Germany GmbH,Active,13,84.6,8,8,310.6,30.0,3,37.5,1.29,5.62,133,0
 Oiler,Synergy Marine Germany GmbH,Active,31,48.4,6,6,202.9,50.7,2,33.3,0.91,3.95,70,0
 Ordinary Seaman,Synergy Marine Germany GmbH,Active,19,63.2,1,1,135.3,135.3,1,100.0,0.62,2.71,8,0
 Pumpman,Synergy Marine Germany GmbH,Active,11,63.6,3,3,97.7,84.5,1,33.3,0.44,1.92,17,0
@@ -1407,88 +1407,88 @@ Second Officer,Synergy Marine Germany GmbH,Active,10,70.0,0,0,,,0,,,,0,0
 Third Engineer,Synergy Marine Germany GmbH,Active,11,63.6,1,1,1082.2,1082.2,1,100.0,4.98,21.64,64,0
 Third Officer,Synergy Marine Germany GmbH,Active,16,87.5,2,2,1099.1,1099.1,2,100.0,5.06,21.98,130,0
 Wiper,Synergy Marine Germany GmbH,Active,2,0.0,0,0,,,0,,,,0,0
-Able Bodied Seaman,Synergy Marine Shanghai Limited,All onboard,38,7.9,38,1,0.5,0.0,0,0.0,0.0,0.01,1,37
-Bosun,Synergy Marine Shanghai Limited,All onboard,10,0.0,10,0,0.0,0.0,0,0.0,0.0,0.0,0,10
-Chief Cook,Synergy Marine Shanghai Limited,All onboard,10,0.0,10,0,0.0,0.0,0,0.0,0.0,0.0,0,10
-Chief Engineer,Synergy Marine Shanghai Limited,All onboard,9,33.3,9,3,53.1,0.0,2,22.2,0.24,1.05,28,7
-Chief Officer,Synergy Marine Shanghai Limited,All onboard,11,45.5,11,4,312.5,0.0,2,18.2,1.05,4.55,148,9
-Deck Cadet,Synergy Marine Shanghai Limited,All onboard,5,0.0,5,0,0.0,0.0,0,0.0,0.0,0.0,0,5
-Electrical Officer,Synergy Marine Shanghai Limited,All onboard,5,0.0,5,0,0.0,0.0,0,0.0,0.0,0.0,0,5
+Able Bodied Seaman,Synergy Marine Shanghai Limited,All onboard,41,7.3,41,1,0.5,0.0,0,0.0,0.0,0.01,1,40
+Bosun,Synergy Marine Shanghai Limited,All onboard,11,0.0,11,0,0.0,0.0,0,0.0,0.0,0.0,0,11
+Chief Cook,Synergy Marine Shanghai Limited,All onboard,11,0.0,11,0,0.0,0.0,0,0.0,0.0,0.0,0,11
+Chief Engineer,Synergy Marine Shanghai Limited,All onboard,10,30.0,10,3,47.8,0.0,2,20.0,0.22,0.95,28,8
+Chief Officer,Synergy Marine Shanghai Limited,All onboard,12,41.7,12,4,286.4,0.0,2,16.7,0.96,4.17,148,10
+Deck Cadet,Synergy Marine Shanghai Limited,All onboard,6,0.0,6,0,0.0,0.0,0,0.0,0.0,0.0,0,6
+Electrical Officer,Synergy Marine Shanghai Limited,All onboard,6,0.0,6,0,0.0,0.0,0,0.0,0.0,0.0,0,6
 Electro Technical Officer,Synergy Marine Shanghai Limited,All onboard,5,40.0,5,1,9.0,0.0,0,0.0,0.02,0.07,1,4
-Engine Cadet,Synergy Marine Shanghai Limited,All onboard,4,0.0,4,0,0.0,0.0,0,0.0,0.0,0.0,0,4
-Fitter,Synergy Marine Shanghai Limited,All onboard,11,0.0,11,0,0.0,0.0,0,0.0,0.0,0.0,0,11
-Fourth Engineer,Synergy Marine Shanghai Limited,All onboard,5,20.0,5,1,13.4,0.0,0,0.0,0.0,0.0,0,5
-General Steward,Synergy Marine Shanghai Limited,All onboard,7,14.3,7,0,0.0,0.0,0,0.0,0.0,0.0,0,7
-Master,Synergy Marine Shanghai Limited,All onboard,11,90.9,11,8,208.6,5.3,3,27.3,0.27,1.17,38,7
-Oiler,Synergy Marine Shanghai Limited,All onboard,25,16.0,25,3,19.7,0.0,1,4.0,0.03,0.12,9,24
-Ordinary Seaman,Synergy Marine Shanghai Limited,All onboard,7,0.0,7,0,0.0,0.0,0,0.0,0.0,0.0,0,7
-Second Engineer,Synergy Marine Shanghai Limited,All onboard,10,30.0,10,3,15.6,0.0,0,0.0,0.01,0.03,1,9
+Engine Cadet,Synergy Marine Shanghai Limited,All onboard,5,0.0,5,0,0.0,0.0,0,0.0,0.0,0.0,0,5
+Fitter,Synergy Marine Shanghai Limited,All onboard,12,0.0,12,0,0.0,0.0,0,0.0,0.0,0.0,0,12
+Fourth Engineer,Synergy Marine Shanghai Limited,All onboard,6,16.7,6,1,11.2,0.0,0,0.0,0.0,0.0,0,6
+General Steward,Synergy Marine Shanghai Limited,All onboard,8,12.5,8,0,0.0,0.0,0,0.0,0.0,0.0,0,8
+Master,Synergy Marine Shanghai Limited,All onboard,12,83.3,12,8,191.2,4.2,3,25.0,0.25,1.07,38,8
+Oiler,Synergy Marine Shanghai Limited,All onboard,26,15.4,26,3,18.9,0.0,1,3.8,0.03,0.12,9,25
+Ordinary Seaman,Synergy Marine Shanghai Limited,All onboard,8,0.0,8,0,0.0,0.0,0,0.0,0.0,0.0,0,8
+Second Engineer,Synergy Marine Shanghai Limited,All onboard,11,27.3,11,3,14.2,0.0,0,0.0,0.01,0.03,1,10
 Second Officer,Synergy Marine Shanghai Limited,All onboard,10,70.0,10,6,347.8,1.5,2,20.0,0.54,2.33,69,7
-Third Engineer,Synergy Marine Shanghai Limited,All onboard,10,20.0,10,2,287.7,0.0,1,10.0,0.47,2.06,61,8
-Third Officer,Synergy Marine Shanghai Limited,All onboard,9,55.6,9,6,5490.4,57.3,2,22.2,1.15,5.0,133,6
+Third Engineer,Synergy Marine Shanghai Limited,All onboard,11,18.2,11,2,261.5,0.0,1,9.1,0.43,1.88,61,9
+Third Officer,Synergy Marine Shanghai Limited,All onboard,10,50.0,10,6,4941.4,30.6,2,20.0,1.03,4.5,133,7
 Trainee Seaman,Synergy Marine Shanghai Limited,All onboard,5,0.0,5,0,0.0,0.0,0,0.0,0.0,0.0,0,5
 Trainee Wiper,Synergy Marine Shanghai Limited,All onboard,2,50.0,2,1,0.0,0.0,0,0.0,0.0,0.0,0,2
-Able Bodied Seaman,Synergy Marine Shanghai Limited,Registered,38,7.9,3,1,6.6,0.0,0,0.0,0.03,0.11,1,2
-Bosun,Synergy Marine Shanghai Limited,Registered,10,0.0,0,0,,,0,,,,0,0
-Chief Cook,Synergy Marine Shanghai Limited,Registered,10,0.0,0,0,,,0,,,,0,0
-Chief Engineer,Synergy Marine Shanghai Limited,Registered,9,33.3,3,3,159.3,101.5,2,66.7,0.73,3.16,28,1
-Chief Officer,Synergy Marine Shanghai Limited,Registered,11,45.5,5,4,687.5,44.9,2,40.0,2.3,10.01,148,3
-Deck Cadet,Synergy Marine Shanghai Limited,Registered,5,0.0,0,0,,,0,,,,0,0
-Electrical Officer,Synergy Marine Shanghai Limited,Registered,5,0.0,0,0,,,0,,,,0,0
+Able Bodied Seaman,Synergy Marine Shanghai Limited,Registered,41,7.3,3,1,6.6,0.0,0,0.0,0.03,0.11,1,2
+Bosun,Synergy Marine Shanghai Limited,Registered,11,0.0,0,0,,,0,,,,0,0
+Chief Cook,Synergy Marine Shanghai Limited,Registered,11,0.0,0,0,,,0,,,,0,0
+Chief Engineer,Synergy Marine Shanghai Limited,Registered,10,30.0,3,3,159.3,101.5,2,66.7,0.73,3.16,28,1
+Chief Officer,Synergy Marine Shanghai Limited,Registered,12,41.7,5,4,687.5,44.9,2,40.0,2.3,10.01,148,3
+Deck Cadet,Synergy Marine Shanghai Limited,Registered,6,0.0,0,0,,,0,,,,0,0
+Electrical Officer,Synergy Marine Shanghai Limited,Registered,6,0.0,0,0,,,0,,,,0,0
 Electro Technical Officer,Synergy Marine Shanghai Limited,Registered,5,40.0,2,1,22.4,22.4,0,0.0,0.04,0.17,1,1
-Engine Cadet,Synergy Marine Shanghai Limited,Registered,4,0.0,0,0,,,0,,,,0,0
-Fitter,Synergy Marine Shanghai Limited,Registered,11,0.0,0,0,,,0,,,,0,0
-Fourth Engineer,Synergy Marine Shanghai Limited,Registered,5,20.0,1,1,66.9,66.9,0,0.0,0.0,0.0,0,1
-General Steward,Synergy Marine Shanghai Limited,Registered,7,14.3,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
-Master,Synergy Marine Shanghai Limited,Registered,11,90.9,10,8,229.4,17.9,3,30.0,0.3,1.29,38,6
-Oiler,Synergy Marine Shanghai Limited,Registered,25,16.0,4,3,122.8,1.1,1,25.0,0.18,0.76,9,3
-Ordinary Seaman,Synergy Marine Shanghai Limited,Registered,7,0.0,0,0,,,0,,,,0,0
-Second Engineer,Synergy Marine Shanghai Limited,Registered,10,30.0,3,3,51.9,55.0,0,0.0,0.03,0.11,1,2
+Engine Cadet,Synergy Marine Shanghai Limited,Registered,5,0.0,0,0,,,0,,,,0,0
+Fitter,Synergy Marine Shanghai Limited,Registered,12,0.0,0,0,,,0,,,,0,0
+Fourth Engineer,Synergy Marine Shanghai Limited,Registered,6,16.7,1,1,66.9,66.9,0,0.0,0.0,0.0,0,1
+General Steward,Synergy Marine Shanghai Limited,Registered,8,12.5,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
+Master,Synergy Marine Shanghai Limited,Registered,12,83.3,10,8,229.4,17.9,3,30.0,0.3,1.29,38,6
+Oiler,Synergy Marine Shanghai Limited,Registered,26,15.4,4,3,122.8,1.1,1,25.0,0.18,0.76,9,3
+Ordinary Seaman,Synergy Marine Shanghai Limited,Registered,8,0.0,0,0,,,0,,,,0,0
+Second Engineer,Synergy Marine Shanghai Limited,Registered,11,27.3,3,3,51.9,55.0,0,0.0,0.03,0.11,1,2
 Second Officer,Synergy Marine Shanghai Limited,Registered,10,70.0,7,6,496.8,7.1,2,28.6,0.77,3.33,69,4
-Third Engineer,Synergy Marine Shanghai Limited,Registered,10,20.0,2,2,1438.4,1438.4,1,50.0,2.37,10.31,61,0
-Third Officer,Synergy Marine Shanghai Limited,Registered,9,55.6,5,5,9882.0,75.2,2,40.0,2.07,9.0,133,2
+Third Engineer,Synergy Marine Shanghai Limited,Registered,11,18.2,2,2,1438.4,1438.4,1,50.0,2.37,10.31,61,0
+Third Officer,Synergy Marine Shanghai Limited,Registered,10,50.0,5,5,9882.0,75.2,2,40.0,2.07,9.0,133,2
 Trainee Seaman,Synergy Marine Shanghai Limited,Registered,5,0.0,0,0,,,0,,,,0,0
 Trainee Wiper,Synergy Marine Shanghai Limited,Registered,2,50.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Able Bodied Seaman,Synergy Marine Shanghai Limited,Engaged,38,7.9,1,1,19.8,19.8,0,0.0,0.08,0.34,1,0
-Bosun,Synergy Marine Shanghai Limited,Engaged,10,0.0,0,0,,,0,,,,0,0
-Chief Cook,Synergy Marine Shanghai Limited,Engaged,10,0.0,0,0,,,0,,,,0,0
-Chief Engineer,Synergy Marine Shanghai Limited,Engaged,9,33.3,3,3,159.3,101.5,2,66.7,0.73,3.16,28,1
-Chief Officer,Synergy Marine Shanghai Limited,Engaged,11,45.5,4,4,859.3,123.9,2,50.0,2.88,12.51,148,2
-Deck Cadet,Synergy Marine Shanghai Limited,Engaged,5,0.0,0,0,,,0,,,,0,0
-Electrical Officer,Synergy Marine Shanghai Limited,Engaged,5,0.0,0,0,,,0,,,,0,0
+Able Bodied Seaman,Synergy Marine Shanghai Limited,Engaged,41,7.3,1,1,19.8,19.8,0,0.0,0.08,0.34,1,0
+Bosun,Synergy Marine Shanghai Limited,Engaged,11,0.0,0,0,,,0,,,,0,0
+Chief Cook,Synergy Marine Shanghai Limited,Engaged,11,0.0,0,0,,,0,,,,0,0
+Chief Engineer,Synergy Marine Shanghai Limited,Engaged,10,30.0,3,3,159.3,101.5,2,66.7,0.73,3.16,28,1
+Chief Officer,Synergy Marine Shanghai Limited,Engaged,12,41.7,4,4,859.3,123.9,2,50.0,2.88,12.51,148,2
+Deck Cadet,Synergy Marine Shanghai Limited,Engaged,6,0.0,0,0,,,0,,,,0,0
+Electrical Officer,Synergy Marine Shanghai Limited,Engaged,6,0.0,0,0,,,0,,,,0,0
 Electro Technical Officer,Synergy Marine Shanghai Limited,Engaged,5,40.0,1,1,44.8,44.8,0,0.0,0.08,0.34,1,0
-Engine Cadet,Synergy Marine Shanghai Limited,Engaged,4,0.0,0,0,,,0,,,,0,0
-Fitter,Synergy Marine Shanghai Limited,Engaged,11,0.0,0,0,,,0,,,,0,0
-Fourth Engineer,Synergy Marine Shanghai Limited,Engaged,5,20.0,1,1,66.9,66.9,0,0.0,0.0,0.0,0,1
-General Steward,Synergy Marine Shanghai Limited,Engaged,7,14.3,0,0,,,0,,,,0,0
-Master,Synergy Marine Shanghai Limited,Engaged,11,90.9,8,8,286.8,50.4,3,37.5,0.37,1.61,38,4
-Oiler,Synergy Marine Shanghai Limited,Engaged,25,16.0,3,3,163.8,2.1,1,33.3,0.23,1.01,9,2
-Ordinary Seaman,Synergy Marine Shanghai Limited,Engaged,7,0.0,0,0,,,0,,,,0,0
-Second Engineer,Synergy Marine Shanghai Limited,Engaged,10,30.0,3,3,51.9,55.0,0,0.0,0.03,0.11,1,2
+Engine Cadet,Synergy Marine Shanghai Limited,Engaged,5,0.0,0,0,,,0,,,,0,0
+Fitter,Synergy Marine Shanghai Limited,Engaged,12,0.0,0,0,,,0,,,,0,0
+Fourth Engineer,Synergy Marine Shanghai Limited,Engaged,6,16.7,1,1,66.9,66.9,0,0.0,0.0,0.0,0,1
+General Steward,Synergy Marine Shanghai Limited,Engaged,8,12.5,0,0,,,0,,,,0,0
+Master,Synergy Marine Shanghai Limited,Engaged,12,83.3,8,8,286.8,50.4,3,37.5,0.37,1.61,38,4
+Oiler,Synergy Marine Shanghai Limited,Engaged,26,15.4,3,3,163.8,2.1,1,33.3,0.23,1.01,9,2
+Ordinary Seaman,Synergy Marine Shanghai Limited,Engaged,8,0.0,0,0,,,0,,,,0,0
+Second Engineer,Synergy Marine Shanghai Limited,Engaged,11,27.3,3,3,51.9,55.0,0,0.0,0.03,0.11,1,2
 Second Officer,Synergy Marine Shanghai Limited,Engaged,10,70.0,6,6,579.6,22.3,2,33.3,0.89,3.89,69,3
-Third Engineer,Synergy Marine Shanghai Limited,Engaged,10,20.0,2,2,1438.4,1438.4,1,50.0,2.37,10.31,61,0
-Third Officer,Synergy Marine Shanghai Limited,Engaged,9,55.6,6,6,8235.6,66.9,2,33.3,1.72,7.5,133,3
+Third Engineer,Synergy Marine Shanghai Limited,Engaged,11,18.2,2,2,1438.4,1438.4,1,50.0,2.37,10.31,61,0
+Third Officer,Synergy Marine Shanghai Limited,Engaged,10,50.0,6,6,8235.6,66.9,2,33.3,1.72,7.5,133,3
 Trainee Seaman,Synergy Marine Shanghai Limited,Engaged,5,0.0,0,0,,,0,,,,0,0
 Trainee Wiper,Synergy Marine Shanghai Limited,Engaged,2,50.0,1,1,0.0,0.0,0,0.0,0.0,0.0,0,1
-Able Bodied Seaman,Synergy Marine Shanghai Limited,Active,38,7.9,1,1,19.8,19.8,0,0.0,0.08,0.34,1,0
-Bosun,Synergy Marine Shanghai Limited,Active,10,0.0,0,0,,,0,,,,0,0
-Chief Cook,Synergy Marine Shanghai Limited,Active,10,0.0,0,0,,,0,,,,0,0
-Chief Engineer,Synergy Marine Shanghai Limited,Active,9,33.3,2,2,236.7,236.7,2,100.0,1.09,4.73,28,0
-Chief Officer,Synergy Marine Shanghai Limited,Active,11,45.5,2,2,1693.6,1693.6,2,100.0,5.76,25.03,148,0
-Deck Cadet,Synergy Marine Shanghai Limited,Active,5,0.0,0,0,,,0,,,,0,0
-Electrical Officer,Synergy Marine Shanghai Limited,Active,5,0.0,0,0,,,0,,,,0,0
+Able Bodied Seaman,Synergy Marine Shanghai Limited,Active,41,7.3,1,1,19.8,19.8,0,0.0,0.08,0.34,1,0
+Bosun,Synergy Marine Shanghai Limited,Active,11,0.0,0,0,,,0,,,,0,0
+Chief Cook,Synergy Marine Shanghai Limited,Active,11,0.0,0,0,,,0,,,,0,0
+Chief Engineer,Synergy Marine Shanghai Limited,Active,10,30.0,2,2,236.7,236.7,2,100.0,1.09,4.73,28,0
+Chief Officer,Synergy Marine Shanghai Limited,Active,12,41.7,2,2,1693.6,1693.6,2,100.0,5.76,25.03,148,0
+Deck Cadet,Synergy Marine Shanghai Limited,Active,6,0.0,0,0,,,0,,,,0,0
+Electrical Officer,Synergy Marine Shanghai Limited,Active,6,0.0,0,0,,,0,,,,0,0
 Electro Technical Officer,Synergy Marine Shanghai Limited,Active,5,40.0,1,1,44.8,44.8,0,0.0,0.08,0.34,1,0
-Engine Cadet,Synergy Marine Shanghai Limited,Active,4,0.0,0,0,,,0,,,,0,0
-Fitter,Synergy Marine Shanghai Limited,Active,11,0.0,0,0,,,0,,,,0,0
-Fourth Engineer,Synergy Marine Shanghai Limited,Active,5,20.0,0,0,,,0,,,,0,0
-General Steward,Synergy Marine Shanghai Limited,Active,7,14.3,0,0,,,0,,,,0,0
-Master,Synergy Marine Shanghai Limited,Active,11,90.9,4,4,563.8,483.8,3,75.0,0.74,3.21,38,0
-Oiler,Synergy Marine Shanghai Limited,Active,25,16.0,1,1,489.2,489.2,1,100.0,0.7,3.04,9,0
-Ordinary Seaman,Synergy Marine Shanghai Limited,Active,7,0.0,0,0,,,0,,,,0,0
-Second Engineer,Synergy Marine Shanghai Limited,Active,10,30.0,1,1,21.7,21.7,0,0.0,0.08,0.34,1,0
+Engine Cadet,Synergy Marine Shanghai Limited,Active,5,0.0,0,0,,,0,,,,0,0
+Fitter,Synergy Marine Shanghai Limited,Active,12,0.0,0,0,,,0,,,,0,0
+Fourth Engineer,Synergy Marine Shanghai Limited,Active,6,16.7,0,0,,,0,,,,0,0
+General Steward,Synergy Marine Shanghai Limited,Active,8,12.5,0,0,,,0,,,,0,0
+Master,Synergy Marine Shanghai Limited,Active,12,83.3,4,4,563.8,483.8,3,75.0,0.74,3.21,38,0
+Oiler,Synergy Marine Shanghai Limited,Active,26,15.4,1,1,489.2,489.2,1,100.0,0.7,3.04,9,0
+Ordinary Seaman,Synergy Marine Shanghai Limited,Active,8,0.0,0,0,,,0,,,,0,0
+Second Engineer,Synergy Marine Shanghai Limited,Active,11,27.3,1,1,21.7,21.7,0,0.0,0.08,0.34,1,0
 Second Officer,Synergy Marine Shanghai Limited,Active,10,70.0,3,3,1155.9,234.1,2,66.7,1.79,7.78,69,0
-Third Engineer,Synergy Marine Shanghai Limited,Active,10,20.0,2,2,1438.4,1438.4,1,50.0,2.37,10.31,61,0
-Third Officer,Synergy Marine Shanghai Limited,Active,9,55.6,3,3,16425.8,138.4,2,66.7,3.45,14.99,133,0
+Third Engineer,Synergy Marine Shanghai Limited,Active,11,18.2,2,2,1438.4,1438.4,1,50.0,2.37,10.31,61,0
+Third Officer,Synergy Marine Shanghai Limited,Active,10,50.0,3,3,16425.8,138.4,2,66.7,3.45,14.99,133,0
 Trainee Seaman,Synergy Marine Shanghai Limited,Active,5,0.0,0,0,,,0,,,,0,0
 Trainee Wiper,Synergy Marine Shanghai Limited,Active,2,50.0,0,0,,,0,,,,0,0
 Able Bodied Seaman,Synergy Maritime Gas Pte. Ltd,All onboard,4,100.0,4,4,98.3,33.8,1,25.0,0.45,1.94,23,1
@@ -1547,120 +1547,120 @@ Ordinary Seaman,Synergy Maritime Gas Pte. Ltd,Active,2,100.0,2,2,121.0,121.0,1,5
 Second Officer,Synergy Maritime Gas Pte. Ltd,Active,1,100.0,1,1,507.3,507.3,1,100.0,1.48,6.43,19,0
 Third Engineer,Synergy Maritime Gas Pte. Ltd,Active,2,100.0,1,1,2536.5,2536.5,1,100.0,0.78,3.38,10,0
 Third Officer,Synergy Maritime Gas Pte. Ltd,Active,1,100.0,1,1,270.6,270.6,1,100.0,1.24,5.41,16,0
-Able Bodied Seaman,Synergy Maritime Private Limited,All onboard,429,54.3,429,247,61.9,0.9,39,9.1,0.15,0.64,807,334
-Bosun,Synergy Maritime Private Limited,All onboard,95,55.8,95,64,66.3,1.7,10,10.5,0.15,0.64,181,71
-Chief Cook,Synergy Maritime Private Limited,All onboard,132,56.8,132,78,22.5,2.3,6,4.5,0.06,0.26,102,113
-Chief Engineer,Synergy Maritime Private Limited,All onboard,134,64.2,134,86,111.5,3.6,24,17.9,0.4,1.75,694,93
-Chief Officer,Synergy Maritime Private Limited,All onboard,134,77.6,134,95,61.7,4.5,21,15.7,0.24,1.05,418,89
+Able Bodied Seaman,Synergy Maritime Private Limited,All onboard,432,54.2,432,248,61.5,0.9,39,9.0,0.15,0.63,807,337
+Bosun,Synergy Maritime Private Limited,All onboard,97,55.7,97,65,64.9,1.6,10,10.3,0.15,0.63,181,73
+Chief Cook,Synergy Maritime Private Limited,All onboard,133,56.4,133,78,22.3,2.3,6,4.5,0.06,0.26,102,114
+Chief Engineer,Synergy Maritime Private Limited,All onboard,135,64.4,135,87,111.2,3.6,24,17.8,0.4,1.75,698,93
+Chief Officer,Synergy Maritime Private Limited,All onboard,136,77.2,136,95,60.8,4.2,21,15.4,0.24,1.04,418,91
 Deck Cadet,Synergy Maritime Private Limited,All onboard,56,89.3,56,52,337.8,71.0,17,30.4,0.74,3.23,535,28
 Electrical Cadet,Synergy Maritime Private Limited,All onboard,9,77.8,9,5,11.8,0.9,0,0.0,0.05,0.23,6,7
-Electrical Officer,Synergy Maritime Private Limited,All onboard,72,62.5,72,47,114.1,1.9,13,18.1,0.21,0.92,195,51
-Electro Technical Officer,Synergy Maritime Private Limited,All onboard,49,63.3,49,31,96.7,4.8,8,16.3,0.15,0.66,95,33
+Electrical Officer,Synergy Maritime Private Limited,All onboard,73,63.0,73,48,113.5,1.9,13,17.8,0.21,0.92,199,51
+Electro Technical Officer,Synergy Maritime Private Limited,All onboard,50,64.0,50,31,94.8,4.3,8,16.0,0.15,0.64,95,34
 Electro Technical Rating,Synergy Maritime Private Limited,All onboard,3,66.7,3,2,28.2,0.0,0,0.0,0.13,0.56,5,2
 Engine Cadet,Synergy Maritime Private Limited,All onboard,40,87.5,40,33,380.8,81.7,12,30.0,1.36,5.91,699,22
-Fitter,Synergy Maritime Private Limited,All onboard,125,54.4,125,69,69.7,1.0,10,8.0,0.13,0.55,204,99
-Fourth Engineer,Synergy Maritime Private Limited,All onboard,114,68.4,114,75,75.0,2.1,13,11.4,0.17,0.73,245,82
+Fitter,Synergy Maritime Private Limited,All onboard,126,54.8,126,70,69.2,1.0,10,7.9,0.13,0.55,204,100
+Fourth Engineer,Synergy Maritime Private Limited,All onboard,115,67.8,115,75,74.3,1.8,13,11.3,0.17,0.72,245,83
 General Steward,Synergy Maritime Private Limited,All onboard,121,57.0,121,69,29.0,1.2,11,9.1,0.08,0.37,131,99
 Junior Fourth Engineer,Synergy Maritime Private Limited,All onboard,1,100.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
-Master,Synergy Maritime Private Limited,All onboard,137,78.1,137,99,99.4,7.2,30,21.9,0.4,1.74,703,83
+Master,Synergy Maritime Private Limited,All onboard,139,77.7,139,100,98.6,7.2,30,21.6,0.4,1.72,708,84
 Messman,Synergy Maritime Private Limited,All onboard,2,100.0,2,2,19.6,19.6,0,0.0,0.0,0.0,0,2
-Oiler,Synergy Maritime Private Limited,All onboard,322,61.2,322,198,76.3,2.0,33,10.2,0.2,0.88,840,244
-Ordinary Seaman,Synergy Maritime Private Limited,All onboard,207,56.0,207,120,69.3,0.9,22,10.6,0.21,0.92,561,161
-Pumpman,Synergy Maritime Private Limited,All onboard,41,53.7,41,20,18.0,0.0,4,9.8,0.07,0.31,38,35
+Oiler,Synergy Maritime Private Limited,All onboard,324,61.1,324,198,75.8,2.0,33,10.2,0.2,0.88,840,246
+Ordinary Seaman,Synergy Maritime Private Limited,All onboard,208,55.8,208,119,69.0,0.9,22,10.6,0.21,0.91,561,162
+Pumpman,Synergy Maritime Private Limited,All onboard,42,54.8,42,21,17.9,0.0,4,9.5,0.07,0.31,39,35
 Second Engineer,Synergy Maritime Private Limited,All onboard,148,71.6,148,100,31.8,2.6,14,9.5,0.09,0.4,176,110
-Second Officer,Synergy Maritime Private Limited,All onboard,143,75.5,143,112,80.1,9.4,28,19.6,0.23,0.98,414,89
-Third Engineer,Synergy Maritime Private Limited,All onboard,146,79.5,146,111,54.6,4.4,20,13.7,0.21,0.89,386,108
-Third Officer,Synergy Maritime Private Limited,All onboard,142,81.0,142,106,44.7,2.5,19,13.4,0.15,0.67,282,100
+Second Officer,Synergy Maritime Private Limited,All onboard,144,75.7,144,112,79.5,9.3,28,19.4,0.22,0.97,414,90
+Third Engineer,Synergy Maritime Private Limited,All onboard,147,80.3,147,112,54.3,4.4,20,13.6,0.2,0.89,386,109
+Third Officer,Synergy Maritime Private Limited,All onboard,142,79.6,142,105,44.6,2.5,19,13.4,0.15,0.67,282,100
 Trainee Electrical Officer,Synergy Maritime Private Limited,All onboard,5,100.0,5,5,54.9,76.1,1,20.0,0.12,0.54,8,3
 Trainee Fitter,Synergy Maritime Private Limited,All onboard,5,20.0,5,1,22.5,0.0,1,20.0,0.09,0.41,6,4
 Trainee General Steward,Synergy Maritime Private Limited,All onboard,12,16.7,12,3,0.8,0.0,0,0.0,0.0,0.0,0,12
 Trainee Seaman,Synergy Maritime Private Limited,All onboard,17,64.7,17,11,33.0,1.6,2,11.8,0.14,0.6,30,13
 Trainee Wiper,Synergy Maritime Private Limited,All onboard,5,80.0,5,4,20.4,2.0,0,0.0,0.02,0.07,1,4
 Wiper,Synergy Maritime Private Limited,All onboard,26,46.2,26,12,17.1,0.0,2,7.7,0.05,0.22,17,21
-Able Bodied Seaman,Synergy Maritime Private Limited,Registered,429,54.3,233,209,113.3,14.7,39,16.7,0.27,1.17,807,138
-Bosun,Synergy Maritime Private Limited,Registered,95,55.8,53,48,117.8,16.9,10,18.9,0.27,1.15,181,29
-Chief Cook,Synergy Maritime Private Limited,Registered,132,56.8,75,66,38.4,15.0,6,8.0,0.11,0.46,102,56
-Chief Engineer,Synergy Maritime Private Limited,Registered,134,64.2,86,79,173.5,27.2,24,27.9,0.63,2.73,694,45
-Chief Officer,Synergy Maritime Private Limited,Registered,134,77.6,104,87,79.1,16.9,21,20.2,0.31,1.36,418,59
+Able Bodied Seaman,Synergy Maritime Private Limited,Registered,432,54.2,234,210,112.8,13.9,39,16.7,0.27,1.17,807,139
+Bosun,Synergy Maritime Private Limited,Registered,97,55.7,54,48,115.6,16.9,10,18.5,0.26,1.13,181,30
+Chief Cook,Synergy Maritime Private Limited,Registered,133,56.4,75,66,38.4,15.0,6,8.0,0.11,0.46,102,56
+Chief Engineer,Synergy Maritime Private Limited,Registered,135,64.4,87,80,172.3,28.1,24,27.6,0.62,2.71,698,45
+Chief Officer,Synergy Maritime Private Limited,Registered,136,77.2,105,87,78.3,16.9,21,20.0,0.31,1.35,418,60
 Deck Cadet,Synergy Maritime Private Limited,Registered,56,89.3,50,50,378.3,79.6,17,34.0,0.83,3.62,535,22
 Electrical Cadet,Synergy Maritime Private Limited,Registered,9,77.8,7,5,15.2,0.9,0,0.0,0.07,0.29,6,5
-Electrical Officer,Synergy Maritime Private Limited,Registered,72,62.5,45,45,182.6,45.7,13,28.9,0.34,1.47,195,24
-Electro Technical Officer,Synergy Maritime Private Limited,Registered,49,63.3,31,26,152.1,32.4,8,25.8,0.24,1.04,95,15
+Electrical Officer,Synergy Maritime Private Limited,Registered,73,63.0,46,46,180.1,46.6,13,28.3,0.34,1.46,199,24
+Electro Technical Officer,Synergy Maritime Private Limited,Registered,50,64.0,32,26,147.3,29.4,8,25.0,0.23,1.0,95,16
 Electro Technical Rating,Synergy Maritime Private Limited,Registered,3,66.7,2,2,42.3,42.3,0,0.0,0.19,0.85,5,1
 Engine Cadet,Synergy Maritime Private Limited,Registered,40,87.5,35,33,435.1,85.0,12,34.3,1.55,6.75,699,17
-Fitter,Synergy Maritime Private Limited,Registered,125,54.4,68,58,127.2,8.2,10,14.7,0.23,1.01,204,42
-Fourth Engineer,Synergy Maritime Private Limited,Registered,114,68.4,78,70,109.4,16.9,13,16.7,0.24,1.06,245,46
+Fitter,Synergy Maritime Private Limited,Registered,126,54.8,69,59,125.4,8.2,10,14.5,0.23,1.0,204,43
+Fourth Engineer,Synergy Maritime Private Limited,Registered,115,67.8,78,70,109.4,16.9,13,16.7,0.24,1.06,245,46
 General Steward,Synergy Maritime Private Limited,Registered,121,57.0,69,62,50.6,7.4,11,15.9,0.15,0.64,131,47
 Junior Fourth Engineer,Synergy Maritime Private Limited,Registered,1,100.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
-Master,Synergy Maritime Private Limited,Registered,137,78.1,107,97,127.2,19.8,30,28.0,0.51,2.22,703,53
+Master,Synergy Maritime Private Limited,Registered,139,77.7,108,98,126.8,20.5,30,27.8,0.51,2.22,708,53
 Messman,Synergy Maritime Private Limited,Registered,2,100.0,2,2,19.6,19.6,0,0.0,0.0,0.0,0,2
-Oiler,Synergy Maritime Private Limited,Registered,322,61.2,197,175,124.3,16.9,33,16.8,0.33,1.44,840,119
-Ordinary Seaman,Synergy Maritime Private Limited,Registered,207,56.0,116,104,123.3,8.6,22,19.0,0.38,1.64,561,70
-Pumpman,Synergy Maritime Private Limited,Registered,41,53.7,22,17,33.3,4.0,4,18.2,0.13,0.58,38,16
+Oiler,Synergy Maritime Private Limited,Registered,324,61.1,198,175,123.6,16.9,33,16.7,0.33,1.43,840,120
+Ordinary Seaman,Synergy Maritime Private Limited,Registered,208,55.8,116,104,123.3,8.6,22,19.0,0.38,1.64,561,70
+Pumpman,Synergy Maritime Private Limited,Registered,42,54.8,23,18,32.6,4.3,4,17.4,0.13,0.57,39,16
 Second Engineer,Synergy Maritime Private Limited,Registered,148,71.6,106,91,44.0,9.4,14,13.2,0.13,0.56,176,68
-Second Officer,Synergy Maritime Private Limited,Registered,143,75.5,108,97,105.3,24.3,28,25.9,0.3,1.3,414,54
-Third Engineer,Synergy Maritime Private Limited,Registered,146,79.5,116,106,68.4,11.6,20,17.2,0.26,1.13,386,78
-Third Officer,Synergy Maritime Private Limited,Registered,142,81.0,115,100,54.9,6.5,19,16.5,0.19,0.83,282,73
+Second Officer,Synergy Maritime Private Limited,Registered,144,75.7,109,97,104.4,24.0,28,25.7,0.3,1.28,414,55
+Third Engineer,Synergy Maritime Private Limited,Registered,147,80.3,118,107,67.3,11.3,20,16.9,0.25,1.11,386,80
+Third Officer,Synergy Maritime Private Limited,Registered,142,79.6,113,99,55.7,6.5,19,16.8,0.19,0.84,282,71
 Trainee Electrical Officer,Synergy Maritime Private Limited,Registered,5,100.0,5,5,54.9,76.1,1,20.0,0.12,0.54,8,3
 Trainee Fitter,Synergy Maritime Private Limited,Registered,5,20.0,1,1,112.7,112.7,1,100.0,0.47,2.03,6,0
 Trainee General Steward,Synergy Maritime Private Limited,Registered,12,16.7,2,2,3.1,3.1,0,0.0,0.0,0.0,0,2
 Trainee Seaman,Synergy Maritime Private Limited,Registered,17,64.7,11,10,50.8,5.0,2,18.2,0.21,0.92,30,7
 Trainee Wiper,Synergy Maritime Private Limited,Registered,5,80.0,4,4,25.5,11.6,0,0.0,0.02,0.08,1,3
 Wiper,Synergy Maritime Private Limited,Registered,26,46.2,12,10,36.5,8.2,2,16.7,0.11,0.48,17,7
-Able Bodied Seaman,Synergy Maritime Private Limited,Engaged,429,54.3,247,247,107.5,11.6,39,15.8,0.25,1.1,807,152
-Bosun,Synergy Maritime Private Limited,Engaged,95,55.8,64,64,98.4,11.3,10,15.6,0.22,0.96,181,40
-Chief Cook,Synergy Maritime Private Limited,Engaged,132,56.8,78,78,38.0,15.2,6,7.7,0.1,0.44,102,59
-Chief Engineer,Synergy Maritime Private Limited,Engaged,134,64.2,86,86,173.8,27.2,24,27.9,0.63,2.73,694,45
-Chief Officer,Synergy Maritime Private Limited,Engaged,134,77.6,95,95,87.1,20.0,21,22.1,0.34,1.49,418,50
+Able Bodied Seaman,Synergy Maritime Private Limited,Engaged,432,54.2,248,248,107.1,11.5,39,15.7,0.25,1.1,807,153
+Bosun,Synergy Maritime Private Limited,Engaged,97,55.7,65,65,96.9,11.2,10,15.4,0.22,0.94,181,41
+Chief Cook,Synergy Maritime Private Limited,Engaged,133,56.4,78,78,38.0,15.2,6,7.7,0.1,0.44,102,59
+Chief Engineer,Synergy Maritime Private Limited,Engaged,135,64.4,87,87,172.6,28.1,24,27.6,0.62,2.71,698,45
+Chief Officer,Synergy Maritime Private Limited,Engaged,136,77.2,95,95,87.1,20.0,21,22.1,0.34,1.49,418,50
 Deck Cadet,Synergy Maritime Private Limited,Engaged,56,89.3,52,52,363.8,78.1,17,32.7,0.8,3.48,535,24
 Electrical Cadet,Synergy Maritime Private Limited,Engaged,9,77.8,5,5,21.2,2.8,0,0.0,0.09,0.41,6,3
-Electrical Officer,Synergy Maritime Private Limited,Engaged,72,62.5,47,47,174.9,33.8,13,27.7,0.32,1.4,195,26
-Electro Technical Officer,Synergy Maritime Private Limited,Engaged,49,63.3,31,31,152.9,32.4,8,25.8,0.24,1.04,95,15
+Electrical Officer,Synergy Maritime Private Limited,Engaged,73,63.0,48,48,172.6,39.8,13,27.1,0.32,1.4,199,26
+Electro Technical Officer,Synergy Maritime Private Limited,Engaged,50,64.0,31,31,152.9,32.4,8,25.8,0.24,1.04,95,15
 Electro Technical Rating,Synergy Maritime Private Limited,Engaged,3,66.7,2,2,42.3,42.3,0,0.0,0.19,0.85,5,1
 Engine Cadet,Synergy Maritime Private Limited,Engaged,40,87.5,33,33,461.5,85.3,12,36.4,1.65,7.16,699,15
-Fitter,Synergy Maritime Private Limited,Engaged,125,54.4,69,69,126.3,9.4,10,14.5,0.23,1.0,204,43
-Fourth Engineer,Synergy Maritime Private Limited,Engaged,114,68.4,75,75,114.0,17.4,13,17.3,0.25,1.1,245,43
+Fitter,Synergy Maritime Private Limited,Engaged,126,54.8,70,70,124.5,9.3,10,14.3,0.23,0.99,204,44
+Fourth Engineer,Synergy Maritime Private Limited,Engaged,115,67.8,75,75,114.0,17.4,13,17.3,0.25,1.1,245,43
 General Steward,Synergy Maritime Private Limited,Engaged,121,57.0,69,69,50.9,7.4,11,15.9,0.15,0.64,131,47
 Junior Fourth Engineer,Synergy Maritime Private Limited,Engaged,1,100.0,0,0,,,0,,,,0,0
-Master,Synergy Maritime Private Limited,Engaged,137,78.1,99,99,137.5,33.8,30,30.3,0.55,2.4,703,45
+Master,Synergy Maritime Private Limited,Engaged,139,77.7,100,100,137.0,33.8,30,30.0,0.55,2.39,708,45
 Messman,Synergy Maritime Private Limited,Engaged,2,100.0,2,2,19.6,19.6,0,0.0,0.0,0.0,0,2
-Oiler,Synergy Maritime Private Limited,Engaged,322,61.2,198,198,124.1,16.9,33,16.7,0.33,1.43,840,120
-Ordinary Seaman,Synergy Maritime Private Limited,Engaged,207,56.0,120,120,119.6,8.6,22,18.3,0.36,1.58,561,74
-Pumpman,Synergy Maritime Private Limited,Engaged,41,53.7,20,20,36.8,6.1,4,20.0,0.15,0.64,38,14
-Second Engineer,Synergy Maritime Private Limited,Engaged,148,71.6,100,100,47.1,13.2,14,14.0,0.14,0.6,176,62
-Second Officer,Synergy Maritime Private Limited,Engaged,143,75.5,112,112,102.2,23.8,28,25.0,0.29,1.25,414,58
-Third Engineer,Synergy Maritime Private Limited,Engaged,146,79.5,111,111,71.8,12.1,20,18.0,0.27,1.18,386,73
-Third Officer,Synergy Maritime Private Limited,Engaged,142,81.0,106,106,59.9,9.7,19,17.9,0.21,0.9,282,64
+Oiler,Synergy Maritime Private Limited,Engaged,324,61.1,198,198,124.1,16.9,33,16.7,0.33,1.43,840,120
+Ordinary Seaman,Synergy Maritime Private Limited,Engaged,208,55.8,119,119,120.6,8.6,22,18.5,0.37,1.59,561,73
+Pumpman,Synergy Maritime Private Limited,Engaged,42,54.8,21,21,35.9,7.9,4,19.0,0.14,0.63,39,14
+Second Engineer,Synergy Maritime Private Limited,Engaged,148,71.6,100,100,47.0,13.2,14,14.0,0.14,0.6,176,62
+Second Officer,Synergy Maritime Private Limited,Engaged,144,75.7,112,112,102.2,23.8,28,25.0,0.29,1.25,414,58
+Third Engineer,Synergy Maritime Private Limited,Engaged,147,80.3,112,112,71.2,12.1,20,17.9,0.27,1.17,386,74
+Third Officer,Synergy Maritime Private Limited,Engaged,142,79.6,105,105,60.3,9.5,19,18.1,0.21,0.91,282,63
 Trainee Electrical Officer,Synergy Maritime Private Limited,Engaged,5,100.0,5,5,54.9,76.1,1,20.0,0.12,0.54,8,3
 Trainee Fitter,Synergy Maritime Private Limited,Engaged,5,20.0,1,1,112.7,112.7,1,100.0,0.47,2.03,6,0
 Trainee General Steward,Synergy Maritime Private Limited,Engaged,12,16.7,3,3,3.3,3.7,0,0.0,0.0,0.0,0,3
 Trainee Seaman,Synergy Maritime Private Limited,Engaged,17,64.7,11,11,51.0,5.0,2,18.2,0.21,0.92,30,7
 Trainee Wiper,Synergy Maritime Private Limited,Engaged,5,80.0,4,4,25.5,11.6,0,0.0,0.02,0.08,1,3
 Wiper,Synergy Maritime Private Limited,Engaged,26,46.2,12,12,37.1,8.2,2,16.7,0.11,0.48,17,7
-Able Bodied Seaman,Synergy Maritime Private Limited,Active,429,54.3,95,95,267.3,84.5,39,41.1,0.66,2.87,807,0
-Bosun,Synergy Maritime Private Limited,Active,95,55.8,24,24,249.4,84.0,10,41.7,0.59,2.55,181,0
-Chief Cook,Synergy Maritime Private Limited,Active,132,56.8,19,19,110.3,62.5,6,31.6,0.42,1.82,102,0
-Chief Engineer,Synergy Maritime Private Limited,Active,134,64.2,41,41,349.6,118.4,24,58.5,1.32,5.72,694,0
-Chief Officer,Synergy Maritime Private Limited,Active,134,77.6,45,45,172.7,84.5,21,46.7,0.72,3.14,418,0
+Able Bodied Seaman,Synergy Maritime Private Limited,Active,432,54.2,95,95,267.3,84.5,39,41.1,0.66,2.87,807,0
+Bosun,Synergy Maritime Private Limited,Active,97,55.7,24,24,249.4,84.0,10,41.7,0.59,2.55,181,0
+Chief Cook,Synergy Maritime Private Limited,Active,133,56.4,19,19,110.3,62.5,6,31.6,0.42,1.82,102,0
+Chief Engineer,Synergy Maritime Private Limited,Active,135,64.4,42,42,342.9,118.4,24,57.1,1.29,5.62,698,0
+Chief Officer,Synergy Maritime Private Limited,Active,136,77.2,45,45,172.7,84.5,21,46.7,0.72,3.14,418,0
 Deck Cadet,Synergy Maritime Private Limited,Active,56,89.3,28,28,647.5,177.6,17,60.7,1.49,6.46,535,0
 Electrical Cadet,Synergy Maritime Private Limited,Active,9,77.8,2,2,50.7,50.7,0,0.0,0.23,1.01,6,0
-Electrical Officer,Synergy Maritime Private Limited,Active,72,62.5,21,21,367.7,152.2,13,61.9,0.72,3.14,195,0
-Electro Technical Officer,Synergy Maritime Private Limited,Active,49,63.3,16,16,277.6,114.6,8,50.0,0.46,2.01,95,0
+Electrical Officer,Synergy Maritime Private Limited,Active,73,63.0,22,22,354.0,135.3,13,59.1,0.7,3.06,199,0
+Electro Technical Officer,Synergy Maritime Private Limited,Active,50,64.0,16,16,277.6,114.6,8,50.0,0.46,2.01,95,0
 Electro Technical Rating,Synergy Maritime Private Limited,Active,3,66.7,1,1,84.5,84.5,0,0.0,0.39,1.69,5,0
 Engine Cadet,Synergy Maritime Private Limited,Active,40,87.5,18,18,795.1,304.4,12,66.7,3.02,13.13,699,0
-Fitter,Synergy Maritime Private Limited,Active,125,54.4,26,26,324.0,75.5,10,38.5,0.61,2.65,204,0
-Fourth Engineer,Synergy Maritime Private Limited,Active,114,68.4,32,32,251.6,76.1,13,40.6,0.6,2.59,245,0
+Fitter,Synergy Maritime Private Limited,Active,126,54.8,26,26,324.0,75.5,10,38.5,0.61,2.65,204,0
+Fourth Engineer,Synergy Maritime Private Limited,Active,115,67.8,32,32,251.6,76.1,13,40.6,0.6,2.59,245,0
 General Steward,Synergy Maritime Private Limited,Active,121,57.0,22,22,143.3,96.4,11,50.0,0.46,2.01,131,0
 Junior Fourth Engineer,Synergy Maritime Private Limited,Active,1,100.0,0,0,,,0,,,,0,0
-Master,Synergy Maritime Private Limited,Active,137,78.1,54,54,244.3,117.7,30,55.6,1.01,4.4,703,0
+Master,Synergy Maritime Private Limited,Active,139,77.7,55,55,241.4,117.1,30,54.5,1.0,4.35,708,0
 Messman,Synergy Maritime Private Limited,Active,2,100.0,0,0,,,0,,,,0,0
-Oiler,Synergy Maritime Private Limited,Active,322,61.2,78,78,297.6,83.2,33,42.3,0.84,3.64,840,0
-Ordinary Seaman,Synergy Maritime Private Limited,Active,207,56.0,46,46,299.0,98.5,22,47.8,0.95,4.12,561,0
-Pumpman,Synergy Maritime Private Limited,Active,41,53.7,6,6,109.5,118.4,4,66.7,0.49,2.14,38,0
+Oiler,Synergy Maritime Private Limited,Active,324,61.1,78,78,297.6,83.2,33,42.3,0.84,3.64,840,0
+Ordinary Seaman,Synergy Maritime Private Limited,Active,208,55.8,46,46,299.0,98.5,22,47.8,0.95,4.12,561,0
+Pumpman,Synergy Maritime Private Limited,Active,42,54.8,7,7,96.3,118.4,4,57.1,0.43,1.88,39,0
 Second Engineer,Synergy Maritime Private Limited,Active,148,71.6,38,38,110.2,50.7,14,36.8,0.36,1.57,176,0
-Second Officer,Synergy Maritime Private Limited,Active,143,75.5,54,54,201.4,109.9,28,51.9,0.6,2.59,414,0
-Third Engineer,Synergy Maritime Private Limited,Active,146,79.5,38,38,192.7,101.5,20,52.6,0.79,3.44,386,0
-Third Officer,Synergy Maritime Private Limited,Active,142,81.0,42,42,141.3,70.9,19,45.2,0.52,2.27,282,0
+Second Officer,Synergy Maritime Private Limited,Active,144,75.7,54,54,201.4,109.9,28,51.9,0.6,2.59,414,0
+Third Engineer,Synergy Maritime Private Limited,Active,147,80.3,38,38,192.7,101.5,20,52.6,0.79,3.44,386,0
+Third Officer,Synergy Maritime Private Limited,Active,142,79.6,42,42,141.3,70.9,19,45.2,0.52,2.27,282,0
 Trainee Electrical Officer,Synergy Maritime Private Limited,Active,5,100.0,2,2,88.8,88.8,1,50.0,0.31,1.35,8,0
 Trainee Fitter,Synergy Maritime Private Limited,Active,5,20.0,1,1,112.7,112.7,1,100.0,0.47,2.03,6,0
 Trainee General Steward,Synergy Maritime Private Limited,Active,12,16.7,0,0,,,0,,,,0,0
@@ -1771,7 +1771,7 @@ Engine Cadet,Synergy Navis marine Private Limited,All onboard,3,100.0,3,3,572.6,
 Fitter,Synergy Navis marine Private Limited,All onboard,23,73.9,23,17,93.9,4.1,2,8.7,0.4,1.72,117,18
 Fourth Engineer,Synergy Navis marine Private Limited,All onboard,23,87.0,23,17,32.1,2.6,2,8.7,0.12,0.53,36,17
 General Steward,Synergy Navis marine Private Limited,All onboard,26,53.8,26,16,153.0,1.2,2,7.7,0.12,0.52,40,17
-Master,Synergy Navis marine Private Limited,All onboard,24,91.7,24,22,94.7,56.2,7,29.2,0.41,1.79,127,10
+Master,Synergy Navis marine Private Limited,All onboard,24,91.7,24,22,90.2,47.7,6,25.0,0.39,1.68,119,11
 Motorman,Synergy Navis marine Private Limited,All onboard,2,100.0,2,2,160.6,160.6,2,100.0,0.74,3.21,19,0
 Oiler,Synergy Navis marine Private Limited,All onboard,68,70.6,68,49,32.3,3.5,6,8.8,0.12,0.54,108,48
 Ordinary Seaman,Synergy Navis marine Private Limited,All onboard,42,73.8,42,31,47.7,2.2,5,11.9,0.2,0.88,109,33
@@ -1779,7 +1779,7 @@ Pumpman,Synergy Navis marine Private Limited,All onboard,21,71.4,21,18,62.3,5.2,
 Second Engineer,Synergy Navis marine Private Limited,All onboard,22,81.8,22,17,118.8,1.7,5,22.7,0.4,1.72,112,15
 Second Officer,Synergy Navis marine Private Limited,All onboard,24,83.3,24,19,121.2,16.8,6,25.0,0.41,1.8,128,13
 Third Engineer,Synergy Navis marine Private Limited,All onboard,23,91.3,23,21,56.3,18.3,5,21.7,0.23,1.01,69,13
-Third Officer,Synergy Navis marine Private Limited,All onboard,39,87.2,39,32,72.8,16.9,7,17.9,0.3,1.29,149,21
+Third Officer,Synergy Navis marine Private Limited,All onboard,40,85.0,40,32,71.0,16.2,7,17.5,0.29,1.26,149,22
 Trainee Seaman,Synergy Navis marine Private Limited,All onboard,9,55.6,9,5,44.6,0.0,1,11.1,0.2,0.86,23,7
 Able Bodied Seaman,Synergy Navis marine Private Limited,Registered,67,70.1,47,42,77.9,7.8,5,10.6,0.11,0.5,69,31
 Bosun,Synergy Navis marine Private Limited,Registered,5,100.0,5,5,24.2,33.8,0,0.0,0.06,0.27,4,3
@@ -1793,7 +1793,7 @@ Engine Cadet,Synergy Navis marine Private Limited,Registered,3,100.0,3,3,572.6,8
 Fitter,Synergy Navis marine Private Limited,Registered,23,73.9,17,14,126.2,13.4,2,11.8,0.54,2.33,117,12
 Fourth Engineer,Synergy Navis marine Private Limited,Registered,23,87.0,20,16,36.8,4.4,2,10.0,0.14,0.61,36,14
 General Steward,Synergy Navis marine Private Limited,Registered,26,53.8,14,14,283.9,19.8,2,14.3,0.22,0.97,40,5
-Master,Synergy Navis marine Private Limited,Registered,24,91.7,22,22,103.3,64.7,7,31.8,0.45,1.95,127,8
+Master,Synergy Navis marine Private Limited,Registered,24,91.7,22,22,98.4,56.2,6,27.3,0.42,1.83,119,9
 Motorman,Synergy Navis marine Private Limited,Registered,2,100.0,2,2,160.6,160.6,2,100.0,0.74,3.21,19,0
 Oiler,Synergy Navis marine Private Limited,Registered,68,70.6,48,44,45.6,15.6,6,12.5,0.18,0.76,108,28
 Ordinary Seaman,Synergy Navis marine Private Limited,Registered,42,73.8,31,28,64.2,6.0,5,16.1,0.27,1.19,109,22
@@ -1801,7 +1801,7 @@ Pumpman,Synergy Navis marine Private Limited,Registered,21,71.4,15,14,86.1,5.2,1
 Second Engineer,Synergy Navis marine Private Limited,Registered,22,81.8,18,16,145.2,5.6,5,27.8,0.48,2.1,112,11
 Second Officer,Synergy Navis marine Private Limited,Registered,24,83.3,20,18,144.9,50.7,6,30.0,0.5,2.16,128,9
 Third Engineer,Synergy Navis marine Private Limited,Registered,23,91.3,21,20,61.0,24.3,5,23.8,0.26,1.11,69,11
-Third Officer,Synergy Navis marine Private Limited,Registered,39,87.2,34,31,83.4,25.7,7,20.6,0.34,1.48,149,16
+Third Officer,Synergy Navis marine Private Limited,Registered,40,85.0,34,31,83.4,25.7,7,20.6,0.34,1.48,149,16
 Trainee Seaman,Synergy Navis marine Private Limited,Registered,9,55.6,5,4,79.9,10.3,1,20.0,0.36,1.56,23,3
 Able Bodied Seaman,Synergy Navis marine Private Limited,Engaged,67,70.1,47,47,78.3,7.8,5,10.6,0.11,0.5,69,31
 Bosun,Synergy Navis marine Private Limited,Engaged,5,100.0,5,5,24.2,33.8,0,0.0,0.06,0.27,4,3
@@ -1815,7 +1815,7 @@ Engine Cadet,Synergy Navis marine Private Limited,Engaged,3,100.0,3,3,572.6,89.1
 Fitter,Synergy Navis marine Private Limited,Engaged,23,73.9,17,17,127.1,13.4,2,11.8,0.54,2.33,117,12
 Fourth Engineer,Synergy Navis marine Private Limited,Engaged,23,87.0,17,17,43.4,7.9,2,11.8,0.16,0.72,36,11
 General Steward,Synergy Navis marine Private Limited,Engaged,26,53.8,16,16,248.6,17.1,2,12.5,0.19,0.85,40,7
-Master,Synergy Navis marine Private Limited,Engaged,24,91.7,22,22,103.3,64.7,7,31.8,0.45,1.95,127,8
+Master,Synergy Navis marine Private Limited,Engaged,24,91.7,22,22,98.4,56.2,6,27.3,0.42,1.83,119,9
 Motorman,Synergy Navis marine Private Limited,Engaged,2,100.0,2,2,160.6,160.6,2,100.0,0.74,3.21,19,0
 Oiler,Synergy Navis marine Private Limited,Engaged,68,70.6,49,49,44.9,15.2,6,12.2,0.17,0.75,108,29
 Ordinary Seaman,Synergy Navis marine Private Limited,Engaged,42,73.8,31,31,64.6,6.8,5,16.1,0.27,1.19,109,22
@@ -1823,7 +1823,7 @@ Pumpman,Synergy Navis marine Private Limited,Engaged,21,71.4,18,18,72.7,5.2,1,5.
 Second Engineer,Synergy Navis marine Private Limited,Engaged,22,81.8,17,17,153.8,8.6,5,29.4,0.51,2.23,112,10
 Second Officer,Synergy Navis marine Private Limited,Engaged,24,83.3,19,19,153.0,50.7,6,31.6,0.52,2.28,128,8
 Third Engineer,Synergy Navis marine Private Limited,Engaged,23,91.3,21,21,61.7,24.3,5,23.8,0.26,1.11,69,11
-Third Officer,Synergy Navis marine Private Limited,Engaged,39,87.2,32,32,88.7,33.3,7,21.9,0.36,1.57,149,14
+Third Officer,Synergy Navis marine Private Limited,Engaged,40,85.0,32,32,88.7,33.3,7,21.9,0.36,1.57,149,14
 Trainee Seaman,Synergy Navis marine Private Limited,Engaged,9,55.6,5,5,80.2,10.3,1,20.0,0.36,1.56,23,3
 Able Bodied Seaman,Synergy Navis marine Private Limited,Active,67,70.1,16,16,217.3,58.9,5,31.2,0.34,1.46,69,0
 Bosun,Synergy Navis marine Private Limited,Active,5,100.0,2,2,33.8,33.8,0,0.0,0.16,0.68,4,0
@@ -1837,7 +1837,7 @@ Engine Cadet,Synergy Navis marine Private Limited,Active,3,100.0,2,2,856.2,856.2
 Fitter,Synergy Navis marine Private Limited,Active,23,73.9,5,5,399.7,84.5,2,40.0,1.82,7.91,117,0
 Fourth Engineer,Synergy Navis marine Private Limited,Active,23,87.0,6,6,102.8,54.7,2,33.3,0.47,2.03,36,0
 General Steward,Synergy Navis marine Private Limited,Active,26,53.8,9,9,440.2,41.1,2,22.2,0.35,1.5,40,0
-Master,Synergy Navis marine Private Limited,Active,24,91.7,14,14,155.4,93.0,7,50.0,0.71,3.07,127,0
+Master,Synergy Navis marine Private Limited,Active,24,91.7,13,13,156.9,84.5,6,46.2,0.71,3.1,119,0
 Motorman,Synergy Navis marine Private Limited,Active,2,100.0,2,2,160.6,160.6,2,100.0,0.74,3.21,19,0
 Oiler,Synergy Navis marine Private Limited,Active,68,70.6,20,20,97.7,67.6,6,30.0,0.42,1.83,108,0
 Ordinary Seaman,Synergy Navis marine Private Limited,Active,42,73.8,9,9,210.7,118.4,5,55.6,0.94,4.1,109,0
@@ -1845,7 +1845,7 @@ Pumpman,Synergy Navis marine Private Limited,Active,21,71.4,4,4,307.8,45.9,1,25.
 Second Engineer,Synergy Navis marine Private Limited,Active,22,81.8,7,7,368.9,118.4,5,71.4,1.24,5.41,112,0
 Second Officer,Synergy Navis marine Private Limited,Active,24,83.3,11,11,259.0,101.5,6,54.5,0.91,3.94,128,0
 Third Engineer,Synergy Navis marine Private Limited,Active,23,91.3,10,10,118.6,89.8,5,50.0,0.54,2.33,69,0
-Third Officer,Synergy Navis marine Private Limited,Active,39,87.2,18,18,147.6,76.1,7,38.9,0.64,2.8,149,0
+Third Officer,Synergy Navis marine Private Limited,Active,40,85.0,18,18,147.6,76.1,7,38.9,0.64,2.8,149,0
 Trainee Seaman,Synergy Navis marine Private Limited,Active,9,55.6,2,2,194.5,194.5,1,50.0,0.89,3.89,23,0
 Able Bodied Seaman,Synergy Ocean Maritime Inc.,All onboard,71,62.0,71,39,247.5,2.5,20,28.2,0.53,2.32,487,42
 Bosun,Synergy Ocean Maritime Inc.,All onboard,28,64.3,28,14,204.3,0.4,6,21.4,0.49,2.14,177,20
@@ -1919,109 +1919,109 @@ Second Officer,Synergy Ocean Maritime Inc.,Active,25,76.0,14,14,327.8,181.1,11,7
 Third Engineer,Synergy Ocean Maritime Inc.,Active,24,54.2,8,8,449.9,136.1,4,50.0,1.67,7.27,172,0
 Third Officer,Synergy Ocean Maritime Inc.,Active,27,85.2,13,13,460.1,268.6,9,69.2,2.03,8.82,339,0
 Wiper,Synergy Ocean Maritime Inc.,Active,5,20.0,0,0,,,0,,,,0,0
-Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,All onboard,41,61.0,41,30,139.3,3.6,9,22.0,0.32,1.41,171,26
+Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,All onboard,41,56.1,41,30,129.7,2.7,8,19.5,0.3,1.31,159,28
 Bosun,Synergy Oceanic Services India Pvt Ltd,All onboard,6,50.0,6,5,110.3,5.8,2,33.3,0.39,1.69,30,4
-Chief Cook,Synergy Oceanic Services India Pvt Ltd,All onboard,14,35.7,14,7,43.2,0.6,2,14.3,0.09,0.41,17,11
-Chief Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,12,58.3,12,9,238.2,7.5,2,16.7,0.8,3.47,123,9
-Chief Officer,Synergy Oceanic Services India Pvt Ltd,All onboard,12,75.0,12,10,133.1,10.1,2,16.7,0.54,2.37,84,9
-Deck Cadet,Synergy Oceanic Services India Pvt Ltd,All onboard,16,87.5,16,10,50.2,7.9,2,12.5,0.09,0.38,18,13
+Chief Cook,Synergy Oceanic Services India Pvt Ltd,All onboard,14,42.9,14,8,52.9,1.3,3,21.4,0.14,0.6,25,10
+Chief Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,11,54.5,11,9,259.9,8.8,2,18.2,0.87,3.78,123,8
+Chief Officer,Synergy Oceanic Services India Pvt Ltd,All onboard,11,72.7,11,9,144.0,7.0,2,18.2,0.59,2.58,84,8
+Deck Cadet,Synergy Oceanic Services India Pvt Ltd,All onboard,16,87.5,16,11,285.4,39.3,4,25.0,1.17,5.09,241,11
 Electrical Cadet,Synergy Oceanic Services India Pvt Ltd,All onboard,1,100.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 Electrical Officer,Synergy Oceanic Services India Pvt Ltd,All onboard,9,77.8,9,6,72.5,68.9,2,22.2,0.2,0.86,23,7
 Electro Technical Officer,Synergy Oceanic Services India Pvt Ltd,All onboard,1,100.0,1,1,47.6,47.6,0,0.0,0.0,0.0,0,1
 Engine Cadet,Synergy Oceanic Services India Pvt Ltd,All onboard,7,85.7,7,6,1403.3,82.9,3,42.9,1.37,5.94,123,3
-Fitter,Synergy Oceanic Services India Pvt Ltd,All onboard,17,76.5,17,11,93.1,9.2,2,11.8,0.38,1.67,84,13
-Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,14,71.4,14,9,52.4,0.4,2,14.3,0.23,0.99,41,11
+Fitter,Synergy Oceanic Services India Pvt Ltd,All onboard,17,70.6,17,10,90.7,4.3,2,11.8,0.38,1.67,84,13
+Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,14,71.4,14,9,57.2,3.1,2,14.3,0.25,1.09,45,10
 Gas Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 General Steward,Synergy Oceanic Services India Pvt Ltd,All onboard,11,63.6,11,8,454.0,3.8,5,45.5,1.92,8.36,272,6
 Master,Synergy Oceanic Services India Pvt Ltd,All onboard,15,73.3,15,11,66.2,5.1,3,20.0,0.25,1.08,48,10
-Oiler,Synergy Oceanic Services India Pvt Ltd,All onboard,34,61.8,34,23,26.4,2.1,3,8.8,0.07,0.31,31,29
-Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,All onboard,19,57.9,19,11,286.4,0.9,5,26.3,0.98,4.25,239,13
+Oiler,Synergy Oceanic Services India Pvt Ltd,All onboard,33,57.6,33,21,23.9,1.1,2,6.1,0.06,0.26,25,29
+Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,All onboard,19,52.6,19,10,286.1,0.0,5,26.3,0.98,4.25,239,13
 Pumpman,Synergy Oceanic Services India Pvt Ltd,All onboard,1,0.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 Second Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,14,71.4,14,9,49.6,4.3,3,21.4,0.14,0.6,25,8
 Second Officer,Synergy Oceanic Services India Pvt Ltd,All onboard,13,69.2,13,12,151.6,8.5,5,38.5,0.55,2.39,92,7
-Third Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,16,62.5,16,7,20.4,0.0,1,6.2,0.08,0.36,17,13
+Third Engineer,Synergy Oceanic Services India Pvt Ltd,All onboard,16,62.5,16,6,20.3,0.0,1,6.2,0.08,0.36,17,13
 Third Officer,Synergy Oceanic Services India Pvt Ltd,All onboard,14,64.3,14,9,40.3,7.0,3,21.4,0.13,0.58,24,11
 Trainee Electrical Officer,Synergy Oceanic Services India Pvt Ltd,All onboard,4,75.0,4,2,33.1,25.4,0,0.0,0.12,0.51,6,2
-Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,All onboard,1,100.0,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
-Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,All onboard,7,57.1,7,3,30.0,0.0,1,14.3,0.07,0.29,6,6
+Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,All onboard,2,50.0,2,1,101.5,101.5,1,50.0,0.47,2.03,12,1
+Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,All onboard,7,42.9,7,3,30.0,0.0,1,14.3,0.07,0.29,6,6
 Wiper,Synergy Oceanic Services India Pvt Ltd,All onboard,2,100.0,2,2,313.3,313.3,1,50.0,0.39,1.69,10,1
-Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,Registered,41,61.0,25,24,226.9,19.3,9,36.0,0.53,2.31,171,10
+Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,Registered,41,56.1,23,22,229.4,16.9,8,34.8,0.54,2.34,159,10
 Bosun,Synergy Oceanic Services India Pvt Ltd,Registered,6,50.0,3,3,219.2,172.9,2,66.7,0.78,3.38,30,1
-Chief Cook,Synergy Oceanic Services India Pvt Ltd,Registered,14,35.7,5,4,120.1,50.7,2,40.0,0.26,1.15,17,2
-Chief Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,12,58.3,7,6,404.8,9.0,2,28.6,1.37,5.94,123,4
-Chief Officer,Synergy Oceanic Services India Pvt Ltd,Registered,12,75.0,9,9,177.1,13.5,2,22.2,0.73,3.16,84,6
-Deck Cadet,Synergy Oceanic Services India Pvt Ltd,Registered,16,87.5,14,10,57.4,11.5,2,14.3,0.1,0.43,18,11
+Chief Cook,Synergy Oceanic Services India Pvt Ltd,Registered,14,42.9,6,5,122.6,93.0,3,50.0,0.32,1.41,25,2
+Chief Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,11,54.5,6,6,472.3,13.0,2,33.3,1.59,6.93,123,3
+Chief Officer,Synergy Oceanic Services India Pvt Ltd,Registered,11,72.7,8,8,197.5,47.3,2,25.0,0.82,3.55,84,5
+Deck Cadet,Synergy Oceanic Services India Pvt Ltd,Registered,16,87.5,14,11,326.2,67.9,4,28.6,1.34,5.82,241,9
 Electrical Cadet,Synergy Oceanic Services India Pvt Ltd,Registered,1,100.0,1,0,0.0,0.0,0,0.0,0.0,0.0,0,1
 Electrical Officer,Synergy Oceanic Services India Pvt Ltd,Registered,9,77.8,7,6,93.2,81.7,2,28.6,0.26,1.11,23,5
 Electro Technical Officer,Synergy Oceanic Services India Pvt Ltd,Registered,1,100.0,1,1,47.6,47.6,0,0.0,0.0,0.0,0,1
 Engine Cadet,Synergy Oceanic Services India Pvt Ltd,Registered,7,85.7,6,6,1637.2,131.0,3,50.0,1.59,6.93,123,2
-Fitter,Synergy Oceanic Services India Pvt Ltd,Registered,17,76.5,13,10,121.6,15.6,2,15.4,0.5,2.19,84,9
-Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,14,71.4,10,8,73.2,7.4,2,20.0,0.32,1.39,41,7
+Fitter,Synergy Oceanic Services India Pvt Ltd,Registered,17,70.6,12,9,128.3,13.0,2,16.7,0.54,2.37,84,8
+Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,14,71.4,10,8,80.0,10.4,2,20.0,0.35,1.52,45,6
 Gas Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,1,0.0,0,0,,,0,,,,0,0
 General Steward,Synergy Oceanic Services India Pvt Ltd,Registered,11,63.6,7,7,713.0,169.1,5,71.4,3.02,13.14,272,2
 Master,Synergy Oceanic Services India Pvt Ltd,Registered,15,73.3,11,10,89.8,24.4,3,27.3,0.34,1.48,48,6
-Oiler,Synergy Oceanic Services India Pvt Ltd,Registered,34,61.8,21,17,40.5,7.1,3,14.3,0.11,0.5,31,16
-Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,Registered,19,57.9,11,10,494.4,33.8,5,45.5,1.69,7.35,239,5
+Oiler,Synergy Oceanic Services India Pvt Ltd,Registered,33,57.6,19,15,39.0,6.0,2,10.5,0.1,0.44,25,15
+Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,Registered,19,52.6,10,9,543.4,67.6,5,50.0,1.86,8.08,239,4
 Pumpman,Synergy Oceanic Services India Pvt Ltd,Registered,1,0.0,0,0,,,0,,,,0,0
 Second Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,14,71.4,10,8,69.1,46.5,3,30.0,0.19,0.85,25,4
 Second Officer,Synergy Oceanic Services India Pvt Ltd,Registered,13,69.2,9,9,218.3,186.0,5,55.6,0.8,3.46,92,3
-Third Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,16,62.5,10,7,32.6,3.5,1,10.0,0.13,0.57,17,7
+Third Engineer,Synergy Oceanic Services India Pvt Ltd,Registered,16,62.5,10,6,32.4,2.6,1,10.0,0.13,0.57,17,7
 Third Officer,Synergy Oceanic Services India Pvt Ltd,Registered,14,64.3,9,8,60.4,11.2,3,33.3,0.21,0.9,24,6
 Trainee Electrical Officer,Synergy Oceanic Services India Pvt Ltd,Registered,4,75.0,3,2,44.1,50.7,0,0.0,0.16,0.68,6,1
-Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,Registered,1,100.0,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
-Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,Registered,7,57.1,4,3,52.5,32.4,1,25.0,0.12,0.51,6,3
+Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,Registered,2,50.0,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
+Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,Registered,7,42.9,3,3,69.9,58.0,1,33.3,0.16,0.68,6,2
 Wiper,Synergy Oceanic Services India Pvt Ltd,Registered,2,100.0,2,2,313.3,313.3,1,50.0,0.39,1.69,10,1
-Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,Engaged,41,61.0,30,30,190.4,16.9,9,30.0,0.44,1.93,171,15
+Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,Engaged,41,56.1,30,30,177.3,9.3,8,26.7,0.41,1.79,159,17
 Bosun,Synergy Oceanic Services India Pvt Ltd,Engaged,6,50.0,5,5,132.3,9.1,2,40.0,0.47,2.03,30,3
-Chief Cook,Synergy Oceanic Services India Pvt Ltd,Engaged,14,35.7,7,7,86.5,3.7,2,28.6,0.19,0.82,17,4
-Chief Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,12,58.3,9,9,317.6,9.0,2,22.2,1.06,4.62,123,6
-Chief Officer,Synergy Oceanic Services India Pvt Ltd,Engaged,12,75.0,10,10,159.8,13.3,2,20.0,0.65,2.84,84,7
-Deck Cadet,Synergy Oceanic Services India Pvt Ltd,Engaged,16,87.5,10,10,80.4,67.9,2,20.0,0.14,0.61,18,7
+Chief Cook,Synergy Oceanic Services India Pvt Ltd,Engaged,14,42.9,8,8,92.6,27.2,3,37.5,0.24,1.06,25,4
+Chief Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,11,54.5,9,9,317.6,9.0,2,22.2,1.06,4.62,123,6
+Chief Officer,Synergy Oceanic Services India Pvt Ltd,Engaged,11,72.7,9,9,176.0,13.1,2,22.2,0.73,3.16,84,6
+Deck Cadet,Synergy Oceanic Services India Pvt Ltd,Engaged,16,87.5,11,11,415.2,73.6,4,36.4,1.7,7.41,241,6
 Electrical Cadet,Synergy Oceanic Services India Pvt Ltd,Engaged,1,100.0,0,0,,,0,,,,0,0
 Electrical Officer,Synergy Oceanic Services India Pvt Ltd,Engaged,9,77.8,6,6,108.8,81.9,2,33.3,0.3,1.3,23,4
 Electro Technical Officer,Synergy Oceanic Services India Pvt Ltd,Engaged,1,100.0,1,1,47.6,47.6,0,0.0,0.0,0.0,0,1
 Engine Cadet,Synergy Oceanic Services India Pvt Ltd,Engaged,7,85.7,6,6,1637.2,131.0,3,50.0,1.59,6.93,123,2
-Fitter,Synergy Oceanic Services India Pvt Ltd,Engaged,17,76.5,11,11,143.9,41.7,2,18.2,0.59,2.58,84,7
-Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,14,71.4,9,9,81.5,9.6,2,22.2,0.35,1.54,41,6
+Fitter,Synergy Oceanic Services India Pvt Ltd,Engaged,17,70.6,10,10,154.1,33.2,2,20.0,0.65,2.84,84,6
+Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,14,71.4,9,9,89.0,11.3,2,22.2,0.39,1.69,45,5
 Gas Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,1,0.0,0,0,,,0,,,,0,0
 General Steward,Synergy Oceanic Services India Pvt Ltd,Engaged,11,63.6,8,8,624.3,143.7,5,62.5,2.64,11.5,272,3
 Master,Synergy Oceanic Services India Pvt Ltd,Engaged,15,73.3,11,11,90.2,24.4,3,27.3,0.34,1.48,48,6
-Oiler,Synergy Oceanic Services India Pvt Ltd,Engaged,34,61.8,23,23,39.0,9.2,3,13.0,0.1,0.46,31,18
-Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,Engaged,19,57.9,11,11,494.7,33.8,5,45.5,1.69,7.35,239,5
+Oiler,Synergy Oceanic Services India Pvt Ltd,Engaged,33,57.6,21,21,37.5,9.2,2,9.5,0.09,0.4,25,17
+Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,Engaged,19,52.6,10,10,543.7,67.6,5,50.0,1.86,8.08,239,4
 Pumpman,Synergy Oceanic Services India Pvt Ltd,Engaged,1,0.0,0,0,,,0,,,,0,0
 Second Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,14,71.4,9,9,77.2,50.7,3,33.3,0.22,0.94,25,3
 Second Officer,Synergy Oceanic Services India Pvt Ltd,Engaged,13,69.2,12,12,164.2,21.1,5,41.7,0.6,2.59,92,6
-Third Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,16,62.5,7,7,46.6,12.5,1,14.3,0.19,0.82,17,4
+Third Engineer,Synergy Oceanic Services India Pvt Ltd,Engaged,16,62.5,6,6,54.0,31.6,1,16.7,0.22,0.96,17,3
 Third Officer,Synergy Oceanic Services India Pvt Ltd,Engaged,14,64.3,9,9,62.7,20.7,3,33.3,0.21,0.9,24,6
 Trainee Electrical Officer,Synergy Oceanic Services India Pvt Ltd,Engaged,4,75.0,2,2,66.1,66.1,0,0.0,0.23,1.01,6,0
-Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,Engaged,1,100.0,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
-Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,Engaged,7,57.1,3,3,69.9,58.0,1,33.3,0.16,0.68,6,2
+Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,Engaged,2,50.0,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
+Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,Engaged,7,42.9,3,3,69.9,58.0,1,33.3,0.16,0.68,6,2
 Wiper,Synergy Oceanic Services India Pvt Ltd,Engaged,2,100.0,2,2,313.3,313.3,1,50.0,0.39,1.69,10,1
-Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,Active,41,61.0,15,15,376.2,118.4,9,60.0,0.89,3.86,171,0
+Able Bodied Seaman,Synergy Oceanic Services India Pvt Ltd,Active,41,56.1,13,13,403.6,118.4,8,61.5,0.95,4.14,159,0
 Bosun,Synergy Oceanic Services India Pvt Ltd,Active,6,50.0,2,2,324.3,324.3,2,100.0,1.17,5.07,30,0
-Chief Cook,Synergy Oceanic Services India Pvt Ltd,Active,14,35.7,3,3,198.9,241.6,2,66.7,0.44,1.92,17,0
-Chief Engineer,Synergy Oceanic Services India Pvt Ltd,Active,12,58.3,3,3,940.6,236.7,2,66.7,3.19,13.87,123,0
-Chief Officer,Synergy Oceanic Services India Pvt Ltd,Active,12,75.0,3,3,491.8,190.2,2,66.7,2.18,9.47,84,0
-Deck Cadet,Synergy Oceanic Services India Pvt Ltd,Active,16,87.5,3,3,183.5,179.0,2,66.7,0.47,2.03,18,0
+Chief Cook,Synergy Oceanic Services India Pvt Ltd,Active,14,42.9,4,4,183.0,188.4,3,75.0,0.49,2.11,25,0
+Chief Engineer,Synergy Oceanic Services India Pvt Ltd,Active,11,54.5,3,3,940.6,236.7,2,66.7,3.19,13.87,123,0
+Chief Officer,Synergy Oceanic Services India Pvt Ltd,Active,11,72.7,3,3,491.8,190.2,2,66.7,2.18,9.47,84,0
+Deck Cadet,Synergy Oceanic Services India Pvt Ltd,Active,16,87.5,5,5,864.3,297.8,4,80.0,3.75,16.3,241,0
 Electrical Cadet,Synergy Oceanic Services India Pvt Ltd,Active,1,100.0,0,0,,,0,,,,0,0
 Electrical Officer,Synergy Oceanic Services India Pvt Ltd,Active,9,77.8,2,2,200.1,200.1,2,100.0,0.89,3.89,23,0
 Electro Technical Officer,Synergy Oceanic Services India Pvt Ltd,Active,1,100.0,0,0,,,0,,,,0,0
 Engine Cadet,Synergy Oceanic Services India Pvt Ltd,Active,7,85.7,4,4,2416.2,796.1,3,75.0,2.39,10.4,123,0
-Fitter,Synergy Oceanic Services India Pvt Ltd,Active,17,76.5,4,4,355.1,76.1,2,50.0,1.63,7.1,84,0
-Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,Active,14,71.4,3,3,235.4,253.6,2,66.7,1.06,4.62,41,0
+Fitter,Synergy Oceanic Services India Pvt Ltd,Active,17,70.6,4,4,355.1,76.1,2,50.0,1.63,7.1,84,0
+Fourth Engineer,Synergy Oceanic Services India Pvt Ltd,Active,14,71.4,4,4,193.5,160.6,2,50.0,0.88,3.8,45,0
 Gas Engineer,Synergy Oceanic Services India Pvt Ltd,Active,1,0.0,0,0,,,0,,,,0,0
 General Steward,Synergy Oceanic Services India Pvt Ltd,Active,11,63.6,5,5,997.4,321.9,5,100.0,4.23,18.4,272,0
 Master,Synergy Oceanic Services India Pvt Ltd,Active,15,73.3,5,5,189.4,190.2,3,60.0,0.75,3.25,48,0
-Oiler,Synergy Oceanic Services India Pvt Ltd,Active,34,61.8,5,5,143.7,101.5,3,60.0,0.48,2.1,31,0
-Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,Active,19,57.9,6,6,904.9,390.3,5,83.3,3.1,13.47,239,0
+Oiler,Synergy Oceanic Services India Pvt Ltd,Active,33,57.6,4,4,154.2,146.1,2,50.0,0.49,2.11,25,0
+Ordinary Seaman,Synergy Oceanic Services India Pvt Ltd,Active,19,52.6,6,6,904.9,390.3,5,83.3,3.1,13.47,239,0
 Pumpman,Synergy Oceanic Services India Pvt Ltd,Active,1,0.0,0,0,,,0,,,,0,0
 Second Engineer,Synergy Oceanic Services India Pvt Ltd,Active,14,71.4,6,6,114.0,76.1,3,50.0,0.32,1.41,25,0
 Second Officer,Synergy Oceanic Services India Pvt Ltd,Active,13,69.2,6,6,325.4,406.0,5,83.3,1.19,5.19,92,0
 Third Engineer,Synergy Oceanic Services India Pvt Ltd,Active,16,62.5,3,3,102.2,84.5,1,33.3,0.44,1.92,17,0
 Third Officer,Synergy Oceanic Services India Pvt Ltd,Active,14,64.3,3,3,165.5,152.2,3,100.0,0.62,2.71,24,0
 Trainee Electrical Officer,Synergy Oceanic Services India Pvt Ltd,Active,4,75.0,2,2,66.1,66.1,0,0.0,0.23,1.01,6,0
-Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,Active,1,100.0,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
-Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,Active,7,57.1,1,1,144.9,144.9,1,100.0,0.47,2.03,6,0
+Trainee General Steward,Synergy Oceanic Services India Pvt Ltd,Active,2,50.0,1,1,202.9,202.9,1,100.0,0.93,4.06,12,0
+Trainee Seaman,Synergy Oceanic Services India Pvt Ltd,Active,7,42.9,1,1,144.9,144.9,1,100.0,0.47,2.03,6,0
 Wiper,Synergy Oceanic Services India Pvt Ltd,Active,2,100.0,1,1,608.8,608.8,1,100.0,0.78,3.38,10,0
 Able Bodied Seaman,Synergy Onyx Marine Pvt Ltd,All onboard,34,61.8,34,20,129.4,0.4,2,5.9,0.57,2.48,249,27
 Bosun,Synergy Onyx Marine Pvt Ltd,All onboard,11,81.8,11,9,139.5,15.0,3,27.3,0.62,2.67,87,7
@@ -2115,110 +2115,110 @@ Third Officer,Synergy Onyx Marine Pvt Ltd,Active,13,69.2,5,5,373.9,101.5,3,60.0,
 Trainee Electrical Officer,Synergy Onyx Marine Pvt Ltd,Active,1,100.0,1,1,50.7,50.7,0,0.0,0.23,1.01,3,0
 Trainee Seaman,Synergy Onyx Marine Pvt Ltd,Active,1,100.0,1,1,372.0,372.0,1,100.0,1.71,7.44,22,0
 Wiper,Synergy Onyx Marine Pvt Ltd,Active,1,100.0,1,1,3923.1,3923.1,1,100.0,18.04,78.46,232,0
-Able Bodied Seaman,Synergy Pacific Private Limited,All onboard,396,77.8,396,299,121.8,13.0,73,18.4,0.32,1.37,1608,221
+Able Bodied Seaman,Synergy Pacific Private Limited,All onboard,392,77.8,392,295,122.4,12.8,72,18.4,0.32,1.38,1598,220
 Bosun,Synergy Pacific Private Limited,All onboard,33,81.8,33,23,54.1,5.3,5,15.2,0.16,0.7,68,24
-Chief Cook,Synergy Pacific Private Limited,All onboard,130,77.7,130,96,157.0,11.8,19,14.6,0.26,1.13,434,81
-Chief Engineer,Synergy Pacific Private Limited,All onboard,128,89.8,128,112,190.6,33.8,44,34.4,0.67,2.9,1099,55
-Chief Officer,Synergy Pacific Private Limited,All onboard,124,91.1,124,104,132.9,17.0,28,22.6,0.49,2.13,782,59
-Deck Cadet,Synergy Pacific Private Limited,All onboard,124,98.4,124,114,125.8,73.6,28,22.6,0.46,1.99,731,57
+Chief Cook,Synergy Pacific Private Limited,All onboard,127,77.2,127,94,160.0,11.8,19,15.0,0.26,1.15,432,79
+Chief Engineer,Synergy Pacific Private Limited,All onboard,127,89.8,127,111,197.9,33.8,45,35.4,0.7,3.04,1143,54
+Chief Officer,Synergy Pacific Private Limited,All onboard,124,91.1,124,105,136.9,20.0,29,23.4,0.5,2.18,801,59
+Deck Cadet,Synergy Pacific Private Limited,All onboard,123,98.4,123,113,126.0,70.5,27,22.0,0.46,1.99,725,57
 Electrical Cadet,Synergy Pacific Private Limited,All onboard,21,95.2,21,20,303.8,81.0,7,33.3,0.69,3.0,186,10
 Electrical Officer,Synergy Pacific Private Limited,All onboard,53,79.2,53,41,92.0,16.9,9,17.0,0.18,0.8,125,28
-Electro Technical Officer,Synergy Pacific Private Limited,All onboard,68,85.3,68,53,78.0,16.9,13,19.1,0.24,1.05,212,33
-Engine Cadet,Synergy Pacific Private Limited,All onboard,54,100.0,54,53,186.4,81.4,16,29.6,0.69,2.99,477,25
-Fitter,Synergy Pacific Private Limited,All onboard,125,74.4,125,97,123.9,16.9,25,20.0,0.46,2.0,740,70
-Fourth Engineer,Synergy Pacific Private Limited,All onboard,104,86.5,104,88,82.4,16.9,17,16.3,0.32,1.4,432,53
-General Steward,Synergy Pacific Private Limited,All onboard,126,76.2,126,94,85.6,16.9,23,18.3,0.17,0.73,271,73
+Electro Technical Officer,Synergy Pacific Private Limited,All onboard,68,83.8,68,52,64.8,16.9,11,16.2,0.18,0.77,154,35
+Engine Cadet,Synergy Pacific Private Limited,All onboard,53,100.0,53,52,189.6,81.5,16,30.2,0.7,3.04,476,25
+Fitter,Synergy Pacific Private Limited,All onboard,125,75.2,125,97,123.7,16.0,25,20.0,0.46,2.0,738,71
+Fourth Engineer,Synergy Pacific Private Limited,All onboard,102,88.2,102,86,86.8,16.9,18,17.6,0.34,1.49,449,51
+General Steward,Synergy Pacific Private Limited,All onboard,125,76.0,125,93,86.1,16.9,23,18.4,0.17,0.73,270,73
 Junior Fourth Engineer,Synergy Pacific Private Limited,All onboard,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Master,Synergy Pacific Private Limited,All onboard,123,89.4,123,103,122.0,23.8,34,27.6,0.47,2.03,739,48
-Oiler,Synergy Pacific Private Limited,All onboard,350,79.4,350,278,143.9,16.9,75,21.4,0.44,1.9,1964,184
-Ordinary Seaman,Synergy Pacific Private Limited,All onboard,235,78.7,235,180,102.7,7.5,33,14.0,0.29,1.28,889,133
-Pumpman,Synergy Pacific Private Limited,All onboard,78,79.5,78,61,451.1,16.9,14,17.9,0.29,1.25,288,35
-Second Engineer,Synergy Pacific Private Limited,All onboard,123,91.9,123,110,132.3,50.7,36,29.3,0.54,2.34,851,40
-Second Officer,Synergy Pacific Private Limited,All onboard,137,90.5,137,122,92.3,16.9,33,24.1,0.36,1.55,626,65
-Third Engineer,Synergy Pacific Private Limited,All onboard,140,91.4,140,120,116.7,16.9,27,19.3,0.51,2.21,913,80
-Third Officer,Synergy Pacific Private Limited,All onboard,153,91.5,153,132,112.9,18.8,38,24.8,0.35,1.53,694,71
+Oiler,Synergy Pacific Private Limited,All onboard,346,79.5,346,275,144.4,16.9,74,21.4,0.44,1.9,1944,182
+Ordinary Seaman,Synergy Pacific Private Limited,All onboard,232,79.3,232,178,103.9,7.6,33,14.2,0.3,1.29,888,131
+Pumpman,Synergy Pacific Private Limited,All onboard,78,79.5,78,61,451.3,16.9,14,17.9,0.29,1.25,289,34
+Second Engineer,Synergy Pacific Private Limited,All onboard,122,92.6,122,110,133.9,50.7,36,29.5,0.55,2.37,855,38
+Second Officer,Synergy Pacific Private Limited,All onboard,138,89.9,138,122,92.1,16.9,33,23.9,0.36,1.55,631,65
+Third Engineer,Synergy Pacific Private Limited,All onboard,138,91.3,138,118,116.6,16.9,26,18.8,0.51,2.2,898,79
+Third Officer,Synergy Pacific Private Limited,All onboard,152,90.8,152,131,112.9,17.3,38,25.0,0.35,1.53,686,73
 Trainee Electrical Officer,Synergy Pacific Private Limited,All onboard,2,100.0,2,2,146.3,146.3,1,50.0,0.35,1.52,9,0
-Trainee General Steward,Synergy Pacific Private Limited,All onboard,6,100.0,6,4,41.8,3.8,1,16.7,0.18,0.79,14,5
+Trainee General Steward,Synergy Pacific Private Limited,All onboard,5,100.0,5,4,50.1,6.3,1,20.0,0.22,0.95,14,4
 Trainee Seaman,Synergy Pacific Private Limited,All onboard,18,61.1,18,12,67.1,1.3,5,27.8,0.23,1.01,54,10
-Wiper,Synergy Pacific Private Limited,All onboard,17,82.4,17,11,33.9,2.0,2,11.8,0.12,0.54,27,12
-Able Bodied Seaman,Synergy Pacific Private Limited,Registered,396,77.8,308,280,156.4,27.2,73,23.7,0.41,1.77,1608,133
+Wiper,Synergy Pacific Private Limited,All onboard,16,81.2,16,10,35.9,1.0,2,12.5,0.13,0.57,27,11
+Able Bodied Seaman,Synergy Pacific Private Limited,Registered,392,77.8,305,276,157.0,27.2,72,23.6,0.41,1.77,1598,133
 Bosun,Synergy Pacific Private Limited,Registered,33,81.8,27,22,66.1,10.6,5,18.5,0.2,0.85,68,18
-Chief Cook,Synergy Pacific Private Limited,Registered,130,77.7,101,90,201.7,20.0,19,18.8,0.33,1.45,434,52
-Chief Engineer,Synergy Pacific Private Limited,Registered,128,89.8,115,109,211.9,58.9,44,38.3,0.74,3.23,1099,42
-Chief Officer,Synergy Pacific Private Limited,Registered,124,91.1,113,101,145.6,31.1,28,24.8,0.54,2.34,782,48
-Deck Cadet,Synergy Pacific Private Limited,Registered,124,98.4,122,113,127.8,77.1,28,23.0,0.47,2.03,731,55
+Chief Cook,Synergy Pacific Private Limited,Registered,127,77.2,98,88,207.0,20.5,19,19.4,0.34,1.49,432,50
+Chief Engineer,Synergy Pacific Private Limited,Registered,127,89.8,114,108,220.2,59.2,45,39.5,0.78,3.39,1143,41
+Chief Officer,Synergy Pacific Private Limited,Registered,124,91.1,113,102,150.1,33.8,29,25.7,0.55,2.4,801,48
+Deck Cadet,Synergy Pacific Private Limited,Registered,123,98.4,121,112,128.1,76.7,27,22.3,0.47,2.03,725,55
 Electrical Cadet,Synergy Pacific Private Limited,Registered,21,95.2,20,20,319.0,81.8,7,35.0,0.72,3.15,186,9
 Electrical Officer,Synergy Pacific Private Limited,Registered,53,79.2,42,40,116.0,51.4,9,21.4,0.23,1.01,125,17
-Electro Technical Officer,Synergy Pacific Private Limited,Registered,68,85.3,58,51,91.0,27.0,13,22.4,0.28,1.24,212,23
-Engine Cadet,Synergy Pacific Private Limited,Registered,54,100.0,54,53,186.4,81.4,16,29.6,0.69,2.99,477,25
-Fitter,Synergy Pacific Private Limited,Registered,125,74.4,93,85,166.1,33.8,25,26.9,0.62,2.69,740,38
-Fourth Engineer,Synergy Pacific Private Limited,Registered,104,86.5,90,83,94.9,20.9,17,18.9,0.37,1.62,432,39
-General Steward,Synergy Pacific Private Limited,Registered,126,76.2,96,88,112.0,31.9,23,24.0,0.22,0.95,271,43
+Electro Technical Officer,Synergy Pacific Private Limited,Registered,68,83.8,57,50,76.8,25.9,11,19.3,0.21,0.91,154,24
+Engine Cadet,Synergy Pacific Private Limited,Registered,53,100.0,53,52,189.6,81.5,16,30.2,0.7,3.04,476,25
+Fitter,Synergy Pacific Private Limited,Registered,125,75.2,94,86,164.1,31.8,25,26.6,0.61,2.66,738,40
+Fourth Engineer,Synergy Pacific Private Limited,Registered,102,88.2,90,82,98.0,22.2,18,20.0,0.39,1.69,449,39
+General Steward,Synergy Pacific Private Limited,Registered,125,76.0,95,87,112.8,32.0,23,24.2,0.22,0.96,270,43
 Junior Fourth Engineer,Synergy Pacific Private Limited,Registered,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Master,Synergy Pacific Private Limited,Registered,123,89.4,110,101,136.3,33.8,34,30.9,0.52,2.27,739,35
-Oiler,Synergy Pacific Private Limited,Registered,350,79.4,278,259,180.7,28.4,75,27.0,0.55,2.39,1964,112
-Ordinary Seaman,Synergy Pacific Private Limited,Registered,235,78.7,185,167,130.2,16.9,33,17.8,0.37,1.63,889,83
-Pumpman,Synergy Pacific Private Limited,Registered,78,79.5,62,58,567.4,19.7,14,22.6,0.36,1.57,288,19
-Second Engineer,Synergy Pacific Private Limited,Registered,123,91.9,113,109,144.0,66.2,36,31.9,0.59,2.55,851,30
-Second Officer,Synergy Pacific Private Limited,Registered,137,90.5,124,118,101.8,31.5,33,26.6,0.39,1.71,626,52
-Third Engineer,Synergy Pacific Private Limited,Registered,140,91.4,128,119,127.6,16.9,27,21.1,0.55,2.41,913,68
-Third Officer,Synergy Pacific Private Limited,Registered,153,91.5,140,131,123.4,28.2,38,27.1,0.39,1.68,694,58
+Oiler,Synergy Pacific Private Limited,Registered,346,79.5,275,256,181.2,28.2,74,26.9,0.55,2.39,1944,111
+Ordinary Seaman,Synergy Pacific Private Limited,Registered,232,79.3,184,165,130.8,16.9,33,17.9,0.38,1.63,888,83
+Pumpman,Synergy Pacific Private Limited,Registered,78,79.5,62,58,567.6,19.7,14,22.6,0.36,1.58,289,18
+Second Engineer,Synergy Pacific Private Limited,Registered,122,92.6,113,109,144.5,67.6,36,31.9,0.59,2.56,855,29
+Second Officer,Synergy Pacific Private Limited,Registered,138,89.9,124,118,102.3,33.8,33,26.6,0.4,1.72,631,51
+Third Engineer,Synergy Pacific Private Limited,Registered,138,91.3,126,117,127.6,16.9,26,20.6,0.55,2.41,898,67
+Third Officer,Synergy Pacific Private Limited,Registered,152,90.8,138,129,124.4,27.9,38,27.5,0.39,1.68,686,59
 Trainee Electrical Officer,Synergy Pacific Private Limited,Registered,2,100.0,2,2,146.3,146.3,1,50.0,0.35,1.52,9,0
-Trainee General Steward,Synergy Pacific Private Limited,Registered,6,100.0,6,4,41.8,3.8,1,16.7,0.18,0.79,14,5
+Trainee General Steward,Synergy Pacific Private Limited,Registered,5,100.0,5,4,50.1,6.3,1,20.0,0.22,0.95,14,4
 Trainee Seaman,Synergy Pacific Private Limited,Registered,18,61.1,11,11,109.7,84.5,5,45.5,0.38,1.66,54,3
-Wiper,Synergy Pacific Private Limited,Registered,17,82.4,14,11,41.2,15.7,2,14.3,0.15,0.65,27,9
-Able Bodied Seaman,Synergy Pacific Private Limited,Engaged,396,77.8,299,299,161.3,28.7,73,24.4,0.42,1.82,1608,124
+Wiper,Synergy Pacific Private Limited,Registered,16,81.2,13,10,44.2,29.3,2,15.4,0.16,0.7,27,8
+Able Bodied Seaman,Synergy Pacific Private Limited,Engaged,392,77.8,295,295,162.6,28.7,72,24.4,0.42,1.83,1598,123
 Bosun,Synergy Pacific Private Limited,Engaged,33,81.8,23,23,77.7,21.1,5,21.7,0.23,1.0,68,14
-Chief Cook,Synergy Pacific Private Limited,Engaged,130,77.7,96,96,212.6,24.2,19,19.8,0.35,1.53,434,47
-Chief Engineer,Synergy Pacific Private Limited,Engaged,128,89.8,112,112,217.8,62.2,44,39.3,0.76,3.32,1099,39
-Chief Officer,Synergy Pacific Private Limited,Engaged,124,91.1,104,104,158.4,33.8,28,26.9,0.58,2.54,782,39
-Deck Cadet,Synergy Pacific Private Limited,Engaged,124,98.4,114,114,136.9,80.6,28,24.6,0.5,2.17,731,47
+Chief Cook,Synergy Pacific Private Limited,Engaged,127,77.2,94,94,216.2,24.2,19,20.2,0.36,1.55,432,46
+Chief Engineer,Synergy Pacific Private Limited,Engaged,127,89.8,111,111,226.4,65.0,45,40.5,0.8,3.48,1143,38
+Chief Officer,Synergy Pacific Private Limited,Engaged,124,91.1,105,105,161.7,33.8,29,27.6,0.59,2.58,801,40
+Deck Cadet,Synergy Pacific Private Limited,Engaged,123,98.4,113,113,137.2,80.2,27,23.9,0.5,2.17,725,47
 Electrical Cadet,Synergy Pacific Private Limited,Engaged,21,95.2,20,20,319.0,81.8,7,35.0,0.72,3.15,186,9
 Electrical Officer,Synergy Pacific Private Limited,Engaged,53,79.2,41,41,118.9,60.9,9,22.0,0.24,1.03,125,16
-Electro Technical Officer,Synergy Pacific Private Limited,Engaged,68,85.3,53,53,100.1,33.8,13,24.5,0.31,1.35,212,18
-Engine Cadet,Synergy Pacific Private Limited,Engaged,54,100.0,53,53,190.0,81.5,16,30.2,0.7,3.04,477,24
-Fitter,Synergy Pacific Private Limited,Engaged,125,74.4,97,97,159.7,29.8,25,25.8,0.59,2.58,740,42
-Fourth Engineer,Synergy Pacific Private Limited,Engaged,104,86.5,88,88,97.4,22.2,17,19.3,0.38,1.66,432,37
-General Steward,Synergy Pacific Private Limited,Engaged,126,76.2,94,94,114.8,32.1,23,24.5,0.22,0.98,271,41
+Electro Technical Officer,Synergy Pacific Private Limited,Engaged,68,83.8,52,52,84.8,33.5,11,21.2,0.23,1.0,154,19
+Engine Cadet,Synergy Pacific Private Limited,Engaged,53,100.0,52,52,193.3,82.4,16,30.8,0.71,3.1,476,24
+Fitter,Synergy Pacific Private Limited,Engaged,125,75.2,97,97,159.4,28.2,25,25.8,0.59,2.57,738,43
+Fourth Engineer,Synergy Pacific Private Limited,Engaged,102,88.2,86,86,102.9,25.2,18,20.9,0.41,1.77,449,35
+General Steward,Synergy Pacific Private Limited,Engaged,125,76.0,93,93,115.7,32.2,23,24.7,0.23,0.98,270,41
 Junior Fourth Engineer,Synergy Pacific Private Limited,Engaged,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Master,Synergy Pacific Private Limited,Engaged,123,89.4,103,103,145.7,35.4,34,33.0,0.56,2.43,739,28
-Oiler,Synergy Pacific Private Limited,Engaged,350,79.4,278,278,181.2,28.4,75,27.0,0.55,2.39,1964,112
-Ordinary Seaman,Synergy Pacific Private Limited,Engaged,235,78.7,180,180,134.0,16.9,33,18.3,0.38,1.67,889,78
-Pumpman,Synergy Pacific Private Limited,Engaged,78,79.5,61,61,576.8,22.4,14,23.0,0.37,1.6,288,18
-Second Engineer,Synergy Pacific Private Limited,Engaged,123,91.9,110,110,148.0,67.6,36,32.7,0.6,2.62,851,27
-Second Officer,Synergy Pacific Private Limited,Engaged,137,90.5,122,122,103.6,33.8,33,27.0,0.4,1.74,626,50
-Third Engineer,Synergy Pacific Private Limited,Engaged,140,91.4,120,120,136.2,17.6,27,22.5,0.59,2.57,913,60
-Third Officer,Synergy Pacific Private Limited,Engaged,153,91.5,132,132,130.9,30.4,38,28.8,0.41,1.78,694,50
+Oiler,Synergy Pacific Private Limited,Engaged,346,79.5,275,275,181.7,28.2,74,26.9,0.55,2.39,1944,111
+Ordinary Seaman,Synergy Pacific Private Limited,Engaged,232,79.3,178,178,135.5,16.9,33,18.5,0.39,1.69,888,77
+Pumpman,Synergy Pacific Private Limited,Engaged,78,79.5,61,61,577.0,22.4,14,23.0,0.37,1.6,289,17
+Second Engineer,Synergy Pacific Private Limited,Engaged,122,92.6,110,110,148.5,67.6,36,32.7,0.6,2.63,855,26
+Second Officer,Synergy Pacific Private Limited,Engaged,138,89.9,122,122,104.2,33.8,33,27.0,0.4,1.75,631,49
+Third Engineer,Synergy Pacific Private Limited,Engaged,138,91.3,118,118,136.3,18.1,26,22.0,0.59,2.57,898,59
+Third Officer,Synergy Pacific Private Limited,Engaged,152,90.8,131,131,131.0,29.3,38,29.0,0.41,1.77,686,52
 Trainee Electrical Officer,Synergy Pacific Private Limited,Engaged,2,100.0,2,2,146.3,146.3,1,50.0,0.35,1.52,9,0
-Trainee General Steward,Synergy Pacific Private Limited,Engaged,6,100.0,4,4,62.7,6.3,1,25.0,0.27,1.18,14,3
+Trainee General Steward,Synergy Pacific Private Limited,Engaged,5,100.0,4,4,62.7,6.3,1,25.0,0.27,1.18,14,3
 Trainee Seaman,Synergy Pacific Private Limited,Engaged,18,61.1,12,12,100.7,67.6,5,41.7,0.35,1.52,54,4
-Wiper,Synergy Pacific Private Limited,Engaged,17,82.4,11,11,52.4,33.0,2,18.2,0.19,0.83,27,6
-Able Bodied Seaman,Synergy Pacific Private Limited,Active,396,77.8,175,175,267.4,67.6,73,41.7,0.71,3.11,1608,0
+Wiper,Synergy Pacific Private Limited,Engaged,16,81.2,10,10,57.4,33.4,2,20.0,0.21,0.91,27,5
+Able Bodied Seaman,Synergy Pacific Private Limited,Active,392,77.8,172,172,270.6,67.6,72,41.9,0.72,3.14,1598,0
 Bosun,Synergy Pacific Private Limited,Active,33,81.8,9,9,183.9,101.5,5,55.6,0.59,2.56,68,0
-Chief Cook,Synergy Pacific Private Limited,Active,130,77.7,49,49,399.8,74.4,19,38.8,0.69,3.0,434,0
-Chief Engineer,Synergy Pacific Private Limited,Active,128,89.8,73,73,327.0,135.3,44,60.3,1.17,5.09,1099,0
-Chief Officer,Synergy Pacific Private Limited,Active,124,91.1,65,65,249.6,84.5,28,43.1,0.94,4.07,782,0
-Deck Cadet,Synergy Pacific Private Limited,Active,124,98.4,67,67,205.2,84.3,28,41.8,0.85,3.69,731,0
+Chief Cook,Synergy Pacific Private Limited,Active,127,77.2,48,48,406.5,71.4,19,39.6,0.7,3.04,432,0
+Chief Engineer,Synergy Pacific Private Limited,Active,127,89.8,73,73,337.2,138.4,45,61.6,1.22,5.3,1143,0
+Chief Officer,Synergy Pacific Private Limited,Active,124,91.1,65,65,257.0,84.5,29,44.6,0.96,4.17,801,0
+Deck Cadet,Synergy Pacific Private Limited,Active,123,98.4,66,66,206.7,84.0,27,40.9,0.85,3.72,725,0
 Electrical Cadet,Synergy Pacific Private Limited,Active,21,95.2,11,11,545.4,118.4,7,63.6,1.32,5.72,186,0
 Electrical Officer,Synergy Pacific Private Limited,Active,53,79.2,25,25,184.2,82.9,9,36.0,0.39,1.69,125,0
-Electro Technical Officer,Synergy Pacific Private Limited,Active,68,85.3,35,35,146.9,83.8,13,37.1,0.47,2.05,212,0
-Engine Cadet,Synergy Pacific Private Limited,Active,54,100.0,29,29,296.3,135.3,16,55.2,1.28,5.56,477,0
-Fitter,Synergy Pacific Private Limited,Active,125,74.4,55,55,270.7,81.6,25,45.5,1.05,4.55,740,0
-Fourth Engineer,Synergy Pacific Private Limited,Active,104,86.5,51,51,162.0,67.6,17,33.3,0.66,2.86,432,0
-General Steward,Synergy Pacific Private Limited,Active,126,76.2,53,53,190.4,76.1,23,43.4,0.4,1.73,271,0
+Electro Technical Officer,Synergy Pacific Private Limited,Active,68,83.8,33,33,126.1,67.6,11,33.3,0.36,1.58,154,0
+Engine Cadet,Synergy Pacific Private Limited,Active,53,100.0,28,28,306.2,135.3,16,57.1,1.32,5.75,476,0
+Fitter,Synergy Pacific Private Limited,Active,125,75.2,54,54,275.1,83.1,25,46.3,1.06,4.62,738,0
+Fourth Engineer,Synergy Pacific Private Limited,Active,102,88.2,51,51,167.7,80.1,18,35.3,0.68,2.98,449,0
+General Steward,Synergy Pacific Private Limited,Active,125,76.0,52,52,193.4,80.3,23,44.2,0.4,1.76,270,0
 Junior Fourth Engineer,Synergy Pacific Private Limited,Active,1,100.0,1,1,33.8,33.8,0,0.0,0.16,0.68,2,0
 Master,Synergy Pacific Private Limited,Active,123,89.4,75,75,196.5,74.4,34,45.3,0.77,3.33,739,0
-Oiler,Synergy Pacific Private Limited,Active,350,79.4,166,166,295.0,81.0,75,45.2,0.92,4.0,1964,0
-Ordinary Seaman,Synergy Pacific Private Limited,Active,235,78.7,102,102,231.2,50.7,33,32.4,0.68,2.95,889,0
-Pumpman,Synergy Pacific Private Limited,Active,78,79.5,43,43,816.0,50.7,14,32.6,0.52,2.27,288,0
-Second Engineer,Synergy Pacific Private Limited,Active,123,91.9,83,83,192.2,76.3,36,43.4,0.8,3.47,851,0
-Second Officer,Synergy Pacific Private Limited,Active,137,90.5,72,72,168.6,84.5,33,45.8,0.68,2.94,626,0
-Third Engineer,Synergy Pacific Private Limited,Active,140,91.4,60,60,263.5,76.5,27,45.0,1.18,5.15,913,0
-Third Officer,Synergy Pacific Private Limited,Active,153,91.5,82,82,204.6,82.3,38,46.3,0.66,2.86,694,0
+Oiler,Synergy Pacific Private Limited,Active,346,79.5,164,164,296.1,81.0,74,45.1,0.92,4.01,1944,0
+Ordinary Seaman,Synergy Pacific Private Limited,Active,232,79.3,101,101,233.3,50.7,33,32.7,0.68,2.97,888,0
+Pumpman,Synergy Pacific Private Limited,Active,78,79.5,44,44,797.9,50.7,14,31.8,0.51,2.22,289,0
+Second Engineer,Synergy Pacific Private Limited,Active,122,92.6,84,84,190.7,74.9,36,42.9,0.79,3.44,855,0
+Second Officer,Synergy Pacific Private Limited,Active,138,89.9,73,73,167.5,84.5,33,45.2,0.67,2.92,631,0
+Third Engineer,Synergy Pacific Private Limited,Active,138,91.3,59,59,263.6,74.2,26,44.1,1.18,5.15,898,0
+Third Officer,Synergy Pacific Private Limited,Active,152,90.8,79,79,210.5,83.0,38,48.1,0.68,2.94,686,0
 Trainee Electrical Officer,Synergy Pacific Private Limited,Active,2,100.0,2,2,146.3,146.3,1,50.0,0.35,1.52,9,0
-Trainee General Steward,Synergy Pacific Private Limited,Active,6,100.0,1,1,236.7,236.7,1,100.0,1.09,4.73,14,0
+Trainee General Steward,Synergy Pacific Private Limited,Active,5,100.0,1,1,236.7,236.7,1,100.0,1.09,4.73,14,0
 Trainee Seaman,Synergy Pacific Private Limited,Active,18,61.1,8,8,150.6,160.6,5,62.5,0.52,2.28,54,0
-Wiper,Synergy Pacific Private Limited,Active,17,82.4,5,5,93.8,50.7,2,40.0,0.42,1.83,27,0
+Wiper,Synergy Pacific Private Limited,Active,16,81.2,5,5,93.8,50.7,2,40.0,0.42,1.83,27,0
 Able Bodied Seaman,Synergy Ship Arabia Inspection Company LLC,All onboard,139,25.9,139,30,203.8,0.0,21,15.1,0.1,0.43,175,114
 Chief Cook,Synergy Ship Arabia Inspection Company LLC,All onboard,32,3.1,32,1,63.4,0.0,1,3.1,0.03,0.13,12,31
 Chief Engineer,Synergy Ship Arabia Inspection Company LLC,All onboard,43,14.0,43,5,56.2,0.0,3,7.0,0.02,0.09,11,39
