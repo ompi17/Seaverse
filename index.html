@@ -171,6 +171,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 .sv .failed{display:flex;align-items:center;justify-content:center;gap:var(--cds-gap-xs);color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);min-height:inherit}
 .sv .failed::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
 @media (max-width:640px){.sv .hide-narrow{display:none}}
+.sv .lx-cpm{margin:0 0 var(--cds-gap-sm)}.sv .lx-cpmwrap{display:flex;flex-wrap:wrap;gap:6px;max-height:9rem;overflow:auto;margin-top:4px}.sv .lx-cpmwrap .dl{font-size:12px}
 </style>
 
 <div class="sv">
@@ -339,11 +340,13 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
         <label class="fl">Vessel <span class="fw"><select class="lx-cves"></select><button class="fx" data-cfx="2" title="Reset vessel and the filters after it" aria-label="Reset vessel">×</button></span></label>
         <label class="fl">Rank <span class="fw"><select class="lx-crank"></select><button class="fx" data-cfx="3" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
         <label class="fl">Course <span class="fw"><select class="lx-ccourse"></select><button class="fx" data-cfx="4" title="Reset course and the filters after it" aria-label="Reset course">×</button></span></label>
-        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-cq" placeholder="Search"><button class="fx" data-cfx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
+        <label class="fl">Seafarer <span class="fw fs"><input type="search" class="lx-cname" list="lx-cpl" placeholder="Name or employee ID" autocomplete="off"><datalist id="lx-cpl"></datalist><button class="fx" data-cfx="6" title="Clear seafarer" aria-label="Clear seafarer">×</button></span></label>
+        <label class="fl">Search <span class="fw fs"><input type="search" class="lx-cq" placeholder="Search courses or seafarers"><button class="fx" data-cfx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
         <div class="fbtns"><button class="dl lx-cclr">Clear filters</button></div>
       </div>
       <p class="note-inline lx-cfilt" style="margin:0 0 var(--cds-gap-sm)"></p>
       <p class="note-inline lx-cvtotal" hidden style="margin:0 0 var(--cds-gap-sm)"></p>
+      <div class="lx-cpm" hidden></div>
       <div class="tablebox lx-cbox" data-source="course_agg course_idx sea_staff learners offboard" style="max-height:44rem"><table class="hier lx-ctbl"></table></div>
       <div class="pcard lx-cpcard" hidden></div>
     </div>
@@ -1854,6 +1857,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return;
     const i = +b.dataset.cfx;
     if (i === 5) { if (C.person) leave(); else { C.q = ''; cq.value = ''; draw(); } return; }
+    if (i === 6) { qs('.lx-cname').value = ''; if (C.person) leave(); else draw(); return; }
     if (i <= 0) C.cat = ''; if (i <= 1) C.doc = ''; if (i <= 2) C.ves = ''; if (i <= 3) C.rank = ''; if (i <= 4) C.course = null;
     C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw();
   }));
@@ -1928,7 +1932,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     ccourse.value = C.course == null ? '' : String(C.course);
     const off = [!C.cat, !C.doc, !C.ves, !C.rank, C.course == null, !C.q && !cq.value];
     sec.querySelectorAll('.fx[data-cfx]').forEach((x) => x.toggleAttribute('data-off', off[+x.dataset.cfx]));
-    cq.placeholder = V.level === 'courses' ? 'Search courses' : 'Search people';
+    cq.placeholder = V.level === 'courses' ? 'Search courses or seafarers' : 'Search people';
     const fl = [C.cat && CATLAB[C.cat], C.doc, C.ves, C.rank, C.q && `“${C.q}”`].filter(Boolean);
     qs('.lx-cfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
     const docNote = '';
@@ -1992,7 +1996,41 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     else if (kind === 'csv') X.saveFile(base + '.csv', X.csvOf(rows), btn);
     else X.saveFile(base + '.html', X.htmlGeneric(title, rows, ctx, totalFirst), btn);
   }
-  window.SV.drawCS = drawCS;
+  window.SV.drawCS = () => { drawCS(); showMatches(); };
+  // ---- seafarer name search: the Seafarer filter suggests names; the Search box also finds seafarers by name or ID ----
+  const cname = qs('.lx-cname'), cpl = qs('#lx-cpl'), cpm = qs('.lx-cpm');
+  const pLabel = (p) => `${p.name || p.employee_id} · ${p.employee_id} · ${p.rank || ''}${p.vessel ? ' · ' + p.vessel : ''}`;
+  function findPeople(q, max) {
+    const P = people(); if (!P || q.length < 2) return [];
+    const out = []; q = q.toLowerCase();
+    for (const p of P.values()) {
+      if (!catOk(p) || !docOk(p) || !vesOk(p) || !rankOk(p)) continue;
+      if ((String(p.name || '') + ' ' + String(p.employee_id || '')).toLowerCase().includes(q)) { out.push(p); if (out.length > max) break; }
+    }
+    return out.sort((a, b) => window.SV.rankCmp(a, b));
+  }
+  let tn = null;
+  cname.addEventListener('input', () => {
+    clearTimeout(tn); const v = cname.value.trim();
+    const hit = [...cpl.options].find((o) => o.value === v);
+    if (hit && hit._p) { pick(hit._p); return; }
+    if (!v && C.person) { leave(); return; }
+    tn = setTimeout(() => { cpl.replaceChildren(...findPeople(v, 40).slice(0, 40).map((p) => { const o = document.createElement('option'); o.value = pLabel(p); o._p = p; return o; })); }, 150);
+  });
+  function showMatches() {
+    const on = !C.person && !!C.q && C.q.length >= 2 && C.course == null;
+    cname.value = C.person ? pLabel(C.person) : (document.activeElement === cname ? cname.value : '');
+    qs('[data-cfx="6"]').toggleAttribute('data-off', !C.person && !cname.value);
+    if (C.course == null && !C.person) cq.placeholder = 'Search courses or seafarers';
+    if (!on) { cpm.hidden = true; return; }
+    const m = findPeople(C.q, 60);
+    if (!m.length) { cpm.hidden = true; return; }
+    cpm.hidden = false;
+    const head = el('p', 'note-inline', `Seafarers matching “${C.q}”${m.length > 60 ? ' (first 60; type more to narrow)' : ''}: click a name to open their course record.`);
+    const wrap = el('div', 'lx-cpmwrap');
+    m.slice(0, 60).forEach((p) => { const b = el('button', 'dl', `${p.name || p.employee_id} · ${p.rank || '—'}${p.vessel ? ' · ' + p.vessel : ''}`); b.type = 'button'; b.title = `${p.employee_id} · ${CATLAB[p.category] || p.category}${p.doc ? ' · ' + p.doc : ''}`; b.addEventListener('click', () => pick(p)); wrap.appendChild(b); });
+    cpm.replaceChildren(head, wrap);
+  }
   const prev = window.SV.redraw; window.SV.redraw = () => { prev && prev(); drawCS(); };
   drawCS();
 })();
