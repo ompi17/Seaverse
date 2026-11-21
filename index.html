@@ -1930,7 +1930,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     crank.value = C.rank;
     const ck = V.courses.map((c) => c.ci).join('|'); if (ccourse.dataset.k !== ck) { ccourse.replaceChildren(new Option('All courses', ''), ...V.courses.map((c) => new Option(c.title, c.ci))); ccourse.dataset.k = ck; }
     ccourse.value = C.course == null ? '' : String(C.course);
-    const off = [!C.cat, !C.doc, !C.ves, !C.rank, C.course == null, !C.q && !cq.value];
+    const off = [!C.cat, !C.doc, !C.ves, !C.rank, C.course == null, !C.q && !cq.value, !C.person && !qs('.lx-cname').value];   // index 6 = Seafarer
     sec.querySelectorAll('.fx[data-cfx]').forEach((x) => x.toggleAttribute('data-off', off[+x.dataset.cfx]));
     cq.placeholder = V.level === 'courses' ? 'Search courses or seafarers' : 'Search people';
     const fl = [C.cat && CATLAB[C.cat], C.doc, C.ves, C.rank, C.q && `“${C.q}”`].filter(Boolean);
