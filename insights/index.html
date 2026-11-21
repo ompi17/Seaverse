@@ -1064,6 +1064,20 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
     return { render };
   })();
 
+  // reset (×) on every filter that had none, back to its default value, like the other filters
+  function addReset(sel, def, title) {
+    const c = $(sel); if (!c || c.closest('.fw')) return;
+    const isIn = c.tagName === 'INPUT', w = el('span', { class: isIn ? 'fw fs' : 'fw' });
+    c.replaceWith(w); w.append(c);
+    const b = el('button', { class: 'fx', title: title || 'Reset', 'aria-label': title || 'Reset' }, '×'); w.append(b);
+    const sync = () => b.toggleAttribute('data-off', (c.value || '') === def);
+    c.addEventListener(isIn ? 'input' : 'change', sync); sync();
+    b.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); if (b.hasAttribute('data-off')) return; c.value = def; c.dispatchEvent(new Event(isIn ? 'input' : 'change', { bubbles: true })); sync(); });
+  }
+  addReset('.p-by', 'doc', 'Back to DoC');
+  addReset('.o-ns', 'noreps', 'Back to default (hide same-answer patterns)'); addReset('.o-nsig', '', 'Any signal'); addReset('.o-nq', '', 'Clear search');
+  addReset('.o-fa', '', 'All types'); addReset('.o-fo', '', 'All owners'); addReset('.o-fq', '', 'Clear search');
+  addReset('.o-sst', 'Pending approval', 'Back to pending approval'); addReset('.o-top', '', 'All topics'); addReset('.o-vf', 'issue', 'Back to vessels with an issue');
   const h = (location.hash || '').slice(1);
   show(['plan', 'comp', 'cert', 'act', 'cont', 'ops', 'how'].includes(h) ? h : 'plan');
 })();
