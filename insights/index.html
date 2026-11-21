@@ -142,7 +142,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 .sv table.hier th{position:sticky;top:0;z-index:1;background:var(--color-panel,#fff)}
 .sv .method{max-width:60rem}.sv .method p{line-height:1.55}
 .sv table.hier th{white-space:nowrap;padding-right:10px}.sv table.hier td{padding-right:10px}.sv .tablebox{overflow:auto}
-.sv .o-tchart,.sv .lu-chart,.sv .t-chart{height:auto;min-height:0}
+.sv .o-tchart,.sv .lu-chart,.sv .t-chart,.sv .o-nchart{height:auto;min-height:0;overflow-x:auto}
 .sv table.hier td.wrapc{min-width:12rem}
 .sv td.num,.sv th.num{text-align:right;font-variant-numeric:tabular-nums}
 </style>
@@ -364,6 +364,14 @@ html,body{background:var(--page);color:var(--color-fg)}
   <section data-page="ops" hidden>
     <p class="note-inline">Platform administration, from the 16 Oct snapshot until these tables are in the daily export.</p>
     <div class="kpis o-kpis"></div>
+    <div class="card" id="fbneg"><div class="bar"><h2 style="margin:0">Users with the most negative feedback</h2>
+        <span><label class="note-inline">Show <select class="o-ns" style="max-width:100%"><option value="noreps">Hide same-answer patterns</option><option value="dis">Dissatisfied only</option><option value="all">Everyone with negative feedback</option></select></label> <label class="note-inline">Signal <select class="o-nsig"></select></label> <label class="note-inline">Search <input type="search" class="o-nq" placeholder="Name, ID, vessel or DoC"></label></span></div>
+      <p class="note">Ranked by a concern score across all their course feedback: low stars (2 or less) and issues raised count 3, unclear, not useful or poorly structured count 2, too long, too short or pacing count 1. People who give the same duration answer on almost every course while rating 5 stars are flagged and hidden by default. Click a person to read their feedback.</p>
+      <div class="kpis o-nk" style="margin:var(--cds-gap-sm) 0"></div>
+      <div class="chart o-nchart"></div>
+      <div class="tablebox" style="max-height:26rem"><table class="hier o-ntbl"></table></div>
+      <div class="o-ndet" hidden><h2 style="margin-top:var(--cds-gap-md)" class="o-ndh"></h2><div class="tablebox" style="max-height:22rem"><table class="hier o-ndtbl"></table></div></div>
+    </div>
     <div class="card" id="fbact"><div class="bar"><h2 style="margin:0">Course feedback needing action</h2>
         <span><label class="note-inline">Action <select class="o-fa"></select></label> <label class="note-inline">Owner <select class="o-fo"></select></label> <label class="note-inline">Search <input type="search" class="o-fq" placeholder="Course, vessel, name or words"></label></span></div>
       <p class="note o-fnote"></p><div class="chart o-fchart"></div><div class="tablebox" style="max-height:30rem"><table class="hier o-ftbl"></table></div></div>
@@ -394,6 +402,8 @@ html,body{background:var(--page);color:var(--color-fg)}
     <p>Last login from the user record; <b>App</b> = has a mobile push token. <b>Dormant</b> = registered but not logged in for over 30 days. Until the daily users file carries the last-login field, this tab shows the 16 Oct snapshot.</p>
     <h2>Content</h2>
     <p>Structure (lessons, videos, PDFs, quizzes, questions, pass mark, minutes) from the latest published version of each course. Video languages count all language versions of the course videos; subtitle languages come from the subtitle files. Nationality is read from the employee ID prefix (IN, PH, CN, ID…).</p>
+    <h2>Users with the most negative feedback</h2>
+    <p>On the LMS operations tab. Each feedback submission is checked for negative signals: overall stars 2 or less; clarity “slightly” or “not clear”; usefulness “slightly” or “not useful”; structure “poorly” or “very poorly”; duration “too long” or “too short”; pacing too fast or slow; or a comment on the feedback-needing-action list. People are ranked by a concern score that weights these 3 (stars, issue), 2 (clarity, usefulness, structure) or 1 (duration, pacing). Someone who gives the same answer on 90% or more of their negative submissions, with at least 5 and an average of 4.5 stars or more, is flagged as a same-answer pattern.</p>
     <h2>Course feedback needing action</h2>
     <p>On the LMS operations tab. Every written feedback comment is checked by keyword rules; a comment is listed when it reports a problem or makes a concrete request, and plain praise is left out. Types: quiz or answer marked wrong, quiz format, content error or outdated, platform or playback problem, onboard internet or data access, language or translation, shorten or re-pace, add or improve content, and low rating (2 stars or less) with a comment. Each type has a suggested owner. The rules can miss a comment or include one that needs no action, and the list does not track whether an item has been dealt with.</p>
     <h2>Data</h2>
@@ -945,11 +955,31 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
 
   // ---------- LMS operations ----------
   const Ops = (() => {
+    const NSIG = ['Low stars', 'Issue raised', 'Unclear', 'Not useful', 'Poorly structured', 'Too long', 'Too short', 'Pacing'];
+    const NW = { 'Low stars': 3, 'Issue raised': 3, 'Unclear': 2, 'Not useful': 2, 'Poorly structured': 2, 'Too long': 1, 'Too short': 1, 'Pacing': 1 };
+    const NCOL = { 'Low stars': 'var(--color-bad)', 'Issue raised': 'var(--sv-c5, #b8506a)', 'Unclear': 'var(--sv-c3, #5a5fc8)', 'Not useful': 'var(--sv-c4, #c27f17)', 'Poorly structured': 'var(--sv-c2, #0f8b8d)', 'Too long': 'var(--cds-chart-muted)', 'Too short': 'var(--cds-chart-muted)', 'Pacing': 'var(--cds-chart-muted)' };
+    let nSel = null;
+    function stacked(box, rows, onPick) {   // concern score per person, split by signal
+      box.replaceChildren(); if (!rows.length) { box.append(el('p', { class: 'note' }, 'Nobody matches these filters.')); return; }
+      const W = Math.max(300, box.clientWidth || 700), lw = Math.min(260, W * 0.34), bh = 22, H = rows.length * bh + 34;
+      const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.score) || 1]).range([0, W - lw - 120]);
+      const svg = d3.select(box).append('svg').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', 'Concern score by person, split by signal');
+      const lg = svg.append('g').attr('transform', `translate(${lw},2)`); let lx = 0;
+      ['Low stars', 'Issue raised', 'Unclear', 'Not useful', 'Poorly structured', 'Too long'].forEach((k) => { const t = k === 'Too long' ? 'Length / pace' : k;
+        const g = lg.append('g').attr('transform', `translate(${lx},0)`); g.append('rect').attr('width', 10).attr('height', 10).attr('rx', 2).attr('fill', NCOL[k]); g.append('text').attr('x', 14).attr('y', 9).attr('class', 'ins-bv').text(t); lx += 22 + t.length * 6.3; });
+      const g = svg.selectAll('g.r').data(rows).join('g').attr('class', 'r').attr('transform', (d, i) => `translate(0,${i * bh + 24})`).style('cursor', 'pointer').on('click', (e, d) => onPick(d));
+      g.append('text').attr('x', lw - 8).attr('y', bh / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('class', 'ins-bl').text((d) => `${d.rank_no}. ${d.name.length > 30 ? d.name.slice(0, 28) + '…' : d.name}`).append('title').text((d) => `${d.name} · ${d.rank} · ${d.vessel || d.category}`);
+      g.each(function (d) { let x0 = lw; const gg = d3.select(this);
+        NSIG.forEach((k) => { const w = x(d[k] * NW[k]); if (w <= 0) return; gg.append('rect').attr('x', x0).attr('y', 3).attr('height', bh - 7).attr('width', w).attr('fill', NCOL[k]).append('title').text(`${k}: ${d[k]}`); x0 += w; });
+        gg.append('text').attr('x', x0 + 6).attr('y', bh / 2).attr('dy', '0.32em').attr('class', 'ins-bv').text(`${d.score} · ${d.neg_subs} of ${d.subs} negative`); });
+    }
     let O = null, wired = false;
     async function render() {
       if (!O) {
-        const ks = ['ins_signups.csv', 'ins_support.csv', 'ins_vessels.csv', 'ins_imports.csv', 'ins_reportmails.csv', 'ins_deleted.csv', 'ins_fbact.csv'];
-        const v = await Promise.all(ks.map(get)); O = { sg: v[0], sp: v[1], vs: v[2], im: v[3], rm: v[4], del: v[5], fa: v[6] };
+        const ks = ['ins_signups.csv', 'ins_support.csv', 'ins_vessels.csv', 'ins_imports.csv', 'ins_reportmails.csv', 'ins_deleted.csv', 'ins_fbact.csv', 'ins_fbneg_users.csv', 'ins_fbneg_subs.csv'];
+        const v = await Promise.all(ks.map(get)); O = { sg: v[0], sp: v[1], vs: v[2], im: v[3], rm: v[4], del: v[5], fa: v[6], nu: v[7], ns: v[8] };
+        O.nu.forEach((r) => NSIG.forEach((k) => { r[k] = +r[k] || 0; })); O.nu.forEach((r) => { ['score', 'neg_subs', 'subs', 'dissatisfied', 'courses'].forEach((k) => { r[k] = +r[k] || 0; }); });
+        $('.o-nsig').replaceChildren(el('option', { value: '' }, 'Any signal'), ...NSIG.map((k) => el('option', { value: k }, k)));
         const uq = (k) => [...new Set(O.fa.map((r) => r[k]))].sort();
         $('.o-fa').replaceChildren(el('option', { value: '' }, 'All types'), ...uq('action').map((t) => el('option', { value: t }, t)));
         $('.o-fo').replaceChildren(el('option', { value: '' }, 'All owners'), ...uq('owner').map((t) => el('option', { value: t }, t)));
@@ -962,6 +992,7 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
       const pend = O.sg.filter((r) => r.status === 'Pending approval');
       const cut30 = new Date(new Date(META.rep + 'T00:00:00Z') - 30 * 864e5).toISOString().slice(0, 10);
       kpis($('.o-kpis'), [
+        ['Users with negative feedback', int(O.nu.length), `${int(O.nu.filter((r) => r.neg_subs >= 3).length)} with 3 or more negative`],
         ['Feedback needing action', int(O.fa.length), `${int(cnt(O.fa, (r) => r.date >= cut30))} in the last 30 days · ${int(cnt(O.fa, (r) => r.action === 'Quiz or answer marked wrong'))} quiz answers disputed`],
         ['Signups awaiting approval', int(pend.length), pend.length ? `oldest ${fmtD(d3.min(pend, (r) => r.requested))}` : ''],
         ['Signups, email not verified', int(cnt(O.sg, (r) => r.status === 'Email not verified')), 'cannot log in yet'],
@@ -977,6 +1008,30 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
       table($('.o-ftbl'), [{ h: 'Date', k: 'date', f: (r) => fmtD(r.date), x: (r) => r.date }, { h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Action needed', k: 'action', num: false, f: (r) => chip(r.action, r.owner === 'LMS team' ? 'x' : r.owner === 'Content team' ? '1' : 'm') },
         { h: 'Owner', k: 'owner', num: false }, { h: 'Comment', k: 'comment', num: false, w: 1 }, { h: 'Stars', k: 'rating', cls: 'num' }, { h: 'Also', k: 'also', num: false, w: 1 },
         { h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false }, { h: 'DoC', k: 'doc', num: false, w: 1 }, { h: 'Category', k: 'category', num: false }], fr, { sortK: 'date' });
+      // ---- users with the most negative feedback ----
+      const ns = $('.o-ns').value, nsig = $('.o-nsig').value, nq = $('.o-nq').value.trim().toLowerCase();
+      const nr = O.nu.filter((r) => (ns === 'all' || (ns === 'dis' ? r.dissatisfied > 0 : !r.pattern)) && (!nsig || r[nsig] > 0) && (!nq || (r.name + ' ' + r.employee_id + ' ' + r.vessel + ' ' + r.doc).toLowerCase().includes(nq)));
+      const ntot = O.nu.length, rep = O.nu.filter((r) => r.neg_subs >= 3).length, dis = O.nu.filter((r) => r.dissatisfied > 0).length;
+      const allSubs = d3.sum(O.nu, (r) => r.neg_subs);
+      kpis($('.o-nk'), [
+        ['People with negative feedback', int(ntot), `${int(allSubs)} negative submissions`],
+        ['Dissatisfied', int(dis), 'low stars, unclear, not useful, poorly structured or an issue raised'],
+        ['Repeat (3+ negative)', int(rep), pct(share(rep, ntot)) + ' of people with negative feedback'],
+        ['Same-answer patterns', int(O.nu.filter((r) => r.pattern).length), 'hidden by default'],
+      ]);
+      const pick = (r) => { nSel = r.employee_id; render(); };
+      stacked($('.o-nchart'), nr.slice(0, 15), pick);
+      table($('.o-ntbl'), [{ h: '#', k: 'rank_no', cls: 'num', v: (r) => +r.rank_no }, { h: 'Name', k: 'name', num: false }, { h: 'Employee ID', k: 'employee_id', num: false }, { h: 'Rank', k: 'rank', num: false }, { h: 'Vessel', k: 'vessel', num: false }, { h: 'DoC', k: 'doc', num: false, w: 1 },
+        { h: 'Concern score', k: 'score', cls: 'num' }, { h: 'Negative', k: 'neg_subs', cls: 'num' }, { h: 'Feedback given', k: 'subs', cls: 'num' }, { h: 'Negative %', k: 'neg_pct', cls: 'num', v: (r) => +r.neg_pct, f: (r) => pct0(+r.neg_pct) },
+        { h: 'Avg stars', k: 'avg_stars', cls: 'num', v: (r) => +r.avg_stars }, ...NSIG.map((k) => ({ h: k, k, cls: 'num', f: (r) => r[k] || '' })),
+        { h: 'Courses', k: 'courses', cls: 'num' }, { h: 'Last negative', k: 'last_neg', f: (r) => fmtD(r.last_neg), x: (r) => r.last_neg }, { h: 'Pattern', k: 'pattern', num: false }], nr, { click: pick, limit: 500, sortK: 'rank_no', sortD: 1 });
+      const sel = nSel && O.nu.find((r) => r.employee_id === nSel);
+      $('.o-ndet').hidden = !sel;
+      if (sel) {
+        $('.o-ndh').textContent = `${sel.name} · ${sel.rank} · ${sel.vessel || sel.category}: ${sel.neg_subs} negative of ${sel.subs} feedback given`;
+        table($('.o-ndtbl'), [{ h: 'Date', k: 'date', f: (r) => fmtD(r.date), x: (r) => r.date }, { h: 'Course', k: 'course', num: false, w: 1 }, { h: 'Stars', k: 'rating', cls: 'num' },
+          { h: 'Signals', k: 'signals', num: false, w: 1 }, { h: 'Issue type', k: 'issue', num: false }, { h: 'Comment', k: 'comment', num: false, w: 1 }], O.ns.filter((r) => r.employee_id === nSel), { sortK: 'date' });
+      }
       const sv = $('.o-sst').value;
       const sg = sv ? O.sg.filter((r) => r.status === sv) : O.sg;
       $('.o-snote').textContent = `${int(sg.length)} request${sg.length === 1 ? '' : 's'}. Approved requests were decided in a median of ${int(d3.median(O.sg.filter((r) => r.wait_days !== '' && (r.status === 'Approved' || r.status === 'Rejected')), (r) => +r.wait_days))} day(s).`;
@@ -993,7 +1048,9 @@ table{border-collapse:collapse;width:100%;font-size:11.5px}th{background:#f6f8fa
       table(t1, [{ h: 'Sent on', k: 'month', f: (r) => fmtD(r.month) }, { h: 'Status', k: 'status', num: false }, { h: 'Emails', k: 'n', cls: 'num' }], O.rm, { sortK: 'month' });
       table(t2, [{ h: 'Month', k: 'month', num: false }, { h: 'Accounts deleted', k: 'n', cls: 'num' }], O.del, { sortK: 'month' });
       $('.o-misc').replaceChildren(el('p', { class: 'note' }, 'Report and summary emails sent by the platform:'), el('div', { class: 'tablebox', style: 'max-height:14rem' }, t1), el('p', { class: 'note', style: 'margin-top:var(--cds-gap-md)' }, 'User accounts deleted by admins:'), el('div', { class: 'tablebox' }, t2));
-      if (!wired) { wired = true; ['.o-sst', '.o-top', '.o-vf', '.o-fa', '.o-fo'].forEach((s) => $(s).addEventListener('change', render)); $('.o-fq').addEventListener('input', render);
+      if (!wired) { wired = true; ['.o-sst', '.o-top', '.o-vf', '.o-fa', '.o-fo', '.o-ns', '.o-nsig'].forEach((s) => $(s).addEventListener('change', render)); $('.o-fq').addEventListener('input', render); $('.o-nq').addEventListener('input', render);
+        addDl('.o-ntbl', () => ({ title: 'Users with the most negative feedback', rows: $('.o-ntbl')._rows(), ctx: `Show: ${$('.o-ns').options[$('.o-ns').selectedIndex].text} · signal: ${$('.o-nsig').value || 'any'}${$('.o-nq').value ? ' · search: ' + $('.o-nq').value : ''} · feedback to ${repD}` }));
+        addDl('.o-ndtbl', () => ({ title: 'Negative feedback of ' + (O.nu.find((r) => r.employee_id === nSel) || {}).name, rows: $('.o-ndtbl')._rows(), ctx: `Feedback to ${repD}` }), 'Download this person’s feedback:');
         addDl('.o-ftbl', () => ({ title: 'Course feedback needing action', rows: $('.o-ftbl')._rows(), ctx: `Action: ${$('.o-fa').value || 'all'} · owner: ${$('.o-fo').value || 'all'}${$('.o-fq').value ? ' · search: ' + $('.o-fq').value : ''} · feedback to ${repD}` }));
         const opt = (sel) => $(sel).options[$(sel).selectedIndex].text;
         addDl('.o-stbl', () => ({ title: 'Self-signup requests', rows: $('.o-stbl')._rows(), ctx: `Show: ${opt('.o-sst')} · ${SNAP()}` }));
