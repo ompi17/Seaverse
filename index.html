@@ -340,7 +340,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
         <label class="fl">Vessel <span class="fw"><select class="lx-cves"></select><button class="fx" data-cfx="2" title="Reset vessel and the filters after it" aria-label="Reset vessel">×</button></span></label>
         <label class="fl">Rank <span class="fw"><select class="lx-crank"></select><button class="fx" data-cfx="3" title="Reset rank and the filters after it" aria-label="Reset rank">×</button></span></label>
         <label class="fl">Course <span class="fw"><select class="lx-ccourse"></select><button class="fx" data-cfx="4" title="Reset course and the filters after it" aria-label="Reset course">×</button></span></label>
-        <label class="fl">Seafarer <span class="fw fs"><input type="search" class="lx-cname" list="lx-cpl" placeholder="Name or employee ID" autocomplete="off"><datalist id="lx-cpl"></datalist><button class="fx" data-cfx="6" title="Clear seafarer" aria-label="Clear seafarer">×</button></span></label>
+        <label class="fl">Seafarer <span class="fw"><input type="search" class="lx-cname" list="lx-cpl" placeholder="Name or employee ID" autocomplete="off"><datalist id="lx-cpl"></datalist><button class="fx" data-cfx="6" title="Clear seafarer" aria-label="Clear seafarer">×</button></span></label>
         <label class="fl">Search <span class="fw fs"><input type="search" class="lx-cq" placeholder="Search courses or seafarers"><button class="fx" data-cfx="5" title="Clear search" aria-label="Clear search">×</button></span></label>
         <div class="fbtns"><button class="dl lx-cclr">Clear filters</button></div>
       </div>
@@ -2011,7 +2011,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
   }
   let tn = null;
   cname.addEventListener('input', () => {
-    clearTimeout(tn); const v = cname.value.trim();
+    clearTimeout(tn); const v = cname.value.trim(); qs('[data-cfx="6"]').toggleAttribute('data-off', !v && !C.person);
     const hit = [...cpl.options].find((o) => o.value === v);
     if (hit && hit._p) { pick(hit._p); return; }
     if (!v && C.person) { leave(); return; }
