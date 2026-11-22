@@ -20,14 +20,9 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 .dash-skeleton{min-height:2em;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--color-fg) 6%,transparent),transparent);background-size:200% 100%;animation:sk 1.4s infinite}
 @keyframes sk{from{background-position:200% 0}to{background-position:-200% 0}}
 .sa-load{position:fixed;inset:auto 16px 16px auto;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:8px;padding:8px 12px;font:13px system-ui;color:var(--color-fg-muted);box-shadow:var(--cds-shadow-popover);z-index:9}
-.sa-dl{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);max-width:min(92vw,560px);background:var(--color-panel);border:1px solid var(--color-border);border-radius:8px;padding:10px 36px 10px 14px;font:13px system-ui;color:var(--color-fg);box-shadow:var(--cds-shadow-popover);z-index:10}
-.sa-dl a{color:#3a6ea5;font-weight:600;word-break:break-all}.sa-dl button{position:absolute;top:6px;right:8px;border:0;background:none;font-size:18px;cursor:pointer;color:var(--color-fg-muted)}
-.sa-dl-n{margin-top:4px;font-size:12px;color:var(--color-fg-muted)}
-.sa-frame{background:#fff4d6;color:#5a4300;font:13px system-ui;padding:8px 16px;text-align:center}
 .sa-foot{max-width:1280px;margin:0 auto;padding:0 16px 24px;font:12px system-ui;color:var(--color-fg-muted)}
 </style>
-<style>
-.sv{font-family:var(--font-anthropic-sans);color:var(--color-fg);display:flex;flex-direction:column;gap:var(--cds-gap-lg)}
+<style>.sv{font-family:var(--font-anthropic-sans);color:var(--color-fg);display:flex;flex-direction:column;gap:var(--cds-gap-lg)}
 .sv h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
 .sv .take{color:var(--color-fg-muted);margin:var(--cds-gap-xs) 0 0;font-size:var(--cds-font-size-body)}
 .sv .bar{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm);align-items:center;justify-content:space-between}
@@ -144,6 +139,15 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 .sv table.hier th{white-space:nowrap;padding-right:10px}.sv table.hier td{padding-right:10px}.sv .tablebox{overflow:auto}
 .sv .o-tchart,.sv .lu-chart,.sv .t-chart,.sv .o-nchart{height:auto;min-height:0;overflow-x:auto}
 .sv table.hier td.wrapc{min-width:12rem}
+.sv td.num,.sv th.num{text-align:right;font-variant-numeric:tabular-nums}
+
+.sv a.lnk,.sv .crumbs a{color:var(--color-accent,#3a6ea5)}
+.sv{--ins-bar:#3a6ea5}
+.sv .ins-bl{font-size:12px;fill:var(--color-fg,#1f2328)}.sv .ins-bv{font-size:11.5px;fill:var(--color-fg-muted,#59636e);font-variant-numeric:tabular-nums}
+.sv .chip[data-s="x"]{--c:var(--color-bad)}.sv .chip[data-s="1"],.sv .chip[data-s="2"],.sv .chip[data-s="3"]{--c:var(--color-warn)}
+.sv .chip[data-s="v"],.sv .chip[data-s="n"]{--c:var(--color-ok)}.sv .chip[data-s="m"]{--c:var(--color-fg-muted)}
+.sv table.hier th{position:sticky;top:0;z-index:1}
+.sv .method{max-width:60rem}.sv .method p{line-height:1.55}
 .sv td.num,.sv th.num{text-align:right;font-variant-numeric:tabular-nums}
 </style>
 <style>/* Seaverse theme: calm slate-and-sea palette, clear tiles and tables. Follows the device's light/dark setting unless the viewer picks one. */
@@ -290,7 +294,7 @@ html,body{background:var(--page);color:var(--color-fg)}
 <div class="sv">
   <div>
     <h1>Seaverse Insights</h1>
-    <p class="note-inline" style="margin:2px 0 0"><span id="asof">Updated 21 Nov 2026, 07:38 IST (02:08 UTC)</span> · <a href="../" class="lnk">Open the Seaverse Dashboard</a></p>
+    <p class="note-inline" style="margin:2px 0 0"><span id="asof">Updated 21 Nov 2026, 13:39 IST (08:09 UTC)</span> · <a href="../" class="lnk">Open the Seaverse Dashboard</a></p>
     <p class="note-inline ins-snap" style="margin:2px 0 0"></p>
   </div>
   <div class="tabs" role="tablist">
@@ -412,8 +416,9 @@ html,body{background:var(--page);color:var(--color-fg)}
   <p class="sa-foot" style="padding:0">Seaverse Insights · internal use only.</p>
 </div>
 
+
 </div>
-<script>window.INS_META = [{"k": "rep", "v": "2026-11-20"}, {"k": "snap", "v": "2026-10-16"}, {"k": "login_asof", "v": "2026-10-16"}, {"k": "plans", "v": 111}, {"k": "plan_links", "v": 2371}]; window.INS_V = '202611200208';</script>
+<script>window.INS_META = [{"k": "rep", "v": "2026-11-20"}, {"k": "snap", "v": "2026-10-16"}, {"k": "login_asof", "v": "2026-10-16"}, {"k": "plans", "v": 111}, {"k": "plan_links", "v": 2371}]; window.INS_V = '202611200809';</script>
 <script>(() => {
   const root = document.querySelector('.sv');
   const $ = (s, r = root) => r.querySelector(s), $$ = (s, r = root) => [...r.querySelectorAll(s)];
