@@ -1,847 +1,850 @@
 week_start,week_end,doc,population,completions,people,per_person
-2026-08-23,2026-08-29,All DoCs,All onboard,1917,13187,0.1454
-2026-08-30,2026-09-05,All DoCs,All onboard,2889,13187,0.2191
-2026-09-06,2026-09-12,All DoCs,All onboard,2137,13187,0.1621
+2026-08-23,2026-08-29,All DoCs,All onboard,1915,13187,0.1452
+2026-08-30,2026-09-05,All DoCs,All onboard,2888,13187,0.219
+2026-09-06,2026-09-12,All DoCs,All onboard,2139,13187,0.1622
 2026-09-13,2026-09-19,All DoCs,All onboard,4819,13187,0.3654
-2026-09-20,2026-09-26,All DoCs,All onboard,2665,13187,0.2021
+2026-09-20,2026-09-26,All DoCs,All onboard,2661,13187,0.2018
 2026-09-27,2026-10-03,All DoCs,All onboard,2016,13187,0.1529
 2026-10-04,2026-10-10,All DoCs,All onboard,1477,13187,0.112
-2026-10-11,2026-10-17,All DoCs,All onboard,917,13187,0.0695
+2026-10-11,2026-10-17,All DoCs,All onboard,915,13187,0.0694
 2026-10-18,2026-10-24,All DoCs,All onboard,338,13187,0.0256
 2026-10-25,2026-10-31,All DoCs,All onboard,95,13187,0.0072
 2026-11-01,2026-11-07,All DoCs,All onboard,69,13187,0.0052
 2026-11-08,2026-11-14,All DoCs,All onboard,16,13187,0.0012
 2026-11-15,2026-11-21,All DoCs,All onboard,91,13187,0.0069
-2026-08-23,2026-08-29,All DoCs,Registered,1284,8019,0.1601
-2026-08-30,2026-09-05,All DoCs,Registered,1720,8019,0.2145
-2026-09-06,2026-09-12,All DoCs,Registered,1483,8019,0.1849
-2026-09-13,2026-09-19,All DoCs,Registered,2799,8019,0.349
-2026-09-20,2026-09-26,All DoCs,Registered,1313,8019,0.1637
-2026-09-27,2026-10-03,All DoCs,Registered,1042,8019,0.1299
-2026-10-04,2026-10-10,All DoCs,Registered,973,8019,0.1213
-2026-10-11,2026-10-17,All DoCs,Registered,506,8019,0.0631
-2026-10-18,2026-10-24,All DoCs,Registered,224,8019,0.0279
-2026-10-25,2026-10-31,All DoCs,Registered,68,8019,0.0085
-2026-11-01,2026-11-07,All DoCs,Registered,45,8019,0.0056
+2026-11-22,2026-11-28,All DoCs,All onboard,20,13187,0.0015
+2026-08-23,2026-08-29,All DoCs,Registered,1210,8019,0.1509
+2026-08-30,2026-09-05,All DoCs,Registered,1847,8019,0.2303
+2026-09-06,2026-09-12,All DoCs,Registered,1297,8019,0.1617
+2026-09-13,2026-09-19,All DoCs,Registered,2590,8019,0.323
+2026-09-20,2026-09-26,All DoCs,Registered,1324,8019,0.1651
+2026-09-27,2026-10-03,All DoCs,Registered,1046,8019,0.1304
+2026-10-04,2026-10-10,All DoCs,Registered,995,8019,0.1241
+2026-10-11,2026-10-17,All DoCs,Registered,404,8019,0.0504
+2026-10-18,2026-10-24,All DoCs,Registered,215,8019,0.0268
+2026-10-25,2026-10-31,All DoCs,Registered,64,8019,0.008
+2026-11-01,2026-11-07,All DoCs,Registered,48,8019,0.006
 2026-11-08,2026-11-14,All DoCs,Registered,13,8019,0.0016
-2026-11-15,2026-11-21,All DoCs,Registered,74,8019,0.0092
-2026-08-23,2026-08-29,All DoCs,Engaged,1280,7857,0.1629
-2026-08-30,2026-09-05,All DoCs,Engaged,1796,7857,0.2286
-2026-09-06,2026-09-12,All DoCs,Engaged,1347,7857,0.1714
-2026-09-13,2026-09-19,All DoCs,Engaged,2577,7857,0.328
-2026-09-20,2026-09-26,All DoCs,Engaged,1301,7857,0.1656
-2026-09-27,2026-10-03,All DoCs,Engaged,982,7857,0.125
-2026-10-04,2026-10-10,All DoCs,Engaged,837,7857,0.1065
-2026-10-11,2026-10-17,All DoCs,Engaged,429,7857,0.0546
-2026-10-18,2026-10-24,All DoCs,Engaged,180,7857,0.0229
-2026-10-25,2026-10-31,All DoCs,Engaged,62,7857,0.0079
-2026-11-01,2026-11-07,All DoCs,Engaged,34,7857,0.0043
-2026-11-08,2026-11-14,All DoCs,Engaged,9,7857,0.0011
-2026-11-15,2026-11-21,All DoCs,Engaged,56,7857,0.0071
-2026-08-23,2026-08-29,All DoCs,Active,512,3600,0.1422
-2026-08-30,2026-09-05,All DoCs,Active,651,3600,0.1808
-2026-09-06,2026-09-12,All DoCs,Active,476,3600,0.1322
-2026-09-13,2026-09-19,All DoCs,Active,857,3600,0.2381
-2026-09-20,2026-09-26,All DoCs,Active,496,3600,0.1378
-2026-09-27,2026-10-03,All DoCs,Active,403,3600,0.1119
-2026-10-04,2026-10-10,All DoCs,Active,275,3600,0.0764
-2026-10-11,2026-10-17,All DoCs,Active,149,3600,0.0414
-2026-10-18,2026-10-24,All DoCs,Active,90,3600,0.025
-2026-10-25,2026-10-31,All DoCs,Active,19,3600,0.0053
-2026-11-01,2026-11-07,All DoCs,Active,9,3600,0.0025
-2026-11-08,2026-11-14,All DoCs,Active,8,3600,0.0022
-2026-11-15,2026-11-21,All DoCs,Active,21,3600,0.0058
-2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,All onboard,25,525,0.0476
-2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,All onboard,110,525,0.2095
-2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,All onboard,67,525,0.1276
-2026-09-13,2026-09-19,Columbus Shipmanagement Inc. Manila,All onboard,95,525,0.181
-2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,All onboard,67,525,0.1276
-2026-09-27,2026-10-03,Columbus Shipmanagement Inc. Manila,All onboard,52,525,0.099
-2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,All onboard,19,525,0.0362
-2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,All onboard,49,525,0.0933
-2026-10-18,2026-10-24,Columbus Shipmanagement Inc. Manila,All onboard,8,525,0.0152
-2026-10-25,2026-10-31,Columbus Shipmanagement Inc. Manila,All onboard,2,525,0.0038
-2026-11-15,2026-11-21,Columbus Shipmanagement Inc. Manila,All onboard,3,525,0.0057
-2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,Registered,3,159,0.0189
-2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,Registered,65,159,0.4088
-2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,Registered,21,159,0.1321
+2026-11-15,2026-11-21,All DoCs,Registered,73,8019,0.0091
+2026-11-22,2026-11-28,All DoCs,Registered,20,8019,0.0025
+2026-08-23,2026-08-29,All DoCs,Engaged,1176,7857,0.1497
+2026-08-30,2026-09-05,All DoCs,Engaged,1898,7857,0.2416
+2026-09-06,2026-09-12,All DoCs,Engaged,1359,7857,0.173
+2026-09-13,2026-09-19,All DoCs,Engaged,2674,7857,0.3403
+2026-09-20,2026-09-26,All DoCs,Engaged,1464,7857,0.1863
+2026-09-27,2026-10-03,All DoCs,Engaged,1130,7857,0.1438
+2026-10-04,2026-10-10,All DoCs,Engaged,948,7857,0.1207
+2026-10-11,2026-10-17,All DoCs,Engaged,471,7857,0.0599
+2026-10-18,2026-10-24,All DoCs,Engaged,182,7857,0.0232
+2026-10-25,2026-10-31,All DoCs,Engaged,68,7857,0.0087
+2026-11-01,2026-11-07,All DoCs,Engaged,43,7857,0.0055
+2026-11-08,2026-11-14,All DoCs,Engaged,11,7857,0.0014
+2026-11-15,2026-11-21,All DoCs,Engaged,77,7857,0.0098
+2026-11-22,2026-11-28,All DoCs,Engaged,20,7857,0.0025
+2026-08-23,2026-08-29,All DoCs,Active,561,3600,0.1558
+2026-08-30,2026-09-05,All DoCs,Active,737,3600,0.2047
+2026-09-06,2026-09-12,All DoCs,Active,493,3600,0.1369
+2026-09-13,2026-09-19,All DoCs,Active,716,3600,0.1989
+2026-09-20,2026-09-26,All DoCs,Active,360,3600,0.1
+2026-09-27,2026-10-03,All DoCs,Active,264,3600,0.0733
+2026-10-04,2026-10-10,All DoCs,Active,476,3600,0.1322
+2026-10-11,2026-10-17,All DoCs,Active,161,3600,0.0447
+2026-10-18,2026-10-24,All DoCs,Active,46,3600,0.0128
+2026-10-25,2026-10-31,All DoCs,Active,17,3600,0.0047
+2026-11-01,2026-11-07,All DoCs,Active,20,3600,0.0056
+2026-11-08,2026-11-14,All DoCs,Active,9,3600,0.0025
+2026-11-15,2026-11-21,All DoCs,Active,32,3600,0.0089
+2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,All onboard,65,525,0.1238
+2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,All onboard,103,525,0.1962
+2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,All onboard,58,525,0.1105
+2026-09-13,2026-09-19,Columbus Shipmanagement Inc. Manila,All onboard,262,525,0.499
+2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,All onboard,35,525,0.0667
+2026-09-27,2026-10-03,Columbus Shipmanagement Inc. Manila,All onboard,71,525,0.1352
+2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,All onboard,33,525,0.0629
+2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,All onboard,43,525,0.0819
+2026-10-18,2026-10-24,Columbus Shipmanagement Inc. Manila,All onboard,4,525,0.0076
+2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,Registered,38,159,0.239
+2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,Registered,55,159,0.3459
+2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,Registered,22,159,0.1384
 2026-09-13,2026-09-19,Columbus Shipmanagement Inc. Manila,Registered,23,159,0.1447
-2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,Registered,17,159,0.1069
-2026-09-27,2026-10-03,Columbus Shipmanagement Inc. Manila,Registered,17,159,0.1069
-2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,Registered,11,159,0.0692
-2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,Registered,10,159,0.0629
-2026-10-18,2026-10-24,Columbus Shipmanagement Inc. Manila,Registered,6,159,0.0377
-2026-10-25,2026-10-31,Columbus Shipmanagement Inc. Manila,Registered,2,159,0.0126
-2026-11-15,2026-11-21,Columbus Shipmanagement Inc. Manila,Registered,3,159,0.0189
-2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,Engaged,3,167,0.018
-2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,Engaged,63,167,0.3772
-2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,Engaged,27,167,0.1617
-2026-09-13,2026-09-19,Columbus Shipmanagement Inc. Manila,Engaged,35,167,0.2096
-2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,Engaged,13,167,0.0778
-2026-09-27,2026-10-03,Columbus Shipmanagement Inc. Manila,Engaged,27,167,0.1617
-2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,Engaged,13,167,0.0778
-2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,Engaged,32,167,0.1916
+2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,Registered,1,159,0.0063
+2026-09-27,2026-10-03,Columbus Shipmanagement Inc. Manila,Registered,34,159,0.2138
+2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,Registered,8,159,0.0503
+2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,Registered,7,159,0.044
+2026-10-18,2026-10-24,Columbus Shipmanagement Inc. Manila,Registered,2,159,0.0126
+2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,Engaged,38,167,0.2275
+2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,Engaged,55,167,0.3293
+2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,Engaged,40,167,0.2395
+2026-09-13,2026-09-19,Columbus Shipmanagement Inc. Manila,Engaged,118,167,0.7066
+2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,Engaged,1,167,0.006
+2026-09-27,2026-10-03,Columbus Shipmanagement Inc. Manila,Engaged,43,167,0.2575
+2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,Engaged,10,167,0.0599
+2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,Engaged,31,167,0.1856
 2026-10-18,2026-10-24,Columbus Shipmanagement Inc. Manila,Engaged,2,167,0.012
-2026-11-15,2026-11-21,Columbus Shipmanagement Inc. Manila,Engaged,2,167,0.012
-2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,Active,3,79,0.038
-2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,Active,61,79,0.7722
-2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,Active,7,79,0.0886
-2026-09-13,2026-09-19,Columbus Shipmanagement Inc. Manila,Active,11,79,0.1392
-2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,Active,11,79,0.1392
-2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,Active,3,79,0.038
-2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,Active,7,79,0.0886
+2026-08-23,2026-08-29,Columbus Shipmanagement Inc. Manila,Active,36,79,0.4557
+2026-08-30,2026-09-05,Columbus Shipmanagement Inc. Manila,Active,52,79,0.6582
+2026-09-06,2026-09-12,Columbus Shipmanagement Inc. Manila,Active,13,79,0.1646
+2026-09-13,2026-09-19,Columbus Shipmanagement Inc. Manila,Active,9,79,0.1139
+2026-09-20,2026-09-26,Columbus Shipmanagement Inc. Manila,Active,1,79,0.0127
+2026-09-27,2026-10-03,Columbus Shipmanagement Inc. Manila,Active,25,79,0.3165
+2026-10-04,2026-10-10,Columbus Shipmanagement Inc. Manila,Active,1,79,0.0127
+2026-10-11,2026-10-17,Columbus Shipmanagement Inc. Manila,Active,2,79,0.0253
 2026-10-18,2026-10-24,Columbus Shipmanagement Inc. Manila,Active,2,79,0.0253
-2026-11-15,2026-11-21,Columbus Shipmanagement Inc. Manila,Active,2,79,0.0253
-2026-08-23,2026-08-29,DS Ship Management Pte Ltd (DSSM),All onboard,19,187,0.1016
-2026-08-30,2026-09-05,DS Ship Management Pte Ltd (DSSM),All onboard,72,187,0.385
-2026-09-06,2026-09-12,DS Ship Management Pte Ltd (DSSM),All onboard,3,187,0.016
-2026-09-13,2026-09-19,DS Ship Management Pte Ltd (DSSM),All onboard,79,187,0.4225
-2026-09-20,2026-09-26,DS Ship Management Pte Ltd (DSSM),All onboard,68,187,0.3636
-2026-09-27,2026-10-03,DS Ship Management Pte Ltd (DSSM),All onboard,75,187,0.4011
-2026-10-04,2026-10-10,DS Ship Management Pte Ltd (DSSM),All onboard,118,187,0.631
-2026-10-11,2026-10-17,DS Ship Management Pte Ltd (DSSM),All onboard,7,187,0.0374
-2026-10-18,2026-10-24,DS Ship Management Pte Ltd (DSSM),All onboard,6,187,0.0321
+2026-08-23,2026-08-29,DS Ship Management Pte Ltd (DSSM),All onboard,20,187,0.107
+2026-08-30,2026-09-05,DS Ship Management Pte Ltd (DSSM),All onboard,71,187,0.3797
+2026-09-06,2026-09-12,DS Ship Management Pte Ltd (DSSM),All onboard,4,187,0.0214
+2026-09-13,2026-09-19,DS Ship Management Pte Ltd (DSSM),All onboard,73,187,0.3904
+2026-09-20,2026-09-26,DS Ship Management Pte Ltd (DSSM),All onboard,70,187,0.3743
+2026-09-27,2026-10-03,DS Ship Management Pte Ltd (DSSM),All onboard,80,187,0.4278
+2026-10-04,2026-10-10,DS Ship Management Pte Ltd (DSSM),All onboard,17,187,0.0909
+2026-10-11,2026-10-17,DS Ship Management Pte Ltd (DSSM),All onboard,14,187,0.0749
+2026-10-18,2026-10-24,DS Ship Management Pte Ltd (DSSM),All onboard,4,187,0.0214
 2026-10-25,2026-10-31,DS Ship Management Pte Ltd (DSSM),All onboard,2,187,0.0107
 2026-11-01,2026-11-07,DS Ship Management Pte Ltd (DSSM),All onboard,1,187,0.0053
-2026-11-15,2026-11-21,DS Ship Management Pte Ltd (DSSM),All onboard,2,187,0.0107
+2026-11-15,2026-11-21,DS Ship Management Pte Ltd (DSSM),All onboard,3,187,0.016
 2026-08-30,2026-09-05,DS Ship Management Pte Ltd (DSSM),Registered,1,67,0.0149
-2026-09-13,2026-09-19,DS Ship Management Pte Ltd (DSSM),Registered,11,67,0.1642
-2026-09-27,2026-10-03,DS Ship Management Pte Ltd (DSSM),Registered,7,67,0.1045
-2026-10-04,2026-10-10,DS Ship Management Pte Ltd (DSSM),Registered,108,67,1.6119
+2026-09-06,2026-09-12,DS Ship Management Pte Ltd (DSSM),Registered,1,67,0.0149
+2026-09-13,2026-09-19,DS Ship Management Pte Ltd (DSSM),Registered,12,67,0.1791
+2026-09-20,2026-09-26,DS Ship Management Pte Ltd (DSSM),Registered,2,67,0.0299
+2026-09-27,2026-10-03,DS Ship Management Pte Ltd (DSSM),Registered,10,67,0.1493
+2026-10-04,2026-10-10,DS Ship Management Pte Ltd (DSSM),Registered,1,67,0.0149
+2026-10-11,2026-10-17,DS Ship Management Pte Ltd (DSSM),Registered,7,67,0.1045
 2026-10-25,2026-10-31,DS Ship Management Pte Ltd (DSSM),Registered,2,67,0.0299
 2026-11-01,2026-11-07,DS Ship Management Pte Ltd (DSSM),Registered,1,67,0.0149
-2026-11-15,2026-11-21,DS Ship Management Pte Ltd (DSSM),Registered,2,67,0.0299
+2026-11-15,2026-11-21,DS Ship Management Pte Ltd (DSSM),Registered,3,67,0.0448
+2026-08-23,2026-08-29,DS Ship Management Pte Ltd (DSSM),Engaged,6,58,0.1034
 2026-08-30,2026-09-05,DS Ship Management Pte Ltd (DSSM),Engaged,1,58,0.0172
-2026-09-13,2026-09-19,DS Ship Management Pte Ltd (DSSM),Engaged,18,58,0.3103
-2026-09-27,2026-10-03,DS Ship Management Pte Ltd (DSSM),Engaged,7,58,0.1207
-2026-10-04,2026-10-10,DS Ship Management Pte Ltd (DSSM),Engaged,108,58,1.8621
-2026-10-11,2026-10-17,DS Ship Management Pte Ltd (DSSM),Engaged,1,58,0.0172
+2026-09-06,2026-09-12,DS Ship Management Pte Ltd (DSSM),Engaged,1,58,0.0172
+2026-09-13,2026-09-19,DS Ship Management Pte Ltd (DSSM),Engaged,12,58,0.2069
+2026-09-20,2026-09-26,DS Ship Management Pte Ltd (DSSM),Engaged,2,58,0.0345
+2026-09-27,2026-10-03,DS Ship Management Pte Ltd (DSSM),Engaged,2,58,0.0345
+2026-10-11,2026-10-17,DS Ship Management Pte Ltd (DSSM),Engaged,8,58,0.1379
 2026-10-25,2026-10-31,DS Ship Management Pte Ltd (DSSM),Engaged,2,58,0.0345
 2026-11-01,2026-11-07,DS Ship Management Pte Ltd (DSSM),Engaged,1,58,0.0172
-2026-11-15,2026-11-21,DS Ship Management Pte Ltd (DSSM),Engaged,2,58,0.0345
-2026-08-23,2026-08-29,Fluyt Maritime Private Limited,All onboard,5,28,0.1786
-2026-09-06,2026-09-12,Fluyt Maritime Private Limited,All onboard,53,28,1.8929
-2026-09-13,2026-09-19,Fluyt Maritime Private Limited,All onboard,1,28,0.0357
-2026-09-20,2026-09-26,Fluyt Maritime Private Limited,All onboard,4,28,0.1429
-2026-09-27,2026-10-03,Fluyt Maritime Private Limited,All onboard,3,28,0.1071
-2026-10-11,2026-10-17,Fluyt Maritime Private Limited,All onboard,2,28,0.0714
-2026-08-23,2026-08-29,Fluyt Maritime Private Limited,Registered,5,17,0.2941
+2026-11-15,2026-11-21,DS Ship Management Pte Ltd (DSSM),Engaged,3,58,0.0517
+2026-09-06,2026-09-12,DS Ship Management Pte Ltd (DSSM),Active,1,17,0.0588
+2026-09-20,2026-09-26,DS Ship Management Pte Ltd (DSSM),Active,2,17,0.1176
+2026-09-27,2026-10-03,DS Ship Management Pte Ltd (DSSM),Active,1,17,0.0588
+2026-10-11,2026-10-17,DS Ship Management Pte Ltd (DSSM),Active,1,17,0.0588
+2026-11-15,2026-11-21,DS Ship Management Pte Ltd (DSSM),Active,1,17,0.0588
+2026-08-23,2026-08-29,Fluyt Maritime Private Limited,All onboard,14,28,0.5
+2026-09-06,2026-09-12,Fluyt Maritime Private Limited,All onboard,50,28,1.7857
+2026-09-13,2026-09-19,Fluyt Maritime Private Limited,All onboard,2,28,0.0714
+2026-08-23,2026-08-29,Fluyt Maritime Private Limited,Registered,6,17,0.3529
 2026-09-06,2026-09-12,Fluyt Maritime Private Limited,Registered,50,17,2.9412
-2026-09-20,2026-09-26,Fluyt Maritime Private Limited,Registered,4,17,0.2353
-2026-09-27,2026-10-03,Fluyt Maritime Private Limited,Registered,3,17,0.1765
-2026-10-11,2026-10-17,Fluyt Maritime Private Limited,Registered,2,17,0.1176
-2026-08-23,2026-08-29,Fluyt Maritime Private Limited,Engaged,5,14,0.3571
+2026-09-13,2026-09-19,Fluyt Maritime Private Limited,Registered,2,17,0.1176
+2026-08-23,2026-08-29,Fluyt Maritime Private Limited,Engaged,6,14,0.4286
 2026-09-06,2026-09-12,Fluyt Maritime Private Limited,Engaged,50,14,3.5714
-2026-09-20,2026-09-26,Fluyt Maritime Private Limited,Engaged,4,14,0.2857
-2026-09-27,2026-10-03,Fluyt Maritime Private Limited,Engaged,3,14,0.2143
-2026-10-11,2026-10-17,Fluyt Maritime Private Limited,Engaged,2,14,0.1429
+2026-09-13,2026-09-19,Fluyt Maritime Private Limited,Engaged,2,14,0.1429
 2026-09-06,2026-09-12,Fluyt Maritime Private Limited,Active,3,2,1.5
-2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,234,851,0.275
-2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,104,851,0.1222
-2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,114,851,0.134
-2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,208,851,0.2444
-2026-09-20,2026-09-26,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,253,851,0.2973
-2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,158,851,0.1857
-2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,204,851,0.2397
-2026-10-11,2026-10-17,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,24,851,0.0282
-2026-10-18,2026-10-24,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,1,851,0.0012
-2026-10-25,2026-10-31,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,10,851,0.0118
-2026-11-01,2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,4,851,0.0047
-2026-11-15,2026-11-21,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,3,851,0.0035
-2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,162,500,0.324
-2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,84,500,0.168
-2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,87,500,0.174
-2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,149,500,0.298
-2026-09-20,2026-09-26,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,109,500,0.218
-2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,110,500,0.22
-2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,162,500,0.324
-2026-10-11,2026-10-17,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,6,500,0.012
-2026-10-25,2026-10-31,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,9,500,0.018
-2026-11-01,2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,2,500,0.004
-2026-11-15,2026-11-21,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,1,500,0.002
-2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,171,565,0.3027
-2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,61,565,0.108
-2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,37,565,0.0655
-2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,146,565,0.2584
-2026-09-20,2026-09-26,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,125,565,0.2212
-2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,89,565,0.1575
-2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,63,565,0.1115
-2026-10-11,2026-10-17,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,12,565,0.0212
-2026-10-25,2026-10-31,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,9,565,0.0159
-2026-11-01,2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,2,565,0.0035
-2026-11-15,2026-11-21,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,1,565,0.0018
-2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,Active,5,171,0.0292
-2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,Active,16,171,0.0936
-2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,Active,4,171,0.0234
-2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,Active,49,171,0.2865
-2026-09-20,2026-09-26,Genco-Synergy Bulk Carriers Pvt Ltd,Active,79,171,0.462
-2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,Active,12,171,0.0702
-2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,Active,18,171,0.1053
+2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,195,851,0.2291
+2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,219,851,0.2573
+2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,196,851,0.2303
+2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,322,851,0.3784
+2026-09-20,2026-09-26,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,211,851,0.2479
+2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,176,851,0.2068
+2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,163,851,0.1915
+2026-10-11,2026-10-17,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,36,851,0.0423
+2026-10-18,2026-10-24,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,16,851,0.0188
+2026-10-25,2026-10-31,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,8,851,0.0094
+2026-11-01,2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,5,851,0.0059
+2026-11-15,2026-11-21,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,9,851,0.0106
+2026-11-22,2026-11-28,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,5,851,0.0059
+2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,137,500,0.274
+2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,106,500,0.212
+2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,123,500,0.246
+2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,195,500,0.39
+2026-09-20,2026-09-26,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,86,500,0.172
+2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,105,500,0.21
+2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,142,500,0.284
+2026-10-11,2026-10-17,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,20,500,0.04
+2026-10-18,2026-10-24,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,11,500,0.022
+2026-10-25,2026-10-31,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,7,500,0.014
+2026-11-01,2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,4,500,0.008
+2026-11-15,2026-11-21,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,2,500,0.004
+2026-11-22,2026-11-28,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,5,500,0.01
+2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,148,565,0.2619
+2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,190,565,0.3363
+2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,176,565,0.3115
+2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,181,565,0.3204
+2026-09-20,2026-09-26,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,92,565,0.1628
+2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,95,565,0.1681
+2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,41,565,0.0726
+2026-10-11,2026-10-17,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,28,565,0.0496
+2026-10-18,2026-10-24,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,16,565,0.0283
+2026-10-25,2026-10-31,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,7,565,0.0124
+2026-11-01,2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,4,565,0.0071
+2026-11-15,2026-11-21,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,9,565,0.0159
+2026-11-22,2026-11-28,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,5,565,0.0088
+2026-08-23,2026-08-29,Genco-Synergy Bulk Carriers Pvt Ltd,Active,87,171,0.5088
+2026-08-30,2026-09-05,Genco-Synergy Bulk Carriers Pvt Ltd,Active,40,171,0.2339
+2026-09-06,2026-09-12,Genco-Synergy Bulk Carriers Pvt Ltd,Active,43,171,0.2515
+2026-09-13,2026-09-19,Genco-Synergy Bulk Carriers Pvt Ltd,Active,16,171,0.0936
+2026-09-27,2026-10-03,Genco-Synergy Bulk Carriers Pvt Ltd,Active,18,171,0.1053
+2026-10-04,2026-10-10,Genco-Synergy Bulk Carriers Pvt Ltd,Active,8,171,0.0468
+2026-10-11,2026-10-17,Genco-Synergy Bulk Carriers Pvt Ltd,Active,19,171,0.1111
 2026-10-25,2026-10-31,Genco-Synergy Bulk Carriers Pvt Ltd,Active,5,171,0.0292
 2026-11-01,2026-11-07,Genco-Synergy Bulk Carriers Pvt Ltd,Active,2,171,0.0117
-2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,All onboard,24,213,0.1127
-2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,All onboard,73,213,0.3427
-2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,All onboard,76,213,0.3568
-2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,All onboard,46,213,0.216
-2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,All onboard,78,213,0.3662
-2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,All onboard,30,213,0.1408
-2026-10-04,2026-10-10,Genco-Synergy Pvt Ltd,All onboard,13,213,0.061
-2026-10-11,2026-10-17,Genco-Synergy Pvt Ltd,All onboard,3,213,0.0141
-2026-10-18,2026-10-24,Genco-Synergy Pvt Ltd,All onboard,1,213,0.0047
-2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,Registered,11,143,0.0769
-2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,Registered,51,143,0.3566
-2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,Registered,70,143,0.4895
-2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,Registered,33,143,0.2308
-2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,Registered,62,143,0.4336
-2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,Registered,22,143,0.1538
-2026-10-04,2026-10-10,Genco-Synergy Pvt Ltd,Registered,6,143,0.042
-2026-10-11,2026-10-17,Genco-Synergy Pvt Ltd,Registered,1,143,0.007
-2026-10-18,2026-10-24,Genco-Synergy Pvt Ltd,Registered,1,143,0.007
-2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,Engaged,22,160,0.1375
-2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,Engaged,72,160,0.45
-2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,Engaged,76,160,0.475
-2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,Engaged,46,160,0.2875
-2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,Engaged,78,160,0.4875
-2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,Engaged,30,160,0.1875
-2026-10-04,2026-10-10,Genco-Synergy Pvt Ltd,Engaged,13,160,0.0813
-2026-10-11,2026-10-17,Genco-Synergy Pvt Ltd,Engaged,3,160,0.0187
-2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,Active,6,49,0.1224
-2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,Active,7,49,0.1429
-2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,Active,36,49,0.7347
-2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,Active,29,49,0.5918
-2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,Active,40,49,0.8163
-2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,Active,15,49,0.3061
-2026-10-04,2026-10-10,Genco-Synergy Pvt Ltd,Active,6,49,0.1224
+2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,All onboard,13,213,0.061
+2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,All onboard,17,213,0.0798
+2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,All onboard,39,213,0.1831
+2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,All onboard,81,213,0.3803
+2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,All onboard,73,213,0.3427
+2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,All onboard,8,213,0.0376
+2026-10-04,2026-10-10,Genco-Synergy Pvt Ltd,All onboard,2,213,0.0094
+2026-10-11,2026-10-17,Genco-Synergy Pvt Ltd,All onboard,7,213,0.0329
+2026-10-25,2026-10-31,Genco-Synergy Pvt Ltd,All onboard,4,213,0.0188
+2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,Registered,10,143,0.0699
+2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,Registered,14,143,0.0979
+2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,Registered,13,143,0.0909
+2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,Registered,25,143,0.1748
+2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,Registered,38,143,0.2657
+2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,Registered,8,143,0.0559
+2026-10-04,2026-10-10,Genco-Synergy Pvt Ltd,Registered,2,143,0.014
+2026-10-11,2026-10-17,Genco-Synergy Pvt Ltd,Registered,5,143,0.035
+2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,Engaged,13,160,0.0813
+2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,Engaged,16,160,0.1
+2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,Engaged,38,160,0.2375
+2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,Engaged,62,160,0.3875
+2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,Engaged,64,160,0.4
+2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,Engaged,8,160,0.05
+2026-10-04,2026-10-10,Genco-Synergy Pvt Ltd,Engaged,2,160,0.0125
+2026-10-11,2026-10-17,Genco-Synergy Pvt Ltd,Engaged,5,160,0.0312
+2026-10-25,2026-10-31,Genco-Synergy Pvt Ltd,Engaged,4,160,0.025
+2026-08-23,2026-08-29,Genco-Synergy Pvt Ltd,Active,10,49,0.2041
+2026-08-30,2026-09-05,Genco-Synergy Pvt Ltd,Active,2,49,0.0408
+2026-09-06,2026-09-12,Genco-Synergy Pvt Ltd,Active,13,49,0.2653
+2026-09-13,2026-09-19,Genco-Synergy Pvt Ltd,Active,2,49,0.0408
+2026-09-20,2026-09-26,Genco-Synergy Pvt Ltd,Active,12,49,0.2449
+2026-09-27,2026-10-03,Genco-Synergy Pvt Ltd,Active,8,49,0.1633
+2026-10-11,2026-10-17,Genco-Synergy Pvt Ltd,Active,5,49,0.102
 2026-08-23,2026-08-29,General Ship Management Pte. Ltd.,All onboard,2,95,0.0211
-2026-08-30,2026-09-05,General Ship Management Pte. Ltd.,All onboard,103,95,1.0842
-2026-09-06,2026-09-12,General Ship Management Pte. Ltd.,All onboard,25,95,0.2632
-2026-09-13,2026-09-19,General Ship Management Pte. Ltd.,All onboard,55,95,0.5789
-2026-09-20,2026-09-26,General Ship Management Pte. Ltd.,All onboard,54,95,0.5684
-2026-09-27,2026-10-03,General Ship Management Pte. Ltd.,All onboard,50,95,0.5263
-2026-10-04,2026-10-10,General Ship Management Pte. Ltd.,All onboard,23,95,0.2421
+2026-08-30,2026-09-05,General Ship Management Pte. Ltd.,All onboard,5,95,0.0526
+2026-09-06,2026-09-12,General Ship Management Pte. Ltd.,All onboard,94,95,0.9895
+2026-09-13,2026-09-19,General Ship Management Pte. Ltd.,All onboard,14,95,0.1474
+2026-09-20,2026-09-26,General Ship Management Pte. Ltd.,All onboard,25,95,0.2632
+2026-09-27,2026-10-03,General Ship Management Pte. Ltd.,All onboard,51,95,0.5368
+2026-10-04,2026-10-10,General Ship Management Pte. Ltd.,All onboard,24,95,0.2526
 2026-10-11,2026-10-17,General Ship Management Pte. Ltd.,All onboard,25,95,0.2632
+2026-10-18,2026-10-24,General Ship Management Pte. Ltd.,All onboard,2,95,0.0211
+2026-10-25,2026-10-31,General Ship Management Pte. Ltd.,All onboard,2,95,0.0211
+2026-11-01,2026-11-07,General Ship Management Pte. Ltd.,All onboard,2,95,0.0211
+2026-11-15,2026-11-21,General Ship Management Pte. Ltd.,All onboard,1,95,0.0105
 2026-08-23,2026-08-29,General Ship Management Pte. Ltd.,Registered,2,45,0.0444
-2026-09-13,2026-09-19,General Ship Management Pte. Ltd.,Registered,18,45,0.4
 2026-09-20,2026-09-26,General Ship Management Pte. Ltd.,Registered,25,45,0.5556
 2026-09-27,2026-10-03,General Ship Management Pte. Ltd.,Registered,14,45,0.3111
+2026-10-18,2026-10-24,General Ship Management Pte. Ltd.,Registered,2,45,0.0444
+2026-10-25,2026-10-31,General Ship Management Pte. Ltd.,Registered,2,45,0.0444
+2026-11-01,2026-11-07,General Ship Management Pte. Ltd.,Registered,2,45,0.0444
+2026-11-15,2026-11-21,General Ship Management Pte. Ltd.,Registered,1,45,0.0222
 2026-08-23,2026-08-29,General Ship Management Pte. Ltd.,Engaged,2,56,0.0357
-2026-09-13,2026-09-19,General Ship Management Pte. Ltd.,Engaged,18,56,0.3214
 2026-09-20,2026-09-26,General Ship Management Pte. Ltd.,Engaged,25,56,0.4464
-2026-09-27,2026-10-03,General Ship Management Pte. Ltd.,Engaged,20,56,0.3571
-2026-08-23,2026-08-29,P.T Synergy Marine Indonesia,All onboard,112,584,0.1918
-2026-08-30,2026-09-05,P.T Synergy Marine Indonesia,All onboard,280,584,0.4795
-2026-09-06,2026-09-12,P.T Synergy Marine Indonesia,All onboard,43,584,0.0736
-2026-09-13,2026-09-19,P.T Synergy Marine Indonesia,All onboard,279,584,0.4777
-2026-09-20,2026-09-26,P.T Synergy Marine Indonesia,All onboard,203,584,0.3476
-2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,All onboard,174,584,0.2979
-2026-10-04,2026-10-10,P.T Synergy Marine Indonesia,All onboard,125,584,0.214
-2026-10-11,2026-10-17,P.T Synergy Marine Indonesia,All onboard,68,584,0.1164
-2026-10-18,2026-10-24,P.T Synergy Marine Indonesia,All onboard,30,584,0.0514
-2026-11-01,2026-11-07,P.T Synergy Marine Indonesia,All onboard,5,584,0.0086
-2026-11-15,2026-11-21,P.T Synergy Marine Indonesia,All onboard,2,584,0.0034
-2026-08-23,2026-08-29,P.T Synergy Marine Indonesia,Registered,6,64,0.0938
-2026-08-30,2026-09-05,P.T Synergy Marine Indonesia,Registered,1,64,0.0156
-2026-09-06,2026-09-12,P.T Synergy Marine Indonesia,Registered,5,64,0.0781
-2026-09-13,2026-09-19,P.T Synergy Marine Indonesia,Registered,18,64,0.2812
-2026-09-20,2026-09-26,P.T Synergy Marine Indonesia,Registered,1,64,0.0156
-2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,Registered,19,64,0.2969
-2026-08-23,2026-08-29,P.T Synergy Marine Indonesia,Engaged,5,54,0.0926
-2026-08-30,2026-09-05,P.T Synergy Marine Indonesia,Engaged,1,54,0.0185
-2026-09-06,2026-09-12,P.T Synergy Marine Indonesia,Engaged,5,54,0.0926
-2026-09-13,2026-09-19,P.T Synergy Marine Indonesia,Engaged,18,54,0.3333
-2026-09-20,2026-09-26,P.T Synergy Marine Indonesia,Engaged,1,54,0.0185
-2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,Engaged,19,54,0.3519
-2026-10-04,2026-10-10,P.T Synergy Marine Indonesia,Engaged,1,54,0.0185
-2026-09-06,2026-09-12,P.T Synergy Marine Indonesia,Active,2,12,0.1667
+2026-09-27,2026-10-03,General Ship Management Pte. Ltd.,Engaged,21,56,0.375
+2026-08-23,2026-08-29,P.T Synergy Marine Indonesia,All onboard,113,584,0.1935
+2026-08-30,2026-09-05,P.T Synergy Marine Indonesia,All onboard,207,584,0.3545
+2026-09-06,2026-09-12,P.T Synergy Marine Indonesia,All onboard,49,584,0.0839
+2026-09-13,2026-09-19,P.T Synergy Marine Indonesia,All onboard,192,584,0.3288
+2026-09-20,2026-09-26,P.T Synergy Marine Indonesia,All onboard,272,584,0.4658
+2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,All onboard,85,584,0.1455
+2026-10-04,2026-10-10,P.T Synergy Marine Indonesia,All onboard,39,584,0.0668
+2026-10-11,2026-10-17,P.T Synergy Marine Indonesia,All onboard,79,584,0.1353
+2026-10-18,2026-10-24,P.T Synergy Marine Indonesia,All onboard,29,584,0.0497
+2026-10-25,2026-10-31,P.T Synergy Marine Indonesia,All onboard,2,584,0.0034
+2026-11-01,2026-11-07,P.T Synergy Marine Indonesia,All onboard,3,584,0.0051
+2026-11-15,2026-11-21,P.T Synergy Marine Indonesia,All onboard,4,584,0.0068
+2026-08-23,2026-08-29,P.T Synergy Marine Indonesia,Registered,3,64,0.0469
+2026-09-13,2026-09-19,P.T Synergy Marine Indonesia,Registered,23,64,0.3594
+2026-09-20,2026-09-26,P.T Synergy Marine Indonesia,Registered,2,64,0.0312
+2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,Registered,7,64,0.1094
+2026-10-04,2026-10-10,P.T Synergy Marine Indonesia,Registered,2,64,0.0312
+2026-08-23,2026-08-29,P.T Synergy Marine Indonesia,Engaged,2,54,0.037
+2026-09-13,2026-09-19,P.T Synergy Marine Indonesia,Engaged,23,54,0.4259
+2026-09-20,2026-09-26,P.T Synergy Marine Indonesia,Engaged,2,54,0.037
+2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,Engaged,7,54,0.1296
+2026-10-04,2026-10-10,P.T Synergy Marine Indonesia,Engaged,3,54,0.0556
 2026-09-13,2026-09-19,P.T Synergy Marine Indonesia,Active,18,12,1.5
-2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,Active,16,12,1.3333
+2026-09-27,2026-10-03,P.T Synergy Marine Indonesia,Active,3,12,0.25
 2026-09-27,2026-10-03,PT Karunya Ship Management,All onboard,1,13,0.0769
 2026-10-11,2026-10-17,PT Karunya Ship Management,All onboard,5,13,0.3846
 2026-10-18,2026-10-24,PT Karunya Ship Management,All onboard,2,13,0.1538
-2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,All onboard,31,174,0.1782
-2026-08-30,2026-09-05,Spar Synergy Ship Management Private Limited,All onboard,25,174,0.1437
-2026-09-06,2026-09-12,Spar Synergy Ship Management Private Limited,All onboard,6,174,0.0345
-2026-09-13,2026-09-19,Spar Synergy Ship Management Private Limited,All onboard,203,174,1.1667
-2026-09-20,2026-09-26,Spar Synergy Ship Management Private Limited,All onboard,29,174,0.1667
-2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,All onboard,34,174,0.1954
-2026-10-04,2026-10-10,Spar Synergy Ship Management Private Limited,All onboard,5,174,0.0287
-2026-10-11,2026-10-17,Spar Synergy Ship Management Private Limited,All onboard,6,174,0.0345
+2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,All onboard,12,174,0.069
+2026-08-30,2026-09-05,Spar Synergy Ship Management Private Limited,All onboard,20,174,0.1149
+2026-09-06,2026-09-12,Spar Synergy Ship Management Private Limited,All onboard,4,174,0.023
+2026-09-13,2026-09-19,Spar Synergy Ship Management Private Limited,All onboard,97,174,0.5575
+2026-09-20,2026-09-26,Spar Synergy Ship Management Private Limited,All onboard,10,174,0.0575
+2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,All onboard,28,174,0.1609
+2026-10-04,2026-10-10,Spar Synergy Ship Management Private Limited,All onboard,10,174,0.0575
+2026-10-11,2026-10-17,Spar Synergy Ship Management Private Limited,All onboard,3,174,0.0172
 2026-10-18,2026-10-24,Spar Synergy Ship Management Private Limited,All onboard,14,174,0.0805
-2026-11-15,2026-11-21,Spar Synergy Ship Management Private Limited,All onboard,1,174,0.0057
-2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,Registered,19,146,0.1301
-2026-08-30,2026-09-05,Spar Synergy Ship Management Private Limited,Registered,18,146,0.1233
-2026-09-06,2026-09-12,Spar Synergy Ship Management Private Limited,Registered,6,146,0.0411
-2026-09-13,2026-09-19,Spar Synergy Ship Management Private Limited,Registered,203,146,1.3904
-2026-09-20,2026-09-26,Spar Synergy Ship Management Private Limited,Registered,29,146,0.1986
-2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,Registered,32,146,0.2192
-2026-10-04,2026-10-10,Spar Synergy Ship Management Private Limited,Registered,4,146,0.0274
-2026-10-11,2026-10-17,Spar Synergy Ship Management Private Limited,Registered,6,146,0.0411
+2026-11-01,2026-11-07,Spar Synergy Ship Management Private Limited,All onboard,4,174,0.023
+2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,Registered,12,146,0.0822
+2026-08-30,2026-09-05,Spar Synergy Ship Management Private Limited,Registered,20,146,0.137
+2026-09-06,2026-09-12,Spar Synergy Ship Management Private Limited,Registered,1,146,0.0068
+2026-09-13,2026-09-19,Spar Synergy Ship Management Private Limited,Registered,97,146,0.6644
+2026-09-20,2026-09-26,Spar Synergy Ship Management Private Limited,Registered,10,146,0.0685
+2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,Registered,28,146,0.1918
+2026-10-04,2026-10-10,Spar Synergy Ship Management Private Limited,Registered,10,146,0.0685
+2026-10-11,2026-10-17,Spar Synergy Ship Management Private Limited,Registered,2,146,0.0137
 2026-10-18,2026-10-24,Spar Synergy Ship Management Private Limited,Registered,14,146,0.0959
-2026-11-15,2026-11-21,Spar Synergy Ship Management Private Limited,Registered,1,146,0.0068
-2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,Engaged,24,139,0.1727
-2026-08-30,2026-09-05,Spar Synergy Ship Management Private Limited,Engaged,25,139,0.1799
-2026-09-06,2026-09-12,Spar Synergy Ship Management Private Limited,Engaged,6,139,0.0432
-2026-09-13,2026-09-19,Spar Synergy Ship Management Private Limited,Engaged,106,139,0.7626
-2026-09-20,2026-09-26,Spar Synergy Ship Management Private Limited,Engaged,18,139,0.1295
-2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,Engaged,32,139,0.2302
-2026-10-04,2026-10-10,Spar Synergy Ship Management Private Limited,Engaged,4,139,0.0288
-2026-10-11,2026-10-17,Spar Synergy Ship Management Private Limited,Engaged,6,139,0.0432
+2026-11-01,2026-11-07,Spar Synergy Ship Management Private Limited,Registered,4,146,0.0274
+2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,Engaged,12,139,0.0863
+2026-08-30,2026-09-05,Spar Synergy Ship Management Private Limited,Engaged,20,139,0.1439
+2026-09-06,2026-09-12,Spar Synergy Ship Management Private Limited,Engaged,1,139,0.0072
+2026-09-13,2026-09-19,Spar Synergy Ship Management Private Limited,Engaged,84,139,0.6043
+2026-09-20,2026-09-26,Spar Synergy Ship Management Private Limited,Engaged,10,139,0.0719
+2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,Engaged,28,139,0.2014
+2026-10-04,2026-10-10,Spar Synergy Ship Management Private Limited,Engaged,10,139,0.0719
+2026-10-11,2026-10-17,Spar Synergy Ship Management Private Limited,Engaged,2,139,0.0144
 2026-10-18,2026-10-24,Spar Synergy Ship Management Private Limited,Engaged,14,139,0.1007
-2026-11-15,2026-11-21,Spar Synergy Ship Management Private Limited,Engaged,1,139,0.0072
-2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,Active,10,54,0.1852
-2026-08-30,2026-09-05,Spar Synergy Ship Management Private Limited,Active,3,54,0.0556
-2026-09-06,2026-09-12,Spar Synergy Ship Management Private Limited,Active,1,54,0.0185
-2026-09-13,2026-09-19,Spar Synergy Ship Management Private Limited,Active,24,54,0.4444
+2026-11-01,2026-11-07,Spar Synergy Ship Management Private Limited,Engaged,4,139,0.0288
+2026-08-23,2026-08-29,Spar Synergy Ship Management Private Limited,Active,8,54,0.1481
 2026-09-20,2026-09-26,Spar Synergy Ship Management Private Limited,Active,4,54,0.0741
-2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,Active,5,54,0.0926
-2026-08-23,2026-08-29,Synergy Denmark A/S,All onboard,40,281,0.1423
-2026-08-30,2026-09-05,Synergy Denmark A/S,All onboard,48,281,0.1708
-2026-09-06,2026-09-12,Synergy Denmark A/S,All onboard,29,281,0.1032
-2026-09-13,2026-09-19,Synergy Denmark A/S,All onboard,55,281,0.1957
-2026-09-20,2026-09-26,Synergy Denmark A/S,All onboard,54,281,0.1922
-2026-09-27,2026-10-03,Synergy Denmark A/S,All onboard,106,281,0.3772
-2026-10-04,2026-10-10,Synergy Denmark A/S,All onboard,7,281,0.0249
-2026-10-11,2026-10-17,Synergy Denmark A/S,All onboard,7,281,0.0249
-2026-10-18,2026-10-24,Synergy Denmark A/S,All onboard,5,281,0.0178
-2026-08-23,2026-08-29,Synergy Denmark A/S,Registered,1,91,0.011
-2026-08-30,2026-09-05,Synergy Denmark A/S,Registered,1,91,0.011
-2026-09-06,2026-09-12,Synergy Denmark A/S,Registered,9,91,0.0989
-2026-09-13,2026-09-19,Synergy Denmark A/S,Registered,13,91,0.1429
-2026-09-20,2026-09-26,Synergy Denmark A/S,Registered,1,91,0.011
+2026-09-27,2026-10-03,Spar Synergy Ship Management Private Limited,Active,7,54,0.1296
+2026-10-04,2026-10-10,Spar Synergy Ship Management Private Limited,Active,1,54,0.0185
+2026-08-23,2026-08-29,Synergy Denmark A/S,All onboard,52,281,0.1851
+2026-08-30,2026-09-05,Synergy Denmark A/S,All onboard,83,281,0.2954
+2026-09-06,2026-09-12,Synergy Denmark A/S,All onboard,81,281,0.2883
+2026-09-13,2026-09-19,Synergy Denmark A/S,All onboard,166,281,0.5907
+2026-09-20,2026-09-26,Synergy Denmark A/S,All onboard,61,281,0.2171
+2026-09-27,2026-10-03,Synergy Denmark A/S,All onboard,6,281,0.0214
+2026-10-04,2026-10-10,Synergy Denmark A/S,All onboard,10,281,0.0356
+2026-10-11,2026-10-17,Synergy Denmark A/S,All onboard,6,281,0.0214
+2026-10-18,2026-10-24,Synergy Denmark A/S,All onboard,6,281,0.0214
+2026-08-23,2026-08-29,Synergy Denmark A/S,Registered,8,91,0.0879
+2026-08-30,2026-09-05,Synergy Denmark A/S,Registered,35,91,0.3846
+2026-09-13,2026-09-19,Synergy Denmark A/S,Registered,90,91,0.989
+2026-09-20,2026-09-26,Synergy Denmark A/S,Registered,31,91,0.3407
 2026-10-11,2026-10-17,Synergy Denmark A/S,Registered,1,91,0.011
-2026-10-18,2026-10-24,Synergy Denmark A/S,Registered,4,91,0.044
-2026-08-23,2026-08-29,Synergy Denmark A/S,Engaged,3,106,0.0283
-2026-08-30,2026-09-05,Synergy Denmark A/S,Engaged,9,106,0.0849
-2026-09-06,2026-09-12,Synergy Denmark A/S,Engaged,14,106,0.1321
-2026-09-13,2026-09-19,Synergy Denmark A/S,Engaged,18,106,0.1698
-2026-09-20,2026-09-26,Synergy Denmark A/S,Engaged,10,106,0.0943
+2026-08-23,2026-08-29,Synergy Denmark A/S,Engaged,10,106,0.0943
+2026-08-30,2026-09-05,Synergy Denmark A/S,Engaged,14,106,0.1321
+2026-09-06,2026-09-12,Synergy Denmark A/S,Engaged,8,106,0.0755
+2026-09-13,2026-09-19,Synergy Denmark A/S,Engaged,96,106,0.9057
+2026-09-20,2026-09-26,Synergy Denmark A/S,Engaged,25,106,0.2358
 2026-09-27,2026-10-03,Synergy Denmark A/S,Engaged,4,106,0.0377
-2026-10-18,2026-10-24,Synergy Denmark A/S,Engaged,4,106,0.0377
-2026-08-23,2026-08-29,Synergy Denmark A/S,Active,1,26,0.0385
-2026-09-06,2026-09-12,Synergy Denmark A/S,Active,8,26,0.3077
-2026-10-18,2026-10-24,Synergy Denmark A/S,Active,4,26,0.1538
-2026-08-23,2026-08-29,Synergy Korea Co Ltd,All onboard,5,111,0.045
-2026-08-30,2026-09-05,Synergy Korea Co Ltd,All onboard,4,111,0.036
-2026-09-06,2026-09-12,Synergy Korea Co Ltd,All onboard,7,111,0.0631
-2026-09-13,2026-09-19,Synergy Korea Co Ltd,All onboard,126,111,1.1351
-2026-09-20,2026-09-26,Synergy Korea Co Ltd,All onboard,49,111,0.4414
-2026-09-27,2026-10-03,Synergy Korea Co Ltd,All onboard,1,111,0.009
-2026-10-04,2026-10-10,Synergy Korea Co Ltd,All onboard,12,111,0.1081
-2026-10-11,2026-10-17,Synergy Korea Co Ltd,All onboard,1,111,0.009
+2026-10-04,2026-10-10,Synergy Denmark A/S,Engaged,3,106,0.0283
+2026-08-23,2026-08-29,Synergy Korea Co Ltd,All onboard,4,111,0.036
+2026-08-30,2026-09-05,Synergy Korea Co Ltd,All onboard,13,111,0.1171
+2026-09-06,2026-09-12,Synergy Korea Co Ltd,All onboard,9,111,0.0811
+2026-09-13,2026-09-19,Synergy Korea Co Ltd,All onboard,11,111,0.0991
+2026-09-20,2026-09-26,Synergy Korea Co Ltd,All onboard,47,111,0.4234
+2026-09-27,2026-10-03,Synergy Korea Co Ltd,All onboard,2,111,0.018
+2026-10-04,2026-10-10,Synergy Korea Co Ltd,All onboard,38,111,0.3423
+2026-10-11,2026-10-17,Synergy Korea Co Ltd,All onboard,13,111,0.1171
 2026-10-25,2026-10-31,Synergy Korea Co Ltd,All onboard,1,111,0.009
-2026-08-23,2026-08-29,Synergy Korea Co Ltd,Registered,5,37,0.1351
-2026-08-30,2026-09-05,Synergy Korea Co Ltd,Registered,1,37,0.027
-2026-09-06,2026-09-12,Synergy Korea Co Ltd,Registered,5,37,0.1351
-2026-09-13,2026-09-19,Synergy Korea Co Ltd,Registered,114,37,3.0811
-2026-09-20,2026-09-26,Synergy Korea Co Ltd,Registered,1,37,0.027
+2026-11-01,2026-11-07,Synergy Korea Co Ltd,All onboard,1,111,0.009
+2026-08-23,2026-08-29,Synergy Korea Co Ltd,Registered,3,37,0.0811
+2026-08-30,2026-09-05,Synergy Korea Co Ltd,Registered,2,37,0.0541
+2026-09-06,2026-09-12,Synergy Korea Co Ltd,Registered,6,37,0.1622
 2026-10-04,2026-10-10,Synergy Korea Co Ltd,Registered,12,37,0.3243
-2026-10-11,2026-10-17,Synergy Korea Co Ltd,Registered,1,37,0.027
 2026-10-25,2026-10-31,Synergy Korea Co Ltd,Registered,1,37,0.027
-2026-08-23,2026-08-29,Synergy Korea Co Ltd,Engaged,5,36,0.1389
-2026-08-30,2026-09-05,Synergy Korea Co Ltd,Engaged,1,36,0.0278
-2026-09-06,2026-09-12,Synergy Korea Co Ltd,Engaged,5,36,0.1389
-2026-09-13,2026-09-19,Synergy Korea Co Ltd,Engaged,114,36,3.1667
+2026-08-23,2026-08-29,Synergy Korea Co Ltd,Engaged,3,36,0.0833
+2026-08-30,2026-09-05,Synergy Korea Co Ltd,Engaged,2,36,0.0556
+2026-09-06,2026-09-12,Synergy Korea Co Ltd,Engaged,6,36,0.1667
 2026-10-04,2026-10-10,Synergy Korea Co Ltd,Engaged,12,36,0.3333
 2026-10-25,2026-10-31,Synergy Korea Co Ltd,Engaged,1,36,0.0278
-2026-08-23,2026-08-29,Synergy Korea Co Ltd,Active,5,17,0.2941
-2026-09-06,2026-09-12,Synergy Korea Co Ltd,Active,2,17,0.1176
-2026-09-13,2026-09-19,Synergy Korea Co Ltd,Active,5,17,0.2941
+2026-08-23,2026-08-29,Synergy Korea Co Ltd,Active,3,17,0.1765
+2026-09-06,2026-09-12,Synergy Korea Co Ltd,Active,3,17,0.1765
 2026-10-04,2026-10-10,Synergy Korea Co Ltd,Active,12,17,0.7059
 2026-10-25,2026-10-31,Synergy Korea Co Ltd,Active,1,17,0.0588
-2026-08-23,2026-08-29,Synergy Marine (Singapore) pre ltd,All onboard,15,84,0.1786
-2026-08-30,2026-09-05,Synergy Marine (Singapore) pre ltd,All onboard,15,84,0.1786
-2026-09-06,2026-09-12,Synergy Marine (Singapore) pre ltd,All onboard,13,84,0.1548
-2026-09-13,2026-09-19,Synergy Marine (Singapore) pre ltd,All onboard,16,84,0.1905
-2026-09-20,2026-09-26,Synergy Marine (Singapore) pre ltd,All onboard,1,84,0.0119
-2026-09-27,2026-10-03,Synergy Marine (Singapore) pre ltd,All onboard,6,84,0.0714
-2026-10-18,2026-10-24,Synergy Marine (Singapore) pre ltd,All onboard,4,84,0.0476
-2026-08-23,2026-08-29,Synergy Marine (Singapore) pre ltd,Registered,15,57,0.2632
-2026-08-30,2026-09-05,Synergy Marine (Singapore) pre ltd,Registered,14,57,0.2456
-2026-09-06,2026-09-12,Synergy Marine (Singapore) pre ltd,Registered,13,57,0.2281
-2026-09-20,2026-09-26,Synergy Marine (Singapore) pre ltd,Registered,1,57,0.0175
-2026-09-27,2026-10-03,Synergy Marine (Singapore) pre ltd,Registered,1,57,0.0175
-2026-10-18,2026-10-24,Synergy Marine (Singapore) pre ltd,Registered,2,57,0.0351
-2026-08-23,2026-08-29,Synergy Marine (Singapore) pre ltd,Engaged,15,56,0.2679
-2026-08-30,2026-09-05,Synergy Marine (Singapore) pre ltd,Engaged,15,56,0.2679
-2026-09-06,2026-09-12,Synergy Marine (Singapore) pre ltd,Engaged,13,56,0.2321
-2026-09-20,2026-09-26,Synergy Marine (Singapore) pre ltd,Engaged,1,56,0.0179
-2026-09-27,2026-10-03,Synergy Marine (Singapore) pre ltd,Engaged,1,56,0.0179
+2026-08-23,2026-08-29,Synergy Marine (Singapore) pre ltd,All onboard,4,84,0.0476
+2026-08-30,2026-09-05,Synergy Marine (Singapore) pre ltd,All onboard,80,84,0.9524
+2026-09-06,2026-09-12,Synergy Marine (Singapore) pre ltd,All onboard,26,84,0.3095
+2026-09-13,2026-09-19,Synergy Marine (Singapore) pre ltd,All onboard,55,84,0.6548
+2026-09-20,2026-09-26,Synergy Marine (Singapore) pre ltd,All onboard,36,84,0.4286
+2026-09-27,2026-10-03,Synergy Marine (Singapore) pre ltd,All onboard,31,84,0.369
+2026-10-04,2026-10-10,Synergy Marine (Singapore) pre ltd,All onboard,1,84,0.0119
+2026-10-18,2026-10-24,Synergy Marine (Singapore) pre ltd,All onboard,6,84,0.0714
+2026-11-01,2026-11-07,Synergy Marine (Singapore) pre ltd,All onboard,1,84,0.0119
+2026-11-15,2026-11-21,Synergy Marine (Singapore) pre ltd,All onboard,8,84,0.0952
+2026-08-23,2026-08-29,Synergy Marine (Singapore) pre ltd,Registered,4,57,0.0702
+2026-08-30,2026-09-05,Synergy Marine (Singapore) pre ltd,Registered,73,57,1.2807
+2026-09-06,2026-09-12,Synergy Marine (Singapore) pre ltd,Registered,12,57,0.2105
+2026-09-13,2026-09-19,Synergy Marine (Singapore) pre ltd,Registered,12,57,0.2105
+2026-09-20,2026-09-26,Synergy Marine (Singapore) pre ltd,Registered,34,57,0.5965
+2026-09-27,2026-10-03,Synergy Marine (Singapore) pre ltd,Registered,26,57,0.4561
+2026-10-04,2026-10-10,Synergy Marine (Singapore) pre ltd,Registered,1,57,0.0175
+2026-10-18,2026-10-24,Synergy Marine (Singapore) pre ltd,Registered,4,57,0.0702
+2026-11-01,2026-11-07,Synergy Marine (Singapore) pre ltd,Registered,1,57,0.0175
+2026-11-15,2026-11-21,Synergy Marine (Singapore) pre ltd,Registered,8,57,0.1404
+2026-08-23,2026-08-29,Synergy Marine (Singapore) pre ltd,Engaged,4,56,0.0714
+2026-08-30,2026-09-05,Synergy Marine (Singapore) pre ltd,Engaged,73,56,1.3036
+2026-09-06,2026-09-12,Synergy Marine (Singapore) pre ltd,Engaged,12,56,0.2143
+2026-09-13,2026-09-19,Synergy Marine (Singapore) pre ltd,Engaged,12,56,0.2143
+2026-09-20,2026-09-26,Synergy Marine (Singapore) pre ltd,Engaged,36,56,0.6429
+2026-09-27,2026-10-03,Synergy Marine (Singapore) pre ltd,Engaged,26,56,0.4643
+2026-10-04,2026-10-10,Synergy Marine (Singapore) pre ltd,Engaged,1,56,0.0179
+2026-10-18,2026-10-24,Synergy Marine (Singapore) pre ltd,Engaged,4,56,0.0714
+2026-11-01,2026-11-07,Synergy Marine (Singapore) pre ltd,Engaged,1,56,0.0179
+2026-11-15,2026-11-21,Synergy Marine (Singapore) pre ltd,Engaged,8,56,0.1429
 2026-08-23,2026-08-29,Synergy Marine (Singapore) pre ltd,Active,1,12,0.0833
-2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,All onboard,290,1004,0.2888
-2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,All onboard,257,1004,0.256
-2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,All onboard,193,1004,0.1922
-2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,All onboard,592,1004,0.5896
-2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,All onboard,226,1004,0.2251
-2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,All onboard,100,1004,0.0996
-2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,All onboard,82,1004,0.0817
-2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,All onboard,38,1004,0.0378
-2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,All onboard,30,1004,0.0299
-2026-10-25,2026-10-31,Synergy Marine Bulk Pte Ltd,All onboard,29,1004,0.0289
-2026-11-01,2026-11-07,Synergy Marine Bulk Pte Ltd,All onboard,12,1004,0.012
+2026-09-06,2026-09-12,Synergy Marine (Singapore) pre ltd,Active,2,12,0.1667
+2026-09-13,2026-09-19,Synergy Marine (Singapore) pre ltd,Active,1,12,0.0833
+2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,All onboard,325,1004,0.3237
+2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,All onboard,223,1004,0.2221
+2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,All onboard,180,1004,0.1793
+2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,All onboard,687,1004,0.6843
+2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,All onboard,343,1004,0.3416
+2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,All onboard,85,1004,0.0847
+2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,All onboard,67,1004,0.0667
+2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,All onboard,45,1004,0.0448
+2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,All onboard,34,1004,0.0339
+2026-10-25,2026-10-31,Synergy Marine Bulk Pte Ltd,All onboard,31,1004,0.0309
+2026-11-01,2026-11-07,Synergy Marine Bulk Pte Ltd,All onboard,16,1004,0.0159
 2026-11-08,2026-11-14,Synergy Marine Bulk Pte Ltd,All onboard,5,1004,0.005
-2026-11-15,2026-11-21,Synergy Marine Bulk Pte Ltd,All onboard,13,1004,0.0129
-2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,Registered,148,513,0.2885
-2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,Registered,133,513,0.2593
-2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,Registered,107,513,0.2086
-2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,Registered,208,513,0.4055
-2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,Registered,126,513,0.2456
-2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,Registered,50,513,0.0975
-2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,Registered,44,513,0.0858
-2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,Registered,16,513,0.0312
-2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,Registered,20,513,0.039
+2026-11-15,2026-11-21,Synergy Marine Bulk Pte Ltd,All onboard,6,1004,0.006
+2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,Registered,160,513,0.3119
+2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,Registered,93,513,0.1813
+2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,Registered,90,513,0.1754
+2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,Registered,233,513,0.4542
+2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,Registered,220,513,0.4288
+2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,Registered,45,513,0.0877
+2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,Registered,29,513,0.0565
+2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,Registered,17,513,0.0331
+2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,Registered,23,513,0.0448
 2026-10-25,2026-10-31,Synergy Marine Bulk Pte Ltd,Registered,16,513,0.0312
-2026-11-01,2026-11-07,Synergy Marine Bulk Pte Ltd,Registered,4,513,0.0078
+2026-11-01,2026-11-07,Synergy Marine Bulk Pte Ltd,Registered,8,513,0.0156
 2026-11-08,2026-11-14,Synergy Marine Bulk Pte Ltd,Registered,5,513,0.0097
 2026-11-15,2026-11-21,Synergy Marine Bulk Pte Ltd,Registered,6,513,0.0117
-2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,Engaged,144,451,0.3193
-2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,Engaged,129,451,0.286
-2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,Engaged,103,451,0.2284
-2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,Engaged,192,451,0.4257
-2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,Engaged,106,451,0.235
-2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,Engaged,39,451,0.0865
-2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,Engaged,42,451,0.0931
-2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,Engaged,16,451,0.0355
-2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,Engaged,18,451,0.0399
+2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,Engaged,153,451,0.3392
+2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,Engaged,88,451,0.1951
+2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,Engaged,81,451,0.1796
+2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,Engaged,223,451,0.4945
+2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,Engaged,200,451,0.4435
+2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,Engaged,25,451,0.0554
+2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,Engaged,22,451,0.0488
+2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,Engaged,13,451,0.0288
+2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,Engaged,19,451,0.0421
 2026-10-25,2026-10-31,Synergy Marine Bulk Pte Ltd,Engaged,16,451,0.0355
+2026-11-01,2026-11-07,Synergy Marine Bulk Pte Ltd,Engaged,4,451,0.0089
 2026-11-08,2026-11-14,Synergy Marine Bulk Pte Ltd,Engaged,5,451,0.0111
 2026-11-15,2026-11-21,Synergy Marine Bulk Pte Ltd,Engaged,6,451,0.0133
-2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,Active,11,163,0.0675
-2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,Active,9,163,0.0552
-2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,Active,16,163,0.0982
-2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,Active,5,163,0.0307
-2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,Active,3,163,0.0184
-2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,Active,1,163,0.0061
-2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,Active,5,163,0.0307
-2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,Active,6,163,0.0368
-2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,Active,10,163,0.0613
+2026-08-23,2026-08-29,Synergy Marine Bulk Pte Ltd,Active,9,163,0.0552
+2026-08-30,2026-09-05,Synergy Marine Bulk Pte Ltd,Active,44,163,0.2699
+2026-09-06,2026-09-12,Synergy Marine Bulk Pte Ltd,Active,17,163,0.1043
+2026-09-13,2026-09-19,Synergy Marine Bulk Pte Ltd,Active,102,163,0.6258
+2026-09-20,2026-09-26,Synergy Marine Bulk Pte Ltd,Active,47,163,0.2883
+2026-09-27,2026-10-03,Synergy Marine Bulk Pte Ltd,Active,6,163,0.0368
+2026-10-04,2026-10-10,Synergy Marine Bulk Pte Ltd,Active,8,163,0.0491
+2026-10-11,2026-10-17,Synergy Marine Bulk Pte Ltd,Active,3,163,0.0184
+2026-10-18,2026-10-24,Synergy Marine Bulk Pte Ltd,Active,12,163,0.0736
 2026-10-25,2026-10-31,Synergy Marine Bulk Pte Ltd,Active,3,163,0.0184
-2026-11-08,2026-11-14,Synergy Marine Bulk Pte Ltd,Active,4,163,0.0245
+2026-11-01,2026-11-07,Synergy Marine Bulk Pte Ltd,Active,4,163,0.0245
+2026-11-08,2026-11-14,Synergy Marine Bulk Pte Ltd,Active,5,163,0.0307
 2026-11-15,2026-11-21,Synergy Marine Bulk Pte Ltd,Active,6,163,0.0368
-2026-08-23,2026-08-29,Synergy Marine Copenhagen AS,All onboard,7,224,0.0312
-2026-08-30,2026-09-05,Synergy Marine Copenhagen AS,All onboard,15,224,0.067
-2026-09-06,2026-09-12,Synergy Marine Copenhagen AS,All onboard,10,224,0.0446
-2026-09-13,2026-09-19,Synergy Marine Copenhagen AS,All onboard,47,224,0.2098
-2026-09-20,2026-09-26,Synergy Marine Copenhagen AS,All onboard,16,224,0.0714
-2026-09-27,2026-10-03,Synergy Marine Copenhagen AS,All onboard,22,224,0.0982
-2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,All onboard,36,224,0.1607
-2026-10-11,2026-10-17,Synergy Marine Copenhagen AS,All onboard,3,224,0.0134
-2026-10-18,2026-10-24,Synergy Marine Copenhagen AS,All onboard,6,224,0.0268
-2026-10-25,2026-10-31,Synergy Marine Copenhagen AS,All onboard,2,224,0.0089
-2026-11-01,2026-11-07,Synergy Marine Copenhagen AS,All onboard,1,224,0.0045
-2026-08-23,2026-08-29,Synergy Marine Copenhagen AS,Registered,7,193,0.0363
-2026-08-30,2026-09-05,Synergy Marine Copenhagen AS,Registered,12,193,0.0622
-2026-09-06,2026-09-12,Synergy Marine Copenhagen AS,Registered,9,193,0.0466
-2026-09-13,2026-09-19,Synergy Marine Copenhagen AS,Registered,47,193,0.2435
-2026-09-20,2026-09-26,Synergy Marine Copenhagen AS,Registered,15,193,0.0777
-2026-09-27,2026-10-03,Synergy Marine Copenhagen AS,Registered,12,193,0.0622
-2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,Registered,30,193,0.1554
-2026-10-11,2026-10-17,Synergy Marine Copenhagen AS,Registered,3,193,0.0155
-2026-10-18,2026-10-24,Synergy Marine Copenhagen AS,Registered,5,193,0.0259
-2026-11-01,2026-11-07,Synergy Marine Copenhagen AS,Registered,1,193,0.0052
-2026-08-23,2026-08-29,Synergy Marine Copenhagen AS,Engaged,7,186,0.0376
-2026-08-30,2026-09-05,Synergy Marine Copenhagen AS,Engaged,11,186,0.0591
+2026-08-23,2026-08-29,Synergy Marine Copenhagen AS,All onboard,11,224,0.0491
+2026-08-30,2026-09-05,Synergy Marine Copenhagen AS,All onboard,18,224,0.0804
+2026-09-06,2026-09-12,Synergy Marine Copenhagen AS,All onboard,14,224,0.0625
+2026-09-13,2026-09-19,Synergy Marine Copenhagen AS,All onboard,103,224,0.4598
+2026-09-20,2026-09-26,Synergy Marine Copenhagen AS,All onboard,23,224,0.1027
+2026-09-27,2026-10-03,Synergy Marine Copenhagen AS,All onboard,47,224,0.2098
+2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,All onboard,189,224,0.8438
+2026-10-11,2026-10-17,Synergy Marine Copenhagen AS,All onboard,58,224,0.2589
+2026-10-18,2026-10-24,Synergy Marine Copenhagen AS,All onboard,26,224,0.1161
+2026-08-23,2026-08-29,Synergy Marine Copenhagen AS,Registered,11,193,0.057
+2026-08-30,2026-09-05,Synergy Marine Copenhagen AS,Registered,11,193,0.057
+2026-09-06,2026-09-12,Synergy Marine Copenhagen AS,Registered,13,193,0.0674
+2026-09-13,2026-09-19,Synergy Marine Copenhagen AS,Registered,103,193,0.5337
+2026-09-20,2026-09-26,Synergy Marine Copenhagen AS,Registered,22,193,0.114
+2026-09-27,2026-10-03,Synergy Marine Copenhagen AS,Registered,39,193,0.2021
+2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,Registered,183,193,0.9482
+2026-10-11,2026-10-17,Synergy Marine Copenhagen AS,Registered,58,193,0.3005
+2026-10-18,2026-10-24,Synergy Marine Copenhagen AS,Registered,25,193,0.1295
+2026-08-23,2026-08-29,Synergy Marine Copenhagen AS,Engaged,10,186,0.0538
+2026-08-30,2026-09-05,Synergy Marine Copenhagen AS,Engaged,10,186,0.0538
 2026-09-06,2026-09-12,Synergy Marine Copenhagen AS,Engaged,9,186,0.0484
-2026-09-13,2026-09-19,Synergy Marine Copenhagen AS,Engaged,47,186,0.2527
+2026-09-13,2026-09-19,Synergy Marine Copenhagen AS,Engaged,89,186,0.4785
 2026-09-20,2026-09-26,Synergy Marine Copenhagen AS,Engaged,15,186,0.0806
-2026-09-27,2026-10-03,Synergy Marine Copenhagen AS,Engaged,11,186,0.0591
-2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,Engaged,29,186,0.1559
-2026-10-11,2026-10-17,Synergy Marine Copenhagen AS,Engaged,3,186,0.0161
-2026-10-18,2026-10-24,Synergy Marine Copenhagen AS,Engaged,4,186,0.0215
-2026-11-01,2026-11-07,Synergy Marine Copenhagen AS,Engaged,1,186,0.0054
-2026-08-30,2026-09-05,Synergy Marine Copenhagen AS,Active,3,66,0.0455
-2026-09-06,2026-09-12,Synergy Marine Copenhagen AS,Active,6,66,0.0909
-2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,Active,3,66,0.0455
+2026-09-27,2026-10-03,Synergy Marine Copenhagen AS,Engaged,33,186,0.1774
+2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,Engaged,183,186,0.9839
+2026-10-11,2026-10-17,Synergy Marine Copenhagen AS,Engaged,57,186,0.3065
+2026-10-18,2026-10-24,Synergy Marine Copenhagen AS,Engaged,22,186,0.1183
+2026-09-06,2026-09-12,Synergy Marine Copenhagen AS,Active,4,66,0.0606
+2026-09-27,2026-10-03,Synergy Marine Copenhagen AS,Active,6,66,0.0909
+2026-10-04,2026-10-10,Synergy Marine Copenhagen AS,Active,108,66,1.6364
 2026-10-11,2026-10-17,Synergy Marine Copenhagen AS,Active,1,66,0.0152
-2026-08-23,2026-08-29,Synergy Marine Germany GmbH,All onboard,78,265,0.2943
-2026-08-30,2026-09-05,Synergy Marine Germany GmbH,All onboard,75,265,0.283
-2026-09-06,2026-09-12,Synergy Marine Germany GmbH,All onboard,22,265,0.083
-2026-09-13,2026-09-19,Synergy Marine Germany GmbH,All onboard,88,265,0.3321
-2026-09-20,2026-09-26,Synergy Marine Germany GmbH,All onboard,102,265,0.3849
-2026-09-27,2026-10-03,Synergy Marine Germany GmbH,All onboard,26,265,0.0981
-2026-10-04,2026-10-10,Synergy Marine Germany GmbH,All onboard,21,265,0.0792
-2026-10-11,2026-10-17,Synergy Marine Germany GmbH,All onboard,7,265,0.0264
-2026-10-18,2026-10-24,Synergy Marine Germany GmbH,All onboard,5,265,0.0189
+2026-08-23,2026-08-29,Synergy Marine Germany GmbH,All onboard,69,265,0.2604
+2026-08-30,2026-09-05,Synergy Marine Germany GmbH,All onboard,61,265,0.2302
+2026-09-06,2026-09-12,Synergy Marine Germany GmbH,All onboard,37,265,0.1396
+2026-09-13,2026-09-19,Synergy Marine Germany GmbH,All onboard,149,265,0.5623
+2026-09-20,2026-09-26,Synergy Marine Germany GmbH,All onboard,22,265,0.083
+2026-09-27,2026-10-03,Synergy Marine Germany GmbH,All onboard,12,265,0.0453
+2026-10-04,2026-10-10,Synergy Marine Germany GmbH,All onboard,14,265,0.0528
+2026-10-11,2026-10-17,Synergy Marine Germany GmbH,All onboard,1,265,0.0038
+2026-10-18,2026-10-24,Synergy Marine Germany GmbH,All onboard,3,265,0.0113
 2026-10-25,2026-10-31,Synergy Marine Germany GmbH,All onboard,1,265,0.0038
-2026-08-23,2026-08-29,Synergy Marine Germany GmbH,Registered,78,166,0.4699
-2026-08-30,2026-09-05,Synergy Marine Germany GmbH,Registered,71,166,0.4277
-2026-09-06,2026-09-12,Synergy Marine Germany GmbH,Registered,11,166,0.0663
-2026-09-13,2026-09-19,Synergy Marine Germany GmbH,Registered,20,166,0.1205
-2026-09-20,2026-09-26,Synergy Marine Germany GmbH,Registered,2,166,0.012
-2026-09-27,2026-10-03,Synergy Marine Germany GmbH,Registered,12,166,0.0723
-2026-10-04,2026-10-10,Synergy Marine Germany GmbH,Registered,16,166,0.0964
-2026-10-11,2026-10-17,Synergy Marine Germany GmbH,Registered,3,166,0.0181
-2026-10-18,2026-10-24,Synergy Marine Germany GmbH,Registered,5,166,0.0301
+2026-08-23,2026-08-29,Synergy Marine Germany GmbH,Registered,69,166,0.4157
+2026-08-30,2026-09-05,Synergy Marine Germany GmbH,Registered,56,166,0.3373
+2026-09-06,2026-09-12,Synergy Marine Germany GmbH,Registered,20,166,0.1205
+2026-09-13,2026-09-19,Synergy Marine Germany GmbH,Registered,107,166,0.6446
+2026-09-20,2026-09-26,Synergy Marine Germany GmbH,Registered,8,166,0.0482
+2026-09-27,2026-10-03,Synergy Marine Germany GmbH,Registered,9,166,0.0542
+2026-10-04,2026-10-10,Synergy Marine Germany GmbH,Registered,11,166,0.0663
+2026-10-11,2026-10-17,Synergy Marine Germany GmbH,Registered,1,166,0.006
+2026-10-18,2026-10-24,Synergy Marine Germany GmbH,Registered,3,166,0.0181
 2026-10-25,2026-10-31,Synergy Marine Germany GmbH,Registered,1,166,0.006
-2026-08-23,2026-08-29,Synergy Marine Germany GmbH,Engaged,65,163,0.3988
-2026-08-30,2026-09-05,Synergy Marine Germany GmbH,Engaged,64,163,0.3926
-2026-09-06,2026-09-12,Synergy Marine Germany GmbH,Engaged,15,163,0.092
-2026-09-13,2026-09-19,Synergy Marine Germany GmbH,Engaged,20,163,0.1227
-2026-09-20,2026-09-26,Synergy Marine Germany GmbH,Engaged,11,163,0.0675
-2026-09-27,2026-10-03,Synergy Marine Germany GmbH,Engaged,14,163,0.0859
-2026-10-04,2026-10-10,Synergy Marine Germany GmbH,Engaged,15,163,0.092
-2026-10-11,2026-10-17,Synergy Marine Germany GmbH,Engaged,3,163,0.0184
+2026-08-23,2026-08-29,Synergy Marine Germany GmbH,Engaged,56,163,0.3436
+2026-08-30,2026-09-05,Synergy Marine Germany GmbH,Engaged,51,163,0.3129
+2026-09-06,2026-09-12,Synergy Marine Germany GmbH,Engaged,32,163,0.1963
+2026-09-13,2026-09-19,Synergy Marine Germany GmbH,Engaged,107,163,0.6564
+2026-09-20,2026-09-26,Synergy Marine Germany GmbH,Engaged,13,163,0.0798
+2026-09-27,2026-10-03,Synergy Marine Germany GmbH,Engaged,11,163,0.0675
+2026-10-04,2026-10-10,Synergy Marine Germany GmbH,Engaged,11,163,0.0675
+2026-10-11,2026-10-17,Synergy Marine Germany GmbH,Engaged,1,163,0.0061
+2026-10-18,2026-10-24,Synergy Marine Germany GmbH,Engaged,2,163,0.0123
 2026-08-23,2026-08-29,Synergy Marine Germany GmbH,Active,51,41,1.2439
-2026-08-30,2026-09-05,Synergy Marine Germany GmbH,Active,11,41,0.2683
-2026-09-06,2026-09-12,Synergy Marine Germany GmbH,Active,2,41,0.0488
-2026-09-13,2026-09-19,Synergy Marine Germany GmbH,Active,6,41,0.1463
+2026-08-30,2026-09-05,Synergy Marine Germany GmbH,Active,27,41,0.6585
+2026-09-06,2026-09-12,Synergy Marine Germany GmbH,Active,1,41,0.0244
+2026-09-13,2026-09-19,Synergy Marine Germany GmbH,Active,16,41,0.3902
 2026-09-27,2026-10-03,Synergy Marine Germany GmbH,Active,1,41,0.0244
-2026-10-04,2026-10-10,Synergy Marine Germany GmbH,Active,5,41,0.122
-2026-10-11,2026-10-17,Synergy Marine Germany GmbH,Active,2,41,0.0488
-2026-08-23,2026-08-29,Synergy Marine Shanghai Limited,All onboard,19,225,0.0844
-2026-08-30,2026-09-05,Synergy Marine Shanghai Limited,All onboard,22,225,0.0978
-2026-09-06,2026-09-12,Synergy Marine Shanghai Limited,All onboard,6,225,0.0267
-2026-09-13,2026-09-19,Synergy Marine Shanghai Limited,All onboard,88,225,0.3911
-2026-09-20,2026-09-26,Synergy Marine Shanghai Limited,All onboard,39,225,0.1733
-2026-09-27,2026-10-03,Synergy Marine Shanghai Limited,All onboard,9,225,0.04
-2026-10-04,2026-10-10,Synergy Marine Shanghai Limited,All onboard,1,225,0.0044
-2026-10-11,2026-10-17,Synergy Marine Shanghai Limited,All onboard,3,225,0.0133
+2026-08-23,2026-08-29,Synergy Marine Shanghai Limited,All onboard,26,225,0.1156
+2026-08-30,2026-09-05,Synergy Marine Shanghai Limited,All onboard,25,225,0.1111
+2026-09-06,2026-09-12,Synergy Marine Shanghai Limited,All onboard,14,225,0.0622
+2026-09-13,2026-09-19,Synergy Marine Shanghai Limited,All onboard,40,225,0.1778
+2026-09-20,2026-09-26,Synergy Marine Shanghai Limited,All onboard,4,225,0.0178
+2026-09-27,2026-10-03,Synergy Marine Shanghai Limited,All onboard,14,225,0.0622
+2026-10-11,2026-10-17,Synergy Marine Shanghai Limited,All onboard,11,225,0.0489
 2026-11-01,2026-11-07,Synergy Marine Shanghai Limited,All onboard,1,225,0.0044
-2026-08-23,2026-08-29,Synergy Marine Shanghai Limited,Registered,8,55,0.1455
-2026-08-30,2026-09-05,Synergy Marine Shanghai Limited,Registered,8,55,0.1455
-2026-09-13,2026-09-19,Synergy Marine Shanghai Limited,Registered,12,55,0.2182
-2026-09-20,2026-09-26,Synergy Marine Shanghai Limited,Registered,12,55,0.2182
-2026-09-27,2026-10-03,Synergy Marine Shanghai Limited,Registered,2,55,0.0364
-2026-08-23,2026-08-29,Synergy Marine Shanghai Limited,Engaged,8,42,0.1905
-2026-08-30,2026-09-05,Synergy Marine Shanghai Limited,Engaged,8,42,0.1905
-2026-09-27,2026-10-03,Synergy Marine Shanghai Limited,Engaged,2,42,0.0476
+2026-08-23,2026-08-29,Synergy Marine Shanghai Limited,Registered,12,55,0.2182
+2026-08-30,2026-09-05,Synergy Marine Shanghai Limited,Registered,11,55,0.2
+2026-09-06,2026-09-12,Synergy Marine Shanghai Limited,Registered,8,55,0.1455
+2026-08-23,2026-08-29,Synergy Marine Shanghai Limited,Engaged,12,42,0.2857
+2026-08-30,2026-09-05,Synergy Marine Shanghai Limited,Engaged,11,42,0.2619
+2026-09-06,2026-09-12,Synergy Marine Shanghai Limited,Engaged,8,42,0.1905
+2026-08-23,2026-08-29,Synergy Marine Shanghai Limited,Active,4,22,0.1818
 2026-08-30,2026-09-05,Synergy Marine Shanghai Limited,Active,1,22,0.0455
+2026-09-06,2026-09-12,Synergy Marine Shanghai Limited,Active,8,22,0.3636
 2026-09-06,2026-09-12,Synergy Maritime Gas Pte. Ltd,All onboard,1,21,0.0476
 2026-09-20,2026-09-26,Synergy Maritime Gas Pte. Ltd,All onboard,1,21,0.0476
-2026-10-04,2026-10-10,Synergy Maritime Gas Pte. Ltd,All onboard,1,21,0.0476
 2026-09-06,2026-09-12,Synergy Maritime Gas Pte. Ltd,Registered,1,21,0.0476
 2026-09-20,2026-09-26,Synergy Maritime Gas Pte. Ltd,Registered,1,21,0.0476
-2026-10-04,2026-10-10,Synergy Maritime Gas Pte. Ltd,Registered,1,21,0.0476
 2026-09-06,2026-09-12,Synergy Maritime Gas Pte. Ltd,Engaged,1,20,0.05
 2026-09-20,2026-09-26,Synergy Maritime Gas Pte. Ltd,Engaged,1,20,0.05
-2026-10-04,2026-10-10,Synergy Maritime Gas Pte. Ltd,Engaged,1,20,0.05
 2026-09-06,2026-09-12,Synergy Maritime Gas Pte. Ltd,Active,1,18,0.0556
 2026-09-20,2026-09-26,Synergy Maritime Gas Pte. Ltd,Active,1,18,0.0556
-2026-10-04,2026-10-10,Synergy Maritime Gas Pte. Ltd,Active,1,18,0.0556
-2026-08-23,2026-08-29,Synergy Maritime Private Limited,All onboard,264,2975,0.0887
-2026-08-30,2026-09-05,Synergy Maritime Private Limited,All onboard,477,2975,0.1603
-2026-09-06,2026-09-12,Synergy Maritime Private Limited,All onboard,415,2975,0.1395
-2026-09-13,2026-09-19,Synergy Maritime Private Limited,All onboard,905,2975,0.3042
-2026-09-20,2026-09-26,Synergy Maritime Private Limited,All onboard,535,2975,0.1798
-2026-09-27,2026-10-03,Synergy Maritime Private Limited,All onboard,352,2975,0.1183
-2026-10-04,2026-10-10,Synergy Maritime Private Limited,All onboard,322,2975,0.1082
-2026-10-11,2026-10-17,Synergy Maritime Private Limited,All onboard,200,2975,0.0672
-2026-10-18,2026-10-24,Synergy Maritime Private Limited,All onboard,51,2975,0.0171
+2026-08-23,2026-08-29,Synergy Maritime Private Limited,All onboard,276,2975,0.0928
+2026-08-30,2026-09-05,Synergy Maritime Private Limited,All onboard,528,2975,0.1775
+2026-09-06,2026-09-12,Synergy Maritime Private Limited,All onboard,254,2975,0.0854
+2026-09-13,2026-09-19,Synergy Maritime Private Limited,All onboard,834,2975,0.2803
+2026-09-20,2026-09-26,Synergy Maritime Private Limited,All onboard,528,2975,0.1775
+2026-09-27,2026-10-03,Synergy Maritime Private Limited,All onboard,539,2975,0.1812
+2026-10-04,2026-10-10,Synergy Maritime Private Limited,All onboard,390,2975,0.1311
+2026-10-11,2026-10-17,Synergy Maritime Private Limited,All onboard,118,2975,0.0397
+2026-10-18,2026-10-24,Synergy Maritime Private Limited,All onboard,55,2975,0.0185
 2026-10-25,2026-10-31,Synergy Maritime Private Limited,All onboard,25,2975,0.0084
-2026-11-01,2026-11-07,Synergy Maritime Private Limited,All onboard,14,2975,0.0047
+2026-11-01,2026-11-07,Synergy Maritime Private Limited,All onboard,18,2975,0.0061
 2026-11-08,2026-11-14,Synergy Maritime Private Limited,All onboard,8,2975,0.0027
-2026-11-15,2026-11-21,Synergy Maritime Private Limited,All onboard,15,2975,0.005
-2026-08-23,2026-08-29,Synergy Maritime Private Limited,Registered,226,1928,0.1172
-2026-08-30,2026-09-05,Synergy Maritime Private Limited,Registered,328,1928,0.1701
-2026-09-06,2026-09-12,Synergy Maritime Private Limited,Registered,284,1928,0.1473
-2026-09-13,2026-09-19,Synergy Maritime Private Limited,Registered,657,1928,0.3408
-2026-09-20,2026-09-26,Synergy Maritime Private Limited,Registered,269,1928,0.1395
-2026-09-27,2026-10-03,Synergy Maritime Private Limited,Registered,229,1928,0.1188
-2026-10-04,2026-10-10,Synergy Maritime Private Limited,Registered,179,1928,0.0928
-2026-10-11,2026-10-17,Synergy Maritime Private Limited,Registered,164,1928,0.0851
-2026-10-18,2026-10-24,Synergy Maritime Private Limited,Registered,30,1928,0.0156
-2026-10-25,2026-10-31,Synergy Maritime Private Limited,Registered,20,1928,0.0104
-2026-11-01,2026-11-07,Synergy Maritime Private Limited,Registered,12,1928,0.0062
-2026-11-08,2026-11-14,Synergy Maritime Private Limited,Registered,7,1928,0.0036
-2026-11-15,2026-11-21,Synergy Maritime Private Limited,Registered,11,1928,0.0057
-2026-08-23,2026-08-29,Synergy Maritime Private Limited,Engaged,204,1916,0.1065
-2026-08-30,2026-09-05,Synergy Maritime Private Limited,Engaged,350,1916,0.1827
-2026-09-06,2026-09-12,Synergy Maritime Private Limited,Engaged,265,1916,0.1383
-2026-09-13,2026-09-19,Synergy Maritime Private Limited,Engaged,628,1916,0.3278
-2026-09-20,2026-09-26,Synergy Maritime Private Limited,Engaged,276,1916,0.1441
-2026-09-27,2026-10-03,Synergy Maritime Private Limited,Engaged,215,1916,0.1122
-2026-10-04,2026-10-10,Synergy Maritime Private Limited,Engaged,198,1916,0.1033
-2026-10-11,2026-10-17,Synergy Maritime Private Limited,Engaged,151,1916,0.0788
-2026-10-18,2026-10-24,Synergy Maritime Private Limited,Engaged,30,1916,0.0157
-2026-10-25,2026-10-31,Synergy Maritime Private Limited,Engaged,17,1916,0.0089
-2026-11-01,2026-11-07,Synergy Maritime Private Limited,Engaged,12,1916,0.0063
-2026-11-08,2026-11-14,Synergy Maritime Private Limited,Engaged,4,1916,0.0021
-2026-11-15,2026-11-21,Synergy Maritime Private Limited,Engaged,11,1916,0.0057
-2026-08-23,2026-08-29,Synergy Maritime Private Limited,Active,96,794,0.1209
-2026-08-30,2026-09-05,Synergy Maritime Private Limited,Active,164,794,0.2065
-2026-09-06,2026-09-12,Synergy Maritime Private Limited,Active,155,794,0.1952
-2026-09-13,2026-09-19,Synergy Maritime Private Limited,Active,243,794,0.306
-2026-09-20,2026-09-26,Synergy Maritime Private Limited,Active,155,794,0.1952
-2026-09-27,2026-10-03,Synergy Maritime Private Limited,Active,163,794,0.2053
-2026-10-04,2026-10-10,Synergy Maritime Private Limited,Active,91,794,0.1146
-2026-10-11,2026-10-17,Synergy Maritime Private Limited,Active,47,794,0.0592
-2026-10-18,2026-10-24,Synergy Maritime Private Limited,Active,8,794,0.0101
-2026-10-25,2026-10-31,Synergy Maritime Private Limited,Active,10,794,0.0126
-2026-11-01,2026-11-07,Synergy Maritime Private Limited,Active,3,794,0.0038
+2026-11-15,2026-11-21,Synergy Maritime Private Limited,All onboard,42,2975,0.0141
+2026-11-22,2026-11-28,Synergy Maritime Private Limited,All onboard,1,2975,0.0003
+2026-08-23,2026-08-29,Synergy Maritime Private Limited,Registered,152,1928,0.0788
+2026-08-30,2026-09-05,Synergy Maritime Private Limited,Registered,409,1928,0.2121
+2026-09-06,2026-09-12,Synergy Maritime Private Limited,Registered,194,1928,0.1006
+2026-09-13,2026-09-19,Synergy Maritime Private Limited,Registered,543,1928,0.2816
+2026-09-20,2026-09-26,Synergy Maritime Private Limited,Registered,321,1928,0.1665
+2026-09-27,2026-10-03,Synergy Maritime Private Limited,Registered,270,1928,0.14
+2026-10-04,2026-10-10,Synergy Maritime Private Limited,Registered,284,1928,0.1473
+2026-10-11,2026-10-17,Synergy Maritime Private Limited,Registered,93,1928,0.0482
+2026-10-18,2026-10-24,Synergy Maritime Private Limited,Registered,46,1928,0.0239
+2026-10-25,2026-10-31,Synergy Maritime Private Limited,Registered,23,1928,0.0119
+2026-11-01,2026-11-07,Synergy Maritime Private Limited,Registered,18,1928,0.0093
+2026-11-08,2026-11-14,Synergy Maritime Private Limited,Registered,8,1928,0.0041
+2026-11-15,2026-11-21,Synergy Maritime Private Limited,Registered,40,1928,0.0207
+2026-11-22,2026-11-28,Synergy Maritime Private Limited,Registered,1,1928,0.0005
+2026-08-23,2026-08-29,Synergy Maritime Private Limited,Engaged,130,1916,0.0678
+2026-08-30,2026-09-05,Synergy Maritime Private Limited,Engaged,423,1916,0.2208
+2026-09-06,2026-09-12,Synergy Maritime Private Limited,Engaged,170,1916,0.0887
+2026-09-13,2026-09-19,Synergy Maritime Private Limited,Engaged,420,1916,0.2192
+2026-09-20,2026-09-26,Synergy Maritime Private Limited,Engaged,327,1916,0.1707
+2026-09-27,2026-10-03,Synergy Maritime Private Limited,Engaged,302,1916,0.1576
+2026-10-04,2026-10-10,Synergy Maritime Private Limited,Engaged,307,1916,0.1602
+2026-10-11,2026-10-17,Synergy Maritime Private Limited,Engaged,91,1916,0.0475
+2026-10-18,2026-10-24,Synergy Maritime Private Limited,Engaged,44,1916,0.023
+2026-10-25,2026-10-31,Synergy Maritime Private Limited,Engaged,23,1916,0.012
+2026-11-01,2026-11-07,Synergy Maritime Private Limited,Engaged,18,1916,0.0094
+2026-11-08,2026-11-14,Synergy Maritime Private Limited,Engaged,5,1916,0.0026
+2026-11-15,2026-11-21,Synergy Maritime Private Limited,Engaged,37,1916,0.0193
+2026-11-22,2026-11-28,Synergy Maritime Private Limited,Engaged,1,1916,0.0005
+2026-08-23,2026-08-29,Synergy Maritime Private Limited,Active,73,794,0.0919
+2026-08-30,2026-09-05,Synergy Maritime Private Limited,Active,158,794,0.199
+2026-09-06,2026-09-12,Synergy Maritime Private Limited,Active,95,794,0.1196
+2026-09-13,2026-09-19,Synergy Maritime Private Limited,Active,101,794,0.1272
+2026-09-20,2026-09-26,Synergy Maritime Private Limited,Active,79,794,0.0995
+2026-09-27,2026-10-03,Synergy Maritime Private Limited,Active,41,794,0.0516
+2026-10-04,2026-10-10,Synergy Maritime Private Limited,Active,193,794,0.2431
+2026-10-11,2026-10-17,Synergy Maritime Private Limited,Active,42,794,0.0529
+2026-10-18,2026-10-24,Synergy Maritime Private Limited,Active,5,794,0.0063
+2026-10-25,2026-10-31,Synergy Maritime Private Limited,Active,8,794,0.0101
+2026-11-01,2026-11-07,Synergy Maritime Private Limited,Active,5,794,0.0063
 2026-11-08,2026-11-14,Synergy Maritime Private Limited,Active,4,794,0.005
-2026-11-15,2026-11-21,Synergy Maritime Private Limited,Active,1,794,0.0013
-2026-08-23,2026-08-29,Synergy Mideast Ship Management DMCC,All onboard,4,148,0.027
+2026-11-15,2026-11-21,Synergy Maritime Private Limited,Active,16,794,0.0202
+2026-08-23,2026-08-29,Synergy Mideast Ship Management DMCC,All onboard,2,148,0.0135
 2026-08-30,2026-09-05,Synergy Mideast Ship Management DMCC,All onboard,15,148,0.1014
-2026-09-06,2026-09-12,Synergy Mideast Ship Management DMCC,All onboard,19,148,0.1284
-2026-09-13,2026-09-19,Synergy Mideast Ship Management DMCC,All onboard,118,148,0.7973
-2026-09-20,2026-09-26,Synergy Mideast Ship Management DMCC,All onboard,95,148,0.6419
-2026-09-27,2026-10-03,Synergy Mideast Ship Management DMCC,All onboard,11,148,0.0743
-2026-10-04,2026-10-10,Synergy Mideast Ship Management DMCC,All onboard,39,148,0.2635
-2026-10-11,2026-10-17,Synergy Mideast Ship Management DMCC,All onboard,23,148,0.1554
-2026-10-18,2026-10-24,Synergy Mideast Ship Management DMCC,All onboard,2,148,0.0135
-2026-08-23,2026-08-29,Synergy Mideast Ship Management DMCC,Registered,4,84,0.0476
-2026-08-30,2026-09-05,Synergy Mideast Ship Management DMCC,Registered,11,84,0.131
+2026-09-06,2026-09-12,Synergy Mideast Ship Management DMCC,All onboard,22,148,0.1486
+2026-09-13,2026-09-19,Synergy Mideast Ship Management DMCC,All onboard,59,148,0.3986
+2026-09-20,2026-09-26,Synergy Mideast Ship Management DMCC,All onboard,71,148,0.4797
+2026-09-27,2026-10-03,Synergy Mideast Ship Management DMCC,All onboard,10,148,0.0676
+2026-10-04,2026-10-10,Synergy Mideast Ship Management DMCC,All onboard,51,148,0.3446
+2026-10-11,2026-10-17,Synergy Mideast Ship Management DMCC,All onboard,61,148,0.4122
+2026-08-23,2026-08-29,Synergy Mideast Ship Management DMCC,Registered,2,84,0.0238
+2026-08-30,2026-09-05,Synergy Mideast Ship Management DMCC,Registered,14,84,0.1667
 2026-09-06,2026-09-12,Synergy Mideast Ship Management DMCC,Registered,8,84,0.0952
-2026-09-13,2026-09-19,Synergy Mideast Ship Management DMCC,Registered,117,84,1.3929
-2026-09-20,2026-09-26,Synergy Mideast Ship Management DMCC,Registered,92,84,1.0952
-2026-09-27,2026-10-03,Synergy Mideast Ship Management DMCC,Registered,10,84,0.119
-2026-10-04,2026-10-10,Synergy Mideast Ship Management DMCC,Registered,36,84,0.4286
-2026-10-11,2026-10-17,Synergy Mideast Ship Management DMCC,Registered,9,84,0.1071
-2026-08-23,2026-08-29,Synergy Mideast Ship Management DMCC,Engaged,4,83,0.0482
+2026-09-13,2026-09-19,Synergy Mideast Ship Management DMCC,Registered,20,84,0.2381
+2026-09-20,2026-09-26,Synergy Mideast Ship Management DMCC,Registered,3,84,0.0357
+2026-09-27,2026-10-03,Synergy Mideast Ship Management DMCC,Registered,6,84,0.0714
+2026-10-04,2026-10-10,Synergy Mideast Ship Management DMCC,Registered,7,84,0.0833
+2026-10-11,2026-10-17,Synergy Mideast Ship Management DMCC,Registered,1,84,0.0119
+2026-08-23,2026-08-29,Synergy Mideast Ship Management DMCC,Engaged,2,83,0.0241
 2026-08-30,2026-09-05,Synergy Mideast Ship Management DMCC,Engaged,11,83,0.1325
-2026-09-06,2026-09-12,Synergy Mideast Ship Management DMCC,Engaged,3,83,0.0361
-2026-09-13,2026-09-19,Synergy Mideast Ship Management DMCC,Engaged,93,83,1.1205
-2026-09-20,2026-09-26,Synergy Mideast Ship Management DMCC,Engaged,90,83,1.0843
-2026-09-27,2026-10-03,Synergy Mideast Ship Management DMCC,Engaged,9,83,0.1084
-2026-10-04,2026-10-10,Synergy Mideast Ship Management DMCC,Engaged,32,83,0.3855
-2026-10-11,2026-10-17,Synergy Mideast Ship Management DMCC,Engaged,12,83,0.1446
-2026-08-23,2026-08-29,Synergy Mideast Ship Management DMCC,Active,2,14,0.1429
-2026-08-23,2026-08-29,Synergy Navis marine Private Limited,All onboard,115,528,0.2178
-2026-08-30,2026-09-05,Synergy Navis marine Private Limited,All onboard,76,528,0.1439
-2026-09-06,2026-09-12,Synergy Navis marine Private Limited,All onboard,71,528,0.1345
-2026-09-13,2026-09-19,Synergy Navis marine Private Limited,All onboard,214,528,0.4053
-2026-09-20,2026-09-26,Synergy Navis marine Private Limited,All onboard,136,528,0.2576
-2026-09-27,2026-10-03,Synergy Navis marine Private Limited,All onboard,136,528,0.2576
-2026-10-04,2026-10-10,Synergy Navis marine Private Limited,All onboard,47,528,0.089
-2026-10-11,2026-10-17,Synergy Navis marine Private Limited,All onboard,40,528,0.0758
-2026-10-18,2026-10-24,Synergy Navis marine Private Limited,All onboard,7,528,0.0133
-2026-11-01,2026-11-07,Synergy Navis marine Private Limited,All onboard,6,528,0.0114
-2026-11-15,2026-11-21,Synergy Navis marine Private Limited,All onboard,9,528,0.017
-2026-08-23,2026-08-29,Synergy Navis marine Private Limited,Registered,103,407,0.2531
-2026-08-30,2026-09-05,Synergy Navis marine Private Limited,Registered,55,407,0.1351
-2026-09-06,2026-09-12,Synergy Navis marine Private Limited,Registered,67,407,0.1646
-2026-09-13,2026-09-19,Synergy Navis marine Private Limited,Registered,148,407,0.3636
-2026-09-20,2026-09-26,Synergy Navis marine Private Limited,Registered,88,407,0.2162
-2026-09-27,2026-10-03,Synergy Navis marine Private Limited,Registered,31,407,0.0762
-2026-10-04,2026-10-10,Synergy Navis marine Private Limited,Registered,46,407,0.113
-2026-10-11,2026-10-17,Synergy Navis marine Private Limited,Registered,28,407,0.0688
-2026-10-18,2026-10-24,Synergy Navis marine Private Limited,Registered,2,407,0.0049
-2026-11-01,2026-11-07,Synergy Navis marine Private Limited,Registered,4,407,0.0098
-2026-11-15,2026-11-21,Synergy Navis marine Private Limited,Registered,9,407,0.0221
-2026-08-23,2026-08-29,Synergy Navis marine Private Limited,Engaged,106,404,0.2624
-2026-08-30,2026-09-05,Synergy Navis marine Private Limited,Engaged,58,404,0.1436
-2026-09-06,2026-09-12,Synergy Navis marine Private Limited,Engaged,68,404,0.1683
-2026-09-13,2026-09-19,Synergy Navis marine Private Limited,Engaged,156,404,0.3861
-2026-09-20,2026-09-26,Synergy Navis marine Private Limited,Engaged,89,404,0.2203
-2026-09-27,2026-10-03,Synergy Navis marine Private Limited,Engaged,33,404,0.0817
-2026-10-04,2026-10-10,Synergy Navis marine Private Limited,Engaged,46,404,0.1139
-2026-10-11,2026-10-17,Synergy Navis marine Private Limited,Engaged,30,404,0.0743
-2026-10-18,2026-10-24,Synergy Navis marine Private Limited,Engaged,4,404,0.0099
+2026-09-06,2026-09-12,Synergy Mideast Ship Management DMCC,Engaged,4,83,0.0482
+2026-09-13,2026-09-19,Synergy Mideast Ship Management DMCC,Engaged,39,83,0.4699
+2026-09-20,2026-09-26,Synergy Mideast Ship Management DMCC,Engaged,71,83,0.8554
+2026-09-27,2026-10-03,Synergy Mideast Ship Management DMCC,Engaged,8,83,0.0964
+2026-10-04,2026-10-10,Synergy Mideast Ship Management DMCC,Engaged,44,83,0.5301
+2026-10-11,2026-10-17,Synergy Mideast Ship Management DMCC,Engaged,59,83,0.7108
+2026-08-23,2026-08-29,Synergy Navis marine Private Limited,All onboard,48,528,0.0909
+2026-08-30,2026-09-05,Synergy Navis marine Private Limited,All onboard,129,528,0.2443
+2026-09-06,2026-09-12,Synergy Navis marine Private Limited,All onboard,61,528,0.1155
+2026-09-13,2026-09-19,Synergy Navis marine Private Limited,All onboard,192,528,0.3636
+2026-09-20,2026-09-26,Synergy Navis marine Private Limited,All onboard,99,528,0.1875
+2026-09-27,2026-10-03,Synergy Navis marine Private Limited,All onboard,41,528,0.0777
+2026-10-04,2026-10-10,Synergy Navis marine Private Limited,All onboard,52,528,0.0985
+2026-10-11,2026-10-17,Synergy Navis marine Private Limited,All onboard,39,528,0.0739
+2026-10-18,2026-10-24,Synergy Navis marine Private Limited,All onboard,8,528,0.0152
+2026-11-01,2026-11-07,Synergy Navis marine Private Limited,All onboard,1,528,0.0019
+2026-08-23,2026-08-29,Synergy Navis marine Private Limited,Registered,47,407,0.1155
+2026-08-30,2026-09-05,Synergy Navis marine Private Limited,Registered,110,407,0.2703
+2026-09-06,2026-09-12,Synergy Navis marine Private Limited,Registered,60,407,0.1474
+2026-09-13,2026-09-19,Synergy Navis marine Private Limited,Registered,127,407,0.312
+2026-09-20,2026-09-26,Synergy Navis marine Private Limited,Registered,48,407,0.1179
+2026-09-27,2026-10-03,Synergy Navis marine Private Limited,Registered,34,407,0.0835
+2026-10-04,2026-10-10,Synergy Navis marine Private Limited,Registered,27,407,0.0663
+2026-10-11,2026-10-17,Synergy Navis marine Private Limited,Registered,22,407,0.0541
+2026-10-18,2026-10-24,Synergy Navis marine Private Limited,Registered,4,407,0.0098
+2026-11-01,2026-11-07,Synergy Navis marine Private Limited,Registered,1,407,0.0025
+2026-08-23,2026-08-29,Synergy Navis marine Private Limited,Engaged,42,404,0.104
+2026-08-30,2026-09-05,Synergy Navis marine Private Limited,Engaged,107,404,0.2649
+2026-09-06,2026-09-12,Synergy Navis marine Private Limited,Engaged,41,404,0.1015
+2026-09-13,2026-09-19,Synergy Navis marine Private Limited,Engaged,161,404,0.3985
+2026-09-20,2026-09-26,Synergy Navis marine Private Limited,Engaged,64,404,0.1584
+2026-09-27,2026-10-03,Synergy Navis marine Private Limited,Engaged,37,404,0.0916
+2026-10-04,2026-10-10,Synergy Navis marine Private Limited,Engaged,33,404,0.0817
+2026-10-11,2026-10-17,Synergy Navis marine Private Limited,Engaged,20,404,0.0495
+2026-10-18,2026-10-24,Synergy Navis marine Private Limited,Engaged,5,404,0.0124
 2026-11-01,2026-11-07,Synergy Navis marine Private Limited,Engaged,1,404,0.0025
-2026-08-23,2026-08-29,Synergy Navis marine Private Limited,Active,43,176,0.2443
-2026-08-30,2026-09-05,Synergy Navis marine Private Limited,Active,12,176,0.0682
-2026-09-06,2026-09-12,Synergy Navis marine Private Limited,Active,15,176,0.0852
-2026-09-13,2026-09-19,Synergy Navis marine Private Limited,Active,74,176,0.4205
-2026-09-20,2026-09-26,Synergy Navis marine Private Limited,Active,27,176,0.1534
-2026-09-27,2026-10-03,Synergy Navis marine Private Limited,Active,14,176,0.0795
-2026-10-11,2026-10-17,Synergy Navis marine Private Limited,Active,7,176,0.0398
-2026-10-18,2026-10-24,Synergy Navis marine Private Limited,Active,2,176,0.0114
+2026-08-23,2026-08-29,Synergy Navis marine Private Limited,Active,32,176,0.1818
+2026-08-30,2026-09-05,Synergy Navis marine Private Limited,Active,20,176,0.1136
+2026-09-06,2026-09-12,Synergy Navis marine Private Limited,Active,24,176,0.1364
+2026-09-13,2026-09-19,Synergy Navis marine Private Limited,Active,63,176,0.358
+2026-09-20,2026-09-26,Synergy Navis marine Private Limited,Active,16,176,0.0909
+2026-09-27,2026-10-03,Synergy Navis marine Private Limited,Active,9,176,0.0511
+2026-10-04,2026-10-10,Synergy Navis marine Private Limited,Active,22,176,0.125
+2026-10-11,2026-10-17,Synergy Navis marine Private Limited,Active,2,176,0.0114
 2026-11-01,2026-11-07,Synergy Navis marine Private Limited,Active,1,176,0.0057
-2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,All onboard,71,533,0.1332
-2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,All onboard,130,533,0.2439
-2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,All onboard,11,533,0.0206
-2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,All onboard,152,533,0.2852
-2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,All onboard,50,533,0.0938
-2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,All onboard,56,533,0.1051
-2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,All onboard,48,533,0.0901
-2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,All onboard,44,533,0.0826
-2026-10-18,2026-10-24,Synergy Ocean Maritime Inc.,All onboard,15,533,0.0281
+2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,All onboard,67,533,0.1257
+2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,All onboard,174,533,0.3265
+2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,All onboard,32,533,0.06
+2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,All onboard,162,533,0.3039
+2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,All onboard,113,533,0.212
+2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,All onboard,68,533,0.1276
+2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,All onboard,50,533,0.0938
+2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,All onboard,49,533,0.0919
+2026-10-18,2026-10-24,Synergy Ocean Maritime Inc.,All onboard,8,533,0.015
 2026-11-01,2026-11-07,Synergy Ocean Maritime Inc.,All onboard,1,533,0.0019
-2026-11-15,2026-11-21,Synergy Ocean Maritime Inc.,All onboard,3,533,0.0056
-2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,Registered,58,344,0.1686
-2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,Registered,53,344,0.1541
-2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,Registered,9,344,0.0262
-2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,Registered,53,344,0.1541
-2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,Registered,14,344,0.0407
-2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,Registered,40,344,0.1163
-2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,Registered,22,344,0.064
-2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,Registered,34,344,0.0988
-2026-10-18,2026-10-24,Synergy Ocean Maritime Inc.,Registered,6,344,0.0174
+2026-11-15,2026-11-21,Synergy Ocean Maritime Inc.,All onboard,2,533,0.0038
+2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,Registered,44,344,0.1279
+2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,Registered,121,344,0.3517
+2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,Registered,24,344,0.0698
+2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,Registered,64,344,0.186
+2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,Registered,44,344,0.1279
+2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,Registered,43,344,0.125
+2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,Registered,21,344,0.061
+2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,Registered,23,344,0.0669
+2026-10-18,2026-10-24,Synergy Ocean Maritime Inc.,Registered,3,344,0.0087
 2026-11-01,2026-11-07,Synergy Ocean Maritime Inc.,Registered,1,344,0.0029
-2026-11-15,2026-11-21,Synergy Ocean Maritime Inc.,Registered,3,344,0.0087
-2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,Engaged,37,314,0.1178
-2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,Engaged,91,314,0.2898
-2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,Engaged,9,314,0.0287
-2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,Engaged,52,314,0.1656
-2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,Engaged,17,314,0.0541
-2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,Engaged,33,314,0.1051
-2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,Engaged,43,314,0.1369
-2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,Engaged,18,314,0.0573
-2026-10-18,2026-10-24,Synergy Ocean Maritime Inc.,Engaged,5,314,0.0159
-2026-11-01,2026-11-07,Synergy Ocean Maritime Inc.,Engaged,1,314,0.0032
-2026-11-15,2026-11-21,Synergy Ocean Maritime Inc.,Engaged,3,314,0.0096
-2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,Active,17,204,0.0833
-2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,Active,3,204,0.0147
-2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,Active,4,204,0.0196
-2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,Active,51,204,0.25
-2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,Active,9,204,0.0441
-2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,Active,23,204,0.1127
-2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,Active,18,204,0.0882
-2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,Active,11,204,0.0539
-2026-10-18,2026-10-24,Synergy Ocean Maritime Inc.,Active,5,204,0.0245
-2026-11-15,2026-11-21,Synergy Ocean Maritime Inc.,Active,3,204,0.0147
-2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,All onboard,41,306,0.134
-2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,All onboard,67,306,0.219
-2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,All onboard,60,306,0.1961
-2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,All onboard,280,306,0.915
-2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,All onboard,46,306,0.1503
-2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,All onboard,48,306,0.1569
+2026-11-15,2026-11-21,Synergy Ocean Maritime Inc.,Registered,2,344,0.0058
+2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,Engaged,49,314,0.1561
+2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,Engaged,135,314,0.4299
+2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,Engaged,16,314,0.051
+2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,Engaged,46,314,0.1465
+2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,Engaged,41,314,0.1306
+2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,Engaged,49,314,0.1561
+2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,Engaged,45,314,0.1433
+2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,Engaged,5,314,0.0159
+2026-08-23,2026-08-29,Synergy Ocean Maritime Inc.,Active,21,204,0.1029
+2026-08-30,2026-09-05,Synergy Ocean Maritime Inc.,Active,1,204,0.0049
+2026-09-06,2026-09-12,Synergy Ocean Maritime Inc.,Active,3,204,0.0147
+2026-09-13,2026-09-19,Synergy Ocean Maritime Inc.,Active,36,204,0.1765
+2026-09-20,2026-09-26,Synergy Ocean Maritime Inc.,Active,21,204,0.1029
+2026-09-27,2026-10-03,Synergy Ocean Maritime Inc.,Active,20,204,0.098
+2026-10-04,2026-10-10,Synergy Ocean Maritime Inc.,Active,7,204,0.0343
+2026-10-11,2026-10-17,Synergy Ocean Maritime Inc.,Active,2,204,0.0098
+2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,All onboard,82,306,0.268
+2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,All onboard,58,306,0.1895
+2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,All onboard,81,306,0.2647
+2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,All onboard,68,306,0.2222
+2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,All onboard,26,306,0.085
+2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,All onboard,39,306,0.1275
 2026-10-04,2026-10-10,Synergy Oceanic Services India Pvt Ltd,All onboard,26,306,0.085
-2026-10-11,2026-10-17,Synergy Oceanic Services India Pvt Ltd,All onboard,9,306,0.0294
-2026-10-18,2026-10-24,Synergy Oceanic Services India Pvt Ltd,All onboard,8,306,0.0261
-2026-11-01,2026-11-07,Synergy Oceanic Services India Pvt Ltd,All onboard,4,306,0.0131
-2026-11-08,2026-11-14,Synergy Oceanic Services India Pvt Ltd,All onboard,1,306,0.0033
-2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,Registered,2,192,0.0104
-2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,Registered,41,192,0.2135
-2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,Registered,25,192,0.1302
-2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,Registered,125,192,0.651
-2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,Registered,36,192,0.1875
-2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,Registered,44,192,0.2292
+2026-10-11,2026-10-17,Synergy Oceanic Services India Pvt Ltd,All onboard,11,306,0.0359
+2026-10-18,2026-10-24,Synergy Oceanic Services India Pvt Ltd,All onboard,29,306,0.0948
+2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,Registered,74,192,0.3854
+2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,Registered,43,192,0.224
+2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,Registered,42,192,0.2188
+2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,Registered,47,192,0.2448
+2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,Registered,17,192,0.0885
+2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,Registered,37,192,0.1927
 2026-10-04,2026-10-10,Synergy Oceanic Services India Pvt Ltd,Registered,23,192,0.1198
-2026-10-18,2026-10-24,Synergy Oceanic Services India Pvt Ltd,Registered,8,192,0.0417
-2026-11-01,2026-11-07,Synergy Oceanic Services India Pvt Ltd,Registered,4,192,0.0208
-2026-11-08,2026-11-14,Synergy Oceanic Services India Pvt Ltd,Registered,1,192,0.0052
-2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,Engaged,40,199,0.201
-2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,Engaged,54,199,0.2714
-2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,Engaged,37,199,0.1859
-2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,Engaged,142,199,0.7136
-2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,Engaged,34,199,0.1709
-2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,Engaged,30,199,0.1508
-2026-10-04,2026-10-10,Synergy Oceanic Services India Pvt Ltd,Engaged,2,199,0.0101
-2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,Active,1,84,0.0119
-2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,Active,4,84,0.0476
-2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,Active,14,84,0.1667
-2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,Active,23,84,0.2738
-2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,Active,1,84,0.0119
-2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,Active,20,84,0.2381
-2026-10-04,2026-10-10,Synergy Oceanic Services India Pvt Ltd,Active,1,84,0.0119
-2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,All onboard,62,276,0.2246
-2026-08-30,2026-09-05,Synergy Onyx Marine Pvt Ltd,All onboard,186,276,0.6739
-2026-09-06,2026-09-12,Synergy Onyx Marine Pvt Ltd,All onboard,90,276,0.3261
-2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,All onboard,81,276,0.2935
-2026-09-20,2026-09-26,Synergy Onyx Marine Pvt Ltd,All onboard,21,276,0.0761
-2026-09-27,2026-10-03,Synergy Onyx Marine Pvt Ltd,All onboard,22,276,0.0797
-2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,All onboard,6,276,0.0217
-2026-10-11,2026-10-17,Synergy Onyx Marine Pvt Ltd,All onboard,40,276,0.1449
-2026-10-18,2026-10-24,Synergy Onyx Marine Pvt Ltd,All onboard,5,276,0.0181
-2026-10-25,2026-10-31,Synergy Onyx Marine Pvt Ltd,All onboard,2,276,0.0072
-2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,Registered,54,200,0.27
-2026-08-30,2026-09-05,Synergy Onyx Marine Pvt Ltd,Registered,106,200,0.53
-2026-09-06,2026-09-12,Synergy Onyx Marine Pvt Ltd,Registered,69,200,0.345
-2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,Registered,47,200,0.235
-2026-09-20,2026-09-26,Synergy Onyx Marine Pvt Ltd,Registered,9,200,0.045
-2026-09-27,2026-10-03,Synergy Onyx Marine Pvt Ltd,Registered,10,200,0.05
-2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,Registered,5,200,0.025
+2026-10-11,2026-10-17,Synergy Oceanic Services India Pvt Ltd,Registered,4,192,0.0208
+2026-10-18,2026-10-24,Synergy Oceanic Services India Pvt Ltd,Registered,11,192,0.0573
+2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,Engaged,73,199,0.3668
+2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,Engaged,36,199,0.1809
+2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,Engaged,39,199,0.196
+2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,Engaged,53,199,0.2663
+2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,Engaged,10,199,0.0503
+2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,Engaged,27,199,0.1357
+2026-10-04,2026-10-10,Synergy Oceanic Services India Pvt Ltd,Engaged,4,199,0.0201
+2026-10-11,2026-10-17,Synergy Oceanic Services India Pvt Ltd,Engaged,4,199,0.0201
+2026-10-18,2026-10-24,Synergy Oceanic Services India Pvt Ltd,Engaged,3,199,0.0151
+2026-08-23,2026-08-29,Synergy Oceanic Services India Pvt Ltd,Active,45,84,0.5357
+2026-08-30,2026-09-05,Synergy Oceanic Services India Pvt Ltd,Active,14,84,0.1667
+2026-09-06,2026-09-12,Synergy Oceanic Services India Pvt Ltd,Active,6,84,0.0714
+2026-09-13,2026-09-19,Synergy Oceanic Services India Pvt Ltd,Active,36,84,0.4286
+2026-09-20,2026-09-26,Synergy Oceanic Services India Pvt Ltd,Active,8,84,0.0952
+2026-09-27,2026-10-03,Synergy Oceanic Services India Pvt Ltd,Active,25,84,0.2976
+2026-10-04,2026-10-10,Synergy Oceanic Services India Pvt Ltd,Active,2,84,0.0238
+2026-10-11,2026-10-17,Synergy Oceanic Services India Pvt Ltd,Active,1,84,0.0119
+2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,All onboard,9,276,0.0326
+2026-08-30,2026-09-05,Synergy Onyx Marine Pvt Ltd,All onboard,97,276,0.3514
+2026-09-06,2026-09-12,Synergy Onyx Marine Pvt Ltd,All onboard,49,276,0.1775
+2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,All onboard,82,276,0.2971
+2026-09-20,2026-09-26,Synergy Onyx Marine Pvt Ltd,All onboard,39,276,0.1413
+2026-09-27,2026-10-03,Synergy Onyx Marine Pvt Ltd,All onboard,17,276,0.0616
+2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,All onboard,17,276,0.0616
+2026-10-11,2026-10-17,Synergy Onyx Marine Pvt Ltd,All onboard,43,276,0.1558
+2026-11-22,2026-11-28,Synergy Onyx Marine Pvt Ltd,All onboard,14,276,0.0507
+2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,Registered,7,200,0.035
+2026-08-30,2026-09-05,Synergy Onyx Marine Pvt Ltd,Registered,87,200,0.435
+2026-09-06,2026-09-12,Synergy Onyx Marine Pvt Ltd,Registered,48,200,0.24
+2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,Registered,78,200,0.39
+2026-09-20,2026-09-26,Synergy Onyx Marine Pvt Ltd,Registered,27,200,0.135
+2026-09-27,2026-10-03,Synergy Onyx Marine Pvt Ltd,Registered,12,200,0.06
+2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,Registered,6,200,0.03
 2026-10-11,2026-10-17,Synergy Onyx Marine Pvt Ltd,Registered,4,200,0.02
-2026-10-18,2026-10-24,Synergy Onyx Marine Pvt Ltd,Registered,5,200,0.025
-2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,Engaged,62,194,0.3196
-2026-08-30,2026-09-05,Synergy Onyx Marine Pvt Ltd,Engaged,121,194,0.6237
-2026-09-06,2026-09-12,Synergy Onyx Marine Pvt Ltd,Engaged,21,194,0.1082
-2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,Engaged,49,194,0.2526
-2026-09-20,2026-09-26,Synergy Onyx Marine Pvt Ltd,Engaged,9,194,0.0464
-2026-09-27,2026-10-03,Synergy Onyx Marine Pvt Ltd,Engaged,21,194,0.1082
-2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,Engaged,5,194,0.0258
+2026-11-22,2026-11-28,Synergy Onyx Marine Pvt Ltd,Registered,14,200,0.07
+2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,Engaged,7,194,0.0361
+2026-08-30,2026-09-05,Synergy Onyx Marine Pvt Ltd,Engaged,30,194,0.1546
+2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,Engaged,76,194,0.3918
+2026-09-20,2026-09-26,Synergy Onyx Marine Pvt Ltd,Engaged,27,194,0.1392
+2026-09-27,2026-10-03,Synergy Onyx Marine Pvt Ltd,Engaged,12,194,0.0619
+2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,Engaged,6,194,0.0309
 2026-10-11,2026-10-17,Synergy Onyx Marine Pvt Ltd,Engaged,3,194,0.0155
-2026-10-18,2026-10-24,Synergy Onyx Marine Pvt Ltd,Engaged,3,194,0.0155
-2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,Active,39,74,0.527
-2026-08-30,2026-09-05,Synergy Onyx Marine Pvt Ltd,Active,4,74,0.0541
-2026-09-06,2026-09-12,Synergy Onyx Marine Pvt Ltd,Active,4,74,0.0541
-2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,Active,21,74,0.2838
-2026-09-20,2026-09-26,Synergy Onyx Marine Pvt Ltd,Active,8,74,0.1081
+2026-11-22,2026-11-28,Synergy Onyx Marine Pvt Ltd,Engaged,14,194,0.0722
+2026-08-23,2026-08-29,Synergy Onyx Marine Pvt Ltd,Active,7,74,0.0946
+2026-09-13,2026-09-19,Synergy Onyx Marine Pvt Ltd,Active,1,74,0.0135
 2026-09-27,2026-10-03,Synergy Onyx Marine Pvt Ltd,Active,7,74,0.0946
-2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,Active,3,74,0.0405
-2026-10-11,2026-10-17,Synergy Onyx Marine Pvt Ltd,Active,1,74,0.0135
-2026-10-18,2026-10-24,Synergy Onyx Marine Pvt Ltd,Active,3,74,0.0405
-2026-08-23,2026-08-29,Synergy Pacific Private Limited,All onboard,343,2856,0.1201
-2026-08-30,2026-09-05,Synergy Pacific Private Limited,All onboard,640,2856,0.2241
-2026-09-06,2026-09-12,Synergy Pacific Private Limited,All onboard,641,2856,0.2244
-2026-09-13,2026-09-19,Synergy Pacific Private Limited,All onboard,822,2856,0.2878
-2026-09-20,2026-09-26,Synergy Pacific Private Limited,All onboard,440,2856,0.1541
-2026-09-27,2026-10-03,Synergy Pacific Private Limited,All onboard,407,2856,0.1425
-2026-10-04,2026-10-10,Synergy Pacific Private Limited,All onboard,275,2856,0.0963
-2026-10-11,2026-10-17,Synergy Pacific Private Limited,All onboard,297,2856,0.104
-2026-10-18,2026-10-24,Synergy Pacific Private Limited,All onboard,138,2856,0.0483
-2026-10-25,2026-10-31,Synergy Pacific Private Limited,All onboard,18,2856,0.0063
-2026-11-01,2026-11-07,Synergy Pacific Private Limited,All onboard,16,2856,0.0056
-2026-11-08,2026-11-14,Synergy Pacific Private Limited,All onboard,2,2856,0.0007
-2026-11-15,2026-11-21,Synergy Pacific Private Limited,All onboard,36,2856,0.0126
-2026-08-23,2026-08-29,Synergy Pacific Private Limited,Registered,315,2398,0.1314
-2026-08-30,2026-09-05,Synergy Pacific Private Limited,Registered,615,2398,0.2565
-2026-09-06,2026-09-12,Synergy Pacific Private Limited,Registered,596,2398,0.2485
-2026-09-13,2026-09-19,Synergy Pacific Private Limited,Registered,690,2398,0.2877
-2026-09-20,2026-09-26,Synergy Pacific Private Limited,Registered,380,2398,0.1585
-2026-09-27,2026-10-03,Synergy Pacific Private Limited,Registered,359,2398,0.1497
-2026-10-04,2026-10-10,Synergy Pacific Private Limited,Registered,250,2398,0.1043
-2026-10-11,2026-10-17,Synergy Pacific Private Limited,Registered,216,2398,0.0901
-2026-10-18,2026-10-24,Synergy Pacific Private Limited,Registered,116,2398,0.0484
-2026-10-25,2026-10-31,Synergy Pacific Private Limited,Registered,17,2398,0.0071
-2026-11-01,2026-11-07,Synergy Pacific Private Limited,Registered,16,2398,0.0067
-2026-11-15,2026-11-21,Synergy Pacific Private Limited,Registered,34,2398,0.0142
-2026-08-23,2026-08-29,Synergy Pacific Private Limited,Engaged,296,2323,0.1274
-2026-08-30,2026-09-05,Synergy Pacific Private Limited,Engaged,605,2323,0.2604
-2026-09-06,2026-09-12,Synergy Pacific Private Limited,Engaged,556,2323,0.2393
-2026-09-13,2026-09-19,Synergy Pacific Private Limited,Engaged,672,2323,0.2893
-2026-09-20,2026-09-26,Synergy Pacific Private Limited,Engaged,377,2323,0.1623
-2026-09-27,2026-10-03,Synergy Pacific Private Limited,Engaged,337,2323,0.1451
+2026-10-04,2026-10-10,Synergy Onyx Marine Pvt Ltd,Active,6,74,0.0811
+2026-10-11,2026-10-17,Synergy Onyx Marine Pvt Ltd,Active,2,74,0.027
+2026-08-23,2026-08-29,Synergy Pacific Private Limited,All onboard,423,2856,0.1481
+2026-08-30,2026-09-05,Synergy Pacific Private Limited,All onboard,647,2856,0.2265
+2026-09-06,2026-09-12,Synergy Pacific Private Limited,All onboard,632,2856,0.2213
+2026-09-13,2026-09-19,Synergy Pacific Private Limited,All onboard,955,2856,0.3344
+2026-09-20,2026-09-26,Synergy Pacific Private Limited,All onboard,458,2856,0.1604
+2026-09-27,2026-10-03,Synergy Pacific Private Limited,All onboard,463,2856,0.1621
+2026-10-04,2026-10-10,Synergy Pacific Private Limited,All onboard,239,2856,0.0837
+2026-10-11,2026-10-17,Synergy Pacific Private Limited,All onboard,230,2856,0.0805
+2026-10-18,2026-10-24,Synergy Pacific Private Limited,All onboard,91,2856,0.0319
+2026-10-25,2026-10-31,Synergy Pacific Private Limited,All onboard,16,2856,0.0056
+2026-11-01,2026-11-07,Synergy Pacific Private Limited,All onboard,10,2856,0.0035
+2026-11-08,2026-11-14,Synergy Pacific Private Limited,All onboard,3,2856,0.0011
+2026-11-15,2026-11-21,Synergy Pacific Private Limited,All onboard,15,2856,0.0053
+2026-08-23,2026-08-29,Synergy Pacific Private Limited,Registered,380,2398,0.1585
+2026-08-30,2026-09-05,Synergy Pacific Private Limited,Registered,556,2398,0.2319
+2026-09-06,2026-09-12,Synergy Pacific Private Limited,Registered,544,2398,0.2269
+2026-09-13,2026-09-19,Synergy Pacific Private Limited,Registered,761,2398,0.3173
+2026-09-20,2026-09-26,Synergy Pacific Private Limited,Registered,363,2398,0.1514
+2026-09-27,2026-10-03,Synergy Pacific Private Limited,Registered,294,2398,0.1226
+2026-10-04,2026-10-10,Synergy Pacific Private Limited,Registered,211,2398,0.088
+2026-10-11,2026-10-17,Synergy Pacific Private Limited,Registered,138,2398,0.0575
+2026-10-18,2026-10-24,Synergy Pacific Private Limited,Registered,67,2398,0.0279
+2026-10-25,2026-10-31,Synergy Pacific Private Limited,Registered,12,2398,0.005
+2026-11-01,2026-11-07,Synergy Pacific Private Limited,Registered,8,2398,0.0033
+2026-11-15,2026-11-21,Synergy Pacific Private Limited,Registered,10,2398,0.0042
+2026-08-23,2026-08-29,Synergy Pacific Private Limited,Engaged,378,2323,0.1627
+2026-08-30,2026-09-05,Synergy Pacific Private Limited,Engaged,598,2323,0.2574
+2026-09-06,2026-09-12,Synergy Pacific Private Limited,Engaged,611,2323,0.263
+2026-09-13,2026-09-19,Synergy Pacific Private Limited,Engaged,854,2323,0.3676
+2026-09-20,2026-09-26,Synergy Pacific Private Limited,Engaged,427,2323,0.1838
+2026-09-27,2026-10-03,Synergy Pacific Private Limited,Engaged,385,2323,0.1657
 2026-10-04,2026-10-10,Synergy Pacific Private Limited,Engaged,198,2323,0.0852
-2026-10-11,2026-10-17,Synergy Pacific Private Limited,Engaged,137,2323,0.059
-2026-10-18,2026-10-24,Synergy Pacific Private Limited,Engaged,96,2323,0.0413
-2026-10-25,2026-10-31,Synergy Pacific Private Limited,Engaged,17,2323,0.0073
-2026-11-01,2026-11-07,Synergy Pacific Private Limited,Engaged,16,2323,0.0069
-2026-11-15,2026-11-21,Synergy Pacific Private Limited,Engaged,26,2323,0.0112
-2026-08-23,2026-08-29,Synergy Pacific Private Limited,Active,221,1388,0.1592
-2026-08-30,2026-09-05,Synergy Pacific Private Limited,Active,353,1388,0.2543
-2026-09-06,2026-09-12,Synergy Pacific Private Limited,Active,184,1388,0.1326
-2026-09-13,2026-09-19,Synergy Pacific Private Limited,Active,298,1388,0.2147
-2026-09-20,2026-09-26,Synergy Pacific Private Limited,Active,158,1388,0.1138
-2026-09-27,2026-10-03,Synergy Pacific Private Limited,Active,126,1388,0.0908
-2026-10-04,2026-10-10,Synergy Pacific Private Limited,Active,108,1388,0.0778
-2026-10-11,2026-10-17,Synergy Pacific Private Limited,Active,67,1388,0.0483
-2026-10-18,2026-10-24,Synergy Pacific Private Limited,Active,56,1388,0.0403
-2026-11-01,2026-11-07,Synergy Pacific Private Limited,Active,3,1388,0.0022
-2026-11-15,2026-11-21,Synergy Pacific Private Limited,Active,9,1388,0.0065
-2026-08-23,2026-08-29,Synergy Ship Arabia Inspection Company LLC,All onboard,61,544,0.1121
-2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,All onboard,44,544,0.0809
-2026-09-06,2026-09-12,Synergy Ship Arabia Inspection Company LLC,All onboard,141,544,0.2592
-2026-09-13,2026-09-19,Synergy Ship Arabia Inspection Company LLC,All onboard,176,544,0.3235
-2026-09-20,2026-09-26,Synergy Ship Arabia Inspection Company LLC,All onboard,80,544,0.1471
-2026-09-27,2026-10-03,Synergy Ship Arabia Inspection Company LLC,All onboard,128,544,0.2353
-2026-10-04,2026-10-10,Synergy Ship Arabia Inspection Company LLC,All onboard,30,544,0.0551
-2026-10-11,2026-10-17,Synergy Ship Arabia Inspection Company LLC,All onboard,13,544,0.0239
+2026-10-11,2026-10-17,Synergy Pacific Private Limited,Engaged,144,2323,0.062
+2026-10-18,2026-10-24,Synergy Pacific Private Limited,Engaged,51,2323,0.022
+2026-10-25,2026-10-31,Synergy Pacific Private Limited,Engaged,15,2323,0.0065
+2026-11-01,2026-11-07,Synergy Pacific Private Limited,Engaged,10,2323,0.0043
+2026-11-08,2026-11-14,Synergy Pacific Private Limited,Engaged,1,2323,0.0004
+2026-11-15,2026-11-21,Synergy Pacific Private Limited,Engaged,13,2323,0.0056
+2026-08-23,2026-08-29,Synergy Pacific Private Limited,Active,174,1388,0.1254
+2026-08-30,2026-09-05,Synergy Pacific Private Limited,Active,375,1388,0.2702
+2026-09-06,2026-09-12,Synergy Pacific Private Limited,Active,256,1388,0.1844
+2026-09-13,2026-09-19,Synergy Pacific Private Limited,Active,306,1388,0.2205
+2026-09-20,2026-09-26,Synergy Pacific Private Limited,Active,169,1388,0.1218
+2026-09-27,2026-10-03,Synergy Pacific Private Limited,Active,86,1388,0.062
+2026-10-04,2026-10-10,Synergy Pacific Private Limited,Active,106,1388,0.0764
+2026-10-11,2026-10-17,Synergy Pacific Private Limited,Active,81,1388,0.0584
+2026-10-18,2026-10-24,Synergy Pacific Private Limited,Active,27,1388,0.0195
+2026-11-01,2026-11-07,Synergy Pacific Private Limited,Active,8,1388,0.0058
+2026-11-15,2026-11-21,Synergy Pacific Private Limited,Active,8,1388,0.0058
+2026-08-23,2026-08-29,Synergy Ship Arabia Inspection Company LLC,All onboard,54,544,0.0993
+2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,All onboard,51,544,0.0938
+2026-09-06,2026-09-12,Synergy Ship Arabia Inspection Company LLC,All onboard,133,544,0.2445
+2026-09-13,2026-09-19,Synergy Ship Arabia Inspection Company LLC,All onboard,186,544,0.3419
+2026-09-20,2026-09-26,Synergy Ship Arabia Inspection Company LLC,All onboard,74,544,0.136
+2026-09-27,2026-10-03,Synergy Ship Arabia Inspection Company LLC,All onboard,117,544,0.2151
+2026-10-04,2026-10-10,Synergy Ship Arabia Inspection Company LLC,All onboard,31,544,0.057
+2026-10-11,2026-10-17,Synergy Ship Arabia Inspection Company LLC,All onboard,14,544,0.0257
 2026-10-25,2026-10-31,Synergy Ship Arabia Inspection Company LLC,All onboard,3,544,0.0055
 2026-11-01,2026-11-07,Synergy Ship Arabia Inspection Company LLC,All onboard,4,544,0.0074
-2026-11-15,2026-11-21,Synergy Ship Arabia Inspection Company LLC,All onboard,4,544,0.0074
+2026-11-15,2026-11-21,Synergy Ship Arabia Inspection Company LLC,All onboard,1,544,0.0018
 2026-08-23,2026-08-29,Synergy Ship Arabia Inspection Company LLC,Registered,2,119,0.0168
-2026-09-06,2026-09-12,Synergy Ship Arabia Inspection Company LLC,Registered,12,119,0.1008
+2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,Registered,3,119,0.0252
+2026-09-13,2026-09-19,Synergy Ship Arabia Inspection Company LLC,Registered,1,119,0.0084
 2026-09-20,2026-09-26,Synergy Ship Arabia Inspection Company LLC,Registered,1,119,0.0084
 2026-09-27,2026-10-03,Synergy Ship Arabia Inspection Company LLC,Registered,12,119,0.1008
 2026-10-04,2026-10-10,Synergy Ship Arabia Inspection Company LLC,Registered,1,119,0.0084
-2026-11-15,2026-11-21,Synergy Ship Arabia Inspection Company LLC,Registered,4,119,0.0336
+2026-11-15,2026-11-21,Synergy Ship Arabia Inspection Company LLC,Registered,1,119,0.0084
 2026-08-23,2026-08-29,Synergy Ship Arabia Inspection Company LLC,Engaged,2,96,0.0208
-2026-09-06,2026-09-12,Synergy Ship Arabia Inspection Company LLC,Engaged,12,96,0.125
+2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,Engaged,3,96,0.0312
+2026-09-13,2026-09-19,Synergy Ship Arabia Inspection Company LLC,Engaged,1,96,0.0104
 2026-09-20,2026-09-26,Synergy Ship Arabia Inspection Company LLC,Engaged,1,96,0.0104
 2026-10-04,2026-10-10,Synergy Ship Arabia Inspection Company LLC,Engaged,1,96,0.0104
-2026-11-15,2026-11-21,Synergy Ship Arabia Inspection Company LLC,Engaged,4,96,0.0417
-2026-09-06,2026-09-12,Synergy Ship Arabia Inspection Company LLC,Active,12,79,0.1519
+2026-11-15,2026-11-21,Synergy Ship Arabia Inspection Company LLC,Engaged,1,96,0.0104
+2026-08-30,2026-09-05,Synergy Ship Arabia Inspection Company LLC,Active,3,79,0.038
+2026-09-13,2026-09-19,Synergy Ship Arabia Inspection Company LLC,Active,1,79,0.0127
 2026-10-04,2026-10-10,Synergy Ship Arabia Inspection Company LLC,Active,1,79,0.0127
-2026-08-23,2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,50,136,0.3676
-2026-08-30,2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,51,136,0.375
-2026-09-06,2026-09-12,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,21,136,0.1544
-2026-09-13,2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,93,136,0.6838
-2026-09-20,2026-09-26,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,18,136,0.1324
-2026-09-27,2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,9,136,0.0662
-2026-10-04,2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,17,136,0.125
-2026-10-11,2026-10-17,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,3,136,0.0221
-2026-08-23,2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,50,73,0.6849
-2026-08-30,2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,51,73,0.6986
-2026-09-06,2026-09-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,19,73,0.2603
-2026-09-13,2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,93,73,1.274
-2026-09-20,2026-09-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,18,73,0.2466
-2026-09-27,2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,6,73,0.0822
-2026-10-04,2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,17,73,0.2329
-2026-10-11,2026-10-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,2,73,0.0274
-2026-08-23,2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,50,55,0.9091
-2026-08-30,2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,46,55,0.8364
+2026-11-15,2026-11-21,Synergy Ship Arabia Inspection Company LLC,Active,1,79,0.0127
+2026-08-23,2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,29,136,0.2132
+2026-08-30,2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,44,136,0.3235
+2026-09-06,2026-09-12,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,19,136,0.1397
+2026-09-13,2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,27,136,0.1985
+2026-09-20,2026-09-26,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,20,136,0.1471
+2026-09-27,2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,25,136,0.1838
+2026-10-04,2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,14,136,0.1029
+2026-10-11,2026-10-17,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,4,136,0.0294
+2026-10-18,2026-10-24,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,1,136,0.0074
+2026-11-01,2026-11-07,Wisdom Synergy Shipmanagement Pte Ltd,All onboard,1,136,0.0074
+2026-08-23,2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,Registered,27,73,0.3699
+2026-08-30,2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,Registered,27,73,0.3699
+2026-09-06,2026-09-12,Wisdom Synergy Shipmanagement Pte Ltd,Registered,17,73,0.2329
+2026-09-13,2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,Registered,27,73,0.3699
+2026-09-20,2026-09-26,Wisdom Synergy Shipmanagement Pte Ltd,Registered,20,73,0.274
+2026-09-27,2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,Registered,13,73,0.1781
+2026-10-04,2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,Registered,14,73,0.1918
+2026-10-11,2026-10-17,Wisdom Synergy Shipmanagement Pte Ltd,Registered,1,73,0.0137
+2026-08-23,2026-08-29,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,18,55,0.3273
+2026-08-30,2026-09-05,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,24,55,0.4364
 2026-09-06,2026-09-12,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,15,55,0.2727
-2026-09-13,2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,7,55,0.1273
-2026-09-27,2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,6,55,0.1091
-2026-10-04,2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,11,55,0.2
+2026-09-13,2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,15,55,0.2727
+2026-09-20,2026-09-26,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,10,55,0.1818
+2026-09-27,2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,7,55,0.1273
+2026-10-04,2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,Engaged,12,55,0.2182
+2026-09-13,2026-09-19,Wisdom Synergy Shipmanagement Pte Ltd,Active,8,23,0.3478
+2026-09-27,2026-10-03,Wisdom Synergy Shipmanagement Pte Ltd,Active,1,23,0.0435
+2026-10-04,2026-10-10,Wisdom Synergy Shipmanagement Pte Ltd,Active,1,23,0.0435
