@@ -172,6 +172,19 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 .sv .failed::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
 @media (max-width:640px){.sv .hide-narrow{display:none}}
 .sv .lx-cpm{margin:0 0 var(--cds-gap-sm)}.sv .lx-cpmwrap{display:flex;flex-wrap:wrap;gap:6px;max-height:9rem;overflow:auto;margin-top:4px}.sv .lx-cpmwrap .dl{font-size:12px}
+.sv .ms-fw .ms-src{display:none}
+.sv .ms-btn{font:inherit;font-size:var(--cds-font-size-caption);padding:var(--cds-pad-xs) var(--cds-pad-sm);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-bg);color:var(--color-fg);max-width:200px;min-width:7rem;text-align:left;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sv .ms-btn::after{content:"\25BE";float:right;margin-left:6px;opacity:.6}
+.sv .ms-btn.on{border-color:var(--sv-accent,#1d5f8f);box-shadow:0 0 0 1px var(--sv-accent,#1d5f8f);font-weight:600}
+.ms-pop{position:fixed;z-index:60;min-width:16rem;max-width:21rem;overflow:auto;background:var(--color-panel,var(--color-bg,#fff));color:var(--color-fg,#111);border:1px solid var(--color-border-line,#8884);border-radius:var(--cds-radius,6px);box-shadow:0 8px 24px rgba(0,0,0,.22);padding:6px;font:inherit}
+.ms-pop input[type=search]{font:inherit;font-size:12px;padding:4px 6px;border:1px solid var(--color-border-line,#8884);border-radius:4px;background:var(--color-bg,#fff);color:var(--color-fg,#111)}
+.ms-pop .ms-q{width:100%;margin-bottom:4px;box-sizing:border-box}
+.ms-pop .ms-bar{display:flex;gap:6px;margin-bottom:4px}
+.ms-pop .ms-bar button{font:inherit;font-size:11px;padding:2px 6px;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:var(--color-bg);color:var(--color-fg-muted);cursor:pointer}
+.ms-pop .ms-list{max-height:min(16rem,50vh);overflow:auto}
+.ms-pop label.ms-o{display:flex;gap:7px;align-items:flex-start;padding:4px 5px;font-size:12px;line-height:1.35;border-radius:4px;cursor:pointer;white-space:normal;color:var(--color-fg,#111)}
+.ms-pop label.ms-o input{margin:2px 0 0;flex:none}
+.ms-pop label.ms-o:hover{background:rgba(128,128,128,.14)}
 </style>
 
 <div class="sv">
@@ -546,6 +559,97 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   const enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D');
   const key2 = (a, b) => [a, b].map((s) => enc(s).replace(/,/g, '%2C')).join(',');
   window.SV = { ALL, num, F, enc, key2 };
+  // ---- multi-select ------------------------------------------------------
+  // Wraps a native <select>, which stays the source of the option list and of the single value.
+  // sel._ms holds the chosen values: empty = all, one = exactly as before (so drill-down still works),
+  // two or more = filter the list at the current level.
+  function multiSelect(sel) {
+    sel._ms = [];
+    const fw = sel.parentNode;
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'ms-btn'; btn.setAttribute('aria-haspopup', 'listbox'); btn.setAttribute('aria-expanded', 'false');
+    const pop = document.createElement('div'); pop.className = 'ms-pop'; pop.hidden = true;
+    sel.classList.add('ms-src');
+    fw.insertBefore(btn, sel.nextSibling);
+    document.body.appendChild(pop);          // outside the <label>, so the option labels are not nested
+    fw.classList.add('ms-fw');
+    const opts = () => [...sel.options].filter((o) => o.value !== '');
+    const sync = () => {
+      const have = new Set(opts().map((o) => o.value));
+      sel._ms = sel._ms.filter((v) => have.has(v));                     // drop options that no longer exist
+      const a = sel._ms;
+      btn.textContent = a.length === 0 ? (sel.options[0] ? sel.options[0].text : 'All')
+        : a.length === 1 ? (opts().find((o) => o.value === a[0]) || {}).text || a[0]
+        : a.length + ' selected';
+      btn.classList.toggle('on', a.length > 0);
+      btn.title = a.length > 1 ? a.join(', ') : '';
+    };
+    sel.msSync = sync;
+    sel.msClear = () => { sel._ms = []; sel.value = ''; sync(); };
+    const fire = () => {
+      sel.value = sel._ms.length === 1 ? sel._ms[0] : '';
+      sync();
+      sel.dispatchEvent(new Event('change', { bubbles: true }));
+    };
+    function build() {
+      pop.replaceChildren();
+      const list = opts();
+      if (list.length > 12) {
+        const s = document.createElement('input'); s.type = 'search'; s.className = 'ms-q'; s.placeholder = 'Search';
+        s.addEventListener('input', () => {
+          const v = s.value.trim().toLowerCase();
+          pop.querySelectorAll('label.ms-o').forEach((l) => { l.hidden = !!v && !l.textContent.toLowerCase().includes(v); });
+        });
+        pop.appendChild(s);
+      }
+      const bar = document.createElement('div'); bar.className = 'ms-bar';
+      const mk = (t, fn) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = t; b.addEventListener('click', () => { fn(); fire(); build(); }); bar.appendChild(b); };
+      mk('Select all shown', () => { sel._ms = [...pop.querySelectorAll('label.ms-o')].filter((l) => !l.hidden).map((l) => l.dataset.v); });
+      mk('Clear', () => { sel._ms = []; });
+      pop.appendChild(bar);
+      const wrap = document.createElement('div'); wrap.className = 'ms-list';
+      for (const o of list) {
+        const l = document.createElement('label'); l.className = 'ms-o'; l.dataset.v = o.value;
+        const c = document.createElement('input'); c.type = 'checkbox'; c.checked = sel._ms.includes(o.value);
+        c.addEventListener('change', () => {
+          const set = new Set(sel._ms);
+          c.checked ? set.add(o.value) : set.delete(o.value);
+          sel._ms = [...set];
+          fire();
+        });
+        l.append(c, document.createTextNode(o.text));
+        wrap.appendChild(l);
+      }
+      pop.appendChild(wrap);
+    }
+    const close = () => { pop.hidden = true; btn.setAttribute('aria-expanded', 'false'); };
+    const place = () => {
+      const r = btn.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) { close(); return; }
+      pop.style.left = Math.max(8, Math.min(r.left, innerWidth - 340)) + 'px';
+      pop.style.top = (r.bottom + 4) + 'px';
+      pop.style.maxHeight = Math.max(180, innerHeight - r.bottom - 24) + 'px';
+    };
+    btn.addEventListener('click', (e) => {
+      e.preventDefault(); e.stopPropagation();
+      if (!pop.hidden) { close(); return; }
+      document.querySelectorAll('.ms-pop').forEach((p) => { p.hidden = true; });
+      build(); pop.hidden = false; btn.setAttribute('aria-expanded', 'true'); place();
+      const q = pop.querySelector('.ms-q'); if (q) q.focus();
+    });
+    pop.addEventListener('click', (e) => e.stopPropagation());
+    document.addEventListener('click', (e) => { if (!fw.contains(e.target) && !pop.contains(e.target)) close(); });
+    addEventListener('scroll', () => { if (!pop.hidden) place(); }, true);
+    addEventListener('resize', () => { if (!pop.hidden) place(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    sync();
+    return sel;
+  }
+  const msv = (sel) => (sel && sel._ms) || [];
+  const inMs = (sel, v) => { const a = msv(sel); return !a.length || a.includes(v); };
+  const msLabel = (sel, one) => { const a = msv(sel); return a.length === 1 ? (one || a[0]) : a.length > 1 ? a.length + ' of ' + (sel.options.length - 1) : ''; };
+  window.SV.multiSelect = multiSelect; window.SV.msv = msv; window.SV.inMs = inMs; window.SV.msLabel = msLabel;
+
   // shipboard rank hierarchy: deck officers, engine officers, electrical, deck ratings, engine ratings, catering; same rank -> earliest engagement first
   const RANK_ORDER = ['Master', 'Chief Officer', 'Second Officer', 'Third Officer', 'Junior Third Officer', 'Radio Officer / Radio Operator', 'Deck Cadet',
     'Chief Engineer', 'Second Engineer', 'Third Engineer', 'Fourth Engineer', 'Junior Fourth Engineer', 'Gas Engineer', 'Engine Cadet',
@@ -1172,16 +1276,17 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   hq.addEventListener('input', () => { clearTimeout(hqT); const v = hq.value.trim();
     if (H.person && !v) { hLeavePerson(); return; }
     hqT = setTimeout(() => { H.q = v.toLowerCase(); if (H.person && H.auto && v !== H.auto.name) { H.person = null; H.auto = null; } draw(); }, 250); });
+  [hdoc, hvt, hves, hrank].forEach(window.SV.multiSelect);
   hdoc.addEventListener('change', () => dash.setParams({ doc: hdoc.value || null, vessel: null }));
   hves.addEventListener('change', () => { const v = hves.value; const row = (dash.data('vessels').data || []).find((r) => r.vessel === v); if (row && row.vessel_type) H.vt = row.vessel_type; dash.setParams(v ? { doc: row ? row.doc : null, vessel: v } : { vessel: null }); });
   hvt.addEventListener('change', () => { H.vt = hvt.value; H.auto = null; const v = dash.params().vessel; const row = v && (dash.data('vessels').data || []).find((r) => r.vessel === v); if (H.vt && row && row.vessel_type !== H.vt) dash.setParams({ vessel: null }); else draw(); });
   // reset buttons: reset this filter and every filter after it (DoC › Vessel type › Vessel › Rank › Engagement)
   function hResetFrom(i) {
     const p = { pop: window.SV.resetPop(i > 2 && !!dash.params().vessel) };
-    if (i <= 0) p.doc = null;
-    if (i <= 1) H.vt = '';
-    if (i <= 2) p.vessel = null;
-    if (i <= 3) H.rank = '';
+    if (i <= 0) { p.doc = null; hdoc.msClear(); }
+    if (i <= 1) { H.vt = ''; hvt.msClear(); }
+    if (i <= 2) { p.vessel = null; hves.msClear(); }
+    if (i <= 3) { H.rank = ''; hrank.msClear(); }
     H.person = null; H.auto = null; H.q = ''; hq.value = '';
     window.SV.clearStage();
     dash.setParams(p); draw();
@@ -1190,7 +1295,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   hrank.addEventListener('change', () => { H.rank = hrank.value; H.auto = null; if (H.person) { H.person = null; H.q = ''; hq.value = ''; } draw(); });
   heng.addEventListener('change', () => { window.SV.markUser(); const [t, v] = heng.value.split(':'); if (t === 'pop') { window.SV.clearStage(); dash.setParams({ pop: v }); } else { window.SV.clearStage(); H.eng = v; dash.setParams({ pop: STAGE_POP[v] }); draw(); } });
   const _clr = window.SV.clearStage; window.SV.clearStage = () => { H.eng = ''; _clr && _clr(); };
-  document.querySelector('.lx-hclr').addEventListener('click', () => { H.vt = H.rank = H.eng = H.q = ''; hq.value = ''; window.SV.clearStage(); dash.setParams({ doc: null, vessel: null, pop: window.SV.resetPop(false) }); });
+  document.querySelector('.lx-hclr').addEventListener('click', () => { H.vt = H.rank = H.eng = H.q = ''; hq.value = ''; [hdoc, hvt, hves, hrank].forEach((x) => x.msClear()); window.SV.clearStage(); dash.setParams({ doc: null, vessel: null, pop: window.SV.resetPop(false) }); });
   const POPF = { 'All onboard': () => true, 'Registered': (r) => r.registered === 'Yes', 'Engaged': (r) => r.stage === 'Engaged' || r.stage === 'Active', 'Active': (r) => r.stage === 'Active' };
   const FILLV = new Set(['All onboard', 'Registered']);
   const med = (a) => { if (!a.length) return null; const s = a.slice().sort((x, y) => x - y), m = s.length; return m % 2 ? s[(m - 1) / 2] : (s[m / 2 - 1] + s[m / 2]) / 2; };
@@ -1222,12 +1327,13 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     const pop = window.SV.pop(), doc = window.SV.doc(), vessel = dash.params().vessel || null;
     const P = dash.data('sea_staff'), V = dash.data('vessels');
     const people = P.status === 'ok' ? P.data : [], vesAll = V.status === 'ok' ? V.data.filter((r) => r.population === 'All onboard') : [];
-    const personOk = (r) => (!H.rank || r.rank === H.rank) && (!H.eng || r.stage === H.eng);
+    const personOk = (r) => window.SV.inMs(hrank, r.rank) && (!H.eng || r.stage === H.eng);
     const byV = new Map();
     for (const r of people) { if (!personOk(r)) continue; if (!byV.has(r.vessel)) byV.set(r.vessel, []); byV.get(r.vessel).push(r); }
     const hasCrew = new Set(people.map((r) => r.vessel));
-    const narrowing = !!(H.rank || H.eng);
-    const ves = vesAll.filter((v) => (!H.vt || v.vessel_type === H.vt) && (!narrowing || (byV.get(v.vessel) || []).length));
+    const narrowing = !!(H.rank || H.eng || window.SV.msv(hrank).length);
+    const ves = vesAll.filter((v) => window.SV.inMs(hdoc, v.doc) && window.SV.inMs(hvt, v.vessel_type) && window.SV.inMs(hves, v.vessel)
+      && (!narrowing || (byV.get(v.vessel) || []).length));
     return { pop, doc, vessel, ves, byV, hasCrew, vesAll, people };
   }
   function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
@@ -1270,25 +1376,28 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     if (hdoc.options.length !== docsAll.length + 1) hdoc.replaceChildren(new Option('All DoCs', ''), ...docsAll.map((d) => new Option(d, d)));
     hdoc.value = S.doc === ALL ? '' : S.doc;
     // cascade: DoC › Vessel type › Vessel › Rank — each list only offers what exists within the filters before it
-    const inDoc = S.vesAll.filter((v) => S.doc === ALL || v.doc === S.doc);
+    const inDoc = S.vesAll.filter((v) => window.SV.inMs(hdoc, v.doc) && (S.doc === ALL || v.doc === S.doc));
     const vts = [...new Set(inDoc.map((v) => v.vessel_type).filter(Boolean))].sort();
     if (H.vt && !vts.includes(H.vt)) H.vt = '';
     const vtk = vts.join('|');
     if (hvt.dataset.k !== vtk) { hvt.replaceChildren(new Option('All types', ''), ...vts.map((v) => new Option(v, v))); hvt.dataset.k = vtk; }
     hvt.value = H.vt;
-    const inVt = inDoc.filter((v) => !H.vt || v.vessel_type === H.vt);
+    const inVt = inDoc.filter((v) => window.SV.inMs(hvt, v.vessel_type));
     const vlist = inVt.map((v) => v.vessel).sort();
     const vkey = vlist.join('|');
     if (hves.dataset.k !== vkey) { hves.replaceChildren(new Option('All vessels', ''), ...vlist.map((v) => new Option(v, v))); hves.dataset.k = vkey; }
     hves.value = S.vessel && vlist.includes(S.vessel) ? S.vessel : '';
-    const scopeV = new Set(S.vessel ? [S.vessel] : vlist);
+    const scopeV = new Set(window.SV.msv(hves).length ? window.SV.msv(hves) : S.vessel ? [S.vessel] : vlist);
     const ranks = [...new Set(S.people.filter((r) => scopeV.has(r.vessel)).map((r) => r.rank).filter(Boolean))].sort();
     if (H.rank && !ranks.includes(H.rank)) H.rank = '';
     const rk = ranks.join('|');
     if (hrank.dataset.k !== rk) { hrank.replaceChildren(new Option('All ranks', ''), ...ranks.map((v) => new Option(v, v))); hrank.dataset.k = rk; }
-    const fxOff = [S.doc === ALL, !H.vt, !S.vessel, !H.rank, !H.eng && S.pop === window.SV.levelPop(!!S.vessel), !H.q && !hq.value];
+    const ms0 = (x) => !window.SV.msv(x).length;
+    const fxOff = [S.doc === ALL && ms0(hdoc), !H.vt && ms0(hvt), !S.vessel && ms0(hves), !H.rank && ms0(hrank),
+      !H.eng && S.pop === window.SV.levelPop(!!S.vessel), !H.q && !hq.value];
     document.querySelectorAll('#sea .fx').forEach((b) => b.toggleAttribute('data-off', fxOff[+b.dataset.fx]));
     hrank.value = H.rank; heng.value = H.eng ? 'st:' + H.eng : 'pop:' + S.pop;
+    [hdoc, hvt, hves, hrank].forEach((x) => x.msSync());
     const Vw = hView();
     window.SV.drill('sea', Vw.level === 'vessel');
     if (H.person && (Vw.level !== 'vessel' || H.personVessel !== S.vessel)) H.person = null;
@@ -1306,7 +1415,9 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     cr.replaceChildren(...parts);
     document.querySelector('.lx-hintro').textContent = (Vw.level === 'fleet' ? 'Every DoC. Click a DoC to see its vessels.' : Vw.level === 'doc' ? 'Every active vessel under this DoC. Click a vessel to see its onboard personnel.' : 'Onboard personnel on this vessel.')
       + ` Counting ${window.SV.popLabel(S.pop).toLowerCase()}; onboard, registered and coverage always count everyone onboard. Use the breadcrumb to go back up.`;
-    const fl = [H.vt, H.rank, H.eng && heng.selectedOptions[0] && heng.selectedOptions[0].text, H.q && `“${H.q}”`].filter(Boolean);
+    const ml = (x, lab) => { const a = window.SV.msv(x); return a.length > 1 ? `${a.length} ${lab}` : ''; };
+    const fl = [ml(hdoc, 'DoCs'), H.vt || ml(hvt, 'vessel types'), ml(hves, 'vessels'), H.rank || ml(hrank, 'ranks'),
+      H.eng && heng.selectedOptions[0] && heng.selectedOptions[0].text, H.q && `“${H.q}”`].filter(Boolean);
     document.querySelector('.lx-hfilt').textContent = fl.length ? 'Filtered: ' + fl.join(' · ') : '';
     // table
     const table = document.querySelector('.lx-htable');
@@ -1808,6 +1919,7 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
   const sec = document.getElementById('cstat-card');
   const qs = (s) => sec.querySelector(s);
   const ccat = qs('.lx-ccat'), cdoc = qs('.lx-cdoc'), cves = qs('.lx-cves'), crank = qs('.lx-crank'), ccourse = qs('.lx-ccourse'), cq = qs('.lx-cq');
+  [cdoc, cves, crank, ccourse].forEach(window.SV.multiSelect);
   const C = { cat: '', doc: '', ves: '', rank: '', course: null, q: '', person: null, auto: null, sortC: ['a', -1], sortP: ['status', 1], view: null };
   const NCS = 32, NCV = 16, D0 = Date.UTC(2020, 0, 1);
   const dstr = (h) => h ? new Date(D0 + parseInt(h, 16) * 864e5).toISOString().slice(0, 10) : '';
@@ -1831,15 +1943,15 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
   }
   // scope tests shared by aggregate rows and people
   const catOk = (r) => !C.cat || r.category === C.cat;
-  const docOk = (r) => !C.doc || r.doc === C.doc;
-  const vesOk = (r) => !C.ves || r.vessel === C.ves;
-  const rankOk = (r) => !C.rank || r.rank === C.rank;
+  const docOk = (r) => (!C.doc || r.doc === C.doc) && window.SV.inMs(cdoc, r.doc);
+  const vesOk = (r) => (!C.ves || r.vessel === C.ves) && window.SV.inMs(cves, r.vessel);
+  const rankOk = (r) => (!C.rank || r.rank === C.rank) && window.SV.inMs(crank, r.rank);
   const vshard = (v) => { let h = 0; for (const ch of v) h += ch.codePointAt(0); return 'cv_' + String(h % NCV).padStart(2, '0'); };
   // ---- events ----
   function leave() { const a = C.auto; C.person = null; C.auto = null; C.q = ''; cq.value = '';
     if (a) Object.assign(C, { cat: a.cat, doc: a.doc, ves: a.ves, rank: a.rank });
     draw(); }
-  function pick(p) { const nm = String(p.name || p.employee_id);
+  function pick(p) { const nm = String(p.name || p.employee_id); [cdoc, cves, crank, ccourse].forEach((x) => x.msClear());
     C.auto = { name: nm, cat: C.cat, doc: C.doc, ves: C.ves, rank: C.rank };
     Object.assign(C, { person: p, cat: p.category, doc: p.doc || '', ves: p.vessel || '', rank: p.rank || '', q: nm.toLowerCase() }); cq.value = nm;
     draw(); }
@@ -1858,10 +1970,11 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     const i = +b.dataset.cfx;
     if (i === 5) { if (C.person) leave(); else { C.q = ''; cq.value = ''; draw(); } return; }
     if (i === 6) { qs('.lx-cname').value = ''; if (C.person) leave(); else draw(); return; }
-    if (i <= 0) C.cat = ''; if (i <= 1) C.doc = ''; if (i <= 2) C.ves = ''; if (i <= 3) C.rank = ''; if (i <= 4) C.course = null;
+    if (i <= 0) C.cat = ''; if (i <= 1) { C.doc = ''; cdoc.msClear(); } if (i <= 2) { C.ves = ''; cves.msClear(); }
+    if (i <= 3) { C.rank = ''; crank.msClear(); } if (i <= 4) { C.course = null; ccourse.msClear(); }
     C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw();
   }));
-  qs('.lx-cclr').addEventListener('click', () => { C.cat = C.doc = C.ves = C.rank = ''; C.course = null; C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw(); });
+  qs('.lx-cclr').addEventListener('click', () => { C.cat = C.doc = C.ves = C.rank = ''; C.course = null; [cdoc, cves, crank, ccourse].forEach((x) => x.msClear()); C.person = null; C.auto = null; C.q = ''; cq.value = ''; draw(); });
   sec.querySelectorAll('.lx-cdl [data-dl]').forEach((b) => b.addEventListener('click', () => exportCS(b)));
   // ---- view ----
   const CCOLS = [['Assigned', 'a', F.int], ['Not started', 'ns', F.int], ['In progress', 'ip', F.int], ['Started', 'st', F.int], ['Completed', 'cp', F.int], ['Completion', 'pct', F.pct]];
@@ -1877,9 +1990,16 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     const p2 = ppl.filter(docOk);
     const vessels = [...new Set(p2.map((r) => r.vessel).filter(Boolean))].sort();
     if (C.ves && !vessels.includes(C.ves)) C.ves = '';
+    const vsel = window.SV.msv(cves).filter((v) => vessels.includes(v));
     let src = A.data, vshardId = null;
-    if (C.ves) { vshardId = vshard(C.ves); const VS = dash.data(vshardId); if (VS.status !== 'ok') return { loading: true, docs, vessels, shardExtra: vshardId }; src = VS.data.filter((r) => r.vessel === C.ves); }
-    const base = src.filter((r) => catOk(r) && (C.ves || docOk(r)));
+    if (C.ves || vsel.length) {
+      const want = C.ves ? [C.ves] : vsel, ws = new Set(want);
+      const shards = [...new Set(want.map(vshard))]; vshardId = shards.join(' ');
+      const got = shards.map((id) => dash.data(id));
+      if (got.some((g) => g.status !== 'ok')) return { loading: true, docs, vessels, shardExtra: vshardId };
+      src = got.flatMap((g) => g.data).filter((r) => ws.has(r.vessel));
+    }
+    const base = src.filter((r) => catOk(r) && (C.ves || vsel.length || docOk(r)));
     const ranks = [...new Set(base.map((r) => r.rank).filter(Boolean))].sort();
     if (C.rank && !ranks.includes(C.rank)) C.rank = '';
     const scope = base.filter(rankOk);
@@ -1892,6 +2012,8 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
       for (const r of scope) {
         for (const s of r.s.split(';')) { const [ci, a, ip, cp] = s.split('.').map((x) => parseInt(x, 16)); const o = sum.get(ci) || { ci, a: 0, ip: 0, cp: 0 }; o.a += a; o.ip += ip; o.cp += cp; sum.set(ci, o); } }
       let rows = [...sum.values()].map((o) => ({ ...o, name: T.get(o.ci) || `Course ${o.ci}`, ns: o.a - o.ip - o.cp, st: o.ip + o.cp, pct: o.a ? o.cp / o.a * 100 : null }));
+      const csel = window.SV.msv(ccourse);
+      if (csel.length) rows = rows.filter((r) => csel.includes(String(r.ci)));
       if (C.q) rows = rows.filter((r) => r.name.toLowerCase().includes(C.q));
       const tot = rows.reduce((t, r) => { t.a += r.a; t.ip += r.ip; t.cp += r.cp; return t; }, { a: 0, ip: 0, cp: 0 });
       const total = { name: `All courses (${rows.length})`, ...tot, ns: tot.a - tot.ip - tot.cp, st: tot.ip + tot.cp, pct: tot.a ? tot.cp / tot.a * 100 : null };
@@ -1930,7 +2052,10 @@ document.addEventListener('input', (e) => { const i = e.target; if (!i.matches |
     crank.value = C.rank;
     const ck = V.courses.map((c) => c.ci).join('|'); if (ccourse.dataset.k !== ck) { ccourse.replaceChildren(new Option('All courses', ''), ...V.courses.map((c) => new Option(c.title, c.ci))); ccourse.dataset.k = ck; }
     ccourse.value = C.course == null ? '' : String(C.course);
-    const off = [!C.cat, !C.doc, !C.ves, !C.rank, C.course == null, !C.q && !cq.value, !C.person && !qs('.lx-cname').value];   // index 6 = Seafarer
+    [cdoc, cves, crank, ccourse].forEach((x) => x.msSync());
+    const m0 = (x) => !window.SV.msv(x).length;
+    const off = [!C.cat, !C.doc && m0(cdoc), !C.ves && m0(cves), !C.rank && m0(crank), C.course == null && m0(ccourse),
+      !C.q && !cq.value, !C.person && !qs('.lx-cname').value];   // index 6 = Seafarer
     sec.querySelectorAll('.fx[data-cfx]').forEach((x) => x.toggleAttribute('data-off', off[+x.dataset.cfx]));
     cq.placeholder = V.level === 'courses' ? 'Search courses or seafarers' : 'Search people';
     const fl = [C.cat && CATLAB[C.cat], C.doc, C.ves, C.rank, C.q && `“${C.q}”`].filter(Boolean);
