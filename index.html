@@ -36,7 +36,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   const fire = () => { clearTimeout(t); t = setTimeout(() => L.forEach((f) => { try { f(); } catch (e) { console.error(e); } }), 0); };
   function load(id) {
     D[id] = { status: 'loading' };
-    const file = 'data/' + id + (CSV.has(id) ? '.csv' : '.json') + '?v=25Nov2026';
+    const file = 'data/' + id + (CSV.has(id) ? '.csv' : '.json') + '?v=26Nov2026';
     fetch(file, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
       .then((txt) => { D[id] = { status: 'ok', data: CSV.has(id) ? d3.csvParse(txt) : JSON.parse(txt) }; fire(); })
       .catch((e) => { console.error(id, e); D[id] = { status: 'error' }; fire(); });
@@ -191,7 +191,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 <div class="sv">
   <header>
     <h1 id="top">Seaverse Dashboard</h1>
-    <p class="note-inline lx-asofl" style="margin:2px 0 0"><span id="asof">Updated 26 Nov 2026, 07:39 IST (02:09 UTC)</span></p>
+    <p class="note-inline lx-asofl" style="margin:2px 0 0"><span id="asof">Updated 27 Nov 2026, 07:39 IST (02:09 UTC)</span></p>
     <p class="take lx-take dash-skeleton" data-source="docs">—</p>
   </header>
 
@@ -542,7 +542,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
     <h2>Vessels</h2>
     <p>Every active vessel is listed, including those with no crew registered or onboard on Seaverse. DoC is the company the vessel is registered to.</p>
     <h2>Data</h2>
-    <p>Seaverse database export of 22 Oct 2026 plus the daily incremental updates to 26 Nov 2026, 07:39 IST / 02:09 UTC (the later run of each day, which includes the earlier one); reporting date 20 Nov 2026 (the last full day), with the 13-week trend at weekly reporting dates before it. Completions migrated from the previous provider count by their completion date but don't set the engagement date.</p>
+    <p>Seaverse database export of 22 Oct 2026 plus the daily incremental updates to 27 Nov 2026, 07:39 IST / 02:09 UTC (the later run of each day, which includes the earlier one); reporting date 20 Nov 2026 (the last full day), with the 13-week trend at weekly reporting dates before it. Completions migrated from the previous provider count by their completion date but don't set the engagement date.</p>
   </section>
 </div>
 
@@ -1204,7 +1204,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
 
   // ---- personnel record view (v29 style), shared by Fleet summary, Trainees and Office staff ----
   (() => {
-    const D0 = Date.UTC(2020, 0, 1), WS = Date.UTC(2026, 7, 28), WE = Date.UTC(2026, 10, 25);
+    const D0 = Date.UTC(2020, 0, 1), WS = Date.UTC(2026, 7, 29), WE = Date.UTC(2026, 10, 26);
     const day = (h) => h ? D0 + parseInt(h, 16) * 864e5 : null;
     const fd = (t) => t == null ? '—' : d3.utcFormat('%-d %b %y')(new Date(t));
     const ST = { 1: 'Completed', 2: 'In progress', 3: 'Completed (admin-marked)' };
@@ -1237,8 +1237,8 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
       const item = (label, val, sub, col) => { const d = el('div', 'pc-item'); d.append(el('span', 'pc-l', label)); const v = el('b', null, val); if (col) v.style.color = col; d.append(v); if (sub) d.append(el('span', 'pc-s', sub)); kv.appendChild(d); };
       item('Registration', p.registered === 'Yes' ? 'Registered' : 'Not registered', `Stage: ${p.stage}`);
       item('First course start', p.engaged_on ? fd(Date.parse(p.engaged_on + 'T00:00:00Z')) : 'Not started');
-      if (p.no_target) item('Final compliance (25 Nov)', 'Not measured', `On leave: monitored without a target${f != null ? ` (would score ${F.pct(f)})` : ''}`);
-      else item('Final compliance (25 Nov)', f == null ? 'N/A' : `${F.pct(f)} · ${f >= 100 ? 'Compliant' : 'Below target'}`, f == null ? 'Not assessable: no course started yet' : null, f == null ? null : window.SV.bcol(f));
+      if (p.no_target) item('Final compliance (26 Nov)', 'Not measured', `On leave: monitored without a target${f != null ? ` (would score ${F.pct(f)})` : ''}`);
+      else item('Final compliance (26 Nov)', f == null ? 'N/A' : `${F.pct(f)} · ${f >= 100 ? 'Compliant' : 'Below target'}`, f == null ? 'Not assessable: no course started yet' : null, f == null ? null : window.SV.bcol(f));
       item('A · Frequency', F.pct(fq), num(p.eligible_days) ? `${F.int(num(p.completed_in_window))} completions ÷ ${d3.format('.2f')(num(p.expected))} expected (${F.int(num(p.eligible_days))} eligible days; target 2 a month)` : null);
       item('B · Lifetime', F.pct(lf), `${F.int(num(p.completed))} completed ÷ ${F.int(num(p.assigned))} assigned`);
       const pend = (num(p.not_started) || 0) + (num(p.in_progress) || 0);
@@ -1261,7 +1261,7 @@ html,body{margin:0;background:var(--page);color:var(--color-fg)}
   })();
 
   // ---- downloads + fleet hierarchy (drill-down: DoCs → vessels → personnel) ----
-  const REPORT = { date: '25 Nov 2026', window: '28 Aug – 25 Nov 2026', iso: '2026-11-25' };
+  const REPORT = { date: '26 Nov 2026', window: '29 Aug – 26 Nov 2026', iso: '2026-11-26' };
   let downloads = null;
   try { window.claude && window.claude.use && window.claude.use('downloads').then((d) => { downloads = d; window.SV.redraw && window.SV.redraw(); }).catch(() => {}); } catch (e) { /* no downloads here */ }
   const H = { sort: ['comp', -1], vt: '', rank: '', eng: '', q: '', person: null, personVessel: null };
