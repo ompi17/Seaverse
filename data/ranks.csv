@@ -1,12 +1,12 @@
 rank,doc,population,onboard,coverage_pct,people,assessable,mean_pct,median_pct,at_target,ok_pct,per_week,per_month,c90,zero_90d
-Able Bodied Seaman,All DoCs,All onboard,1907,53.3,1907,1012,74.2,0.8,223,11.7,0.18,0.79,4433,1459
-Able Bodied Seaman,All DoCs,Registered,1907,53.3,1017,891,138.6,16.9,223,21.9,0.34,1.47,4433,570
-Able Bodied Seaman,All DoCs,Engaged,1907,53.3,1012,1012,139.7,16.9,223,22.0,0.34,1.48,4433,564
-Able Bodied Seaman,All DoCs,Active,1907,53.3,448,448,305.0,97.9,223,49.8,0.77,3.35,4433,0
-Bosun,All DoCs,All onboard,413,49.4,413,226,54.3,0.8,41,9.9,0.15,0.64,782,337
-Bosun,All DoCs,Registered,413,49.4,204,180,109.0,14.6,41,20.1,0.3,1.3,782,128
-Bosun,All DoCs,Engaged,413,49.4,226,226,99.3,11.3,41,18.1,0.27,1.17,782,150
-Bosun,All DoCs,Active,413,49.4,76,76,276.1,102.8,41,53.9,0.8,3.48,782,0
+Able Bodied Seaman,All DoCs,All onboard,1908,53.4,1908,1012,74.1,0.8,223,11.7,0.18,0.79,4433,1460
+Able Bodied Seaman,All DoCs,Registered,1908,53.4,1018,891,138.4,16.9,223,21.9,0.34,1.47,4433,571
+Able Bodied Seaman,All DoCs,Engaged,1908,53.4,1012,1012,139.7,16.9,223,22.0,0.34,1.48,4433,564
+Able Bodied Seaman,All DoCs,Active,1908,53.4,448,448,305.0,97.9,223,49.8,0.77,3.35,4433,0
+Bosun,All DoCs,All onboard,413,49.6,413,226,54.3,0.8,41,9.9,0.15,0.64,782,337
+Bosun,All DoCs,Registered,413,49.6,205,180,108.4,14.2,41,20.0,0.3,1.29,782,129
+Bosun,All DoCs,Engaged,413,49.6,226,226,99.3,11.3,41,18.1,0.27,1.17,782,150
+Bosun,All DoCs,Active,413,49.6,76,76,276.1,102.8,41,53.9,0.8,3.48,782,0
 Chief Cook,All DoCs,All onboard,604,51.2,604,320,54.3,1.2,61,10.1,0.16,0.68,1209,479
 Chief Cook,All DoCs,Registered,604,51.2,309,264,104.8,16.9,61,19.7,0.3,1.32,1209,185
 Chief Cook,All DoCs,Engaged,604,51.2,320,320,102.5,17.3,61,19.1,0.29,1.28,1209,195
@@ -23,10 +23,10 @@ Crane Operator,All DoCs,All onboard,24,37.5,24,6,98.2,0.0,5,20.8,0.09,0.41,29,19
 Crane Operator,All DoCs,Registered,24,37.5,9,6,261.9,190.2,5,55.6,0.25,1.09,29,4
 Crane Operator,All DoCs,Engaged,24,37.5,6,6,392.9,311.8,5,83.3,0.38,1.63,29,1
 Crane Operator,All DoCs,Active,24,37.5,5,5,471.1,338.2,5,100.0,0.45,1.96,29,0
-Deck Cadet,All DoCs,All onboard,433,73.7,433,300,173.9,28.7,103,23.8,0.65,2.82,3606,264
-Deck Cadet,All DoCs,Registered,433,73.7,319,293,235.9,78.8,103,32.3,0.88,3.82,3606,150
-Deck Cadet,All DoCs,Engaged,433,73.7,300,300,250.9,81.0,103,34.3,0.93,4.07,3606,131
-Deck Cadet,All DoCs,Active,433,73.7,169,169,417.7,135.3,103,60.9,1.66,7.22,3606,0
+Deck Cadet,All DoCs,All onboard,433,73.9,433,300,173.9,28.7,103,23.8,0.65,2.82,3606,264
+Deck Cadet,All DoCs,Registered,433,73.9,320,293,235.2,78.7,103,32.2,0.88,3.81,3606,151
+Deck Cadet,All DoCs,Engaged,433,73.9,300,300,250.9,81.0,103,34.3,0.93,4.07,3606,131
+Deck Cadet,All DoCs,Active,433,73.9,169,169,417.7,135.3,103,60.9,1.66,7.22,3606,0
 Electrical Cadet,All DoCs,All onboard,34,94.1,34,29,169.0,50.7,7,20.6,0.47,2.03,204,21
 Electrical Cadet,All DoCs,Registered,34,94.1,32,29,179.6,64.8,7,21.9,0.5,2.16,204,19
 Electrical Cadet,All DoCs,Engaged,34,94.1,29,29,198.1,79.1,7,24.1,0.55,2.38,204,16
@@ -86,10 +86,10 @@ Motorman,All DoCs,All onboard,5,40.0,5,2,23.4,0.0,1,20.0,0.09,0.41,6,4
 Motorman,All DoCs,Registered,5,40.0,2,2,58.4,58.4,1,50.0,0.23,1.01,6,1
 Motorman,All DoCs,Engaged,5,40.0,2,2,58.4,58.4,1,50.0,0.23,1.01,6,1
 Motorman,All DoCs,Active,5,40.0,1,1,101.5,101.5,1,100.0,0.47,2.03,6,0
-Oiler,All DoCs,All onboard,1524,53.7,1524,828,77.8,1.0,175,11.5,0.23,1.02,4584,1162
-Oiler,All DoCs,Registered,1524,53.7,819,711,144.1,16.9,175,21.4,0.44,1.89,4584,458
-Oiler,All DoCs,Engaged,1524,53.7,828,828,143.2,16.9,175,21.1,0.43,1.87,4584,466
-Oiler,All DoCs,Active,1524,53.7,362,362,312.9,84.5,175,48.3,0.98,4.28,4584,0
+Oiler,All DoCs,All onboard,1524,53.9,1524,828,77.8,1.0,175,11.5,0.23,1.02,4584,1162
+Oiler,All DoCs,Registered,1524,53.9,821,711,143.7,16.9,175,21.3,0.43,1.89,4584,460
+Oiler,All DoCs,Engaged,1524,53.9,828,828,143.2,16.9,175,21.1,0.43,1.87,4584,466
+Oiler,All DoCs,Active,1524,53.9,362,362,312.9,84.5,175,48.3,0.98,4.28,4584,0
 Ordinary Seaman,All DoCs,All onboard,906,60.0,906,532,71.7,0.9,109,12.0,0.24,1.04,2784,682
 Ordinary Seaman,All DoCs,Registered,906,60.0,544,474,118.9,9.1,109,20.0,0.4,1.73,2784,321
 Ordinary Seaman,All DoCs,Engaged,906,60.0,532,532,122.1,12.9,109,20.5,0.41,1.77,2784,308
@@ -102,10 +102,10 @@ Radio Officer / Radio Operator,All DoCs,All onboard,9,33.3,9,3,543.3,0.0,3,33.3,
 Radio Officer / Radio Operator,All DoCs,Registered,9,33.3,3,3,1630.0,1660.2,3,100.0,1.61,6.99,62,0
 Radio Officer / Radio Operator,All DoCs,Engaged,9,33.3,3,3,1630.0,1660.2,3,100.0,1.61,6.99,62,0
 Radio Officer / Radio Operator,All DoCs,Active,9,33.3,3,3,1630.0,1660.2,3,100.0,1.61,6.99,62,0
-Second Engineer,All DoCs,All onboard,621,65.4,621,381,91.6,2.6,99,15.9,0.29,1.24,2280,421
-Second Engineer,All DoCs,Registered,621,65.4,406,361,139.8,20.0,99,24.4,0.44,1.9,2280,206
-Second Engineer,All DoCs,Engaged,621,65.4,381,381,149.2,33.8,99,26.0,0.47,2.02,2280,181
-Second Engineer,All DoCs,Active,621,65.4,200,200,273.6,88.3,99,49.5,0.89,3.86,2280,0
+Second Engineer,All DoCs,All onboard,622,65.4,622,381,91.4,2.6,99,15.9,0.29,1.24,2280,422
+Second Engineer,All DoCs,Registered,622,65.4,407,361,139.5,19.5,99,24.3,0.44,1.89,2280,207
+Second Engineer,All DoCs,Engaged,622,65.4,381,381,149.2,33.8,99,26.0,0.47,2.02,2280,181
+Second Engineer,All DoCs,Active,622,65.4,200,200,273.6,88.3,99,49.5,0.89,3.86,2280,0
 Second Officer,All DoCs,All onboard,616,75.2,616,449,98.0,8.0,124,20.1,0.29,1.25,2278,385
 Second Officer,All DoCs,Registered,616,75.2,463,420,130.1,24.2,124,26.8,0.38,1.66,2278,232
 Second Officer,All DoCs,Engaged,616,75.2,449,449,134.4,30.5,124,27.6,0.39,1.72,2278,218
@@ -366,7 +366,7 @@ Electro Technical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,21,57.1
 Electro Technical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,21,57.1,12,12,96.2,14.6,3,25.0,0.4,1.72,61,6
 Electro Technical Officer,Genco-Synergy Bulk Carriers Pvt Ltd,Active,21,57.1,6,6,187.2,96.6,3,50.0,0.79,3.44,61,0
 Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,21,85.7,21,17,501.7,80.7,9,42.9,1.98,8.62,535,11
-Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,21,85.7,18,17,585.3,99.8,9,50.0,2.31,10.05,535,8
+Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Registered,21,85.7,18,17,585.4,99.8,9,50.0,2.31,10.05,535,8
 Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Engaged,21,85.7,17,17,619.8,118.4,9,52.9,2.45,10.64,535,7
 Engine Cadet,Genco-Synergy Bulk Carriers Pvt Ltd,Active,21,85.7,10,10,1021.1,997.6,9,90.0,4.16,18.09,535,0
 Fitter,Genco-Synergy Bulk Carriers Pvt Ltd,All onboard,36,33.3,36,21,17.4,1.1,2,5.6,0.07,0.29,31,31
@@ -947,10 +947,10 @@ Trainee Seaman,Synergy Marine (Singapore) pre ltd,Engaged,4,50.0,2,2,15.3,15.3,0
 Wiper,Synergy Marine (Singapore) pre ltd,All onboard,2,50.0,2,1,2.1,2.1,0,0.0,0.0,0.0,0,2
 Wiper,Synergy Marine (Singapore) pre ltd,Registered,2,50.0,1,1,4.2,4.2,0,0.0,0.0,0.0,0,1
 Wiper,Synergy Marine (Singapore) pre ltd,Engaged,2,50.0,1,1,4.2,4.2,0,0.0,0.0,0.0,0,1
-Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,All onboard,148,48.0,148,61,39.3,0.0,15,10.1,0.1,0.43,187,129
-Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,Registered,148,48.0,71,56,81.5,2.7,15,21.1,0.2,0.89,187,52
-Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,Engaged,148,48.0,61,61,95.4,6.6,15,24.6,0.24,1.04,187,42
-Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,Active,148,48.0,19,19,293.9,118.4,15,78.9,0.77,3.33,187,0
+Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,All onboard,149,48.3,149,61,39.1,0.0,15,10.1,0.1,0.42,187,130
+Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,Registered,149,48.3,72,56,80.3,2.6,15,20.8,0.2,0.88,187,53
+Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,Engaged,149,48.3,61,61,95.4,6.6,15,24.6,0.24,1.04,187,42
+Able Bodied Seaman,Synergy Marine Bulk Pte Ltd,Active,149,48.3,19,19,293.9,118.4,15,78.9,0.77,3.33,187,0
 Bosun,Synergy Marine Bulk Pte Ltd,All onboard,51,29.4,51,18,20.4,0.0,4,7.8,0.07,0.31,46,44
 Bosun,Synergy Marine Bulk Pte Ltd,Registered,51,29.4,15,13,68.0,6.6,4,26.7,0.24,1.04,46,8
 Bosun,Synergy Marine Bulk Pte Ltd,Engaged,51,29.4,18,18,57.8,5.6,4,22.2,0.2,0.86,46,11
@@ -1399,10 +1399,10 @@ Pumpman,Synergy Maritime Private Limited,All onboard,44,59.1,44,23,27.4,0.0,5,11
 Pumpman,Synergy Maritime Private Limited,Registered,44,59.1,26,20,46.2,6.1,5,19.2,0.2,0.86,66,15
 Pumpman,Synergy Maritime Private Limited,Engaged,44,59.1,23,23,52.4,16.9,5,21.7,0.22,0.97,66,12
 Pumpman,Synergy Maritime Private Limited,Active,44,59.1,11,11,104.8,84.5,5,45.5,0.47,2.03,66,0
-Second Engineer,Synergy Maritime Private Limited,All onboard,148,75.0,148,103,48.0,3.4,17,11.5,0.13,0.56,245,105
-Second Engineer,Synergy Maritime Private Limited,Registered,148,75.0,111,96,63.9,11.1,17,15.3,0.17,0.75,245,68
-Second Engineer,Synergy Maritime Private Limited,Engaged,148,75.0,103,103,69.0,16.9,17,16.5,0.19,0.8,245,60
-Second Engineer,Synergy Maritime Private Limited,Active,148,75.0,43,43,152.0,63.4,17,39.5,0.44,1.93,245,0
+Second Engineer,Synergy Maritime Private Limited,All onboard,149,75.2,149,103,47.7,3.4,17,11.4,0.13,0.56,245,106
+Second Engineer,Synergy Maritime Private Limited,Registered,149,75.2,112,96,63.3,11.1,17,15.2,0.17,0.74,245,69
+Second Engineer,Synergy Maritime Private Limited,Engaged,149,75.2,103,103,69.0,16.9,17,16.5,0.19,0.8,245,60
+Second Engineer,Synergy Maritime Private Limited,Active,149,75.2,43,43,152.0,63.4,17,39.5,0.44,1.93,245,0
 Second Officer,Synergy Maritime Private Limited,All onboard,152,75.0,152,115,139.0,9.5,31,20.4,0.3,1.32,592,91
 Second Officer,Synergy Maritime Private Limited,Registered,152,75.0,114,101,184.7,32.1,31,27.2,0.4,1.76,592,53
 Second Officer,Synergy Maritime Private Limited,Engaged,152,75.0,115,115,183.7,30.5,31,27.0,0.4,1.74,592,54
@@ -1606,10 +1606,10 @@ Able Bodied Seaman,Synergy Ocean Maritime Inc.,All onboard,75,60.0,75,40,220.2,0
 Able Bodied Seaman,Synergy Ocean Maritime Inc.,Registered,75,60.0,45,39,367.0,43.8,18,40.0,0.76,3.3,439,18
 Able Bodied Seaman,Synergy Ocean Maritime Inc.,Engaged,75,60.0,40,40,412.9,60.8,18,45.0,0.85,3.71,439,13
 Able Bodied Seaman,Synergy Ocean Maritime Inc.,Active,75,60.0,27,27,603.8,236.7,18,66.7,1.26,5.5,439,0
-Bosun,Synergy Ocean Maritime Inc.,All onboard,28,64.3,28,15,183.6,1.3,7,25.0,0.51,2.21,183,19
-Bosun,Synergy Ocean Maritime Inc.,Registered,28,64.3,18,15,285.6,11.3,7,38.9,0.79,3.44,183,9
-Bosun,Synergy Ocean Maritime Inc.,Engaged,28,64.3,15,15,342.8,35.0,7,46.7,0.95,4.13,183,6
-Bosun,Synergy Ocean Maritime Inc.,Active,28,64.3,9,9,569.3,270.6,7,77.8,1.58,6.88,183,0
+Bosun,Synergy Ocean Maritime Inc.,All onboard,28,67.9,28,15,183.6,1.3,7,25.0,0.51,2.21,183,19
+Bosun,Synergy Ocean Maritime Inc.,Registered,28,67.9,19,15,270.6,5.8,7,36.8,0.75,3.26,183,10
+Bosun,Synergy Ocean Maritime Inc.,Engaged,28,67.9,15,15,342.8,35.0,7,46.7,0.95,4.13,183,6
+Bosun,Synergy Ocean Maritime Inc.,Active,28,67.9,9,9,569.3,270.6,7,77.8,1.58,6.88,183,0
 Chief Cook,Synergy Ocean Maritime Inc.,All onboard,28,71.4,28,20,230.2,21.8,9,32.1,0.46,1.98,164,15
 Chief Cook,Synergy Ocean Maritime Inc.,Registered,28,71.4,20,17,320.5,59.1,9,45.0,0.64,2.77,164,7
 Chief Cook,Synergy Ocean Maritime Inc.,Engaged,28,71.4,20,20,322.4,59.1,9,45.0,0.64,2.77,164,7
@@ -1622,10 +1622,10 @@ Chief Officer,Synergy Ocean Maritime Inc.,All onboard,30,80.0,30,23,185.5,38.4,9
 Chief Officer,Synergy Ocean Maritime Inc.,Registered,30,80.0,24,22,231.7,66.8,9,37.5,0.54,2.37,168,10
 Chief Officer,Synergy Ocean Maritime Inc.,Engaged,30,80.0,23,23,242.0,67.6,9,39.1,0.57,2.47,168,9
 Chief Officer,Synergy Ocean Maritime Inc.,Active,30,80.0,14,14,387.2,194.5,9,64.3,0.93,4.06,168,0
-Deck Cadet,Synergy Ocean Maritime Inc.,All onboard,28,75.0,28,18,103.4,2.9,9,32.1,0.39,1.72,142,15
-Deck Cadet,Synergy Ocean Maritime Inc.,Registered,28,75.0,21,18,137.9,26.7,9,42.9,0.53,2.29,142,8
-Deck Cadet,Synergy Ocean Maritime Inc.,Engaged,28,75.0,18,18,160.9,93.5,9,50.0,0.61,2.67,142,5
-Deck Cadet,Synergy Ocean Maritime Inc.,Active,28,75.0,13,13,222.0,177.0,9,69.2,0.85,3.69,142,0
+Deck Cadet,Synergy Ocean Maritime Inc.,All onboard,28,78.6,28,18,103.4,2.9,9,32.1,0.39,1.72,142,15
+Deck Cadet,Synergy Ocean Maritime Inc.,Registered,28,78.6,22,18,131.7,24.2,9,40.9,0.5,2.18,142,9
+Deck Cadet,Synergy Ocean Maritime Inc.,Engaged,28,78.6,18,18,160.9,93.5,9,50.0,0.61,2.67,142,5
+Deck Cadet,Synergy Ocean Maritime Inc.,Active,28,78.6,13,13,222.0,177.0,9,69.2,0.85,3.69,142,0
 Engine Cadet,Synergy Ocean Maritime Inc.,All onboard,26,61.5,26,12,104.3,0.0,5,19.2,0.27,1.17,90,19
 Engine Cadet,Synergy Ocean Maritime Inc.,Registered,26,61.5,16,12,169.5,10.5,5,31.2,0.44,1.9,90,9
 Engine Cadet,Synergy Ocean Maritime Inc.,Engaged,26,61.5,12,12,226.0,71.3,5,41.7,0.58,2.54,90,5
@@ -1910,10 +1910,10 @@ Master,Synergy Pacific Private Limited,All onboard,126,90.5,126,106,138.2,33.8,4
 Master,Synergy Pacific Private Limited,Registered,126,90.5,114,104,152.5,35.3,40,35.1,0.58,2.53,854,36
 Master,Synergy Pacific Private Limited,Engaged,126,90.5,106,106,164.3,50.7,40,37.7,0.63,2.72,854,27
 Master,Synergy Pacific Private Limited,Active,126,90.5,79,79,217.1,101.5,40,50.6,0.84,3.66,854,0
-Oiler,Synergy Pacific Private Limited,All onboard,348,79.0,348,277,139.0,16.9,74,21.3,0.49,2.12,2178,184
-Oiler,Synergy Pacific Private Limited,Registered,348,79.0,275,256,175.4,26.0,74,26.9,0.62,2.68,2178,112
-Oiler,Synergy Pacific Private Limited,Engaged,348,79.0,277,277,174.7,25.4,74,26.7,0.61,2.66,2178,113
-Oiler,Synergy Pacific Private Limited,Active,348,79.0,164,164,285.9,78.8,74,45.1,1.03,4.49,2178,0
+Oiler,Synergy Pacific Private Limited,All onboard,348,79.6,348,277,139.1,16.9,74,21.3,0.49,2.12,2178,184
+Oiler,Synergy Pacific Private Limited,Registered,348,79.6,277,256,174.2,25.4,74,26.7,0.61,2.66,2178,114
+Oiler,Synergy Pacific Private Limited,Engaged,348,79.6,277,277,174.7,25.4,74,26.7,0.61,2.66,2178,113
+Oiler,Synergy Pacific Private Limited,Active,348,79.6,164,164,285.9,78.8,74,45.1,1.03,4.49,2178,0
 Ordinary Seaman,Synergy Pacific Private Limited,All onboard,237,79.3,237,182,98.8,8.0,41,17.3,0.31,1.35,946,132
 Ordinary Seaman,Synergy Pacific Private Limited,Registered,237,79.3,188,169,124.3,16.9,41,21.8,0.39,1.7,946,84
 Ordinary Seaman,Synergy Pacific Private Limited,Engaged,237,79.3,182,182,128.7,16.9,41,22.5,0.4,1.76,946,77
